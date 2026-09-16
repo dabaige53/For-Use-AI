@@ -1,0 +1,86 @@
+[
+  {
+    "path": "README.md",
+    "sha256": "649679565e2c6e55eb2805d6da48dc1086bfc9260115585d129e2c545ffa3019"
+  },
+  {
+    "path": "CONFIG.md",
+    "sha256": "e5e958defa3c79ac155e6465b07e95bebf7877fb3994ed62848fba8051b1603d"
+  },
+  {
+    "path": "AGENTS.md",
+    "sha256": "1d3b05f55baed4f213f290d8ac8c2577c79abce09404324243974b151926be5a"
+  },
+  {
+    "path": "计划/图形动作设计.md",
+    "sha256": "0f5d7454d3ae8a27802e3aa1f0e79e99cb69eb9e286f263b11ea05389c593350"
+  },
+  {
+    "path": "计划/当前计划.md",
+    "sha256": "e7b8be0bbbd1b4eae1a532449e2b7844eb122e67e23d852c6dc100fe1d9229ac"
+  },
+  {
+    "path": "计划/本地录音_分镜与生图提示词.md",
+    "sha256": "9bd3b0b90fc1a93cef659d9aab68ff57d2f4921e1c512fedea7c74e391365e68"
+  },
+  {
+    "path": "计划/二十镜头与生图提示词.md",
+    "sha256": "283f6805e9b49022be5952ede20c9a5d18dc1186aabc0a91c5b08df69dc81b92"
+  },
+  {
+    "path": "文章/正文.md",
+    "sha256": "63acf8a7b981e0b10cbc1742f28ce9ed462d73f916903f93d4fb9eead293cf24"
+  },
+  {
+    "path": "文章/图文阅读.html",
+    "sha256": "434e03fe8a72a200e0930b0e7fa6ba40620cebba3dd3e52ba341d67d54540ed5"
+  },
+  {
+    "path": "素材/来源清单.md",
+    "sha256": "509ac983d0e475f50680b5d94fc729a209ed3119cb4fef15809b98f114763737"
+  },
+  {
+    "path": "素材/来源/whisper-mcp/README.md",
+    "sha256": "b6afaa557b7deee1126f88023de1050b2b1d7c1ea081c5ee2283118c946ad89d"
+  },
+  {
+    "path": "素材/来源/whisper-mcp/transcribe_audio.schema.json",
+    "sha256": "496ba03c1e6d0b6223ae16b239bb1101e2a080e2aa1d7f9c112b3ef595e775f4"
+  },
+  {
+    "path": "素材/来源/whisper-mcp/index.ts",
+    "sha256": "3fc12ac09f331b17bf7422e237b296673b54bdf2d600270181e69c68f94f9502"
+  },
+  {
+    "path": "素材/图片/输入逐步汇合.png",
+    "sha256": "381427436cb32b4d55c956d14df49e8f73e68bbb2108378e6303dadd47fe64c0"
+  },
+  {
+    "path": "素材/图片/文件读取前后.png",
+    "sha256": "a167f801ea1ff89f3747d383110d513dbd0e3afe38363c815c559bf9bdf78672"
+  },
+  {
+    "path": "素材/图片/对话运作三镜/镜头01_右侧展开输入示例_十二格.png",
+    "sha256": "56613364cef407aed6beb71eeb4094fd47f829c2e0528bc2d5f757ca14324e52"
+  },
+  {
+    "path": "素材/图片/对话运作三镜/镜头01_完整输入_十二格.png",
+    "sha256": "0b3a599ff136fbf0671cbd1a07faa118eae2ed2561beb4c199ffaf666e3d44fd"
+  },
+  {
+    "path": "素材/图片/演化分镜/镜头02_界面背后的系统_九格.png",
+    "sha256": "611c1ca4205c9375c51e0e52307fd7ee26ff8943fef83d3945ab88e5786139a3"
+  },
+  {
+    "path": "素材/图片/演化分镜/镜头01_用户提出任务_九格.png",
+    "sha256": "aa16ae04ea7a2e564a407f711356bb6c3616370ffb5d28dce33e69ce01954306"
+  },
+  {
+    "path": "素材/图片/演化分镜/镜头01_用户提出任务_九格_中文.png",
+    "sha256": "0d1a33b588e56ca8ff93cfe5dc879e451b4b099383843b2cc501dabc1fd7d15f"
+  },
+  {
+    "path": "素材/图片/演化分镜/镜头02_界面背后的系统_九格_中文.png",
+    "sha256": "59ecbddbc3bda07c66f5e6c5455f39dceca76cefc32d32a5651641226b6efcb8"
+  }
+]

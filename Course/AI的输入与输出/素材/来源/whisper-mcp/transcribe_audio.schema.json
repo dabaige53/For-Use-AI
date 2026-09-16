@@ -1,0 +1,40 @@
+{
+  "name": "transcribe_audio",
+  "description": "Transcribe an audio file using Whisper. Supports various audio formats (wav, mp3, m4a, etc.). Returns the transcribed text.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "file_path": {
+        "type": "string",
+        "description": "Absolute path to the audio file to transcribe"
+      },
+      "model": {
+        "type": "string",
+        "description": "Whisper model to use (tiny.en, base.en, small.en, medium.en, large). Default: base.en",
+        "enum": [
+          "tiny.en",
+          "base.en",
+          "small.en",
+          "medium.en",
+          "large"
+        ]
+      },
+      "language": {
+        "type": "string",
+        "description": "Language code (e.g., en, es, fr). Default: en"
+      },
+      "output_format": {
+        "type": "string",
+        "description": "Output format: text (plain text), timestamps (with timestamps), json (structured). Default: text",
+        "enum": [
+          "text",
+          "timestamps",
+          "json"
+        ]
+      }
+    },
+    "required": [
+      "file_path"
+    ]
+  }
+}
