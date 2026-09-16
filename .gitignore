@@ -1,0 +1,35 @@
+# Local and private material
+/AGENTS.md
+**/AGENTS.md
+/.trash/
+/.scratch/
+/资料库/
+/Course/LLM_简要说明/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.*
+
+# Generated and machine-local files
+.DS_Store
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+.venv/
+node_modules/
+*.log
+
+# Large media and archives are distributed separately
+*.mp4
+*.mov
+*.mkv
+*.zip
