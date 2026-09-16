@@ -1,0 +1,12 @@
+directories:
+  mirror_module_path: False
+  base: "."
+  subdirs:
+    output: "../../临时渲染/代码验证"
+    data: "../../临时渲染/缓存"
+camera:
+  resolution: (854, 480)
+  background_color: "#000000"
+  fps: 30
+text:
+  font: "PingFang SC"

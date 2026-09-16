@@ -1,0 +1,9 @@
+name: ai-mechanism-course-reader
+services:
+  reader:
+    build:
+      context: ..
+      dockerfile: 网页/Dockerfile
+    ports:
+      - "${SITE_PORT:-8080}:8080"
+    restart: unless-stopped
