@@ -14,13 +14,74 @@ class FilmScene(Scene):
 
     def cue(self, key, text):
         self.cues.append({'key': key, 'time': round(self.time, 3), 'text': text})
-        new = label(text, 27).move_to([0,-3.35,0])
+        new = label(text, 28, weight="MEDIUM").move_to([0,-3.35,0])
         if self.caption is None:
             self.add(new)
         else:
             self.remove(self.caption)
             self.add(new)
         self.caption = new
+
+    def combined_input(self, sources, m, updated=False):
+        """Expand retained sources, then send one bounded content object."""
+        prefix = '03.input' if updated else '02.input'
+        entries = [
+            ('用户', '把这段本地录音整理成会议纪要。', BLUE_IO),
+            ('系统指令', '使用中文，依据取得的资料回答。', GREEN_IO),
+            ('环境', '录音位置：/audio/meeting.wav', INK),
+            ('工具定义（节选）', 'transcribe_audio · 转写音频；inputSchema: object\n'
+             'file_path / model / language / output_format：string\n'
+             'required: ["file_path"]', GOLD_IO),
+        ]
+        if updated:
+            entries += [
+                ('调用记录 · call_id: 01', 'transcribe_audio(file_path="/audio/meeting.wav",\n'
+                 'model="large", language="zh", output_format="timestamps")', GOLD_IO),
+                ('工具结果 · call_id: 01（模拟）', '[00:00] 本周完成原型，下周安排评审。', CYAN_IO),
+            ]
+        blocks = VGroup()
+        for title, value, color in entries:
+            text = VGroup(label(title, 23, color, weight="MEDIUM"), label(value, 24)).arrange(DOWN, aligned_edge=LEFT, buff=.08)
+            if text.get_width() > 8.25:
+                text.set_width(8.25)
+            border = RoundedRectangle(width=8.65, height=text.get_height()+.24, corner_radius=.08).set_stroke(color, 1.2)
+            text.move_to(border).align_to(border, LEFT).shift(RIGHT*.16)
+            blocks.add(VGroup(border, text))
+        blocks.arrange(DOWN, aligned_edge=LEFT, buff=.10)
+        if blocks.get_height() > 5.3:
+            blocks.set_height(5.3)
+        blocks.move_to([1.2,.15,0])
+        boundary = brackets(blocks.get_width()+.35, blocks.get_height()+.25).move_to(blocks)
+        heading = label('第 2 次完整输入' if updated else '第 1 次完整输入', 30, weight="MEDIUM").next_to(boundary, UP, buff=.14)
+        note = label('内容组织示意 · 保留来源边界 · 非固定 API 格式', 22, '#A4ADB5').move_to([1.2,-2.85,0])
+        self.play(ShowCreation(boundary), FadeIn(heading), FadeIn(note), run_time=.7)
+        for i, block in enumerate(blocks):
+            captions = ['用户消息先放进来', '接上系统指令', '接上环境：此时只有录音路径',
+                        '再接上工具定义；四部分共同构成首次输入',
+                        '二次输入再接上模型生成的调用记录',
+                        '接上同一 call_id 的工具结果，组成更新后的完整输入']
+            if updated and i == 3:
+                captions[i] = '原有四部分继续保留，接下来追加两条记录'
+            self.cue(f'{prefix}.{i+1}', captions[i])
+            # Keep text readable instead of morphing unrelated glyph outlines.
+            self.play(Indicate(sources.rows[i], scale_factor=1.04),
+                      ShowCreation(block[0]), run_time=.45)
+            self.play(FadeIn(block[1], shift=RIGHT*.12), run_time=.45)
+            reading_time = 3.4 if i == 3 else 3.0 if i == 4 else 2.2 if i == 5 else 1.6
+            self.wait(reading_time)
+        packet = VGroup(boundary, blocks)
+        self.remove(boundary, *blocks)
+        self.add(packet)
+        self.cue(prefix+'.whole', '这些内容组成同一次输入，整体提供给模型')
+        self.play(Indicate(boundary, color=INK, scale_factor=1.02), run_time=.8)
+        self.wait(2)
+        self.play(FadeOut(heading), FadeOut(note), run_time=.4)
+        self.play(packet.animate.scale(.38).move_to([-1.1,.25,0]), run_time=1.3)
+        transfer = arrow(packet.get_left(), m.get_right())
+        self.play(GrowArrow(transfer), run_time=.5)
+        self.play(packet.animate.scale(.16).move_to(m), run_time=1.25)
+        self.play(FadeOut(packet), FadeOut(transfer), run_time=.3)
+        self.wait(.25)
 
     def finish(self):
         output = os.getenv('AI_IO_CUES')
@@ -92,7 +153,7 @@ class FirstInput(FilmScene):
         branches=VGroup(Line([-1.4,1.55,0],[-.7,1.55,0]),Line([-1.4,1.03,0],[-.7,1.03,0])).set_stroke(GOLD_IO,1.6)
         field_bracket=brackets(5.5,2.7,GOLD_IO).move_to([3.15,-.3,0])
         self.play(ReplacementTransform(identity[0][0],name),FadeOut(VGroup(*identity[0][1:],identity[1])),
-                  FadeIn(root),FadeIn(typ),FadeIn(prop),ShowCreation(parent),ShowCreation(branches),
+                  FadeOut(tether),FadeIn(root),FadeIn(typ),FadeIn(prop),ShowCreation(parent),ShowCreation(branches),
                   FadeIn(fields),ShowCreation(field_bracket),run_time=1.3)
         self.remove(identity)
         self.add(name,root,typ,prop,parent,branches,fields,field_bracket)
@@ -141,16 +202,14 @@ class GenerateExecute(FilmScene):
         # 02.1–2 First call with small context anchor.
         inputs = InputGroup().move_to([-4.6,.3,0])
         self.add(inputs)
-        self.cue('02.1','程序把这次输入提供给语言模型')
-        m = model().move_to([0,.3,0])
-        self.play(FadeIn(m),run_time=.8)
-        self.play(Transform(inputs,InputGroup(compact=True).move_to([-5.7,2,0])),m.animate.move_to([-4.55,.3,0]),run_time=1.2)
+        self.cue('02.1','先把具体内容组合成一次完整输入')
+        m = model().move_to([-4.8,-1.65,0])
+        self.play(inputs.animate.set_height(2.8).move_to([-5,1.35,0]), FadeIn(m), run_time=1)
+        self.combined_input(inputs, m)
+        self.play(Transform(inputs,InputGroup(compact=True).move_to([-5.7,2,0])),
+                  m.animate.move_to([-4.55,.3,0]),run_time=1.2)
         flow = arrow(inputs.get_bottom(),m.get_top())
         self.play(GrowArrow(flow),run_time=.5)
-        parcel = inputs.copy()
-        self.add(parcel)
-        self.play(parcel.animate.scale(.15).move_to(m).set_opacity(0),run_time=1)
-        self.remove(parcel)
         # 02.3–7 Generate only a tool-call message, progressively.
         self.cue('02.3','模型正在生成消息；此时还没有读取录音')
         frame = brackets(7,3.7,GOLD_IO).move_to([1.1,.45,0])
@@ -191,13 +250,11 @@ class GenerateExecute(FilmScene):
         t = tool().move_to([4.6,-1.85,0])
         tool_name = label(SCHEMA['name'],22,GOLD_IO).next_to(t,DOWN,buff=.14)
         self.play(FadeIn(t),FadeIn(tool_name),run_time=.7)
-        match=Line(name.get_bottom(),tool_name.get_left(),color=GOLD_IO,stroke_width=1.4)
-        self.play(ShowCreation(match),Indicate(tool_name,color=GOLD_IO),run_time=.8)
+        self.play(Indicate(name,color=GOLD_IO),Indicate(tool_name,color=GOLD_IO),run_time=.8)
         param_copy = rows.copy()
         self.add(param_copy)
         self.play(param_copy.animate.scale(.15).move_to(t).set_opacity(0),run_time=1.1)
         self.remove(param_copy)
-        self.play(FadeOut(match),run_time=.3)
         # 02.11 Exactly one simulated read/execution.
         self.cue('02.11','程序触发执行后，工具才读取录音（模拟）')
         w = wave().move_to([-.7,-1.85,0])
@@ -222,8 +279,7 @@ class GenerateExecute(FilmScene):
         result_flow=route.copy().set_stroke(CYAN_IO,2)
         self.play(FadeIn(res),ShowCreation(result_flow),run_time=.6)
         self.play(MoveAlongPath(res,route),run_time=2.4,rate_func=smooth)
-        self.play(res.animate.scale(1/.48),run_time=.6)
-        self.play(FadeOut(result_flow),run_time=.3)
+        self.play(res.animate.scale(1/.48),FadeOut(result_flow),run_time=.8)
         self.wait(.7)
 
 
@@ -237,9 +293,9 @@ class ReturnAnswer(FilmScene):
         self.cue('03.1','程序收到返回的工具结果')
         receive = arrow(res.get_bottom(),p.get_top(),CYAN_IO)
         self.play(GrowArrow(receive),run_time=.6)
+        self.play(FadeOut(receive),run_time=.2)
         self.play(res.animate.scale(.8).next_to(p,UP,buff=.18),run_time=1)
         self.play(Indicate(p,color=CYAN_IO),run_time=.6)
-        self.play(FadeOut(receive),run_time=.3)
         self.cue('03.2','请求记录与工具结果都要保留')
         self.play(res.animate.scale(1/.8).move_to([1.4,-1.05,0]),run_time=1.2)
         self.wait(.8)
@@ -260,6 +316,7 @@ class ReturnAnswer(FilmScene):
         first_four=VGroup(*updated.rows[:4])
         self.play(TransformFromCopy(inputs.rows,first_four),run_time=1.3)
         self.wait(.7)
+        self.play(FadeOut(organize),run_time=.25)
         for key,caption,source,target,color in [
             ('03.5','加入完整的请求记录',req,updated.rows[4],GOLD_IO),
             ('03.6','加入与请求对应的工具结果',res,updated.rows[5],CYAN_IO)]:
@@ -274,33 +331,28 @@ class ReturnAnswer(FilmScene):
         self.add(updated)
         self.cue('03.7','完整输入：原有信息、请求记录、工具结果')
         self.wait(1.8)
-        self.second_call(updated,inputs,m,p,req,res,title,organize)
+        self.second_call(updated,inputs,m,p,req,res,title,organize,t)
         self.comparison()
 
-    def second_call(self,updated,inputs,m,p,req,res,title,organize):
+    def second_call(self,updated,inputs,m,p,req,res,title,organize,t):
         # 03.8–9 The SAME updated object shrinks; gold/cyan never disappear.
         self.cue('03.8','第 2 次调用：用户没有重新提问')
-        self.play(FadeOut(inputs),FadeOut(title),FadeOut(organize),run_time=.5)
-        # Reposition visibly with the full bordered input; then send a readable copy.
-        self.play(m.animate.move_to([-4.55,-1.4,0]),run_time=.8)
-        self.play(updated.animate.move_to([-4.8,1.4,0]).set_height(3.4),
-                  req.animate.set_stroke(color='#766630'),res.animate.set_stroke(color='#347B80'),run_time=1.3)
-        call=arrow(updated.get_bottom(),m.get_top())
-        self.play(GrowArrow(call),run_time=.5)
-        parcel=updated.copy()
-        self.add(parcel)
-        self.play(parcel.animate.scale(.65).move_to([-4.7,-.15,0]),run_time=1.2)
-        self.play(parcel.animate.scale(.2).move_to(m).set_opacity(0),run_time=.8)
-        self.remove(parcel)
+        self.play(FadeOut(inputs),FadeOut(title),run_time=.5)
+        self.play(updated.animate.set_height(3.5).move_to([-5,1,0]),
+                  m.animate.move_to([-4.8,-1.85,0]),
+                  FadeOut(req), FadeOut(res), FadeOut(p),
+                  t.animate.move_to([6.1,2.9,0]), run_time=1)
+        self.combined_input(updated, m, updated=True)
         self.play(Transform(m,model().move_to(m)),run_time=.5)
         self.cue('03.9','调用后保留本次输入的缩略图，含请求与结果')
         self.play(Transform(updated,InputGroup(updated=True,compact=True).move_to([-5.5,2.2,0])),
-                  FadeOut(call),FadeOut(req),FadeOut(res),p.animate.move_to([4.6,.35,0]),run_time=1.3)
+                  FadeIn(p.move_to([4.6,.35,0])),t.animate.move_to([5.25,-2.4,0]),run_time=1.3)
         self.play(m.animate.move_to([-2.8,.35,0]),run_time=.8)
         connection=arrow(updated.get_bottom(),m.get_left())
         anchor_title=label('本次输入',23).next_to(updated,UP,buff=.15)
         self.play(FadeIn(anchor_title),GrowArrow(connection),run_time=.5)
         self.wait(1)
+        self.play(FadeOut(connection),run_time=.25)
         # 03.10–11 Model answer goes via program to the user.
         self.cue('03.10','模型依据返回内容，生成给人的回答')
         a = answer().set_height(1.8).move_to([.1,.35,0])
@@ -308,25 +360,26 @@ class ReturnAnswer(FilmScene):
         self.play(GrowArrow(output),Write(a),run_time=2)
         output.add_updater(lambda line: line.become(arrow(m.get_right(),a.get_left())))
         self.wait(1)
+        output.clear_updaters()
+        self.play(FadeOut(output),run_time=.25)
         deliver = arrow(a.get_right(),p.get_left())
         self.play(GrowArrow(deliver),run_time=.6)
         deliver.add_updater(lambda line: line.become(arrow(a.get_right(),p.get_left())))
         self.play(a.animate.scale(.9).move_to([3,.35,0]),run_time=1.2)
-        self.play(Indicate(p,color=INK),run_time=.6)
+        deliver.clear_updaters()
+        self.play(FadeOut(deliver),Indicate(p,color=INK),run_time=.6)
         self.cue('03.11','程序把回答交给用户阅读')
         user = source_icon(0).move_to([5.6,2.75,0])
         self.play(FadeIn(user),run_time=.4)
         outgoing = a.copy().set_height(.45).next_to(p,UP,buff=.25)
         self.play(TransformFromCopy(a,outgoing),run_time=.7)
         from_program = arrow(p.get_top(),outgoing.get_bottom())
-        to_user = arrow(outgoing.get_top(),user.get_bottom())
-        self.play(GrowArrow(from_program),GrowArrow(to_user),run_time=.5)
+        self.play(GrowArrow(from_program),run_time=.5)
         from_program.add_updater(lambda line: line.become(arrow(p.get_top(),outgoing.get_bottom())))
-        to_user.add_updater(lambda line: line.become(arrow(outgoing.get_top(),user.get_bottom())))
         self.play(outgoing.animate.set_height(.85).move_to([5.55,1.85,0]),run_time=1.2)
+        from_program.clear_updaters()
+        self.play(FadeOut(from_program),run_time=.3)
         self.wait(1.8)
-        for line in [output,deliver,from_program,to_user]:
-            line.clear_updaters()
 
     def comparison(self):
         # 03.12 Closing comparison, not an additional main shot.
@@ -358,4 +411,4 @@ class ContinuityPreview(ReturnAnswer):
         organize=arrow(p.get_left(),updated.get_right())
         t.scale(.7).move_to([5.2,-2.15,0]).set_opacity(.4)
         self.add(updated,inputs,m,p,t,req,res,title,organize)
-        self.second_call(updated,inputs,m,p,req,res,title,organize)
+        self.second_call(updated,inputs,m,p,req,res,title,organize,t)

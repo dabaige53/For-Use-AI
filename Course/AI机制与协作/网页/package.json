@@ -7,9 +7,14 @@
     "init": "pnpm install --frozen-lockfile",
     "build": "node scripts/build.mjs",
     "preview": "node scripts/preview.mjs",
-    "check": "node scripts/check.mjs"
+    "check": "node scripts/check.mjs",
+    "gifs:04": "node scripts/generate-terrain-gifs.mjs"
   },
   "dependencies": {
     "markdown-it": "14.1.0"
+  },
+  "devDependencies": {
+    "@napi-rs/canvas": "^1.0.9",
+    "playwright": "^1.63.0"
   }
 }

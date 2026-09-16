@@ -12,8 +12,8 @@ INK = '#D7DBDF'
 PARAMS = {'file_path': '/audio/meeting.wav', 'model': 'large', 'language': 'zh', 'output_format': 'timestamps'}
 
 
-def label(value, size=28, color=INK):
-    return Text(value, font=FONT, font_size=size).set_color(color)
+def label(value, size=28, color=INK, weight="NORMAL"):
+    return Text(value, font=FONT, font_size=size, weight=weight).set_color(color)
 
 
 def brackets(width, height, color=INK):
