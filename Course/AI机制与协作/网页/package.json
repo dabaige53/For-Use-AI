@@ -8,7 +8,8 @@
     "build": "node scripts/build.mjs",
     "preview": "node scripts/preview.mjs",
     "check": "node scripts/check.mjs",
-    "gifs:04": "node scripts/generate-terrain-gifs.mjs"
+    "gifs:04": "node scripts/generate-terrain-gifs.mjs",
+    "dialogues:04": "node scripts/generate-dialogue-images.mjs"
   },
   "dependencies": {
     "markdown-it": "14.1.0"

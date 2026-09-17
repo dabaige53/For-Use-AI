@@ -41,6 +41,10 @@ pnpm run preview  # 默认在 http://localhost:4173 预览
 
 桌面左目录宽 13rem、右目录宽 12rem，栏间距 1.5rem；正文自动占用剩余宽度。左右箭头分别收起对应目录至 2rem 的展开按钮栏。状态通过本地存储 `course-nav-collapsed`、`course-toc-collapsed` 保存；浏览器禁用存储时仍可操作。1100px 及以下沿用正文上方目录，760px 及以下沿用移动菜单。
 
+## 第四章对话图片生成
+
+`网页/` 目录执行 `pnpm run dialogues:04`，从 `../04-表达需求与反馈/案例/对话.json` 生成 16 张对话 PNG（`配图/04-dialogue-{id}.png`）及 manifest，之后执行 `pnpm run build` 和 `pnpm run check`。命令支持 `--input`、`--output` 与 `--help`。对话 JSON 是图片文字真源，PNG 是派生结果，不能把 PNG 当正文真源；修改对话文字应改 JSON 后重新生成。
+
 ## 第四章 GIF 阅读裁边
 
 `04-表达需求与反馈/案例/gif-display.json` 记录每组 GIF 全部帧的联合内容边界，四周保留 24px。网页按此范围显示，最大宽度 40rem；原 GIF 文件不变。重新生成动画后需核对并更新范围，避免裁掉新增标签或轨迹。
