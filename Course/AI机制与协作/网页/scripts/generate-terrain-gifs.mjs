@@ -32,7 +32,10 @@ for(const id of ids)for(const after of [false,true]){
  function exportFrame(t){
  state.t=t;frameState=phaseData(t,state.after);updateCamera();shapes=[];labels=[];hits=[];
  ctx.setTransform(3,0,0,3,0,0);ctx.globalAlpha=1;ctx.fillStyle='#000000';ctx.fillRect(0,0,W,H);
- terrain();special();actors();flush();drawLabels();
+ terrain();special();actors();flush();
+ const drawn=[];const originalFill=ctx.fillText.bind(ctx);ctx.fillText=(text,...args)=>{drawn.push(text);return originalFill(text,...args)};
+ drawLabels();ctx.fillText=originalFill;
+ const missing=labels.filter(l=>!drawn.includes(l.text));if(missing.length)throw Error("Unplaced labels: "+JSON.stringify(missing));
  return {labels:labels.map(l=>l.text),ball:project(...surfaceSphere(motion(t,state.after).pos,.21))};
  }`,scope);
  const name=`04-terrain-${id.replaceAll('_','-')}-${after?'b':'a'}`;const checks=[];

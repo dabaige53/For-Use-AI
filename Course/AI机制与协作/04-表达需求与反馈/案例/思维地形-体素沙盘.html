@@ -440,7 +440,16 @@ function drawLabels(){
   const isTerrain = document.documentElement.classList.contains('terrain-only');
   const ball=project(...surfaceSphere(motion(state.t,state.after).pos,.21));const placed=[];ctx.font='11px "Terrain Sans",sans-serif';labels.sort((a,b)=>b.priority-a.priority);
   const topBound = isTerrain ? 16 : 175, botBound = isTerrain ? H - 18 : H - 60;
-  for(const l of labels){const [sx,sy]=l.s;if(sx<12||sx>W-12||sy<topBound||sy>botBound)continue;const w=ctx.measureText(l.text).width+17,h=23;let chosen=null;for(const [dx,dy] of [[0,-26],[-w*.48,-43],[w*.48,-43],[0,-61],[-w*.60,10],[w*.60,10]]){const x=clamp(sx-w/2+dx,10,W-w-10),y=clamp(sy+dy,topBound+2,botBound-h);const r={x,y,w,h};if(ball&&ball[0]>x-15&&ball[0]<x+w+15&&ball[1]>y-14&&ball[1]<y+h+14)continue;if(placed.some(p=>x<p.x+p.w+6&&x+w>p.x-6&&y<p.y+p.h+6&&y+h>p.y-6))continue;chosen=r;break}if(!chosen)continue;placed.push(chosen);const {x,y}=chosen;
+  for(const l of labels){const [sx,sy]=l.s;if(sx<12||sx>W-12||sy<topBound||sy>botBound)continue;const w=ctx.measureText(l.text).width+17,h=23;let chosen=null;for(const [dx,dy] of [[0,-26],[-w*.48,-43],[w*.48,-43],[0,-61],[-w*.60,10],[w*.60,10],[0,-84],[-w*.8,-68],[w*.8,-68],[-w,-26],[w,-26],[0,36]]){const x=clamp(sx-w/2+dx,10,W-w-10),y=clamp(sy+dy,topBound+2,botBound-h);const r={x,y,w,h};if(ball&&ball[0]>x-15&&ball[0]<x+w+15&&ball[1]>y-14&&ball[1]<y+h+14)continue;if(placed.some(p=>x<p.x+p.w+6&&x+w>p.x-6&&y<p.y+p.h+6&&y+h>p.y-6))continue;chosen=r;break}if(!chosen&&isTerrain){
+    // Crowded labels keep their original text and style; find the nearest free slot.
+    const slots=[];
+    for(let y=topBound+2;y<=botBound-h;y+=h+6)for(let x=10;x<=W-w-10;x+=w+8){
+      if(ball&&ball[0]>x-15&&ball[0]<x+w+15&&ball[1]>y-14&&ball[1]<y+h+14)continue;
+      if(placed.some(p=>x<p.x+p.w+6&&x+w>p.x-6&&y<p.y+p.h+6&&y+h>p.y-6))continue;
+      slots.push({x,y,w,h});
+    }
+    slots.sort((a,b)=>Math.hypot(a.x+w/2-sx,a.y+h/2-sy)-Math.hypot(b.x+w/2-sx,b.y+h/2-sy));chosen=slots[0];
+  }if(!chosen)continue;placed.push(chosen);const {x,y}=chosen;
   ctx.strokeStyle=blend(l.color,'#ffffff',.22);ctx.lineWidth=.9;ctx.beginPath();ctx.moveTo(sx,sy+2);ctx.lineTo(clamp(sx,x+6,x+w-6),y+h);ctx.stroke();ctx.fillStyle=blend('#fbfbea','#e1e8d9',state.night*.5);ctx.beginPath();ctx.roundRect(x,y,w,h,3);ctx.fill();ctx.strokeStyle=blend(l.color,'#ffffff',.3);ctx.stroke();ctx.fillStyle=l.color;ctx.textAlign='left';ctx.textBaseline='middle';ctx.fillText(l.text,x+8,y+h/2)}
 }
 function currentStage(){const t=state.t,latest=frameState.events.filter(e=>t>=e.appear).at(-1);if(!latest)return 0;if(t<latest.land)return 0;if(t<latest.land+FORM)return 1;if(t<latest.land+FORM+GROW)return 2;return 3}

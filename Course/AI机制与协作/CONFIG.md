@@ -30,3 +30,9 @@ pnpm run preview  # 默认在 http://localhost:4173 预览
 ## 停止与排错
 
 本地预览前台运行，Ctrl+C 停止。端口被占用时设置其他 PORT。预览仅绑定 127.0.0.1。修改正文或配图后重新 build、check。容器使用 `docker compose down` 停止；本项目无运行期持久数据，修改内容保留在板块源目录。Docker daemon 未运行时先启动本机容器服务。
+
+## 第 04 章原风格 GIF 导出
+
+在 `网页/` 执行 `pnpm run gifs:04`。支持 `--only balance|entangle|case-better|drift|distill` 和 `--output 目录`，帮助见 `pnpm run gifs:04 --help`。依赖锁文件中的 Node Canvas 及 PATH 上的 ffmpeg，不启动浏览器。
+
+导出复用 `04-表达需求与反馈/案例/思维地形-体素沙盘.html` 的原场景、标签、字体与相机，保留黑底、A/B 对照及 26 帧/16 fps 节奏。只提高导出像素至 2040×1140，并逐帧清底、检查标签是否完成绘制。原文字号与正文双栏结构不变。源帧与检查数据保存在命令返回的系统临时目录。
