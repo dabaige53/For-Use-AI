@@ -1,0 +1,130 @@
+{
+  "04-terrain-drift-a.gif": {
+    "x": 317,
+    "y": 263,
+    "width": 1305,
+    "height": 635,
+    "sourceWidth": 2040,
+    "sourceHeight": 1140
+  },
+  "04-terrain-drift-b.gif": {
+    "x": 317,
+    "y": 263,
+    "width": 1305,
+    "height": 635,
+    "sourceWidth": 2040,
+    "sourceHeight": 1140
+  },
+  "04-terrain-balance-a.gif": {
+    "x": 317,
+    "y": 266,
+    "width": 1305,
+    "height": 631,
+    "sourceWidth": 2040,
+    "sourceHeight": 1140
+  },
+  "04-terrain-balance-b.gif": {
+    "x": 317,
+    "y": 266,
+    "width": 1305,
+    "height": 631,
+    "sourceWidth": 2040,
+    "sourceHeight": 1140
+  },
+  "04-terrain-entangle-a.gif": {
+    "x": 317,
+    "y": 177,
+    "width": 1305,
+    "height": 720,
+    "sourceWidth": 2040,
+    "sourceHeight": 1140
+  },
+  "04-terrain-entangle-b.gif": {
+    "x": 317,
+    "y": 177,
+    "width": 1305,
+    "height": 720,
+    "sourceWidth": 2040,
+    "sourceHeight": 1140
+  },
+  "04-terrain-case-better-a.gif": {
+    "x": 317,
+    "y": 240,
+    "width": 1305,
+    "height": 657,
+    "sourceWidth": 2040,
+    "sourceHeight": 1140
+  },
+  "04-terrain-case-better-b.gif": {
+    "x": 317,
+    "y": 240,
+    "width": 1305,
+    "height": 657,
+    "sourceWidth": 2040,
+    "sourceHeight": 1140
+  },
+  "04-terrain-distill-a.gif": {
+    "x": 317,
+    "y": 151,
+    "width": 1305,
+    "height": 747,
+    "sourceWidth": 2040,
+    "sourceHeight": 1140
+  },
+  "04-terrain-distill-b.gif": {
+    "x": 317,
+    "y": 151,
+    "width": 1305,
+    "height": 747,
+    "sourceWidth": 2040,
+    "sourceHeight": 1140
+  },
+  "04-terrain-purify-a.gif": {
+    "x": 316,
+    "y": 241,
+    "width": 1307,
+    "height": 656,
+    "sourceWidth": 2040,
+    "sourceHeight": 1140
+  },
+  "04-terrain-purify-b.gif": {
+    "x": 316,
+    "y": 241,
+    "width": 1307,
+    "height": 656,
+    "sourceWidth": 2040,
+    "sourceHeight": 1140
+  },
+  "04-terrain-reason-a.gif": {
+    "x": 317,
+    "y": 214,
+    "width": 1305,
+    "height": 683,
+    "sourceWidth": 2040,
+    "sourceHeight": 1140
+  },
+  "04-terrain-reason-b.gif": {
+    "x": 317,
+    "y": 214,
+    "width": 1305,
+    "height": 683,
+    "sourceWidth": 2040,
+    "sourceHeight": 1140
+  },
+  "04-terrain-anneal-a.gif": {
+    "x": 316,
+    "y": 105,
+    "width": 1307,
+    "height": 793,
+    "sourceWidth": 2040,
+    "sourceHeight": 1140
+  },
+  "04-terrain-anneal-b.gif": {
+    "x": 316,
+    "y": 105,
+    "width": 1307,
+    "height": 793,
+    "sourceWidth": 2040,
+    "sourceHeight": 1140
+  }
+}

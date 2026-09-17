@@ -7,7 +7,7 @@ import {execFileSync} from 'node:child_process';
 import vm from 'node:vm';
 const chapter=resolve(dirname(fileURLToPath(import.meta.url)),'../../04-表达需求与反馈');
 const args=process.argv.slice(2);
-if(args.includes('--help')){console.log('node scripts/generate-terrain-gifs.mjs [--output DIR] [--only balance|entangle|case-better|drift|distill]\nPreserves original cases, labels, camera, black background and 26 frames at 16 fps. Requires ffmpeg.');process.exit(0)}
+if(args.includes('--help')){console.log('node scripts/generate-terrain-gifs.mjs [--output DIR] [--only balance|entangle|case-better|drift|distill|purify|reason|anneal]\nPreserves original cases, labels, camera, black background and 26 frames at 16 fps. Requires ffmpeg.');process.exit(0)}
 for(let i=0;i<args.length;i+=2)if(!['--only','--output'].includes(args[i])||!args[i+1])throw Error('Invalid option; use --help');
 const opt=(key,fallback)=>args.includes(key)?args[args.indexOf(key)+1]:fallback;
 const output=resolve(opt('--output',join(chapter,'配图')));
@@ -16,7 +16,7 @@ const font=html.match(/src:url\(data:font\/woff;base64,([^)]+)\)/)?.[1];
 if(!font||!GlobalFonts.register(Buffer.from(font,'base64'),'Terrain Sans'))throw Error('Original embedded font could not be loaded');
 // Evaluate only the existing pure geometry/drawing functions; do not start a browser or DOM event loop.
 const source=html.slice(html.indexOf('const $=id=>'),html.indexOf("canvas.addEventListener('pointerdown'"));
-const ids=['balance','entangle','case_better','drift','distill'].filter(id=>!args.includes('--only')||id.replaceAll('_','-')===opt('--only'));
+const ids=['balance','entangle','case_better','drift','distill','purify','reason','anneal'].filter(id=>!args.includes('--only')||id.replaceAll('_','-')===opt('--only'));
 if(!ids.length)throw Error('Unknown --only');
 await mkdir(output,{recursive:true});const work=await mkdtemp(join(tmpdir(),'course04-preserved-'));const audit=[];
 console.log('关键帧目录：'+work);
