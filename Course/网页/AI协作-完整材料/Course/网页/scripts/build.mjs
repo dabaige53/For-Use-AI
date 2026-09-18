@@ -26,7 +26,7 @@ await mkdir(dist, { recursive: true });
 await cp(join(root, "public"), dist, { recursive: true });
 for (const lesson of lessons) {
   for (const folder of ["素材", "交互"]) {
-    try { await cp(join(course, dirname(lesson.source), folder), join(dist, dirname(lesson.source), folder), { recursive: true }); }
+    try { await cp(join(course, lesson.slug, folder), join(dist, lesson.slug, folder), { recursive: true }); }
     catch (error) { if (error.code !== "ENOENT") throw error; }
   }
 }
@@ -44,7 +44,7 @@ function escapeHtml(value) {
 function rewriteUrl(url, item) {
   if (/^(?:[a-z]+:|#|\/\/)/i.test(url)) return url;
   const [, path, suffix] = url.match(/^([^?#]*)(.*)$/s);
-  const target = relative(course, resolve(course, dirname(item.source), decodeURIComponent(path)));
+  const target = relative(course, resolve(course, item.slug, decodeURIComponent(path)));
   const lesson = lessons.find(entry => entry.source === target);
   return encodeURI(lesson ? lesson.output : target) + suffix;
 }

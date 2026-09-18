@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="100%" height="auto" role="img" aria-labelledby="tif-title tif-desc">
+  <title id="tif-title">思维地形体素沙盘 · 界面结构与因果导览</title>
+  <desc id="tif-desc">展示思维地形体素沙盘的三大区域：左侧上下文与对话流、中间3D体素地形与动力学控制、右侧20机制目录，以及顶部因果律步进条。</desc>
+  <defs>
+    <linearGradient id="tif-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EDF2F7"/>
+    </linearGradient>
+    <linearGradient id="desk-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E9EEDE"/>
+      <stop offset="100%" stop-color="#C7D2B6"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+  </style>
+
+  <!-- 背景 -->
+  <rect width="960" height="520" rx="12" fill="url(#tif-bg)"/>
+  <rect x="1.5" y="1.5" width="957" height="517" rx="10.5" fill="none" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- 模拟沙盘顶栏 (Header) -->
+  <rect x="16" y="16" width="928" height="42" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <g transform="translate(30, 24)">
+    <rect width="24" height="24" rx="4" fill="#548761"/>
+    <text x="32" y="17" class="sans" font-size="14" font-weight="700" fill="#1E293B">思维地形 · 体素沙盘</text>
+    <text x="175" y="17" class="mono" font-size="10" fill="#64748B">THINKING TERRAIN · INTERACTIVE ATELIER</text>
+  </g>
+  <g transform="translate(760, 26)">
+    <rect width="76" height="22" rx="4" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <text x="38" y="15" class="sans" font-size="10" fill="#475467" text-anchor="middle">日夜循环</text>
+    <rect x="84" y="0" width="76" height="22" rx="4" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <text x="122" y="15" class="sans" font-size="10" fill="#475467" text-anchor="middle">恢复视角</text>
+  </g>
+
+  <!-- 三大工作区分割 -->
+  <!-- 左栏：上下文对话 (Context) -->
+  <g transform="translate(16, 68)">
+    <rect width="250" height="434" rx="8" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <rect x="0" y="0" width="250" height="30" rx="8" fill="#F8FAFC"/>
+    <text x="14" y="20" class="mono" font-size="11" font-weight="700" fill="#475467">CONTEXT / 上下文对话</text>
+
+    <!-- 模拟对话气泡 1：用户初始任务 -->
+    <g transform="translate(12, 40)">
+      <rect width="226" height="66" rx="6" fill="#FFFBEB" stroke="#FDE68A"/>
+      <text x="10" y="18" class="sans" font-size="10" font-weight="700" fill="#92400E">用户 · 初始任务 (00s)</text>
+      <text x="10" y="36" class="sans" font-size="11" fill="#78350F">“写炫酷、有现代科技感的</text>
+      <text x="10" y="52" class="sans" font-size="11" fill="#78350F">番茄钟网页”</text>
+      <circle cx="210" cy="18" r="4" fill="#D1983D"/>
+    </g>
+
+    <!-- 模拟对话气泡 2：提示策略 -->
+    <g transform="translate(12, 114)">
+      <rect width="226" height="66" rx="6" fill="#F0FDF4" stroke="#BBF7D0"/>
+      <text x="10" y="18" class="sans" font-size="10" font-weight="700" fill="#166534">提示策略 · 显式配平 (04s)</text>
+      <text x="10" y="36" class="sans" font-size="11" fill="#14532D">“我是小白，简单点。</text>
+      <text x="10" y="52" class="sans" font-size="11" fill="#14532D">一个双击可用的 HTML 即可”</text>
+      <circle cx="210" cy="18" r="4" fill="#22C55E"/>
+    </g>
+
+    <!-- 模拟采样结果栏 -->
+    <g transform="translate(12, 190)">
+      <rect width="226" height="110" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="10" y="20" class="sans" font-size="11" font-weight="700" fill="#1E293B">采样结果 · 教学演绎</text>
+      <text x="10" y="42" class="sans" font-size="10" fill="#64748B">A 状态：滑入过度工程侧沟</text>
+      <text x="10" y="60" class="sans" font-size="10" fill="#16A34A">B 状态：直接交付单文件成品</text>
+      <text x="10" y="88" class="sans" font-size="9" fill="#94A3B8">理解边界：配平词应具体，不单写禁令</text>
+    </g>
+
+    <!-- 模拟左下矢量图解 -->
+    <g transform="translate(12, 310)">
+      <rect width="226" height="112" rx="6" fill="#F4F8EF" stroke="#C8DCCB"/>
+      <text x="10" y="20" class="sans" font-size="10" font-weight="700" fill="#2D5A37">同步矢量图解 (AUX)</text>
+      <!-- 微缩路径示意 -->
+      <path d="M 20 60 Q 80 40 140 60 T 200 60" fill="none" stroke="#548761" stroke-width="2"/>
+      <path d="M 20 60 Q 80 85 140 85 T 200 85" fill="none" stroke="#AF534F" stroke-width="1.5" stroke-dasharray="2,2"/>
+      <circle cx="140" cy="60" r="3" fill="#2C3328"/>
+      <text x="113" y="100" class="sans" font-size="9" fill="#5F7053" text-anchor="middle">主沟与侧沟动力学分水岭</text>
+    </g>
+  </g>
+
+  <!-- 中间：3D 体素微缩沙盘场景 (Scene) -->
+  <g transform="translate(276, 68)">
+    <rect width="454" height="434" rx="8" fill="url(#desk-bg)" stroke="#B6C4A5"/>
+    
+    <!-- 场景标题与 A/B 对照开关 -->
+    <g transform="translate(16, 16)">
+      <text x="0" y="14" class="mono" font-size="10" fill="#5F7053">12 / 20　机制 · 基础方法</text>
+      <text x="0" y="32" class="sans" font-size="16" font-weight="700" fill="#243324">显式配平</text>
+    </g>
+    <!-- A/B 对照开关按钮 -->
+    <g transform="translate(310, 16)">
+      <rect width="128" height="26" rx="13" fill="#548761" stroke="#3D6847"/>
+      <text x="64" y="17" class="sans" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">B · 调整策略 ⇄</text>
+    </g>
+
+    <!-- 因果律步进条 (Stage Strip) -->
+    <g transform="translate(16, 56)">
+      <rect width="422" height="24" rx="4" fill="#E4EBE0" stroke="#CBD5C5"/>
+      <text x="40" y="16" class="sans" font-size="9" font-weight="600" fill="#435540">01 线索出现</text>
+      <text x="90" y="16" class="sans" font-size="9" fill="#889882">→</text>
+      <text x="145" y="16" class="sans" font-size="9" font-weight="600" fill="#435540">02 词元触地</text>
+      <text x="195" y="16" class="sans" font-size="9" fill="#889882">→</text>
+      <text x="250" y="16" class="sans" font-size="9" font-weight="600" fill="#435540">03 地形改变</text>
+      <text x="300" y="16" class="sans" font-size="9" fill="#889882">→</text>
+      <text x="360" y="16" class="sans" font-size="9" font-weight="700" fill="#2E7D32">04 采样响应</text>
+    </g>
+
+    <!-- 3D 体素微缩沙盘主体投影 -->
+    <g transform="translate(227, 230)">
+      <!-- 体素地台 -->
+      <polygon points="0,-40 -180,45 0,130 180,45" fill="#D3DCB9" stroke="#A9B89A" stroke-width="1.2"/>
+      <!-- 起点高台 -->
+      <polygon points="0,-20 -50,5 0,30 50,5" fill="#D8BD83" stroke="#B19155"/>
+      <!-- 彩色 Token 触地 -->
+      <circle cx="0" cy="5" r="6" fill="#D1983D"/>
+
+      <!-- 左侧：绿色主谷通道 -->
+      <polygon points="-40,40 -120,75 -150,45 -70,15" fill="#A7CEAB" stroke="#548761"/>
+      <!-- 右侧：红色侧沟深坑 -->
+      <polygon points="40,40 120,75 150,45 70,15" fill="#DC9694" stroke="#AF534F"/>
+
+      <!-- 黑色采样小球 (Ink Ball) -->
+      <circle cx="-80" cy="55" r="7" fill="#2C3328" stroke="#FFFFFF" stroke-width="1.5"/>
+
+      <!-- 标注 -->
+      <text x="-105" y="95" class="sans" font-size="10" font-weight="700" fill="#2E7D32" text-anchor="middle">目标主谷 (单文件)</text>
+      <text x="105" y="95" class="sans" font-size="10" font-weight="700" fill="#AF534F" text-anchor="middle">过度工程侧沟 (npm全家桶)</text>
+    </g>
+
+    <!-- 底部控制杠杆与图例 -->
+    <g transform="translate(16, 396)">
+      <rect width="422" height="26" rx="4" fill="#DCE5D1"/>
+      <text x="14" y="17" class="sans" font-size="10" fill="#5F7053">图例：<tspan fill="#D1983D">●</tspan> 输入词元　<tspan fill="#2C3328">●</tspan> 采样黑球　<tspan fill="#548761">■</tspan> 目标　<tspan fill="#AF534F">■</tspan> 风险侧沟</text>
+      <text x="350" y="17" class="sans" font-size="10" fill="#718369">可拖动旋转缩放</text>
+    </g>
+  </g>
+
+  <!-- 右栏：20 个机制目录 (Directory) -->
+  <g transform="translate(740, 68)">
+    <rect width="204" height="434" rx="8" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <rect x="0" y="0" width="204" height="30" rx="8" fill="#F8FAFC"/>
+    <text x="14" y="20" class="mono" font-size="11" font-weight="700" fill="#475467">20 机制体系</text>
+
+    <!-- 机制列表摘录 -->
+    <g transform="translate(10, 38)">
+      <rect width="184" height="22" rx="4" fill="#F8FAFC"/>
+      <text x="10" y="15" class="sans" font-size="10" fill="#334155">01 语义漂移 (Drift)</text>
+      <rect y="26" width="184" height="22" rx="4" fill="#F8FAFC"/>
+      <text x="10" y="41" class="sans" font-size="10" fill="#334155">06 特征纠缠 (Entangle)</text>
+      <rect y="52" width="184" height="22" rx="4" fill="#F0FDF4" stroke="#86EFAC"/>
+      <text x="10" y="67" class="sans" font-size="10" font-weight="700" fill="#166534">12 显式配平 (Balance) ★</text>
+      <rect y="78" width="184" height="22" rx="4" fill="#F8FAFC"/>
+      <text x="10" y="93" class="sans" font-size="10" fill="#334155">17 引导采样与回滚</text>
+      <rect y="104" width="184" height="22" rx="4" fill="#F8FAFC"/>
+      <text x="10" y="119" class="sans" font-size="10" fill="#334155">18 案例好于说明</text>
+    </g>
+    <text x="102" y="230" class="sans" font-size="10" fill="#94A3B8" text-anchor="middle">…共 20 个物理机制…</text>
+  </g>
+</svg>

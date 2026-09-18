@@ -1,0 +1,2137 @@
+[
+  {
+    "path": "Course/01-使用AI的核心问题/使用AI的核心问题.md",
+    "bytes": 272,
+    "sha256": "751627ff5e86afcb9c475274cdf60f37e578315b643fc3d17e45c55846a23cbd"
+  },
+  {
+    "path": "Course/01-使用AI的核心问题/素材/01-evidence.svg",
+    "bytes": 3103,
+    "sha256": "48eac6422c2ef2f6545efdc1ac3783db51ea3c98bee8ee0e13b439d1c053ac2f"
+  },
+  {
+    "path": "Course/01-使用AI的核心问题/素材/01-problem-map.svg",
+    "bytes": 5689,
+    "sha256": "4a7bd69058dc6dd908b28b9ea3e4a16765ec09a38c810fff7d343e5bf6f8501f"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/AI的能力从哪里来-来源.md",
+    "bytes": 1136,
+    "sha256": "d54c3d6f37d1d5d56f772258f1ca6f7b5b35df85611f0cab42a448cc249e2668"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/AI的能力从哪里来.md",
+    "bytes": 6634,
+    "sha256": "42629c19f2a66c319240effd3de3e81804f90aa9899be208c4cf3866aafd38c6"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/build_group_a.py",
+    "bytes": 5056,
+    "sha256": "111ea345ce7a079830fe628d7d0288ae0da8b953fd67a89395d95e53023d7b17"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/build_group_b.py",
+    "bytes": 9098,
+    "sha256": "9e6071214e0e7081e1f23e728e7edd628e47508f64a86ecb6a1f9e87d75b70cf"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/build_group_c.py",
+    "bytes": 5617,
+    "sha256": "1f556565a7baccacd876925e44be5ca52622189ac959cf9dc589296bbb021078"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/build_reconstruction_chat.py",
+    "bytes": 5891,
+    "sha256": "7bc22d109a5b68d981d36db28a5f3e787d385ab95ce23a2c0bcce1f4fd3a531d"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/build_reconstruction_flow.py",
+    "bytes": 7165,
+    "sha256": "b67f6095ead5d4ac51e1c8cd5528d169b181e04611409989f2c50f5d1f80ae47"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/burn_review_subtitles.py",
+    "bytes": 4912,
+    "sha256": "70eec38d162bb57ab09bdbd229ef29b4fbae34569d6695a010a71fe78bd36bd4"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/compile_review.py",
+    "bytes": 1479,
+    "sha256": "d5b5cc94bc48bbdc904306f3922504b4674aa6c0dd21eba4b28a8db565306e71"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/compose_reconstruction.py",
+    "bytes": 11313,
+    "sha256": "194803be668b8c289d8c74a5d46c95835fc1a2b2e93e92f235e027a48bc17152"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/custom_config.yml",
+    "bytes": 287,
+    "sha256": "912e962d3398dae5fd5111e160cd5c6d9cca18d6af4baf6ac325ca71dcd90293"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/group_a.py",
+    "bytes": 278148,
+    "sha256": "e601af6ee1fc57e2e577f57305c69e6c70da9f98942a3c29f9da18a5fa0b3a1b"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/group_b.py",
+    "bytes": 291207,
+    "sha256": "6d2822127defeb38741a0484cf8a951c3593eeaac3f8abf0a6172b147a093fe8"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/group_c.py",
+    "bytes": 14213,
+    "sha256": "719f62988cb846185c79c160a73cb55aabe7a560f641106d100de98750ffe61f"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/init.sh",
+    "bytes": 412,
+    "sha256": "27a027d6c1e0eee0f048e6b12f8d39a4efa371f58155884eeb9edecc26ce0b08"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/pyproject.toml",
+    "bytes": 321,
+    "sha256": "cad699bcbbfca12b41d13bca9f4c485e0739fede7c43b235ebf92488b1ccbdfb"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/pyrightconfig.json",
+    "bytes": 103,
+    "sha256": "355aeb5e1fc8afcf0fca6277b1ed836e61106c724a1a643b5bb241184aa15586"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/reconstruction_chat.py",
+    "bytes": 16918,
+    "sha256": "e9eb0e6958b0a66c8675739cb35674e82302d8149d93df3b6f512b779bc5a74e"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/reconstruction_core_zh.py",
+    "bytes": 28033,
+    "sha256": "1903f362adebd2f38dbd701862f279fe738891f264540888b9f466f7b3efebee"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/reconstruction_feedback_zh.py",
+    "bytes": 2856,
+    "sha256": "69f86b3cee341e295f8e88bb2900633be16af140f8db34e42421b454e969e448"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/reconstruction_flow.py",
+    "bytes": 11203,
+    "sha256": "2bf305a89bc823269bdd45d29c714100567ffa123342f13b084266a1e511e15c"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/reconstruction_gpu.py",
+    "bytes": 2555,
+    "sha256": "56426c64e3c7ebec8a9cc595edf4fe985492941656826499d999447039a74503"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/reconstruction_gpu_zh.py",
+    "bytes": 2658,
+    "sha256": "0f874590a551e0b16f2f192b820c2fb33a52d8fb3f620c5152e2edc3b4273828"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/reconstruction_overlays.py",
+    "bytes": 4285,
+    "sha256": "938e1ee861a395bd8ee88225a3d691d481d03634fb7a8e5119a02c91fd1d8bf3"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/reconstruction_overlays_zh.py",
+    "bytes": 3412,
+    "sha256": "63e9cb1a1cce921065d9cf4bd58908d91f183042af9596b88f2aca531032e5a9"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/reconstruction_paper_zh.py",
+    "bytes": 1396,
+    "sha256": "1bf9c64940257bcf18012a33b6c346269111f7976184e726e7ea50b1b5399145"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/render_all.py",
+    "bytes": 3650,
+    "sha256": "91ee37a4f7c9a75b6bc705f4ca788bc672c0017d4b4c7124cabd1c0af0f413e5"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/render_zh_final.py",
+    "bytes": 4206,
+    "sha256": "41fd70849bd5c23945d100cee21548ac31432e2ace5d774413556a50b4c9b1dd"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/tex_support.py",
+    "bytes": 2935,
+    "sha256": "95571047f1db4eeceb326aa3cd2afa73a48848148467b8bdda75d0f4d0e04d5a"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/uv.lock",
+    "bytes": 134668,
+    "sha256": "38f444e06edc1f30d1c18bd8b35bbf2cf796a56126c3479b0eb6eda3e308d12e"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/代码/verify_renders.py",
+    "bytes": 3475,
+    "sha256": "d7220db0d1d84f1e8d40e6fc9062b98506bcdbbec27e356ab660b169ba6cdf30"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/大语言模型简要说明.md",
+    "bytes": 9545,
+    "sha256": "c8fb97341cea83e867641b835e7b91e452a00ef575cfcb5a88ff1ec844671af9"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/字幕.srt",
+    "bytes": 8763,
+    "sha256": "1672edebf852218255be7530ab1a59babc7d9e8de424d5b7a2645f780d25af3e"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/时间线.json",
+    "bytes": 18861,
+    "sha256": "8adc2c26a49d6f71a166d704cca5f7eb5e461adf0b2b71e71abdfbe9a6253a2e"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/图片/mini-llm-cover.jpg",
+    "bytes": 297567,
+    "sha256": "38cff0094de107fc7727fe7c7d516ab3e1e6a3889eeaf6070b75c552573123d5"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/大语言模型简要说明-资料来源.md",
+    "bytes": 1687,
+    "sha256": "f89ec4485e9d59473923dfd45eea6c8863e9a6bf3d2bb3e1d7b76d6ae95c2fe8"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/字幕/Large Language Models explained briefly - YouTube-source.srt",
+    "bytes": 11062,
+    "sha256": "79d7a32d12caddd1a0214f415959a313efbcd893c98883551272d13c216a75ad"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/audio/voice-test.mp3",
+    "bytes": 19872,
+    "sha256": "7892ccd58acd872dc1929f715573452a1c9d01562cb8e614f3ddefb46a4c4dad"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/data/tale_of_two_cities.txt",
+    "bytes": 771600,
+    "sha256": "e3dfeb67feb904ac0f73a35204a175c58248422c2be8556802cb8820d958d67c"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/fonts/cm-unicode.zip",
+    "bytes": 18075361,
+    "sha256": "9631fe99640da97875755db86cbb85fe99bd06526b65f0c42b4df266e1091af0"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/append.jpg",
+    "bytes": 484885,
+    "sha256": "6fd734cb58054f2b9664db6cdec96d5ce2053638da354fd55dd6f121898ad43f"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/backpropogation.jpg",
+    "bytes": 229729,
+    "sha256": "d8c23417aa749bee6058027a63082c03662a9854bda7f465e8ac78d0e22c2754"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/bank.jpg",
+    "bytes": 953261,
+    "sha256": "883587c0bf8002a48e55b679e88a1d4aa6f6d890cdf966485b6c8659e849ef63"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/billions.jpg",
+    "bytes": 1180931,
+    "sha256": "2d9dbb892489b082699f905da11293a92457e8eef37069355f4ee6c44cfef89f"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/data.jpg",
+    "bytes": 652235,
+    "sha256": "2e0e901b1ac2206ace0f816bc95be50b4a091ac97020575f6bc07993e8620ece"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/description.jpg",
+    "bytes": 113116,
+    "sha256": "e7709146fbc786cce072b104b92e4ecd817c524a2103f868b17936c5970855ac"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/end.jpg",
+    "bytes": 494673,
+    "sha256": "40676cb60861d0549940f4f506c02119babd03294637f332d6a6044f7bfacc96"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/google.jpg",
+    "bytes": 472279,
+    "sha256": "2ad622c86c7a07468ed68df30535f40b3bb21e08bba82f538afbfbdaceea5bcc"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/gpu-icon-original.png",
+    "bytes": 32498,
+    "sha256": "c84af3be35f4b14c2c322ac5e3413a6ecb15ddae2e5b925d62634d8d621dbe23"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/gpu.jpg",
+    "bytes": 307897,
+    "sha256": "6d84a57a21b3d97bf8606c4bbd211def098c001c6d88116cc2831efab01c3a79"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/overover.jpg",
+    "bytes": 415700,
+    "sha256": "39ab0f2c6c04e32e4542aadee8fe578e87920eb85d8b04d6236e27b29285e3e0"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/parameter.jpg",
+    "bytes": 193964,
+    "sha256": "45c80e8e3d9821cfb1fc03135eb1c7b5acef6c0833ac5869ede107ad0c154b70"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/pretraining.jpg",
+    "bytes": 335600,
+    "sha256": "4bce70e535076fe8bf1fc70b4bdfc94c481f219d3720025ca2cf9cd99c5575cb"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/probability.jpg",
+    "bytes": 266226,
+    "sha256": "a37b873e0bd2ac273bd4e9910349593a7b749e1e480f64092348236f94bbe35f"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/repeat.jpg",
+    "bytes": 152420,
+    "sha256": "7a97be540b1c74f727eda777b474d5cc068a8e278268491a4b5dd225f4bb7b1d"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/repeat2.jpg",
+    "bytes": 130340,
+    "sha256": "c84c6788f2d9c45ae0516bdcd8e3cbf13947d967e7ca9a6c3f091c728f7660f8"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/river-bank-original.png",
+    "bytes": 1856345,
+    "sha256": "de35a740ee57ae3475c0e42e8dabeaafde1bef2888534d1cc113f53f17af942a"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/rlhf.jpg",
+    "bytes": 430576,
+    "sha256": "30114d46678abf04b491b8775304cfbdb5bef75fa190e541c62ae480e5c2f627"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/script.jpg",
+    "bytes": 139748,
+    "sha256": "069e7bd2899597a1328f0b09ee2ba22a7df749121d0de00c185655ddce036254"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/token.jpg",
+    "bytes": 429800,
+    "sha256": "00cbf172677538a28be09cd34b3405fb8792ae72b8655627019baa1ccd5ede52"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/training.jpg",
+    "bytes": 423462,
+    "sha256": "d1dd90df8d3a438e97301a9ae190359ee3662c17e8a9f5f259c7d0d302876248"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/user.jpg",
+    "bytes": 81919,
+    "sha256": "ac28700c9fd364bf5bfa8db419e8701abd8a40f91cf88c7f514362280ce75dc5"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/images/worker-original.png",
+    "bytes": 47510,
+    "sha256": "08e698694f1af84672936cdcb4cf651daa9063c6a3194701c6121346ea27e4b8"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/manifest.json",
+    "bytes": 5160,
+    "sha256": "7c21ddc620af0a4eb35c963f90624793b2e4784f9e196cc1ac04c707e9efbcd0"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-a/9-Jl0dxWQs8.jpg",
+    "bytes": 134965,
+    "sha256": "a67c32e0f82221b1899d482586c42c39cf04476ece4c2da4dfae6833ed3fea87"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-a/IHZwWFHWa-w.jpg",
+    "bytes": 115101,
+    "sha256": "ed389c2026c7dec084f72e209b18c62b03843ee78e62675641f06f2b3f91aec6"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-a/Ilg3gGewQ5U.jpg",
+    "bytes": 110067,
+    "sha256": "d3dc2025acdf4dbb65e9a1d95bdc4d322c2beaa7d699321bb68d052eae601148"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-a/aircAruvnKk.jpg",
+    "bytes": 184532,
+    "sha256": "403ae10ff5718638eddbe02b3ffe599e381f74dd7068cff43a1b20b7a5e31e51"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-a/eMlx5fFNoYc.jpg",
+    "bytes": 99872,
+    "sha256": "e1e092532ec69a05c81645e447c717d728159026c3c0ac167c04a3956cb964e7"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-a/tIeHLnjs5U8.jpg",
+    "bytes": 74741,
+    "sha256": "5bfe21bacdce6ea0fcffc983e53a4044c47cb50f7964b596dada86f3d414bd25"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-a/wjZofJX0v4M.jpg",
+    "bytes": 136561,
+    "sha256": "78dbabe483f5633b928d78627252e8ba9395522d5ab1ce591cbafd1588912c39"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/images/CHM_Exterior.png",
+    "bytes": 28361,
+    "sha256": "f49ed3ce473c670e6968b9a2f21e2a5f2d89f6ce3cd41687735660c6e79c8ad9"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/images/CHM_Exterior.svg",
+    "bytes": 377,
+    "sha256": "a4aef5715cba6c3be598da2d0c4fe1b65a3c8b24adf6be37c907aae587aa9564"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/images/Chapter5_TN3.png",
+    "bytes": 32162,
+    "sha256": "79c082a330d6446276b441a3aa982fd36760c169a6946f0578d9a17ceb41c376"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/images/Chapter5_TN3.svg",
+    "bytes": 359,
+    "sha256": "fff93765bd1d7049b4368ed30b975707d8a05f433a8f2a0c8f61a6ea628c9625"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/images/FederalReserve.png",
+    "bytes": 23490,
+    "sha256": "3dfe11277cb7b7af1839b900b40e1ba331d6bd3a816d5bd45042a0e013236d7e"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/images/FederalReserve.svg",
+    "bytes": 434,
+    "sha256": "bcf2fa3fd7532fc786625cc2e6ee0409eae692b7741f10d3b8bcd87d4ae7ecb2"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/images/JohnRFirth.png",
+    "bytes": 42468,
+    "sha256": "d1f33ba583418e0d6eabcaad80bf75ecfc5fca2d27499bd2aeebf371c663026b"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/images/JohnRFirth.svg",
+    "bytes": 366,
+    "sha256": "cdd3d7a3811ed8af5ef63cf3faf733d830ce20ddda8beb441b8cf822b48482be"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/images/RiverBank.png",
+    "bytes": 35854,
+    "sha256": "2d4655502cba26e1a7b21b89457478d30c03e7aff07fd49c8242ad4c766f0d17"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/images/RiverBank.svg",
+    "bytes": 414,
+    "sha256": "cba675956a41fca4d9d928b0ad6196735523dce50bd4411b317b25f41606d41e"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/pi/happy.svg",
+    "bytes": 898,
+    "sha256": "0627338c40c19f9741db3373de12e3b6fb95257769b9a89516ebb377867204b9"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/pi/hesitant.svg",
+    "bytes": 898,
+    "sha256": "0627338c40c19f9741db3373de12e3b6fb95257769b9a89516ebb377867204b9"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/pi/plain.svg",
+    "bytes": 898,
+    "sha256": "0627338c40c19f9741db3373de12e3b6fb95257769b9a89516ebb377867204b9"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/pi/pondering.svg",
+    "bytes": 898,
+    "sha256": "0627338c40c19f9741db3373de12e3b6fb95257769b9a89516ebb377867204b9"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/pi/raise_left_hand.svg",
+    "bytes": 898,
+    "sha256": "0627338c40c19f9741db3373de12e3b6fb95257769b9a89516ebb377867204b9"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/pi/raise_right_hand.svg",
+    "bytes": 898,
+    "sha256": "0627338c40c19f9741db3373de12e3b6fb95257769b9a89516ebb377867204b9"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/pi/speaking.svg",
+    "bytes": 898,
+    "sha256": "0627338c40c19f9741db3373de12e3b6fb95257769b9a89516ebb377867204b9"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/pi/tease.svg",
+    "bytes": 898,
+    "sha256": "0627338c40c19f9741db3373de12e3b6fb95257769b9a89516ebb377867204b9"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/pi/thinking.svg",
+    "bytes": 898,
+    "sha256": "0627338c40c19f9741db3373de12e3b6fb95257769b9a89516ebb377867204b9"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/pi/well.svg",
+    "bytes": 898,
+    "sha256": "0627338c40c19f9741db3373de12e3b6fb95257769b9a89516ebb377867204b9"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/svg/Bot.svg",
+    "bytes": 399,
+    "sha256": "045a393f67ed518b4fb9a3e6c6b06a22d2d2e2c5ec0faab5b1685c056dd399a5"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/svg/GenericComputer.svg",
+    "bytes": 256,
+    "sha256": "66b4fee7073e7a8cccd8d4d66f7cd470b999e1da7cd909c461a0cb85c2a810d9"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/svg/History.svg",
+    "bytes": 237,
+    "sha256": "dbad8d8550a950b08715fb13abb0ce049d345945d9b7dda1e4e8b3e9c3c51391"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/svg/Museum.svg",
+    "bytes": 201,
+    "sha256": "8a029bcd64b36229d0996427dd1393499066fdab06557dca8af6927812380816"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/工程素材/placeholders-c/svg/comp_worker.svg",
+    "bytes": 468,
+    "sha256": "9016c9bb16fdf6e23619f286ec5d55081b013b6c745c7f35e43bc62142538c6d"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/mini-llm-article.json",
+    "bytes": 6885,
+    "sha256": "09bd719c704ca213f8d197a5ffc9b9a56cbd3ff1d0e0643c3a2c1cd0e6ca3dbb"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/LICENSE.txt",
+    "bytes": 20849,
+    "sha256": "1349a4b6148492b44f629e64eed676612e234fe9a839e4f3b277c1482c8849f1"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/SOURCE.json",
+    "bytes": 223,
+    "sha256": "6a6d1f28f78ffbe886d2be7a27c11db66050d93b04cf303d9ca66be1462dbfcd"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/_2024/transformers/chm.py",
+    "bytes": 73014,
+    "sha256": "65cc87977c54f23e9c81c5a345a13ec61585a0e2dea6bdcb78f25cce3124842c"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/_2024/transformers/embedding.py",
+    "bytes": 103389,
+    "sha256": "3d04d978a84dd82213e843df1f43c16bf310f3e9a837dedd57c799218939ff79"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/_2024/transformers/generation.py",
+    "bytes": 31707,
+    "sha256": "4fa085734880ab2f854ee8fb7bc91043fff06482d3b2fa9b439ada2a746af09a"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/_2024/transformers/helpers.py",
+    "bytes": 26013,
+    "sha256": "83cfa89b0a0055907678cddcd162d2db4cd89339bac6be5bbafe8e5d97aa9b21"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/_2024/transformers/ml_basics.py",
+    "bytes": 82902,
+    "sha256": "8390551df16043de7a044c4608fd6177ae3a83f78275abb38627aaa2b7c9d54f"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/_2024/transformers/network_flow.py",
+    "bytes": 52207,
+    "sha256": "5da426a14eadf443b0b4eb38b3673b4e0b2c320e219a3e1590f0ca3ebf69e206"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/custom/backdrops.py",
+    "bytes": 2069,
+    "sha256": "39dfdab7ba74948cf422c28e6533ce8b6399932e2f08f07ea1628197975dfc39"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/custom/banner.py",
+    "bytes": 3524,
+    "sha256": "b4ade172fe26729debf5335c736690aae6e8482f17b03eb9dd85ffb92a886ad6"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/custom/characters/pi_creature.py",
+    "bytes": 13499,
+    "sha256": "e652525e29c769adbbe17cc2a26304192e9fd5f7009fd6a87e8eb71372fddade"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/custom/characters/pi_creature_animations.py",
+    "bytes": 3570,
+    "sha256": "fae029b2d13f0c91dc017c142c101f74025b2c97f5e722247a5a6364d6256bde"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/custom/characters/pi_creature_scene.py",
+    "bytes": 13532,
+    "sha256": "2767c2fa242a035d5a98c5ccf20af6fdf1e3dbbadf0ad4f40f3afadcf90ae76a"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/custom/deprecated.py",
+    "bytes": 764,
+    "sha256": "0e42558f4eff99351b37a7a34a8561c94940331827d88583062d1dc5a4613558"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/custom/drawings.py",
+    "bytes": 15266,
+    "sha256": "4511b5abc93f89e9d623b215dacdd43c5f7ddc16a50f50d848a6c5f4b31fcb8d"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/custom/end_screen.py",
+    "bytes": 11705,
+    "sha256": "5ad3c3856d73ff0f3daee24e2e402e03bf22086299babb33ec309645d1314421"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/custom/filler.py",
+    "bytes": 162,
+    "sha256": "9438ead8332dca58e5d5463ab7a74573d51aac3e932871fd2acf6f23dfaab411"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/custom/logo.py",
+    "bytes": 15525,
+    "sha256": "1fe27e791ab5877817f3398426116a047678c3c015d232eb0a577f20401a34e5"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/custom/opening_quote.py",
+    "bytes": 2295,
+    "sha256": "34ac2bab5f285faff8cd6e45ac3d38ada70d17b67b5f36d88349c675664b0d5b"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/custom_config.yml",
+    "bytes": 787,
+    "sha256": "5e989ea50eff850d0023d17293af0e3267af9dd4c26864c34323b272a4bf8d35"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源/videos/manim_imports_ext.py",
+    "bytes": 466,
+    "sha256": "53aba76e8ce3a31ec9527accd6c3060b1c8e2d1c95e57bddb3a6a42879b10987"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源补充/attention-source.json",
+    "bytes": 345,
+    "sha256": "747c889affbc167504881d0143afd358cf3ebe399348befe48f02161882000e0"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/来源补充/attention.py",
+    "bytes": 145651,
+    "sha256": "a7bea64ca6149b5365e0ec49906cf2100b3686cf8e27f4f85dd5722bbc118ef5"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/网络补充/attention-is-all-you-need.pdf",
+    "bytes": 2215244,
+    "sha256": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/网络补充/attention-paper-cover.png",
+    "bytes": 54665,
+    "sha256": "dc595f069d624689da599c423e58f4422603ddd6ceb2b05631039a7cb06b3c40"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/网络补充/attention-paper-page1.png",
+    "bytes": 184201,
+    "sha256": "b060ed75707fffb25f7a298ed4b693ad630979ea61060992cfe508c1074a7241"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/网络补充/federal-reserve-eccles.jpg",
+    "bytes": 2528510,
+    "sha256": "cb686d4101a3f1cdea2cde4d1f7570515a79701e29d330a676d000af414e9fcb"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/网络补充/google-g.svg",
+    "bytes": 742,
+    "sha256": "ed9087d76cdc6d1c53698f6068f79872e77e87c8d012c0cfdad13b05b6ccb37c"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/网络补充/robot-fontawesome.svg",
+    "bytes": 947,
+    "sha256": "eee72897b10037e9f9954b41ccf6a694e4a1e4fe8373f042775c6af0c1a73dc0"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/网络补充/sources.json",
+    "bytes": 1264,
+    "sha256": "676a004cd8a866562c8b5f69848064e4a18ce386aaea41f3f1bfa1061e4496b8"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/补充-B/data/tale_of_two_cities.txt",
+    "bytes": 771600,
+    "sha256": "e3dfeb67feb904ac0f73a35204a175c58248422c2be8556802cb8820d958d67c"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/补充-B/placeholders/HumanAIScript.png",
+    "bytes": 10581,
+    "sha256": "1d7022f9f45c6832967cd7d4a71fdea2055bd13843240dc2aa4ab620c735068d"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/补充-B/placeholders/HumanAIScriptTorn.png",
+    "bytes": 10739,
+    "sha256": "5b7f84f41dc037ccfb3bf64249f23d579d2d74ca4ab93faa4d53e6cfe047dddd"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/补充-B/placeholders/JaggedCurl1.svg",
+    "bytes": 175,
+    "sha256": "d4b0b2f3eeadc9ebef26747bdb7cbebc52f1c9b42f67e04268c186f53f8fd1e4"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/补充-B/placeholders/JaggedCurl2.svg",
+    "bytes": 175,
+    "sha256": "d4b0b2f3eeadc9ebef26747bdb7cbebc52f1c9b42f67e04268c186f53f8fd1e4"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/素材/补充-B/placeholders/comp_worker.svg",
+    "bytes": 175,
+    "sha256": "d4b0b2f3eeadc9ebef26747bdb7cbebc52f1c9b42f67e04268c186f53f8fd1e4"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/视频.mp4",
+    "bytes": 47756284,
+    "sha256": "996d5bcdcc35d3f4e5d808473f2cdea2e437849a11b7ee69d7ba2bce146bf7e5"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S01.json",
+    "bytes": 97,
+    "sha256": "3b2542c1f56bcdd319889e8061b207ddfe7a5eef0e641ff6e39c6847815e0b43"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S01.mp4",
+    "bytes": 11539,
+    "sha256": "5dfe8c437293aba54a77828258fdb2a3431db5076fde6b6ef74d024c7844af86"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S02.json",
+    "bytes": 99,
+    "sha256": "6b8c7839c9b276b2cc862f8060cc41a2828471d366216097c54f1da54b7a9589"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S02.mp4",
+    "bytes": 1504374,
+    "sha256": "9a25e4873a44dfc29543e27894368ec6baaa4428124cc2772944ccfded1dcadd"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S03.json",
+    "bytes": 98,
+    "sha256": "6fad2c47c9e22337ed4be52f36a6a59f4bb2b1eba20c8afe7c14617f5105f72b"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S03.mp4",
+    "bytes": 2799918,
+    "sha256": "657ac18355aa3f8f246e5342dc9bbf8497decd71c6354a8aaa69fdfb4122d21b"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S04.json",
+    "bytes": 99,
+    "sha256": "175cb85bec99b22d8aeaebde14b361ca6bf8ea80c43dc36c0a98c7972d336627"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S04.mp4",
+    "bytes": 714801,
+    "sha256": "d88376ba1dd241f5b6748d3f838636c5d24a9357d96a4d06727cca4243d3b46d"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S05.json",
+    "bytes": 98,
+    "sha256": "150fc7fe2a0256c93848a9bf146b8d43c45df3fd40a8a5ba39bbc0fdb5e75d63"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S05.mp4",
+    "bytes": 9800323,
+    "sha256": "577139517d8dd908a9d4ce9f5d7804ef5d75ccf0caeec12931956143710409f7"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S06.json",
+    "bytes": 99,
+    "sha256": "00b7a0eaa3e7df7ff43f99e43f39540847ea054aa56fb0e69d35ead16884550f"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S06.mp4",
+    "bytes": 5674740,
+    "sha256": "70c3c8302d0d77075f6d4512cf27f461055557fab09f1a79e574cb8d17b555dc"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S07.json",
+    "bytes": 98,
+    "sha256": "623103a6a82df34884bffb0cd0fc640aad04b63ed93af8ce1c419e29732b51b7"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S07.mp4",
+    "bytes": 370154,
+    "sha256": "dda317e30efc9f3d5c79131e255378da4c53e001510a0aee650a22caf2b1993a"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S08.json",
+    "bytes": 98,
+    "sha256": "22bb0497c762ee50654266b9374fabe266c262699b04caa2576d2bff5852fd5e"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S08.mp4",
+    "bytes": 710835,
+    "sha256": "7b68c116e2f5cb4197475bd4e2f20c3a2143f605fd5dd0e422b77d5b511117c3"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S09.json",
+    "bytes": 98,
+    "sha256": "111fce30b290f788cc2c0e223798e37bb45eaa1cebfa49535c4443c2b6542e84"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S09.mp4",
+    "bytes": 3936104,
+    "sha256": "36dacb322b9eb0b1e34661231b58b9a2e570177a36924276e4623c4cfbc05f7a"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S10.json",
+    "bytes": 98,
+    "sha256": "1f387759dd8ecef7c7cefdf9cf547dc2dfea7059ef5e39c1a2bd1fe568b763d7"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S10.mp4",
+    "bytes": 3720275,
+    "sha256": "1669de7ab01d2497aabbad3c4f3882ed6967e3bcb4be3a95030792f195ff1a92"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S11.json",
+    "bytes": 98,
+    "sha256": "7912ca8f77ba6d560e7e41e6413d0aa2aacb58696c3062d2be175741ead6c1c5"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S11.mp4",
+    "bytes": 508295,
+    "sha256": "d7b255f515fded07b63d93413ef6b94d3912219db4a8abbb08b1d2b7e7b8e960"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S12.json",
+    "bytes": 98,
+    "sha256": "aa1478253d579ffd9fdbf61d295e8246f255c87e88397ed7102b51f2b56ea3ea"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S12.mp4",
+    "bytes": 387784,
+    "sha256": "fd8e5091ae794daf063250cc365371d1df37d364adfcca56f8686ae7dc817751"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S13.json",
+    "bytes": 98,
+    "sha256": "bcc0648cea948e1443ce4bf81351c0fdbbb38e388a925ccc71df9e7d76091a26"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S13.mp4",
+    "bytes": 808837,
+    "sha256": "62219d06f09a8529d8f33c1bc4bda8cf5e55a042924c0588e6a4032213c96597"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S14.json",
+    "bytes": 98,
+    "sha256": "ed66a1f675b31fcd3b2ec180e60577daf3a1f583e343f6e3eea00465b0cf0de7"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S14.mp4",
+    "bytes": 138322,
+    "sha256": "64ca8890ef293ef18ba9247cb6f9fb12876a9a685869dc256f9ed22b9326a17e"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S15.json",
+    "bytes": 98,
+    "sha256": "ff6d8490a4056b2abf7e296b23377de2ff24c09fc19c87c32333696dbca54989"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S15.mp4",
+    "bytes": 246479,
+    "sha256": "dccf51a8a41dfe7f5eec550af96bfbcd7fd2e8eee4a1ead75b7bae435a0d48dc"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S16.json",
+    "bytes": 98,
+    "sha256": "da56d3c838a309d2cad8f6b636f1dc72bca9b38beaccdb3863e570fc0931c2a9"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S16.mp4",
+    "bytes": 102226,
+    "sha256": "e7ba5173195a090ef47173e1eb6cae7176bb078de80d9ea6f8c4cc011eb64d8b"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S17.json",
+    "bytes": 98,
+    "sha256": "09de5ae963ed740d51cb923a7fad048f23c12eed9839caceaffbf644a82e9837"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S17.mp4",
+    "bytes": 145552,
+    "sha256": "0e751111a6fd9094c3e50068d03cac39b7c5e298812bc7513f018d5971afc029"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S18.json",
+    "bytes": 98,
+    "sha256": "7da7892b65f89dd71b792410ce6f1147573ad87c55a4cab067dafc8ca51a3d05"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S18.mp4",
+    "bytes": 814245,
+    "sha256": "7f164b4d00b2a7fb491c413bc86ec2ce72d50cac767e5ebf5ae056c2f058f6a2"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S19.json",
+    "bytes": 98,
+    "sha256": "5568a18ae8051e8faab008704be3c28cb1194906d3dc796a2b150a7bfecf9c11"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S19.mp4",
+    "bytes": 1160401,
+    "sha256": "4332a7ab5c242f592e94ecfc129cc8ea2485434168c0bb2e66d202150a0b5281"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S20.json",
+    "bytes": 98,
+    "sha256": "cf35fa58daaa6c20baeaca7eee2b3bcc30fda9b9233b687daa665ea3c4f3196d"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S20.mp4",
+    "bytes": 649590,
+    "sha256": "82b2b5e4a251414a04b4e444fcf2660ee86cd3e1bbc8e41d6dd33528e55a5c31"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S21.json",
+    "bytes": 98,
+    "sha256": "ca795bf734159b82802f8ac7e706ab4d39d8a7806b07a5eed8725b4a87e0a4f4"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S21.mp4",
+    "bytes": 373723,
+    "sha256": "58dd51d0394e8f2cd3a6c45cc4bc6af45776d7da04034a8f42f37a718b9cc7e9"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S22.json",
+    "bytes": 98,
+    "sha256": "27179f1e9c73c69df551cc4e11f331331c2816778f42c2bb185db8f3f887227b"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S22.mp4",
+    "bytes": 6586982,
+    "sha256": "ef02fae7fb054894ae49d36f147c6360974e79ea9ab4d911aba69ad1de06dffa"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S23.json",
+    "bytes": 98,
+    "sha256": "49fc2c449e3db0bab81018f61a19b217be73c323427c85a0c32e7e31899bcfbe"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S23.mp4",
+    "bytes": 1315775,
+    "sha256": "5c177a9f2c43bf76fea5f93714c8af3f5ece77cb8357c90ab03b12ff3bd9467a"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S24.json",
+    "bytes": 98,
+    "sha256": "c6d3a4954736b6094bb79837d1eea9346d06ee6a1019e18629e35230cd7980e0"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S24.mp4",
+    "bytes": 2161344,
+    "sha256": "7b83f8c57a3f3a939018f2a551339df6ac517a551de568bcdcde6771e9d0d781"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S25.json",
+    "bytes": 98,
+    "sha256": "aee00f7a3686aa87e10c2f2221b210df5c585785616ba980350e55f756928141"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S25.mp4",
+    "bytes": 1388616,
+    "sha256": "bcdd113dfff080ab6466413435a33ade75a0760c5bbb0cd0258a0cad04580478"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S26.json",
+    "bytes": 98,
+    "sha256": "7f40ded2fb7c183199e1f7a69bceb5078cbc69977d7daf8c2b14acbf8ad691fe"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S26.mp4",
+    "bytes": 265082,
+    "sha256": "6b1c7df70fe4bce65580b8367c161b9f7e6d93718004ac070dc1553e373f7a3c"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S27.json",
+    "bytes": 98,
+    "sha256": "efe99b57bb98cdb886b504a1fed51715d21ec2e543351ca4fe297873111fd751"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/镜头/S27.mp4",
+    "bytes": 1479553,
+    "sha256": "f42f053b823d6a5b11baf26deb5ec3323136a1077e76de9f2fd0f256244c1717"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/大语言模型简要说明/验收.json",
+    "bytes": 752,
+    "sha256": "250b0206e8695cf1456563b579b9038bbb3b83f5fbe083cf8df564957120645a"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/素材/bank.jpg",
+    "bytes": 953261,
+    "sha256": "883587c0bf8002a48e55b679e88a1d4aa6f6d890cdf966485b6c8659e849ef63"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/素材/end.jpg",
+    "bytes": 494673,
+    "sha256": "40676cb60861d0549940f4f506c02119babd03294637f332d6a6044f7bfacc96"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/素材/probability.jpg",
+    "bytes": 266226,
+    "sha256": "a37b873e0bd2ac273bd4e9910349593a7b749e1e480f64092348236f94bbe35f"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/素材/rlhf.jpg",
+    "bytes": 430576,
+    "sha256": "30114d46678abf04b491b8775304cfbdb5bef75fa190e541c62ae480e5c2f627"
+  },
+  {
+    "path": "Course/02-AI的能力从哪里来/素材/training.jpg",
+    "bytes": 423462,
+    "sha256": "d1dd90df8d3a438e97301a9ae190359ee3662c17e8a9f5f259c7d0d302876248"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/AI的输入与输出.html",
+    "bytes": 4523,
+    "sha256": "dbc34e5ea6493290e870f7b737f12383d125b12396149a32c3f946af151db5ad"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/AI的输入与输出.md",
+    "bytes": 3616,
+    "sha256": "94adbf40851331dfa72528636bf032a3d85aea2ca4d971ba0d6e2ff0b42b25d2"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/代码/custom_config.yml",
+    "bytes": 218,
+    "sha256": "56bca6bca5e9da66e17faa38d2663ed877f51e95a5fff65f65fd506ed21c7e7e"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/代码/init.sh",
+    "bytes": 285,
+    "sha256": "186626aa0149e98a469b1e663be4634ace8f8bd357f3182462f1e2cbbb13ded9"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/代码/inspect_media.py",
+    "bytes": 1508,
+    "sha256": "5d828fabf9926ffa4fb7fa0f12938f467bb119ad7df2fd89b36255735f8c00b2"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/代码/objects.py",
+    "bytes": 6758,
+    "sha256": "1191903943decb82d6c325f617e4298904c9259b2585ea0186086b2eae3af552"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/代码/pyproject.toml",
+    "bytes": 235,
+    "sha256": "89836208d359b1104d36dba1795f5a072256c97234c5e23c95cea5d7688f393d"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/代码/render.py",
+    "bytes": 3837,
+    "sha256": "77063eaaa97fc2b6928928192bc8a9ed0d59ec54d9987080686d2b82aff47dbf"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/代码/scenes.py",
+    "bytes": 24707,
+    "sha256": "3723122aacc61e85681da035e6b41cb33a2d5202162f79b502cb739b2822dcd6"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/代码/uv.lock",
+    "bytes": 92368,
+    "sha256": "1ab0adf0bf9caf90a4b76a5e2883de570db5380598c766c5b853fe21096ddd16"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/素材/AI的输入与输出-资料来源.md",
+    "bytes": 14193,
+    "sha256": "fb0188c73c8d413a038d1df668906488d7dbd05a29896f18edfb400d0c8b21ae"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/素材/图片/结尾_两次调用对照.png",
+    "bytes": 727033,
+    "sha256": "b31c28c15dc8fb1a5ee37379a898549491fb4ddf0b1990af2c28550ac573dcb1"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/素材/图片/视觉基准/方向C_首次输入.png",
+    "bytes": 1266248,
+    "sha256": "36fc567d040e2e23d9cf4e0b5d7bcde0fccfbb484eb5221816b4856781bc416f"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/素材/图片/视觉基准/镜头01_首次输入_十二格_清理版.png",
+    "bytes": 1275452,
+    "sha256": "12b9c393b1cd6cb12afcd54790ca07a22d2d3c03e8cc8f4a15eac5f9aad1488e"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/素材/图片/镜头02_模型输出请求_十二格.png",
+    "bytes": 1302560,
+    "sha256": "aa486b255a2bc6368f754d847df483c3c1d05434cf7366920ec26687ab5de8c9"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/素材/图片/镜头02_生成识别执行.png",
+    "bytes": 1141735,
+    "sha256": "f3291a359e26f86c8b840bff36260259302c6eb35ab3fc66457ec95c73229575"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/素材/图片/镜头03_结果回流与两次调用_十二格.png",
+    "bytes": 1320700,
+    "sha256": "6c693cefb25e4def151b79a1b7a2b51a22d39f44d128f3f2c563e0ac05f38a08"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/素材/图片/镜头03_调用交互闭环.png",
+    "bytes": 1286612,
+    "sha256": "d36d4c29dba8a44b755aad11cf943060ffb6aae2596be531a7ccce7f00bad0f3"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/素材/来源/whisper-mcp/index.ts",
+    "bytes": 4690,
+    "sha256": "3fc12ac09f331b17bf7422e237b296673b54bdf2d600270181e69c68f94f9502"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/素材/来源/whisper-mcp/transcribe_audio.schema.json",
+    "bytes": 1110,
+    "sha256": "496ba03c1e6d0b6223ae16b239bb1101e2a080e2aa1d7f9c112b3ef595e775f4"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/AI的输入与输出/视频.mp4",
+    "bytes": 2347724,
+    "sha256": "755e1b1bab62db6c2825213821cd8952a591577126f0c597edb58545f23de213"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/信息输入与工具执行-来源.md",
+    "bytes": 1146,
+    "sha256": "ce9c2971d90228a0a8212bd8a76557d1e323f790751a36ee1e16d117b91d0944"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/信息输入与工具执行.md",
+    "bytes": 8533,
+    "sha256": "2302a953bbef83f67bf128353f1bbc5e11745fd3ef50cc32c404afb7472eda2d"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/素材/03-context.svg",
+    "bytes": 4801,
+    "sha256": "d2f9ed86ce54ee44b7e001abc35e05e37d87433f4cd48271562af32b18a344ff"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/素材/03-first-input.png",
+    "bytes": 108958,
+    "sha256": "dd4ad13ac98d8c0d4c44f068c99ef38faf7ae7bf12d2c483bfa80d5bcbc671b6"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/素材/03-second-input.png",
+    "bytes": 139827,
+    "sha256": "c57f09fc0cf905c99a1842507576d0701608d58cc181ad55ca0b390120d4abbe"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/素材/03-tool-execute.png",
+    "bytes": 69767,
+    "sha256": "b8930a5c573c67e61ac6acd1c48cc9b6db60817c42bc437090f7691a11765f69"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/素材/03-tool-loop.svg",
+    "bytes": 6057,
+    "sha256": "cecbaa953db7a46b2890617697c4ddd80a67e2523562b702cbd33a8a43987a27"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/素材/03-tool-request.png",
+    "bytes": 61957,
+    "sha256": "4c933379fb3a46bfcf25647a747ff0694758e5c085dbbc5e8c95565e4219c64d"
+  },
+  {
+    "path": "Course/03-信息输入与工具执行/素材/03-two-calls-loop.png",
+    "bytes": 93820,
+    "sha256": "1af5565a6af8bb33160db786333ec20fb4f9693430a899e597da01457ba3d712"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/交互/思维地形.html",
+    "bytes": 487692,
+    "sha256": "15732009d8bbe64e7d778a897f8d1ad526db2c19cf594edf31914ac8d042d0a1"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-case-balance-dialogue.png",
+    "bytes": 112181,
+    "sha256": "4c9a3ef67b821825f8beb165cd0faadc8f1b0d922e4e96e32b008d2f2405cea2"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-case-drift-dialogue.png",
+    "bytes": 120367,
+    "sha256": "ccd2358653db5312d5ccc6ea2b095ebc1b379c481e7c1aeae807dcc9557feb39"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-case-entangle-terrain.png",
+    "bytes": 13231,
+    "sha256": "864ea8560d8ffe151e676a4f5aced149d929e90e249881641d1f075e91605c29"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-case-entangle-venn.png",
+    "bytes": 6938,
+    "sha256": "ccb349ea0ac0b7c65f80dd429cd11496979d5164ed0162199d48df0e60cadd4d"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-case-hollywood-script.png",
+    "bytes": 200271,
+    "sha256": "38489dfa6b832a431f51c6de0cf0ea7666140ef1bb6dc01616d402912ccbfb8d"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-case-logic-dialogue.png",
+    "bytes": 171410,
+    "sha256": "0b24424df5a3b2edd811cdb39f58ee9f77ea378166e66eda1a51e3f949af0c69"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-case-rollback-dialogue.png",
+    "bytes": 136310,
+    "sha256": "2605d450e107533278e0893d4ae64e8aef3fff6b9c78c1140e260588fb26d97f"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-context-selection.svg",
+    "bytes": 4837,
+    "sha256": "65a681736254db92f926f9461cc30f3d0965ba6c6b0e90ac17a35eebc1e5662e"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-dialogue-anneal-a.png",
+    "bytes": 125110,
+    "sha256": "54e70779988024dd068cad1893e5122cc92145d3c38811f03c69232270ca2378"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-dialogue-anneal-b.png",
+    "bytes": 638766,
+    "sha256": "f3d4f64db3f9a740f836525a4c53a7deba82513e7528a1faeb88fad72bd81efa"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-dialogue-balance-a.png",
+    "bytes": 101678,
+    "sha256": "851dfc6cfa5e6295cf6539079a33bf6265961d864aef7c0f67d0ce0b783f726a"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-dialogue-balance-b.png",
+    "bytes": 124386,
+    "sha256": "7c14b4490807500a7551dd2d7780e8142e470805829a2ad5f3e1b7d13e5fddd7"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-dialogue-case-better-a.png",
+    "bytes": 92600,
+    "sha256": "47e084cc131dd284896f5a373f71596b0069a2bd6d6251f8b28a2ddebecbe626"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-dialogue-case-better-b.png",
+    "bytes": 89977,
+    "sha256": "4f32852c2c9043f35d2379ea30547d8ff2a2214d7446e2d74c5bd5231d807b21"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-dialogue-distill-a.png",
+    "bytes": 218571,
+    "sha256": "fd22b68117ba8e6ce08a47cbb4cbf560ebf3c949b3c5c11b1e938066e96e4e57"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-dialogue-distill-b.png",
+    "bytes": 91705,
+    "sha256": "b2f306ff4b4839073433d3827447f6fdf80975291b8ba2be42da22a09bf4c544"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-dialogue-drift-a.png",
+    "bytes": 250769,
+    "sha256": "cfaf3b11df585d8e18c3181e6dd98fcf0ca7e4fee94621d3ca897209fe643752"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-dialogue-drift-b.png",
+    "bytes": 114391,
+    "sha256": "ff4f334ccd85457f1c0ab27a68984c3bea237f3293d2d4e8abf5f7c5272a3642"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-dialogue-entangle-a.png",
+    "bytes": 92468,
+    "sha256": "8222328a9638f0d20772f0bad24de0851b6970f2bf96649c42155d4c35378a46"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-dialogue-entangle-b.png",
+    "bytes": 124410,
+    "sha256": "5141df1e0b61edee2cebb35c726151cdbfcf472be745fc8188cac9800dea9900"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-dialogue-manifest.json",
+    "bytes": 5118,
+    "sha256": "c5312d93cee3a0ab78cbe342e3d60300567a2216f327a0fd3a1cfddbd283e722"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-dialogue-purify-a.png",
+    "bytes": 218691,
+    "sha256": "6f7ad5e87525e4bac8676737dac5f42db441e00e94593bf8afc0cc4527c401cb"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-dialogue-purify-b.png",
+    "bytes": 160417,
+    "sha256": "338cb245ee0fa34c6a86ec4c737899cedd062356525c188e07f3eabd16a26e55"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-dialogue-reason-a.png",
+    "bytes": 116120,
+    "sha256": "3af0baf46ac87ae9bd9ac1c58ad0b9186eb4d0360310e37684175d56c09a20c9"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-dialogue-reason-b.png",
+    "bytes": 204410,
+    "sha256": "e72cbbd469f7f98015a40829744a17b79154cc55e4a7af25de60dcd88b3bf62f"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-feedback.svg",
+    "bytes": 4448,
+    "sha256": "84126983c4fb4bb32062808f30834fe57f9d33c2a9284d929c5d9682b9fc66a0"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-original-implicit-purity.png",
+    "bytes": 175770,
+    "sha256": "182dcb0f7a8f005c214df3476515ee195b4cbf32531f6ecf3052a09a22160b81"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-original-reason-before-conclusion.png",
+    "bytes": 141142,
+    "sha256": "ffba2ac8e09b718f13db4aa130170283fde5751ba108f1a3b6397f0d4b8e8088"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-original-semantic-annealing.jpeg",
+    "bytes": 411757,
+    "sha256": "354b5b6b49fac096aff17ec290df191f61085f8508d99bfc1ec5a87e2380e714"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-terrain-anneal-a.gif",
+    "bytes": 581789,
+    "sha256": "99fc6095e89e519039f20164c8a23715d242152185528beee19f328f5c1743f4"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-terrain-anneal-b.gif",
+    "bytes": 1257723,
+    "sha256": "6f3faee062adb6ed64324c3fc4e4bca561bb446d41db6ef7812048c5029524e5"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-terrain-balance-a.gif",
+    "bytes": 634827,
+    "sha256": "4a0e976d33e0ad9920f7dc60a0b9c20d31e655b8f15774f2088da385f4d5c553"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-terrain-balance-b.gif",
+    "bytes": 1027241,
+    "sha256": "ca7668dc424fbc3db0b4ed3a17f273df598baea19506fb9c1cd0feb083f7e0da"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-terrain-case-better-a.gif",
+    "bytes": 587648,
+    "sha256": "ff736a79f9c186c8e1ae5ed9f38a5395228471bf3c4eb21cbd6c6220b992d90c"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-terrain-case-better-b.gif",
+    "bytes": 904730,
+    "sha256": "413e9a95431aea302f7d0785af2561875c3ee00e1ebdee3bafbffcf2dc759c28"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-terrain-distill-a.gif",
+    "bytes": 574093,
+    "sha256": "d0d496de6b331a784ce587c6f44325b41031bfb4723a7dcf274ae4da5ffe330f"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-terrain-distill-b.gif",
+    "bytes": 1289089,
+    "sha256": "9de07c17f0bbcf50c75f531b93280d128310dbc91141e3bdeec577b4913a2ebb"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-terrain-drift-a.gif",
+    "bytes": 576347,
+    "sha256": "3241018011805d32f086a84f0416652fd05e694cab03bdfa383b44a58db4a7b5"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-terrain-drift-b.gif",
+    "bytes": 1112822,
+    "sha256": "5ad262340521534774072f4fe311c5f0d9c6368c976a144ce886b99bf98f84fe"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-terrain-entangle-a.gif",
+    "bytes": 650759,
+    "sha256": "e975aa1bced400e2582057e676018433f45f82a8935a3ef8592b54b0aabf31a3"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-terrain-entangle-b.gif",
+    "bytes": 1359501,
+    "sha256": "22adeb65c82d5e19682064a5ec6c4f9ad19ace1eabab7b85913dd6bbf58b5619"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-terrain-interface.svg",
+    "bytes": 9815,
+    "sha256": "5742f8b79406ea66b08efa5158530aafbbb468a1a21e0101627460f568e69cf3"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-terrain-purify-a.gif",
+    "bytes": 655140,
+    "sha256": "67a8fcd09f4870f84ee36a255bbc0da87d5eb30ede873e0cdd8a67165baaa5c8"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-terrain-purify-b.gif",
+    "bytes": 922262,
+    "sha256": "5421f27d04fe6ed562ed493e80339765b83642af9ef22fa70b8e94936cd1540d"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-terrain-reason-a.gif",
+    "bytes": 564592,
+    "sha256": "957e9114a89bf99e5a54c88b3b837efdd3ea865ff0ab7d4ece89fe99584be261"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/04-terrain-reason-b.gif",
+    "bytes": 1047197,
+    "sha256": "d77ec6035423c28b9c9e939984c837bdd8cf3ca9a073b82c9af9372d7a4cd675"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/gif-display.json",
+    "bytes": 2451,
+    "sha256": "887334c6f7c1da59cb953e8b81462fe17f13ddcef5d12486c55aebf45cd82457"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/素材/对话.json",
+    "bytes": 15852,
+    "sha256": "72a3f190686263fb43f1374cbe391f25db73b2eb5674dda9ab46adba2a75276b"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/需求表达与反馈闭环-来源.md",
+    "bytes": 4099,
+    "sha256": "294c2576a0541b8ce34486d35e07cd226b9c4b0735cd59b0a6238da83c14da5b"
+  },
+  {
+    "path": "Course/04-需求表达与反馈闭环/需求表达与反馈闭环.md",
+    "bytes": 9534,
+    "sha256": "71584c6fc8320e3a4b6b04517810bfcffc70e2c27bef60d88fe94d86a79d009c"
+  },
+  {
+    "path": "Course/05-任务执行与证据核验/任务执行与证据核验.md",
+    "bytes": 262,
+    "sha256": "e352f2b58f7a5a6cb5a072b25222a5ffcd7c73e1a1e19cd602f6dc5336872be9"
+  },
+  {
+    "path": "Course/05-任务执行与证据核验/素材/05-evidence-chain.svg",
+    "bytes": 4151,
+    "sha256": "fbb5064cb41a32c2156c84aa9b27b377b44daa165719e7b723eed5930aae55ea"
+  },
+  {
+    "path": "Course/05-任务执行与证据核验/素材/05-execution.svg",
+    "bytes": 4374,
+    "sha256": "9b0b360e70824fbc460d8ff3f85f2ad3306542948afd5226c584b757840039f8"
+  },
+  {
+    "path": "Course/05-任务执行与证据核验/素材/活动反馈.csv",
+    "bytes": 579,
+    "sha256": "725606b211adb59286195ab9101b0ae3fbb02e5e5e6b0ae2f518ba018b4b5ada"
+  },
+  {
+    "path": "Course/06-行动选择与投入控制/交互/06-seven-slides.html",
+    "bytes": 31506,
+    "sha256": "1b438120cad0eefb39ef6917ccbf13eaba50d506ea9a11130a16ffb90bbe9276"
+  },
+  {
+    "path": "Course/06-行动选择与投入控制/交互/投入与对齐四象限.html",
+    "bytes": 4949,
+    "sha256": "450020452adc6ed81018dce460f29f4cf7cddd94b798e59c962852de748133e7"
+  },
+  {
+    "path": "Course/06-行动选择与投入控制/素材/06-action-network.svg",
+    "bytes": 4536,
+    "sha256": "08a777edf45df72ac6e3b5f4bd064f745724ef25eab42eae2c9c7d6ccfe2f1f4"
+  },
+  {
+    "path": "Course/06-行动选择与投入控制/素材/06-alignment.svg",
+    "bytes": 4617,
+    "sha256": "879f199d6cf35d7d9846993e2b0a996658f9ea28dd4b19fbf5c171c54e3c0e8a"
+  },
+  {
+    "path": "Course/06-行动选择与投入控制/素材/06-knowledge.svg",
+    "bytes": 4715,
+    "sha256": "2da7b8710606860a11447e157364633f9c811296fa5fd94a15d362085698c6ca"
+  },
+  {
+    "path": "Course/06-行动选择与投入控制/素材/06-slide-01-article.png",
+    "bytes": 214953,
+    "sha256": "ad86b8ccbc5c667f6d08be2cf213219a950179f030fa138a225a2bfcf79efcf6"
+  },
+  {
+    "path": "Course/06-行动选择与投入控制/素材/06-slide-02-article.png",
+    "bytes": 233193,
+    "sha256": "ae65dd44b96874fb7b68c11aadc6fe8680f197f91def338b5a758c8a30061be5"
+  },
+  {
+    "path": "Course/06-行动选择与投入控制/素材/06-slide-03-article.png",
+    "bytes": 106219,
+    "sha256": "4a10e8e448e7012b5888e5288578229399c825bde1b2a878f0a5c234892d749a"
+  },
+  {
+    "path": "Course/06-行动选择与投入控制/素材/06-slide-04-article.png",
+    "bytes": 99372,
+    "sha256": "0ca91955af9f5f355881878f6eafc9e7cb382f82d23e84bec80a249b4f700237"
+  },
+  {
+    "path": "Course/06-行动选择与投入控制/素材/06-slide-05-article.png",
+    "bytes": 101683,
+    "sha256": "f8278367749d9adfc34c64150ee7a6bc53b5e2dd1669eb73ac190aa94e76c7cb"
+  },
+  {
+    "path": "Course/06-行动选择与投入控制/素材/06-slide-06-article.png",
+    "bytes": 101716,
+    "sha256": "c079ac8d1f889ba0507cbe63a3407e8758b2787548f774e08df0ce1a8df0e8cb"
+  },
+  {
+    "path": "Course/06-行动选择与投入控制/素材/06-slide-07-article.png",
+    "bytes": 154848,
+    "sha256": "40c62b33a58c7ac47458c3285b9eb915006951f901437ebde785af935f92f312"
+  },
+  {
+    "path": "Course/06-行动选择与投入控制/素材/七页正文总览-具体工具版.png",
+    "bytes": 1374706,
+    "sha256": "45f14b8feced53029bec7ddca1e133d89abfc7a0b66919d9912a70f7bba39c74"
+  },
+  {
+    "path": "Course/06-行动选择与投入控制/素材/七页正文总览-精简版.png",
+    "bytes": 1043116,
+    "sha256": "b3e4a77c88e20dbb169243db865fa37f72d3eabf0afae0f819fff5f0da858e7e"
+  },
+  {
+    "path": "Course/06-行动选择与投入控制/素材/七页正文总览.png",
+    "bytes": 1630836,
+    "sha256": "69bc7e83ae29771efd7842fcee2bba65417e27064031541201aa254a74516940"
+  },
+  {
+    "path": "Course/06-行动选择与投入控制/素材/七页演示内容.json",
+    "bytes": 15524,
+    "sha256": "9951f9a12e6fcedc4b3f0e1782afa083bdcc335d8416963e310f0590cbb8d267"
+  },
+  {
+    "path": "Course/06-行动选择与投入控制/行动选择与投入控制.md",
+    "bytes": 6294,
+    "sha256": "e83250b4be945fb38681e83bf3266e69df347b1b07f71bfbf1d820dd322f7e77"
+  },
+  {
+    "path": "Course/07-课程制作与人机取舍/素材/07-production.svg",
+    "bytes": 5021,
+    "sha256": "1490f2e18caf88e18a7e35ce9d0eb35affb4b534765fdcdc9c827d08883dc8ea"
+  },
+  {
+    "path": "Course/07-课程制作与人机取舍/素材/07-revision.svg",
+    "bytes": 4544,
+    "sha256": "4d8779ff20a15a4882c222b7c558ed3723eeb402f4f7a98333137d85b6e01a77"
+  },
+  {
+    "path": "Course/07-课程制作与人机取舍/课程制作与人机取舍.md",
+    "bytes": 287,
+    "sha256": "53d070066161149b21b976a9b50ce063639f649e3f4b00b11cffea01c4782076"
+  },
+  {
+    "path": "Course/网页/.gitignore",
+    "bytes": 25,
+    "sha256": "05fe7a628802f976b8ae34365446aecda0a7bc06c61dbd4bbc9b7b4f02a08b75"
+  },
+  {
+    "path": "Course/网页/AI协作-动态幻灯片.html",
+    "bytes": 972957,
+    "sha256": "9c07eaabbda98958eb596e0bb3868edb4deadf2afb070e19ff3495d203adcf36"
+  },
+  {
+    "path": "Course/网页/dist/01-使用AI的核心问题/素材/01-evidence.svg",
+    "bytes": 3103,
+    "sha256": "48eac6422c2ef2f6545efdc1ac3783db51ea3c98bee8ee0e13b439d1c053ac2f"
+  },
+  {
+    "path": "Course/网页/dist/01-使用AI的核心问题/素材/01-problem-map.svg",
+    "bytes": 5689,
+    "sha256": "4a7bd69058dc6dd908b28b9ea3e4a16765ec09a38c810fff7d343e5bf6f8501f"
+  },
+  {
+    "path": "Course/网页/dist/01-使用AI的核心问题.html",
+    "bytes": 21187,
+    "sha256": "c0d702ee1089286d501ab03fd37d44eebfb35b4ed3c89b41da12efe554efe434"
+  },
+  {
+    "path": "Course/网页/dist/02-AI的能力从哪里来/素材/bank.jpg",
+    "bytes": 953261,
+    "sha256": "883587c0bf8002a48e55b679e88a1d4aa6f6d890cdf966485b6c8659e849ef63"
+  },
+  {
+    "path": "Course/网页/dist/02-AI的能力从哪里来/素材/end.jpg",
+    "bytes": 494673,
+    "sha256": "40676cb60861d0549940f4f506c02119babd03294637f332d6a6044f7bfacc96"
+  },
+  {
+    "path": "Course/网页/dist/02-AI的能力从哪里来/素材/probability.jpg",
+    "bytes": 266226,
+    "sha256": "a37b873e0bd2ac273bd4e9910349593a7b749e1e480f64092348236f94bbe35f"
+  },
+  {
+    "path": "Course/网页/dist/02-AI的能力从哪里来/素材/rlhf.jpg",
+    "bytes": 430576,
+    "sha256": "30114d46678abf04b491b8775304cfbdb5bef75fa190e541c62ae480e5c2f627"
+  },
+  {
+    "path": "Course/网页/dist/02-AI的能力从哪里来/素材/training.jpg",
+    "bytes": 423462,
+    "sha256": "d1dd90df8d3a438e97301a9ae190359ee3662c17e8a9f5f259c7d0d302876248"
+  },
+  {
+    "path": "Course/网页/dist/02-AI的能力从哪里来.html",
+    "bytes": 21878,
+    "sha256": "276ada50c10a7ca87345df6f7fb889ef9585c35a4789df8c6446d5216045ded3"
+  },
+  {
+    "path": "Course/网页/dist/03-信息输入与工具执行/素材/03-context.svg",
+    "bytes": 4801,
+    "sha256": "d2f9ed86ce54ee44b7e001abc35e05e37d87433f4cd48271562af32b18a344ff"
+  },
+  {
+    "path": "Course/网页/dist/03-信息输入与工具执行/素材/03-first-input.png",
+    "bytes": 108958,
+    "sha256": "dd4ad13ac98d8c0d4c44f068c99ef38faf7ae7bf12d2c483bfa80d5bcbc671b6"
+  },
+  {
+    "path": "Course/网页/dist/03-信息输入与工具执行/素材/03-second-input.png",
+    "bytes": 139827,
+    "sha256": "c57f09fc0cf905c99a1842507576d0701608d58cc181ad55ca0b390120d4abbe"
+  },
+  {
+    "path": "Course/网页/dist/03-信息输入与工具执行/素材/03-tool-execute.png",
+    "bytes": 69767,
+    "sha256": "b8930a5c573c67e61ac6acd1c48cc9b6db60817c42bc437090f7691a11765f69"
+  },
+  {
+    "path": "Course/网页/dist/03-信息输入与工具执行/素材/03-tool-loop.svg",
+    "bytes": 6057,
+    "sha256": "cecbaa953db7a46b2890617697c4ddd80a67e2523562b702cbd33a8a43987a27"
+  },
+  {
+    "path": "Course/网页/dist/03-信息输入与工具执行/素材/03-tool-request.png",
+    "bytes": 61957,
+    "sha256": "4c933379fb3a46bfcf25647a747ff0694758e5c085dbbc5e8c95565e4219c64d"
+  },
+  {
+    "path": "Course/网页/dist/03-信息输入与工具执行/素材/03-two-calls-loop.png",
+    "bytes": 93820,
+    "sha256": "1af5565a6af8bb33160db786333ec20fb4f9693430a899e597da01457ba3d712"
+  },
+  {
+    "path": "Course/网页/dist/03-信息输入与工具执行.html",
+    "bytes": 24276,
+    "sha256": "5bc2cea0a8ccb969f35fc1f540964027e72f743ef17f430a1d095787ccc2981f"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/交互/思维地形.html",
+    "bytes": 487692,
+    "sha256": "15732009d8bbe64e7d778a897f8d1ad526db2c19cf594edf31914ac8d042d0a1"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-case-balance-dialogue.png",
+    "bytes": 112181,
+    "sha256": "4c9a3ef67b821825f8beb165cd0faadc8f1b0d922e4e96e32b008d2f2405cea2"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-case-drift-dialogue.png",
+    "bytes": 120367,
+    "sha256": "ccd2358653db5312d5ccc6ea2b095ebc1b379c481e7c1aeae807dcc9557feb39"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-case-entangle-terrain.png",
+    "bytes": 13231,
+    "sha256": "864ea8560d8ffe151e676a4f5aced149d929e90e249881641d1f075e91605c29"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-case-entangle-venn.png",
+    "bytes": 6938,
+    "sha256": "ccb349ea0ac0b7c65f80dd429cd11496979d5164ed0162199d48df0e60cadd4d"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-case-hollywood-script.png",
+    "bytes": 200271,
+    "sha256": "38489dfa6b832a431f51c6de0cf0ea7666140ef1bb6dc01616d402912ccbfb8d"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-case-logic-dialogue.png",
+    "bytes": 171410,
+    "sha256": "0b24424df5a3b2edd811cdb39f58ee9f77ea378166e66eda1a51e3f949af0c69"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-case-rollback-dialogue.png",
+    "bytes": 136310,
+    "sha256": "2605d450e107533278e0893d4ae64e8aef3fff6b9c78c1140e260588fb26d97f"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-context-selection.svg",
+    "bytes": 4837,
+    "sha256": "65a681736254db92f926f9461cc30f3d0965ba6c6b0e90ac17a35eebc1e5662e"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-dialogue-anneal-a.png",
+    "bytes": 125110,
+    "sha256": "54e70779988024dd068cad1893e5122cc92145d3c38811f03c69232270ca2378"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-dialogue-anneal-b.png",
+    "bytes": 638766,
+    "sha256": "f3d4f64db3f9a740f836525a4c53a7deba82513e7528a1faeb88fad72bd81efa"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-dialogue-balance-a.png",
+    "bytes": 101678,
+    "sha256": "851dfc6cfa5e6295cf6539079a33bf6265961d864aef7c0f67d0ce0b783f726a"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-dialogue-balance-b.png",
+    "bytes": 124386,
+    "sha256": "7c14b4490807500a7551dd2d7780e8142e470805829a2ad5f3e1b7d13e5fddd7"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-dialogue-case-better-a.png",
+    "bytes": 92600,
+    "sha256": "47e084cc131dd284896f5a373f71596b0069a2bd6d6251f8b28a2ddebecbe626"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-dialogue-case-better-b.png",
+    "bytes": 89977,
+    "sha256": "4f32852c2c9043f35d2379ea30547d8ff2a2214d7446e2d74c5bd5231d807b21"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-dialogue-distill-a.png",
+    "bytes": 218571,
+    "sha256": "fd22b68117ba8e6ce08a47cbb4cbf560ebf3c949b3c5c11b1e938066e96e4e57"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-dialogue-distill-b.png",
+    "bytes": 91705,
+    "sha256": "b2f306ff4b4839073433d3827447f6fdf80975291b8ba2be42da22a09bf4c544"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-dialogue-drift-a.png",
+    "bytes": 250769,
+    "sha256": "cfaf3b11df585d8e18c3181e6dd98fcf0ca7e4fee94621d3ca897209fe643752"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-dialogue-drift-b.png",
+    "bytes": 114391,
+    "sha256": "ff4f334ccd85457f1c0ab27a68984c3bea237f3293d2d4e8abf5f7c5272a3642"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-dialogue-entangle-a.png",
+    "bytes": 92468,
+    "sha256": "8222328a9638f0d20772f0bad24de0851b6970f2bf96649c42155d4c35378a46"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-dialogue-entangle-b.png",
+    "bytes": 124410,
+    "sha256": "5141df1e0b61edee2cebb35c726151cdbfcf472be745fc8188cac9800dea9900"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-dialogue-manifest.json",
+    "bytes": 5118,
+    "sha256": "c5312d93cee3a0ab78cbe342e3d60300567a2216f327a0fd3a1cfddbd283e722"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-dialogue-purify-a.png",
+    "bytes": 218691,
+    "sha256": "6f7ad5e87525e4bac8676737dac5f42db441e00e94593bf8afc0cc4527c401cb"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-dialogue-purify-b.png",
+    "bytes": 160417,
+    "sha256": "338cb245ee0fa34c6a86ec4c737899cedd062356525c188e07f3eabd16a26e55"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-dialogue-reason-a.png",
+    "bytes": 116120,
+    "sha256": "3af0baf46ac87ae9bd9ac1c58ad0b9186eb4d0360310e37684175d56c09a20c9"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-dialogue-reason-b.png",
+    "bytes": 204410,
+    "sha256": "e72cbbd469f7f98015a40829744a17b79154cc55e4a7af25de60dcd88b3bf62f"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-feedback.svg",
+    "bytes": 4448,
+    "sha256": "84126983c4fb4bb32062808f30834fe57f9d33c2a9284d929c5d9682b9fc66a0"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-original-implicit-purity.png",
+    "bytes": 175770,
+    "sha256": "182dcb0f7a8f005c214df3476515ee195b4cbf32531f6ecf3052a09a22160b81"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-original-reason-before-conclusion.png",
+    "bytes": 141142,
+    "sha256": "ffba2ac8e09b718f13db4aa130170283fde5751ba108f1a3b6397f0d4b8e8088"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-original-semantic-annealing.jpeg",
+    "bytes": 411757,
+    "sha256": "354b5b6b49fac096aff17ec290df191f61085f8508d99bfc1ec5a87e2380e714"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-terrain-anneal-a.gif",
+    "bytes": 581789,
+    "sha256": "99fc6095e89e519039f20164c8a23715d242152185528beee19f328f5c1743f4"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-terrain-anneal-b.gif",
+    "bytes": 1257723,
+    "sha256": "6f3faee062adb6ed64324c3fc4e4bca561bb446d41db6ef7812048c5029524e5"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-terrain-balance-a.gif",
+    "bytes": 634827,
+    "sha256": "4a0e976d33e0ad9920f7dc60a0b9c20d31e655b8f15774f2088da385f4d5c553"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-terrain-balance-b.gif",
+    "bytes": 1027241,
+    "sha256": "ca7668dc424fbc3db0b4ed3a17f273df598baea19506fb9c1cd0feb083f7e0da"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-terrain-case-better-a.gif",
+    "bytes": 587648,
+    "sha256": "ff736a79f9c186c8e1ae5ed9f38a5395228471bf3c4eb21cbd6c6220b992d90c"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-terrain-case-better-b.gif",
+    "bytes": 904730,
+    "sha256": "413e9a95431aea302f7d0785af2561875c3ee00e1ebdee3bafbffcf2dc759c28"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-terrain-distill-a.gif",
+    "bytes": 574093,
+    "sha256": "d0d496de6b331a784ce587c6f44325b41031bfb4723a7dcf274ae4da5ffe330f"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-terrain-distill-b.gif",
+    "bytes": 1289089,
+    "sha256": "9de07c17f0bbcf50c75f531b93280d128310dbc91141e3bdeec577b4913a2ebb"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-terrain-drift-a.gif",
+    "bytes": 576347,
+    "sha256": "3241018011805d32f086a84f0416652fd05e694cab03bdfa383b44a58db4a7b5"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-terrain-drift-b.gif",
+    "bytes": 1112822,
+    "sha256": "5ad262340521534774072f4fe311c5f0d9c6368c976a144ce886b99bf98f84fe"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-terrain-entangle-a.gif",
+    "bytes": 650759,
+    "sha256": "e975aa1bced400e2582057e676018433f45f82a8935a3ef8592b54b0aabf31a3"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-terrain-entangle-b.gif",
+    "bytes": 1359501,
+    "sha256": "22adeb65c82d5e19682064a5ec6c4f9ad19ace1eabab7b85913dd6bbf58b5619"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-terrain-interface.svg",
+    "bytes": 9815,
+    "sha256": "5742f8b79406ea66b08efa5158530aafbbb468a1a21e0101627460f568e69cf3"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-terrain-purify-a.gif",
+    "bytes": 655140,
+    "sha256": "67a8fcd09f4870f84ee36a255bbc0da87d5eb30ede873e0cdd8a67165baaa5c8"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-terrain-purify-b.gif",
+    "bytes": 922262,
+    "sha256": "5421f27d04fe6ed562ed493e80339765b83642af9ef22fa70b8e94936cd1540d"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-terrain-reason-a.gif",
+    "bytes": 564592,
+    "sha256": "957e9114a89bf99e5a54c88b3b837efdd3ea865ff0ab7d4ece89fe99584be261"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/04-terrain-reason-b.gif",
+    "bytes": 1047197,
+    "sha256": "d77ec6035423c28b9c9e939984c837bdd8cf3ca9a073b82c9af9372d7a4cd675"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/gif-display.json",
+    "bytes": 2451,
+    "sha256": "887334c6f7c1da59cb953e8b81462fe17f13ddcef5d12486c55aebf45cd82457"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环/素材/对话.json",
+    "bytes": 15852,
+    "sha256": "72a3f190686263fb43f1374cbe391f25db73b2eb5674dda9ab46adba2a75276b"
+  },
+  {
+    "path": "Course/网页/dist/04-需求表达与反馈闭环.html",
+    "bytes": 46984,
+    "sha256": "881bf5c1d2244ab26d7098fd0ec37627594513758fdbf8a25d3a97d3acfc72f6"
+  },
+  {
+    "path": "Course/网页/dist/05-任务执行与证据核验/素材/05-evidence-chain.svg",
+    "bytes": 4151,
+    "sha256": "fbb5064cb41a32c2156c84aa9b27b377b44daa165719e7b723eed5930aae55ea"
+  },
+  {
+    "path": "Course/网页/dist/05-任务执行与证据核验/素材/05-execution.svg",
+    "bytes": 4374,
+    "sha256": "9b0b360e70824fbc460d8ff3f85f2ad3306542948afd5226c584b757840039f8"
+  },
+  {
+    "path": "Course/网页/dist/05-任务执行与证据核验/素材/活动反馈.csv",
+    "bytes": 579,
+    "sha256": "725606b211adb59286195ab9101b0ae3fbb02e5e5e6b0ae2f518ba018b4b5ada"
+  },
+  {
+    "path": "Course/网页/dist/05-任务执行与证据核验.html",
+    "bytes": 25845,
+    "sha256": "60f693335315c80f03c9fab3aa54c43f62a3f9146e7c97a0974a03cb0b60754e"
+  },
+  {
+    "path": "Course/网页/dist/06-行动选择与投入控制/交互/投入与对齐四象限.html",
+    "bytes": 4949,
+    "sha256": "450020452adc6ed81018dce460f29f4cf7cddd94b798e59c962852de748133e7"
+  },
+  {
+    "path": "Course/网页/dist/06-行动选择与投入控制/素材/06-action-network.svg",
+    "bytes": 4536,
+    "sha256": "08a777edf45df72ac6e3b5f4bd064f745724ef25eab42eae2c9c7d6ccfe2f1f4"
+  },
+  {
+    "path": "Course/网页/dist/06-行动选择与投入控制/素材/06-alignment.svg",
+    "bytes": 4617,
+    "sha256": "879f199d6cf35d7d9846993e2b0a996658f9ea28dd4b19fbf5c171c54e3c0e8a"
+  },
+  {
+    "path": "Course/网页/dist/06-行动选择与投入控制/素材/06-knowledge.svg",
+    "bytes": 4715,
+    "sha256": "2da7b8710606860a11447e157364633f9c811296fa5fd94a15d362085698c6ca"
+  },
+  {
+    "path": "Course/网页/dist/06-行动选择与投入控制/素材/06-slide-01-article.png",
+    "bytes": 214953,
+    "sha256": "ad86b8ccbc5c667f6d08be2cf213219a950179f030fa138a225a2bfcf79efcf6"
+  },
+  {
+    "path": "Course/网页/dist/06-行动选择与投入控制/素材/06-slide-02-article.png",
+    "bytes": 233193,
+    "sha256": "ae65dd44b96874fb7b68c11aadc6fe8680f197f91def338b5a758c8a30061be5"
+  },
+  {
+    "path": "Course/网页/dist/06-行动选择与投入控制/素材/06-slide-03-article.png",
+    "bytes": 106219,
+    "sha256": "4a10e8e448e7012b5888e5288578229399c825bde1b2a878f0a5c234892d749a"
+  },
+  {
+    "path": "Course/网页/dist/06-行动选择与投入控制/素材/06-slide-04-article.png",
+    "bytes": 99372,
+    "sha256": "0ca91955af9f5f355881878f6eafc9e7cb382f82d23e84bec80a249b4f700237"
+  },
+  {
+    "path": "Course/网页/dist/06-行动选择与投入控制/素材/06-slide-05-article.png",
+    "bytes": 101683,
+    "sha256": "f8278367749d9adfc34c64150ee7a6bc53b5e2dd1669eb73ac190aa94e76c7cb"
+  },
+  {
+    "path": "Course/网页/dist/06-行动选择与投入控制/素材/06-slide-06-article.png",
+    "bytes": 101716,
+    "sha256": "c079ac8d1f889ba0507cbe63a3407e8758b2787548f774e08df0ce1a8df0e8cb"
+  },
+  {
+    "path": "Course/网页/dist/06-行动选择与投入控制/素材/06-slide-07-article.png",
+    "bytes": 154848,
+    "sha256": "40c62b33a58c7ac47458c3285b9eb915006951f901437ebde785af935f92f312"
+  },
+  {
+    "path": "Course/网页/dist/06-行动选择与投入控制/素材/七页正文总览-具体工具版.png",
+    "bytes": 1374706,
+    "sha256": "45f14b8feced53029bec7ddca1e133d89abfc7a0b66919d9912a70f7bba39c74"
+  },
+  {
+    "path": "Course/网页/dist/06-行动选择与投入控制/素材/七页正文总览-精简版.png",
+    "bytes": 1043116,
+    "sha256": "b3e4a77c88e20dbb169243db865fa37f72d3eabf0afae0f819fff5f0da858e7e"
+  },
+  {
+    "path": "Course/网页/dist/06-行动选择与投入控制/素材/七页正文总览.png",
+    "bytes": 1630836,
+    "sha256": "69bc7e83ae29771efd7842fcee2bba65417e27064031541201aa254a74516940"
+  },
+  {
+    "path": "Course/网页/dist/06-行动选择与投入控制/素材/七页演示内容.json",
+    "bytes": 15524,
+    "sha256": "9951f9a12e6fcedc4b3f0e1782afa083bdcc335d8416963e310f0590cbb8d267"
+  },
+  {
+    "path": "Course/网页/dist/06-行动选择与投入控制.html",
+    "bytes": 21376,
+    "sha256": "98971858ecf0884900cdbc0f6123360901d29262dba07143122f77d1185c280a"
+  },
+  {
+    "path": "Course/网页/dist/07-课程制作与人机取舍/素材/07-production.svg",
+    "bytes": 5021,
+    "sha256": "1490f2e18caf88e18a7e35ce9d0eb35affb4b534765fdcdc9c827d08883dc8ea"
+  },
+  {
+    "path": "Course/网页/dist/07-课程制作与人机取舍/素材/07-revision.svg",
+    "bytes": 4544,
+    "sha256": "4d8779ff20a15a4882c222b7c558ed3723eeb402f4f7a98333137d85b6e01a77"
+  },
+  {
+    "path": "Course/网页/dist/07-课程制作与人机取舍.html",
+    "bytes": 19026,
+    "sha256": "4317c09a370efb600f236f74983e11c98054a974374ec8ac51a3d500bf8a2c9c"
+  },
+  {
+    "path": "Course/网页/dist/assets/search.js",
+    "bytes": 906,
+    "sha256": "a2f03adde25578fabbd220523cef9f128b458545f50eafcd3b856b988b0eedc9"
+  },
+  {
+    "path": "Course/网页/dist/assets/site.css",
+    "bytes": 15840,
+    "sha256": "a178ec7c7e69ae9d15987472bf780c4b103d0d4e49bcc99eaab8218561a7a5ea"
+  },
+  {
+    "path": "Course/网页/dist/assets/site.js",
+    "bytes": 9246,
+    "sha256": "8f989201c93862b7f6670005e101881d4157b4b3d6b907798d178aaf2e0d6c5c"
+  },
+  {
+    "path": "Course/网页/dist/index.html",
+    "bytes": 400,
+    "sha256": "1f8a70df0e802580376378d3a83f58f7235faffc7c47a824404ca55d65067f7c"
+  },
+  {
+    "path": "Course/网页/dist/llms.txt",
+    "bytes": 1128,
+    "sha256": "94e419c390b9a126bd499c69b7dbe86858bafe534e9ef758f0067dea358588a8"
+  },
+  {
+    "path": "Course/网页/dist/manifest.json",
+    "bytes": 1925,
+    "sha256": "82730aeec6a0add24126d4fba15525b5b62cf74d567247a982d5025223073ea1"
+  },
+  {
+    "path": "Course/网页/dist/markdown/01.md",
+    "bytes": 6088,
+    "sha256": "6f0f1293ee49d4e4ad8ee648a4169728b715dd9f4ebb9c876bb1bf4781fd2ae5"
+  },
+  {
+    "path": "Course/网页/dist/markdown/02.md",
+    "bytes": 6634,
+    "sha256": "42629c19f2a66c319240effd3de3e81804f90aa9899be208c4cf3866aafd38c6"
+  },
+  {
+    "path": "Course/网页/dist/markdown/03.md",
+    "bytes": 8533,
+    "sha256": "2302a953bbef83f67bf128353f1bbc5e11745fd3ef50cc32c404afb7472eda2d"
+  },
+  {
+    "path": "Course/网页/dist/markdown/04.md",
+    "bytes": 9534,
+    "sha256": "71584c6fc8320e3a4b6b04517810bfcffc70e2c27bef60d88fe94d86a79d009c"
+  },
+  {
+    "path": "Course/网页/dist/markdown/05.md",
+    "bytes": 9084,
+    "sha256": "7992fa47781258010045ff61beaba338462c5e9eef0328fd6440654e24c8370c"
+  },
+  {
+    "path": "Course/网页/dist/markdown/06.md",
+    "bytes": 6294,
+    "sha256": "e83250b4be945fb38681e83bf3266e69df347b1b07f71bfbf1d820dd322f7e77"
+  },
+  {
+    "path": "Course/网页/dist/markdown/07.md",
+    "bytes": 5415,
+    "sha256": "f7ccbd51abfc9002caa5d501354a63c451e9ca1f060988e655c2823d574f59bb"
+  },
+  {
+    "path": "Course/网页/dist/search-index.json",
+    "bytes": 61741,
+    "sha256": "374115394d272a91ca1a807fc770b9965ff7110043a90efad587dd79ebca5aa3"
+  },
+  {
+    "path": "Course/网页/package.json",
+    "bytes": 343,
+    "sha256": "73503cbb7a9a8ca4506ff479fc321846299973bfa7af0a62c601c0b8a1823662"
+  },
+  {
+    "path": "Course/网页/pnpm-lock.yaml",
+    "bytes": 1655,
+    "sha256": "f2ab04e5cc9ab31b3af1cb04d48c60fe06c8ace66f24fd89b15ce5eadbd76141"
+  },
+  {
+    "path": "Course/网页/public/assets/search.js",
+    "bytes": 906,
+    "sha256": "a2f03adde25578fabbd220523cef9f128b458545f50eafcd3b856b988b0eedc9"
+  },
+  {
+    "path": "Course/网页/public/assets/site.css",
+    "bytes": 15840,
+    "sha256": "a178ec7c7e69ae9d15987472bf780c4b103d0d4e49bcc99eaab8218561a7a5ea"
+  },
+  {
+    "path": "Course/网页/public/assets/site.js",
+    "bytes": 9246,
+    "sha256": "8f989201c93862b7f6670005e101881d4157b4b3d6b907798d178aaf2e0d6c5c"
+  },
+  {
+    "path": "Course/网页/scripts/build.mjs",
+    "bytes": 12626,
+    "sha256": "c19e19c9a676b3ae9c94df1e7e270362d7528fb8c6bfabe50aa3ff02ceb63b00"
+  },
+  {
+    "path": "Course/网页/scripts/check.mjs",
+    "bytes": 3857,
+    "sha256": "693e4d35ebfd8cf1e930e80068d28dd746abfeff17cc2349639c52d81a259b0f"
+  },
+  {
+    "path": "Course/网页/scripts/course.mjs",
+    "bytes": 1185,
+    "sha256": "3ef99e4f480f3729b12eb3dda5d1f1f030f20210a5724035e7b28ebd208849aa"
+  },
+  {
+    "path": "Course/网页/scripts/icons.mjs",
+    "bytes": 1904,
+    "sha256": "045daa7551c5ca1e4e21ed341a8ca064f7802bb1ad6da019cb9685589cfc669e"
+  },
+  {
+    "path": "Course/网页/scripts/preview.mjs",
+    "bytes": 1612,
+    "sha256": "a1f9bd6430e874044bc40317d06ad637fbc2b7a47128eb98861ef3a88dbdd6e7"
+  },
+  {
+    "path": "Course/网页/素材/AI协作幻灯片/slide-01.png",
+    "bytes": 1520417,
+    "sha256": "f8c2f95230d8ad2cc7a51ec303ade3d4ccd54d87a5f683760e0950ee116ad4e1"
+  },
+  {
+    "path": "Course/网页/素材/AI协作幻灯片/slide-02.png",
+    "bytes": 1319648,
+    "sha256": "ff848b60253dd75900bc3cc9b4b4f50e8f1fac27cf5221ff54ef988aab0ce013"
+  },
+  {
+    "path": "Course/网页/素材/AI协作幻灯片/slide-04.png",
+    "bytes": 1223777,
+    "sha256": "0be799ab7142ac5ba8bfddec170c6b088e958e38ae639fbc134d873ac09fc30d"
+  },
+  {
+    "path": "Course/网页/素材/AI协作幻灯片/slide-06.png",
+    "bytes": 1424672,
+    "sha256": "898c3ee61c7d74eb6533f71fb631ff079b6357613dc7d74fc81bb7ac9802598b"
+  },
+  {
+    "path": "Course/网页/素材/AI协作幻灯片/slide-07.png",
+    "bytes": 2235834,
+    "sha256": "bff18dea59e8dee38c3e21b9d133f91dd547745e0c653db6b84a74fa5d06a4d9"
+  },
+  {
+    "path": "Course/网页/素材/AI协作幻灯片/slide-16.png",
+    "bytes": 2517836,
+    "sha256": "fba3e4baf2ae49704dbf8765ccf630c57396669ab9382136052ab428cd5bb08f"
+  },
+  {
+    "path": "Course/网页/素材/AI协作幻灯片/slide-17.png",
+    "bytes": 1360352,
+    "sha256": "86f4037c4bc7af39d92da591b957e42c25ea233968b6e6f95b030b4dd91a0ea7"
+  },
+  {
+    "path": "Course/网页/素材/AI协作幻灯片/slide-25.png",
+    "bytes": 1465809,
+    "sha256": "cfb555269c4c1615c5e0a845069b1d7fdb1dbe74d382f1a8a252923ad30827cb"
+  },
+  {
+    "path": "Course/网页/素材/AI协作幻灯片/slide-26.png",
+    "bytes": 1335576,
+    "sha256": "472e141c0214081b94013e41717201226fb8d06a549751118102b7ccd9c71ba1"
+  }
+]

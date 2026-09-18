@@ -1,0 +1,15 @@
+{
+  "name": "ai-mechanism-course-reader",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "init": "pnpm install --frozen-lockfile",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/preview.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "dependencies": {
+    "markdown-it": "14.1.0"
+  }
+}

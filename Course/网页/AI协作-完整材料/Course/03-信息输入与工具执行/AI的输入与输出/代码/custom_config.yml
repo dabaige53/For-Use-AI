@@ -1,0 +1,12 @@
+directories:
+  mirror_module_path: False
+  base: "."
+  subdirs:
+    output: "../生成"
+    data: "../生成/缓存"
+camera:
+  resolution: (854, 480)
+  background_color: "#000000"
+  fps: 30
+text:
+  font: "PingFang SC"

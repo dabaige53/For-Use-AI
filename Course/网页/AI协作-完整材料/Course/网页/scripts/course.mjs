@@ -7,7 +7,7 @@ export const lessons = [
   ["06-行动选择与投入控制", "行动选择与投入控制", "行动选择与投入控制"],
   ["07-课程制作与人机取舍", "课程制作与人机取舍", "课程制作与人机取舍"]
 ].map(([slug, basename, fallbackTitle], index) => ({
-  source: index === 1 ? `${slug}/大语言模型简要说明/大语言模型简要说明.md` : `${slug}/${basename}.md`,
+  source: `${slug}/${basename}.md`,
   slug,
   fallbackTitle,
   index,
