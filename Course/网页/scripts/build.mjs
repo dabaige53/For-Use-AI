@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
-import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
-import { dirname, join, relative, resolve } from "node:path";
+import { cp, mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
+import { dirname, extname, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import MarkdownIt from "markdown-it";
 import { icon } from "./icons.mjs";
@@ -29,6 +29,44 @@ for (const lesson of lessons) {
     try { await cp(join(course, lesson.slug, folder), join(dist, lesson.slug, folder), { recursive: true }); }
     catch (error) { if (error.code !== "ENOENT") throw error; }
   }
+}
+
+async function findPlayableVideo(chapterDir) {
+  const candidates = [];
+  async function walk(dir) {
+    let entries;
+    try { entries = await readdir(dir, { withFileTypes: true }); } catch { return; }
+    for (const entry of entries) {
+      if (["node_modules", "dist", ".trash", ".git"].includes(entry.name)) continue;
+      const full = join(dir, entry.name);
+      if (entry.isDirectory()) await walk(full);
+      else if (/\.(?:mp4|webm)$/i.test(entry.name)) candidates.push(full);
+    }
+  }
+  await walk(chapterDir);
+  const rank = (path) => {
+    const name = path.toLowerCase();
+    const finalScore = /(?:final|成片|有声|voice|review|preview|预览)/i.test(name) ? 0 : 1;
+    const formatScore = extname(path).toLowerCase() === ".mp4" ? 0 : 1;
+    return finalScore * 100000 + formatScore * 10000 + path.length;
+  };
+  candidates.sort((a, b) => rank(a) - rank(b) || a.localeCompare(b, "zh-CN"));
+  return candidates[0] || null;
+}
+
+await mkdir(join(dist, "media"), { recursive: true });
+for (const [chapter, target] of [
+  ["02-AI的能力从哪里来", "video-01"],
+  ["03-信息输入与工具执行", "video-02"]
+]) {
+  const source = await findPlayableVideo(join(course, chapter));
+  if (!source) {
+    console.warn(`未找到 ${chapter} 的 MP4/WebM；演示页将保留海报与视频占位。`);
+    continue;
+  }
+  const extension = extname(source).toLowerCase();
+  await cp(source, join(dist, "media", `${target}${extension}`));
+  console.log(`演示视频：${relative(course, source)} → media/${target}${extension}`);
 }
 
 const sources = await Promise.all(lessons.map(async (lesson) => {
@@ -127,7 +165,7 @@ for (const item of sources) {
   await writeFile(join(dist, item.output), html);
 }
 await writeFile(join(dist, "llms.txt"), "# AI 机制与协作\n\n> 七篇课程，涵盖 AI 机制、需求表达、任务执行与行动选择。\n\n## 课程正文\n\n" + sources.map(item => `- [${item.title}](markdown/${String(item.index + 1).padStart(2, "0")}.md): 阅读页 ${encodeURI(item.output)}`).join("\n") + "\n");
-await writeFile(join(dist, "index.html"), `<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=${encodeURI(sources[0].output)}"><link rel="canonical" href="${encodeURI(sources[0].output)}"></head><body><a href="${encodeURI(sources[0].output)}">打开第一篇</a></body></html>`);
+await writeFile(join(dist, "index.html"), await readFile(join(root, "public/presentation.html"), "utf8"));
 await writeFile(join(dist, "search-index.json"), JSON.stringify(searchEntries) + "\n");
 await writeFile(join(dist, "manifest.json"), JSON.stringify({ lessons: sources.map(({ source, output, title, hash }) => ({ source, output, title, hash })) }, null, 2) + "\n");
 console.log(`已构建 ${sources.length} 篇文章到 ${relative(process.cwd(), dist) || "dist"}`);
