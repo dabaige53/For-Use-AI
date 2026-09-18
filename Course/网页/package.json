@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "init": "pnpm install --frozen-lockfile",
-    "build": "node scripts/build.mjs",
+    "build": "node scripts/build.mjs && node scripts/build-slides.mjs",
+    "build:slides": "node scripts/build-slides.mjs",
     "preview": "node scripts/preview.mjs",
     "check": "node scripts/check.mjs"
   },
