@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="description" content="基于 Course 七篇正文的 16:9 现场课程。两个视频、原生地形对话与 45 项任务的交互散点图。">
+<title>AI 驱动的新工作方式 · 演讲模式</title>
+<!-- PRESENTATION_STYLE -->
+</head>
+<body>
+<div id="viewport"><main id="deck" aria-label="AI 驱动的新工作方式，十页交互课程">
+<div id="slides">
+<section class="slide" data-title="AI 驱动的新工作方式" data-source="01,02,03,04,05,06,07" aria-label="第 1 页，共 10 页" hidden>
+<p class="kicker cover-kicker">A BETTER WAY TO WORK WITH AI</p><div class="cover-rule"></div>
+<h1 class="cover-title serif">AI 驱动的<br>新工作方式</h1><p class="cover-sub">从理解 AI，到更可靠的人机协作</p>
+<div class="cover-art" aria-hidden="true"><svg viewBox="0 0 650 610" id="contours"></svg></div>
+<p class="cover-bottom">理解机制 ／ 持续对齐 ／ 判断投入</p><button class="cover-start" data-next>开始讲述<span>→</span></button>
+</section>
+<section class="slide" data-title="为什么，聪明仍然不好用" data-source="01" aria-label="第 2 页，共 10 页" hidden>
+<header class="heading"><p class="kicker">01 / THE GAP</p><h1>为什么，聪明仍然不好用</h1></header>
+<div class="problem-equation serif"><span>流畅回答</span><span class="neq">≠</span><span>可靠结果</span></div>
+<p class="problem-prompt">“不好用”是一种感受，还不是一个诊断。</p>
+<div class="problem-choices" role="group" aria-label="选择排查方向"><button data-problem="0" aria-pressed="true"><small>01</small>材料</button><button data-problem="1" aria-pressed="false"><small>02</small>目标</button><button data-problem="2" aria-pressed="false"><small>03</small>执行</button></div>
+<p id="problem-answer" class="problem-answer" aria-live="polite">原始材料里，真的有这个数字吗？</p>
+</section>
+<section class="slide" data-title="AI 的能力，从哪里来" data-source="02" aria-label="第 3 页，共 10 页" hidden>
+<div class="video-stage" data-film="llm"><video id="film-llm" controls playsinline preload="none" aria-label="大语言模型简要说明，本地课程视频"></video><div class="video-cover"><span class="film-index" aria-hidden="true">01</span><p>COURSE FILM / 模型机制</p><h1>AI 的能力，从哪里来</h1><button class="play-film" aria-label="播放大语言模型简要说明"><svg viewBox="0 0 24 24"><path d="M5 2 22 12 5 22Z"/></svg></button><p class="video-status" role="status">点击播放课程视频</p></div><button class="file-action">选择本地视频</button><input type="file" accept="video/*,.mp4,.webm,.mov" hidden></div>
+<p class="video-caption">训练形成能力，输入影响这次回答。<span>大语言模型简要说明</span></p>
+</section>
+<section class="slide" data-title="一句话背后的真实调用" data-source="03" aria-label="第 4 页，共 10 页" hidden>
+<div class="video-stage" data-film="io"><video id="film-io" controls playsinline preload="none" aria-label="AI 的输入与输出，本地课程视频"></video><div class="video-cover"><span class="film-index" aria-hidden="true">02</span><p>COURSE FILM / 输入与执行</p><h1>一句话背后的真实调用</h1><button class="play-film" aria-label="播放 AI 的输入与输出"><svg viewBox="0 0 24 24"><path d="M5 2 22 12 5 22Z"/></svg></button><p class="video-status" role="status">点击播放课程视频</p></div><button class="file-action">选择本地视频</button><input type="file" accept="video/*,.mp4,.webm,.mov" hidden></div>
+<p class="video-caption">模型提出请求，程序执行，结果再进入输入。<span>AI 的输入与输出</span></p>
+</section>
+<section class="slide" data-title="对话，为何逐渐偏离" data-source="04" aria-label="第 5 页，共 10 页" hidden><header class="heading"><p class="kicker">02 / CONTEXT SHAPES THE PATH</p><h1>对话，为何逐渐偏离</h1></header><div class="interactive-host" id="terrain-before"></div></section>
+<section class="slide" data-title="反馈，不是再说一遍" data-source="04" aria-label="第 6 页，共 10 页" hidden><header class="heading"><p class="kicker">03 / FEEDBACK CHANGES THE PATH</p><h1>反馈，不是再说一遍</h1></header><div class="interactive-host" id="terrain-after"></div></section>
+<section class="slide" data-title="数得对，不代表分得对" data-source="05" aria-label="第 7 页，共 10 页" hidden>
+<header class="heading"><p class="kicker">04 / EVIDENCE BEFORE CONFIDENCE</p><h1>数得对，不代表分得对</h1></header>
+<div class="evidence-label">一条真实含义需要核对的教学记录 / F09</div><blockquote class="evidence-quote">“声音清楚，<em>但演示切换得太快</em>。”</blockquote><p class="evidence-question">你会把它归到哪一类？</p>
+<div class="evidence-buttons"><button class="pill" data-evidence="wrong" aria-pressed="false">声音问题</button><button class="pill" data-evidence="right" aria-pressed="false">练习与节奏</button></div>
+<div class="evidence-result" aria-live="polite"><strong id="evidence-title">先读原意，再看汇总。</strong><p id="evidence-detail">点击分类，检查这条记录到底支持什么。</p></div>
+</section>
+<section class="slide" data-title="下一步，值得投入多少" data-source="06" aria-label="第 8 页，共 10 页" hidden><header class="heading"><p class="kicker">05 / ALIGNMENT × COMMITMENT</p><h1>下一步，值得投入多少</h1></header><div class="interactive-host" id="chart-map"></div></section>
+<section class="slide" data-title="先取得依据，再扩大投入" data-source="06" aria-label="第 9 页，共 10 页" hidden><header class="heading"><p class="kicker">06 / CHOOSE THE NEXT MOVE</p><h1>先取得依据，再扩大投入</h1></header><div class="interactive-host" id="chart-tour"></div></section>
+<section class="slide" data-title="人，负责最后的判断" data-source="07" aria-label="第 10 页，共 10 页" hidden>
+<header class="heading"><p class="kicker">07 / THE HUMAN PART</p><h1>人，负责最后的判断</h1></header>
+<p class="closing-lead serif"><span class="soft">AI 扩大产出的可能，</span><br>人决定什么值得完成。</p>
+<div class="closing-words"><div class="closing-word"><strong>方向</strong><p>这件事，要改变什么？</p></div><div class="closing-word"><strong>证据</strong><p>凭什么，相信这个结果？</p></div><div class="closing-word"><strong>取舍</strong><p>下一步，还值得投入吗？</p></div></div>
+<p class="closing-last">少一点生成惯性，多一次有效判断。</p><span class="closing-small">UNDERSTAND / ALIGN / DECIDE</span>
+</section>
+</div>
+<footer class="deck-footer"><span class="footer-brand">AI / WORK</span><span class="key-hint" id="key-hint">← → 翻页 · F 全屏 · N 讲者备注</span><nav class="footer-tools" aria-label="幻灯片控制"><button id="overview" class="tool-muted" aria-label="页面总览，快捷键 G" title="页面总览 G"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></button><button id="notes" class="tool-muted" aria-label="讲者备注，快捷键 N" title="讲者备注 N"><svg viewBox="0 0 24 24"><path d="M5 3h14v18H5ZM8 7h8M8 11h8M8 15h5"/></svg></button><button id="fullscreen" class="tool-muted" aria-label="进入全屏，快捷键 F" title="全屏 F"><svg viewBox="0 0 24 24"><path d="M3 9V3h6M15 3h6v6M21 15v6h-6M9 21H3v-6"/></svg></button><button id="prev" aria-label="上一页"><svg viewBox="0 0 24 24"><path d="m14 5-7 7 7 7"/></svg></button><span class="page-number" id="page-number">01 / 10</span><button id="next" aria-label="下一页"><svg viewBox="0 0 24 24"><path d="m10 5 7 7-7 7"/></svg></button></nav></footer>
+</main></div>
+<div id="interactive-parking" hidden>
+<div id="terrain-view" class="terrain-view">
+<div class="terrain-tabs" role="group" aria-label="地形案例"><button class="pill" data-mechanism="drift" aria-pressed="true">语义漂移</button><button class="pill" data-mechanism="entangle" aria-pressed="false">特征纠缠</button><button class="pill" data-mechanism="balance" aria-pressed="false">显式配平</button></div>
+<div class="terrain-text"><div class="phase-name"><span id="terrain-phase">旁支线索</span><span id="terrain-mode">A · 原始策略</span></div><p class="terrain-quote" id="terrain-quote" aria-live="polite"></p><div class="terrain-tag" id="terrain-tag"></div></div>
+<canvas id="terrain-canvas" class="terrain-canvas" width="2000" height="1140" tabindex="0" role="img" aria-label="动态思维地形。拖动旋转；加减键缩放；空格播放暂停；R 恢复视角。"></canvas>
+<div class="terrain-legend" aria-hidden="true"><span style="color:#b29255"><i class="legend-dot"></i>输入线索</span><span style="color:#233e33"><i class="legend-dot"></i>回答路径</span><span style="color:#47796e"><i class="legend-dot"></i>目标方向</span></div>
+<div class="terrain-controls"><button class="pill primary" id="terrain-play">播放演示</button><button class="pill" id="terrain-step">下一步</button><button class="pill" id="terrain-replay">重播</button><button class="reset-view" id="terrain-reset">恢复视角</button></div><p class="terrain-caption">拖动旋转 · 滚轮缩放　／　教学比喻，不是模型内部轨迹</p>
+</div>
+<div id="quadrant-view" class="quadrant-view">
+<div class="chart-tools" id="map-tools"><div class="chart-filters" role="group" aria-label="任务类别"><button class="pill" data-category="all" aria-pressed="true">全部 45</button><button class="pill" data-category="0" aria-pressed="false">问答</button><button class="pill" data-category="1" aria-pressed="false">方案</button><button class="pill" data-category="2" aria-pressed="false">文字</button><button class="pill" data-category="3" aria-pressed="false">图像</button><button class="pill" data-category="4" aria-pressed="false">页面</button><button class="pill" data-category="5" aria-pressed="false">数据</button></div><select id="task-select" class="chart-select" aria-label="选择具体任务，包含重合散点"></select></div>
+<div class="chart-tools" id="tour-tools" hidden><div class="tour-options" role="group" aria-label="选择下一步行动"><button class="pill" data-move="0" aria-pressed="true">先缩小承诺</button><button class="pill" data-move="1" aria-pressed="false">用小样取证</button><button class="pill" data-move="2" aria-pressed="false">够用就停</button><button class="pill" data-move="3" aria-pressed="false">必要才扩大</button></div><span class="tour-kicker">一个网页任务的讲述示意 · 非强制顺序</span></div>
+<svg id="scatter" class="scatter" viewBox="0 0 1520 482" role="group" aria-label="横轴是下一次反馈前的投入，纵轴是有证据支持的对齐程度。45 个原始任务坐标未改变。">
+<defs><marker id="axis-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0 0 6 3 0 6" fill="none" stroke="#778470" stroke-width="1"/></marker></defs>
+<rect x="188" y="46" width="642" height="181" fill="#eef1e8"/><rect x="830" y="46" width="642" height="181" fill="#f0eee4"/><rect x="188" y="227" width="642" height="181" fill="#f0f1ed"/><rect x="830" y="227" width="642" height="181" fill="#f4ede6"/>
+<path d="M188 46V408H1478" stroke="#899581" fill="none" stroke-width="1.6" marker-end="url(#axis-arrow)"/><path d="M188 408V35" stroke="#899581" fill="none" stroke-width="1.6" marker-end="url(#axis-arrow)"/><path d="M830 46V408M188 227H1472" stroke="#c7cebd" stroke-dasharray="5 7" fill="none"/>
+<text class="quad-title" x="789" y="108" text-anchor="end">轻量交付</text><text class="quad-hint" x="581" y="143" text-anchor="middle">标准清楚，够用即可</text><text class="quad-title" x="861" y="108" text-anchor="start">深度建设</text><text class="quad-hint" x="1005" y="143" text-anchor="middle">依据扎实，分段推进</text><text class="quad-title" x="789" y="385" text-anchor="end">探索</text><text class="quad-hint" x="581" y="350" text-anchor="middle">小步试验，获得依据</text><text class="quad-title" x="861" y="283" text-anchor="start">高暴露</text><text class="quad-hint" x="1005" y="350" text-anchor="middle">先缩小承诺</text>
+<text class="axis-text" x="143" y="199" text-anchor="end">有证据</text><text class="axis-text" x="143" y="234" text-anchor="end">支持的</text><text class="axis-text" x="143" y="269" text-anchor="end">对齐</text><text class="tick" x="166" y="60" text-anchor="end">高</text><text class="tick" x="166" y="408" text-anchor="end">低</text><text class="axis-text" x="830" y="458" text-anchor="middle">下一次反馈前的投入与承诺</text><text class="tick" x="190" y="442">低</text><text class="tick" x="1472" y="442" text-anchor="end">高</text>
+<g id="task-points"></g><circle id="selected-halo" class="point-halo" r="17"/>
+<g id="custom-group" hidden><path id="custom-guides" class="custom-guide"/><circle id="custom-halo" class="point-halo" r="23"/><circle id="custom-dot" r="13" fill="#233e33" stroke="#f7f6f0" stroke-width="4" tabindex="0" role="slider" aria-label="演示任务。方向键调整投入和对齐；可用鼠标或触摸拖动。" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25"/><text id="custom-label" class="custom-label">演示任务</text></g>
+</svg><p class="chart-disclaimer" id="chart-disclaimer">情境比较，不是实测评分；50 仅为排版分界。点击散点或用右上角选择任务。</p>
+<div class="chart-insight"><div><h2 id="task-title"></h2><div class="chart-meta" id="task-meta"></div></div><p id="task-reason" aria-live="polite"></p></div>
+</div>
+</div>
+<dialog id="overlay" aria-label="演讲辅助"><button class="close-overlay" aria-label="关闭">×</button><div id="overlay-content"></div></dialog><div id="toast" role="status" hidden></div><div id="slide-announcer" class="sr-only" aria-live="polite"></div>
+<noscript>这套课程包含本地 Canvas 与 SVG 交互，需要启用 JavaScript。视频、地形与散点图不会上传任何本地文件。</noscript>
+<script id="course-tasks" type="application/json">__COURSE_TASKS__</script>
+<script id="course-media" type="application/json">{"llm":"media/llm.mp4","io":"media/io.mp4"}</script>
+<!-- PRESENTATION_SCRIPT -->
+</body>
+</html>
