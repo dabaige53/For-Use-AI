@@ -49,5 +49,29 @@ for (const item of manifest?.lessons || []) {
   const tocTargets = [...html.matchAll(/data-section="([^"]+)"/g)].map((m) => m[1]);
   for (const id of tocTargets) if (!ids.has(id)) errors.push(`${item.output} 的目录锚点不存在：#${id}`);
 }
+try {
+  const deckHtml = await readFile(join(dist, "index.html"), "utf8");
+  const slideCount = (deckHtml.match(/\sdata-slide(?:\s|>)/g) || []).length;
+  if (slideCount !== 18) errors.push(`课程演示应有 18 页，实际为 ${slideCount} 页`);
+  const videoCount = (deckHtml.match(/<video\b/g) || []).length;
+  if (videoCount !== 2) errors.push(`课程演示应有 2 个独立视频页，实际检测到 ${videoCount} 个 video`);
+
+  for (const required of ["assets/presentation.css", "assets/presentation.js", "presentation.html"]) {
+    try { await access(join(dist, required)); }
+    catch { errors.push(`课程演示缺少 ${required}`); }
+  }
+
+  const deckRefs = [...deckHtml.matchAll(/(?:href|src)="([^"]+)"/g)].map((match) => match[1]);
+  for (const ref of deckRefs) {
+    if (/^(?:[a-z]+:|\/\/|#)/i.test(ref) || ref.startsWith("media/")) continue;
+    const pathPart = decodeURIComponent(ref.split(/[?#]/)[0]);
+    if (!/\.(?:html|css|js|svg|png|jpe?g)$/i.test(pathPart)) continue;
+    try { await access(join(dist, pathPart)); }
+    catch { errors.push(`课程演示引用不存在：${ref}`); }
+  }
+} catch {
+  errors.push("课程演示 index.html 缺失或无法读取");
+}
+
 if (errors.length) { console.error(`检查失败（${errors.length} 项）：\n${errors.map((x) => `- ${x}`).join("\n")}`); process.exit(1); }
 console.log(`检查通过：${lessons.length} 篇 Markdown 与 HTML 一致，页面、锚点、图片和内部链接均有效。`);
