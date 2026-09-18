@@ -227,8 +227,12 @@ function el(tag, a = {}, text) {
   return e;
 }
 
+function chartRight() {
+  return page >= 2 && page <= 5 ? 1520 : 1070;
+}
+
 function xy(d) {
-  return [80 + d.investment * 9.9, 780 - d.alignment * 5.7];
+  return [80 + d.investment * (chartRight() - 80) / 100, 780 - d.alignment * 5.7];
 }
 
 const nodes = content.tasks.map(d => {
@@ -282,22 +286,22 @@ function background() {
   }
 
   for (let v = 0; v <= 100; v += 25) {
-    const x = 80 + v * 9.9;
+    const x = 80 + v * (chartRight() - 80) / 100;
     const y = 780 - v * 5.7;
     bg.append(el('line', { x1: x, y1: 210, x2: x, y2: 780, class: v === 50 ? 'axis' : 'grid' }));
-    bg.append(el('line', { x1: 80, y1: y, x2: 1070, y2: y, class: v === 50 ? 'axis' : 'grid' }));
+    bg.append(el('line', { x1: 80, y1: y, x2: chartRight(), y2: y, class: v === 50 ? 'axis' : 'grid' }));
     bg.append(el('text', { x, y: 800, 'font-size': 11, 'text-anchor': 'middle', fill: '#94a3b8' }, v));
     bg.append(el('text', { x: 64, y: y + 4, 'font-size': 11, 'text-anchor': 'end', fill: '#94a3b8' }, v));
   }
 
   bg.append(el('text', { x: 80, y: 182, 'font-size': 13.5, 'font-weight': '600', fill: '#475569' }, '对齐依据 ↑'));
-  bg.append(el('text', { x: 1070, y: 824, 'font-size': 13.5, 'font-weight': '600', fill: '#475569', 'text-anchor': 'end' }, '下一次反馈前的预期投入 →'));
+  bg.append(el('text', { x: chartRight(), y: 824, 'font-size': 13.5, 'font-weight': '600', fill: '#475569', 'text-anchor': 'end' }, '下一次反馈前的预期投入 →'));
 
   [
     ['轻量交付（满足用途即停止）', 96, 235, '#47796e'],
-    ['深度建设（证据扎实且确有需求才扩大）', 593, 235, '#9b793b'],
+    ['深度建设（证据扎实且确有需求才扩大）', (80 + chartRight()) / 2 + 18, 235, '#9b793b'],
     ['探索（摸索边界与假设）', 96, 520, '#526dad'],
-    ['高暴露风险（先收缩为可核验小步）', 593, 520, '#aa645b']
+    ['高暴露风险（先收缩为可核验小步）', (80 + chartRight()) / 2 + 18, 520, '#aa645b']
   ].forEach(([t, x, y, col]) => {
     bg.append(el('text', { x, y, 'font-size': 13.5, 'font-weight': '500', fill: col, opacity: 0.72 }, t));
   });
@@ -344,7 +348,7 @@ function update() {
       const w = d.text.length * fontSize * 0.95;
       // Try right placement
       let chosen = null;
-      if (p[0] + w + 12 <= 1070) {
+      if (p[0] + w + 12 <= chartRight()) {
         const boxRight = { x: p[0] + 10, y: p[1] - 17, w, h: 18 };
         const collideRight = boxes.some(b => boxRight.x < b.x + b.w && boxRight.x + boxRight.w > b.x && boxRight.y < b.y + b.h && boxRight.y + boxRight.h > b.y);
         if (!collideRight) chosen = { box: boxRight, tx: 10, anchor: 'start' };
@@ -373,7 +377,7 @@ function update() {
       const h = 18;
 
       let chosen = null;
-      if (p[0] + w + 14 <= 1070) {
+      if (p[0] + w + 14 <= chartRight()) {
         const boxRight = { x: p[0] + 12, y: p[1] - 17, w, h };
         const collideRight = boxes.some(b => boxRight.x < b.x + b.w && boxRight.x + boxRight.w > b.x && boxRight.y < b.y + b.h && boxRight.y + boxRight.h > b.y);
         if (!collideRight) chosen = { box: boxRight, tx: 12, anchor: 'start' };
@@ -384,7 +388,7 @@ function update() {
         if (!collideLeft) chosen = { box: boxLeft, tx: -12, anchor: 'end' };
       }
       if (!chosen && (page === 6 && isCurrent)) {
-        const isRight = (1070 - p[0]) >= (p[0] - 80);
+        const isRight = (chartRight() - p[0]) >= (p[0] - 80);
         chosen = { box: { x: isRight ? p[0] + 14 : p[0] - w - 14, y: p[1] - 17, w, h }, tx: isRight ? 14 : -14, anchor: isRight ? 'start' : 'end' };
       }
 

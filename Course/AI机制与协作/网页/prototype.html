@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>培训课件 PPT 布局架构 · 原始材料高保真方块系统</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      width: 100vw; height: 100vh;
+      overflow: hidden;
+      background-color: #0f172a; /* 舞台外底色，突出 16:9 画布 */
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", "Noto Sans SC", sans-serif;
+      user-select: none;
+    }
+
+    .viewport-container {
+      width: 100vw; height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+
+    /* 1920x1080 固态大屏 PPT 舞台 (严格遵循 frontend-slides 规范) */
+    .slide-stage {
+      width: 1920px; height: 1080px;
+      flex-shrink: 0;
+      background-color: #f8fafc;
+      transform-origin: center center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.5);
+    }
+
+    /* 幻灯片页面基础样式 */
+    .slide {
+      position: absolute; inset: 0;
+      width: 1920px; height: 1080px;
+      padding: 56px 72px;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #f8fafc;
+    }
+    .slide.active { display: flex; }
+
+    /* 顶栏与大标题系统 (大字号、高识别度) */
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-bottom: 24px;
+      border-bottom: 3px solid #e2e8f0;
+    }
+    .slide-title-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .slide-eyebrow {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #3b82f6;
+    }
+    .slide-title {
+      font-size: 56px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+      line-height: 1.15;
+    }
+    .slide-badge {
+      font-size: 22px;
+      font-weight: 700;
+      padding: 10px 24px;
+      border-radius: 9999px;
+      background: #e2e8f0;
+      color: #334155;
+      letter-spacing: 0.05em;
+    }
+
+    /* 通用纯正排版方块 (Pure Wireframe Container) */
+    .ppt-card {
+      background: #ffffff;
+      border: 3px solid #e2e8f0;
+      border-radius: 24px;
+      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.04);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* 视频视窗方块 (02/03篇) */
+    .video-frame-container {
+      flex: 1;
+      background: #0f172a;
+      border: 3px solid #334155;
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      color: #ffffff;
+    }
+    .video-viewport-grid {
+      position: absolute; inset: 0;
+      background-image: 
+        linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* 交互式时间线进度条 */
+    .timeline-strip {
+      height: 130px;
+      background: #ffffff;
+      border: 3px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 0 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
+      position: relative;
+    }
+    .timeline-track-bar {
+      position: relative;
+      width: 100%;
+      height: 12px;
+      background: #e2e8f0;
+      border-radius: 6px;
+    }
+    .timeline-progress-fill {
+      position: absolute; left: 0; top: 0; height: 100%;
+      background: linear-gradient(90deg, #3b82f6, #2563eb);
+      border-radius: 6px;
+      width: 60%;
+      transition: width 0.3s ease;
+    }
+    .timeline-nodes {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      width: 100%;
+      margin-top: -24px;
+    }
+    .timeline-node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      z-index: 10;
+    }
+    .node-pin {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 5px solid #94a3b8;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .timeline-node.active .node-pin {
+      border-color: #2563eb;
+      background: #3b82f6;
+      transform: scale(1.3);
+      box-shadow: 0 0 16px rgba(37,99,235,0.5);
+    }
+    .node-label {
+      font-size: 20px;
+      font-weight: 800;
+      color: #64748b;
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+    .timeline-node.active .node-label {
+      color: #0f172a;
+      font-weight: 900;
+    }
+    .node-time {
+      font-size: 15px;
+      font-family: monospace;
+      font-weight: 700;
+      color: #94a3b8;
+    }
+
+    /* 顶部 PPT 演播控制台悬浮条 */
+    .deck-controller {
+      position: fixed;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(16px);
+      padding: 8px 16px;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 9999;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .deck-btn {
+      padding: 8px 20px;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 9999px;
+      color: #cbd5e1;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .deck-btn:hover {
+      color: #ffffff;
+      background: rgba(255,255,255,0.1);
+    }
+    .deck-btn.active {
+      color: #ffffff;
+      background: #2563eb;
+      box-shadow: 0 4px 12px rgba(37,99,235,0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 顶部幻灯片快速切换导航条 -->
+  <div class="deck-controller">
+    <button class="deck-btn active" onclick="goToSlide(0)">02 视频：数据与训练</button>
+    <button class="deck-btn" onclick="goToSlide(1)">03 视频：输入与输出</button>
+    <button class="deck-btn" onclick="goToSlide(2)">04 嵌入：对话与地形</button>
+    <button class="deck-btn" onclick="goToSlide(3)">06 嵌入：四象限决策</button>
+    <button class="deck-btn" onclick="goToSlide(4)">总览：全链路画布</button>
+    <div style="width: 1px; height: 20px; background: rgba(255,255,255,0.2); margin: 0 8px;"></div>
+    <span style="font-size: 13px; color: #94a3b8; padding-right: 8px; font-weight: 600;">按 ← → 键翻页</span>
+  </div>
+
+  <div class="viewport-container" id="viewport">
+    <div class="slide-stage" id="stage">
+
+      <!-- =================================================================== -->
+      <!-- 页码 1：【02篇 视频·数据生成与模型训练全过程】 -->
+      <!-- =================================================================== -->
+      <section class="slide active" data-index="0">
+        <!-- 课件主标题 -->
+        <header class="slide-header">
+          <div class="slide-title-group">
+            <div class="slide-eyebrow">MODULE 02 · 核心动画原片</div>
+            <h1 class="slide-title">数据生成与模型训练全过程</h1>
+          </div>
+          <div class="slide-badge">3Blue1Brown mini-llm 动画还原</div>
+        </header>
+
+        <!-- 主体：居中大视频方块 (16:9 比例大视窗) -->
+        <div class="my-6 flex-1 flex flex-col gap-5">
+          <div class="video-frame-container">
+            <div class="video-viewport-grid"></div>
+            
+            <!-- 视窗内部大提示 -->
+            <div class="relative z-10 flex flex-col items-center text-center gap-4">
+              <div class="w-28 h-28 rounded-full bg-blue-600/30 border-4 border-blue-400 flex items-center justify-center">
+                <svg class="w-14 h-14 text-blue-400 translate-x-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <div class="text-4xl font-black tracking-wide text-white" id="v02-status-title">
+                【 3b1b 动画视窗：当前正在演示 “Token 切分与编码” 】
+              </div>
+              <div class="text-2xl font-bold text-blue-200" id="v02-status-desc">
+                观察记录文本 ➔ 字符/词元拆解 ➔ 高维向量空间映射与嵌入
+              </div>
+            </div>
+
+            <!-- 视窗底部状态浮层 -->
+            <div class="absolute bottom-6 left-8 right-8 flex justify-between items-center text-zinc-400 font-mono text-xl z-10">
+              <div class="bg-black/60 backdrop-blur-md px-6 py-2.5 rounded-full border border-white/10 text-white font-bold">
+                1920 × 1080 · 60 FPS · ManimGL 渲染引擎
+              </div>
+              <div class="bg-black/60 backdrop-blur-md px-6 py-2.5 rounded-full border border-white/10 text-blue-400 font-bold" id="v02-timecode">
+                TIME: 01:24 / 06:40
+              </div>
+            </div>
+          </div>
+
+          <!-- 底部：交互式时间线进度条 (关键帧打点与真实标签) -->
+          <div class="timeline-strip">
+            <div class="timeline-track-bar">
+              <div class="timeline-progress-fill" id="v02-progress" style="width: 33%;"></div>
+            </div>
+            <div class="timeline-nodes">
+              <!-- 节点 1 -->
+              <div class="timeline-node" onclick="setV02Node(0, 0, '数据观察与记录', '一只猫坐在窗边 ➔ 照片、视频与文本的多态记录', '00:15')">
+                <div class="node-pin"></div>
+                <div class="node-label">01 观察与记录</div>
+                <div class="node-time">00:15</div>
+              </div>
+              <!-- 节点 2 -->
+              <div class="timeline-node active" onclick="setV02Node(1, 20, 'Token 切分与编码', '字符与词元切分 ➔ 向量索引计算 ➔ 建立模型计算输入', '01:24')">
+                <div class="node-pin"></div>
+                <div class="node-label">02 Token与编码</div>
+                <div class="node-time">01:24</div>
+              </div>
+              <!-- 节点 3 -->
+              <div class="timeline-node" onclick="setV02Node(2, 40, '下一词预测与比对', '输入前文计算概率分布 ➔ 比较真实目标 ➔ 产生预测误差', '02:45')">
+                <div class="node-pin"></div>
+                <div class="node-label">03 预测与误差</div>
+                <div class="node-time">02:45</div>
+              </div>
+              <!-- 节点 4 -->
+              <div class="timeline-node" onclick="setV02Node(3, 60, '反向传播与参数调整', '计算损失梯度 ➔ 反向调整海量权重 ➔ 改变生成倾向', '04:10')">
+                <div class="node-pin"></div>
+                <div class="node-label">04 参数梯度调整</div>
+                <div class="node-time">04:10</div>
+              </div>
+              <!-- 节点 5 -->
+              <div class="timeline-node" onclick="setV02Node(4, 80, '海量数据预训练', '数十亿 Token 反复循环计算 ➔ 凝练基础语言理解世界模型', '05:30')">
+                <div class="node-pin"></div>
+                <div class="node-label">05 海量预训练</div>
+                <div class="node-time">05:30</div>
+              </div>
+              <!-- 节点 6 -->
+              <div class="timeline-node" onclick="setV02Node(5, 100, '后训练与人类对齐 (RLHF)', '指令—回答示范微调 ➔ 人类喜好排序对齐 ➔ 塑造助手形态', '06:40')">
+                <div class="node-pin"></div>
+                <div class="node-label">06 RLHF 对齐</div>
+                <div class="node-time">06:40</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 底部说明栏 -->
+        <div class="flex justify-between items-center text-zinc-500 font-medium text-lg pt-1">
+          <span>课件设计说明：点击进度条关键帧节点，可直接联动视窗跳转；大屏幕讲授时无需额外文字干扰。</span>
+          <span class="font-bold text-zinc-700">Slide 02 / 07</span>
+        </div>
+      </section>
+
+
+      <!-- =================================================================== -->
+      <!-- 页码 2：【03篇 视频·输入组织与模型输出全过程】 -->
+      <!-- =================================================================== -->
+      <section class="slide" data-index="1">
+        <header class="slide-header">
+          <div class="slide-title-group">
+            <div class="slide-eyebrow">MODULE 03 · 核心动画原片</div>
+            <h1 class="slide-title">输入组织与模型输出全过程</h1>
+          </div>
+          <div class="slide-badge">Manim 交互执行链路动画</div>
+        </header>
+
+        <div class="my-6 flex-1 flex flex-col gap-5">
+          <div class="video-frame-container">
+            <div class="video-viewport-grid"></div>
+            
+            <div class="relative z-10 flex flex-col items-center text-center gap-4">
+              <div class="w-28 h-28 rounded-full bg-emerald-600/30 border-4 border-emerald-400 flex items-center justify-center">
+                <svg class="w-14 h-14 text-emerald-400 translate-x-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <div class="text-4xl font-black tracking-wide text-white" id="v03-status-title">
+                【 Manim 视窗：当前演示 “Tool Call 工具调用请求生成” 】
+              </div>
+              <div class="text-2xl font-bold text-emerald-200" id="v03-status-desc">
+                模型识别出需要外部环境动作 ➔ 生成结构化 JSON 请求 ➔ 请求尚未执行
+              </div>
+            </div>
+
+            <div class="absolute bottom-6 left-8 right-8 flex justify-between items-center text-zinc-400 font-mono text-xl z-10">
+              <div class="bg-black/60 backdrop-blur-md px-6 py-2.5 rounded-full border border-white/10 text-white font-bold">
+                输入装配 ➔ 上下文边界 ➔ 动作分支 ➔ 验证闭环
+              </div>
+              <div class="bg-black/60 backdrop-blur-md px-6 py-2.5 rounded-full border border-white/10 text-emerald-400 font-bold" id="v03-timecode">
+                TIME: 03:10 / 05:20
+              </div>
+            </div>
+          </div>
+
+          <!-- 03篇 关键帧进度条 -->
+          <div class="timeline-strip">
+            <div class="timeline-track-bar">
+              <div class="timeline-progress-fill" id="v03-progress" style="width: 60%; background: linear-gradient(90deg, #10b981, #059669);"></div>
+            </div>
+            <div class="timeline-nodes">
+              <div class="timeline-node" onclick="setV03Node(0, 0, '用户提示词注入', '输入框单句 Prompt：用户指令只是完整输入的冰山一角', '00:20')">
+                <div class="node-pin"></div>
+                <div class="node-label">01 用户提示词</div>
+                <div class="node-time">00:20</div>
+              </div>
+              <div class="timeline-node" onclick="setV03Node(1, 20, '完整上下文装配', '内置规则 + 历史会话 + 工具定义 ➔ 汇聚为 Current Context', '01:15')">
+                <div class="node-pin"></div>
+                <div class="node-label">02 上下文拼装</div>
+                <div class="node-time">01:15</div>
+              </div>
+              <div class="timeline-node" onclick="setV03Node(2, 40, '自回归 Token 预测', '利用冻结参数逐步前向计算 ➔ 输出 Token 持续反哺前文', '02:05')">
+                <div class="node-pin"></div>
+                <div class="node-label">03 Token自回归</div>
+                <div class="node-time">02:05</div>
+              </div>
+              <div class="timeline-node active" onclick="setV03Node(3, 60, '双分支输出决策', '自然语言 Text Response 还是结构化 Tool Call 请求？', '03:10')">
+                <div class="node-pin" style="border-color: #059669; background: #10b981;"></div>
+                <div class="node-label" style="color: #0f172a;">04 动作决策分支</div>
+                <div class="node-time">03:10</div>
+              </div>
+              <div class="timeline-node" onclick="setV03Node(4, 80, 'Harness 调度真实执行', '宿主环境执行读写 ➔ 状态码与异常反馈 ➔ 构成 Next Context', '04:20')">
+                <div class="node-pin"></div>
+                <div class="node-label">05 Runtime 调度</div>
+                <div class="node-time">04:20</div>
+              </div>
+              <div class="timeline-node" onclick="setV03Node(5, 100, '多轮循环与严密验证', '验证来源/数量/约束 ➔ Done ≠ Verified Complete', '05:20')">
+                <div class="node-pin"></div>
+                <div class="node-label">06 验证支持结论</div>
+                <div class="node-time">05:20</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center text-zinc-500 font-medium text-lg pt-1">
+          <span>课件核心：明确区分“模型提出请求”与“外部执行动作”，把执行状态与验证边界讲透。</span>
+          <span class="font-bold text-zinc-700">Slide 03 / 07</span>
+        </div>
+      </section>
+
+
+      <!-- =================================================================== -->
+      <!-- 页码 3：【04篇 嵌入·表达需求与思维地形（对话 + 地形嵌入）】 -->
+      <!-- =================================================================== -->
+      <section class="slide" data-index="2">
+        <header class="slide-header">
+          <div class="slide-title-group">
+            <div class="slide-eyebrow">MODULE 04 · 嵌入式双重视界</div>
+            <h1 class="slide-title">表达需求与反馈：人机对话与思维地形</h1>
+          </div>
+          <div class="slide-badge">真实对话卡片 + 3D势能地形 50:50 并排嵌入</div>
+        </header>
+
+        <!-- 主体：左右两大排版方块并排 (50:50 Split) -->
+        <div class="my-6 flex-1 grid grid-cols-2 gap-8">
+
+          <!-- 左侧方块：真实人机对话卡片 (Chat UI Block) -->
+          <div class="ppt-card p-8 flex flex-col justify-between bg-white border-zinc-200">
+            <div>
+              <div class="flex items-center justify-between pb-5 mb-6 border-b-2 border-zinc-100">
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-xl">💬</div>
+                  <h2 class="text-3xl font-black text-zinc-900">左侧视界：真实人机交互对话流</h2>
+                </div>
+                <span class="text-base font-bold px-4 py-1.5 bg-blue-50 text-blue-700 rounded-full border border-blue-200">输入文本域</span>
+              </div>
+
+              <!-- 对话流方块群 -->
+              <div class="flex flex-col gap-6">
+                <!-- 用户气泡 1 (模糊指令) -->
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center gap-3 text-lg font-bold text-zinc-500">
+                    <span class="w-3 h-3 rounded-full bg-zinc-400"></span>
+                    <span>轮次 1 · 用户模糊输入</span>
+                  </div>
+                  <div class="p-6 rounded-2xl bg-zinc-100 border-2 border-zinc-200 text-2xl font-bold text-zinc-800 leading-relaxed">
+                    “生产服务器磁盘暴涨到 40GB 报警了，赶紧排查一下到底怎么回事！”
+                  </div>
+                </div>
+
+                <!-- AI 响应 (漂移与幻觉) -->
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center gap-3 text-lg font-bold text-red-500">
+                    <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                    <span>AI 响应 · 陷入局部语义鞍点 (语义漂移)</span>
+                  </div>
+                  <div class="p-6 rounded-2xl bg-red-50 border-2 border-red-200 text-2xl font-semibold text-red-900 leading-relaxed">
+                    “检测到证书过期风险，正在为您排查 DNS 解析与 TLS 握手链路配置……”
+                  </div>
+                </div>
+
+                <!-- 用户修正 2 (硬性结构化约束) -->
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center gap-3 text-lg font-bold text-emerald-600">
+                    <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                    <span>轮次 2 · 注入硬约束锚点 (拉回低谷)</span>
+                  </div>
+                  <div class="p-6 rounded-2xl bg-emerald-50 border-2 border-emerald-300 text-2xl font-bold text-emerald-950 leading-relaxed">
+                    “回到磁盘目标：只执行 <code>du -sh /var/log/*</code>，找出前三大文件，给出删除建议！”
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 左下状态说明 -->
+            <div class="p-5 rounded-xl bg-zinc-50 border border-zinc-200 flex items-center justify-between text-xl font-bold text-zinc-600">
+              <span>语言现象：特征纠缠 / 语义漂移</span>
+              <span class="text-blue-600">约束手段：输入硬性验收标准 ➔</span>
+            </div>
+          </div>
+
+
+          <!-- 右侧方块：嵌入思维地形地图 (Terrain Map Block) -->
+          <div class="ppt-card p-8 flex flex-col justify-between bg-zinc-900 border-zinc-700 text-white">
+            <div>
+              <div class="flex items-center justify-between pb-5 mb-6 border-b-2 border-zinc-800">
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center text-zinc-950 font-black text-xl">🏔️</div>
+                  <h2 class="text-3xl font-black text-white">右侧视界：高维潜空间思维地形图</h2>
+                </div>
+                <span class="text-base font-bold px-4 py-1.5 bg-emerald-900/60 text-emerald-300 rounded-full border border-emerald-700">势能拓扑</span>
+              </div>
+
+              <!-- 矢量高保真思维地形等高线与能量坑图 -->
+              <div class="w-full h-[380px] bg-zinc-950/80 rounded-2xl border-2 border-zinc-800 relative overflow-hidden flex items-center justify-center">
+                <svg class="w-full h-full" viewBox="0 0 800 400" fill="none">
+                  <!-- 等高线背景网格 -->
+                  <circle cx="240" cy="220" r="160" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.6"/>
+                  <circle cx="240" cy="220" r="110" stroke="#475569" stroke-width="2" opacity="0.7"/>
+                  <circle cx="240" cy="220" r="60" stroke="#64748b" stroke-width="2.5" opacity="0.9"/>
+                  <circle cx="240" cy="220" r="20" fill="#dc2626" opacity="0.2"/>
+
+                  <circle cx="580" cy="180" r="170" stroke="#065f46" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.6"/>
+                  <circle cx="580" cy="180" r="120" stroke="#059669" stroke-width="2" opacity="0.8"/>
+                  <circle cx="580" cy="180" r="70" stroke="#10b981" stroke-width="2.5"/>
+                  <circle cx="580" cy="180" r="30" fill="#10b981" opacity="0.25"/>
+
+                  <!-- 语义漂移轨迹曲线 (红色折线滑入歧义鞍点) -->
+                  <path d="M 120 80 Q 180 150 240 220" stroke="#f87171" stroke-width="4" stroke-linecap="round" fill="none"/>
+                  <circle cx="120" cy="80" r="8" fill="#f87171"/>
+                  <text x="135" y="85" fill="#fca5a5" font-size="18" font-weight="bold">模糊指令起点</text>
+
+                  <!-- 偏离陷阱点 -->
+                  <circle cx="240" cy="220" r="12" fill="#ef4444"/>
+                  <text x="180" y="260" fill="#f87171" font-size="20" font-weight="900">DNS/TLS 错误鞍点</text>
+
+                  <!-- 约束重塑力向量 (强力拉引箭头) -->
+                  <path d="M 260 210 C 360 120, 440 100, 560 170" stroke="#38bdf8" stroke-width="5" stroke-dasharray="8 6" stroke-linecap="round" fill="none"/>
+                  <text x="340" y="110" fill="#38bdf8" font-size="22" font-weight="900">约束重塑势能地貌 ➔</text>
+
+                  <!-- 目标收敛低谷 -->
+                  <circle cx="580" cy="180" r="16" fill="#10b981"/>
+                  <circle cx="580" cy="180" r="26" stroke="#34d399" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+                  <text x="500" y="235" fill="#34d399" font-size="22" font-weight="900">日志定位目标低谷</text>
+                </svg>
+
+                <!-- 地形图图例 -->
+                <div class="absolute top-4 right-4 bg-zinc-900/90 px-5 py-3 rounded-xl border border-zinc-700 flex flex-col gap-2 text-sm font-bold">
+                  <div class="flex items-center gap-2 text-red-400">
+                    <span class="w-3 h-3 rounded-full bg-red-500"></span> 浅坑/虚假鞍点（漂移停留）
+                  </div>
+                  <div class="flex items-center gap-2 text-emerald-400">
+                    <span class="w-3 h-3 rounded-full bg-emerald-500"></span> 目标全局深坑（正确收敛）
+                  </div>
+                </div>
+              </div>
+
+              <!-- 地貌机制说明方块 -->
+              <div class="mt-4 p-5 rounded-2xl bg-zinc-800/80 border border-zinc-700 text-xl font-bold text-zinc-200 leading-relaxed">
+                物理隐喻：输入指令并非直接修改模型参数，而是在高维概率地貌中“加深正确低谷、削平无效鞍点”，引导采样稳定滑入目标区域。
+              </div>
+            </div>
+
+            <!-- 右下结论 -->
+            <div class="p-5 rounded-xl bg-zinc-800 border border-zinc-700 flex items-center justify-between text-xl font-bold text-emerald-400">
+              <span>地形机制：朗之万动力学能量地貌</span>
+              <span class="text-white">消除漂移：收敛至唯一全局极小值</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center text-zinc-500 font-medium text-lg pt-1">
+          <span>课件核心：左侧是学员熟悉的操作对话，右侧是深层机制隐喻，直接复制至 PPT 形成强烈心智对照。</span>
+          <span class="font-bold text-zinc-700">Slide 04 / 07</span>
+        </div>
+      </section>
+
+
+      <!-- =================================================================== -->
+      <!-- 页码 4：【06篇 嵌入·任务对齐与投入四象限】 -->
+      <!-- =================================================================== -->
+      <section class="slide" data-index="3">
+        <header class="slide-header">
+          <div class="slide-title-group">
+            <div class="slide-eyebrow">MODULE 06 · 决策与协作框架</div>
+            <h1 class="slide-title">任务对齐与投入四象限：45项任务决策坐标</h1>
+          </div>
+          <div class="slide-badge">2×2 坐标系画布 + 决策准则大方块</div>
+        </header>
+
+        <!-- 主体：左侧四象限坐标系 (65%) + 右侧决策卡片 (35%) -->
+        <div class="my-6 flex-1 grid grid-cols-12 gap-8">
+
+          <!-- 左侧：2×2 四象限坐标系画布 (大面积高对比度方块) -->
+          <div class="col-span-8 ppt-card p-8 flex flex-col justify-between bg-white border-zinc-200">
+            <div class="flex justify-between items-center pb-4 mb-4 border-b-2 border-zinc-100">
+              <h2 class="text-3xl font-black text-zinc-900">45 项任务对齐-投入坐标系 (X: 对齐度 ➔ Y: 投入度)</h2>
+              <div class="flex gap-4 text-base font-black">
+                <span class="flex items-center gap-2 text-indigo-700 bg-indigo-50 px-3 py-1 rounded-lg border border-indigo-200">
+                  <span class="w-3 h-3 rounded-full bg-indigo-600"></span> 共同探索
+                </span>
+                <span class="flex items-center gap-2 text-blue-700 bg-blue-50 px-3 py-1 rounded-lg border border-blue-200">
+                  <span class="w-3 h-3 rounded-full bg-blue-600"></span> 分步把关
+                </span>
+                <span class="flex items-center gap-2 text-amber-700 bg-amber-50 px-3 py-1 rounded-lg border border-amber-200">
+                  <span class="w-3 h-3 rounded-full bg-amber-600"></span> 明确约束
+                </span>
+                <span class="flex items-center gap-2 text-emerald-700 bg-emerald-50 px-3 py-1 rounded-lg border border-emerald-200">
+                  <span class="w-3 h-3 rounded-full bg-emerald-600"></span> 直接委托
+                </span>
+              </div>
+            </div>
+
+            <!-- 2x2 象限真实网格容器 -->
+            <div class="flex-1 w-full grid grid-cols-2 grid-rows-2 gap-4 relative p-2 bg-zinc-50 rounded-2xl border-2 border-zinc-200">
+
+              <!-- 象限 1：左上 (低对齐·高投入) 共同探索 -->
+              <div class="p-6 rounded-xl bg-indigo-50/70 border-2 border-indigo-200 flex flex-col justify-between relative group hover:bg-indigo-100 transition">
+                <div>
+                  <div class="flex justify-between items-start">
+                    <span class="text-3xl font-black text-indigo-900">Ⅰ 共同探索</span>
+                    <span class="text-sm font-extrabold px-3 py-1 bg-indigo-200 text-indigo-900 rounded-full">高投入 · 低对齐</span>
+                  </div>
+                  <p class="text-lg font-bold text-indigo-700 mt-2">目标模糊，需多轮问答共创方向</p>
+                </div>
+                <!-- 代表性任务散点标签 -->
+                <div class="flex flex-wrap gap-2.5 mt-4">
+                  <span class="px-4 py-2 bg-white rounded-lg shadow-sm border border-indigo-300 text-lg font-bold text-indigo-950">
+                    • 架构可行性头脑风暴
+                  </span>
+                  <span class="px-4 py-2 bg-white rounded-lg shadow-sm border border-indigo-300 text-lg font-bold text-indigo-950">
+                    • 帮我想清楚未考虑到的盲点
+                  </span>
+                  <span class="px-4 py-2 bg-white rounded-lg shadow-sm border border-indigo-300 text-lg font-bold text-indigo-950">
+                    • 复杂业务重构方案对比
+                  </span>
+                </div>
+              </div>
+
+              <!-- 象限 2：右上 (高对齐·高投入) 分步把关 -->
+              <div class="p-6 rounded-xl bg-blue-50/70 border-2 border-blue-200 flex flex-col justify-between relative group hover:bg-blue-100 transition">
+                <div>
+                  <div class="flex justify-between items-start">
+                    <span class="text-3xl font-black text-blue-900">Ⅱ 分步把关</span>
+                    <span class="text-sm font-extrabold px-3 py-1 bg-blue-200 text-blue-900 rounded-full">高投入 · 高对齐</span>
+                  </div>
+                  <p class="text-lg font-bold text-blue-700 mt-2">关键高危任务，设置多阶段人工把控</p>
+                </div>
+                <div class="flex flex-wrap gap-2.5 mt-4">
+                  <span class="px-4 py-2 bg-white rounded-lg shadow-sm border border-blue-300 text-lg font-bold text-blue-950">
+                    • 生产核心支付模块重构
+                  </span>
+                  <span class="px-4 py-2 bg-white rounded-lg shadow-sm border border-blue-300 text-lg font-bold text-blue-950">
+                    • 40GB 关键生产日志排障
+                  </span>
+                  <span class="px-4 py-2 bg-white rounded-lg shadow-sm border border-blue-300 text-lg font-bold text-blue-950">
+                    • 数据库大版本迁移与回滚
+                  </span>
+                </div>
+              </div>
+
+              <!-- 象限 3：左下 (低对齐·低投入) 明确约束 -->
+              <div class="p-6 rounded-xl bg-amber-50/70 border-2 border-amber-200 flex flex-col justify-between relative group hover:bg-amber-100 transition">
+                <div>
+                  <div class="flex justify-between items-start">
+                    <span class="text-3xl font-black text-amber-900">Ⅲ 明确约束</span>
+                    <span class="text-sm font-extrabold px-3 py-1 bg-amber-200 text-amber-900 rounded-full">低投入 · 低对齐</span>
+                  </div>
+                  <p class="text-lg font-bold text-amber-700 mt-2">试探性轻量指令，先做提纲与范围收敛</p>
+                </div>
+                <div class="flex flex-wrap gap-2.5 mt-4">
+                  <span class="px-4 py-2 bg-white rounded-lg shadow-sm border border-amber-300 text-lg font-bold text-amber-950">
+                    • 先列提纲我来看看
+                  </span>
+                  <span class="px-4 py-2 bg-white rounded-lg shadow-sm border border-amber-300 text-lg font-bold text-amber-950">
+                    • 查一下这个说法有没有依据
+                  </span>
+                  <span class="px-4 py-2 bg-white rounded-lg shadow-sm border border-amber-300 text-lg font-bold text-amber-950">
+                    • 给我 3 个不同设计维度的草案
+                  </span>
+                </div>
+              </div>
+
+              <!-- 象限 4：右下 (高对齐·低投入) 直接委托 -->
+              <div class="p-6 rounded-xl bg-emerald-50/70 border-2 border-emerald-200 flex flex-col justify-between relative group hover:bg-emerald-100 transition">
+                <div>
+                  <div class="flex justify-between items-start">
+                    <span class="text-3xl font-black text-emerald-900">Ⅳ 直接委托</span>
+                    <span class="text-sm font-extrabold px-3 py-1 bg-emerald-200 text-emerald-900 rounded-full">低投入 · 高对齐</span>
+                  </div>
+                  <p class="text-lg font-bold text-emerald-700 mt-2">标准高度明晰，直接自动化端到端交付</p>
+                </div>
+                <div class="flex flex-wrap gap-2.5 mt-4">
+                  <span class="px-4 py-2 bg-white rounded-lg shadow-sm border border-emerald-300 text-lg font-bold text-emerald-950">
+                    • 为指定函数补齐单元测试
+                  </span>
+                  <span class="px-4 py-2 bg-white rounded-lg shadow-sm border border-emerald-300 text-lg font-bold text-emerald-950">
+                    • 转换 12 条 CSV 字段数据格式
+                  </span>
+                  <span class="px-4 py-2 bg-white rounded-lg shadow-sm border border-emerald-300 text-lg font-bold text-emerald-950">
+                    • 依据固定 Schema 提取 JSON
+                  </span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="mt-4 flex justify-between text-xl font-bold text-zinc-500">
+              <span>← 对齐度低（标准发散）</span>
+              <span class="text-zinc-800">【 对齐度轴（X 轴）】</span>
+              <span>对齐度高（标准明确） →</span>
+            </div>
+          </div>
+
+
+          <!-- 右侧：决策原则与投入策略大卡片 (35%) -->
+          <div class="col-span-4 flex flex-col gap-6">
+
+            <div class="ppt-card p-8 flex-1 bg-zinc-900 border-zinc-700 text-white justify-between">
+              <div>
+                <div class="flex items-center gap-3 mb-6">
+                  <div class="w-10 h-10 rounded-xl bg-amber-400 text-zinc-950 flex items-center justify-center font-black text-xl">⚖️</div>
+                  <h3 class="text-3xl font-black">四象限行动决策准则</h3>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                  <div class="p-5 rounded-xl bg-zinc-800/90 border border-zinc-700">
+                    <div class="text-xl font-black text-emerald-400 mb-1">1. 只要对齐高，投入必须降</div>
+                    <div class="text-lg text-zinc-300 font-medium">对于边界清晰的任务，不要过度冗余对话，用自动化脚本或直接委托释放人力。</div>
+                  </div>
+
+                  <div class="p-5 rounded-xl bg-zinc-800/90 border border-zinc-700">
+                    <div class="text-xl font-black text-indigo-300 mb-1">2. 对齐度未建立，切勿重度交付</div>
+                    <div class="text-lg text-zinc-300 font-medium">如果目标还在发散，先花小成本探索提纲，切忌直接让 AI 扩写万字导致全盘重做。</div>
+                  </div>
+
+                  <div class="p-5 rounded-xl bg-zinc-800/90 border border-zinc-700">
+                    <div class="text-xl font-black text-blue-300 mb-1">3. 高危任务设置分步检查点</div>
+                    <div class="text-lg text-zinc-300 font-medium">生产上线与系统重构必须坚持 <code>Done ≠ Verified</code>，设置断点逐一验收。</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-5 rounded-xl bg-zinc-800 border border-zinc-700 text-center">
+                <span class="text-xl font-black text-amber-400">核心公式：产出价值 = 任务对齐度 × 验证投入效率</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="flex justify-between items-center text-zinc-500 font-medium text-lg pt-1">
+          <span>课件核心：将 45 项常见人机协作任务标准化映射到四象限，指导团队在何时放权、何时严管。</span>
+          <span class="font-bold text-zinc-700">Slide 06 / 07</span>
+        </div>
+      </section>
+
+
+      <!-- =================================================================== -->
+      <!-- 页码 5：【课件全景画布·从数据到真实结果的完整链路】 -->
+      <!-- =================================================================== -->
+      <section class="slide" data-index="4">
+        <header class="slide-header">
+          <div class="slide-title-group">
+            <div class="slide-eyebrow">COURSE SUMMARY · 全局闭环</div>
+            <h1 class="slide-title">从数据到真实结果的完整链路 (Full Canvas)</h1>
+          </div>
+          <div class="slide-badge">四大核心阶段总览大画布</div>
+        </header>
+
+        <!-- 主体：4 大阶段横向贯通大方块阵列 -->
+        <div class="my-6 flex-1 grid grid-cols-4 gap-6 items-stretch">
+
+          <!-- 阶段 1：数据与训练 (02篇) -->
+          <div class="ppt-card p-8 bg-white border-blue-200 flex flex-col justify-between">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-blue-100 text-blue-700 font-black text-2xl flex items-center justify-center mb-6">01</div>
+              <h2 class="text-3xl font-black text-zinc-900 mb-3">数据与模型训练</h2>
+              <div class="text-lg font-bold text-blue-600 mb-6">预训练与权重沉淀</div>
+              
+              <div class="flex flex-col gap-4">
+                <div class="p-4 rounded-xl bg-blue-50 border border-blue-100 text-xl font-bold text-blue-950">
+                  • 观察记录转化为结构化 Token
+                </div>
+                <div class="p-4 rounded-xl bg-blue-50 border border-blue-100 text-xl font-bold text-blue-950">
+                  • 反向传播梯度微调海量参数
+                </div>
+                <div class="p-4 rounded-xl bg-blue-50 border border-blue-100 text-xl font-bold text-blue-950">
+                  • RLHF 对齐人类偏好指令
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-blue-600 text-white text-center text-xl font-black">
+              形成：模型通用基础能力
+            </div>
+          </div>
+
+          <!-- 阶段 2：输入与上下文 (03/04篇) -->
+          <div class="ppt-card p-8 bg-white border-purple-200 flex flex-col justify-between">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-purple-100 text-purple-700 font-black text-2xl flex items-center justify-center mb-6">02</div>
+              <h2 class="text-3xl font-black text-zinc-900 mb-3">输入与上下文组织</h2>
+              <div class="text-lg font-bold text-purple-600 mb-6">思维地形重塑</div>
+              
+              <div class="flex flex-col gap-4">
+                <div class="p-4 rounded-xl bg-purple-50 border border-purple-100 text-xl font-bold text-purple-950">
+                  • 内置规则 + 历史 + 工具定义
+                </div>
+                <div class="p-4 rounded-xl bg-purple-50 border border-purple-100 text-xl font-bold text-purple-950">
+                  • 装配为本轮唯一 Current Context
+                </div>
+                <div class="p-4 rounded-xl bg-purple-50 border border-purple-100 text-xl font-bold text-purple-950">
+                  • 注入硬约束，平抑语义漂移
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-purple-600 text-white text-center text-xl font-black">
+              提供：单轮任务精确条件
+            </div>
+          </div>
+
+          <!-- 阶段 3：执行与调度 (03/05篇) -->
+          <div class="ppt-card p-8 bg-white border-emerald-200 flex flex-col justify-between">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 font-black text-2xl flex items-center justify-center mb-6">03</div>
+              <h2 class="text-3xl font-black text-zinc-900 mb-3">动作请求与调度</h2>
+              <div class="text-lg font-bold text-emerald-600 mb-6">外部工具落地执行</div>
+              
+              <div class="flex flex-col gap-4">
+                <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-100 text-xl font-bold text-emerald-950">
+                  • 模型生成 Tool Call 请求
+                </div>
+                <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-100 text-xl font-bold text-emerald-950">
+                  • Harness 调度系统与真实环境
+                </div>
+                <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-100 text-xl font-bold text-emerald-950">
+                  • 获取实际执行结果与错误码
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-emerald-600 text-white text-center text-xl font-black">
+              执行：真实环境落地操作
+            </div>
+          </div>
+
+          <!-- 阶段 4：验证与交付 (06/07篇) -->
+          <div class="ppt-card p-8 bg-white border-amber-200 flex flex-col justify-between">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 font-black text-2xl flex items-center justify-center mb-6">04</div>
+              <h2 class="text-3xl font-black text-zinc-900 mb-3">严密验证与闭环</h2>
+              <div class="text-lg font-bold text-amber-600 mb-6">四象限持续决策</div>
+              
+              <div class="flex flex-col gap-4">
+                <div class="p-4 rounded-xl bg-amber-50 border border-amber-100 text-xl font-bold text-amber-950">
+                  • 核对源数据、数量与业务边界
+                </div>
+                <div class="p-4 rounded-xl bg-amber-50 border border-amber-100 text-xl font-bold text-amber-950">
+                  • 恪守 Done ≠ Verified Complete
+                </div>
+                <div class="p-4 rounded-xl bg-amber-50 border border-amber-100 text-xl font-bold text-amber-950">
+                  • 依四象限策略动态配置人力
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-amber-600 text-white text-center text-xl font-black">
+              支撑：可信工程级最终结论
+            </div>
+          </div>
+
+        </div>
+
+        <div class="flex justify-between items-center text-zinc-500 font-medium text-lg pt-1">
+          <span>核心结语：“训练形成能力，输入提供条件，工具执行动作，验证支持结论。”</span>
+          <span class="font-bold text-zinc-700">Slide Final / 07</span>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script>
+    // 固态 1920x1080 舞台自动等比缩放引擎
+    const stage = document.getElementById('stage');
+    const STAGE_WIDTH = 1920;
+    const STAGE_HEIGHT = 1080;
+
+    function resizeStage() {
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+      const scale = Math.min(vw / STAGE_WIDTH, vh / STAGE_HEIGHT);
+      stage.style.transform = `scale(${scale})`;
+    }
+
+    window.addEventListener('resize', resizeStage);
+    resizeStage();
+
+    // 幻灯片切换系统
+    const slides = document.querySelectorAll('.slide');
+    const deckButtons = document.querySelectorAll('.deck-btn');
+    let currentSlide = 0;
+
+    function goToSlide(index) {
+      if (index < 0 || index >= slides.length) return;
+      currentSlide = index;
+      slides.forEach((s, idx) => {
+        s.classList.toggle('active', idx === currentSlide);
+      });
+      deckButtons.forEach((b, idx) => {
+        b.classList.toggle('active', idx === currentSlide);
+      });
+    }
+
+    // 键盘翻页支持
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+        goToSlide((currentSlide + 1) % slides.length);
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        goToSlide((currentSlide - 1 + slides.length) % slides.length);
+      }
+    });
+
+    // 02 篇时间线节点交互
+    function setV02Node(nodeIdx, percent, title, desc, timecode) {
+      document.getElementById('v02-progress').style.width = percent + '%';
+      document.getElementById('v02-status-title').innerText = `【 3b1b 动画视窗：当前正在演示 “${title}” 】`;
+      document.getElementById('v02-status-desc').innerText = desc;
+      document.getElementById('v02-timecode').innerText = `TIME: ${timecode} / 06:40`;
+      
+      const nodes = slides[0].querySelectorAll('.timeline-node');
+      nodes.forEach((n, idx) => {
+        n.classList.toggle('active', idx === nodeIdx);
+      });
+    }
+
+    // 03 篇时间线节点交互
+    function setV03Node(nodeIdx, percent, title, desc, timecode) {
+      document.getElementById('v03-progress').style.width = percent + '%';
+      document.getElementById('v03-status-title').innerText = `【 Manim 视窗：当前演示 “${title}” 】`;
+      document.getElementById('v03-status-desc').innerText = desc;
+      document.getElementById('v03-timecode').innerText = `TIME: ${timecode} / 05:20`;
+      
+      const nodes = slides[1].querySelectorAll('.timeline-node');
+      nodes.forEach((n, idx) => {
+        n.classList.toggle('active', idx === nodeIdx);
+      });
+    }
+  </script>
+</body>
+</html>
