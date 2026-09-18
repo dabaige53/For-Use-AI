@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f1e8">
+<title>AI 驱动的新工作方式｜课程演示</title>
+<meta name="description" content="基于七篇课程文章、两段视频与交互演示构建的 16:9 HTML 课程演示。">
+<link rel="stylesheet" href="assets/presentation.css">
+</head>
+<body>
+<div class="deck-shell" data-deck>
+  <main class="deck" aria-label="AI 驱动的新工作方式课程演示">
+
+    <section class="slide slide-cover is-active" data-slide data-title="AI 驱动的新工作方式">
+      <div class="cover-wordmark">A MORE<br>HUMAN<br>TOMORROW</div>
+      <button class="page-number" type="button" data-overview-open aria-label="打开课程总览">01 / 18</button>
+      <div class="cover-copy">
+        <div class="cover-rule"></div>
+        <h1>AI 驱动的<br>新工作方式</h1>
+        <p class="cover-subtitle">从工具到伙伴，重新定义人与信息的关系</p>
+        <p class="cover-lead">理解模型如何形成能力、应用如何组织信息与执行工具，<br>再把这些理解转化为更可靠的协作方法。</p>
+        <div class="cover-signature"><i></i><span>更好的工具，更好的判断</span></div>
+      </div>
+      <div class="cover-landscape" aria-hidden="true">
+        <svg viewBox="0 0 1100 760" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#f6efe1" stop-opacity=".25"/>
+              <stop offset=".62" stop-color="#dfe6dd" stop-opacity=".55"/>
+              <stop offset="1" stop-color="#617062" stop-opacity=".9"/>
+            </linearGradient>
+            <radialGradient id="sun" cx="72%" cy="28%" r="38%">
+              <stop offset="0" stop-color="#fff7df" stop-opacity=".95"/>
+              <stop offset=".22" stop-color="#f3d8a4" stop-opacity=".45"/>
+              <stop offset="1" stop-color="#f3d8a4" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="mountainA" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0" stop-color="#aeb7aa"/>
+              <stop offset="1" stop-color="#6f7e71"/>
+            </linearGradient>
+            <linearGradient id="mountainB" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0" stop-color="#728276"/>
+              <stop offset="1" stop-color="#34473c"/>
+            </linearGradient>
+            <filter id="fog"><feGaussianBlur stdDeviation="18"/></filter>
+          </defs>
+          <rect width="1100" height="760" fill="url(#sky)"/>
+          <rect width="1100" height="760" fill="url(#sun)"/>
+          <path d="M0 470 C115 415 185 390 265 410 C345 430 390 345 482 360 C585 376 642 292 740 308 C835 323 900 280 1100 330 L1100 760 L0 760 Z" fill="#d5ddd4" opacity=".58"/>
+          <path d="M0 585 C125 518 216 520 310 476 C394 436 447 413 536 433 C624 452 682 356 778 382 C879 410 920 353 1100 396 L1100 760 L0 760 Z" fill="url(#mountainA)" opacity=".82"/>
+          <path d="M135 760 L332 535 L408 590 L565 420 L652 507 L758 391 L852 500 L940 428 L1100 552 L1100 760 Z" fill="url(#mountainB)" opacity=".94"/>
+          <path d="M250 760 L404 603 L483 643 L604 514 L685 577 L801 474 L883 584 L983 526 L1100 616 L1100 760 Z" fill="#283d33" opacity=".93"/>
+          <ellipse cx="694" cy="478" rx="405" ry="82" fill="#f5f2e9" opacity=".33" filter="url(#fog)"/>
+          <circle cx="803" cy="236" r="7" fill="#344b3d"/>
+          <path d="M803 243 L792 280 M803 252 L817 276 M793 279 L781 312 M814 276 L829 309" stroke="#344b3d" stroke-width="5" stroke-linecap="round"/>
+          <path d="M714 140 C800 90 948 104 1004 216 C1047 303 1004 389 947 437" fill="none" stroke="#365c46" stroke-width="1.6" opacity=".38"/>
+          <path d="M140 694 C276 625 370 635 516 656 C672 679 814 643 977 600" fill="none" stroke="#f0eee6" stroke-width="1" opacity=".48"/>
+        </svg>
+      </div>
+      <div class="cover-side">PEOPLE<br>IDEAS<br>A BRIGHTER<br>TOMORROW</div>
+    </section>
+
+    <section class="slide" data-slide data-title="AI 不好用，通常不是一个问题">
+      <div class="slide-meta"><span>核心问题</span><i></i><em>KEY QUESTION</em></div>
+      <button class="page-number" type="button" data-overview-open>02 / 18</button>
+      <div class="slide-heading">
+        <h2>AI 不好用，通常不是一个问题</h2>
+        <p>同一份“看起来已经完成”的结果，可能坏在完全不同的环节。</p>
+      </div>
+      <div class="visual-split split-problem">
+        <div class="statement-stack">
+          <div><span>01</span><strong>材料有没有真的进入任务？</strong></div>
+          <div><span>02</span><strong>模型是否理解了目标与边界？</strong></div>
+          <div><span>03</span><strong>程序是否真的执行并交付？</strong></div>
+        </div>
+        <figure class="asset-frame">
+          <img src="01-使用AI的核心问题/素材/01-problem-map.svg" alt="从原始资料、本轮输入、模型输出、程序执行到成果核对的工作链">
+        </figure>
+      </div>
+      <p class="slide-footnote">“重写一遍”不是唯一答案。先确定偏差发生在哪一步。</p>
+    </section>
+
+    <section class="slide" data-slide data-title="完成之后，还应该有证据">
+      <div class="slide-meta"><span>核心问题</span><i></i><em>EVIDENCE</em></div>
+      <button class="page-number" type="button" data-overview-open>03 / 18</button>
+      <div class="slide-heading compact">
+        <h2>“完成了”之后，还应该有证据</h2>
+        <p>语言上的声称，只是开始；真正可靠的是可以回到原材料复核的对象。</p>
+      </div>
+      <div class="evidence-layout">
+        <div class="evidence-words">
+          <div><b>声称</b><span>“已经核对全部数据”</span></div>
+          <div><b>成果</b><span>文件、链接、运行结果</span></div>
+          <div class="accent"><b>证据</b><span>编号、依据、原始记录对应</span></div>
+        </div>
+        <figure class="asset-frame evidence-figure">
+          <img src="01-使用AI的核心问题/素材/01-evidence.svg" alt="证据从声称、成果到原始材料核对逐层具体">
+        </figure>
+      </div>
+      <p class="slide-footnote">核对深度应当与错误后果匹配，而不是所有任务都做成审计。</p>
+    </section>
+
+    <section class="slide slide-media" data-slide data-title="视频：AI 的能力从哪里来">
+      <div class="slide-meta"><span>能力来源</span><i></i><em>VIDEO 01</em></div>
+      <button class="page-number" type="button" data-overview-open>04 / 18</button>
+      <h2 class="media-title">AI 的能力从哪里来</h2>
+      <div class="video-shell" data-video-shell>
+        <video controls playsinline preload="metadata" poster="02-AI的能力从哪里来/素材/training.jpg">
+          <source src="media/video-01.mp4" type="video/mp4">
+          <source src="media/video-01.webm" type="video/webm">
+        </video>
+        <div class="media-missing" aria-hidden="true"><span>VIDEO 01</span><b>视频素材尚未打包</b></div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide data-title="训练形成能力，上下文决定这一次怎么用">
+      <div class="slide-meta"><span>能力来源</span><i></i><em>MODEL × CONTEXT</em></div>
+      <button class="page-number" type="button" data-overview-open>05 / 18</button>
+      <div class="slide-heading">
+        <h2>训练形成能力，<br>上下文决定这一次怎么用</h2>
+      </div>
+      <div class="model-context-grid">
+        <div class="mc-card">
+          <span class="mc-index">01</span>
+          <small>TRAINING</small>
+          <strong>训练数据 + 计算</strong>
+          <p>形成模型参数中的语言规律、事实关联与行为倾向。</p>
+        </div>
+        <div class="mc-arrow">→</div>
+        <div class="mc-core"><span>MODEL</span><strong>既有能力</strong><small>参数不会因为一次聊天即时改写</small></div>
+        <div class="mc-plus">+</div>
+        <div class="mc-card">
+          <span class="mc-index">02</span>
+          <small>CONTEXT</small>
+          <strong>本轮目标 + 材料 + 约束</strong>
+          <p>决定当前任务里，哪些能力被调用、依据什么信息输出。</p>
+        </div>
+      </div>
+      <p class="slide-callout">模型“会写报告” ≠ 模型原本就知道你这次活动的数据。</p>
+    </section>
+
+    <section class="slide" data-slide data-title="模型看到的，远不止你那句话">
+      <div class="slide-meta"><span>信息输入</span><i></i><em>CONTEXT</em></div>
+      <button class="page-number" type="button" data-overview-open>06 / 18</button>
+      <div class="slide-heading compact">
+        <h2>模型看到的，远不止你那句话</h2>
+        <p>应用会把用户消息、系统指令、环境信息和工具定义组织成一次真实调用。</p>
+      </div>
+      <div class="context-layout">
+        <figure class="asset-frame context-figure">
+          <img src="03-信息输入与工具执行/素材/03-context.svg" alt="用户消息、系统指令、环境与工具定义组成模型上下文">
+        </figure>
+        <div class="context-side">
+          <div><span>USER</span><strong>用户说了什么</strong></div>
+          <div><span>SYSTEM</span><strong>这次要遵守什么</strong></div>
+          <div><span>ENV</span><strong>资源在哪里</strong></div>
+          <div><span>TOOLS</span><strong>可以请求哪些能力</strong></div>
+        </div>
+      </div>
+      <p class="slide-footnote">知道文件路径，不等于已经读取文件内容。</p>
+    </section>
+
+    <section class="slide slide-media" data-slide data-title="视频：一次用户提问，可能触发多次调用">
+      <div class="slide-meta"><span>工具执行</span><i></i><em>VIDEO 02</em></div>
+      <button class="page-number" type="button" data-overview-open>07 / 18</button>
+      <h2 class="media-title">一次用户提问，可能触发多次模型与工具调用</h2>
+      <div class="video-shell" data-video-shell>
+        <video controls playsinline preload="metadata" poster="03-信息输入与工具执行/素材/03-two-calls-loop.png">
+          <source src="media/video-02.mp4" type="video/mp4">
+          <source src="media/video-02.webm" type="video/webm">
+        </video>
+        <div class="media-missing" aria-hidden="true"><span>VIDEO 02</span><b>视频素材尚未打包</b></div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide data-title="工具请求，不等于工具已经执行">
+      <div class="slide-meta"><span>工具执行</span><i></i><em>REQUEST ≠ EXECUTION</em></div>
+      <button class="page-number" type="button" data-overview-open>08 / 18</button>
+      <div class="slide-heading compact">
+        <h2>工具请求，不等于工具已经执行</h2>
+        <p>模型负责提出请求；程序负责权限与调度；外部工具才真正接触文件和外部世界。</p>
+      </div>
+      <div class="tool-loop-layout">
+        <figure class="asset-frame">
+          <img src="03-信息输入与工具执行/素材/03-tool-loop.svg" alt="模型提出工具请求、程序执行、结果回流的循环">
+        </figure>
+        <div class="role-list">
+          <div><span>01</span><b>模型</b><p>生成结构化操作请求。</p></div>
+          <div><span>02</span><b>程序</b><p>检查参数、权限并安排执行。</p></div>
+          <div><span>03</span><b>工具</b><p>读取文件、运行计算、返回结果。</p></div>
+        </div>
+      </div>
+      <p class="slide-callout">“正在执行”这几个字，本身不会让现实世界发生任何动作。</p>
+    </section>
+
+    <section class="slide slide-interactive" data-slide data-title="思维地形：需求表达是一段持续对齐">
+      <div class="slide-meta"><span>需求表达</span><i></i><em>INTERACTIVE</em></div>
+      <button class="page-number" type="button" data-overview-open>09 / 18</button>
+      <div class="interactive-heading">
+        <h2>需求表达不是一次性写清，而是一段持续对齐</h2>
+        <button type="button" class="frame-action" data-open-frame>全屏打开 ↗</button>
+      </div>
+      <div class="interactive-frame">
+        <iframe src="04-需求表达与反馈闭环/交互/思维地形.html" title="思维地形交互沙盘" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <section class="slide" data-slide data-title="好的反馈，不是更长，而是更可执行">
+      <div class="slide-meta"><span>需求表达</span><i></i><em>FEEDBACK LOOP</em></div>
+      <button class="page-number" type="button" data-overview-open>10 / 18</button>
+      <div class="slide-heading compact">
+        <h2>好的反馈，不是更长，而是更可执行</h2>
+        <p>每一轮只需要更准确地回答：接下来该重申目标、拆开特征、提供案例，还是继续探索？</p>
+      </div>
+      <div class="feedback-grid">
+        <article><span>01</span><strong>重申目标</strong><p>旁支开始接管任务时，把眼前要解决的问题重新放回中心。</p></article>
+        <article><span>02</span><strong>拆开特征</strong><p>把“严谨、专业”等捆绑词拆成可独立判断的具体特点。</p></article>
+        <article><span>03</span><strong>给出案例</strong><p>用少量高质量示例携带环境、工具与处理惯例。</p></article>
+        <article><span>04</span><strong>先探索，再回滚</strong><p>找出准确方向后，清掉已经排除的探索噪声，再进入正式任务。</p></article>
+      </div>
+    </section>
+
+    <section class="slide" data-slide data-title="先别让 AI 写结论，先让它交证据">
+      <div class="slide-meta"><span>任务执行</span><i></i><em>CHECKPOINT</em></div>
+      <button class="page-number" type="button" data-overview-open>11 / 18</button>
+      <div class="slide-heading compact">
+        <h2>先别让 AI 写结论，先让它交证据</h2>
+        <p>把检查点放在真正影响结论的位置，返工会更早、更小、更容易定位。</p>
+      </div>
+      <figure class="asset-frame wide-figure">
+        <img src="05-任务执行与证据核验/素材/05-execution.svg" alt="从任务定义、样本核对、分类、人工复核到报告的执行过程">
+      </figure>
+      <p class="slide-callout">一行分类错了，只需要改一行；等报告写完再发现，可能要重做整条推导链。</p>
+    </section>
+
+    <section class="slide" data-slide data-title="数据不会自动生成决策">
+      <div class="slide-meta"><span>证据核验</span><i></i><em>FACT → JUDGMENT</em></div>
+      <button class="page-number" type="button" data-overview-open>12 / 18</button>
+      <div class="slide-heading compact">
+        <h2>数据不会自动生成决策</h2>
+        <p>从事实到建议，中间必须补上透明的业务判断：影响面、实施代价与仍然未知的条件。</p>
+      </div>
+      <div class="decision-chain">
+        <div><small>FACT</small><strong>事实</strong><p>原始反馈与编号</p></div>
+        <i>→</i>
+        <div><small>INTERPRET</small><strong>解释</strong><p>分类依据与统计口径</p></div>
+        <i>→</i>
+        <div class="accent"><small>JUDGMENT</small><strong>判断</strong><p>现实影响与执行成本</p></div>
+        <i>→</i>
+        <div><small>ACTION</small><strong>建议</strong><p>供人选择的候选行动</p></div>
+      </div>
+      <figure class="asset-frame chain-figure">
+        <img src="05-任务执行与证据核验/素材/05-evidence-chain.svg" alt="原始反馈经过分类和解释形成结论，再为建议提供依据">
+      </figure>
+    </section>
+
+    <section class="slide slide-interactive" data-slide data-title="投入 × 对齐：决定下一步该做多大">
+      <div class="slide-meta"><span>行动选择</span><i></i><em>INTERACTIVE</em></div>
+      <button class="page-number" type="button" data-overview-open>13 / 18</button>
+      <div class="interactive-heading">
+        <h2>投入 × 对齐：决定下一步该做多大</h2>
+        <button type="button" class="frame-action" data-open-frame>全屏打开 ↗</button>
+      </div>
+      <div class="interactive-frame clean-frame">
+        <iframe src="06-行动选择与投入控制/交互/投入与对齐四象限.html" title="投入与对齐四象限" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <section class="slide" data-slide data-title="四种认知状态，决定你该怎样取证">
+      <div class="slide-meta"><span>行动选择</span><i></i><em>KNOWLEDGE STATES</em></div>
+      <button class="page-number" type="button" data-overview-open>14 / 18</button>
+      <div class="slide-heading compact">
+        <h2>四种认知状态，决定你该怎样取证</h2>
+        <p>行动象限回答“投入多大”，认知状态回答“依据缺在哪里”。</p>
+      </div>
+      <div class="knowledge-matrix">
+        <div><small>01</small><strong>知道自己知道</strong><p>把隐含规则说清楚</p><b>表达</b></div>
+        <div><small>02</small><strong>知道自己不知道</strong><p>围绕关键缺口找事实</p><b>查证</b></div>
+        <div><small>03</small><strong>不知道自己知道</strong><p>用参考与对比把直觉显性化</p><b>比较</b></div>
+        <div><small>04</small><strong>不知道自己不知道</strong><p>把阶段成果放进真实场景</p><b>暴露</b></div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide data-title="先取得依据，再扩大投入">
+      <div class="slide-meta"><span>行动选择</span><i></i><em>PROGRESSIVE COMMITMENT</em></div>
+      <button class="page-number" type="button" data-overview-open>15 / 18</button>
+      <div class="slide-heading">
+        <h2>先取得依据，<br>再扩大投入</h2>
+      </div>
+      <div class="commitment-list">
+        <div><span>01</span><strong>探索取得依据</strong><p>未知多时，先做低成本原型与最小试验。</p></div>
+        <div><span>02</span><strong>满足用途即停止</strong><p>当前结果已经够用，就不要顺着生成惯性继续膨胀。</p></div>
+        <div><span>03</span><strong>双重前提才扩大</strong><p>依据充分，而且场景确有规模需求，再进入系统化建设。</p></div>
+        <div><span>04</span><strong>依据不足速收缩</strong><p>高投入但低对齐时，主动切回可分步验证的小动作。</p></div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide data-title="课程本身也是一次人机协作">
+      <div class="slide-meta"><span>课程幕后</span><i></i><em>MAKING THE COURSE</em></div>
+      <button class="page-number" type="button" data-overview-open>16 / 18</button>
+      <div class="slide-heading compact">
+        <h2>课程本身，也是一次人机协作</h2>
+        <p>资料、文字、图形、动画与网页各自承担不同解释任务；更多产出并不自动带来更好的理解。</p>
+      </div>
+      <div class="production-layout">
+        <figure class="asset-frame">
+          <img src="07-课程制作与人机取舍/素材/07-production.svg" alt="从资料与讨论到文章、图形和动画的课程制作关系">
+        </figure>
+        <div class="production-rules">
+          <div><b>文字</b><span>解释因果</span></div>
+          <div><b>静态图</b><span>展示结构</span></div>
+          <div><b>动画</b><span>展示状态变化</span></div>
+          <div><b>交互</b><span>让观众主动探索</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-slide data-title="AI 负责扩张，人负责收敛">
+      <div class="slide-meta"><span>课程幕后</span><i></i><em>HUMAN × AI</em></div>
+      <button class="page-number" type="button" data-overview-open>17 / 18</button>
+      <div class="slide-heading compact">
+        <h2>AI 负责扩张，人负责收敛</h2>
+      </div>
+      <div class="human-ai-split">
+        <div>
+          <small>AI</small>
+          <strong>扩张可能性</strong>
+          <p>起草文字 · 搜集候选 · 编写代码 · 生成图形 · 快速迭代</p>
+        </div>
+        <div class="human">
+          <small>HUMAN</small>
+          <strong>决定什么值得保留</strong>
+          <p>确认目标 · 核对事实 · 设定边界 · 判断是否讲清 · 决定何时停止</p>
+        </div>
+      </div>
+      <p class="slide-callout">最难的工作，不是让 AI 继续生成，而是判断：下一步还值不值得生成。</p>
+    </section>
+
+    <section class="slide slide-closing" data-slide data-title="更好的工具，更好的判断">
+      <div class="closing-wordmark">A MORE HUMAN TOMORROW</div>
+      <button class="page-number" type="button" data-overview-open>18 / 18</button>
+      <div class="closing-copy">
+        <p>从理解机制开始</p>
+        <h2>更好的工具，<br>更好的判断。</h2>
+        <div class="closing-rule"></div>
+        <strong>Q &amp; A</strong>
+      </div>
+      <div class="closing-orbit" aria-hidden="true"></div>
+      <div class="closing-foot">AI MECHANISM × HUMAN JUDGMENT</div>
+    </section>
+
+  </main>
+</div>
+
+<dialog class="overview" data-overview aria-label="课程总览">
+  <div class="overview-head">
+    <div><small>COURSE OVERVIEW</small><h2>课程总览</h2></div>
+    <button type="button" data-overview-close aria-label="关闭总览">×</button>
+  </div>
+  <div class="overview-grid" data-overview-grid></div>
+  <div class="overview-foot">← → 翻页　·　M 总览　·　F 全屏　·　Esc 关闭</div>
+</dialog>
+
+<div class="deck-toast" data-toast role="status" aria-live="polite"></div>
+<script type="module" src="assets/presentation.js"></script>
+</body>
+</html>
