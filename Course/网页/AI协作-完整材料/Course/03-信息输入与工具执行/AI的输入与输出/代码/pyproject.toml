@@ -1,9 +1,0 @@
-[project]
-name = "ai-io-animation"
-version = "0.1.0"
-requires-python = ">=3.11,<3.12"
-dependencies = [
-  "av==18.1.0",
-  "manimgl @ git+https://github.com/3b1b/manim.git@fafa083a4fb274bba9cabde0b6e2f50ba6da0622",
-  "pillow>=11,<13",
-]
