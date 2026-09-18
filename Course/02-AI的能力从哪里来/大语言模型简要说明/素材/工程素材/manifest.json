@@ -1,0 +1,122 @@
+[
+  {
+    "file": "assets/images/script.jpg",
+    "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/script.jpg",
+    "bytes": 139748,
+    "sha256": "069e7bd2899597a1328f0b09ee2ba22a7df749121d0de00c185655ddce036254"
+  },
+  {
+    "file": "assets/images/repeat.jpg",
+    "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/repeat.jpg",
+    "bytes": 152420,
+    "sha256": "7a97be540b1c74f727eda777b474d5cc068a8e278268491a4b5dd225f4bb7b1d"
+  },
+  {
+    "file": "assets/images/repeat2.jpg",
+    "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/repeat2.jpg",
+    "bytes": 130340,
+    "sha256": "c84c6788f2d9c45ae0516bdcd8e3cbf13947d967e7ca9a6c3f091c728f7660f8"
+  },
+  {
+    "file": "assets/images/probability.jpg",
+    "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/probability.jpg",
+    "bytes": 266226,
+    "sha256": "a37b873e0bd2ac273bd4e9910349593a7b749e1e480f64092348236f94bbe35f"
+  },
+  {
+    "file": "assets/images/description.jpg",
+    "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/description.jpg",
+    "bytes": 113116,
+    "sha256": "e7709146fbc786cce072b104b92e4ecd817c524a2103f868b17936c5970855ac"
+  },
+  {
+    "file": "assets/images/user.jpg",
+    "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/user.jpg",
+    "bytes": 81919,
+    "sha256": "ac28700c9fd364bf5bfa8db419e8701abd8a40f91cf88c7f514362280ce75dc5"
+  },
+  {
+    "file": "assets/images/append.jpg",
+    "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/append.jpg",
+    "bytes": 484885,
+    "sha256": "6fd734cb58054f2b9664db6cdec96d5ce2053638da354fd55dd6f121898ad43f"
+  },
+  {
+    "file": "assets/images/data.jpg",
+    "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/data.jpg",
+    "bytes": 652235,
+    "sha256": "2e0e901b1ac2206ace0f816bc95be50b4a091ac97020575f6bc07993e8620ece"
+  },
+  {
+    "file": "assets/images/parameter.jpg",
+    "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/parameter.jpg",
+    "bytes": 193964,
+    "sha256": "45c80e8e3d9821cfb1fc03135eb1c7b5acef6c0833ac5869ede107ad0c154b70"
+  },
+  {
+    "file": "assets/images/billions.jpg",
+    "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/billions.jpg",
+    "bytes": 1180931,
+    "sha256": "2d9dbb892489b082699f905da11293a92457e8eef37069355f4ee6c44cfef89f"
+  },
+  {
+    "file": "assets/images/training.jpg",
+    "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/training.jpg",
+    "bytes": 423462,
+    "sha256": "d1dd90df8d3a438e97301a9ae190359ee3662c17e8a9f5f259c7d0d302876248"
+  },
+  {
+    "file": "assets/images/backpropogation.jpg",
+    "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/backpropogation.jpg",
+    "bytes": 229729,
+    "sha256": "d8c23417aa749bee6058027a63082c03662a9854bda7f465e8ac78d0e22c2754"
+  },
+  {
+    "file": "assets/images/pretraining.jpg",
+    "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/pretraining.jpg",
+    "bytes": 335600,
+    "sha256": "4bce70e535076fe8bf1fc70b4bdfc94c481f219d3720025ca2cf9cd99c5575cb"
+  },
+  {
+    "file": "assets/images/rlhf.jpg",
+    "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/rlhf.jpg",
+    "bytes": 430576,
+    "sha256": "30114d46678abf04b491b8775304cfbdb5bef75fa190e541c62ae480e5c2f627"
+  },
+  {
+    "file": "assets/images/gpu.jpg",
+    "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/gpu.jpg",
+    "bytes": 307897,
+    "sha256": "6d84a57a21b3d97bf8606c4bbd211def098c001c6d88116cc2831efab01c3a79"
+  },
+  {
+    "file": "assets/images/google.jpg",
+    "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/google.jpg",
+    "bytes": 472279,
+    "sha256": "2ad622c86c7a07468ed68df30535f40b3bb21e08bba82f538afbfbdaceea5bcc"
+  },
+  {
+    "file": "assets/images/token.jpg",
+    "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/token.jpg",
+    "bytes": 429800,
+    "sha256": "00cbf172677538a28be09cd34b3405fb8792ae72b8655627019baa1ccd5ede52"
+  },
+  {
+    "file": "assets/images/bank.jpg",
+    "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/bank.jpg",
+    "bytes": 953261,
+    "sha256": "883587c0bf8002a48e55b679e88a1d4aa6f6d890cdf966485b6c8659e849ef63"
+  },
+  {
+    "file": "assets/images/overover.jpg",
+    "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/overover.jpg",
+    "bytes": 415700,
+    "sha256": "39ab0f2c6c04e32e4542aadee8fe578e87920eb85d8b04d6236e27b29285e3e0"
+  },
+  {
+    "file": "assets/images/end.jpg",
+    "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/end.jpg",
+    "bytes": 494673,
+    "sha256": "40676cb60861d0549940f4f506c02119babd03294637f332d6a6044f7bfacc96"
+  }
+]

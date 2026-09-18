@@ -1,0 +1,22 @@
+{
+  "duration_seconds": 419,
+  "size": [
+    854,
+    480
+  ],
+  "fps": 30,
+  "frames": 12570,
+  "audio_streams": 0,
+  "subtitle_streams": 0,
+  "decode": "passed",
+  "original_38_sha256_unchanged": true,
+  "subtitle_cues": 86,
+  "video_sha256": "996d5bcdcc35d3f4e5d808473f2cdea2e437849a11b7ee69d7ba2bce146bf7e5",
+  "is_pixel_identical_copy": false,
+  "visual_review": "已查看27个镜头中点、26组衔接前后帧，并检查中文字体、参数输入边界、预测概率和夜空目标泄漏修复。",
+  "remaining_differences": [
+    "中文排版与原文词数不同",
+    "私有卷轴曲线与机器人SVG使用兼容曲线和替代图标",
+    "部分连续转场、镜头尺度与局部速度近似原片，并非逐像素一致"
+  ]
+}

@@ -1,0 +1,14 @@
+directories:
+  mirror_module_path: False
+  base: "."
+  subdirs:
+    output: "generated/original"
+    raster_images: "assets/images"
+    vector_images: "assets/svg"
+camera:
+  resolution: (1920, 1080)
+  background_color: "#000000"
+  fps: 30
+text:
+  font: "CMU Serif"
+  alignment: "CENTER"

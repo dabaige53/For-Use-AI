@@ -1,12 +1,8 @@
 # Local and private material
-/AGENTS.md
-**/AGENTS.md
-/.agents/
 /.rgignore
 /.trash/
 /.scratch/
-/资料库/
-/Course/LLM_简要说明/
+/.agents/
 
 # Secrets and local configuration
 .env

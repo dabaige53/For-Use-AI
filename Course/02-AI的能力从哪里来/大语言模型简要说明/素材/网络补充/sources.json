@@ -1,0 +1,30 @@
+[
+  {
+    "file": "federal-reserve-eccles.jpg",
+    "url": "https://commons.wikimedia.org/wiki/File:Ec_05_(26114196145).jpg",
+    "license": "Public domain; U.S. Federal Reserve",
+    "note": "替代作者未公开的FederalReserve图片；非同一摄影构图",
+    "sha256": "cb686d4101a3f1cdea2cde4d1f7570515a79701e29d330a676d000af414e9fcb"
+  },
+  {
+    "file": "robot-fontawesome.svg",
+    "url": "https://github.com/FortAwesome/Font-Awesome/blob/6.x/svgs/solid/robot.svg",
+    "license": "CC BY 4.0, Font Awesome Free",
+    "note": "替代作者未公开的Bot.svg；形状与原片不同",
+    "sha256": "eee72897b10037e9f9954b41ccf6a694e4a1e4fe8373f042775c6af0c1a73dc0"
+  },
+  {
+    "file": "attention-is-all-you-need.pdf",
+    "url": "https://arxiv.org/abs/1706.03762",
+    "license": "论文作者原文；教学引用",
+    "note": "用于原片2017论文介绍镜头",
+    "sha256": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697"
+  },
+  {
+    "file": "google-g.svg",
+    "url": "https://commons.wikimedia.org/wiki/File:Google_%22G%22_logo.svg",
+    "license": "Google trademark; source logo",
+    "note": "论文介绍镜头中的品牌标识",
+    "sha256": "ed9087d76cdc6d1c53698f6068f79872e77e87c8d012c0cfdad13b05b6ccb37c"
+  }
+]

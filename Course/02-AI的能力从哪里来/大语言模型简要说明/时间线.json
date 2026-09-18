@@ -1,0 +1,893 @@
+{
+  "scope_seconds": 419,
+  "fps": 30,
+  "size": [
+    854,
+    480
+  ],
+  "audio": false,
+  "subtitle_mode": "external_srt_only",
+  "reference_timeline": "timeline-0000-0659.json",
+  "source_video_used_as_input": false,
+  "english_exemptions": [
+    "ManyComputationsPerUnitTimeV2",
+    "EvenMoreTextIntoMachine",
+    "EnormousAmountOfTrainingText"
+  ],
+  "adaptations": [
+    "中文教学文字，bank与技术缩写及文献原文保留",
+    "缺失图片使用作者课件裁片或注明来源的替代素材",
+    "镜头按原片核对的硬切对齐；源动作局部变速，部分连续转场近似复现"
+  ],
+  "shots": [
+    {
+      "id": "S01",
+      "in_frame": 0,
+      "out_frame": 39,
+      "title": "片头标题",
+      "layers": [
+        {
+          "source": "generated/reconstruction-overlays-zh-480p/OriginalOpeningTitleChinese.mp4",
+          "trim": [
+            0,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "in_frame": 39,
+      "out_frame": 1098,
+      "title": "卷轴与自动续写",
+      "layers": [
+        {
+          "source": "generated/reconstruction-chat-zh-480p/ReconstructionPartialScriptIntro.mp4",
+          "trim": [
+            0,
+            24
+          ],
+          "until": 26.5
+        },
+        {
+          "source": "generated/reconstruction-chat-zh-480p/ReconstructionPartialCompletion.mp4",
+          "trim": [
+            0,
+            0.5333333333333333
+          ],
+          "at": 26.5
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "in_frame": 1098,
+      "out_frame": 1548,
+      "title": "LLM与下词概率",
+      "layers": [
+        {
+          "source": "generated/reconstruction-core-zh-480p/PredictTheNextWord.mp4",
+          "trim": [
+            0,
+            null
+          ]
+        },
+        {
+          "source": "generated/reconstruction-chat-zh-480p/ReconstructionPartialCompletion.mp4",
+          "trim": [
+            0.5,
+            0.5333333333333333
+          ],
+          "until": 1.1,
+          "fade_out": 1.1
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "in_frame": 1548,
+      "out_frame": 2633,
+      "title": "聊天提示与随机采样",
+      "layers": [
+        {
+          "source": "generated/reconstruction-chat-zh-480p/ReconstructionChatBotPrompt.mp4",
+          "trim": [
+            0,
+            38.5
+          ],
+          "rect": [
+            0,
+            480,
+            854,
+            480
+          ],
+          "move": {
+            "to": [
+              0,
+              0,
+              854,
+              480
+            ],
+            "duration": 1.1
+          }
+        },
+        {
+          "source": "generated/reconstruction-core-zh-480p/PredictTheNextWord.mp4",
+          "trim": [
+            16,
+            16.033333
+          ],
+          "until": 1.1,
+          "move": {
+            "to": [
+              0,
+              -480,
+              854,
+              480
+            ],
+            "duration": 1.1
+          }
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "in_frame": 2633,
+      "out_frame": 3210,
+      "title": "海量文本流入",
+      "layers": [
+        {
+          "source": "generated/all-original/EvenMoreTextIntoMachine.mp4",
+          "trim": [
+            0,
+            41
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "in_frame": 3210,
+      "out_frame": 4277,
+      "title": "参数旋钮、权重与规模",
+      "layers": [
+        {
+          "source": "generated/reconstruction-core-zh-480p/ChineseMachineFront.mp4",
+          "trim": [
+            0,
+            17
+          ],
+          "until": 25
+        },
+        {
+          "source": "generated/all-original/ShowMachineWithDials.mp4",
+          "trim": [
+            23,
+            28
+          ],
+          "at": 25,
+          "until": 30
+        },
+        {
+          "source": "generated/all-original/ShowMachineWithDials.mp4",
+          "trim": [
+            23,
+            28
+          ],
+          "at": 30,
+          "until": 32,
+          "reverse": true
+        },
+        {
+          "source": "generated/reconstruction-core-zh-480p/ChineseMachineFront.mp4",
+          "trim": [
+            17,
+            22
+          ],
+          "at": 32
+        },
+        {
+          "source": "generated/reconstruction-core-zh-480p/ParameterWeight.mp4",
+          "trim": [
+            0,
+            4.066667
+          ],
+          "at": 11.5,
+          "until": 20.5,
+          "key_black": true
+        },
+        {
+          "source": "generated/reconstruction-core-zh-480p/LargeInLargeLanguageModel.mp4",
+          "trim": [
+            0,
+            3.5
+          ],
+          "at": 20.5,
+          "until": 25,
+          "key_black": true
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "in_frame": 4277,
+      "out_frame": 4467,
+      "title": "训练文本样本快速更换",
+      "layers": [
+        {
+          "source": "generated/reconstruction-chat-zh-480p/ReconstructionTrainingExamples.mp4",
+          "trim": [
+            0,
+            6.533333
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "in_frame": 4467,
+      "out_frame": 5307,
+      "title": "单个训练样本",
+      "layers": [
+        {
+          "source": "generated/reconstruction-core-zh-480p/ShowSingleTrainingExample.mp4",
+          "trim": [
+            0,
+            18.2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S09",
+      "in_frame": 5307,
+      "out_frame": 5986,
+      "title": "训练屏幕扩展成网格",
+      "layers": [
+        {
+          "source": "generated/all-original/EnormousAmountOfTrainingText.mp4",
+          "trim": [
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "in_frame": 5986,
+      "out_frame": 6761,
+      "title": "计算量时间轴",
+      "layers": [
+        {
+          "source": "generated/all-original/ManyComputationsPerUnitTimeV2.mp4",
+          "trim": [
+            0,
+            5
+          ],
+          "until": 3
+        },
+        {
+          "source": "generated/all-original/ManyComputationsPerUnitTimeV2.mp4",
+          "trim": [
+            8,
+            47
+          ],
+          "at": 3
+        }
+      ]
+    },
+    {
+      "id": "S11",
+      "in_frame": 6761,
+      "out_frame": 7329,
+      "title": "预训练与RLHF组合版面",
+      "layers": [
+        {
+          "source": "generated/reconstruction-chat-zh-480p/ReconstructionTrainingExamples.mp4",
+          "trim": [
+            0,
+            6.533333
+          ],
+          "rect": [
+            70,
+            110,
+            714,
+            340
+          ],
+          "move": {
+            "to": [
+              15,
+              180,
+              405,
+              250
+            ],
+            "at": 3.8,
+            "duration": 1.2
+          }
+        },
+        {
+          "source": "generated/reconstruction-feedback-zh-480p/BadChatBotChinese.mp4",
+          "trim": [
+            0,
+            10.6
+          ],
+          "at": 3.8,
+          "until": 10.7,
+          "rect": [
+            470,
+            170,
+            350,
+            270
+          ],
+          "fade_in": 1.2
+        },
+        {
+          "source": "generated/reconstruction-feedback-zh-480p/RLHFWorkersChinese.mp4",
+          "trim": [
+            0,
+            12
+          ],
+          "at": 10.7,
+          "rect": [
+            450,
+            185,
+            395,
+            240
+          ],
+          "fade_in": 0.5
+        },
+        {
+          "text": "训练",
+          "rect": [
+            427,
+            40,
+            0,
+            0
+          ],
+          "font_size": 40
+        },
+        {
+          "text": "第一步：预训练",
+          "rect": [
+            215,
+            145,
+            0,
+            0
+          ],
+          "font_size": 26,
+          "at": 10.7,
+          "fade_in": 0.5
+        },
+        {
+          "text": "第二步：人类反馈强化学习",
+          "rect": [
+            650,
+            140,
+            0,
+            0
+          ],
+          "font_size": 22,
+          "at": 10.7,
+          "fade_in": 0.5
+        },
+        {
+          "text": "RLHF",
+          "rect": [
+            650,
+            165,
+            0,
+            0
+          ],
+          "font_size": 20,
+          "at": 10.7,
+          "fade_in": 0.5
+        }
+      ],
+      "background": "#303030"
+    },
+    {
+      "id": "S12",
+      "in_frame": 7329,
+      "out_frame": 7670,
+      "title": "人类反馈工作人员",
+      "layers": [
+        {
+          "source": "generated/reconstruction-feedback-zh-480p/RLHFWorkersChinese.mp4",
+          "trim": [
+            0,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S13",
+      "in_frame": 7670,
+      "out_frame": 7853,
+      "title": "训练与计算量分屏回顾",
+      "layers": [
+        {
+          "source": "generated/all-original/EnormousAmountOfTrainingText.mp4",
+          "trim": [
+            8,
+            10
+          ],
+          "rect": [
+            0,
+            0,
+            427,
+            480
+          ],
+          "fit": false
+        },
+        {
+          "source": "generated/all-original/ManyComputationsPerUnitTimeV2.mp4",
+          "trim": [
+            44,
+            47
+          ],
+          "rect": [
+            427,
+            0,
+            427,
+            480
+          ],
+          "fit": false
+        }
+      ],
+      "divider": [
+        427,
+        0,
+        427,
+        480
+      ]
+    },
+    {
+      "id": "S14",
+      "in_frame": 7853,
+      "out_frame": 8075,
+      "title": "GPU并行通路",
+      "layers": [
+        {
+          "source": "generated/reconstruction-gpu-zh-480p/ParallelizabilityChinese.mp4",
+          "trim": [
+            0,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S15",
+      "in_frame": 8075,
+      "out_frame": 8318,
+      "title": "2017年前逐词处理",
+      "layers": [
+        {
+          "source": "generated/reconstruction-core-zh-480p/SerialProcessing.mp4",
+          "trim": [
+            0,
+            20
+          ]
+        },
+        {
+          "text": "2017 年以前",
+          "rect": [
+            427,
+            55,
+            0,
+            0
+          ],
+          "font_size": 30,
+          "at": 2,
+          "fade_in": 0.4
+        }
+      ]
+    },
+    {
+      "id": "S16",
+      "in_frame": 8318,
+      "out_frame": 8497,
+      "title": "Transformer论文介绍",
+      "layers": [
+        {
+          "source": "generated/reconstruction-paper-zh-480p/PaperRevealChinese.mp4",
+          "trim": [
+            0,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S17",
+      "in_frame": 8497,
+      "out_frame": 8691,
+      "title": "旧模型与Transformer上下对照",
+      "layers": [
+        {
+          "source": "generated/reconstruction-core-zh-480p/SerialProcessing.mp4",
+          "trim": [
+            12,
+            20
+          ],
+          "rect": [
+            305,
+            20,
+            525,
+            220
+          ]
+        },
+        {
+          "source": "generated/reconstruction-core-zh-480p/ParallelProcessing.mp4",
+          "trim": [
+            0,
+            4
+          ],
+          "rect": [
+            305,
+            260,
+            525,
+            220
+          ]
+        },
+        {
+          "text": "早期模型",
+          "rect": [
+            150,
+            100,
+            0,
+            0
+          ],
+          "font_size": 30
+        },
+        {
+          "text": "Transformer",
+          "rect": [
+            150,
+            340,
+            0,
+            0
+          ],
+          "font_size": 27
+        }
+      ],
+      "divider": [
+        0,
+        240,
+        854,
+        240
+      ]
+    },
+    {
+      "id": "S18",
+      "in_frame": 8691,
+      "out_frame": 9318,
+      "title": "输入句与数值向量",
+      "layers": [
+        {
+          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "trim": [
+            0,
+            7
+          ],
+          "until": 6.3
+        },
+        {
+          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "trim": [
+            12.5,
+            15.84
+          ],
+          "at": 6.3,
+          "until": 9.3
+        },
+        {
+          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "trim": [
+            15.84,
+            16.84
+          ],
+          "at": 9.3
+        }
+      ]
+    },
+    {
+      "id": "S19",
+      "in_frame": 9318,
+      "out_frame": 9492,
+      "title": "Attention板与词间联系",
+      "layers": [
+        {
+          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "trim": [
+            16.84,
+            20.84
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S20",
+      "in_frame": 9492,
+      "out_frame": 9818,
+      "title": "bank两种语义对照",
+      "layers": [
+        {
+          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "trim": [
+            18,
+            20.84
+          ],
+          "rect": [
+            0,
+            0,
+            480,
+            480
+          ]
+        },
+        {
+          "source": "generated/reconstruction-overlays-zh-480p/BankContextOverlayChinese.mp4",
+          "trim": [
+            0,
+            10
+          ],
+          "rect": [
+            455,
+            0,
+            399,
+            480
+          ],
+          "display_crop": [
+            280,
+            0,
+            340,
+            480
+          ],
+          "until": 4.1
+        },
+        {
+          "source": "generated/reconstruction-overlays-zh-480p/BankContextOverlayChinese.mp4",
+          "trim": [
+            10,
+            13.5
+          ],
+          "rect": [
+            455,
+            0,
+            399,
+            480
+          ],
+          "display_crop": [
+            280,
+            0,
+            340,
+            480
+          ],
+          "at": 4.1
+        }
+      ],
+      "divider": [
+        455,
+        0,
+        455,
+        480
+      ]
+    },
+    {
+      "id": "S21",
+      "in_frame": 9818,
+      "out_frame": 10116,
+      "title": "聚焦bank向量",
+      "layers": [
+        {
+          "source": "generated/reconstruction-flow-zh-480p/ReconstructionBankAttentionCloseup-final.mp4",
+          "trim": [
+            0,
+            5
+          ],
+          "until": 6.733333
+        },
+        {
+          "source": "generated/reconstruction-flow-zh-480p/ReconstructionBankAttentionCloseup-final.mp4",
+          "trim": [
+            5,
+            10
+          ],
+          "at": 6.733333
+        }
+      ]
+    },
+    {
+      "id": "S22",
+      "in_frame": 10116,
+      "out_frame": 10680,
+      "title": "前馈网络及交替层",
+      "layers": [
+        {
+          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "trim": [
+            20.84,
+            34.84
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S23",
+      "in_frame": 10680,
+      "out_frame": 11010,
+      "title": "结构与语义向量分屏",
+      "layers": [
+        {
+          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "trim": [
+            34.84,
+            43.84
+          ],
+          "rect": [
+            0,
+            0,
+            450,
+            480
+          ]
+        },
+        {
+          "source": "generated/reconstruction-flow-zh-480p/ReconstructionBankSemanticSpace-final.mp4",
+          "trim": [
+            21,
+            45
+          ],
+          "rect": [
+            450,
+            80,
+            404,
+            400
+          ],
+          "display_crop": [
+            0,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "text": "沿着河流的 bank（河岸）",
+          "rect": [
+            651,
+            45,
+            0,
+            0
+          ],
+          "font_size": 22
+        }
+      ],
+      "divider": [
+        450,
+        0,
+        450,
+        480
+      ]
+    },
+    {
+      "id": "S24",
+      "in_frame": 11010,
+      "out_frame": 11657,
+      "title": "重复层与末向量预测",
+      "layers": [
+        {
+          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "trim": [
+            43.84,
+            49.84
+          ],
+          "until": 3
+        },
+        {
+          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "trim": [
+            49.84,
+            55.0
+          ],
+          "at": 3,
+          "until": 11
+        },
+        {
+          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "trim": [
+            55.0,
+            null
+          ],
+          "at": 11
+        }
+      ]
+    },
+    {
+      "id": "S25",
+      "in_frame": 11657,
+      "out_frame": 11917,
+      "title": "结构与语义分屏再回顾",
+      "layers": [
+        {
+          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "trim": [
+            25,
+            44
+          ],
+          "rect": [
+            0,
+            0,
+            450,
+            480
+          ]
+        },
+        {
+          "source": "generated/reconstruction-flow-zh-480p/ReconstructionBankSemanticSpace-final.mp4",
+          "trim": [
+            21,
+            45
+          ],
+          "rect": [
+            450,
+            80,
+            404,
+            400
+          ],
+          "display_crop": [
+            0,
+            0,
+            640,
+            480
+          ]
+        },
+        {
+          "text": "沿着河流的 bank（河岸）",
+          "rect": [
+            651,
+            45,
+            0,
+            0
+          ],
+          "font_size": 22
+        }
+      ],
+      "divider": [
+        450,
+        0,
+        450,
+        480
+      ]
+    },
+    {
+      "id": "S26",
+      "in_frame": 11917,
+      "out_frame": 12251,
+      "title": "回顾参数规模",
+      "layers": [
+        {
+          "source": "generated/reconstruction-core-zh-480p/ChineseMachineFront.mp4",
+          "trim": [
+            4,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S27",
+      "in_frame": 12251,
+      "out_frame": 12570,
+      "title": "回到晶体管问答",
+      "layers": [
+        {
+          "source": "generated/reconstruction-chat-zh-480p/ReconstructionPartialCompletion.mp4",
+          "trim": [
+            0,
+            null
+          ]
+        }
+      ]
+    }
+  ]
+}

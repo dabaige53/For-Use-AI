@@ -1,0 +1,6 @@
+{
+  "url": "https://raw.githubusercontent.com/3b1b/videos/4dd996dd4fdddef717273e65c97f2227c31493ac/_2024/transformers/attention.py",
+  "sha256": "a7bea64ca6149b5365e0ec49906cf2100b3686cf8e27f4f85dd5722bbc118ef5",
+  "used_scene": "Parallelizability",
+  "adaptation": "gpu_large.svg replaced by crop of existing official gpu.jpg; no new layout"
+}

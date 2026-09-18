@@ -1,0 +1,6 @@
+{
+  "repository": "https://github.com/3b1b/videos",
+  "commit": "4dd996dd4fdddef717273e65c97f2227c31493ac",
+  "scope": "mini-llm chm.py and dependencies; network_flow for transformer flow",
+  "git_history_included": false
+}

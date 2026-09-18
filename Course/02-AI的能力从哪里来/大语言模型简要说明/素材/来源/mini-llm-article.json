@@ -1,0 +1,200 @@
+{
+  "source": "https://www.3blue1brown.com/lessons/mini-llm/",
+  "saved_at": "2026-09-15",
+  "article": "文章/原文-mini-llm.md",
+  "body_images": 20,
+  "cover_images": 1,
+  "text_blocks_verified": 49,
+  "scope": "User-provided article text and captions, original paragraph/image order. Site navigation excluded. Interactive glossary labels retained as text.",
+  "images": [
+    {
+      "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/script.jpg",
+      "path": "素材/工程素材/images/script.jpg",
+      "sha256": "069e7bd2899597a1328f0b09ee2ba22a7df749121d0de00c185655ddce036254",
+      "size": [
+        958,
+        922
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/repeat.jpg",
+      "path": "素材/工程素材/images/repeat.jpg",
+      "sha256": "7a97be540b1c74f727eda777b474d5cc068a8e278268491a4b5dd225f4bb7b1d",
+      "size": [
+        1160,
+        1586
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/repeat2.jpg",
+      "path": "素材/工程素材/images/repeat2.jpg",
+      "sha256": "c84c6788f2d9c45ae0516bdcd8e3cbf13947d967e7ca9a6c3f091c728f7660f8",
+      "size": [
+        1140,
+        1454
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/probability.jpg",
+      "path": "素材/工程素材/images/probability.jpg",
+      "sha256": "a37b873e0bd2ac273bd4e9910349593a7b749e1e480f64092348236f94bbe35f",
+      "size": [
+        2042,
+        1540
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/description.jpg",
+      "path": "素材/工程素材/images/description.jpg",
+      "sha256": "e7709146fbc786cce072b104b92e4ecd817c524a2103f868b17936c5970855ac",
+      "size": [
+        1206,
+        332
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/user.jpg",
+      "path": "素材/工程素材/images/user.jpg",
+      "sha256": "ac28700c9fd364bf5bfa8db419e8701abd8a40f91cf88c7f514362280ce75dc5",
+      "size": [
+        1222,
+        240
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/append.jpg",
+      "path": "素材/工程素材/images/append.jpg",
+      "sha256": "6fd734cb58054f2b9664db6cdec96d5ce2053638da354fd55dd6f121898ad43f",
+      "size": [
+        2876,
+        1512
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/data.jpg",
+      "path": "素材/工程素材/images/data.jpg",
+      "sha256": "2e0e901b1ac2206ace0f816bc95be50b4a091ac97020575f6bc07993e8620ece",
+      "size": [
+        2898,
+        1616
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/parameter.jpg",
+      "path": "素材/工程素材/images/parameter.jpg",
+      "sha256": "45c80e8e3d9821cfb1fc03135eb1c7b5acef6c0833ac5869ede107ad0c154b70",
+      "size": [
+        960,
+        1020
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/billions.jpg",
+      "path": "素材/工程素材/images/billions.jpg",
+      "sha256": "2d9dbb892489b082699f905da11293a92457e8eef37069355f4ee6c44cfef89f",
+      "size": [
+        2940,
+        1276
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/training.jpg",
+      "path": "素材/工程素材/images/training.jpg",
+      "sha256": "d1dd90df8d3a438e97301a9ae190359ee3662c17e8a9f5f259c7d0d302876248",
+      "size": [
+        2922,
+        1542
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/backpropogation.jpg",
+      "path": "素材/工程素材/images/backpropogation.jpg",
+      "sha256": "d8c23417aa749bee6058027a63082c03662a9854bda7f465e8ac78d0e22c2754",
+      "size": [
+        1844,
+        982
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/pretraining.jpg",
+      "path": "素材/工程素材/images/pretraining.jpg",
+      "sha256": "4bce70e535076fe8bf1fc70b4bdfc94c481f219d3720025ca2cf9cd99c5575cb",
+      "size": [
+        2908,
+        1494
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/rlhf.jpg",
+      "path": "素材/工程素材/images/rlhf.jpg",
+      "sha256": "30114d46678abf04b491b8775304cfbdb5bef75fa190e541c62ae480e5c2f627",
+      "size": [
+        2898,
+        1546
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/gpu.jpg",
+      "path": "素材/工程素材/images/gpu.jpg",
+      "sha256": "6d84a57a21b3d97bf8606c4bbd211def098c001c6d88116cc2831efab01c3a79",
+      "size": [
+        1646,
+        1602
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/google.jpg",
+      "path": "素材/工程素材/images/google.jpg",
+      "sha256": "2ad622c86c7a07468ed68df30535f40b3bb21e08bba82f538afbfbdaceea5bcc",
+      "size": [
+        2702,
+        1532
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/token.jpg",
+      "path": "素材/工程素材/images/token.jpg",
+      "sha256": "00cbf172677538a28be09cd34b3405fb8792ae72b8655627019baa1ccd5ede52",
+      "size": [
+        2802,
+        1418
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/bank.jpg",
+      "path": "素材/工程素材/images/bank.jpg",
+      "sha256": "883587c0bf8002a48e55b679e88a1d4aa6f6d890cdf966485b6c8659e849ef63",
+      "size": [
+        2930,
+        1478
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/overover.jpg",
+      "path": "素材/工程素材/images/overover.jpg",
+      "sha256": "39ab0f2c6c04e32e4542aadee8fe578e87920eb85d8b04d6236e27b29285e3e0",
+      "size": [
+        2932,
+        1410
+      ]
+    },
+    {
+      "url": "https://storage.googleapis.com/3blue1brown-website-bucket/lessons/2024/mini-llm/end.jpg",
+      "path": "素材/工程素材/images/end.jpg",
+      "sha256": "40676cb60861d0549940f4f506c02119babd03294637f332d6a6044f7bfacc96",
+      "size": [
+        2916,
+        1336
+      ]
+    },
+    {
+      "url": "https://img.youtube.com/vi/LPZh9BOjkQs/maxresdefault.jpg",
+      "path": "素材/图片/mini-llm-cover.jpg",
+      "sha256": "38cff0094de107fc7727fe7c7d516ab3e1e6a3889eeaf6070b75c552573123d5",
+      "size": [
+        1280,
+        720
+      ]
+    }
+  ]
+}
