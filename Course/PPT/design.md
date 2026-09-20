@@ -332,3 +332,72 @@
 | video.annotation.diagram.operation.background | #eef6fb |
 | video.annotation.diagram.arrow.height | 30px |
 | video.annotation.diagram.gap | 24px |
+
+## Terrain
+
+| Token | Value |
+| --- | --- |
+| terrain.background | #ffffff |
+| terrain.single.x | 72px |
+| terrain.single.y | 210px |
+| terrain.single.width | 1528px |
+| terrain.single.height | 620px |
+| terrain.dialogue.width | 624px |
+| terrain.column.gap | 32px |
+| terrain.single.canvas.width | 872px |
+| terrain.dialogue.font-size | 22px |
+| terrain.dialogue.line-height | 1.55 |
+| terrain.pair.y | 300px |
+| terrain.pair.height | 530px |
+| terrain.pair.column.width | 748px |
+| terrain.definition.y | 190px |
+| terrain.definition.font-size | 27px |
+| terrain.controls.y | 836px |
+| terrain.initial.progress | 0 |
+| terrain.initial.playing | true |
+| terrain.reset.progress | 0 |
+| terrain.dialogue.reveal | progressive |
+| terrain.pair.clock | shared |
+
+| terrain.speed | 2 |
+| terrain.controls.icon.size | 24px |
+| terrain.controls.alignment | center below terrain |
+| terrain.controls.height | 60px |
+| terrain.controls.padding | 10px 14px |
+| terrain.controls.gap | 14px |
+| terrain.controls.radius | 12px |
+| terrain.controls.background | #f7f9fc |
+| terrain.controls.pair.x | 400px |
+| terrain.controls.pair.width | 872px |
+| terrain.controls.button.size | 40px 36px |
+| terrain.controls.time.font-size | 17px |
+| terrain.controls.seek.step | 0.1s |
+| terrain.controls.seek.playing | false |
+| terrain.controls.speed.options | 0.5, 1, 1.5, 2, 3, 4 |
+| terrain.controls.speed.default | 2 |
+| terrain.chat.roles | user, ai |
+| terrain.chat.bubble.radius | 14px |
+
+| terrain.chat.code.font-size | 19px |
+| terrain.chat.role.font-size | 16px |
+| terrain.timeline.source | assets/terrain-stories.js |
+| terrain.timeline.unit | seconds at 1× |
+| terrain.timeline.event.duration | clamp(text.delta.length / 14 + 4, 5, 28)s |
+| terrain.timeline.end-hold | 3s |
+| terrain.timeline.terrain.transition | event.duration × [0.08, 0.40] |
+| terrain.timeline.path.transition | event.duration × [0.44, 0.95] |
+| terrain.timeline.start | all frames configured |
+| terrain.reentry.progress | 0 |
+| terrain.reset.playing | false |
+| terrain.labels.max-visible | 3 |
+
+| terrain.pair.initial.progress | 1 |
+| terrain.pair.initial.playing | false |
+| terrain.pair.reentry.progress | 1 |
+| terrain.pair.run-from-result.progress | 0 |
+
+| slide.transition.duration | 0ms |
+| slide.inactive.opacity | 0 |
+| slide.inactive.inert | true |
+| terrain.navigation.wait | target frame painted |
+| terrain.preload.ahead | 1 slide |

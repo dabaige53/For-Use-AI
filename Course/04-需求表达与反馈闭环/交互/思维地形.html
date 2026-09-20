@@ -138,7 +138,7 @@ body,svg text{font-family:Terrain Sans,sans-serif}.scene-info .serial,.mechanism
   margin: 0 !important;
   padding: 0 !important;
   overflow: hidden !important;
-  background: #eef2e6 !important;
+  background: #ffffff !important;
 }
 .terrain-only .workspace {
   display: block !important;
@@ -252,6 +252,7 @@ const OUTCOME_PATHS={
  catalyst:{path:[[-.02,.02],[.16,-.04]],route:[[.05,-.10],[.29,-.24],[.58,-.43]],stopBefore:.81,stopAfter:.95}
 };
 let state={index:0,after:false,t:0,playing:true,speed:1,loop:false,dayCycle:false,night:0,dayClock:0};
+let presentation=null;
 let model,frameState,lastStamp=0,uiKey='',auxKey='',hover=null,drag=null,buttonPress={},lastRenderKey='';
 const duration=32,LAND=[.105,.33,.59,.705,.82],FORM=.02,GROW=.055;
 const win=m=>m.reverse?!state.after:state.after;
@@ -262,9 +263,31 @@ function atPath(path,u){const d=clamp(u)*path.total;let lo=0,hi=path.lengths.len
 function pathDist(x,z,pts){let d=1e3;for(let i=1;i<pts.length;i++){const a=pts[i-1],b=pts[i],dx=b[0]-a[0],dz=b[1]-a[1],t=clamp(((x-a[0])*dx+(z-a[1])*dz)/(dx*dx+dz*dz||1));d=Math.min(d,(x-a[0]-t*dx)**2+(z-a[1]-t*dz)**2)}return Math.sqrt(d)}
 function beside(path,u,others=[]){const p=atPath(path,u),l=atPath(path,clamp(u-.01)),r=atPath(path,clamp(u+.01)),dx=(r[0]-l[0])*5.8,dz=(r[1]-l[1])*4.5,len=Math.hypot(dx,dz)||1;let best=p,bestDistance=-1;for(const offset of [.55,-.55,.8,-.8,1.05,-1.05]){const q=[p[0]-dz/len*offset/5.8,p[1]+dx/len*offset/4.5];if(q[0]<-.94||q[0]>.94||q[1]<-.78||q[1]>.71)continue;let distance=Infinity;for(const route of [path,...others])for(const pt of route.points)distance=Math.min(distance,Math.hypot((q[0]-pt[0])*5.8,(q[1]-pt[1])*4.5));if(distance>bestDistance){best=q;bestDistance=distance}if(distance>.43)return q}return best}
 function prepare(m){m={...m,...OUTCOME_PATHS[m.id]};const before=catmull([FORK,...m.path]),after=catmull([FORK,...m.route]),history=catmull(shared);const events=[{land:LAND[0],pos:beside(history,.55,[before,after]),label:m.tokens[0],color:gold,text:m.input},{land:LAND[1],pos:beside(history,1,[before,after]),label:m.tokens[1],color:m.reverse?blue:red,text:m.context}];m.keys.forEach((key,i)=>{const pos=beside(after,[.20,.52,.82][i],[history]);events.push({land:LAND[i+2],pos,label:key,color:m.reverse?red:green,text:i===0?m.strategy:(m.kind==='anneal'&&i===1?'把内向性格、工作场景和茶水间交流等现实约束加入候选。':key),afterOnly:true})});events.forEach((e,i)=>{e.appear=i<3?Math.max(0,e.land-.12):e.land-.037;e.fall=e.land-(i<3?.09:.028)});return {m,before,after,history,events};}
+function presentationState(t){
+ const seconds=t*presentation.duration;let field=[0,0,0,0,0],position=0;
+ for(const event of presentation.events){
+  if(seconds<event.at)break;
+  const local=(seconds-event.at)/event.seconds;
+  field=field.map((v,i)=>mix(v,event.field[i],smooth(.08,.40,local)));
+  position=mix(position,event.position,smooth(.44,.95,local));
+ }
+ return {field,position};
+}
+function configurePresentation(story){
+ presentation=story;
+ if(story.kind)model.m={...model.m,kind:story.kind};
+ presentation.pins=story.events.map((event,i)=>({
+  appear:event.at/story.duration,fall:(event.at+event.seconds*.01)/story.duration,
+  land:(event.at+event.seconds*.08)/story.duration,
+  pos:beside(event.position<=.35?model.history:(story.route?model.after:model.before),event.position<=.35?event.position/.35:(event.position-.35)/.65),
+  label:event.label,color:story.route?green:gold,text:event.label,afterOnly:false
+ }));
+ state.t=0;state.playing=false;lastRenderKey='';frameState=phaseData(0,state.after);
+}
 function growth(t,e){return smooth(e.land+FORM,e.land+FORM+GROW,t)}
-function phaseData(t,after,mod=model){const ev=mod.events.filter(e=>!e.afterOnly||after),a=growth(t,ev[0]),b=growth(t,ev[1]),c=after?growth(t,mod.events[2]):0,d=after&&mod.events[3]?growth(t,mod.events[3]):c,e=after&&mod.events[4]?growth(t,mod.events[4]):d;return {a,b,c,d,e,events:ev}}
+function phaseData(t,after,mod=model){if(presentation&&mod===model){const [a,b,c,d,e]=presentationState(t).field;return {a,b,c,d,e,events:presentation.pins};}const ev=mod.events.filter(e=>!e.afterOnly||after),a=growth(t,ev[0]),b=growth(t,ev[1]),c=after?growth(t,mod.events[2]):0,d=after&&mod.events[3]?growth(t,mod.events[3]):c,e=after&&mod.events[4]?growth(t,mod.events[4]):d;return {a,b,c,d,e,events:ev}}
 function motion(t,after,mod=model){
+ if(presentation&&mod===model){const p=presentationState(t).position,h=clamp(p/.35),u=clamp((p-.35)/.65),branch=presentation.route?mod.after:mod.before;return {h,u,branch,pos:u>0?atPath(branch,u):atPath(mod.history,h)};}
  const end=after?mod.m.stopAfter:mod.m.stopBefore;
  let h=0,u=0;if(t>.19)h=.50*smooth(.19,.26,t);if(t>.42)h=.50+.50*smooth(.42,.515,t);
  if(!after||mod.m.keys.length===1)u=smooth(.68,end,t);
@@ -398,7 +421,7 @@ function special(){const m=model.m,t=state.t,{a,b,c,d,e}=frameState;
  if(m.kind==='rollback'&&d>.01){label3([-.3,4.30,-2.2],d<.99?'回滚：旧上下文清空':'会话 2 · 仅保留提纯词',green,3)}
  if(m.kind==='catalyst'&&b>.01){const p=worldPoint([.37,-.36],.7);label3(p,c>.6?'门槛降低 · 目标不变':'术语山',c>.6?green:gold,1)}
 }
-function actors(){const t=state.t,m=model.m,move=motion(t,state.after),evs=frameState.events;
+function actors(){const t=state.t,m=model.m,move=motion(t,state.after),evs=presentation?frameState.events.filter(e=>t>=e.appear).slice(-3):frameState.events;
  for(const e of evs){const appear=e.appear,fall=e.fall;if(t<appear)continue;if(m.kind==='rollback'&&frameState.d>.6&&!e.afterOnly)continue;const p=worldPoint(e.pos,.095);if(t<=e.land){const q=clamp((t-fall)/(e.land-fall)),drop=2.25*(1-q*q);sphere([p[0],p[1]+drop,p[2]],.095,e.color,{glow:.18});const tail=project(p[0],p[1]+drop+.20,p[2]);if(t>=fall&&tail)line3([[p[0],p[1]+drop+.30,p[2]],[p[0],p[1]+drop+.13,p[2]]],e.color,1.5,.5)}
  if(t>=e.land){const age=t-e.land,pg=worldPoint(e.pos,.018),stem=.36;line3([pg,[pg[0],pg[1]+stem,pg[2]]],'#797855',1.4);sphere([pg[0],pg[1]+stem,pg[2]],.057,e.color,{glow:.25+state.night*.4});if(age<.04)sphere(p,.095,e.color,{alpha:1-age/.04});if(age<.06)disc([pg[0],pg[1]+.015,pg[2]],.07+age*5,e.color,(1-age/.06)*.4);
  // State-specific event pins remain visible; labels are placed away from the moving ball.
@@ -407,8 +430,8 @@ function actors(){const t=state.t,m=model.m,move=motion(t,state.after),evs=frame
  const history=pathWorld(model.history,move.h),historyAlpha=m.kind==='rollback'?1-frameState.d:1;if(move.h>.001&&historyAlpha>.001)line3(history,'#fdf2cc',2.6,.96*historyAlpha);
  if(move.u>.001)line3(pathWorld(move.branch,move.u),'#fff7d6',2.8,.98);
  const ball=surfaceSphere(move.pos,.21);disc([ball[0],ground(...move.pos)+.015,ball[2]],.18,'#293e33',.28);sphere(ball,.21,'#26372e',{striped:true});
- if(t<.08)label3([ball[0],ball[1]+.55,ball[2]],'采样响应 · 等待通道',ink,2);
- if(t>=resultTime()){const end=worldPoint(move.pos,.69);label3(end,(win(m)?'目标 · ':'风险 · ')+m.marks[state.after?1:0],win(m)?green:red,4)}
+ if(!presentation&&t<.08)label3([ball[0],ball[1]+.55,ball[2]],'采样响应 · 等待通道',ink,2);
+ if(!presentation&&t>=resultTime()){const end=worldPoint(move.pos,.69);label3(end,(win(m)?'目标 · ':'风险 · ')+m.marks[state.after?1:0],win(m)?green:red,4)}
 }
 function controlDesk(stamp){
  const Z=5.03;box(0,.18,Z,12.9,.20,2.45,'#748065');box(0,.38,Z,12.70,.08,2.27,'#d8c99c');flush();
@@ -509,7 +532,7 @@ function setProgress(t){state.t=clamp(t);state.playing=false;frameState=phaseDat
 function resize(){const r=canvas.getBoundingClientRect();W=Math.max(1,r.width);H=Math.max(1,r.height);const next=Math.max(23.8,H/(2*Math.tan(.355))*17/W+5.5);cam.dist*=next/naturalDistance;naturalDistance=next;DPR=Math.min(devicePixelRatio||1,1.5);canvas.width=Math.round(W*DPR);canvas.height=Math.round(H*DPR);ctx.setTransform(DPR,0,0,DPR,0,0);lastRenderKey='';updateCamera()}
 function resetView(){
   const isTerrain = document.documentElement.classList.contains('terrain-only');
-  cam={theta:.12,phi:isTerrain?.68:.58,dist:naturalDistance*(isTerrain?.76:1)};
+  cam={theta:.12,phi:isTerrain?.68:.58,dist:naturalDistance*(isTerrain?.62:1)};
   updateCamera()
 }
 function locate(e){const r=canvas.getBoundingClientRect();return {x:e.clientX-r.left,y:e.clientY-r.top}}
@@ -527,7 +550,7 @@ $('mechanisms').innerHTML=MECH.map((m,i)=>(groups[i]?`<div class="group-title">$
 function frame(stamp){const dt=Math.min(.06,(stamp-(lastStamp||stamp))/1000);lastStamp=stamp;if(state.playing&&!document.hidden){state.t=Math.min(1,state.t+dt*state.speed/duration);if(state.t>=1){if(state.loop){state.t=0;uiKey=''}else state.playing=false}}
  if(state.dayCycle)state.dayClock+=dt;const nightTarget=state.dayCycle?(1-Math.cos(state.dayClock*TAU/50))*.5:0;state.night=mix(state.night,nightTarget,1-Math.exp(-dt*2));const pressing=Object.values(buttonPress).some(t=>stamp-t<280),renderKey=[state.index,state.after,state.t,state.playing,state.speed,state.night.toFixed(3),cam.theta,cam.phi,cam.dist,hover?.id,drag?.id,pressing?Math.floor(stamp/16):0].join('/');if(renderKey===lastRenderKey){requestAnimationFrame(frame);return}lastRenderKey=renderKey;frameState=phaseData(state.t,state.after);updateCamera();shapes=[];labels=[];hits=[];
  const isTerrain = document.documentElement.classList.contains('terrain-only');
- if(!isTerrain)room();else{ctx.fillStyle="#000000";ctx.fillRect(0,0,W,H);}
+ if(!isTerrain)room();else{ctx.fillStyle="#ffffff";ctx.fillRect(0,0,W,H);}
  if(cameraEye[2]<0){if(!isTerrain)controlDesk(stamp);flush();terrain();special();actors();flush()}else{terrain();special();actors();flush();if(!isTerrain)controlDesk(stamp);flush()}
  drawLabels();if(!isTerrain)updateUI();requestAnimationFrame(frame)}
 try{
@@ -555,15 +578,17 @@ new ResizeObserver(resize).observe($('scene'));updateSelection();resize();resetV
 window.addEventListener('message',event=>{
  if(event.source!==window.parent||!event.data||event.data.type!=='terrain-control')return;
  const action=event.data.action;
+ if(action==='configure'&&document.documentElement.classList.contains('terrain-only')){configurePresentation(event.data.story);window.parent.postMessage({type:'terrain-configured'},'*');return;}
  if(action==='run'){if(state.t>=1)state.t=0;state.playing=true;}
  if(action==='stop')state.playing=false;
  if(action==='reset'){state.t=0;state.playing=false;resetView();}
- if(['run','stop','reset'].includes(action)){lastStamp=0;lastRenderKey='';updateUI();}
+ if(action==='seek'){state.t=clamp(Number(event.data.progress)||0);state.playing=false;if(event.data.requestId){const requestId=event.data.requestId;requestAnimationFrame(()=>requestAnimationFrame(()=>window.parent.postMessage({type:'terrain-painted',requestId},'*')));}}
+ if(['run','stop','reset','seek'].includes(action)){lastStamp=0;lastRenderKey='';frameState=phaseData(state.t,state.after);if(!presentation)updateUI();}
 });
 if(new URLSearchParams(location.search).get('paused')==='1'){state.playing=false;state.loop=false;state.t=0;}
 
 // Read-only diagnostics used for validating causality, shared history and mesh contact.
-window.TerrainLab={getState:()=>({...state,camera:{...cam},mechanism:model.m.id,stage:currentStageText(),controls:hits.map(h=>({id:h.id,x:h.x,y:h.y,w:h.w,h:h.h,ends:h.ends})),ball:surfaceSphere(motion(state.t,state.after).pos,.21),meshCount:NX*NZ*2}),audit(){const failures=[],checks=[];for(const m of MECH){const mod=prepare(m);for(const after of [false,true]){let maxJump=0,last=null;for(let k=0;k<=1000;k++){const t=k/1000,pos=motion(t,after,mod).pos;if(last)maxJump=Math.max(maxJump,Math.hypot(pos[0]-last[0],pos[1]-last[1]));last=pos;if(!pos.every(Number.isFinite))failures.push(m.id+': nonfinite motion');}if(maxJump>.08)failures.push(m.id+': motion discontinuity '+maxJump);for(const p of [[-.8,.6],[0,0],[.6,-.4],[.7,.5]]){if(field(...p,.001,after,mod)!==0||field(...p,LAND[0]+FORM,after,mod)!==0)failures.push(m.id+': terrain before first impact');}checks.push({id:m.id,after,maxJump:+maxJump.toFixed(5),events:mod.events.filter(e=>!e.afterOnly||after).length});}
+window.TerrainLab={getState:()=>({...state,camera:{...cam},mechanism:model.m.id,presentation:presentation?{seconds:state.t*presentation.duration,...presentationState(state.t),labels:frameState.events.filter(e=>state.t>=e.land).slice(-3).map(e=>e.label)}:null,stage:currentStageText(),controls:hits.map(h=>({id:h.id,x:h.x,y:h.y,w:h.w,h:h.h,ends:h.ends})),ball:surfaceSphere(motion(state.t,state.after).pos,.21),meshCount:NX*NZ*2}),audit(){const failures=[],checks=[];for(const m of MECH){const mod=prepare(m);for(const after of [false,true]){let maxJump=0,last=null;for(let k=0;k<=1000;k++){const t=k/1000,pos=motion(t,after,mod).pos;if(last)maxJump=Math.max(maxJump,Math.hypot(pos[0]-last[0],pos[1]-last[1]));last=pos;if(!pos.every(Number.isFinite))failures.push(m.id+': nonfinite motion');}if(maxJump>.08)failures.push(m.id+': motion discontinuity '+maxJump);for(const p of [[-.8,.6],[0,0],[.6,-.4],[.7,.5]]){if(field(...p,.001,after,mod)!==0||field(...p,LAND[0]+FORM,after,mod)!==0)failures.push(m.id+': terrain before first impact');}checks.push({id:m.id,after,maxJump:+maxJump.toFixed(5),events:mod.events.filter(e=>!e.afterOnly||after).length});}
  for(let k=0;k<=59;k++){const t=k/100;for(const p of [[-.8,.6],[-.2,.1],[.4,-.3],[.65,.5]])if(Math.abs(field(...p,t,false,mod)-field(...p,t,true,mod))>1e-9)failures.push(m.id+': shared field diverges');const a=motion(t,false,mod).pos,b=motion(t,true,mod).pos;if(Math.hypot(a[0]-b[0],a[1]-b[1])>1e-9)failures.push(m.id+': shared motion diverges');}
  for(let i=0;i<mod.events.length;i++){const ev=mod.events[i];if(ev.appear>ev.fall||ev.fall>=ev.land||ev.land+FORM<=ev.land)failures.push(m.id+': invalid causal schedule');if(i>0&&ev.appear<mod.events[i-1].land+FORM+GROW)failures.push(m.id+': next clue before previous terrain formed')}
  }return {mechanisms:MECH.length,states:checks.length,failures,checks,offline:!document.querySelector('script[src],link[href],img[src],iframe'),schedule:model.events.map(ev=>({appear:ev.appear,fall:ev.fall,land:ev.land,form:ev.land+FORM,formed:ev.land+FORM+GROW})),renderer:'Original project Canvas 2D perspective, inline SVG, no external assets'};}};
