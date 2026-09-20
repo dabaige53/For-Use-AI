@@ -550,6 +550,18 @@ try{
   if (!isNaN(_s) && _s > 0) state.speed = _s;
 }catch(_e){}
 new ResizeObserver(resize).observe($('scene'));updateSelection();resize();resetView();renderAuxDiagram();requestAnimationFrame(frame);
+
+// Presentation controls: only the embedding parent may control this view.
+window.addEventListener('message',event=>{
+ if(event.source!==window.parent||!event.data||event.data.type!=='terrain-control')return;
+ const action=event.data.action;
+ if(action==='run'){if(state.t>=1)state.t=0;state.playing=true;}
+ if(action==='stop')state.playing=false;
+ if(action==='reset'){state.t=0;state.playing=false;resetView();}
+ if(['run','stop','reset'].includes(action)){lastStamp=0;lastRenderKey='';updateUI();}
+});
+if(new URLSearchParams(location.search).get('paused')==='1'){state.playing=false;state.loop=false;state.t=0;}
+
 // Read-only diagnostics used for validating causality, shared history and mesh contact.
 window.TerrainLab={getState:()=>({...state,camera:{...cam},mechanism:model.m.id,stage:currentStageText(),controls:hits.map(h=>({id:h.id,x:h.x,y:h.y,w:h.w,h:h.h,ends:h.ends})),ball:surfaceSphere(motion(state.t,state.after).pos,.21),meshCount:NX*NZ*2}),audit(){const failures=[],checks=[];for(const m of MECH){const mod=prepare(m);for(const after of [false,true]){let maxJump=0,last=null;for(let k=0;k<=1000;k++){const t=k/1000,pos=motion(t,after,mod).pos;if(last)maxJump=Math.max(maxJump,Math.hypot(pos[0]-last[0],pos[1]-last[1]));last=pos;if(!pos.every(Number.isFinite))failures.push(m.id+': nonfinite motion');}if(maxJump>.08)failures.push(m.id+': motion discontinuity '+maxJump);for(const p of [[-.8,.6],[0,0],[.6,-.4],[.7,.5]]){if(field(...p,.001,after,mod)!==0||field(...p,LAND[0]+FORM,after,mod)!==0)failures.push(m.id+': terrain before first impact');}checks.push({id:m.id,after,maxJump:+maxJump.toFixed(5),events:mod.events.filter(e=>!e.afterOnly||after).length});}
  for(let k=0;k<=59;k++){const t=k/100;for(const p of [[-.8,.6],[-.2,.1],[.4,-.3],[.65,.5]])if(Math.abs(field(...p,t,false,mod)-field(...p,t,true,mod))>1e-9)failures.push(m.id+': shared field diverges');const a=motion(t,false,mod).pos,b=motion(t,true,mod).pos;if(Math.hypot(a[0]-b[0],a[1]-b[1])>1e-9)failures.push(m.id+': shared motion diverges');}

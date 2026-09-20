@@ -197,6 +197,9 @@
 | media.background | #07111d |
 | media.border | 1px solid #e3edf7 |
 | media.box-shadow | none |
+| photo.embedded-text | none |
+| photo.embedded-pagination | none |
+| photo.text-mask | none |
 | photo.object-fit | cover |
 | photo.object-position | center |
 | diagram.object-fit | contain |
@@ -299,3 +302,33 @@
 | content.outside-safe-area | 0px |
 | media.aspect-ratio-distortion | 0 |
 | video.content-crop | 0px |
+
+## Video Annotation
+
+| Token | Value |
+| --- | --- |
+| video.annotation.x | 72px |
+| video.annotation.y | 210px |
+| video.annotation.width | 344px |
+| video.annotation.heading.font-size | 32px |
+| video.annotation.body.font-size | 24px |
+| video.annotation.body.line-height | 1.6 |
+| video.annotated.x | 480px |
+| video.annotated.y | 210px |
+| video.annotated.width | 1120px |
+| video.annotated.height | 560px |
+| video.timeline.x | 480px |
+| video.timeline.y | 788px |
+| video.timeline.width | 1120px |
+| video.timeline.height | 96px |
+| video.timeline.time.font-size | 18px |
+| video.timeline.label.font-size | 20px |
+| video.timeline.step | 0.1s |
+| video.timeline.accent | #1976f3 |
+| video.annotation.diagram.node.font-size | 23px |
+| video.annotation.diagram.node.padding | 14px 16px |
+| video.annotation.diagram.node.radius | 10px |
+| video.annotation.diagram.node.background | #f7fbff |
+| video.annotation.diagram.operation.background | #eef6fb |
+| video.annotation.diagram.arrow.height | 30px |
+| video.annotation.diagram.gap | 24px |
