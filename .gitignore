@@ -25,6 +25,7 @@ __pycache__/
 .venv/
 node_modules/
 *.log
+/.codex/mcp-servers/
 
 # Large media and archives are distributed separately
 *.mp4

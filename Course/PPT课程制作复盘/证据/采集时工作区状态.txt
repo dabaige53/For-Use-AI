@@ -1,0 +1,11 @@
+ M Course/PPT/AI协作-动态幻灯片.html
+ M Course/PPT/design.md
+?? Course/06-行动选择与投入控制/交互/vendor/
+?? Course/06-行动选择与投入控制/交互/投入决策-交互原型.html
+?? Course/06-行动选择与投入控制/素材/投入控制-分镜-A-数据地图.png
+?? Course/06-行动选择与投入控制/素材/投入控制-分镜-B-任务工作台.png
+?? Course/06-行动选择与投入控制/素材/投入控制-分镜-C-决策路径.png
+?? Course/06-行动选择与投入控制/行动选择与投入控制-分镜方案.md
+?? Course/PPT/AI协作-格式盘点.md
+?? Course/PPT/格式盘点素材/
+?? Course/PPT课程制作复盘/

@@ -1,0 +1,62 @@
+[
+  {
+    "path": "/Users/w/code/For-Use-AI/Course/PPT/AI协作-动态幻灯片.html",
+    "bytes": 344366,
+    "sha256": "abdd4bb47f4f7acd54021442d700506760a12c6bd3a24664dccff49d4cf26b96"
+  },
+  {
+    "path": "/Users/w/code/For-Use-AI/Course/PPT/design.md",
+    "bytes": 11619,
+    "sha256": "b940bd01cd0630d2fdc68c6a52df26fa6c66c0f3b534eca8d9375e1849aade4c"
+  },
+  {
+    "path": "/Users/w/code/For-Use-AI/Course/PPT/assets/terrain-stories.js",
+    "bytes": 15171,
+    "sha256": "e0837cc5e2abffea8da44279a0a811666f9687c4f949273cc58cf6a1c5e19579"
+  },
+  {
+    "path": "/Users/w/code/For-Use-AI/Course/PPT/assets/video_io.mp4",
+    "bytes": 2347724,
+    "sha256": "755e1b1bab62db6c2825213821cd8952a591577126f0c597edb58545f23de213"
+  },
+  {
+    "path": "/Users/w/code/For-Use-AI/Course/PPT/assets/video_llm.mp4",
+    "bytes": 17672023,
+    "sha256": "271027666dc567b0f0892eab1bfa18b586c2f6a60d17d88d0d45bfffc038fcc1"
+  },
+  {
+    "path": "/Users/w/code/For-Use-AI/Course/PPT/AI协作-格式盘点.md",
+    "bytes": 11163,
+    "sha256": "0e0afc716a5f5943d0d80a529b11751f17cca1e23c893ff63559ff96756c2374"
+  },
+  {
+    "path": "/Users/w/code/For-Use-AI/Course/04-需求表达与反馈闭环/交互/思维地形.html",
+    "bytes": 490492,
+    "sha256": "abcf91845b71b625d3be9efa26f542391ade19e077a9208aacf9967436e74012"
+  },
+  {
+    "path": "/Users/w/code/For-Use-AI/Course/06-行动选择与投入控制/交互/投入决策-交互原型.html",
+    "bytes": 54449,
+    "sha256": "d242fc31a7eb862c932826f87819198119af56c44b4970a16f0a874eadf9bf28"
+  },
+  {
+    "path": "/Users/w/code/For-Use-AI/Course/06-行动选择与投入控制/行动选择与投入控制.md",
+    "bytes": 6294,
+    "sha256": "e83250b4be945fb38681e83bf3266e69df347b1b07f71bfbf1d820dd322f7e77"
+  },
+  {
+    "path": "/Users/w/code/For-Use-AI/Course/04-需求表达与反馈闭环/需求表达与反馈闭环.md",
+    "bytes": 9534,
+    "sha256": "71584c6fc8320e3a4b6b04517810bfcffc70e2c27bef60d88fe94d86a79d009c"
+  },
+  {
+    "path": "/Users/w/code/For-Use-AI/Course/03-信息输入与工具执行/信息输入与工具执行.md",
+    "bytes": 8533,
+    "sha256": "2302a953bbef83f67bf128353f1bbc5e11745fd3ef50cc32c404afb7472eda2d"
+  },
+  {
+    "path": "/Users/w/code/For-Use-AI/Course/02-AI的能力从哪里来/大语言模型简要说明/验收.json",
+    "bytes": 752,
+    "sha256": "250b0206e8695cf1456563b579b9038bbb3b83f5fbe083cf8df564957120645a"
+  }
+]

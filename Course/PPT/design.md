@@ -9,7 +9,7 @@
 | canvas.scale | min(viewport.width / 1672, viewport.height / 941) |
 | canvas.transform-origin | 0 0 |
 | canvas.overflow | hidden |
-| viewport.background | #0f1720 |
+| viewport.background | #ffffff |
 | slide.background | #ffffff |
 | slide.box-sizing | border-box |
 | safe.left | 72px |

@@ -1,0 +1,2 @@
+conversation_id,title,preview,step_count,last_modified_time,workspace_uris,status,source,project_id,agent_name,parent_conversation_id,nesting_depth,battle_id,winning_conversation_id,not_fully_idle,killed,last_user_input_time,last_user_input_step_index,app_data_dir,group_id
+8fdd16df-2506-4563-9ff5-fdc087b768d0,Tutorial Reference Material Analysis,Tutorial Reference Material Analysis,374,2026-09-18 01:40:40.294237+00:00,"[""file:///Users/w/code/For-Use-AI""]",CASCADE_RUN_STATUS_IDLE,,default-cli-project,,,0,,,0,0,2026-09-18 01:40:14.715681+00:00,372,antigravity-cli,

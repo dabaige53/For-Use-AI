@@ -1,0 +1,30 @@
+9c9a2f277aad577f0be3dbb3eb8d5e4abd9f46f2 2026-09-16 09:28:24 +0800 Publish privacy-reviewed course materials
+f1f0edc95166563e1b693073a3ba66f15f97f183 2026-09-16 09:28:37 +0800 Harden public repository exclusions
+4b0387d05e44ef47069215a71f6e4d8576cc8a78 2026-09-16 11:11:47 +0800 重构 AI 输入输出课程内容与连续镜头设计
+4673e8fe13b20626e2343c9c730fba9326a43c83 2026-09-16 14:22:25 +0800 完成 AI 输入与输出课程三镜 ManimGL 静音预览制作
+4f3cbc66e5f420370366814e9dec6de08b355b52 2026-09-16 00:42:27 -0600 优化阅读器导航字号并重写七篇分享文章 (#1)
+00089ea40d56011a3b1acc74d7caabbbfa56dd8a 2026-09-16 19:33:40 +0800 重写 AI 协作课程核心文章
+a6ab2b419f4fb5aaf3cd94b5760c102712436491 2026-09-17 08:35:15 +0800 重构第四章需求表达与反馈内容
+d0b241ff2112d244c8803650163f35ad19ab2bca 2026-09-17 12:03:34 +0800 重构需求表达课程内容并完善来源说明
+aadcf6f21acb118646b1abc230b76c0f70a05093 2026-09-17 12:12:13 +0800 docs(writing): apply Pi revision
+5d3954c4befa343065cfe2f888ee2dbaa7dde3e9 2026-09-17 13:06:41 +0800 docs(writing): record course revision scope and evidence
+8e9e44bd99693f17a6b61d613b3e59ee63d4852d 2026-09-17 13:12:31 +0800 docs: revert Codex-authored course notes
+f1ed0f6bd4e197991d3290e20dfa8263d0ebc46e 2026-09-17 13:16:53 +0800 docs(writing): apply Pi revision
+c68b7d3654545eec37d6c1dd998f3a862a59858f 2026-09-17 13:37:10 +0800 docs(writing): restore complete Pi dialogues as images
+c8e27ad960b7f0d3dd602dca25a36c1af2a88268 2026-09-17 15:02:21 +0800 Document task map preview planning and references
+d6ae80c058fd219f5f2ebc61056054c1569f2548 2026-09-17 15:12:13 +0800 chore(writing): checkpoint before Pi edit
+6f9e0105f3790001f42d13c47c332acd9342e6c0 2026-09-17 15:16:31 +0800 docs(writing): apply Pi revision
+896bbcce5f03d68efd40264157c5c50252c3059d 2026-09-17 15:24:47 +0800 docs(writing): use HTML screenshots in Pi revision
+7c91310f32b74230b15e08c8b3d3d5578c7a2169 2026-09-17 15:59:29 +0800 docs(writing): rewrite chapter six as concise framework teaching
+b6c7ee73a8d602f2f6b3a5fbe0f622041fa75b4a 2026-09-17 16:25:06 +0800 docs(writing): align seven-page article and simplify knowledge slides
+186d4469c90fa4848c24d20193cf6cf9cffdaef2 2026-09-17 16:40:47 +0800 docs(writing): finish chapter 06 revision
+52f3ce7f76c2acf6bf0148c0db4ebf51c68a4301 2026-09-18 09:35:48 +0800 Expand action-investment slides with responsive chart layout
+38796440046a3b25facf5811652592f7c87b2969 2026-09-18 10:33:28 +0800 Remove obsolete project content
+4229f801b22d986ab4b841e387ab6d3d24a9b81f 2026-09-18 11:22:05 +0800 Merge remote-tracking branch 'origin/main'
+1e2c21ca19577c69c51cf0cafad16a2b42ea6d77 2026-09-18 14:53:24 +0800 Replace full course chapters with concise writing objectives
+92ede9f47914712dcdd046c42cdb55418523773e 2026-09-18 18:57:27 +0800 Remove obsolete course drafts and assets
+1952b6e482625bf0d578dd6d2a2cafadce8c2f1a 2026-09-18 19:15:31 +0800 Remove obsolete files and unused content
+60034e6f9c57d3f4534f741b1cb768779ae478a6 2026-09-18 19:23:19 +0800 更新 PPT 图片引用路径与资料索引
+ff653ac7c61604ce47d8db9dc22c4a692ff5a517 2026-09-20 09:29:55 +0800 Refine course content and website structure
+23e20c248b41d1f5df67ccfe498807c067438c62 2026-09-20 10:00:55 +0800 Add presentation controls and comparison layouts
+15e7153b5c9123880da2a926cc34c01131f1766c 2026-09-20 10:58:49 +0800 Improve terrain presentation controls and slide rendering
