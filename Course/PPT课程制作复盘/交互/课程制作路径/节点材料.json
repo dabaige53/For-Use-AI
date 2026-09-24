@@ -1,0 +1,950 @@
+{
+  "title": "课程制作路径",
+  "nodes": {
+    "START": {
+      "title": "目标：与 AI 合作，把自己的材料做成课件",
+      "summary": "把已有文章、图形、视频和交互组织成可以现场讲述的课件。",
+      "takeaway": "沿任一条制作线阅读；点开模块查看材料，再沿相邻步骤继续。",
+      "materials": [
+        "reflection",
+        "ppt"
+      ]
+    },
+    "T1": {
+      "title": "收集地形相关原始文章",
+      "summary": "从已有地形文章与教学对话开始，保留内容依据。",
+      "takeaway": "先列出已有材料与用途，再补缺少的内容。",
+      "materials": [
+        "terrainArticle",
+        "dialogue"
+      ]
+    },
+    "T2": {
+      "title": "梳理文章表达与图形的映射 · 明确映射标准",
+      "summary": "对照文章含义，确定地形、小球、轨迹分别表达什么。",
+      "takeaway": "为每个图形对象指出对应的原文含义，避免只有视觉效果。",
+      "materials": [
+        "terrainArticle",
+        "terrainGif"
+      ]
+    },
+    "T3": {
+      "title": "整理原型设计 skills · 设计小球、运动轨迹等参数",
+      "summary": "把映射规则整理成原型设计要求，设计小球和运动轨迹等参数。",
+      "takeaway": "把对象、状态、变化与操作入口列出来，再交给 AI 实现。",
+      "materials": [
+        "terrain",
+        "terrainArticle"
+      ]
+    },
+    "T4": {
+      "title": "产出 HTML 原型样例",
+      "summary": "先生成可运行的 HTML 样例，以具体画面作为讨论对象。",
+      "takeaway": "先检查一份能操作的样例，再扩大实现范围。",
+      "materials": [
+        "terrain"
+      ]
+    },
+    "T5": {
+      "title": "构建 3D 地形图",
+      "summary": "将文章中的关系构建为 3D 地形呈现。",
+      "takeaway": "判断画面是否表达内容，不把某个技术引擎当成目标。",
+      "materials": [
+        "terrain",
+        "terrainGif"
+      ]
+    },
+    "T6": {
+      "title": "操作原型并对照文章 · 逐步调整表达、画面和运动参数",
+      "summary": "操作原型并对照文章，调整表达、画面和运动参数。",
+      "takeaway": "指出调整位置和希望看到的变化，再回到同一位置检查。",
+      "materials": [
+        "terrain",
+        "terrainArticle"
+      ]
+    },
+    "T7": {
+      "title": "形成地形图与教学内容 · 交付可运行的 HTML 地形演示",
+      "summary": "地形演示与教学内容一起交付，供课程网站和 PPT 使用。",
+      "takeaway": "交接运行入口和对应内容，让下一环节可以接着使用。",
+      "materials": [
+        "terrain",
+        "dialogue",
+        "ppt"
+      ]
+    },
+    "V1": {
+      "title": "寻找最佳实践 · 找到 3Blue1Brown 的视频",
+      "summary": "找到 3Blue1Brown 参考视频，研究它怎样用图形解释机制。",
+      "takeaway": "选一个具体参考，把喜欢的表达落实到可观察的画面。",
+      "materials": [
+        "videoSources",
+        "videoLlm"
+      ]
+    },
+    "V2": {
+      "title": "从官网获取 · 技术架构与相关源码",
+      "summary": "从参考的官方资料取得技术架构、源码与制作线索。",
+      "takeaway": "区分内容参考与实现资料，两者共同支持制作。",
+      "materials": [
+        "videoSources"
+      ]
+    },
+    "V3": {
+      "title": "在本地还原视频内容",
+      "summary": "在本地还原参考内容，理解制作过程。这里提供的是现存本地视频。",
+      "takeaway": "先做可检查的范围，核对内容顺序与图形变化。",
+      "materials": [
+        "videoLlm",
+        "videoSources"
+      ]
+    },
+    "V4": {
+      "title": "提炼制作要求与实现细节",
+      "summary": "从还原过程提炼图形表达、动画实现与整片组织的要求。",
+      "takeaway": "保存能用于下一次的原则，避免把一次任务的规格写死。",
+      "materials": [
+        "reflection",
+        "videoSkill"
+      ]
+    },
+    "V5": {
+      "title": "整理成 3 个 skills · 用于后续工作直接调用",
+      "summary": "将方法分成文章、动画、完整视频三个 skills，供后续环节调用。",
+      "takeaway": "按职责拆分工作说明，让方法可以在多个环节复用。",
+      "materials": [
+        "articleSkill",
+        "animationSkill",
+        "videoSkill"
+      ]
+    },
+    "S1": {
+      "title": "explanatory-article · 解释型文章",
+      "summary": "用 explanatory-article 整理解释型文章，支持多条课程内容线。",
+      "takeaway": "先讲清内容，再选择图片、动画或交互表达。",
+      "materials": [
+        "articleSkill",
+        "ioArticle"
+      ]
+    },
+    "S2": {
+      "title": "manim-animation · 动画制作",
+      "summary": "用 manim-animation 实现单段动画的图形、运动和转换。",
+      "takeaway": "把一个镜头内的变化落实为能逐段检查的实现。",
+      "materials": [
+        "animationSkill",
+        "story2"
+      ]
+    },
+    "S3": {
+      "title": "manim-video · 完整视频制作",
+      "summary": "用 manim-video 组织分镜、镜头、字幕与成片。",
+      "takeaway": "将文章、画面与视频时间线对应起来。",
+      "materials": [
+        "videoSkill",
+        "story1",
+        "videoIo"
+      ]
+    },
+    "V6": {
+      "title": "收集关于输入输出的素材与文章",
+      "summary": "收集输入输出机制相关的素材与文章。",
+      "takeaway": "先固定要解释的机制，让案例服务于主题。",
+      "materials": [
+        "ioSources",
+        "ioArticle"
+      ]
+    },
+    "V7": {
+      "title": "使用 skills 整理成解释型文章",
+      "summary": "调用文章 skill，将资料整理为解释型文章。",
+      "takeaway": "检查文章是否回答主题，再进入镜头设计。",
+      "materials": [
+        "ioArticle",
+        "articleSkill"
+      ]
+    },
+    "V8": {
+      "title": "根据文章内容与表达方式 · 确定镜头安排和数量",
+      "summary": "根据文章内容与表达方式安排镜头，确定需要多少段变化。",
+      "takeaway": "镜头数量由内容决定，不固定套用某个格数。",
+      "materials": [
+        "ioArticle",
+        "story1",
+        "story2",
+        "story3"
+      ]
+    },
+    "V9": {
+      "title": "逐步生成分镜图片",
+      "summary": "逐步生成连续分镜，让相邻画面呈现对象和关系的变化。",
+      "takeaway": "比较相邻格：新增了什么，之前的关系是否保留。",
+      "materials": [
+        "story1",
+        "story2",
+        "story3"
+      ]
+    },
+    "V10": {
+      "title": "逐步完成视频开发",
+      "summary": "根据已确认的分镜，调用动画和视频 skills 完成开发。",
+      "takeaway": "逐段检查实现是否保留分镜中的内容、状态与先后关系。",
+      "materials": [
+        "story1",
+        "animationSkill",
+        "videoSkill",
+        "videoIo"
+      ]
+    },
+    "V11": {
+      "title": "完成视频",
+      "summary": "形成可接入 PPT 的视频产物。",
+      "takeaway": "交付成片与对应内容，并实际播放检查。",
+      "materials": [
+        "videoIo",
+        "videoLlm"
+      ]
+    },
+    "W1": {
+      "title": "收集其他课程原始文章",
+      "summary": "归集已有课程原始文章，确认各自的主题与用途。",
+      "takeaway": "先接上已有材料，不重复从零生成。",
+      "materials": [
+        "terrainArticle",
+        "ioArticle",
+        "quadArticle"
+      ]
+    },
+    "W2": {
+      "title": "按 explanatory-article 要求 · 整理为课程文章",
+      "summary": "按解释型文章要求整理课程文章。",
+      "takeaway": "保留内容依据，让结构、例子与图形服务于理解。",
+      "materials": [
+        "articleSkill",
+        "ioArticle"
+      ]
+    },
+    "Q1": {
+      "title": "以前关于四象限的思考 · 与现成文章",
+      "summary": "四象限内容来自已有思考和现成文章。",
+      "takeaway": "先说明两个维度的含义，再考虑图形布局。",
+      "materials": []
+    },
+    "Q2": {
+      "title": "按 explanatory-article 要求 · 改写四象限文章",
+      "summary": "按文章要求改写四象限内容，形成可阅读的解释。",
+      "takeaway": "让读者能从例子理解判断维度，而不只看到坐标图。",
+      "materials": [
+        "quadArticle",
+        "articleSkill"
+      ]
+    },
+    "Q3": {
+      "title": "形成四象限内容与图形表达",
+      "summary": "形成四象限文章与图形表达，供网站和 PPT 使用。",
+      "takeaway": "每个位置都应有依据；图形与文字使用同一版本的维度。",
+      "materials": [
+        "quadImage",
+        "quad",
+        "quadArticle"
+      ]
+    },
+    "G1": {
+      "title": "按 explanatory-article 要求 · 整理地形相关文章",
+      "summary": "将地形原始文章整理为网站可用的课程文章。",
+      "takeaway": "把原理、例子与演示入口组织在一起。",
+      "materials": [
+        "terrainArticle",
+        "articleSkill"
+      ]
+    },
+    "G2": {
+      "title": "结合地形文章与 HTML 演示",
+      "summary": "让地形文章与可运行的 HTML 演示配合。",
+      "takeaway": "阅读解释后能操作，操作结果能回到文章中理解。",
+      "materials": [
+        "terrainArticle",
+        "terrain"
+      ]
+    },
+    "W3": {
+      "title": "参考样例网站 · ce101.ifuryst.com",
+      "summary": "以 ce101.ifuryst.com 作为网站呈现参考。",
+      "takeaway": "明确借鉴的是结构、阅读方式还是视觉表达。",
+      "materials": [
+        "website"
+      ]
+    },
+    "W4": {
+      "title": "结合原始文章、skills 要求与样例网站 · 完成整体模仿和开发",
+      "summary": "结合文章、skills 要求与参考样例，开发统一课程网站。",
+      "takeaway": "先明确内容与结构，再检查实际页面。",
+      "materials": [
+        "website",
+        "articleSkill"
+      ]
+    },
+    "W5": {
+      "title": "接入各篇文章、图形与交互演示",
+      "summary": "将各篇文章、四象限和地形演示接入同一网站。",
+      "takeaway": "检查每项材料的入口、正文和交互是否对应。",
+      "materials": [
+        "website",
+        "terrain",
+        "quad"
+      ]
+    },
+    "W6": {
+      "title": "查看实际网页 · 回顾内容、结构和呈现效果",
+      "summary": "打开实际网页检查内容、结构与呈现效果。",
+      "takeaway": "把问题定位到文章、图形或实现环节，返回对应位置调整。",
+      "materials": [
+        "website"
+      ]
+    },
+    "W7": {
+      "title": "形成整套课程网站",
+      "summary": "形成课程网站，其文章成为 PPT 大纲的内容依据。",
+      "takeaway": "同一内容可以用于阅读与讲述，但两者需要不同组织方式。",
+      "materials": [
+        "website",
+        "ppt"
+      ]
+    },
+    "P1": {
+      "title": "① 确认演讲要求与细节",
+      "summary": "确认演讲要求与讲述细节。",
+      "takeaway": "先确定观众要理解什么，以及现场要演示什么。",
+      "materials": [
+        "reflection",
+        "speech"
+      ]
+    },
+    "P2": {
+      "title": "根据网页内文章 · 确定整体大纲",
+      "summary": "根据网站文章确定演讲大纲与内容顺序。",
+      "takeaway": "用现场讲述的顺序组织内容，不把文章逐段搬进课件。",
+      "materials": [
+        "website",
+        "ppt"
+      ]
+    },
+    "P3": {
+      "title": "根据大纲与相关文字 · 生成 PPT 样式图片",
+      "summary": "根据大纲与文字生成页面样式图片。",
+      "takeaway": "先看整页表达，判断内容重点与图文关系。",
+      "materials": [
+        "selected",
+        "design"
+      ]
+    },
+    "P4": {
+      "title": "查看并确认 PPT UI 效果",
+      "summary": "查看图片，确认采用的 UI 表达。",
+      "takeaway": "明确采用哪张图、保留哪些关系，再进入实现。",
+      "materials": [
+        "selected",
+        "implemented"
+      ]
+    },
+    "P5": {
+      "title": "将选定图片嵌入 PPT · 作为定稿页面",
+      "summary": "按照确认路径，将选定图片接入 PPT。所附历史页面同时提供 HTML 重建结果作对照。",
+      "takeaway": "把选定对象与页面实现对应起来，检查采用的内容是否保留。",
+      "materials": [
+        "selected",
+        "implemented",
+        "ppt"
+      ]
+    },
+    "P6": {
+      "title": "② 确认视频与地形图 · 在 PPT 中的嵌入原型效果",
+      "summary": "先确认视频与地形在 PPT 中的嵌入原型效果。",
+      "takeaway": "在页面中检查播放与操作，而不只检查单独文件。",
+      "materials": [
+        "ppt",
+        "videoIo",
+        "terrain"
+      ]
+    },
+    "P7": {
+      "title": "嵌入视频与地形图内容",
+      "summary": "将视频与地形内容接入课件。",
+      "takeaway": "统一讲述与操作入口，同时保留各自的内容和运行方式。",
+      "materials": [
+        "ppt",
+        "videoLlm",
+        "videoIo",
+        "terrain"
+      ]
+    },
+    "P8": {
+      "title": "③ 确认四象限 · 在 PPT 中的嵌入效果",
+      "summary": "确认四象限在 PPT 中的呈现与操作效果。",
+      "takeaway": "用真实内容操作样例，检查图形、文字与页面推进。",
+      "materials": [
+        "quad",
+        "ppt"
+      ]
+    },
+    "P9": {
+      "title": "嵌入四象限内容",
+      "summary": "将四象限内容接入课件，与另一条接入支线汇合。",
+      "takeaway": "合并后检查页面衔接与操作的一致性。",
+      "materials": [
+        "ppt",
+        "quad"
+      ]
+    },
+    "P10": {
+      "title": "④ 汇合为整套课件 · 回顾整体内容，发现不足",
+      "summary": "各部分汇合后，从整场讲述检查内容和演示。",
+      "takeaway": "检查相邻页面之间的铺垫、解释与衔接。",
+      "materials": [
+        "ppt",
+        "design",
+        "speech"
+      ]
+    },
+    "P11": {
+      "title": "优化内容、页面与演示效果",
+      "summary": "按问题所在位置优化大纲、页面或嵌入内容，需要时返回地形和视频制作。",
+      "takeaway": "修改具体对象后，回到整套课件检查影响。",
+      "materials": [
+        "ppt",
+        "terrain",
+        "videoIo"
+      ]
+    },
+    "P12": {
+      "title": "⑤ 生成演讲稿 · 细化讲述、页面衔接和演示安排",
+      "summary": "组织演讲稿、页面衔接与演示安排。这里提供学员练习模板，历史讲稿完成状态尚未核验。",
+      "takeaway": "将页面、讲述和操作逐项对应。",
+      "materials": [
+        "speech",
+        "ppt"
+      ]
+    },
+    "P13": {
+      "title": "完整交付 · PPT＋嵌入内容＋演讲稿与演讲细节",
+      "summary": "交付包含 PPT、嵌入内容、讲稿与演示安排的课程材料。讲稿部分使用练习模板。",
+      "takeaway": "让接收者知道从哪里打开、用哪些内容、如何演示。",
+      "materials": [
+        "ppt",
+        "videoIo",
+        "terrain",
+        "quad",
+        "speech"
+      ]
+    }
+  },
+  "assets": {
+    "terrainArticle": {
+      "title": "需求表达与反馈闭环",
+      "path": "/Users/w/code/For-Use-AI/Course/04-需求表达与反馈闭环/需求表达与反馈闭环.md",
+      "kind": "text"
+    },
+    "terrain": {
+      "title": "操作地形演示",
+      "path": "/Users/w/code/For-Use-AI/Course/04-需求表达与反馈闭环/交互/思维地形.html",
+      "kind": "interactive"
+    },
+    "terrainGif": {
+      "title": "地形运动",
+      "path": "/Users/w/code/For-Use-AI/Course/04-需求表达与反馈闭环/素材/04-terrain-balance-b.gif",
+      "kind": "image"
+    },
+    "dialogue": {
+      "title": "教学对话",
+      "path": "/Users/w/code/For-Use-AI/Course/04-需求表达与反馈闭环/素材/04-dialogue-balance-b.png",
+      "kind": "image"
+    },
+    "ioArticle": {
+      "title": "信息输入与工具执行",
+      "path": "/Users/w/code/For-Use-AI/Course/03-信息输入与工具执行/信息输入与工具执行.md",
+      "kind": "text"
+    },
+    "videoLlm": {
+      "title": "本地原理视频",
+      "path": "/Users/w/code/For-Use-AI/Course/PPT/assets/video_llm.mp4",
+      "kind": "video"
+    },
+    "videoIo": {
+      "title": "输入输出视频",
+      "path": "/Users/w/code/For-Use-AI/Course/PPT/assets/video_io.mp4",
+      "kind": "video"
+    },
+    "story1": {
+      "title": "首次输入分镜",
+      "path": "/Users/w/code/For-Use-AI/Course/03-信息输入与工具执行/AI的输入与输出/素材/图片/视觉基准/镜头01_首次输入_十二格_清理版.png",
+      "kind": "image"
+    },
+    "story2": {
+      "title": "模型输出与工具请求分镜",
+      "path": "/Users/w/code/For-Use-AI/Course/03-信息输入与工具执行/AI的输入与输出/素材/图片/镜头02_模型输出请求_十二格.png",
+      "kind": "image"
+    },
+    "story3": {
+      "title": "结果回流分镜",
+      "path": "/Users/w/code/For-Use-AI/Course/03-信息输入与工具执行/AI的输入与输出/素材/图片/镜头03_结果回流与两次调用_十二格.png",
+      "kind": "image"
+    },
+    "quadArticle": {
+      "title": "行动选择与投入控制",
+      "path": "/Users/w/code/For-Use-AI/Course/06-行动选择与投入控制/行动选择与投入控制.md",
+      "kind": "text"
+    },
+    "quad": {
+      "title": "操作四象限原型",
+      "path": "/Users/w/code/For-Use-AI/Course/06-行动选择与投入控制/交互/投入决策-交互原型.html",
+      "kind": "interactive"
+    },
+    "quadImage": {
+      "title": "四象限图形",
+      "path": "/Users/w/code/For-Use-AI/Course/06-行动选择与投入控制/素材/06-slide-03-article.png",
+      "kind": "image"
+    },
+    "website": {
+      "title": "课程阅读网站",
+      "path": "/Users/w/code/For-Use-AI/Course/网页/index.html",
+      "kind": "interactive"
+    },
+    "ppt": {
+      "title": "打开课件",
+      "path": "/Users/w/code/For-Use-AI/Course/PPT/AI协作-动态幻灯片.html",
+      "kind": "interactive"
+    },
+    "selected": {
+      "title": "选定的页面图片",
+      "path": "/Users/w/code/For-Use-AI/Course/PPT课程制作复盘/证据/关键画面/37页-用户选定生图.png",
+      "kind": "image"
+    },
+    "implemented": {
+      "title": "历史页面实现",
+      "path": "/Users/w/code/For-Use-AI/Course/PPT课程制作复盘/证据/关键画面/37页-HTML历史渲染.png",
+      "kind": "image"
+    },
+    "design": {
+      "title": "页面设计参数",
+      "path": "/Users/w/code/For-Use-AI/Course/PPT/design.md",
+      "kind": "text"
+    },
+    "articleSkill": {
+      "title": "解释型文章 Skill",
+      "path": "/Users/w/code/For-Use-AI/.agents/skills/explanatory-article/SKILL.md",
+      "kind": "text"
+    },
+    "animationSkill": {
+      "title": "动画制作 Skill",
+      "path": "/Users/w/code/For-Use-AI/.agents/skills/manim-animation/SKILL.md",
+      "kind": "text"
+    },
+    "videoSkill": {
+      "title": "完整视频 Skill",
+      "path": "/Users/w/code/For-Use-AI/.agents/skills/manim-video/SKILL.md",
+      "kind": "text"
+    },
+    "videoSources": {
+      "title": "原理视频资料来源",
+      "path": "/Users/w/code/For-Use-AI/Course/02-AI的能力从哪里来/大语言模型简要说明/素材/大语言模型简要说明-资料来源.md",
+      "kind": "text"
+    },
+    "ioSources": {
+      "title": "输入输出视频资料来源",
+      "path": "/Users/w/code/For-Use-AI/Course/03-信息输入与工具执行/AI的输入与输出/素材/AI的输入与输出-资料来源.md",
+      "kind": "text"
+    },
+    "reflection": {
+      "title": "制作方法与实际经历",
+      "path": "/Users/w/code/For-Use-AI/Course/PPT课程制作复盘/PPT与视频构建指南.md",
+      "kind": "text"
+    },
+    "speech": {
+      "title": "演讲编排练习模板",
+      "path": "/Users/w/code/For-Use-AI/Course/PPT课程制作复盘/交互/课程制作路径/演讲编排练习.md",
+      "kind": "text"
+    }
+  },
+  "edges": [
+    {
+      "from": "T1",
+      "to": "T2",
+      "label": ""
+    },
+    {
+      "from": "T2",
+      "to": "T3",
+      "label": ""
+    },
+    {
+      "from": "T3",
+      "to": "T4",
+      "label": ""
+    },
+    {
+      "from": "T4",
+      "to": "T5",
+      "label": ""
+    },
+    {
+      "from": "T5",
+      "to": "T6",
+      "label": ""
+    },
+    {
+      "from": "T6",
+      "to": "T7",
+      "label": ""
+    },
+    {
+      "from": "T6",
+      "to": "T4",
+      "label": "反馈修改"
+    },
+    {
+      "from": "V1",
+      "to": "V2",
+      "label": ""
+    },
+    {
+      "from": "V2",
+      "to": "V3",
+      "label": ""
+    },
+    {
+      "from": "V3",
+      "to": "V4",
+      "label": ""
+    },
+    {
+      "from": "V4",
+      "to": "V5",
+      "label": ""
+    },
+    {
+      "from": "V5",
+      "to": "S1",
+      "label": ""
+    },
+    {
+      "from": "V5",
+      "to": "S2",
+      "label": ""
+    },
+    {
+      "from": "V5",
+      "to": "S3",
+      "label": ""
+    },
+    {
+      "from": "V6",
+      "to": "V7",
+      "label": ""
+    },
+    {
+      "from": "V7",
+      "to": "V8",
+      "label": ""
+    },
+    {
+      "from": "V8",
+      "to": "V9",
+      "label": ""
+    },
+    {
+      "from": "V9",
+      "to": "V10",
+      "label": ""
+    },
+    {
+      "from": "V10",
+      "to": "V11",
+      "label": ""
+    },
+    {
+      "from": "S1",
+      "to": "V7",
+      "label": "指导文章整理"
+    },
+    {
+      "from": "S2",
+      "to": "V10",
+      "label": "指导动画实现"
+    },
+    {
+      "from": "S3",
+      "to": "V8",
+      "label": "指导分镜与整片制作"
+    },
+    {
+      "from": "S3",
+      "to": "V10",
+      "label": "指导整片制作"
+    },
+    {
+      "from": "W1",
+      "to": "W2",
+      "label": ""
+    },
+    {
+      "from": "Q1",
+      "to": "Q2",
+      "label": ""
+    },
+    {
+      "from": "Q2",
+      "to": "Q3",
+      "label": ""
+    },
+    {
+      "from": "G1",
+      "to": "G2",
+      "label": ""
+    },
+    {
+      "from": "W3",
+      "to": "W4",
+      "label": ""
+    },
+    {
+      "from": "W4",
+      "to": "W5",
+      "label": ""
+    },
+    {
+      "from": "W5",
+      "to": "W6",
+      "label": ""
+    },
+    {
+      "from": "W6",
+      "to": "W7",
+      "label": ""
+    },
+    {
+      "from": "W2",
+      "to": "W4",
+      "label": ""
+    },
+    {
+      "from": "W2",
+      "to": "W5",
+      "label": ""
+    },
+    {
+      "from": "Q3",
+      "to": "W5",
+      "label": ""
+    },
+    {
+      "from": "G2",
+      "to": "W5",
+      "label": ""
+    },
+    {
+      "from": "W6",
+      "to": "W2",
+      "label": "调整文章"
+    },
+    {
+      "from": "W6",
+      "to": "Q3",
+      "label": "调整四象限表达"
+    },
+    {
+      "from": "W6",
+      "to": "G2",
+      "label": "调整内容与演示配合"
+    },
+    {
+      "from": "W6",
+      "to": "W4",
+      "label": "调整网站实现"
+    },
+    {
+      "from": "P1",
+      "to": "P2",
+      "label": ""
+    },
+    {
+      "from": "P2",
+      "to": "P3",
+      "label": ""
+    },
+    {
+      "from": "P3",
+      "to": "P4",
+      "label": ""
+    },
+    {
+      "from": "P4",
+      "to": "P5",
+      "label": ""
+    },
+    {
+      "from": "P4",
+      "to": "P3",
+      "label": "调整样式图片"
+    },
+    {
+      "from": "P5",
+      "to": "P6",
+      "label": ""
+    },
+    {
+      "from": "P6",
+      "to": "P7",
+      "label": ""
+    },
+    {
+      "from": "P5",
+      "to": "P8",
+      "label": ""
+    },
+    {
+      "from": "P8",
+      "to": "P9",
+      "label": ""
+    },
+    {
+      "from": "P7",
+      "to": "P10",
+      "label": ""
+    },
+    {
+      "from": "P9",
+      "to": "P10",
+      "label": ""
+    },
+    {
+      "from": "P10",
+      "to": "P11",
+      "label": ""
+    },
+    {
+      "from": "P11",
+      "to": "P12",
+      "label": ""
+    },
+    {
+      "from": "P12",
+      "to": "P13",
+      "label": ""
+    },
+    {
+      "from": "P11",
+      "to": "P2",
+      "label": "优化大纲与内容"
+    },
+    {
+      "from": "P11",
+      "to": "P3",
+      "label": "优化页面效果"
+    },
+    {
+      "from": "P11",
+      "to": "P6",
+      "label": "优化视频与地形嵌入"
+    },
+    {
+      "from": "P11",
+      "to": "P8",
+      "label": "优化四象限嵌入"
+    },
+    {
+      "from": "START",
+      "to": "T1",
+      "label": ""
+    },
+    {
+      "from": "START",
+      "to": "V1",
+      "label": ""
+    },
+    {
+      "from": "START",
+      "to": "V6",
+      "label": ""
+    },
+    {
+      "from": "START",
+      "to": "W1",
+      "label": ""
+    },
+    {
+      "from": "START",
+      "to": "Q1",
+      "label": ""
+    },
+    {
+      "from": "START",
+      "to": "W3",
+      "label": ""
+    },
+    {
+      "from": "START",
+      "to": "P1",
+      "label": ""
+    },
+    {
+      "from": "S1",
+      "to": "W2",
+      "label": "提供文章整理要求"
+    },
+    {
+      "from": "S1",
+      "to": "Q2",
+      "label": "提供文章整理要求"
+    },
+    {
+      "from": "S1",
+      "to": "G1",
+      "label": "提供文章整理要求"
+    },
+    {
+      "from": "T1",
+      "to": "G1",
+      "label": "原始文章进入课程内容线"
+    },
+    {
+      "from": "T7",
+      "to": "G2",
+      "label": "提供可运行演示"
+    },
+    {
+      "from": "V7",
+      "to": "W5",
+      "label": "输入输出文章进入课程网站"
+    },
+    {
+      "from": "W7",
+      "to": "P2",
+      "label": "提供文章与内容依据"
+    },
+    {
+      "from": "V11",
+      "to": "P6",
+      "label": "提供完成的视频"
+    },
+    {
+      "from": "T7",
+      "to": "P6",
+      "label": "提供 HTML 地形演示"
+    },
+    {
+      "from": "Q3",
+      "to": "P8",
+      "label": "提供四象限内容"
+    },
+    {
+      "from": "P11",
+      "to": "T6",
+      "label": "需要修改地形演示时返回"
+    },
+    {
+      "from": "P11",
+      "to": "V10",
+      "label": "需要修改视频时返回"
+    }
+  ]
+}
