@@ -1,0 +1,1453 @@
+{
+  "scenes": [
+    {
+      "id": "T1",
+      "title": "接上原文，逐项调整",
+      "nodes": [
+        "TA",
+        "TB"
+      ],
+      "user": "逐项调路径、停顿与文字。",
+      "ai": "沿原概念与案例调整动画。",
+      "output": "可继续检查的地形网页。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a06001-ef4f-71d1-821e-9ee52c2faff3.md",
+          "messages": [
+            23,
+            33,
+            217
+          ]
+        }
+      ],
+      "method": "先沿现有材料逐项修改，让每次反馈有明确对象。",
+      "boundary": "",
+      "box": [
+        100,
+        1110,
+        990,
+        630
+      ]
+    },
+    {
+      "id": "T2",
+      "title": "先纠正因果，再看动画效果",
+      "nodes": [
+        "TC",
+        "TD"
+      ],
+      "user": "指出“小球走过才出沟壑”不对。",
+      "ai": "调整为语义先塑形、小球后移动。",
+      "output": "先后关系明确的动画方案。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a06001-ef4f-71d1-821e-9ee52c2faff3.md",
+          "messages": [
+            33,
+            34
+          ]
+        }
+      ],
+      "method": "反馈先指出因果关系；“看起来更顺”不能替代解释正确。",
+      "boundary": "",
+      "box": [
+        1460,
+        1110,
+        1100,
+        710
+      ]
+    },
+    {
+      "id": "T3",
+      "title": "尝试改造后，收回修改范围",
+      "nodes": [
+        "TE",
+        "TF",
+        "TG"
+      ],
+      "user": "发现大改破坏设计，允许不用 Three.js。",
+      "ai": "沿用 Canvas，回到局部微调。",
+      "output": "保留原设计、补足对比的素材。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a06001-ef4f-71d1-821e-9ee52c2faff3.md",
+          "messages": [
+            217,
+            218
+          ]
+        },
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a07a7d-3269-75e2-b844-f6e50ab4a292.md",
+          "messages": [
+            21,
+            22,
+            28,
+            29
+          ]
+        }
+      ],
+      "method": "明确这轮改什么、保留什么；工具选择服从表达效果。",
+      "boundary": "",
+      "box": [
+        2980,
+        1110,
+        1030,
+        710
+      ]
+    },
+    {
+      "id": "T4",
+      "title": "把可运行地形，接成 A / B / 对照三页",
+      "nodes": [
+        "TH",
+        "TI"
+      ],
+      "user": "保留完整教学对话；能运行、停止、重置。",
+      "ai": "每组先 A，再 B，最后双图并列。",
+      "output": "同一案例可逐页讲、并排比较。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0bc49-6328-7882-abff-5887d5db5079.md",
+          "messages": [
+            58,
+            59,
+            62,
+            63
+          ]
+        }
+      ],
+      "method": "先用一组案例定讲法，再扩展；教学对话不能用总结替代。",
+      "boundary": "",
+      "box": [
+        100,
+        2050,
+        1690,
+        795
+      ]
+    },
+    {
+      "id": "T5",
+      "title": "错配之后，完整研究原网页与八组对话",
+      "nodes": [
+        "TJ",
+        "TK",
+        "TL"
+      ],
+      "user": "发现动画与原文不符，要求完整查原网页。",
+      "ai": "确认独立 A/B 被套统一模板；分别重建事件。",
+      "output": "原文、地形、小球共用对应时间线。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0bc49-6328-7882-abff-5887d5db5079.md",
+          "messages": [
+            69,
+            72,
+            73,
+            81,
+            82,
+            86
+          ]
+        }
+      ],
+      "method": "复用结构前先检查原假设；两段独立对话不能画成一段中途补条件。",
+      "boundary": "M086为助手历史实现和验证报告；此图不重新验收交互。",
+      "box": [
+        2250,
+        2050,
+        1760,
+        795
+      ]
+    },
+    {
+      "id": "V1",
+      "title": "找到参考，研究源码，再收紧范围",
+      "nodes": [
+        "VA",
+        "VB",
+        "VC",
+        "VD"
+      ],
+      "user": "研究 3Blue1Brown 源码素材；限定到 6:59。",
+      "ai": "核对场景与缺失素材，按要求先做 480p。",
+      "output": "可先检查内容与顺序的低清版本。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0a377-3142-77c3-9dff-5e4d808b69ea.md",
+          "messages": [
+            1,
+            4,
+            38,
+            120,
+            126,
+            134,
+            138
+          ]
+        }
+      ],
+      "method": "先说明借鉴范围和首轮交付规格，用低成本版本检查关键内容。",
+      "boundary": "原私有素材不齐，历史实现包含替代素材；不能表述为原片一比一复刻。",
+      "box": [
+        100,
+        3480,
+        1750,
+        740
+      ]
+    },
+    {
+      "id": "V2",
+      "title": "播放时发现：待预测的词已经泄漏",
+      "nodes": [
+        "VE"
+      ],
+      "user": "指出“夜空”不应提前出现在输入中。",
+      "ai": "暂停相关渲染，统一修正训练例子的输入。",
+      "output": "更正后的片段与独立字幕。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0a377-3142-77c3-9dff-5e4d808b69ea.md",
+          "messages": [
+            143,
+            144,
+            145,
+            153
+          ]
+        }
+      ],
+      "method": "检查教学内容是否成立，不能只看画面流畅、文件能播放。",
+      "boundary": "更正结果和完整解码检查为历史报告；示意图并非故障截图。",
+      "box": [
+        2260,
+        3480,
+        1750,
+        740
+      ]
+    },
+    {
+      "id": "V3",
+      "title": "先把内容讲对，再谈画面",
+      "nodes": [
+        "VF",
+        "VG"
+      ],
+      "user": "先写 AI 输入输出；案例只负责串联。",
+      "ai": "纠正会议纪要喧宾夺主，回到输入与工具机制。",
+      "output": "图形表达可依据的文章和镜头内容。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md",
+          "messages": [
+            1,
+            4,
+            11,
+            65,
+            81,
+            92
+          ]
+        }
+      ],
+      "method": "用案例解释机制，但持续检查案例有没有带偏主题。",
+      "boundary": "",
+      "box": [
+        100,
+        4490,
+        880,
+        800
+      ]
+    },
+    {
+      "id": "V4",
+      "title": "候选比较 → 连续分镜 → 选定基准",
+      "nodes": [
+        "VH",
+        "VI"
+      ],
+      "user": "比较不同方向，保留 C，逐格提出修改。",
+      "ai": "把镜头展开为连续画面，按反馈调整并存图。",
+      "output": "修改后的 C 基准与后续镜头分镜。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md",
+          "messages": [
+            33
+          ]
+        },
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0a7f4-a837-7293-a6f9-1d3bbe048171.md",
+          "messages": [
+            20,
+            21,
+            33,
+            35,
+            37,
+            60,
+            62
+          ]
+        }
+      ],
+      "method": "先让静态分镜暴露变化缺口，选定后保存明确参照。",
+      "boundary": "左边为候选结构示意；右边为首次输入基准原图。第9、10格问题属于后续回流镜头，不是这张首次输入图。",
+      "box": [
+        1170,
+        4490,
+        1730,
+        940
+      ]
+    },
+    {
+      "id": "V5",
+      "title": "把选择结果，交给下一步",
+      "nodes": [
+        "VJ"
+      ],
+      "user": "保存选定图、每镜提示词和制作要求。",
+      "ai": "逐镜整理 JSON，交给代码制作阶段。",
+      "output": "图片＋提示词＋镜头要求的材料包。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0a7f4-a837-7293-a6f9-1d3bbe048171.md",
+          "messages": [
+            7,
+            60,
+            80,
+            85
+          ]
+        }
+      ],
+      "method": "换任务时交接已采用材料、具体要求与待做部分，不只交目标。",
+      "boundary": "",
+      "box": [
+        3180,
+        4490,
+        830,
+        900
+      ]
+    },
+    {
+      "id": "V6",
+      "title": "从逐格检查，转为按时间点检查成片",
+      "nodes": [
+        "VK",
+        "VL"
+      ],
+      "user": "指出 1:06 的缺失变化、0:28 / 1:28 的输入问题。",
+      "ai": "定位镜头，返修新增信息、对象消失和外框断裂。",
+      "output": "多轮渲染后的选定视频版本。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0a7f4-a837-7293-a6f9-1d3bbe048171.md",
+          "messages": [
+            80,
+            85
+          ]
+        },
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0a87b-54cf-7e90-8fe2-f550ac2f1076.md",
+          "messages": [
+            22,
+            28,
+            44,
+            53
+          ]
+        }
+      ],
+      "method": "图用格子、视频用时间点；每次都说明哪里不对、应该看见什么。",
+      "boundary": "本次抽帧来自现存选定视频，不是当时的故障画面。成片返修与验证为历史记录。",
+      "box": [
+        100,
+        5730,
+        2770,
+        650
+      ]
+    },
+    {
+      "id": "V7",
+      "title": "两段视频，分别交给课程与 PPT",
+      "nodes": [
+        "VM"
+      ],
+      "user": "要求独立字幕；确认首个视频页后，再接第二页。",
+      "ai": "整理成片与 SRT，并接入两段视频对应页面。",
+      "output": "原理视频＋独立 SRT；输入输出视频。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0a377-3142-77c3-9dff-5e4d808b69ea.md",
+          "messages": [
+            126,
+            153
+          ]
+        },
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0bc49-6328-7882-abff-5887d5db5079.md",
+          "messages": [
+            54,
+            55,
+            57
+          ]
+        }
+      ],
+      "method": "交接时说明每段视频的用途，替换对应内容与时间点。",
+      "boundary": "原理视频交付与两段视频接入均为历史报告，不是本次重新播放验收；独立SRT的直接证据来自原理视频要求。",
+      "box": [
+        3180,
+        5730,
+        830,
+        650
+      ]
+    },
+    {
+      "id": "W1",
+      "title": "接上已有讨论，组织课程",
+      "nodes": [
+        "WA",
+        "WB",
+        "WC"
+      ],
+      "user": "保存讨论结论，围绕既有材料组织七篇。",
+      "ai": "整理正文、配图与统一阅读网页。",
+      "output": "可供阅读和继续选材的课程材料。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0a8a9-6d2f-7e40-8ff1-30cbfe57415b.md",
+          "messages": [
+            19,
+            27,
+            31,
+            81,
+            95
+          ]
+        }
+      ],
+      "method": "先让 AI 说明已有材料怎样沿用，再补缺失内容。",
+      "boundary": "",
+      "box": [
+        100,
+        7140,
+        850,
+        790
+      ]
+    },
+    {
+      "id": "W2",
+      "title": "整理目录，意外丢掉正式网页",
+      "nodes": [
+        "WD",
+        "WE"
+      ],
+      "user": "要求每篇一个目录，只保留采用的代码设计。",
+      "ai": "误把正式阅读器简化为零散页面。",
+      "output": "需要纠正的整理结果。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0b221-bbd4-7b83-8139-eedda28ce52e.md",
+          "messages": [
+            16,
+            53,
+            54,
+            55
+          ]
+        }
+      ],
+      "method": "整理前列出必须保留的产物，整理后检查入口和功能。",
+      "boundary": "",
+      "box": [
+        1140,
+        7140,
+        850,
+        790
+      ]
+    },
+    {
+      "id": "W3",
+      "title": "两种找回：网站结构与第六篇稿件",
+      "nodes": [
+        "WF",
+        "WG",
+        "WH"
+      ],
+      "user": "指出网页丢失并质疑文章，指定回查改写任务。",
+      "ai": "恢复阅读器；查明第六篇选错稿，再由 Git 恢复。",
+      "output": "历史恢复报告与待核对的正确入口。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0b221-bbd4-7b83-8139-eedda28ce52e.md",
+          "messages": [
+            53,
+            55,
+            57,
+            58,
+            60,
+            63,
+            65,
+            68
+          ]
+        }
+      ],
+      "method": "用原任务与版本记录定位已采用结果，不能凭文件名猜最新版。",
+      "boundary": "网站与正文恢复是当时助手报告；并非本次重跑网站验收。",
+      "box": [
+        2180,
+        7140,
+        850,
+        790
+      ]
+    },
+    {
+      "id": "W4",
+      "title": "核对材料后，再区分阅读与演示",
+      "nodes": [
+        "WI",
+        "WJ",
+        "WK"
+      ],
+      "user": "盘点资产，改为单 HTML 加载正文，PPT 单独管理。",
+      "ai": "核对文章、图片与交互；拆分阅读网页和 PPT 材料。",
+      "output": "阅读网页与现场 PPT 各司其职。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0b221-bbd4-7b83-8139-eedda28ce52e.md",
+          "messages": [
+            65,
+            68
+          ]
+        },
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0b362-6510-7212-b628-bb9e584521ae.md",
+          "messages": [
+            41,
+            45,
+            47,
+            63,
+            64
+          ]
+        }
+      ],
+      "method": "先确认使用场景，再决定交付形态：阅读页与演示页标准不同。",
+      "boundary": "",
+      "box": [
+        3220,
+        7140,
+        850,
+        790
+      ]
+    },
+    {
+      "id": "P1",
+      "title": "试作不合适，先纠正用途与选材",
+      "nodes": [
+        "PA",
+        "PB",
+        "PC",
+        "PD"
+      ],
+      "user": "拒绝用错素材、堆文字和硬塞阅读网页。",
+      "ai": "经历课件与视觉候选试作，按反馈调整方向。",
+      "output": "被放弃的试作与更明确的现场用途。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0b362-6510-7212-b628-bb9e584521ae.md",
+          "messages": [
+            32,
+            41,
+            45,
+            47
+          ]
+        },
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0b339-ea7f-7f31-b8f6-662a3edc3059.md",
+          "messages": [
+            10,
+            15
+          ]
+        }
+      ],
+      "method": "先确认这份内容给谁看、在哪用；用途不对，继续改字号也无济于事。",
+      "boundary": "",
+      "box": [
+        100,
+        8600,
+        1100,
+        790
+      ]
+    },
+    {
+      "id": "P2",
+      "title": "重新选定十页，并把规范真正用上",
+      "nodes": [
+        "PE",
+        "PF"
+      ],
+      "user": "只采用附件 1–10 页；要求全局参数落到页面。",
+      "ai": "导入底稿，提取通用参数，再应用到实际页面。",
+      "output": "新的十页起点与共同设计依据。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0bc49-6328-7882-abff-5887d5db5079.md",
+          "messages": [
+            1,
+            4,
+            9,
+            10,
+            12,
+            13,
+            19
+          ]
+        }
+      ],
+      "method": "讨论规则、保存规则、产物遵守规则，是三件分别检查的事。",
+      "boundary": "外部底稿完整生成过程不齐；不把早期其他候选误认成这份附件。",
+      "box": [
+        1570,
+        8600,
+        1100,
+        790
+      ]
+    },
+    {
+      "id": "P3",
+      "title": "先确认一个视频页，再复用到第二段",
+      "nodes": [
+        "PG"
+      ],
+      "user": "第一个视频页可用后，要求同样布局和逻辑。",
+      "ai": "沿用机制图、视频、进度条；替换内容与时间点。",
+      "output": "两段内容不同、播放方式一致的视频页。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0bc49-6328-7882-abff-5887d5db5079.md",
+          "messages": [
+            29,
+            54,
+            55,
+            57
+          ]
+        }
+      ],
+      "method": "先验证一页，再扩展；明确相同部分与需要替换的部分。",
+      "boundary": "",
+      "box": [
+        3080,
+        8600,
+        990,
+        790
+      ]
+    },
+    {
+      "id": "P4",
+      "title": "八组案例，各用三页讲清差异",
+      "nodes": [
+        "PH"
+      ],
+      "user": "每组先 A，再 B，再双图对照；原文不能省。",
+      "ai": "按已确认结构扩展，并修切页闪烁与加载时序。",
+      "output": "八组 × 三页 = 24 页地形案例。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0bc49-6328-7882-abff-5887d5db5079.md",
+          "messages": [
+            58,
+            62,
+            63,
+            68,
+            82,
+            86,
+            92,
+            93
+          ]
+        }
+      ],
+      "method": "样板可复用；每组原文、事件和演示含义仍需逐项核对。",
+      "boundary": "",
+      "box": [
+        100,
+        9630,
+        1330,
+        900
+      ]
+    },
+    {
+      "id": "P5",
+      "title": "投入章节：先比较三套分镜，再试交互",
+      "nodes": [
+        "PI"
+      ],
+      "user": "要三种十二格方向；原型使用已有真实任务。",
+      "ai": "比较数据地图、工作台、路径图，并制作可操作原型。",
+      "output": "可试用的章节原型；首版仍被否定并重做。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0bc49-6328-7882-abff-5887d5db5079.md",
+          "messages": [
+            96,
+            102,
+            103,
+            109,
+            110
+          ]
+        }
+      ],
+      "method": "图片比较表达方向；原型检验操作方式。两种检查不能互相代替。",
+      "boundary": "",
+      "box": [
+        1760,
+        9630,
+        2310,
+        900
+      ]
+    },
+    {
+      "id": "P6",
+      "title": "调整控制方式，同时保留满意的表现",
+      "nodes": [
+        "PJ"
+      ],
+      "user": "手动翻页但保留过渡；标签可隐藏，缩放要保留。",
+      "ai": "改触发方式，处理标签、点位边界与新增页编辑。",
+      "output": "逐页可讲的交互章节，以及需要逐项核对的修改。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0bc49-6328-7882-abff-5887d5db5079.md",
+          "messages": [
+            112,
+            116,
+            117,
+            125,
+            126,
+            156
+          ]
+        },
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0c158-8585-71e2-a817-a58f4996ef74.md",
+          "messages": [
+            4,
+            9,
+            14,
+            20,
+            21
+          ]
+        }
+      ],
+      "method": "一条修改要求同时说清“改什么”和“保留什么”，再按状态检查。",
+      "boundary": "部分边界与格式项在历史盘点中仍是建议，不全部写成已修复；页面内编辑不等于自动保存文件。",
+      "box": [
+        100,
+        10820,
+        1730,
+        1070
+      ]
+    },
+    {
+      "id": "P7",
+      "title": "检查整场讲述，补过渡，再按选定图重建",
+      "nodes": [
+        "PK",
+        "PL"
+      ],
+      "user": "指出 36 / 37 页缺过渡，多轮比较后选回参考图。",
+      "ai": "补讲述衔接，按选定图重建第 37 页 HTML。",
+      "output": "左右布局的知识过渡页与可编辑文字。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0c158-8585-71e2-a817-a58f4996ef74.md",
+          "messages": [
+            37,
+            38,
+            46,
+            47,
+            53,
+            56,
+            62,
+            72,
+            74
+          ]
+        }
+      ],
+      "method": "局部能用之后，检查整场的铺垫、转折与收束；实现围绕最后的明确选择。",
+      "boundary": "下面右图是9月21日历史渲染。图标与像素并非完全一致；可操作与持久化能力不能仅凭截图确认。",
+      "box": [
+        2210,
+        10820,
+        1860,
+        1300
+      ]
+    },
+    {
+      "id": "P8",
+      "title": "形成 44 页阶段版本：材料真正汇合成一场讲述",
+      "nodes": [
+        "PM"
+      ],
+      "user": "逐页检查格式、播放与可编辑性，再检查章节交接。",
+      "ai": "把选定材料合并到同一套网页 PPT，持续修正。",
+      "output": "9 月 21 日的 44 页阶段课件；不等同最终全量验收。",
+      "sources": [
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0bc49-6328-7882-abff-5887d5db5079.md",
+          "messages": [
+            1,
+            54,
+            68,
+            125,
+            126,
+            131
+          ]
+        },
+        {
+          "file": "Course/PPT课程制作复盘/对话数据/Codex/01a0c158-8585-71e2-a817-a58f4996ef74.md",
+          "messages": [
+            9,
+            14,
+            37,
+            46,
+            74
+          ]
+        }
+      ],
+      "method": "页数增长只统计同一条已采用版本；最后分别检查内容、操作和整场讲述。",
+      "boundary": "页数以9月22日采集核对记录为依据；此图只复盘历史，不宣称所有建议均已修复。",
+      "box": [
+        100,
+        12540,
+        3970,
+        1110
+      ]
+    }
+  ],
+  "sourceNodes": {
+    "TA": "原文概念、案例与已有地形网页",
+    "TB": "让 AI 逐项调整路径、停顿和文字",
+    "TC": "用户检查动画因果",
+    "TD": "纠正：语义先塑形，小球随后移动",
+    "TE": "继续完善其他机制与地形素材",
+    "TF": "尝试改造页面",
+    "TG": "回退并限定修改范围",
+    "TH": "接入 PPT：完整对话＋运行控制",
+    "TI": "展开为 A、B、双图对照",
+    "TJ": "发现动画与原文错配",
+    "TK": "要求 AI 完整研究原网页和八组对话",
+    "TL": "分别重建 A/B 时间线，再交给课件",
+    "VA": "找到 3Blue1Brown 参考视频",
+    "VB": "讨论借鉴方式与制作范围",
+    "VC": "第一段：查源码与素材",
+    "VD": "限定到 6:59，先做 480p",
+    "VE": "播放检查：指出预测词提前出现等问题",
+    "VF": "第二段：先整理 AI 输入输出文章",
+    "VG": "纠正案例带偏主题",
+    "VH": "生图比较方向，用连续分镜展开变化",
+    "VI": "选择 C，修改并保存视觉基准",
+    "VJ": "交接图片、提示词和镜头要求",
+    "VK": "代码制作与视频渲染",
+    "VL": "按时间点指出缺失、消失和断裂",
+    "VM": "选定视频与字幕交给 PPT",
+    "WA": "已有文章、视频、地形与讨论决策",
+    "WB": "让 AI 接续材料，组织七篇课程",
+    "WC": "完善正文、配图和统一阅读网页",
+    "WD": "盘点新旧版本，整理目录与引用",
+    "WE": "整理后是否保住已有成果？",
+    "WF": "要求找回正式网站",
+    "WG": "核对源码与构建产物，恢复导航、搜索和目录",
+    "WH": "回查原任务与 Git，恢复选定稿",
+    "WI": "核对正文、图片与交互的对应",
+    "WJ": "阅读网页与 PPT 分开，保留已有 UI",
+    "WK": "正文供阅读，选定材料交给课件",
+    "PA": "文章、视频、地形对话与投入图表",
+    "PB": "让 AI 试做课件和视觉候选",
+    "PC": "样稿适合现场讲吗？",
+    "PD": "纠正用途，拒绝或撤销试作",
+    "PE": "重新选定十页底稿",
+    "PF": "提取全局设计参数，并应用到实际页面",
+    "PG": "确认一个视频页，再复用到第二段",
+    "PH": "接入八组地形，每组三页",
+    "PI": "投入章节：比较分镜，试用交互原型",
+    "PJ": "调整翻页、动画、点位与标签",
+    "PK": "选定过渡页生图，重建 HTML",
+    "PL": "检查章节交接、讲述逻辑与播放",
+    "PM": "形成当前 44 页阶段版本"
+  },
+  "originalEdges": [
+    {
+      "from": "TA",
+      "to": "TB",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "T1",
+      "toScene": "T1"
+    },
+    {
+      "from": "TB",
+      "to": "TC",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "T1",
+      "toScene": "T2"
+    },
+    {
+      "from": "TC",
+      "to": "TD",
+      "label": "小球走过才出现沟壑",
+      "kind": "flow",
+      "fromScene": "T2",
+      "toScene": "T2"
+    },
+    {
+      "from": "TD",
+      "to": "TB",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "T2",
+      "toScene": "T1"
+    },
+    {
+      "from": "TC",
+      "to": "TE",
+      "label": "认可表达",
+      "kind": "flow",
+      "fromScene": "T2",
+      "toScene": "T3"
+    },
+    {
+      "from": "TE",
+      "to": "TF",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "T3",
+      "toScene": "T3"
+    },
+    {
+      "from": "TF",
+      "to": "TG",
+      "label": "破坏原有设计",
+      "kind": "flow",
+      "fromScene": "T3",
+      "toScene": "T3"
+    },
+    {
+      "from": "TG",
+      "to": "TE",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "T3",
+      "toScene": "T3"
+    },
+    {
+      "from": "TF",
+      "to": "TH",
+      "label": "形成可用素材",
+      "kind": "flow",
+      "fromScene": "T3",
+      "toScene": "T4"
+    },
+    {
+      "from": "TH",
+      "to": "TI",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "T4",
+      "toScene": "T4"
+    },
+    {
+      "from": "TI",
+      "to": "TJ",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "T4",
+      "toScene": "T5"
+    },
+    {
+      "from": "TJ",
+      "to": "TK",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "T5",
+      "toScene": "T5"
+    },
+    {
+      "from": "TK",
+      "to": "TL",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "T5",
+      "toScene": "T5"
+    },
+    {
+      "from": "VA",
+      "to": "VB",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "V1",
+      "toScene": "V1"
+    },
+    {
+      "from": "VB",
+      "to": "VC",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "V1",
+      "toScene": "V1"
+    },
+    {
+      "from": "VC",
+      "to": "VD",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "V1",
+      "toScene": "V1"
+    },
+    {
+      "from": "VD",
+      "to": "VE",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "V1",
+      "toScene": "V2"
+    },
+    {
+      "from": "VE",
+      "to": "VD",
+      "label": "修正内容与镜头",
+      "kind": "flow",
+      "fromScene": "V2",
+      "toScene": "V1"
+    },
+    {
+      "from": "VB",
+      "to": "VF",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "V1",
+      "toScene": "V3"
+    },
+    {
+      "from": "VF",
+      "to": "VG",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "V3",
+      "toScene": "V3"
+    },
+    {
+      "from": "VG",
+      "to": "VH",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "V3",
+      "toScene": "V4"
+    },
+    {
+      "from": "VH",
+      "to": "VI",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "V4",
+      "toScene": "V4"
+    },
+    {
+      "from": "VI",
+      "to": "VJ",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "V4",
+      "toScene": "V5"
+    },
+    {
+      "from": "VJ",
+      "to": "VK",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "V5",
+      "toScene": "V6"
+    },
+    {
+      "from": "VK",
+      "to": "VL",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "V6",
+      "toScene": "V6"
+    },
+    {
+      "from": "VL",
+      "to": "VK",
+      "label": "返修",
+      "kind": "flow",
+      "fromScene": "V6",
+      "toScene": "V6"
+    },
+    {
+      "from": "VE",
+      "to": "VM",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "V2",
+      "toScene": "V7"
+    },
+    {
+      "from": "VL",
+      "to": "VM",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "V6",
+      "toScene": "V7"
+    },
+    {
+      "from": "WA",
+      "to": "WB",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "W1",
+      "toScene": "W1"
+    },
+    {
+      "from": "WB",
+      "to": "WC",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "W1",
+      "toScene": "W1"
+    },
+    {
+      "from": "WC",
+      "to": "WD",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "W1",
+      "toScene": "W2"
+    },
+    {
+      "from": "WD",
+      "to": "WE",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "W2",
+      "toScene": "W2"
+    },
+    {
+      "from": "WE",
+      "to": "WF",
+      "label": "正式网站变成简单页面",
+      "kind": "flow",
+      "fromScene": "W2",
+      "toScene": "W3"
+    },
+    {
+      "from": "WF",
+      "to": "WG",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "W3",
+      "toScene": "W3"
+    },
+    {
+      "from": "WE",
+      "to": "WH",
+      "label": "第六篇选错版本",
+      "kind": "flow",
+      "fromScene": "W2",
+      "toScene": "W3"
+    },
+    {
+      "from": "WG",
+      "to": "WI",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "W3",
+      "toScene": "W4"
+    },
+    {
+      "from": "WH",
+      "to": "WI",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "W3",
+      "toScene": "W4"
+    },
+    {
+      "from": "WI",
+      "to": "WJ",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "W4",
+      "toScene": "W4"
+    },
+    {
+      "from": "WJ",
+      "to": "WK",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "W4",
+      "toScene": "W4"
+    },
+    {
+      "from": "PA",
+      "to": "PB",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "P1",
+      "toScene": "P1"
+    },
+    {
+      "from": "PB",
+      "to": "PC",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "P1",
+      "toScene": "P1"
+    },
+    {
+      "from": "PC",
+      "to": "PD",
+      "label": "素材错、文字多、网页外壳硬塞",
+      "kind": "flow",
+      "fromScene": "P1",
+      "toScene": "P1"
+    },
+    {
+      "from": "PD",
+      "to": "PE",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "P1",
+      "toScene": "P2"
+    },
+    {
+      "from": "PC",
+      "to": "PE",
+      "label": "选定底稿",
+      "kind": "flow",
+      "fromScene": "P1",
+      "toScene": "P2"
+    },
+    {
+      "from": "PE",
+      "to": "PF",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "P2",
+      "toScene": "P2"
+    },
+    {
+      "from": "PF",
+      "to": "PG",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "P2",
+      "toScene": "P3"
+    },
+    {
+      "from": "PG",
+      "to": "PH",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "P3",
+      "toScene": "P4"
+    },
+    {
+      "from": "PH",
+      "to": "PI",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "P4",
+      "toScene": "P5"
+    },
+    {
+      "from": "PI",
+      "to": "PJ",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "P5",
+      "toScene": "P6"
+    },
+    {
+      "from": "PJ",
+      "to": "PK",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "P6",
+      "toScene": "P7"
+    },
+    {
+      "from": "PK",
+      "to": "PL",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "P7",
+      "toScene": "P7"
+    },
+    {
+      "from": "PL",
+      "to": "PK",
+      "label": "发现缺口，按页修改",
+      "kind": "flow",
+      "fromScene": "P7",
+      "toScene": "P7"
+    },
+    {
+      "from": "PL",
+      "to": "PM",
+      "label": "",
+      "kind": "flow",
+      "fromScene": "P7",
+      "toScene": "P8"
+    },
+    {
+      "from": "TE",
+      "to": "WA",
+      "label": "地形素材进入课程整理",
+      "kind": "handoff",
+      "fromScene": "T3",
+      "toScene": "W1"
+    },
+    {
+      "from": "VM",
+      "to": "WA",
+      "label": "视频进入课程材料",
+      "kind": "handoff",
+      "fromScene": "V7",
+      "toScene": "W1"
+    },
+    {
+      "from": "WK",
+      "to": "PA",
+      "label": "选定文章与素材",
+      "kind": "handoff",
+      "fromScene": "W4",
+      "toScene": "P1"
+    },
+    {
+      "from": "VM",
+      "to": "PG",
+      "label": "视频与字幕接入视频页",
+      "kind": "handoff",
+      "fromScene": "V7",
+      "toScene": "P3"
+    },
+    {
+      "from": "WK",
+      "to": "TH",
+      "label": "完整教学对话供地形接入",
+      "kind": "handoff",
+      "fromScene": "W4",
+      "toScene": "T4"
+    },
+    {
+      "from": "TL",
+      "to": "PH",
+      "label": "校正后的地形对话页",
+      "kind": "handoff",
+      "fromScene": "T5",
+      "toScene": "P4"
+    }
+  ],
+  "drawnSceneConnections": [
+    {
+      "a": "T1",
+      "b": "T2",
+      "label": ""
+    },
+    {
+      "a": "T2",
+      "b": "T3",
+      "label": ""
+    },
+    {
+      "a": "T3",
+      "b": "T4",
+      "label": "进入 PPT 时，带着原文一起接入"
+    },
+    {
+      "a": "T4",
+      "b": "T5",
+      "label": ""
+    },
+    {
+      "a": "V1",
+      "b": "V2",
+      "label": ""
+    },
+    {
+      "a": "V1",
+      "b": "V3",
+      "label": "另一条支线：自己的输入输出视频"
+    },
+    {
+      "a": "V3",
+      "b": "V4",
+      "label": ""
+    },
+    {
+      "a": "V4",
+      "b": "V5",
+      "label": ""
+    },
+    {
+      "a": "V5",
+      "b": "V6",
+      "label": "按选定基准进入代码制作与渲染"
+    },
+    {
+      "a": "V6",
+      "b": "V7",
+      "label": ""
+    },
+    {
+      "a": "V2",
+      "b": "V7",
+      "label": ""
+    },
+    {
+      "a": "W1",
+      "b": "W2",
+      "label": ""
+    },
+    {
+      "a": "W2",
+      "b": "W3",
+      "label": "检查发现丢失"
+    },
+    {
+      "a": "W3",
+      "b": "W4",
+      "label": ""
+    },
+    {
+      "a": "P1",
+      "b": "P2",
+      "label": "选定新的底稿"
+    },
+    {
+      "a": "P2",
+      "b": "P3",
+      "label": ""
+    },
+    {
+      "a": "P3",
+      "b": "P4",
+      "label": "继续接入已经确认的材料"
+    },
+    {
+      "a": "P4",
+      "b": "P5",
+      "label": ""
+    },
+    {
+      "a": "P5",
+      "b": "P6",
+      "label": "从“看图”进入“实际操作”"
+    },
+    {
+      "a": "P6",
+      "b": "P7",
+      "label": ""
+    },
+    {
+      "a": "P7",
+      "b": "P8",
+      "label": "组合以后，再检查整场是否讲得通"
+    }
+  ],
+  "coverage": {
+    "originalNodes": 49,
+    "coveredNodes": 49,
+    "originalEdges": 59
+  },
+  "embeddedImages": 11
+}
