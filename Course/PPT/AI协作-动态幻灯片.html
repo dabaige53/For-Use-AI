@@ -310,6 +310,12 @@ body{font-family:Arial,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-s
 .tech-card .editable{position:static}
 .tech-card .name{margin-top:14px!important;font-size:36px;font-weight:700;line-height:1.3;color:var(--ink)}
 .tech-card .use{margin-top:16px!important;font-size:27px;line-height:1.55;color:var(--body)}
+
+.judge-ex{position:absolute;left:236px;top:20px;padding:4px 14px;border-radius:10px;background:var(--surface);border:1px solid #d6e6f5;font-size:22px;line-height:1.5;color:var(--ink);white-space:nowrap}
+.judge-ex::before{content:"例";display:inline-block;margin-right:10px;padding:0 8px;border-radius:6px;background:var(--accent);color:#fff;font-size:17px;line-height:1.6;vertical-align:2px}
+.review-slide .summary-row{height:136px}
+.review-slide .summary-row .head{font-size:34px}
+.review-slide .summary-row .sub{margin-top:6px!important;font-size:24px;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -446,11 +452,9 @@ body{font-family:Arial,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-s
 
 <section class="slide chapter-slide" data-page="5">
   <div class="editable brand-footer" style="left:72px;top:901px;width:200px;height:26px;font-size:18px;line-height:1.4;letter-spacing:1px;color:#536d90;">AI × WORK</div>
-  <div class="chapter-kicker">第 1 章 / 共 4 章</div>
   <div class="chapter-num" aria-hidden="true">01</div>
   <div class="editable chapter-title">大语言模型<br>简要说明</div>
   <div class="chapter-rule"></div>
-  <div class="chapter-progress" aria-hidden="true"><span class="on">01</span><span class="">02</span><span class="">03</span><span class="">04</span></div>
 </section>
 <section class="slide capability-slide" data-page="6">
  
@@ -511,11 +515,9 @@ body{font-family:Arial,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-s
 
 <section class="slide chapter-slide" data-page="9">
   <div class="editable brand-footer" style="left:72px;top:901px;width:200px;height:26px;font-size:18px;line-height:1.4;letter-spacing:1px;color:#536d90;">AI × WORK</div>
-  <div class="chapter-kicker">第 2 章 / 共 4 章</div>
   <div class="chapter-num" aria-hidden="true">02</div>
   <div class="editable chapter-title">输入与输出</div>
   <div class="chapter-rule"></div>
-  <div class="chapter-progress" aria-hidden="true"><span class="">01</span><span class="on">02</span><span class="">03</span><span class="">04</span></div>
 </section>
 <section class="slide" data-page="10">
  
@@ -584,11 +586,9 @@ body{font-family:Arial,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-s
 
 <section class="slide chapter-slide" data-page="13">
   <div class="editable brand-footer" style="left:72px;top:901px;width:200px;height:26px;font-size:18px;line-height:1.4;letter-spacing:1px;color:#536d90;">AI × WORK</div>
-  <div class="chapter-kicker">第 3 章 / 共 4 章</div>
   <div class="chapter-num" aria-hidden="true">03</div>
   <div class="editable chapter-title">偏差与优化</div>
   <div class="chapter-rule"></div>
-  <div class="chapter-progress" aria-hidden="true"><span class="">01</span><span class="">02</span><span class="on">03</span><span class="">04</span></div>
 </section>
 <section class="slide" data-page="14">
  
@@ -761,11 +761,9 @@ ls -al | grep &quot;\.log$&quot;
 
 <section class="slide chapter-slide" data-page="41">
   <div class="editable brand-footer" style="left:72px;top:901px;width:200px;height:26px;font-size:18px;line-height:1.4;letter-spacing:1px;color:#536d90;">AI × WORK</div>
-  <div class="chapter-kicker">第 4 章 / 共 4 章</div>
   <div class="chapter-num" aria-hidden="true">04</div>
   <div class="editable chapter-title">下一步投入多少，<br>由谁判断？</div>
   <div class="chapter-rule"></div>
-  <div class="chapter-progress" aria-hidden="true"><span class="">01</span><span class="">02</span><span class="">03</span><span class="on">04</span></div>
 </section>
 <section class="slide investment-page" data-page="42" data-investment="0"></section>
 <section class="slide investment-page" data-page="43" data-investment="1"></section>
@@ -835,22 +833,30 @@ ls -al | grep &quot;\.log$&quot;
 
  <div class="judgement" data-move="" style="left:72px;top:260px;width:704px;height:604px;">
    <div class="judge-row"><div class="icon-circle" style="width:120px;height:120px"><svg viewBox="0 0 24 24" width="68" height="68" aria-hidden="true"
-    fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></div><div class="editable judge-title" style="left:152px;top:16px;width:500px;height:48px;font-size:34px;font-weight:700;">方向</div><div class="editable judge-sub" style="left:152px;top:74px;width:504px;height:64px;font-size:28px;color:#314f75;">设定目标，把握优先级</div></div>
+    fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></div><div class="editable judge-title" style="left:152px;top:16px;width:500px;height:48px;font-size:34px;font-weight:700;">方向</div><div class="judge-ex">只做清理磁盘，证书先记下</div><div class="editable judge-sub" style="left:152px;top:74px;width:504px;height:64px;font-size:28px;color:#314f75;">设定目标，把握优先级</div></div>
    <div class="judge-row"><div class="icon-circle" style="width:120px;height:120px"><svg viewBox="0 0 24 24" width="68" height="68" aria-hidden="true"
-    fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 6h14M4 6l-3 7h6zM20 6l-3 7h6zM8 21h8"/></svg></div><div class="editable judge-title" style="left:152px;top:16px;width:500px;height:48px;font-size:34px;font-weight:700;">价值</div><div class="editable judge-sub" style="left:152px;top:74px;width:504px;height:64px;font-size:28px;color:#314f75;">权衡利弊，考虑长期影响</div></div>
+    fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 6h14M4 6l-3 7h6zM20 6l-3 7h6zM8 21h8"/></svg></div><div class="editable judge-title" style="left:152px;top:16px;width:500px;height:48px;font-size:34px;font-weight:700;">价值</div><div class="judge-ex">先做样稿，再决定做整套</div><div class="editable judge-sub" style="left:152px;top:74px;width:504px;height:64px;font-size:28px;color:#314f75;">权衡利弊，考虑长期影响</div></div>
    <div class="judge-row"><div class="icon-circle" style="width:120px;height:120px"><svg viewBox="0 0 24 24" width="68" height="68" aria-hidden="true"
-    fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-4 2-6 6-6s6 2 6 6z"/><circle cx="17" cy="9" r="2"/><path d="M15 15c3 0 5 1.8 5 5"/></svg></div><div class="editable judge-title" style="left:152px;top:16px;width:500px;height:48px;font-size:34px;font-weight:700;">责任</div><div class="editable judge-sub" style="left:152px;top:74px;width:504px;height:64px;font-size:28px;color:#314f75;">对结果负责，考虑风险</div></div>
+    fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-4 2-6 6-6s6 2 6 6z"/><circle cx="17" cy="9" r="2"/><path d="M15 15c3 0 5 1.8 5 5"/></svg></div><div class="editable judge-title" style="left:152px;top:16px;width:500px;height:48px;font-size:34px;font-weight:700;">责任</div><div class="judge-ex">先核对前提，再给结论</div><div class="editable judge-sub" style="left:152px;top:74px;width:504px;height:64px;font-size:28px;color:#314f75;">对结果负责，考虑风险</div></div>
    <div class="judge-row"><div class="icon-circle" style="width:120px;height:120px"><svg viewBox="0 0 24 24" width="68" height="68" aria-hidden="true"
-    fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21S4 16 4 9a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 7-6 12-6 12z"/></svg></div><div class="editable judge-title" style="left:152px;top:16px;width:500px;height:48px;font-size:34px;font-weight:700;">意义</div><div class="editable judge-sub" style="left:152px;top:74px;width:504px;height:64px;font-size:28px;color:#314f75;">结合人的经验，做出最终判断</div></div>
+    fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21S4 16 4 9a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 7-6 12-6 12z"/></svg></div><div class="editable judge-title" style="left:152px;top:16px;width:500px;height:48px;font-size:34px;font-weight:700;">意义</div><div class="judge-ex">选定“贾维斯”这个参照</div><div class="editable judge-sub" style="left:152px;top:74px;width:504px;height:64px;font-size:28px;color:#314f75;">结合人的经验，做出最终判断</div></div>
  </div>
 
- <div class="editable handwrite" style="left:887px;top:166px;width:330px;height:150px;font-size:46px;line-height:1.25;font-family:cursive;transform:rotate(-5deg);color:#101b2b;text-align:center;">Same Tools<br>A Brighter You</div>
- <div class="scribble-line" style="left:970px;top:332px;width:170px;transform:rotate(-12deg)"></div>
 
  <div class="black-panel" data-move style="right:0;bottom:0;width:478px;height:277px;">
    <div class="editable black-text" style="left:115px;top:50px;width:315px;height:110px;font-size:35px;line-height:1.55;color:#fff;font-weight:600;">与 AI 一起，<br>探索更大的可能</div>
    <div class="white-rule" style="left:322px;top:190px;width:70px"></div>
  </div>
+</section>
+<section class="slide summary-slide review-slide" data-page="53">
+  <div class="editable brand-footer" style="left:72px;top:901px;width:200px;height:26px;font-size:18px;line-height:1.4;letter-spacing:1px;color:#536d90;">AI × WORK</div>
+  <div class="editable title" style="left:72px;width:1528px;height:72px;top:72px;">课程回顾与问答</div>
+  <div class="rule" style="left:72px;top:163px;width:76px;height:3px;"></div>
+  <div class="summary-row" style="top:200px;"><div class="num">01</div><div><div class="editable head">它在预测下一个词，而不是在查证事实</div><div class="editable sub">01 大语言模型简要说明</div></div></div>
+  <div class="summary-row" style="top:336px;"><div class="num">02</div><div><div class="editable head">模型看到的远不止你那句话；发出请求不等于已经执行</div><div class="editable sub">02 输入与输出</div></div></div>
+  <div class="summary-row" style="top:472px;"><div class="num">03</div><div><div class="editable head">跑偏不可避免，用八个表达方法每一轮把它拉回来</div><div class="editable sub">03 偏差与优化</div></div></div>
+  <div class="summary-row" style="top:608px;"><div class="num">04</div><div><div class="editable head">先取得依据，再扩大投入；方向和责任始终在人</div><div class="editable sub">04 下一步投入多少，由谁判断</div></div></div>
+  <div class="bottom-banner" style="left:72px;top:796px;width:1528px;height:91px;"><div class="editable banner-text" style="left:32px;top:16px;width:1464px;height:57px;">欢迎提问，也欢迎课后把你改写过的请求发给我。</div></div>
 </section>
 
 
@@ -878,7 +884,7 @@ ls -al | grep &quot;\.log$&quot;
   investmentFrame.title='行动选择与投入控制';
   investmentFrame.style.cssText='position:absolute;inset:0;width:1672px;height:941px;border:0;z-index:10;visibility:hidden;background:white';
   const investmentReady=new Promise(resolve=>investmentFrame.addEventListener('load',resolve,{once:true}));
-  investmentFrame.src='../06-行动选择与投入控制/交互/投入决策-交互原型.html?embedded=1';
+  investmentFrame.src='../06-行动选择与投入控制/交互/投入决策-交互原型.html?embedded=1&v=20261008b';
   document.getElementById('deck').append(investmentFrame);
   addEventListener('message',event=>{if(event.source!==investmentFrame.contentWindow||event.data?.type!=='investment-nav')return;show(index+(event.data.direction<0?-1:1));});
 

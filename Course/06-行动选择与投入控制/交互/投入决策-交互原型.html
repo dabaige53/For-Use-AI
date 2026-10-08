@@ -304,24 +304,40 @@ const nodes = content.tasks.map(d => {
   return node;
 });
 
+// Break request text at commas when possible and keep closing punctuation on the previous line.
+function wrapRequest(value, max) {
+  const lines = [];
+  let rest = value;
+  while (rest.length > max) {
+    let cut = -1;
+    for (let k = max; k >= 4; k--) if ('，、：'.includes(rest[k - 1])) { cut = k; break; }
+    if (cut < 0) cut = Math.ceil(rest.length / Math.ceil(rest.length / max));
+    while (cut < rest.length && '。，、：？！）”'.includes(rest[cut])) cut++;
+    lines.push(rest.slice(0, cut));
+    rest = rest.slice(cut);
+  }
+  if (rest) lines.push(rest);
+  return lines;
+}
+
 function background() {
   bg.replaceChildren();
   if (page === 0) {
     const legendItems = [
       { name: '探索（低依据·低投入）', color: '#526dad', x: 72 },
-      { name: '轻量交付（高依据·低投入）', color: '#47796e', x: 330 },
-      { name: '深度建设（高依据·高投入）', color: '#9b793b', x: 590 },
-      { name: '高暴露（低依据·高投入）', color: '#aa645b', x: 850 }
+      { name: '轻量交付（高依据·低投入）', color: '#47796e', x: 340 },
+      { name: '深度建设（高依据·高投入）', color: '#9b793b', x: 620 },
+      { name: '高暴露（低依据·高投入）', color: '#aa645b', x: 900 }
     ];
     legendItems.forEach(item => {
-      bg.append(el('circle', { cx: item.x, cy: 840, r: 4.5, fill: item.color }));
-      bg.append(el('text', { x: item.x + 12, y: 844, 'font-size': 13, fill: '#64748b' }, item.name));
+      bg.append(el('circle', { cx: item.x, cy: 840, r: 6, fill: item.color }));
+      bg.append(el('text', { x: item.x + 12, y: 846, 'font-size': 18, fill: '#536d90' }, item.name));
     });
     cats.forEach((c, i) => {
       const x=62+i*249;
       bg.append(el('rect',{x,y:210,width:233,height:595,rx:16,fill:i%2===0?'#f0f5fb':'#f4f8fb'}));
       bg.append(el('rect',{x:x+16,y:230,width:4,height:24,rx:2,fill:'#7898bd'}));
-      bg.append(el('text',{x:x+30,y:251,'font-size':20,'font-weight':600},c));
+      bg.append(el('text',{x:x+30,y:252,'font-size':24,'font-weight':600},c));
       bg.append(el('line',{x1:x+16,y1:267,x2:x+217,y2:267,stroke:'#dce6f1'}));
     });
 
@@ -373,7 +389,7 @@ function update() {
     const isSequence = (page === 6 && sequence.includes(d.id));
 
     if (page === 0) {
-      labelStates.set(id, { visible: true, tx: 10, ty: 0, anchor: 'start', fontSize: 15, fontWeight: '400', fill: '#252b30', isWrapped: true, opacity: 1 });
+      labelStates.set(id, { visible: true, tx: 10, ty: 0, anchor: 'start', fontSize: 19, fontWeight: '400', fill: '#252b30', isWrapped: true, opacity: 1 });
     } else if (page === 1) {
       const fontSize = 16;
       const w = d.text.length * fontSize * 0.95;
@@ -462,10 +478,9 @@ function update() {
     text.setAttribute('dominant-baseline',page===0?'central':'auto');
 
     if (ls.isWrapped) {
-      const chars = 14;
-      for (let j = 0; j < d.text.length; j += chars) {
-        text.append(el('tspan', { x: 10, dy: j === 0 ? 0 : 18 }, d.text.slice(j, j + chars)));
-      }
+      wrapRequest(d.text, 11).forEach((line, j) => {
+        text.append(el('tspan', { x: 10, dy: j === 0 ? 0 : 24 }, line));
+      });
       text.style.opacity = '1';
     } else {
       text.textContent = d.text;
@@ -689,14 +704,14 @@ function renderScatter(){
  const px=v=>(150+(v-xr[0])/(xr[1]-xr[0])*1370)*scale,py=v=>(790-(v-yr[0])/(yr[1]-yr[0])*580)*scale;
  const inside=d=>px(d.alignment)>158*scale&&px(d.alignment)<1512*scale&&py(d.investment)>218*scale&&py(d.investment)<782*scale;
  const zones=[['高暴露风险',-6,50,50,106,'#f2f6fb'],['深度建设',50,50,106,106,'#f1f8f4'],['探索',-6,-6,50,50,'#fcf7eb'],['轻量交付',50,-6,106,50,'#fcf3f3']];
- const occupied=zones.filter(([,x,y,x2,y2])=>x2>xr[0]&&x<xr[1]&&y2>yr[0]&&y<yr[1]).map(([,x,y,x2,y2])=>({x:Math.max(150*scale,px(x))+8*scale,y:Math.max(210*scale,py(y2))+8*scale,width:130*scale,height:34*scale}));
- const placements=new Map(),measure=document.createElement('canvas').getContext('2d');measure.font=`19px Arial, PingFang SC, sans-serif`;
+ const occupied=zones.filter(([,x,y,x2,y2])=>x2>xr[0]&&x<xr[1]&&y2>yr[0]&&y<yr[1]).map(([,x,y,x2,y2])=>({x:Math.max(150*scale,px(x))+8*scale,y:Math.max(210*scale,py(y2))+8*scale,width:160*scale,height:40*scale}));
+ const placements=new Map(),measure=document.createElement('canvas').getContext('2d');measure.font=`22px Arial, PingFang SC, sans-serif`;
  const pointBoxes=content.tasks.filter(inside).map(d=>({x:px(d.alignment)-6*scale,y:py(d.investment)-6*scale,width:12*scale,height:12*scale}));
  const overlaps=(a,b)=>a.x<b.x+b.width+3*scale&&a.x+a.width+3*scale>b.x&&a.y<b.y+b.height+3*scale&&a.y+a.height+3*scale>b.y;
  content.tasks.filter(d=>inside(d)&&(page===1||active.includes(d.id))).sort((a,b)=>b.investment-a.investment||a.alignment-b.alignment).forEach(d=>{
-   const x=px(d.alignment),y=py(d.investment),width=(measure.measureText(d.shortLabel).width+8)*scale,height=24*scale;
+   const x=px(d.alignment),y=py(d.investment),width=(measure.measureText(d.shortLabel).width+8)*scale,height=28*scale;
    const candidates=[];
-   for(const dy of [0,-28,28,-56,56,-84,84,-112,112])for(const dx of [12,-width/scale-12,-width/scale/2])candidates.push({x:x+dx*scale,y:y+dy*scale-height/2,width,height});
+   for(const dy of [0,-32,32,-64,64,-96,96,-128,128])for(const dx of [12,-width/scale-12,-width/scale/2])candidates.push({x:x+dx*scale,y:y+dy*scale-height/2,width,height});
    const place=candidates.find(r=>r.x>=158*scale&&r.x+r.width<=1512*scale&&r.y>=218*scale&&r.y+r.height<=782*scale&&!occupied.some(b=>overlaps(r,b))&&!pointBoxes.some(b=>overlaps(r,b)));
    if(place){occupied.push(place);placements.set(d.id,{...place,point:[x,y]});}
  });
@@ -706,8 +721,8 @@ function renderScatter(){
  dataZoom:[{id:'zoom-x',type:'inside',xAxisIndex:0,filterMode:'filter',minSpan:12,zoomOnMouseWheel:true,moveOnMouseMove:true,moveOnMouseWheel:false,preventDefaultMouseMove:true},
  {id:'zoom-y',type:'inside',yAxisIndex:0,filterMode:'filter',minSpan:12,zoomOnMouseWheel:true,moveOnMouseMove:true,moveOnMouseWheel:false,preventDefaultMouseMove:true}],
  series:[{id:'requests',type:'scatter',symbolSize:8*scale,clip:true,
- markArea:{silent:true,label:{show:true,position:'insideTopLeft',distance:12*scale,color:'#6d8097',fontSize:17*scale},itemStyle:{borderWidth:2,borderColor:'#fff'},data:zones.map(([name,x,y,x2,y2,color])=>[{name:labelText(name),xAxis:x,yAxis:y,itemStyle:{color}},{xAxis:x2,yAxis:y2}])},
- label:{show:true,formatter:p=>content.tasks[Number(p.data.id)].shortLabel,color:'#314f75',fontFamily:'Arial, PingFang SC, sans-serif',fontSize:19*scale,lineHeight:24*scale,distance:8*scale,position:'right',padding:0},
+ markArea:{silent:true,label:{show:true,position:'insideTopLeft',distance:12*scale,color:'#6d8097',fontSize:22*scale},itemStyle:{borderWidth:2,borderColor:'#fff'},data:zones.map(([name,x,y,x2,y2,color])=>[{name:labelText(name),xAxis:x,yAxis:y,itemStyle:{color}},{xAxis:x2,yAxis:y2}])},
+ label:{show:true,formatter:p=>content.tasks[Number(p.data.id)].shortLabel,color:'#314f75',fontFamily:'Arial, PingFang SC, sans-serif',fontSize:22*scale,lineHeight:28*scale,distance:8*scale,position:'right',padding:0},
  labelLine:{show:true,lineStyle:{color:'#8da4b2',width:1,opacity:.6}},
  labelLayout:params=>{
    const p=placements.get(content.tasks[params.dataIndex].id);
