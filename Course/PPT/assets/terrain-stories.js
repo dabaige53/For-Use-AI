@@ -55,7 +55,7 @@ window.terrainStories = {
         "seconds": 8.71,
         "turn": 3,
         "end": 66,
-        "label": "40GB",
+        "label": "82GB",
         "field": [
           1,
           0.15,
@@ -789,16 +789,16 @@ window.terrainStories = {
     ]
   },
   "anneal-a": {
-    "duration": 21.93,
+    "duration": 18.28,
     "route": false,
     "kind": null,
     "events": [
       {
         "at": 0,
-        "seconds": 6.5,
+        "seconds": 5.12,
         "turn": 0,
-        "end": 35,
-        "label": "具体的行动步骤",
+        "end": 25,
+        "label": "给我一个活动方案",
         "field": [
           1,
           0,
@@ -809,11 +809,11 @@ window.terrainStories = {
         "position": 0.35
       },
       {
-        "at": 6.5,
-        "seconds": 12.43,
+        "at": 5.12,
+        "seconds": 11.16,
         "turn": 1,
-        "end": 118,
-        "label": "能加个微信吗",
+        "end": 96,
+        "label": "致辞·节目·抽奖",
         "field": [
           1,
           1,
@@ -826,15 +826,15 @@ window.terrainStories = {
     ]
   },
   "anneal-b": {
-    "duration": 77.65,
+    "duration": 58.06,
     "route": true,
     "kind": null,
     "events": [
       {
         "at": 0,
-        "seconds": 11.21,
+        "seconds": 8.78,
         "turn": 0,
-        "end": 101,
+        "end": 68,
         "label": "先不要",
         "field": [
           1,
@@ -846,11 +846,11 @@ window.terrainStories = {
         "position": 0.12
       },
       {
-        "at": 11.21,
-        "seconds": 26.29,
+        "at": 8.78,
+        "seconds": 16.77,
         "turn": 1,
-        "end": 312,
-        "label": "5 种",
+        "end": 162,
+        "label": "5 个方向",
         "field": [
           1,
           0,
@@ -861,11 +861,11 @@ window.terrainStories = {
         "position": 0.35
       },
       {
-        "at": 37.5,
-        "seconds": 9.29,
+        "at": 25.55,
+        "seconds": 7.85,
         "turn": 2,
-        "end": 74,
-        "label": "茶水间",
+        "end": 57,
+        "label": "预算·两小时·远程",
         "field": [
           1,
           0,
@@ -876,11 +876,11 @@ window.terrainStories = {
         "position": 0.62
       },
       {
-        "at": 46.79,
-        "seconds": 8.79,
+        "at": 33.4,
+        "seconds": 7.59,
         "turn": 3,
-        "end": 67,
-        "label": "求助式破冰",
+        "end": 54,
+        "label": "颁奖礼＋时间胶囊",
         "field": [
           1,
           0,
@@ -891,11 +891,11 @@ window.terrainStories = {
         "position": 0.8
       },
       {
-        "at": 55.58,
-        "seconds": 19.07,
+        "at": 40.99,
+        "seconds": 15.07,
         "turn": 3,
-        "end": 278,
-        "label": "谢了",
+        "end": 196,
+        "label": "留 5000 元机动",
         "field": [
           1,
           0,
