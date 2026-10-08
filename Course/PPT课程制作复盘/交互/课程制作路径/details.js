@@ -4,9 +4,9 @@ let data, lastTrigger;
 const dialog=document.createElement('dialog');dialog.id='detail-dialog';dialog.setAttribute('aria-labelledby','detail-title');
 dialog.innerHTML='<div class="detail-head"><h2 id="detail-title"></h2><button class="detail-close" aria-label="关闭弹窗">×</button></div><div class="detail-scroll"><div class="record-view"></div></div>';
 document.getElementById('viewport').append(dialog);
-let anchor;
+let anchor,resizing=false;
 function placeCard(){
- if(!dialog.open||!anchor)return;
+ if(!dialog.open||!anchor||resizing)return;
  const viewport=document.getElementById('viewport'),v=viewport.getBoundingClientRect(),r=anchor.getBoundingClientRect();
  const w=dialog.offsetWidth,h=dialog.offsetHeight;
  let x=r.right-v.left+14;if(x+w>v.width-12)x=r.left-v.left-w-14;
@@ -16,6 +16,29 @@ function placeCard(){
 window.addEventListener('canvas-moved',placeCard);window.addEventListener('resize',placeCard);
 new ResizeObserver(placeCard).observe(dialog);
 const q=s=>dialog.querySelector(s);
+const resizeHandle=document.createElement('button');
+resizeHandle.className='detail-resize';resizeHandle.type='button';
+resizeHandle.setAttribute('aria-label','调整浮卡大小');resizeHandle.title='拖动调整大小，或使用方向键';
+resizeHandle.innerHTML='<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M9 12l3-3"/></svg>';
+dialog.append(resizeHandle);
+function sizeCard(width,height){
+ const viewport=document.getElementById('viewport');
+ dialog.classList.add('detail-sized');
+ dialog.style.width=Math.min(viewport.clientWidth-24,Math.max(280,width))+'px';
+ dialog.style.height=Math.min(viewport.clientHeight-24,Math.max(200,height))+'px';
+}
+resizeHandle.onpointerdown=e=>{
+ if(e.button!==0)return;e.preventDefault();e.stopPropagation();
+ const x=e.clientX,y=e.clientY,w=dialog.offsetWidth,h=dialog.offsetHeight;
+ resizing=true;resizeHandle.setPointerCapture(e.pointerId);
+ resizeHandle.onpointermove=event=>sizeCard(w+event.clientX-x,h+event.clientY-y);
+};
+resizeHandle.onpointerup=e=>{resizeHandle.releasePointerCapture(e.pointerId);};
+resizeHandle.onlostpointercapture=()=>{resizing=false;resizeHandle.onpointermove=null;placeCard();};
+resizeHandle.onkeydown=e=>{
+ const delta={ArrowLeft:[-20,0],ArrowRight:[20,0],ArrowUp:[0,-20],ArrowDown:[0,20]}[e.key];
+ if(!delta)return;e.preventDefault();sizeCard(dialog.offsetWidth+delta[0],dialog.offsetHeight+delta[1]);placeCard();
+};
 q('.detail-close').onclick=()=>dialog.close();
 dialog.addEventListener('click',e=>{if(e.target!==dialog)return;const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();});
 dialog.addEventListener('close',()=>{window.dispatchEvent(new Event('detail-closed'));document.querySelectorAll('[data-detail]').forEach(n=>n.setAttribute('aria-expanded','false'));lastTrigger?.focus({preventScroll:true});});
