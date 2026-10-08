@@ -316,6 +316,8 @@ body{font-family:Arial,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-s
 .review-slide .summary-row{height:136px}
 .review-slide .summary-row .head{font-size:34px}
 .review-slide .summary-row .sub{margin-top:6px!important;font-size:24px;color:var(--muted)}
+
+:fullscreen #fullscreen-toggle,:-webkit-full-screen #fullscreen-toggle{opacity:0;pointer-events:none}
 </style>
 </head>
 <body>
@@ -345,6 +347,7 @@ body{font-family:Arial,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-s
    }
   }catch{status.textContent='当前浏览器未能进入全屏，请在独立浏览器中打开课件后重试。';}
  });
+ document.addEventListener('keydown',e=>{if(e.key!=='f'&&e.key!=='F')return;if(e.target.isContentEditable||/^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName))return;e.preventDefault();button.click();});
  document.addEventListener('fullscreenchange',sync);
  document.addEventListener('webkitfullscreenchange',sync);
 })();
@@ -884,7 +887,7 @@ ls -al | grep &quot;\.log$&quot;
   investmentFrame.title='行动选择与投入控制';
   investmentFrame.style.cssText='position:absolute;inset:0;width:1672px;height:941px;border:0;z-index:10;visibility:hidden;background:white';
   const investmentReady=new Promise(resolve=>investmentFrame.addEventListener('load',resolve,{once:true}));
-  investmentFrame.src='../06-行动选择与投入控制/交互/投入决策-交互原型.html?embedded=1&v=20261008b';
+  investmentFrame.src='../06-行动选择与投入控制/交互/投入决策-交互原型.html?embedded=1&v=20261008c';
   document.getElementById('deck').append(investmentFrame);
   addEventListener('message',event=>{if(event.source!==investmentFrame.contentWindow||event.data?.type!=='investment-nav')return;show(index+(event.data.direction<0?-1:1));});
 

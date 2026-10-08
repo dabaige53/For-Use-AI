@@ -335,7 +335,7 @@ function background() {
     });
     cats.forEach((c, i) => {
       const x=62+i*249;
-      bg.append(el('rect',{x,y:210,width:233,height:595,rx:16,fill:i%2===0?'#f0f5fb':'#f4f8fb'}));
+      bg.append(el('rect',{x,y:210,width:233,height:610,rx:16,fill:i%2===0?'#f0f5fb':'#f4f8fb'}));
       bg.append(el('rect',{x:x+16,y:230,width:4,height:24,rx:2,fill:'#7898bd'}));
       bg.append(el('text',{x:x+30,y:252,'font-size':24,'font-weight':600},c));
       bg.append(el('line',{x1:x+16,y1:267,x2:x+217,y2:267,stroke:'#dce6f1'}));
@@ -383,7 +383,7 @@ function update() {
 
   for (const id of layoutOrder) {
     const d = content.tasks[id];
-    const p = (page === 0) ? [72 + d.cat * 249, 300 + (catCounts[d.cat]++) * (465 / Math.max(1,content.tasks.filter(t=>t.cat===d.cat).length-1))] : xy(d);
+    const p = (page === 0) ? [72 + d.cat * 249, 292 + (catCounts[d.cat]++) * (488 / Math.max(1,content.tasks.filter(t=>t.cat===d.cat).length-1))] : xy(d);
     const active = s.active.includes(d.id);
     const isCurrent = (page === 6 && d.id === current);
     const isSequence = (page === 6 && sequence.includes(d.id));
@@ -479,7 +479,7 @@ function update() {
 
     if (ls.isWrapped) {
       wrapRequest(d.text, 11).forEach((line, j) => {
-        text.append(el('tspan', { x: 10, dy: j === 0 ? 0 : 24 }, line));
+        text.append(el('tspan', { x: 10, dy: j === 0 ? 0 : 22 }, line));
       });
       text.style.opacity = '1';
     } else {
@@ -493,7 +493,7 @@ function update() {
   content.tasks.forEach((d, i) => {
     let p = xy(d);
     if (page === 0) {
-      p = [72 + d.cat * 249, 300 + (curCatCounts[d.cat]++) * (465 / Math.max(1,content.tasks.filter(t=>t.cat===d.cat).length-1))];
+      p = [72 + d.cat * 249, 292 + (curCatCounts[d.cat]++) * (488 / Math.max(1,content.tasks.filter(t=>t.cat===d.cat).length-1))];
     }
     nodes[i].style.transform = 'translate(' + p[0] + 'px,' + p[1] + 'px)';
   });
