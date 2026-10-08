@@ -318,6 +318,32 @@ body{font-family:Arial,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-s
 .review-slide .summary-row .sub{margin-top:6px!important;font-size:24px;color:var(--muted)}
 
 :fullscreen #fullscreen-toggle,:-webkit-full-screen #fullscreen-toggle{opacity:0;pointer-events:none}
+
+.speaker-slide>*{translate:none!important}
+.speaker-slide .speaker-photo{font-size:20px}
+.speaker-slide .speaker-photo svg{width:110px;height:110px}
+.speaker-slide .speaker-name{font-size:44px!important}
+.speaker-slide .speaker-role{font-size:24px!important}
+.speaker-line{position:absolute;width:700px;white-space:nowrap;display:flex;gap:20px;font-size:23px;line-height:1.6;color:var(--body)}
+.speaker-line b{flex:0 0 150px;color:var(--accent);font-weight:600}
+.speaker-line .editable{position:static}
+.usage-stats{position:absolute;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.usage-stats>div{padding:16px 22px;border:1px solid var(--border);border-radius:14px;background:#fff}
+.usage-stats span{display:block;font-size:20px;color:var(--muted)}
+.usage-stats b{display:block;margin-top:4px;font-size:36px;line-height:1.2;color:var(--ink);font-variant-numeric:tabular-nums}
+.usage-heat{position:absolute;box-sizing:border-box;padding:20px 24px;border:1px solid var(--border);border-radius:16px;background:#fff}
+.usage-head{display:flex;justify-content:space-between;align-items:flex-start}
+.usage-head b{display:block;font-size:24px;color:var(--ink)}
+.usage-head span{display:block;margin-top:2px;font-size:19px;color:var(--muted)}
+.usage-tabs{display:flex;padding:4px;border-radius:10px;background:#f2f5f8}
+.usage-tabs button{border:0;background:none;padding:6px 16px;border-radius:7px;font:19px Arial,"PingFang SC",sans-serif;color:var(--body);cursor:pointer}
+.usage-tabs button[aria-pressed="true"]{background:#fff;color:var(--ink);box-shadow:0 1px 3px #08244c1f}
+.usage-grid{position:relative;margin-top:14px;height:228px}
+.usage-grid .m,.usage-grid .w{position:absolute;font-size:17px;color:var(--muted);white-space:nowrap}
+.usage-grid i{position:absolute;width:21px;height:21px;border-radius:5px}
+.l0{background:#eef1f4}.l1{background:#bfe1ea}.l2{background:#7fc0d2}.l3{background:#1597b8}.l4{background:#0d6e89}
+.usage-legend{position:absolute;right:24px;bottom:16px;display:flex;align-items:center;gap:6px;font-size:17px;color:var(--muted)}
+.usage-legend i{display:block;width:15px;height:15px;border-radius:4px}
 </style>
 </head>
 <body>
@@ -377,15 +403,26 @@ body{font-family:Arial,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-s
 </section>
 <section class="slide speaker-slide" data-page="2">
   <div class="editable brand-footer" style="left:72px;top:901px;width:200px;height:26px;font-size:18px;line-height:1.4;letter-spacing:1px;color:#536d90;">AI × WORK</div>
-  <div class="editable title" style="left:72px;top:122px;width:1528px;height:72px;">讲师介绍</div>
-  <div class="rule" style="left:72px;top:213px;width:76px;height:3px;"></div>
-  <div class="speaker-photo" style="left:72px;top:260px;width:440px;height:627px;"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4 21c1.2-4.2 4.3-6.3 8-6.3s6.8 2.1 8 6.3"/></svg>照片位置</div>
-  <div class="editable speaker-name" style="left:576px;top:260px;width:1024px;height:60px;">［姓名］</div>
-  <div class="editable speaker-role" style="left:576px;top:332px;width:1024px;height:44px;">［岗位］ · ［部门 / 团队］</div>
-  <div class="speaker-row" style="left:576px;top:420px;width:1024px;"><div class="label">日常工作</div><div class="editable">负责［工作内容］，经常需要［调研、写方案、做汇报］。</div></div>
-  <div class="speaker-row" style="left:576px;top:540px;width:1024px;"><div class="label">与 AI 协作</div><div class="editable">过去［时长］里，每天用 AI 做调研、写作、做 PPT 和写小脚本。</div></div>
-  <div class="speaker-row" style="left:576px;top:660px;width:1024px;"><div class="label">踩过的坑</div><div class="editable">［一次让 AI 越做越偏的经历，一句话说完。］</div></div>
-  <div class="bottom-banner" style="left:576px;top:796px;width:1024px;height:91px;"><div class="editable banner-text" style="left:32px;top:16px;width:960px;height:57px;">今天分享的方法，都来自这些真实的使用经历。</div></div>
+  <div class="editable title" style="left:72px;top:72px;width:1528px;height:72px;">讲师介绍</div>
+  <div class="rule" style="left:72px;top:163px;width:76px;height:3px;"></div>
+  <div class="speaker-photo" style="left:72px;top:204px;width:220px;height:264px;"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4 21c1.2-4.2 4.3-6.3 8-6.3s6.8 2.1 8 6.3"/></svg>照片位置</div>
+  <div class="editable speaker-name" style="left:332px;top:204px;width:600px;height:60px;">［姓名］</div>
+  <div class="editable speaker-role" style="left:332px;top:268px;width:600px;height:40px;">［岗位］ · ［部门 / 团队］</div>
+  <div class="speaker-line" style="left:332px;top:330px;"><b>日常工作</b><span class="editable">负责［工作内容］，常做调研、方案和汇报。</span></div>
+  <div class="speaker-line" style="left:332px;top:376px;"><b>与 AI 协作</b><span class="editable">一年里与 AI 协作 42 万次，下面是每天的用量。</span></div>
+  <div class="speaker-line" style="left:332px;top:422px;"><b>踩过的坑</b><span class="editable">［一次让 AI 越做越偏的经历，一句话说完。］</span></div>
+  <div class="usage-stats" style="left:1060px;top:204px;width:540px;">
+    <div><span>总成本</span><b data-usage="cost"></b></div>
+    <div><span>总请求数</span><b data-usage="requests"></b></div>
+    <div><span>消耗 Tokens</span><b data-usage="tokens"></b></div>
+    <div><span>缓存命中率</span><b data-usage="hit"></b></div>
+  </div>
+  <div class="usage-heat" style="left:72px;top:500px;width:1528px;height:380px;">
+    <div class="usage-head"><div><b>用量热力图</b><span>2025 年 10 月至今的每日用量 · 数据来自 CC Switch</span></div>
+      <div class="usage-tabs" role="tablist"><button type="button" data-metric="tokens" aria-pressed="true">Tokens</button><button type="button" data-metric="requests" aria-pressed="false">请求</button><button type="button" data-metric="cost" aria-pressed="false">成本</button></div></div>
+    <div class="usage-grid"></div>
+    <div class="usage-legend">少<i class="l0"></i><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i>多</div>
+  </div>
 </section>
 
 
@@ -887,7 +924,7 @@ ls -al | grep &quot;\.log$&quot;
   investmentFrame.title='行动选择与投入控制';
   investmentFrame.style.cssText='position:absolute;inset:0;width:1672px;height:941px;border:0;z-index:10;visibility:hidden;background:white';
   const investmentReady=new Promise(resolve=>investmentFrame.addEventListener('load',resolve,{once:true}));
-  investmentFrame.src='../06-行动选择与投入控制/交互/投入决策-交互原型.html?embedded=1&v=20261008c';
+  investmentFrame.src='../06-行动选择与投入控制/交互/投入决策-交互原型.html?embedded=1&v=20261008e';
   document.getElementById('deck').append(investmentFrame);
   addEventListener('message',event=>{if(event.source!==investmentFrame.contentWindow||event.data?.type!=='investment-nav')return;show(index+(event.data.direction<0?-1:1));});
 
@@ -1051,5 +1088,33 @@ document.querySelectorAll('.video-only').forEach(slide => {
  });
  function tick(now){items.forEach(item=>{if(item.playing){const dt=Math.min(.1,(now-item.last)/1000);item.last=now;item.time=Math.min(item.duration,item.time+item.speed*dt);if(item.time>=item.duration){item.playing=false;item.wantsPlay=false;}sync(item);}});requestAnimationFrame(tick);}
  window.addEventListener('deckchange',activate);activate();requestAnimationFrame(tick);
+})();
+</script><script>
+(() => {
+ const data={"start":"2025-10-01","tokens":[6111570,7390667,10428489,0,0,7269510,8848695,14964646,1579066,14820746,0,0,10472903,34445000,128985,45007736,19642692,0,0,14831919,28834233,496130,21859847,216987,0,0,47579296,35905098,66097110,73172558,54905310,0,0,79916353,110936478,1384383,93310411,131234273,0,51219296,15225948,5667998,82238526,27860662,367347,0,0,187858,3491348,104574239,43155345,6529233,0,0,10914564,162824181,62794133,40626400,11437882,14991236,0,20437734,9823270,35683014,129238250,94612170,0,0,73403281,28414102,22710532,117636818,55564617,74075961,86540726,3601635,92262107,4682058,110306581,11775444,0,0,127835797,67931118,7412050,84542055,121433394,0,0,17446,72328611,69144422,52236635,29514928,0,0,3746918,29731877,22957140,2531576,30094,0,0,29239269,24248265,24692782,2883186,28269449,0,0,29920357,17109540,26654896,23889462,16093073,0,0,16374610,15580934,24699850,14348685,30131555,0,0,28413322,21201756,49074,16660898,15820227,0,0,784142,572631,37670662,3626254,79628696,0,2147042,166983828,135314948,82743253,143987040,150967746,0,0,101602715,76913787,193025589,2419350,2743629,0,0,2970519,179795148,13739732,163702258,266397075,0,0,298957924,115091948,1447808,32542155,51421686,0,0,15461262,19475578,691509,90063789,513391408,0,0,649601626,49832258,85795144,38821158,546541995,0,0,24853287,240076250,184979268,231184460,165000144,49752458,0,527927739,135679155,127045694,78935424,34707614,0,765687,57409814,155243890,149277807,187039142,132418012,30640470,10156228,133950494,25351395,6383000,123002930,48684218,1774419,12608451,58956636,312086216,142515954,340669797,1017077862,0,0,963138971,653103647,219215482,309619305,275367399,152183266,0,92979303,95765166,106235530,98355170,54882568,419811,4339034,55474490,230156121,225075807,66203740,184034956,0,0,116909250,122503606,40557456,78766170,70937540,87230678,209965545,67013256,91048520,124361376,106639776,359564427,11783680,2900709,521640032,891171390,103705023,152321632,115451211,0,9424972,27225230,25631332,13378389,215280339,42464146,0,0,104780217,102556662,68265004,27535852,113480697,1779180,10022578,8397574,41642655,12774526,48593494,132566044,0,0,80632066,59270265,29696054,141440420,134820777,280271284,2725486,135747459,336700204,604947904,822234104,517507368,864322788,514667156,51402422,1222243204,186003740,297602853,90424970,1064320,881278,45381672,351563462,194250214,385552882,99239188,30541458,36813128,282694192,305431148,166510293,393133797,127614070,13856056,132463560,238305330,239709273,356703842,265200986,111678094,0,8532942,325473200,288674422,607897492,416881572,431081978,23252048,281751350,270521446,186207820,379045266,425275608,96774124,251508765,823139460,458770958,371020047,229788218,550375186,914623512,66009242,45723171,286894647,481998888,299913120,214739073,209751082,3144090,0,53784978,285769874,172474617,233589897,216055365,626234,56086818,198247384,192888171,134297049,103529540,2405234,0,0,2091799832,2140334366,688206,1156237426,1640705618,0,0,1806762,1261202512,42789,173221856],"requests":[46,54,87,0,0,60,83,124,56,244,0,0,90,478,18,365,184,0,0,118,224,34,198,26,0,0,388,272,581,595,464,0,0,594,911,58,818,1165,0,784,561,66,608,384,34,0,0,21,190,899,750,156,0,0,238,1361,505,694,231,390,0,354,222,408,927,882,0,0,699,504,396,892,528,598,777,72,762,111,1000,225,0,0,1042,496,108,688,1063,0,0,2,622,621,458,211,0,0,110,225,218,112,4,0,0,261,177,221,48,202,0,0,258,148,211,215,118,0,0,117,110,219,113,248,0,0,259,151,3,304,138,0,0,40,36,290,81,659,0,62,1560,1229,590,1165,1118,0,0,867,704,1605,56,68,0,0,82,1563,195,1538,2136,0,0,1329,1023,27,195,412,0,0,82,174,6,432,4598,0,0,4963,324,382,154,4349,0,0,176,1503,1136,1426,1536,376,0,4216,1020,1348,656,348,0,16,564,1377,1095,1467,1317,284,129,1106,207,105,976,423,27,141,540,2656,1191,2648,9590,0,0,8986,4639,1576,2344,2007,1110,0,850,897,795,864,626,3,84,591,2200,2036,676,1366,0,0,916,1065,567,861,1149,1455,1672,626,900,1228,1029,3273,104,30,5072,8262,1101,1293,1054,0,159,298,237,134,1654,186,0,0,544,837,586,231,918,30,108,76,308,98,448,920,0,0,454,566,300,1100,1281,1983,30,1258,2698,4794,6483,3928,6237,3792,368,8857,1527,2520,801,10,10,440,2643,1584,2820,832,189,252,1992,2336,1340,2907,1011,150,1024,1870,1942,2614,1694,916,0,45,1935,2607,5076,4308,3952,216,1866,2258,1830,3154,3417,892,2022,6250,3843,3218,1947,4257,5098,444,441,2734,4118,2914,2052,1826,39,0,681,2460,1521,1960,1988,16,490,1743,1768,1150,885,22,0,0,18477,18340,16,8221,15522,0,0,9,12068,2,2055],"cost":[4.47,5.4,7.62,0.0,0.0,5.31,6.47,10.94,0.64,4.29,0.0,0.0,7.65,6.81,0.09,32.89,14.35,0.0,0.0,10.84,21.07,0.25,15.97,0.11,0.0,0.0,34.77,26.24,48.3,53.47,40.12,0.0,0.0,58.4,81.06,0.78,68.18,95.9,0.0,14.64,5.75,1.46,60.09,6.26,0.34,0.0,0.0,0.13,1.8,76.41,12.2,1.99,0.0,0.0,3.14,118.98,45.89,11.42,4.35,5.64,0.0,5.14,3.18,7.58,94.44,69.14,0.0,0.0,53.64,7.65,5.9,85.96,40.6,18.05,25.22,1.27,67.42,1.13,80.6,4.15,0.0,0.0,93.41,49.64,1.87,61.78,88.73,0.0,0.0,0.02,52.85,50.53,38.17,21.57,0.0,0.0,1.05,21.73,16.78,1.15,0.02,0.0,0.0,21.37,17.72,18.04,1.36,20.66,0.0,0.0,21.86,12.5,19.48,17.46,11.76,0.0,0.0,11.97,11.39,18.05,10.48,22.02,0.0,0.0,20.76,15.49,0.07,5.86,4.04,0.0,0.0,0.35,0.2,27.53,1.46,58.19,0.0,0.81,122.02,98.88,60.46,105.21,110.32,0.0,0.0,74.24,22.85,141.05,1.11,1.18,0.0,0.0,1.79,131.38,7.21,56.22,137.76,0.0,0.0,146.48,62.01,0.89,24.87,30.03,0.0,0.0,13.42,15.21,0.96,50.09,375.15,0.0,0.0,474.68,33.38,68.27,24.08,399.37,0.0,0.0,10.7,100.56,101.53,69.17,90.14,19.12,0.0,385.77,71.89,75.61,48.72,12.39,0.0,0.26,25.01,87.32,71.84,83.01,62.95,13.81,4.76,56.56,11.43,3.04,46.82,44.26,2.67,10.39,62.01,265.27,118.94,289.87,743.2,0.0,0.0,703.79,477.24,192.71,261.76,248.97,123.89,0.0,94.41,86.27,92.34,92.6,32.03,1.14,5.01,59.65,209.31,200.7,73.66,165.84,0.0,0.0,106.18,100.77,44.18,72.85,88.86,93.81,154.8,63.73,91.33,113.42,97.34,304.97,14.07,2.97,267.05,696.86,107.09,195.96,134.21,0.0,10.39,24.49,24.66,12.79,197.62,42.52,0.0,0.0,22.37,88.12,78.02,27.15,112.7,2.34,16.3,9.7,45.25,15.36,68.51,307.71,0.0,0.0,99.77,84.9,42.22,134.66,135.36,215.58,3.56,124.36,278.49,428.46,559.1,363.68,589.59,350.96,46.23,893.12,128.23,249.03,62.93,3.43,2.19,31.29,266.56,113.13,293.14,61.32,12.21,13.99,214.08,115.21,116.1,252.05,120.46,13.14,100.4,187.69,157.34,234.92,122.15,81.92,0.0,6.89,196.59,203.91,414.0,307.93,254.54,15.93,160.12,188.23,134.52,227.72,284.02,74.69,161.57,534.64,326.32,245.8,168.77,352.18,250.41,0.47,7.37,59.64,414.67,347.32,275.93,182.75,10.13,0.0,95.36,323.52,249.52,254.58,183.95,1.31,96.23,282.59,253.0,171.69,132.1,4.16,0.0,0.0,1528.53,1563.99,1.62,844.89,1198.9,0.0,0.0,0.43,921.59,0.09,86.62],"cacheHit":0.944};
+ const slide=document.querySelector('.speaker-slide');if(!slide)return;
+ const sum=a=>a.reduce((x,y)=>x+y,0);
+ const fmtTok=v=>v>=1e9?(v/1e9).toFixed(1)+'B':v>=1e6?(v/1e6).toFixed(1)+'M':Math.round(v/1e3)+'K';
+ slide.querySelector('[data-usage="cost"]').textContent='$'+sum(data.cost).toLocaleString('en-US',{maximumFractionDigits:0});
+ slide.querySelector('[data-usage="requests"]').textContent=sum(data.requests).toLocaleString('en-US');
+ slide.querySelector('[data-usage="tokens"]').textContent=fmtTok(sum(data.tokens));
+ slide.querySelector('[data-usage="hit"]').textContent=(data.cacheHit*100).toFixed(1)+'%';
+ const grid=slide.querySelector('.usage-grid'),start=new Date(data.start+'T00:00:00');
+ const offset=(start.getDay()+6)%7,weeks=Math.ceil((data.tokens.length+offset)/7);
+ const left=64,pitchX=(1478-left)/weeks,pitchY=27,top=26;
+ ['周一','','周三','','周五','','周日'].forEach((t,r)=>{if(!t)return;const w=document.createElement('div');w.className='w';w.textContent=t;w.style.cssText=`left:0;top:${top+r*pitchY}px`;grid.append(w);});
+ const cells=data.tokens.map((_,i)=>{const n=i+offset,day=new Date(start);day.setDate(start.getDate()+i);
+  const c=document.createElement('i');c.style.left=left+Math.floor(n/7)*pitchX+'px';c.style.top=top+(n%7)*pitchY+'px';
+  if(day.getDate()===1||i===0){const m=document.createElement('div');m.className='m';m.textContent=(day.getMonth()+1)+'月';m.style.cssText=`left:${left+Math.floor(n/7)*pitchX}px;top:0`;grid.append(m);}
+  grid.append(c);return {c,day};});
+ function paint(metric){
+  const vals=data[metric],nz=vals.filter(v=>v>0).sort((a,b)=>a-b),q=f=>nz[Math.floor(f*(nz.length-1))];
+  const cuts=[q(.25),q(.5),q(.75)];
+  cells.forEach(({c,day},i)=>{const v=vals[i];c.className=v<=0?'l0':v<=cuts[0]?'l1':v<=cuts[1]?'l2':v<=cuts[2]?'l3':'l4';
+   c.title=`${day.getFullYear()}-${day.getMonth()+1}-${day.getDate()}：`+(metric==='tokens'?fmtTok(v)+' Tokens':metric==='cost'?'$'+v.toFixed(2):v+' 次请求');});
+  slide.querySelectorAll('.usage-tabs button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.metric===metric)));
+ }
+ slide.querySelectorAll('.usage-tabs button').forEach(b=>b.addEventListener('click',()=>paint(b.dataset.metric)));
+ paint('tokens');
 })();
 </script></body></html>

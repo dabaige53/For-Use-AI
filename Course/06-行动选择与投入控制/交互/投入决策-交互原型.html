@@ -715,7 +715,27 @@ function renderScatter(){
    const place=candidates.find(r=>r.x>=158*scale&&r.x+r.width<=1512*scale&&r.y>=218*scale&&r.y+r.height<=782*scale&&!occupied.some(b=>overlaps(r,b))&&!pointBoxes.some(b=>overlaps(r,b)));
    if(place){occupied.push(place);placements.set(d.id,{...place,point:[x,y]});}
  });
+ // Page 6 draws the decision paths between the four highlighted requests.
+ const pathEls=[];
+ if(page===6){
+  const ink='#1976f3',P=(x,y)=>[px(x),py(y)];
+  const curve=(from,to,ctrl,text,lx,ly,align)=>{
+   const [a,b,c]=[P(...from),P(...to),P(...ctrl)];
+   const pull=(p,q,d)=>{const l=Math.hypot(q[0]-p[0],q[1]-p[1])||1;return [p[0]+(q[0]-p[0])*d/l,p[1]+(q[1]-p[1])*d/l];};
+   const s0=pull(a,c,16*scale),e0=pull(b,c,18*scale),ux=(e0[0]-c[0]),uy=(e0[1]-c[1]),ul=Math.hypot(ux,uy)||1,u=[ux/ul,uy/ul],n=[-u[1],u[0]],h=14*scale,w=7*scale;
+   pathEls.push({type:'bezierCurve',shape:{x1:s0[0],y1:s0[1],x2:e0[0],y2:e0[1],cpx1:c[0],cpy1:c[1]},style:{stroke:ink,lineWidth:2.5*scale,lineDash:[8*scale,6*scale],fill:null},silent:true,z:5});
+   pathEls.push({type:'polygon',shape:{points:[e0,[e0[0]-u[0]*h+n[0]*w,e0[1]-u[1]*h+n[1]*w],[e0[0]-u[0]*h-n[0]*w,e0[1]-u[1]*h-n[1]*w]]},style:{fill:ink},silent:true,z:5});
+   const [tx,ty]=P(lx,ly);
+   pathEls.push({type:'text',x:tx,y:ty,style:{text:text,fill:ink,font:`600 ${21*scale}px Arial, PingFang SC, sans-serif`,align:align||'center',verticalAlign:'middle',backgroundColor:'rgba(255,255,255,.92)',padding:[3*scale,8*scale],borderRadius:6*scale},silent:true,z:6});
+  };
+  curve([20,30],[60,25],[40,14],'① 探索取得依据',40,15);
+  curve([60,25],[85,80],[62,62],'③ 双重前提才扩大',64.5,58,'right');
+  curve([10,75],[20,30],[30,58],'④ 依据不足速收缩',24.5,53,'left');
+  const [sx,sy]=P(60,25);
+  pathEls.push({type:'text',x:sx,y:sy+40*scale,style:{text:'② 满足用途即停止',fill:'#47796e',font:`600 ${21*scale}px Arial, PingFang SC, sans-serif`,align:'center',verticalAlign:'middle',backgroundColor:'rgba(255,255,255,.92)',padding:[3*scale,8*scale],borderRadius:6*scale},silent:true,z:6});
+ }
  scatterChart.setOption({animationDurationUpdate:450,animationEasingUpdate:'cubicOut',tooltip:{show:true,trigger:'item',confine:true,backgroundColor:'#fff',borderColor:'#dce6ef',textStyle:{fontSize:18,color:'#08244c'},formatter:p=>{const node=document.createElement('div');node.style.cssText='max-width:320px;white-space:normal;line-height:1.6';node.textContent=p.name;return node;},position:(pos,p,dom,rect,size)=>[Math.max(158*scale,Math.min(pos[0]+12,1512*scale-size.contentSize[0])),Math.max(218*scale,Math.min(pos[1]+12,782*scale-size.contentSize[1]))]},
+ graphic:[{id:'evidence-paths',type:'group',$action:'replace',children:pathEls}],
  grid:{left:'9.375%',right:'5%',top:'23.333%',bottom:'12.222%',containLabel:false},
  xAxis:{type:'value',min:-6,max:106,show:false},yAxis:{type:'value',min:-6,max:106,show:false},
  dataZoom:[{id:'zoom-x',type:'inside',xAxisIndex:0,filterMode:'filter',minSpan:12,zoomOnMouseWheel:true,moveOnMouseMove:true,moveOnMouseWheel:false,preventDefaultMouseMove:true},
