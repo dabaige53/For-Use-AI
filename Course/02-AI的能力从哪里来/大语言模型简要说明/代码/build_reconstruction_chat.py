@@ -8,6 +8,7 @@ import json
 import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
+from build_group_c import probe, decode
 
 
 ROOT = Path(__file__).resolve().parent
@@ -62,25 +63,6 @@ SCENES = {
 }
 
 
-def probe(path: Path) -> dict:
-    result = subprocess.run(
-        [
-            "ffprobe",
-            "-v",
-            "error",
-            "-show_entries",
-            "stream=codec_type,width,height,avg_frame_rate,nb_frames:format=duration",
-            "-of",
-            "json",
-            str(path),
-        ],
-        check=True,
-        capture_output=True,
-        text=True,
-    )
-    return json.loads(result.stdout)
-
-
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--scenes", nargs="*", choices=SCENES, default=list(SCENES))
@@ -128,10 +110,7 @@ def main():
             entry.update(status="failed", returncode=returncode)
         else:
             media = probe(target)
-            subprocess.run(
-                ["ffmpeg", "-v", "error", "-i", str(target), "-f", "null", "-"],
-                check=True,
-            )
+            decode(target)
             video = next(
                 stream for stream in media["streams"] if stream["codec_type"] == "video"
             )

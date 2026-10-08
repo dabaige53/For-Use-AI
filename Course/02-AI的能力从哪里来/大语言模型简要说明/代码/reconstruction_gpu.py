@@ -28,6 +28,12 @@ from manimlib import (  # noqa: E402
 
 
 class Parallelizability(InteractiveScene):
+    input_label = "Input"
+    output_label = "output"
+    gpu_label = "GPU"
+    text_kwargs = {}
+    gpu_text_kwargs = {}
+
     def construct(self):
         # Set up curves
         n_instances = 20
@@ -58,8 +64,8 @@ class Parallelizability(InteractiveScene):
         curves.set_submobject_colors_by_gradient(TEAL, BLUE)
 
         # Setup words
-        in_word = Text("Input")
-        out_word = Text("output")
+        in_word = Text(self.input_label, **self.text_kwargs)
+        out_word = Text(self.output_label, **self.text_kwargs)
         in_word.next_to(left_point, cast(Any, LEFT), SMALL_BUFF)
         out_word.next_to(right_point, cast(Any, RIGHT), SMALL_BUFF)
         self.add(comp_syms, in_word, out_word)
@@ -70,7 +76,7 @@ class Parallelizability(InteractiveScene):
         )
         gpu.set_width(1.5)
         gpu.next_to(comp_syms, cast(Any, UP))
-        gpu_name = Text("GPU")
+        gpu_name = Text(self.gpu_label, **self.gpu_text_kwargs)
         gpu_name.next_to(gpu, cast(Any, UP))
         gpu_name.set_fill(GREY_B)
         self.add(gpu, gpu_name)

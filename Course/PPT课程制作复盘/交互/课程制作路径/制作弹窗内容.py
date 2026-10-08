@@ -59,6 +59,10 @@ asset('reflection','制作方法与实际经历','Course/PPT课程制作复盘/P
 - 上一页的结果是否能自然引出下一页？
 ''')
 asset('speech','演讲编排练习模板',str((OUT/'演讲编排练习.md').relative_to(ROOT)),'text')
+asset('terrainOriginal','AI 时代的思维框架','资料库/AI时代的思维框架.md','text')
+asset('quadOriginal','先获得判断，再扩大投入','.trash/20260918-结构重构/资料库-旧结构/02-知识与原文/AI协作框架/ai_collaboration_framework.md','text')
+asset('animationCode','输入输出动画 · 场景代码','Course/03-信息输入与工具执行/AI的输入与输出/代码/scenes.py','text')
+asset('pageMap','课件页面与素材对应','Course/PPT课程制作复盘/页面与素材对应.md','text')
 N={}
 def node(k,summary,takeaway,assets):
  N[k]={'title':titles[k],'summary':summary,'takeaway':takeaway,'materials':assets.split()}

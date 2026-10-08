@@ -1,0 +1,1103 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2500 12840" width="2500" height="12840"><rect x="0" y="0" width="2500" height="12840" fill="white"/>
+<text x="80" y="114.0" font-family="Arial Unicode MS, sans-serif" font-size="54" fill="#263545">可复用的视觉表达组件</text>
+<text x="83" y="171.0" font-family="Arial Unicode MS, sans-serif" font-size="28" fill="#263545">22 类组合结构＋4 个布局变体  /  中性示例  /  拖入画布后替换内容</text>
+<rect x="80" y="218" width="570" height="124" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="100" y="264.0" font-family="Arial Unicode MS, sans-serif" font-size="27" fill="#263545">材料与动作</text>
+<text x="100" y="307.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">收集 · 协作 · 映射 · 标注</text>
+<rect x="685" y="218" width="570" height="124" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="705" y="264.0" font-family="Arial Unicode MS, sans-serif" font-size="27" fill="#263545">组织与变化</text>
+<text x="705" y="307.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">拆解 · 复用 · 对照 · 分镜</text>
+<rect x="1290" y="218" width="570" height="124" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="1310" y="264.0" font-family="Arial Unicode MS, sans-serif" font-size="27" fill="#263545">比较与关系</text>
+<text x="1310" y="307.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">时间 · 选择 · 并列 · 汇合</text>
+<rect x="1895" y="218" width="570" height="124" rx="12" fill="#ffe6cc" stroke="#ffe6cc" stroke-width="1.6"/>
+<text x="1915" y="264.0" font-family="Arial Unicode MS, sans-serif" font-size="27" fill="#263545">判断与交付</text>
+<text x="1915" y="307.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">确认 · 迭代 · 同步 · 打包</text>
+<text x="84" y="411.0" font-family="Arial Unicode MS, sans-serif" font-size="26" fill="#263545">先选要表达的关系，再挑组件；外观相近，不代表表达同一种意思。</text>
+<text x="84" y="454.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">蓝色＝主体内容  ·  紫色＝补充或变化  ·  绿色＝采用或输出  ·  黄色便签＝判断依据</text>
+<rect x="80" y="540" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="104" y="562" width="60" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="116" y="586.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">01</text>
+<text x="182" y="594.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">材料集合</text>
+<text x="108" y="640.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">有哪些输入？怎么分组？下一步能拿到什么？</text>
+<polyline points="108,662 1172,662" fill="none" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="108,1172 1172,1172" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="108" y="1217.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="183" y="1217.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">来源页＋图像缩略图＋分类容器＋交接标签</text>
+<text x="108" y="1265.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="183" y="1265.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">材料名称、媒体类型、分组依据、去向</text>
+<text x="108" y="1313.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="183" y="1313.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">多份材料尚无固定先后关系时使用。</text>
+<rect x="132" y="713" width="239" height="174" rx="0" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<rect x="127" y="708" width="239" height="174" rx="0" fill="white" stroke="#263545" stroke-width="1.6"/>
+<text x="139" y="741.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">文字材料</text>
+<polyline points="141,763 350,763" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="141,784 325,784" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="141,805 350,805" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="141,826 325,826" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<rect x="412" y="708" width="239" height="174" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="427" y="725" width="86.03999999999999" height="140" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="524.33,732 635.0,732" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="524.33,756 614.0,756" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="524.33,780 635.0,780" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<text x="428" y="920.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">图像材料</text>
+<rect x="708" y="713" width="239" height="174" rx="0" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<rect x="703" y="708" width="239" height="174" rx="0" fill="white" stroke="#263545" stroke-width="1.6"/>
+<text x="715" y="741.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">要求与约束</text>
+<polyline points="717,763 926,763" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="717,784 901,784" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="717,805 926,805" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="717,826 901,826" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<rect x="131" y="985" width="1001" height="123" rx="0" fill="#f7f9fc" stroke="#cbd4df" stroke-width="1.6"/>
+<text x="152" y="1023.0" font-family="Arial Unicode MS, sans-serif" font-size="24" fill="#263545">按用途归集</text>
+<rect x="155" y="1052" width="280" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="167" y="1076.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">内容依据</text>
+<rect x="478" y="1052" width="280" height="36" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="490" y="1076.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">视觉参考</text>
+<rect x="801" y="1052" width="280" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="813" y="1076.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">执行条件</text>
+<polyline points="247,925 247,978" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="241.78041359066523,967.1946347717678 247,978 252.21958640933477,967.1946347717678" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="531,925 531,978" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="525.7804135906653,967.1946347717678 531,978 536.2195864093347,967.1946347717678" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="828,925 828,978" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="822.7804135906653,967.1946347717678 828,978 833.2195864093347,967.1946347717678" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="980" y="719" width="157" height="150" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="976" y="714" width="157" height="150" rx="0" fill="#fff1ba" stroke="#263545" stroke-width="1.6"/>
+<text x="988" y="746.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">保留来源</text>
+<text x="988" y="772.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">说明用途</text>
+<text x="988" y="798.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">再交接</text>
+<rect x="1300" y="540" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="1324" y="562" width="60" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="1336" y="586.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">02</text>
+<text x="1402" y="594.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">用户 / AI / 产出阶段卡</text>
+<text x="1328" y="640.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">一次协作里，谁判断、谁执行、留下什么？</text>
+<polyline points="1328,662 2392,662" fill="none" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1328,1172 2392,1172" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="1328" y="1217.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="1403" y="1217.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">阶段标题＋产物预览＋三行分工＋判断便签</text>
+<text x="1328" y="1265.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="1403" y="1265.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">阶段名称、用户动作、AI动作、可见产物</text>
+<text x="1328" y="1313.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="1403" y="1313.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">解释一个阶段；多个阶段可横向连接。</text>
+<rect x="1467" y="706" width="676" height="409" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<rect x="1460" y="699" width="676" height="409" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<text x="1478" y="737.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">阶段：从要求到一份可查看的样例</text>
+<polyline points="1478,748 2118,748" fill="none" stroke="#d9eaff" stroke-width="1.6"/>
+<rect x="1483" y="773" width="240" height="147" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="1498" y="790" width="86.39999999999999" height="113" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1595.8,797 1707.0,797" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1595.8,821 1686.0,821" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1595.8,845 1707.0,845" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<text x="1754" y="817.0" font-family="Arial Unicode MS, sans-serif" font-size="24" fill="#263545">产物预览</text>
+<text x="1754" y="863.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">一张图 / 一段文字</text>
+<text x="1754" y="891.6" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">一个可操作样例</text>
+<polyline points="1482,943 2112,943" fill="none" stroke="#cad4df" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="1486" y="974.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">用户：</text>
+<text x="1580" y="974.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">提供要求，查看并作出判断</text>
+<polyline points="1482,989 2112,989" fill="none" stroke="#cad4df" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="1486" y="1020.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">AI：</text>
+<text x="1580" y="1020.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">依据要求生成样例</text>
+<polyline points="1482,1035 2112,1035" fill="none" stroke="#cad4df" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="1486" y="1066.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">产出：</text>
+<text x="1580" y="1066.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">可确认、可交接的一份结果</text>
+<rect x="2173" y="940" width="189" height="124" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="2169" y="935" width="189" height="124" rx="0" fill="#fff1ba" stroke="#263545" stroke-width="1.6"/>
+<text x="2181" y="967.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">判断依据</text>
+<text x="2181" y="993.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">放在结果旁边</text>
+<rect x="80" y="1440" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="104" y="1462" width="60" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="116" y="1486.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">03</text>
+<text x="182" y="1494.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">概念 → 图形映射</text>
+<text x="108" y="1540.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">抽象含义，分别用什么视觉变量来表达？</text>
+<polyline points="108,1562 1172,1562" fill="none" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="108,2072 1172,2072" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="108" y="2117.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="183" y="2117.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">含义列＋对应关系＋图形样本＋变量说明</text>
+<text x="108" y="2165.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="183" y="2165.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">概念、视觉符号、映射依据、参数</text>
+<text x="108" y="2213.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="183" y="2213.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">解释文字如何转成图形；每行对应一种关系。</text>
+<rect x="128" y="1633" width="232" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="140" y="1657.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">数量</text>
+<polyline points="380,1651 507,1651" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="496.1946347717679,1656.2195864093349 507,1651 496.1946347717679,1645.7804135906651" fill="none" stroke="#263545" stroke-width="1.6"/>
+<ellipse cx="558.0" cy="1655.0" rx="10.0" ry="10.0" fill="#e8dffc" stroke="#263545" stroke-width="1.6"/>
+<ellipse cx="659.0" cy="1655.0" rx="17.0" ry="17.0" fill="#e8dffc" stroke="#263545" stroke-width="1.6"/>
+<ellipse cx="761.0" cy="1655.0" rx="25.0" ry="25.0" fill="#e8dffc" stroke="#263545" stroke-width="1.6"/>
+<text x="905" y="1663.0" font-family="Arial Unicode MS, sans-serif" font-size="25" fill="#263545">大小</text>
+<rect x="128" y="1765" width="232" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="140" y="1789.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">类别</text>
+<polyline points="380,1783 507,1783" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="496.1946347717679,1788.2195864093349 507,1783 496.1946347717679,1777.7804135906651" fill="none" stroke="#263545" stroke-width="1.6"/>
+<ellipse cx="570.0" cy="1785.0" rx="21.0" ry="21.0" fill="#d9eaff" stroke="#263545" stroke-width="1.6"/>
+<ellipse cx="664.0" cy="1785.0" rx="21.0" ry="21.0" fill="#e8dffc" stroke="#263545" stroke-width="1.6"/>
+<ellipse cx="758.0" cy="1785.0" rx="21.0" ry="21.0" fill="#dbf2e5" stroke="#263545" stroke-width="1.6"/>
+<text x="905" y="1795.0" font-family="Arial Unicode MS, sans-serif" font-size="25" fill="#263545">颜色</text>
+<rect x="128" y="1897" width="232" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="140" y="1921.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">顺序</text>
+<polyline points="380,1915 507,1915" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="496.1946347717679,1920.2195864093349 507,1915 496.1946347717679,1909.7804135906651" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="526" y="1899" width="65" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="538" y="1923.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">1</text>
+<rect x="623" y="1899" width="65" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="635" y="1923.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">2</text>
+<rect x="720" y="1899" width="65" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="732" y="1923.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">3</text>
+<text x="905" y="1927.0" font-family="Arial Unicode MS, sans-serif" font-size="25" fill="#263545">位置</text>
+<rect x="133" y="2016" width="1006" height="48" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="129" y="2011" width="1006" height="48" rx="0" fill="#fff1ba" stroke="#263545" stroke-width="1.6"/>
+<text x="141" y="2043.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">一行讲清一种映射；复杂关系可以另接一个局部放大组件。</text>
+<rect x="1300" y="1440" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="1324" y="1462" width="60" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="1336" y="1486.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">04</text>
+<text x="1402" y="1494.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">界面标注与局部放大</text>
+<text x="1328" y="1540.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">读者该看哪里？点哪里？哪一个细节需要放大解释？</text>
+<polyline points="1328,1562 2392,1562" fill="none" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1328,2072 2392,2072" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="1328" y="2117.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="1403" y="2117.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">界面壳＋焦点框＋引线＋放大区＋操作提示</text>
+<text x="1328" y="2165.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="1403" y="2165.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">截图或线框、标注位置、操作动作、放大细节</text>
+<text x="1328" y="2213.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="1403" y="2213.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">适合解释按钮、参数和界面变化。</text>
+<rect x="1350" y="1610" width="652" height="376" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<polyline points="1350,1646 2002,1646" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<text x="1364" y="1635.0" font-family="Arial Unicode MS, sans-serif" font-size="18" fill="#263545">界面示例</text>
+<ellipse cx="1945.0" cy="1627.0" rx="3.0" ry="3.0" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<ellipse cx="1960.0" cy="1627.0" rx="3.0" ry="3.0" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<ellipse cx="1975.0" cy="1627.0" rx="3.0" ry="3.0" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<rect x="1377" y="1677" width="328" height="228" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="1392" y="1694" width="298" height="93.11999999999999" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1394,1834.32 1680,1834.32" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1394,1852.32 1650,1852.32" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<text x="1745" y="1717.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">显示密度</text>
+<polyline points="1744,1748 1954,1748" fill="none" stroke="#637084" stroke-width="1.6"/>
+<ellipse cx="1834.0" cy="1748.0" rx="9.0" ry="9.0" fill="#e8dffc" stroke="#263545" stroke-width="1.6"/>
+<rect x="1745" y="1828" width="198" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="1757" y="1852.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">应用</text>
+<rect x="1729" y="1678" width="241" height="95" rx="0" fill="none" stroke="#9375ba" stroke-width="1.6" stroke-dasharray="4 7"/>
+<polyline points="1977,1727 2069,1685" fill="none" stroke="#9375ba" stroke-width="1.6"/>
+<rect x="2090" y="1618" width="260" height="162" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="2109" y="1660.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">局部放大</text>
+<polyline points="2115,1721 2320,1721" fill="none" stroke="#263545" stroke-width="1.6"/>
+<ellipse cx="2216.0" cy="1721.0" rx="12.0" ry="12.0" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="2102" y="1850" width="250" height="117" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="2098" y="1845" width="250" height="117" rx="0" fill="#fff1ba" stroke="#263545" stroke-width="1.6"/>
+<text x="2110" y="1877.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">① 调整滑杆</text>
+<text x="2110" y="1903.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">② 查看变化</text>
+<text x="2110" y="1929.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">③ 确认应用</text>
+<rect x="80" y="2340" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="104" y="2362" width="60" height="36" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="116" y="2386.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">05</text>
+<text x="182" y="2394.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">整体拆解与分层</text>
+<text x="108" y="2440.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">一个整体由哪些部分组成？每一层承担什么作用？</text>
+<polyline points="108,2462 1172,2462" fill="none" stroke="#e8dffc" stroke-width="1.6"/>
+<polyline points="108,2972 1172,2972" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="108" y="3017.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="183" y="3017.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">整体预览＋拆解引线＋分层模块＋职责说明</text>
+<text x="108" y="3065.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="183" y="3065.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">整体对象、层次、组成部分、各层职责</text>
+<text x="108" y="3113.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="183" y="3113.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用于结构拆解；同层对象保持同级排布。</text>
+<rect x="130" y="2560" width="341" height="256" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="145" y="2577" width="122.75999999999999" height="222" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="290.27,2584 455.0,2584" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="290.27,2608 434.0,2608" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="290.27,2632 455.0,2632" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="204" y="2847" width="198" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="216" y="2871.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">整体对象</text>
+<rect x="638" y="2507" width="486" height="108" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="660" y="2546.0" font-family="Arial Unicode MS, sans-serif" font-size="25" fill="#263545">内容层</text>
+<text x="660" y="2589.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">信息与重点</text>
+<polyline points="484,2689 561,2689 561,2559 629,2559" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="618.1946347717678,2564.2195864093346 629,2559 618.1946347717678,2553.7804135906654" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="638" y="2649" width="486" height="108" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="660" y="2688.0" font-family="Arial Unicode MS, sans-serif" font-size="25" fill="#263545">表达层</text>
+<text x="660" y="2731.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">图像与布局</text>
+<polyline points="484,2689 561,2689 561,2701 629,2701" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="618.1946347717678,2706.2195864093346 629,2701 618.1946347717678,2695.7804135906654" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="638" y="2791" width="486" height="108" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="660" y="2830.0" font-family="Arial Unicode MS, sans-serif" font-size="25" fill="#263545">操作层</text>
+<text x="660" y="2873.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">动作与反馈</text>
+<polyline points="484,2689 561,2689 561,2843 629,2843" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="618.1946347717678,2848.2195864093346 629,2843 618.1946347717678,2837.7804135906654" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="1300" y="2340" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="1324" y="2362" width="60" height="36" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="1336" y="2386.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">06</text>
+<text x="1402" y="2394.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">共用规则与一对多复用</text>
+<text x="1328" y="2440.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">同一份规则，如何支持多个独立的实例？</text>
+<polyline points="1328,2462 2392,2462" fill="none" stroke="#e8dffc" stroke-width="1.6"/>
+<polyline points="1328,2972 2392,2972" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="1328" y="3017.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="1403" y="3017.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">共用规范＋虚线调用关系＋多个实例＋差异便签</text>
+<text x="1328" y="3065.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="1403" y="3065.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">可复用规则、使用对象、共用部分、独立内容</text>
+<text x="1328" y="3113.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="1403" y="3113.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">统一样式、方法或模板时使用。</text>
+<rect x="1602" y="2508" width="532" height="115" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<rect x="1595" y="2501" width="532" height="115" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<text x="1613" y="2539.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">共用规则</text>
+<polyline points="1613,2550 2109,2550" fill="none" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="1616" y="2587.0" font-family="Arial Unicode MS, sans-serif" font-size="24" fill="#263545">结构 / 样式 / 检查要求</text>
+<polyline points="1860,2623 1502,2700" fill="none" stroke="#9076ae" stroke-width="1.6" stroke-dasharray="4 7"/>
+<polyline points="1511.46623323829,2692.625013337077 1502,2700 1513.6613304541077,2702.8307900028262" fill="none" stroke="#9076ae" stroke-width="1.6"/>
+<rect x="1340" y="2710" width="323" height="163" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="1355" y="2727" width="116.28" height="129" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1491.81,2734 1647.0,2734" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1491.81,2758 1626.0,2758" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1491.81,2782 1647.0,2782" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="1395" y="2894" width="207" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="1407" y="2918.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">实例 A</text>
+<polyline points="1860,2623 1854,2700" fill="none" stroke="#9076ae" stroke-width="1.6" stroke-dasharray="4 7"/>
+<polyline points="1849.6356199807942,2688.8217985772326 1854,2700 1860.0432438504304,2689.6327822553862" fill="none" stroke="#9076ae" stroke-width="1.6"/>
+<rect x="1692" y="2710" width="323" height="163" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="1707" y="2727" width="293" height="61.919999999999995" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1709,2822.47 1990,2822.47" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1709,2840.47 1960,2840.47" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="1747" y="2894" width="207" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="1759" y="2918.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">实例 B</text>
+<polyline points="1860,2623 2206,2700" fill="none" stroke="#9076ae" stroke-width="1.6" stroke-dasharray="4 7"/>
+<polyline points="2194.318813676208,2702.7477056008343 2206,2700 2196.5865064030363,2692.557813607553" fill="none" stroke="#9076ae" stroke-width="1.6"/>
+<rect x="2044" y="2710" width="323" height="163" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<ellipse cx="2094.5" cy="2765.5" rx="32.5" ry="32.5" fill="#d9eaff" stroke="#263545" stroke-width="1.6"/>
+<polyline points="2144,2737 2349,2737" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="2144,2761 2349,2761" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="2144,2785 2349,2785" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="2099" y="2894" width="207" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="2111" y="2918.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">实例 C</text>
+<rect x="1352" y="2516" width="194" height="143" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="1348" y="2511" width="194" height="143" rx="0" fill="#fff1ba" stroke="#263545" stroke-width="1.6"/>
+<text x="1360" y="2543.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">固定：规则</text>
+<text x="1360" y="2569.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">变化：内容</text>
+<rect x="80" y="3240" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="104" y="3262" width="60" height="36" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="116" y="3286.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">07</text>
+<text x="182" y="3294.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">前后对照</text>
+<text x="108" y="3340.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">同一对象，改动之前与之后有什么可见区别？</text>
+<polyline points="108,3362 1172,3362" fill="none" stroke="#e8dffc" stroke-width="1.6"/>
+<polyline points="108,3872 1172,3872" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="108" y="3917.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="183" y="3917.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">同尺寸双画面＋变化箭头＋差异标记＋保留说明</text>
+<text x="108" y="3965.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="183" y="3965.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">前态、后态、变化点、保留部分</text>
+<text x="108" y="4013.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="183" y="4013.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">解释一次修改、一次整理或一次转换。</text>
+<text x="226" y="3430.0" font-family="Arial Unicode MS, sans-serif" font-size="26" fill="#263545">调整前</text>
+<rect x="127" y="3455" width="432" height="269" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="142" y="3472" width="155.51999999999998" height="235" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="330.03999999999996,3479 543.0,3479" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="330.03999999999996,3503 522.0,3503" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="330.03999999999996,3527 543.0,3527" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<text x="809" y="3430.0" font-family="Arial Unicode MS, sans-serif" font-size="26" fill="#263545">调整后</text>
+<rect x="710" y="3455" width="432" height="269" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="725" y="3472" width="402" height="112.8" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="727,3640.61 1117,3640.61" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="727,3658.61 1087,3658.61" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="579,3582 688,3582" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="677.1946347717678,3587.2195864093346 688,3582 677.1946347717678,3576.7804135906654" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="720" y="3502" width="399" height="64" rx="0" fill="none" stroke="#9076ae" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="142" y="3775" width="447" height="77" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="138" y="3770" width="447" height="77" rx="0" fill="#d9eaff" stroke="#263545" stroke-width="1.6"/>
+<text x="150" y="3802.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">保留：同一份信息内容</text>
+<rect x="714" y="3775" width="427" height="77" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="710" y="3770" width="427" height="77" rx="0" fill="#e8dffc" stroke="#263545" stroke-width="1.6"/>
+<text x="722" y="3802.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">变化：图文布局与层级</text>
+<rect x="1300" y="3240" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="1324" y="3262" width="60" height="36" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="1336" y="3286.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">08</text>
+<text x="1402" y="3294.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">连续状态 / 分镜</text>
+<text x="1328" y="3340.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">同一个对象，怎样经过几个状态发生变化？</text>
+<polyline points="1328,3362 2392,3362" fill="none" stroke="#e8dffc" stroke-width="1.6"/>
+<polyline points="1328,3872 2392,3872" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="1328" y="3917.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="1403" y="3917.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">连续画框＋状态编号＋稳定对象＋变化说明</text>
+<text x="1328" y="3965.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="1403" y="3965.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">状态数量、出现顺序、变化对象、镜头说明</text>
+<text x="1328" y="4013.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="1403" y="4013.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">表达展开、运动、增加或转化；可增减格数。</text>
+<rect x="1338" y="3431" width="240" height="273" rx="0" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="1351" y="3446" width="211" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="1363" y="3470.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">01  起点</text>
+<ellipse cx="1404.5" cy="3583.5" rx="24.5" ry="24.5" fill="#d9eaff" stroke="#263545" stroke-width="1.6"/>
+<text x="1358" y="3760.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">对象出现</text>
+<polyline points="1580,3571 1598,3571" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="1587.1946347717678,3576.2195864093346 1598,3571 1587.1946347717678,3565.7804135906654" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="1603" y="3431" width="240" height="273" rx="0" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="1616" y="3446" width="211" height="36" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="1628" y="3470.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">02  增加</text>
+<ellipse cx="1697.5" cy="3583.5" rx="24.5" ry="24.5" fill="#d9eaff" stroke="#263545" stroke-width="1.6"/>
+<rect x="1737" y="3593" width="56" height="56" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="1623" y="3760.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">加入新元素</text>
+<polyline points="1845,3571 1863,3571" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="1852.1946347717678,3576.2195864093346 1863,3571 1852.1946347717678,3565.7804135906654" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="1868" y="3431" width="240" height="273" rx="0" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="1881" y="3446" width="211" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="1893" y="3470.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">03  变化</text>
+<ellipse cx="1990.5" cy="3583.5" rx="24.5" ry="24.5" fill="#d9eaff" stroke="#263545" stroke-width="1.6"/>
+<rect x="2002" y="3593" width="56" height="56" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="1888" y="3760.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">对象移动</text>
+<polyline points="2110,3571 2128,3571" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="2117.194634771768,3576.2195864093346 2128,3571 2117.194634771768,3565.7804135906654" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="2133" y="3431" width="240" height="273" rx="0" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="2146" y="3446" width="211" height="36" rx="12" fill="#ffe6cc" stroke="#ffe6cc" stroke-width="1.6"/>
+<text x="2158" y="3470.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">04  结果</text>
+<ellipse cx="2283.5" cy="3583.5" rx="24.5" ry="24.5" fill="#d9eaff" stroke="#263545" stroke-width="1.6"/>
+<rect x="2267" y="3593" width="56" height="56" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<polyline points="2257,3575 2300,3608" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="2288.2502207359726,3605.5622372456232 2300,3608 2294.6057852492913,3597.2807440919046" fill="none" stroke="#263545" stroke-width="1.6"/>
+<text x="2153" y="3760.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">形成新状态</text>
+<rect x="1352" y="3807" width="1008" height="52" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="1348" y="3802" width="1008" height="52" rx="0" fill="#fff1ba" stroke="#263545" stroke-width="1.6"/>
+<text x="1360" y="3834.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">重复出现的对象保持颜色与形状一致，用位置、数量或状态表现变化。</text>
+<rect x="80" y="4140" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="104" y="4162" width="60" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="116" y="4186.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">09</text>
+<text x="182" y="4194.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">分层时间轨道</text>
+<text x="108" y="4240.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">多件事何时开始、持续多久、哪里同时发生？</text>
+<polyline points="108,4262 1172,4262" fill="none" stroke="#dbf2e5" stroke-width="1.6"/>
+<polyline points="108,4772 1172,4772" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="108" y="4817.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="183" y="4817.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">时间方向＋独立轨道＋持续区间＋同步标记</text>
+<text x="108" y="4865.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="183" y="4865.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">轨道名、时间刻度、开始结束、重叠关系</text>
+<text x="108" y="4913.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="183" y="4913.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">解释动画、制作安排或多项动作的配合。</text>
+<polyline points="277,4335 1111,4335" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="1100.1946347717678,4340.219586409335 1111,4335 1100.1946347717678,4329.780413590665" fill="none" stroke="#263545" stroke-width="1.6"/>
+<text x="893" y="4318.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">时间推进</text>
+<text x="122" y="4437.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">主体出现</text>
+<polyline points="281,4439 1120,4439" fill="none" stroke="#cbd2dc" stroke-width="1.6"/>
+<rect x="291" y="4404" width="330" height="63" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="122" y="4540.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">补充说明</text>
+<polyline points="281,4542 1120,4542" fill="none" stroke="#cbd2dc" stroke-width="1.6"/>
+<rect x="501" y="4507" width="439" height="63" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="122" y="4643.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">动作反馈</text>
+<polyline points="281,4645 1120,4645" fill="none" stroke="#cbd2dc" stroke-width="1.6"/>
+<rect x="766" y="4610" width="325" height="63" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<polyline points="774,4361 774,4699" fill="none" stroke="#9076ae" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="560" y="4719" width="427" height="47" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="556" y="4714" width="427" height="47" rx="0" fill="#fff1ba" stroke="#263545" stroke-width="1.6"/>
+<text x="568" y="4746.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">同一时刻：说明与反馈同时可见</text>
+<rect x="1300" y="4140" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="1324" y="4162" width="60" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="1336" y="4186.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">10</text>
+<text x="1402" y="4194.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">候选方案比较与选择</text>
+<text x="1328" y="4240.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">同一个目标有几种表达？比较后采用哪一个？</text>
+<polyline points="1328,4262 2392,4262" fill="none" stroke="#dbf2e5" stroke-width="1.6"/>
+<polyline points="1328,4772 2392,4772" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="1328" y="4817.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="1403" y="4817.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">等尺寸候选＋同一比较维度＋选择标记＋选择依据</text>
+<text x="1328" y="4865.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="1403" y="4865.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">候选数量、共同内容、比较维度、采用结果</text>
+<text x="1328" y="4913.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="1403" y="4913.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">视觉、布局或方案选择；选定后再接执行组件。</text>
+<text x="1391" y="4327.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">A  左右布局</text>
+<rect x="1340" y="4356" width="323" height="204" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="1355" y="4373" width="116.28" height="170" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1491.81,4380 1647.0,4380" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1491.81,4404 1626.0,4404" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1491.81,4428 1647.0,4428" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<text x="1371" y="4600.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">图文同时查看</text>
+<text x="1743" y="4327.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">B  上下布局</text>
+<rect x="1692" y="4356" width="323" height="204" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="1707" y="4373" width="293" height="81.6" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1709,4496.76 1990,4496.76" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1709,4514.76 1960,4514.76" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<text x="1723" y="4600.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">先图后文阅读</text>
+<rect x="1687" y="4350" width="333" height="217" rx="0" fill="none" stroke="#639a78" stroke-width="1.6"/>
+<rect x="1776" y="4626" width="177" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="1788" y="4650.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">示例采用 B</text>
+<text x="2095" y="4327.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">C  图标引导</text>
+<rect x="2044" y="4356" width="323" height="204" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<ellipse cx="2094.5" cy="4411.5" rx="32.5" ry="32.5" fill="#d9eaff" stroke="#263545" stroke-width="1.6"/>
+<polyline points="2144,4383 2349,4383" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="2144,4407 2349,4407" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="2144,4431 2349,4431" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<text x="2075" y="4600.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">重点快速定位</text>
+<rect x="1349" y="4697" width="1008" height="65" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="1345" y="4692" width="1008" height="65" rx="0" fill="#fff1ba" stroke="#263545" stroke-width="1.6"/>
+<text x="1357" y="4724.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">同一份信息，只比较表达方式；采用理由：符合所需阅读顺序。</text>
+<rect x="80" y="5040" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="104" y="5062" width="60" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="116" y="5086.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">11</text>
+<text x="182" y="5094.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">并列四格 / 案例墙</text>
+<text x="108" y="5140.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">几个同级对象，各有什么特点、用途或观点？</text>
+<polyline points="108,5162 1172,5162" fill="none" stroke="#dbf2e5" stroke-width="1.6"/>
+<polyline points="108,5672 1172,5672" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="108" y="5717.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="183" y="5717.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">同级小卡＋图文摘要＋独立便签；无顺序箭头</text>
+<text x="108" y="5765.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="183" y="5765.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">对象数量、标题、图像、特点、评价</text>
+<text x="108" y="5813.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="183" y="5813.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">分类、案例、能力或材料盘点；可扩成 3 / 6 格。</text>
+<rect x="118" y="5201" width="498" height="213" rx="12" fill="white" stroke="#263545" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="135" y="5239.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">案例 A</text>
+<rect x="136" y="5262" width="236" height="127" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="151" y="5279" width="84.96" height="93" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="246.92,5286 356.0,5286" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="246.92,5310 335.0,5310" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="246.92,5334 356.0,5334" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="404" y="5305" width="194" height="94" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="400" y="5300" width="194" height="94" rx="0" fill="#d9eaff" stroke="#263545" stroke-width="1.6"/>
+<text x="412" y="5332.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">突出信息</text>
+<rect x="650" y="5201" width="498" height="213" rx="12" fill="white" stroke="#263545" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="667" y="5239.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">案例 B</text>
+<rect x="668" y="5262" width="236" height="127" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="683" y="5279" width="206" height="44.64" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="685,5349.63 879,5349.63" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="685,5367.63 849,5367.63" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="936" y="5305" width="194" height="94" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="932" y="5300" width="194" height="94" rx="0" fill="#e8dffc" stroke="#263545" stroke-width="1.6"/>
+<text x="944" y="5332.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">补充解释</text>
+<rect x="118" y="5436" width="498" height="213" rx="12" fill="white" stroke="#263545" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="135" y="5474.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">案例 C</text>
+<rect x="136" y="5497" width="236" height="127" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<ellipse cx="186.5" cy="5552.5" rx="32.5" ry="32.5" fill="#d9eaff" stroke="#263545" stroke-width="1.6"/>
+<polyline points="236,5524 354,5524" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="236,5548 354,5548" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="236,5572 354,5572" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="404" y="5540" width="194" height="94" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="400" y="5535" width="194" height="94" rx="0" fill="#dbf2e5" stroke="#263545" stroke-width="1.6"/>
+<text x="412" y="5567.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">表达关系</text>
+<rect x="650" y="5436" width="498" height="213" rx="12" fill="white" stroke="#263545" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="667" y="5474.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">案例 D</text>
+<rect x="668" y="5497" width="236" height="127" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="683" y="5514" width="84.96" height="93" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="778.92,5521 888.0,5521" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="778.92,5545 867.0,5545" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="778.92,5569 888.0,5569" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="936" y="5540" width="194" height="94" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="932" y="5535" width="194" height="94" rx="0" fill="#ffe6cc" stroke="#263545" stroke-width="1.6"/>
+<text x="944" y="5567.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">提供操作</text>
+<rect x="1300" y="5040" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="1324" y="5062" width="60" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="1336" y="5086.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">12</text>
+<text x="1402" y="5094.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">多路汇合 / 分流</text>
+<text x="1328" y="5140.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">哪些工作并行推进？交接什么？在哪里形成共同结果？</text>
+<polyline points="1328,5162 2392,5162" fill="none" stroke="#dbf2e5" stroke-width="1.6"/>
+<polyline points="1328,5672 2392,5672" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="1328" y="5717.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="1403" y="5717.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">平行输入＋交接线＋汇合节点＋后续分流</text>
+<text x="1328" y="5765.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="1403" y="5765.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">分支数量、分支结果、汇合要求、后续去向</text>
+<text x="1328" y="5813.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="1403" y="5813.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">并行内容、素材组合、跨环节交接。</text>
+<rect x="1340" y="5218" width="277" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="1352" y="5242.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">文字结果</text>
+<polyline points="1627,5236 1698,5236 1698,5370 1771,5370" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="1760.1946347717678,5375.219586409335 1771,5370 1760.1946347717678,5364.780413590665" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="1340" y="5355" width="277" height="36" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="1352" y="5379.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">图像结果</text>
+<polyline points="1627,5373 1698,5373 1698,5370 1771,5370" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="1760.1946347717678,5375.219586409335 1771,5370 1760.1946347717678,5364.780413590665" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="1340" y="5492" width="277" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="1352" y="5516.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">交互结果</text>
+<polyline points="1627,5510 1698,5510 1698,5370 1771,5370" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="1760.1946347717678,5375.219586409335 1771,5370 1760.1946347717678,5364.780413590665" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="1796" y="5294" width="260" height="193" rx="12" fill="#ffe6cc" stroke="#ffe6cc" stroke-width="1.6"/>
+<rect x="1789" y="5287" width="260" height="193" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<text x="1807" y="5325.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">组合产物</text>
+<polyline points="1807,5336 2031,5336" fill="none" stroke="#ffe6cc" stroke-width="1.6"/>
+<rect x="1810" y="5357" width="215" height="101" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="1825" y="5374" width="77.39999999999999" height="67" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1911.05,5381 2009.0,5381" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1911.05,5405 1988.0,5405" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1911.05,5429 2009.0,5429" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="2060,5379 2101,5379 2101,5293 2153,5293" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="2142.194634771768,5298.219586409335 2153,5293 2142.194634771768,5287.780413590665" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="2167" y="5275" width="204" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="2179" y="5299.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">使用场景 A</text>
+<polyline points="2060,5379 2101,5379 2101,5501 2153,5501" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="2142.194634771768,5506.219586409335 2153,5501 2142.194634771768,5495.780413590665" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="2167" y="5483" width="204" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="2179" y="5507.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">使用场景 B</text>
+<text x="1402" y="5644.0" font-family="Arial Unicode MS, sans-serif" font-size="24" fill="#263545">多个输入</text>
+<text x="1821" y="5644.0" font-family="Arial Unicode MS, sans-serif" font-size="24" fill="#263545">共同汇合</text>
+<text x="2166" y="5644.0" font-family="Arial Unicode MS, sans-serif" font-size="24" fill="#263545">分别使用</text>
+<rect x="80" y="5940" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="104" y="5962" width="60" height="36" rx="12" fill="#ffe6cc" stroke="#ffe6cc" stroke-width="1.6"/>
+<text x="116" y="5986.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">13</text>
+<text x="182" y="5994.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">样例 → 确认 → 扩展</text>
+<text x="108" y="6040.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">先确认什么，才能继续批量应用或正式接入？</text>
+<polyline points="108,6062 1172,6062" fill="none" stroke="#ffe6cc" stroke-width="1.6"/>
+<polyline points="108,6572 1172,6572" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="108" y="6617.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="183" y="6617.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">小样预览＋确认依据＋采用箭头＋扩展结果</text>
+<text x="108" y="6665.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="183" y="6665.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">小样、确认条件、采用状态、扩展对象</text>
+<text x="108" y="6713.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="183" y="6713.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">原型确认、样式确认、内容接入之前使用。</text>
+<rect x="121" y="6201" width="300" height="210" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="136" y="6218" width="108.0" height="176" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="262.0,6225 405.0,6225" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="262.0,6249 384.0,6249" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="262.0,6273 405.0,6273" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="186" y="6436" width="223" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="198" y="6460.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">先做一份样例</text>
+<polyline points="435,6304 495,6304" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="484.1946347717679,6309.219586409335 495,6304 484.1946347717679,6298.780413590665" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="520" y="6191" width="283" height="243" rx="12" fill="#fff1ba" stroke="#fff1ba" stroke-width="1.6"/>
+<rect x="513" y="6184" width="283" height="243" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<text x="531" y="6222.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">确认依据</text>
+<polyline points="531,6233 778,6233" fill="none" stroke="#fff1ba" stroke-width="1.6"/>
+<text x="536" y="6277.0" font-family="Arial Unicode MS, sans-serif" font-size="24" fill="#263545">内容对得上</text>
+<text x="536" y="6308.2" font-family="Arial Unicode MS, sans-serif" font-size="24" fill="#263545">效果看得清</text>
+<text x="536" y="6339.4" font-family="Arial Unicode MS, sans-serif" font-size="24" fill="#263545">操作用得通</text>
+<polyline points="810,6304 868,6304" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="857.1946347717678,6309.219586409335 868,6304 857.1946347717678,6298.780413590665" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="909" y="6146" width="211" height="115" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="924" y="6163" width="75.96" height="81" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1008.17,6170 1104.0,6170" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1008.17,6194 1083.0,6194" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1008.17,6218 1104.0,6218" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="927" y="6222" width="211" height="115" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="942" y="6239" width="75.96" height="81" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1026.17,6246 1122.0,6246" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1026.17,6270 1101.0,6270" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1026.17,6294 1122.0,6294" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="945" y="6298" width="211" height="115" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="960" y="6315" width="75.96" height="81" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1044.17,6322 1140.0,6322" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1044.17,6346 1119.0,6346" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1044.17,6370 1140.0,6370" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="896" y="6459" width="248" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="908" y="6483.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">确认后再扩展</text>
+<rect x="1300" y="5940" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="1324" y="5962" width="60" height="36" rx="12" fill="#ffe6cc" stroke="#ffe6cc" stroke-width="1.6"/>
+<text x="1336" y="5986.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">14</text>
+<text x="1402" y="5994.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">正常反馈与迭代</text>
+<text x="1328" y="6040.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">看过结果后，依据什么调整，再回到哪里检查？</text>
+<polyline points="1328,6062 2392,6062" fill="none" stroke="#ffe6cc" stroke-width="1.6"/>
+<polyline points="1328,6572 2392,6572" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="1328" y="6617.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="1403" y="6617.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">产物预览＋具体观察＋调整项＋有目标的回返线</text>
+<text x="1328" y="6665.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="1403" y="6665.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">观察位置、预期变化、调整对象、回返位置</text>
+<text x="1328" y="6713.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="1403" y="6713.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">表达主路径中正常的试用和优化。</text>
+<rect x="1342" y="6125" width="460" height="287" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<polyline points="1342,6161 1802,6161" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<text x="1356" y="6150.0" font-family="Arial Unicode MS, sans-serif" font-size="18" fill="#263545">查看结果</text>
+<ellipse cx="1745.0" cy="6142.0" rx="3.0" ry="3.0" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<ellipse cx="1760.0" cy="6142.0" rx="3.0" ry="3.0" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<ellipse cx="1775.0" cy="6142.0" rx="3.0" ry="3.0" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<rect x="1367" y="6183" width="410" height="197" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="1382" y="6200" width="147.6" height="163" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1559.7,6207 1761.0,6207" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1559.7,6231 1740.0,6231" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1559.7,6255 1761.0,6255" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="1917" y="6141" width="432" height="105" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="1913" y="6136" width="432" height="105" rx="0" fill="#fff1ba" stroke="#263545" stroke-width="1.6"/>
+<text x="1925" y="6168.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">观察：补充说明不够醒目</text>
+<text x="1925" y="6194.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">预期：更容易被看见</text>
+<polyline points="1819,6238 1899,6194" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="1892.0475836446758,6203.780792750193 1899,6194 1887.0167505312472,6194.633823453049" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="1924" y="6328" width="414" height="83" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="1944" y="6370.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">调整：强化说明的视觉层级</text>
+<polyline points="2135,6251 2135,6321" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="2129.7804135906654,6310.194634771768 2135,6321 2140.2195864093346,6310.194634771768" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="2133,6424 2133,6507 1576,6507 1576,6420" fill="none" stroke="#9076ae" stroke-width="1.6" stroke-dasharray="4 7"/>
+<polyline points="1581.2195864093349,6430.805365228232 1576,6420 1570.7804135906651,6430.805365228232" fill="none" stroke="#9076ae" stroke-width="1.6"/>
+<text x="1737" y="6547.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">回到同一位置再次查看</text>
+<rect x="80" y="6840" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="104" y="6862" width="60" height="36" rx="12" fill="#ffe6cc" stroke="#ffe6cc" stroke-width="1.6"/>
+<text x="116" y="6886.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">15</text>
+<text x="182" y="6894.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">多轨同步对照</text>
+<text x="108" y="6940.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">同一步里，画面、解释和操作应该怎样对应？</text>
+<polyline points="108,6962 1172,6962" fill="none" stroke="#ffe6cc" stroke-width="1.6"/>
+<polyline points="108,7472 1172,7472" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="108" y="7517.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="183" y="7517.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">共同列序＋多条内容轨＋垂直对齐＋衔接提示</text>
+<text x="108" y="7565.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="183" y="7565.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">阶段、画面、文字说明、动作、其他对应项</text>
+<text x="108" y="7613.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="183" y="7613.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">演示安排、图文同步、讲述提示或操作指引。</text>
+<text x="118" y="7100.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">画面</text>
+<text x="118" y="7232.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">说明</text>
+<text x="118" y="7364.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">操作</text>
+<text x="311" y="7026.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">状态 1</text>
+<rect x="222" y="7046" width="290" height="104" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="237" y="7063" width="104.39999999999999" height="70" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="358.29999999999995,7070 496.0,7070" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="358.29999999999995,7094 475.0,7094" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="358.29999999999995,7118 496.0,7118" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="222" y="7180" width="290" height="81" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="248" y="7230.0" font-family="Arial Unicode MS, sans-serif" font-size="24" fill="#263545">解释主体</text>
+<rect x="222" y="7311" width="290" height="81" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="248" y="7361.0" font-family="Arial Unicode MS, sans-serif" font-size="24" fill="#263545">打开</text>
+<text x="627" y="7026.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">状态 2</text>
+<rect x="538" y="7046" width="290" height="104" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="553" y="7063" width="260" height="33.6" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="555,7117.76 803,7117.76" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="555,7135.76 773,7135.76" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="538" y="7180" width="290" height="81" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="564" y="7230.0" font-family="Arial Unicode MS, sans-serif" font-size="24" fill="#263545">说明变化</text>
+<rect x="538" y="7311" width="290" height="81" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="564" y="7361.0" font-family="Arial Unicode MS, sans-serif" font-size="24" fill="#263545">调整</text>
+<text x="943" y="7026.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">状态 3</text>
+<rect x="854" y="7046" width="290" height="104" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<ellipse cx="904.5" cy="7101.5" rx="32.5" ry="32.5" fill="#d9eaff" stroke="#263545" stroke-width="1.6"/>
+<polyline points="954,7073 1126,7073" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="954,7097 1126,7097" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="954,7121 1126,7121" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="854" y="7180" width="290" height="81" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="880" y="7230.0" font-family="Arial Unicode MS, sans-serif" font-size="24" fill="#263545">总结结果</text>
+<rect x="854" y="7311" width="290" height="81" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="880" y="7361.0" font-family="Arial Unicode MS, sans-serif" font-size="24" fill="#263545">确认</text>
+<polyline points="540,7028 540,7412" fill="none" stroke="#cbd4df" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="265" y="7452.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">横着看推进过程；竖着看同一步的画面、说明与操作是否一致。</text>
+<rect x="1300" y="6840" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="1324" y="6862" width="60" height="36" rx="12" fill="#ffe6cc" stroke="#ffe6cc" stroke-width="1.6"/>
+<text x="1336" y="6886.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">16</text>
+<text x="1402" y="6894.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">交付包 / 组成与入口</text>
+<text x="1328" y="6940.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">最后交什么？哪些文件互相依赖？从哪里开始使用？</text>
+<polyline points="1328,6962 2392,6962" fill="none" stroke="#ffe6cc" stroke-width="1.6"/>
+<polyline points="1328,7472 2392,7472" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="1328" y="7517.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="1403" y="7517.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">主入口＋附件组合＋对应关系＋使用顺序</text>
+<text x="1328" y="7565.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="1403" y="7565.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">主要产物、依赖文件、说明材料、使用入口</text>
+<text x="1328" y="7613.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="1403" y="7613.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">多文件交付、素材包、成套设计或演示。</text>
+<rect x="1653" y="7041" width="390" height="302" rx="0" fill="#f7f9fc" stroke="#8da0b5" stroke-width="1.6"/>
+<text x="1725" y="7096.0" font-family="Arial Unicode MS, sans-serif" font-size="28" fill="#263545">主产物 / 入口</text>
+<rect x="1682" y="7134" width="333" height="165" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="1697" y="7151" width="119.88" height="131" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1838.51,7158 1999.0,7158" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1838.51,7182 1978.0,7182" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1838.51,7206 1999.0,7206" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="1348" y="7006" width="233" height="166" rx="0" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<rect x="1343" y="7001" width="233" height="166" rx="0" fill="white" stroke="#263545" stroke-width="1.6"/>
+<text x="1355" y="7034.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">内容文件</text>
+<polyline points="1357,7056 1560,7056" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="1357,7077 1535,7077" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="1357,7098 1560,7098" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="1357,7119 1535,7119" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="1583,7079 1641,7140" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="1629.7717888273987,7135.765938845096 1641,7140 1637.337086048908,7128.572705421365" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="1348" y="7249" width="233" height="166" rx="0" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<rect x="1343" y="7244" width="233" height="166" rx="0" fill="white" stroke="#263545" stroke-width="1.6"/>
+<text x="1355" y="7277.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">依赖素材</text>
+<polyline points="1357,7299 1560,7299" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="1357,7320 1535,7320" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="1357,7341 1560,7341" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="1357,7362 1535,7362" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="1583,7322 1641,7269" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="1636.5443547453424,7280.142137378647 1641,7269 1629.5023904551663,7272.435836834681" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="2128" y="7006" width="233" height="166" rx="0" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<rect x="2123" y="7001" width="233" height="166" rx="0" fill="white" stroke="#263545" stroke-width="1.6"/>
+<text x="2135" y="7034.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">使用说明</text>
+<polyline points="2137,7056 2340,7056" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="2137,7077 2315,7077" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="2137,7098 2340,7098" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="2137,7119 2315,7119" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="2114,7079 2054,7140" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="2057.8559628626217,7128.63639360053 2054,7140 2065.2983236358073,7135.956748459401" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="2128" y="7249" width="233" height="166" rx="0" fill="#ffe6cc" stroke="#ffe6cc" stroke-width="1.6"/>
+<rect x="2123" y="7244" width="233" height="166" rx="0" fill="white" stroke="#263545" stroke-width="1.6"/>
+<text x="2135" y="7277.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">配套备注</text>
+<polyline points="2137,7299 2340,7299" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="2137,7320 2315,7320" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="2137,7341 2340,7341" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="2137,7362 2315,7362" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="2114,7322 2054,7269" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="2065.553878950246,7272.2415862171265 2054,7269 2058.6427846139127,7280.065466597881" fill="none" stroke="#263545" stroke-width="1.6"/>
+<text x="1682" y="7435.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">打开主产物 → 配套材料 → 使用说明</text>
+<rect x="80" y="7740" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="104" y="7762" width="60" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="116" y="7786.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">17</text>
+<text x="182" y="7794.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">全局路线与当前位置</text>
+<text x="108" y="7840.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">整体有几条路线？当前展开的是哪一段？</text>
+<polyline points="108,7862 1172,7862" fill="none" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="108,8372 1172,8372" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="108" y="8417.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="183" y="8417.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">总览路径＋章节站点＋当前位置＋局部展开</text>
+<text x="108" y="8465.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="183" y="8465.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">路线名称、章节数量、当前位置、展开内容</text>
+<text x="108" y="8513.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="183" y="8513.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">长画布、跨章节或多线叙事时使用。</text>
+<ellipse cx="175.5" cy="7953.5" rx="16.5" ry="16.5" fill="#d9eaff" stroke="#263545" stroke-width="1.6"/>
+<text x="132" y="8014.0" font-family="Arial Unicode MS, sans-serif" font-size="24" fill="#263545">准备</text>
+<polyline points="199,7953 413,7953" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="402.1946347717679,7958.219586409335 413,7953 402.1946347717679,7947.780413590665" fill="none" stroke="#263545" stroke-width="1.6"/>
+<ellipse cx="446.5" cy="7953.5" rx="16.5" ry="16.5" fill="#dbf2e5" stroke="#263545" stroke-width="1.6"/>
+<text x="403" y="8014.0" font-family="Arial Unicode MS, sans-serif" font-size="24" fill="#263545">构建</text>
+<polyline points="470,7953 684,7953" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="673.1946347717678,7958.219586409335 684,7953 673.1946347717678,7947.780413590665" fill="none" stroke="#263545" stroke-width="1.6"/>
+<ellipse cx="717.5" cy="7953.5" rx="16.5" ry="16.5" fill="#d9eaff" stroke="#263545" stroke-width="1.6"/>
+<text x="674" y="8014.0" font-family="Arial Unicode MS, sans-serif" font-size="24" fill="#263545">组合</text>
+<polyline points="741,7953 955,7953" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="944.1946347717678,7958.219586409335 955,7953 944.1946347717678,7947.780413590665" fill="none" stroke="#263545" stroke-width="1.6"/>
+<ellipse cx="988.5" cy="7953.5" rx="16.5" ry="16.5" fill="#d9eaff" stroke="#263545" stroke-width="1.6"/>
+<text x="945" y="8014.0" font-family="Arial Unicode MS, sans-serif" font-size="24" fill="#263545">交付</text>
+<rect x="404" y="8041" width="180" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="416" y="8065.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">当前位置</text>
+<polyline points="445,8082 445,8135" fill="none" stroke="#637084" stroke-width="1.6" stroke-dasharray="4 7"/>
+<polyline points="439.78041359066526,8124.194634771768 445,8135 450.21958640933474,8124.194634771768" fill="none" stroke="#637084" stroke-width="1.6"/>
+<rect x="273" y="8153" width="745" height="185" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<rect x="266" y="8146" width="745" height="185" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<text x="284" y="8184.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">展开这一段</text>
+<polyline points="284,8195 993,8195" fill="none" stroke="#dbf2e5" stroke-width="1.6"/>
+<rect x="290" y="8230" width="214" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="302" y="8254.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">形成样例</text>
+<rect x="530" y="8230" width="214" height="36" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="542" y="8254.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">查看效果</text>
+<rect x="770" y="8230" width="214" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="782" y="8254.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">确认结果</text>
+<rect x="1300" y="7740" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="1324" y="7762" width="60" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="1336" y="7786.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">18</text>
+<text x="1402" y="7794.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">层级树 / 内容骨架</text>
+<text x="1328" y="7840.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">整体怎样分成章节，再分成更小的内容？</text>
+<polyline points="1328,7862 2392,7862" fill="none" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1328,8372 2392,8372" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="1328" y="8417.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="1403" y="8417.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">根主题＋分层枝干＋同级节点＋层级标记</text>
+<text x="1328" y="8465.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="1403" y="8465.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">主题、层数、章节、要点</text>
+<text x="1328" y="8513.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="1403" y="8513.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">组织内容大纲、信息架构与目录结构。</text>
+<rect x="1721" y="7907" width="272" height="36" rx="12" fill="#ffe6cc" stroke="#ffe6cc" stroke-width="1.6"/>
+<text x="1733" y="7931.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">一个总主题</text>
+<polyline points="1856,7951 1856,7998 1507,7998 1507,8041" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="1361" y="8052" width="290" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="1373" y="8076.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">部分 A</text>
+<polyline points="1391,8093 1391,8168 1427,8168" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="1437" y="8150" width="215" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="1449" y="8174.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">要点 1</text>
+<polyline points="1391,8093 1391,8272 1427,8272" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="1437" y="8254" width="215" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="1449" y="8278.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">要点 2</text>
+<polyline points="1856,7951 1856,7998 1858,7998 1858,8041" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="1712" y="8052" width="290" height="36" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="1724" y="8076.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">部分 B</text>
+<polyline points="1742,8093 1742,8168 1778,8168" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="1788" y="8150" width="215" height="36" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="1800" y="8174.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">要点 1</text>
+<polyline points="1742,8093 1742,8272 1778,8272" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="1788" y="8254" width="215" height="36" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="1800" y="8278.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">要点 2</text>
+<polyline points="1856,7951 1856,7998 2209,7998 2209,8041" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="2063" y="8052" width="290" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="2075" y="8076.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">部分 C</text>
+<polyline points="2093,8093 2093,8168 2129,8168" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="2139" y="8150" width="215" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="2151" y="8174.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">要点 1</text>
+<polyline points="2093,8093 2093,8272 2129,8272" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="2139" y="8254" width="215" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="2151" y="8278.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">要点 2</text>
+<text x="1654" y="8362.0" font-family="Arial Unicode MS, sans-serif" font-size="24" fill="#263545">整体 → 部分 → 要点</text>
+<rect x="80" y="8640" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="104" y="8662" width="60" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="116" y="8686.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">19</text>
+<text x="182" y="8694.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">条件分支</text>
+<text x="108" y="8740.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">不同条件成立时，分别进入哪条路径？</text>
+<polyline points="108,8762 1172,8762" fill="none" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="108,9272 1172,9272" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="108" y="9317.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="183" y="9317.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">明确条件＋带标签分支＋分支结果＋可选汇合</text>
+<text x="108" y="9365.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="183" y="9365.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">判断问题、条件、路径动作、结果</text>
+<text x="108" y="9413.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="183" y="9413.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">有真实选择规则时使用；每条出口写清条件。</text>
+<rect x="132" y="8977" width="260" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="144" y="9001.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">待判断对象</text>
+<polyline points="406,8995 470,8995" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="459.1946347717679,9000.219586409336 470,8995 459.1946347717679,8989.780413590664" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="490,8995 643,8891 796,8995 643,9099 490,8995" fill="none" stroke="#263545" stroke-width="1.6"/>
+<text x="552" y="8995.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">条件是否满足？</text>
+<polyline points="805,8995 856,8995 856,8878 913,8878" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="902.1946347717678,8883.219586409336 913,8878 902.1946347717678,8872.780413590664" fill="none" stroke="#263545" stroke-width="1.6"/>
+<text x="864" y="8852.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">满足</text>
+<rect x="922" y="8860" width="222" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="934" y="8884.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">直接进入下一步</text>
+<polyline points="805,8995 856,8995 856,9127 913,9127" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="902.1946347717678,9132.219586409336 913,9127 902.1946347717678,9121.780413590664" fill="none" stroke="#263545" stroke-width="1.6"/>
+<text x="864" y="9101.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">尚不满足</text>
+<rect x="922" y="9109" width="222" height="36" rx="12" fill="#fff1ba" stroke="#fff1ba" stroke-width="1.6"/>
+<text x="934" y="9133.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">先补充必要材料</text>
+<rect x="1300" y="8640" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="1324" y="8662" width="60" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="1336" y="8686.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">20</text>
+<text x="1402" y="8694.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">二维矩阵 / 位置与依据</text>
+<text x="1328" y="8740.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">两个维度同时考虑时，各对象处于什么位置？</text>
+<polyline points="1328,8762 2392,8762" fill="none" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1328,9272 2392,9272" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="1328" y="9317.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="1403" y="9317.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">具名坐标轴＋四个区域＋对象点＋定位依据</text>
+<text x="1328" y="9365.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="1403" y="9365.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">两个维度、方向、对象、定位依据</text>
+<text x="1328" y="9413.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="1403" y="9413.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">比较取舍或分布；位置需有可解释的依据。</text>
+<rect x="1477" y="8831" width="603" height="367" rx="0" fill="white" stroke="#cad4df" stroke-width="1.6"/>
+<polyline points="1778,8831 1778,9198" fill="none" stroke="#637084" stroke-width="1.6" stroke-dasharray="4 7"/>
+<polyline points="1477,9015 2080,9015" fill="none" stroke="#637084" stroke-width="1.6" stroke-dasharray="4 7"/>
+<polyline points="1477,9211 2107,9211" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="2096.194634771768,9216.219586409336 2107,9211 2096.194634771768,9205.780413590664" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="1463,9198 1463,8807" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="1468.2195864093349,8817.805365228232 1463,8807 1457.7804135906651,8817.805365228232" fill="none" stroke="#263545" stroke-width="1.6"/>
+<text x="1802" y="9254.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">投入：低 → 高</text>
+<text x="1340" y="8884.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">依据</text>
+<text x="1340" y="8912.6" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">充分</text>
+<text x="1340" y="8941.2" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">↑</text>
+<text x="1340" y="8969.8" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">不足</text>
+<ellipse cx="1601.0" cy="8929.0" rx="16.0" ry="16.0" fill="#d9eaff" stroke="#263545" stroke-width="1.6"/>
+<text x="1628" y="8936.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">A</text>
+<ellipse cx="1921.0" cy="8950.0" rx="16.0" ry="16.0" fill="#e8dffc" stroke="#263545" stroke-width="1.6"/>
+<text x="1948" y="8957.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">B</text>
+<ellipse cx="1702.0" cy="9129.0" rx="16.0" ry="16.0" fill="#dbf2e5" stroke="#263545" stroke-width="1.6"/>
+<text x="1729" y="9136.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">C</text>
+<rect x="2129" y="8873" width="241" height="189" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="2125" y="8868" width="241" height="189" rx="0" fill="#fff1ba" stroke="#263545" stroke-width="1.6"/>
+<text x="2137" y="8900.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">B 的位置依据</text>
+<text x="2137" y="8926.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">投入较高</text>
+<text x="2137" y="8952.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">可参考材料充分</text>
+<polyline points="2125,9017 1939,8953" fill="none" stroke="#637084" stroke-width="1.6"/>
+<rect x="80" y="9540" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="104" y="9562" width="60" height="36" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="116" y="9586.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">21</text>
+<text x="182" y="9594.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">证据 → 观察 → 结论</text>
+<text x="108" y="9640.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">一个判断，具体依据哪份材料的哪个细节？</text>
+<polyline points="108,9662 1172,9662" fill="none" stroke="#e8dffc" stroke-width="1.6"/>
+<polyline points="108,10172 1172,10172" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="108" y="10217.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="183" y="10217.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">原始片段＋局部标注＋观察描述＋结论</text>
+<text x="108" y="10265.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="183" y="10265.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">来源、片段、关注位置、观察与判断</text>
+<text x="108" y="10313.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="183" y="10313.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">解释选择理由、验收结果或设计判断。</text>
+<rect x="123" y="9715" width="488" height="325" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<polyline points="123,9751 611,9751" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<text x="137" y="9740.0" font-family="Arial Unicode MS, sans-serif" font-size="18" fill="#263545">来源片段 / 中性示意</text>
+<ellipse cx="554.0" cy="9732.0" rx="3.0" ry="3.0" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<ellipse cx="569.0" cy="9732.0" rx="3.0" ry="3.0" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<ellipse cx="584.0" cy="9732.0" rx="3.0" ry="3.0" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<rect x="148" y="9773" width="437" height="235" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="163" y="9790" width="157.32" height="201" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="353.39,9797 569.0,9797" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="353.39,9821 548.0,9821" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="353.39,9845 569.0,9845" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="340" y="9788" width="226" height="105" rx="0" fill="none" stroke="#9171ad" stroke-width="1.6" stroke-dasharray="4 7"/>
+<polyline points="575,9836 690,9800" fill="none" stroke="#637084" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="713" y="9726" width="420" height="123" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="709" y="9721" width="420" height="123" rx="0" fill="#d9eaff" stroke="#263545" stroke-width="1.6"/>
+<text x="721" y="9753.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">观察</text>
+<text x="721" y="9779.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">主要信息集中在上半区。</text>
+<polyline points="918,9854 918,9909" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="912.7804135906653,9898.194634771768 918,9909 923.2195864093347,9898.194634771768" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="717" y="9930" width="420" height="143" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<rect x="710" y="9923" width="420" height="143" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<text x="728" y="9961.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">判断</text>
+<polyline points="728,9972 1112,9972" fill="none" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="730" y="10007.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">适合优先阅读核心信息。</text>
+<rect x="137" y="10085" width="473" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="149" y="10109.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">来源：样例 01 / 关注区域 A</text>
+<rect x="1300" y="9540" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="1324" y="9562" width="60" height="36" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="1336" y="9586.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">22</text>
+<text x="1402" y="9594.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">版本演进与采用</text>
+<text x="1328" y="9640.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">经过多轮变化，什么被保留，最终采用哪版？</text>
+<polyline points="1328,9662 2392,9662" fill="none" stroke="#e8dffc" stroke-width="1.6"/>
+<polyline points="1328,10172 2392,10172" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="1328" y="10217.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="1403" y="10217.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">多版缩略图＋变化说明＋保留项＋采用标记</text>
+<text x="1328" y="10265.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="1403" y="10265.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">版本数、每次变化、保留部分、采用状态</text>
+<text x="1328" y="10313.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="1403" y="10313.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">连续修改超过两轮时使用；可保留中间关键版本。</text>
+<text x="1459" y="9735.0" font-family="Arial Unicode MS, sans-serif" font-size="28" fill="#263545">V1</text>
+<rect x="1340" y="9761" width="322" height="207" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="1355" y="9778" width="115.92" height="173" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1491.34,9785 1646.0,9785" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1491.34,9809 1625.0,9809" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1491.34,9833 1646.0,9833" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<text x="1398" y="10015.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">建立信息结构</text>
+<polyline points="1665,9872 1686,9872" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="1675.1946347717678,9877.219586409336 1686,9872 1675.1946347717678,9866.780413590664" fill="none" stroke="#263545" stroke-width="1.6"/>
+<text x="1810" y="9735.0" font-family="Arial Unicode MS, sans-serif" font-size="28" fill="#263545">V2</text>
+<rect x="1691" y="9761" width="322" height="207" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="1706" y="9778" width="292" height="83.03999999999999" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1708,9903.83 1988,9903.83" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1708,9921.83 1958,9921.83" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<text x="1749" y="10015.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">调整图文布局</text>
+<polyline points="2016,9872 2037,9872" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="2026.1946347717678,9877.219586409336 2037,9872 2026.1946347717678,9866.780413590664" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="1764" y="10045" width="192" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="1776" y="10069.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">此版采用</text>
+<text x="2161" y="9735.0" font-family="Arial Unicode MS, sans-serif" font-size="28" fill="#263545">V3</text>
+<rect x="2042" y="9761" width="322" height="207" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<ellipse cx="2092.5" cy="9816.5" rx="32.5" ry="32.5" fill="#d9eaff" stroke="#263545" stroke-width="1.6"/>
+<polyline points="2142,9788 2346,9788" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="2142,9812 2346,9812" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="2142,9836 2346,9836" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<text x="2100" y="10015.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">加强重点提示</text>
+<rect x="1349" y="10110" width="1008" height="51" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="1345" y="10105" width="1008" height="51" rx="0" fill="#fff1ba" stroke="#263545" stroke-width="1.6"/>
+<text x="1357" y="10137.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">共同保留：内容主体。逐轮改变：表达方式。采用标记与版本新旧分开。</text>
+<rect x="80" y="10440" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="104" y="10462" width="60" height="36" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="116" y="10486.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">23</text>
+<text x="182" y="10494.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">变体示例 / 候选比较</text>
+<text x="108" y="10540.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">候选数量和主次关系变化时，怎样调整排法？</text>
+<polyline points="108,10562 1172,10562" fill="none" stroke="#e8dffc" stroke-width="1.6"/>
+<polyline points="108,11072 1172,11072" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="108" y="11117.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="183" y="11117.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">双图细看 / 主方案突出</text>
+<text x="108" y="11165.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="183" y="11165.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">候选图片、对比说明、采用理由</text>
+<text x="108" y="11213.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="183" y="11213.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">作为第 10 类组件的布局变体。</text>
+<text x="145" y="10623.0" font-family="Arial Unicode MS, sans-serif" font-size="25" fill="#263545">双图细看</text>
+<text x="696" y="10623.0" font-family="Arial Unicode MS, sans-serif" font-size="25" fill="#263545">主方案突出</text>
+<rect x="125" y="10664" width="226" height="207" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="140" y="10681" width="81.36" height="173" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="231.22,10688 335.0,10688" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="231.22,10712 314.0,10712" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="231.22,10736 335.0,10736" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<text x="169" y="10909.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">方案 A</text>
+<rect x="369" y="10664" width="226" height="207" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="384" y="10681" width="196" height="83.03999999999999" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="386,10806.83 570,10806.83" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="386,10824.83 540,10824.83" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<text x="413" y="10909.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">方案 B</text>
+<rect x="129" y="10954" width="470" height="89" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="125" y="10949" width="470" height="89" rx="0" fill="#fff1ba" stroke="#263545" stroke-width="1.6"/>
+<text x="137" y="10981.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">适合：两个方案需要逐项对照。</text>
+<rect x="674" y="10664" width="302" height="249" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="689" y="10681" width="108.72" height="215" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="815.94,10688 960.0,10688" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="815.94,10712 939.0,10712" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="815.94,10736 960.0,10736" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="993" y="10664" width="148" height="112" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="1008" y="10681" width="118" height="37.44" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1010,10741.28 1116,10741.28" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1010,10759.28 1086,10759.28" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="993" y="10800" width="148" height="112" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<ellipse cx="1043.5" cy="10855.5" rx="32.5" ry="32.5" fill="#d9eaff" stroke="#263545" stroke-width="1.6"/>
+<polyline points="1093,10827 1123,10827" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1093,10851 1123,10851" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1093,10875 1123,10875" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="703" y="10932" width="232" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="715" y="10956.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">重点方案</text>
+<text x="681" y="11018.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">适合：一个主方案＋两个备选。</text>
+<rect x="1300" y="10440" width="1120" height="830" rx="12" fill="white" stroke="#ccd4de" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="1324" y="10462" width="60" height="36" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="1336" y="10486.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">24</text>
+<text x="1402" y="10494.0" font-family="Arial Unicode MS, sans-serif" font-size="32" fill="#263545">变体示例 / 并列案例</text>
+<text x="1328" y="10540.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">案例数量与重要程度变化时，怎样安排画面？</text>
+<polyline points="1328,10562 2392,10562" fill="none" stroke="#e8dffc" stroke-width="1.6"/>
+<polyline points="1328,11072 2392,11072" fill="none" stroke="#cbd2db" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="1328" y="11117.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">构成</text>
+<text x="1403" y="11117.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">三列等权 / 一主两辅</text>
+<text x="1328" y="11165.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">替换</text>
+<text x="1403" y="11165.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">案例数量、内容摘要、视觉主次</text>
+<text x="1328" y="11213.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">用法</text>
+<text x="1403" y="11213.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">作为第 11 类组件的布局变体。</text>
+<text x="1355" y="10624.0" font-family="Arial Unicode MS, sans-serif" font-size="25" fill="#263545">三列等权</text>
+<text x="1900" y="10624.0" font-family="Arial Unicode MS, sans-serif" font-size="25" fill="#263545">一主两辅</text>
+<rect x="1340" y="10665" width="154" height="246" rx="12" fill="white" stroke="#263545" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="1356" y="10703.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">案例 1</text>
+<rect x="1352" y="10736" width="130" height="146" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="1367" y="10753" width="46.8" height="112" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1413.1,10760 1466.0,10760" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1413.1,10784 1445.0,10784" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1413.1,10808 1466.0,10808" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="1509" y="10665" width="154" height="246" rx="12" fill="white" stroke="#263545" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="1525" y="10703.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">案例 2</text>
+<rect x="1521" y="10736" width="130" height="146" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="1536" y="10753" width="100" height="53.76" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1538,10836.74 1626,10836.74" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1538,10854.74 1596,10854.74" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="1678" y="10665" width="154" height="246" rx="12" fill="white" stroke="#263545" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="1694" y="10703.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">案例 3</text>
+<rect x="1690" y="10736" width="130" height="146" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<ellipse cx="1740.5" cy="10791.5" rx="32.5" ry="32.5" fill="#d9eaff" stroke="#263545" stroke-width="1.6"/>
+<polyline points="1790,10763 1802,10763" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1790,10787 1802,10787" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1790,10811 1802,10811" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="1348" y="10966" width="494" height="73" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="1344" y="10961" width="494" height="73" rx="0" fill="#fff1ba" stroke="#263545" stroke-width="1.6"/>
+<text x="1356" y="10993.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">适合：三个同级对象平等比较。</text>
+<rect x="1900" y="10664" width="453" height="131" rx="12" fill="white" stroke="#263545" stroke-width="1.6" stroke-dasharray="4 7"/>
+<rect x="1913" y="10677" width="165" height="103" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="1928" y="10694" width="59.4" height="69" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1990.55,10701 2062.0,10701" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1990.55,10725 2041.0,10725" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1990.55,10749 2062.0,10749" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<text x="2103" y="10742.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">主要案例</text>
+<rect x="1900" y="10816" width="215" height="111" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="1915" y="10833" width="185" height="36.96" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="1917,10892.59 2090,10892.59" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="1917,10910.59 2060,10910.59" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<rect x="2137" y="10816" width="215" height="111" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<ellipse cx="2187.5" cy="10871.5" rx="32.5" ry="32.5" fill="#d9eaff" stroke="#263545" stroke-width="1.6"/>
+<polyline points="2237,10843 2334,10843" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="2237,10867 2334,10867" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="2237,10891 2334,10891" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<text x="1915" y="11011.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">适合：一个重点案例＋两个补充。</text>
+<text x="80" y="11470.0" font-family="Arial Unicode MS, sans-serif" font-size="40" fill="#263545">12 个基础零件，用来组合上面的结构</text>
+<text x="80" y="11543.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">来源页</text>
+<rect x="90" y="11575" width="250" height="139" rx="0" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<rect x="85" y="11570" width="250" height="139" rx="0" fill="white" stroke="#263545" stroke-width="1.6"/>
+<text x="97" y="11603.0" font-family="Arial Unicode MS, sans-serif" font-size="21" fill="#263545">材料</text>
+<polyline points="99,11625 319,11625" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="99,11646 294,11646" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<polyline points="99,11667 319,11667" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<text x="485" y="11543.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">图片框</text>
+<rect x="490" y="11570" width="260" height="137" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<rect x="505" y="11587" width="230" height="49.44" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<polyline points="507,11664.53 725,11664.53" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<polyline points="507,11682.53 695,11682.53" fill="none" stroke="#7d8a9c" stroke-width="1.6"/>
+<text x="890" y="11543.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">窗口壳</text>
+<rect x="895" y="11570" width="300" height="137" rx="12" fill="white" stroke="#263545" stroke-width="1.6"/>
+<polyline points="895,11606 1195,11606" fill="none" stroke="#b7c1ce" stroke-width="1.6"/>
+<text x="909" y="11595.0" font-family="Arial Unicode MS, sans-serif" font-size="18" fill="#263545">界面</text>
+<ellipse cx="1138.0" cy="11587.0" rx="3.0" ry="3.0" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<ellipse cx="1153.0" cy="11587.0" rx="3.0" ry="3.0" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<ellipse cx="1168.0" cy="11587.0" rx="3.0" ry="3.0" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="1295" y="11543.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">便签</text>
+<rect x="1304" y="11575" width="276" height="128" rx="0" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1.6"/>
+<rect x="1300" y="11570" width="276" height="128" rx="0" fill="#fff1ba" stroke="#263545" stroke-width="1.6"/>
+<text x="1312" y="11602.0" font-family="Arial Unicode MS, sans-serif" font-size="20" fill="#263545">观察 / 判断 / 依据</text>
+<text x="1700" y="11543.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">角色分工</text>
+<text x="1705" y="11597.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">用户：作出判断</text>
+<text x="1705" y="11640.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">AI：执行动作</text>
+<text x="1705" y="11683.0" font-family="Arial Unicode MS, sans-serif" font-size="22" fill="#263545">产出：留下结果</text>
+<text x="2105" y="11543.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">参数杆</text>
+<polyline points="2110,11634 2397,11634" fill="none" stroke="#263545" stroke-width="1.6"/>
+<ellipse cx="2279.0" cy="11634.0" rx="11.0" ry="11.0" fill="#e8dffc" stroke="#263545" stroke-width="1.6"/>
+<text x="80" y="11787.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">采用标记</text>
+<rect x="85" y="11856" width="224" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="97" y="11880.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">采用</text>
+<text x="485" y="11787.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">持续区间</text>
+<polyline points="490,11878 785,11878" fill="none" stroke="#263545" stroke-width="1.6"/>
+<rect x="535" y="11854" width="163" height="45" rx="0" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="890" y="11787.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">关系线</text>
+<polyline points="895,11853 1182,11853" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="1171.1946347717678,11858.219586409336 1182,11853 1171.1946347717678,11847.780413590664" fill="none" stroke="#263545" stroke-width="1.6"/>
+<polyline points="895,11914 1182,11914" fill="none" stroke="#637084" stroke-width="1.6" stroke-dasharray="4 7"/>
+<polyline points="1171.1946347717678,11919.219586409336 1182,11914 1171.1946347717678,11908.780413590664" fill="none" stroke="#637084" stroke-width="1.6"/>
+<text x="1295" y="11787.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">交接标签</text>
+<rect x="1300" y="11856" width="292" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="1312" y="11880.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">文件 / 结果 / 方法</text>
+<text x="1700" y="11787.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">分组区</text>
+<rect x="1705" y="11817" width="288" height="128" rx="12" fill="white" stroke="#637084" stroke-width="1.6" stroke-dasharray="4 7"/>
+<text x="2105" y="11787.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">局部焦点</text>
+<rect x="2110" y="11817" width="288" height="128" rx="0" fill="none" stroke="#9375ba" stroke-width="1.6" stroke-dasharray="4 7"/>
+<polyline points="2324,11941 2407,11971" fill="none" stroke="#9375ba" stroke-width="1.6"/>
+<text x="80" y="12120.0" font-family="Arial Unicode MS, sans-serif" font-size="40" fill="#263545">组合方法：结构可以套用，内容可以替换</text>
+<rect x="80" y="12180" width="294" height="36" rx="12" fill="#d9eaff" stroke="#d9eaff" stroke-width="1.6"/>
+<text x="92" y="12204.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">从材料到结果</text>
+<text x="414" y="12208.0" font-family="Arial Unicode MS, sans-serif" font-size="25" fill="#263545">01 材料集合 → 02 协作阶段 → 16 交付包</text>
+<rect x="80" y="12298" width="294" height="36" rx="12" fill="#e8dffc" stroke="#e8dffc" stroke-width="1.6"/>
+<text x="92" y="12322.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">从样例到扩展</text>
+<text x="414" y="12326.0" font-family="Arial Unicode MS, sans-serif" font-size="25" fill="#263545">10 候选比较 → 13 确认关口 → 06 共用规则</text>
+<rect x="80" y="12416" width="294" height="36" rx="12" fill="#dbf2e5" stroke="#dbf2e5" stroke-width="1.6"/>
+<text x="92" y="12440.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">从变化到表达</text>
+<text x="414" y="12444.0" font-family="Arial Unicode MS, sans-serif" font-size="25" fill="#263545">03 图形映射 → 08 连续状态 → 09 时间轨道</text>
+<rect x="80" y="12534" width="294" height="36" rx="12" fill="#ffe6cc" stroke="#ffe6cc" stroke-width="1.6"/>
+<text x="92" y="12558.0" font-family="Arial Unicode MS, sans-serif" font-size="19" fill="#263545">从并行到成套</text>
+<text x="414" y="12562.0" font-family="Arial Unicode MS, sans-serif" font-size="25" fill="#263545">11 并列盘点 → 12 多路汇合 → 14 整体迭代</text>
+<text x="82" y="12723.0" font-family="Arial Unicode MS, sans-serif" font-size="23" fill="#263545">组件库只保留可拖用的图形实例；说明文字与外框留在这张展示画布中。</text>
+</svg>

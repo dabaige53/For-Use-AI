@@ -1,4 +1,4 @@
-"""Build standalone upstream excerpts for render group A."""
+"""Build group A and the shared upstream dependency source."""
 
 from __future__ import annotations
 
@@ -43,6 +43,20 @@ def definitions(path: Path, selected: set[str] | None = None) -> list[str]:
     return result
 
 
+def shared_dependencies() -> str:
+    """Keep per-group globals and adapters when loading the shared definitions."""
+    shared = ROOT / "group_dependencies.py"
+    source = "\n".join(
+        chunk for filename in DEPENDENCY_FILES
+        for chunk in definitions(TRANSFORMERS / filename)
+    )
+    shared.write_text('"""Generated upstream dependencies; rebuild with either group builder."""\n\n' + source)
+    return (
+        "# Execute in this group's namespace so its data paths and adapters stay local.\n"
+        "_dependencies = Path(__file__).parent / 'group_dependencies.py'\n"
+        "exec(compile(_dependencies.read_text(), str(_dependencies), 'exec'), globals())\n"
+    )
+
 def main() -> None:
     header = '''"""Generated upstream scene excerpts for render group A.
 
@@ -80,8 +94,7 @@ _tex_writing.full_tex_to_svg = _group_a_tex_renderer
 
 '''
     chunks = [header]
-    for filename in DEPENDENCY_FILES:
-        chunks.extend(definitions(TRANSFORMERS / filename))
+    chunks.append(shared_dependencies())
     chunks.extend(definitions(TRANSFORMERS / "chm.py", set(TARGETS)))
     text = "\n".join(chunks)
     # Compatibility adapters: preserve the scene layout/actions while replacing

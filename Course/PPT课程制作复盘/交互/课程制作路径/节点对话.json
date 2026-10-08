@@ -1,177 +1,548 @@
 {
+  "START": {
+    "title": "目标：与 AI 合作，把自己的材料做成课件",
+    "links": [],
+    "messages": [
+      {
+        "role": "user",
+        "text": "把这些材料组织成一套能现场讲述、播放和演示的课件。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "先梳理地形、视频、课程网页和 PPT 四条制作线，明确各线交付什么、在哪一步汇合。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "T1": {
+    "title": "收集地形相关原始文章",
+    "links": [
+      {
+        "asset": "terrainOriginal",
+        "label": "Henry_He · 原始文章",
+        "description": "地形、小球与语义变化的内容来源。"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "先整理地形相关原文，保留原来的案例和图片。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "建立原文与素材清单，标出需要用图形解释的段落。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "T2": {
+    "title": "梳理文章表达与图形的映射 · 明确映射标准",
+    "links": [
+      {
+        "asset": "terrainOriginal"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "文章里的语义、采样和反馈，分别应该用什么图形表达？",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "先确定地形、小球、轨迹的含义；语义先改变地形，小球再沿地形变化移动。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "T3": {
+    "title": "整理原型设计 skills · 设计小球、运动轨迹等参数",
+    "links": [
+      {
+        "asset": "terrainOriginal"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "把映射规则整理成可复用的原型要求，明确小球、地形和轨迹参数。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "列出对象、状态、运动顺序和可调参数，作为 HTML 原型的制作依据。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "T4": {
+    "title": "产出 HTML 原型样例",
+    "links": [],
+    "messages": [
+      {
+        "role": "user",
+        "text": "先做一个能运行的 HTML 样例，我要通过操作来判断表达是否正确。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "把规则落实为可操作样例，先检查地形与小球的关系，再扩大实现范围。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [
+      {
+        "asset": "terrain",
+        "title": "现有地形演示"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "T5": {
+    "title": "构建 3D 地形图",
+    "links": [
+      {
+        "asset": "terrainOriginal"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "把关系表达成三维地形，让运动与变化能看清楚。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "实现地形、视角、小球和轨迹，检查图形是否承载原文含义。",
+        "images": [
+          "terrainGif"
+        ],
+        "imageOrigin": "current-artifact"
+      }
+    ],
+    "outputs": [
+      {
+        "asset": "terrain",
+        "title": "现有地形演示"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "T6": {
+    "title": "操作原型并对照文章 · 逐步调整表达、画面和运动参数",
+    "links": [
+      {
+        "asset": "terrainOriginal"
+      },
+      {
+        "asset": "terrain"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "不是小球移动造成深沟，而是上下文语义先改变地形，地形再引导小球。现在因果倒了。",
+        "images": []
+      },
+      {
+        "role": "assistant",
+        "text": "问题来自地形与小球共用进度：小球先动，沟壑随后才出现，轨迹线又强化了“球挖沟”的错觉。\n\n改为语义先塑形，小球延迟进入，再沿已有或正在被语义重塑的沟壑移动；用同一段演示检查先后关系。",
+        "images": []
+      }
+    ],
+    "outputs": [
+      {
+        "asset": "terrain",
+        "title": "现有地形演示"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "01a06001-ef4f-71d1-821e-9ee52c2faff3.md / M033；01a06001-ef4f-71d1-821e-9ee52c2faff3.md / M034",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。",
+    "conversations": [
+      {
+        "title": "修正因果顺序",
+        "messages": [
+          {
+            "role": "user",
+            "text": "不是小球移动造成深沟，而是上下文语义先改变地形，地形再引导小球。现在因果倒了。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "问题来自地形与小球共用进度：小球先动，沟壑随后才出现，轨迹线又强化了“球挖沟”的错觉。\n\n改为语义先塑形，小球延迟进入，再沿已有或正在被语义重塑的沟壑移动；用同一段演示检查先后关系。",
+            "images": []
+          }
+        ]
+      }
+    ]
+  },
+  "T7": {
+    "title": "形成地形图与教学内容 · 交付可运行的 HTML 地形演示",
+    "links": [
+      {
+        "asset": "terrainArticle"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "把地形演示和对应的教学内容整理好，供网页和 PPT 接入。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "交付运行入口和正文对应关系，说明每段演示讲什么、怎样操作。",
+        "images": [
+          "dialogue"
+        ],
+        "imageOrigin": "current-artifact"
+      }
+    ],
+    "outputs": [
+      {
+        "asset": "terrain",
+        "title": "现有地形演示"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
   "V1": {
+    "title": "寻找最佳实践 · 找到 3Blue1Brown 的视频",
     "links": [
       {
         "title": "大语言模型简明解释",
         "label": "YouTube · 3Blue1Brown",
-        "description": "用动画呈现语言模型预测下一个词的过程。",
+        "description": "参考它怎样用图形讲清语言模型的预测过程。",
         "url": "https://www.youtube.com/watch?v=LPZh9BOjkQs"
       }
     ],
     "messages": [
       {
         "role": "user",
-        "text": "第一页直接使用这个课程视频，不自己另外生成视频了：https://www.youtube.com/watch?v=LPZh9BOjkQs&time_continue=477&source_ve_path=NzY3NTg&embeds_referring_euri=https%3A%2F%2Fwww.3blue1brown.com%2F；并帮我寻找 视频2 和视频3 是否有类似的现成的动画视频表达",
-        "images": [],
-        "source": {
-          "file": "01a09ee5-23f4-7243-a80c-434b2ca57d58.md",
-          "message": "M157"
-        },
-        "excerpt": "第一页直接使用这个课程视频，不自己另外生成视频了：[3Blue1Brown 视频](https://www.youtube.com/watch?v=LPZh9BOjkQs)；并帮我寻找 视频2 和视频3 是否有类似的现成的动画视频表达"
+        "text": "第一页直接使用 [3Blue1Brown 课程视频](https://www.youtube.com/watch?v=LPZh9BOjkQs)，不另外生成。再找找“输入与上下文组织”和“Agent 执行、反馈与验证”有没有类似的现成动画。",
+        "images": []
       },
       {
         "role": "assistant",
-        "text": "第一部分改用你提供的现成课程视频。我会通知新制作任务停止生成，并核实这个视频的内容；同时寻找能覆盖“输入与上下文组织”和“Agent 执行、反馈与验证”的现成动画，标清哪些能直接用、哪些仍需你补讲。",
-        "images": [],
-        "source": {
-          "file": "01a09ee5-23f4-7243-a80c-434b2ca57d58.md",
-          "message": "M158"
-        }
+        "text": "第一部分沿用现成视频；另两部分分别寻找对应动画，区分能直接采用的内容与需要补讲的内容。",
+        "images": []
+      }
+    ],
+    "outputs": [],
+    "status": "editorial-rewrite",
+    "evidence": "01a09ee5-23f4-7243-a80c-434b2ca57d58.md / M157；01a09ee5-23f4-7243-a80c-434b2ca57d58.md / M158",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。",
+    "conversations": [
+      {
+        "title": "选择参考",
+        "messages": [
+          {
+            "role": "user",
+            "text": "第一页直接使用 [3Blue1Brown 课程视频](https://www.youtube.com/watch?v=LPZh9BOjkQs)，不另外生成。再找找“输入与上下文组织”和“Agent 执行、反馈与验证”有没有类似的现成动画。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "第一部分沿用现成视频；另两部分分别寻找对应动画，区分能直接采用的内容与需要补讲的内容。",
+            "images": []
+          }
+        ]
       }
     ]
   },
   "V2": {
+    "title": "从官网获取 · 技术架构与相关源码",
     "links": [
       {
-        "title": "3b1b / videos · chm.py",
-        "label": "GitHub · 动画源码",
-        "description": "参考视频的场景代码，包含对话卷轴、词语预测与训练过程。",
-        "url": "https://github.com/3b1b/videos/blob/master/_2024/transformers/chm.py"
+        "title": "大语言模型简明解释",
+        "label": "YouTube · 3Blue1Brown",
+        "description": "参考它怎样用图形讲清语言模型的预测过程。",
+        "url": "https://www.youtube.com/watch?v=LPZh9BOjkQs"
       },
       {
         "title": "视频官方图文版",
         "label": "3Blue1Brown",
-        "description": "视频对应的官方图文讲解。",
         "url": "https://www.3blue1brown.com/lessons/mini-llm/"
       }
     ],
     "messages": [
       {
         "role": "user",
-        "text": "https://github.com/3b1b/videos 从中找到https://www.youtube.com/watch?v=LPZh9BOjkQs&source_ve_path=NzY3NTg&embeds_referring_euri=https%3A%2F%2Fwww.3blue1brown.com%2F 中动画生成的代码",
-        "images": [],
-        "source": {
-          "file": "01a0a377-3142-77c3-9dff-5e4d808b69ea.md",
-          "message": "M001"
-        },
-        "excerpt": "[3b1b/videos](https://github.com/3b1b/videos) 从中找到[3Blue1Brown 视频](https://www.youtube.com/watch?v=LPZh9BOjkQs) 中动画生成的代码"
+        "text": "找到 [参考视频](https://www.youtube.com/watch?v=LPZh9BOjkQs) 对应的源代码，梳理它的技术架构，后续用原作者的制作方式复现。",
+        "images": []
       },
       {
         "role": "assistant",
-        "text": "找到了。视频是 **《Large Language Models explained briefly》**，主要动画源码在：\n\n**[打开 `_2024/transformers/chm.py`](https://github.com/3b1b/videos/blob/master/_2024/transformers/chm.py)**\n\n我核对了代码中的卷轴对话、下一词预测、参数旋钮和训练数据等场景，与[视频官方图文版](https://www.3blue1brown.com/lessons/mini-llm/)对应。主要入口如下：\n\n| 动画内容 | 对应源码 |\n|---|---|\n| 展开卷轴，展示人类与 AI 的对话脚本 | [`PartialScript`，第 688 行](https://github.com/3b1b/videos/blob/master/_2024/transformers/chm.py#L688) |\n| 预测下一个词 | [`PredictTheNextWord`，第 61 行](https://github.com/3b1b/videos/blob/master/_2024/transformers/chm.py#L61) |\n| 用旋钮表示模型参数 | [`ShowMachineWithDials`，第 896 行](https://github.com/3b1b/videos/blob/master/_2024/transformers/chm.py#L896) |\n| 单个训练样例如何调整模型 | [`ShowSingleTrainingExample`，第 1111 行](https://github.com/3b1b/videos/blob/master/_2024/transformers/chm.py#L1111) |\n| 海量训练文本 | [`EnormousAmountOfTrainingText`，第 1273 行](https://github.com/3b1b/videos/blob/master/_2024/transformers/chm.py#L1273) |\n| 人类反馈训练 | [`RLHFWorkers`，第 1452 行](https://github.com/3b1b/videos/blob/master/_2024/transformers/chm.py#L1452) |\n| 串行与并行处理 | [`SerialProcessing` / `ParallelProcessing`](https://github.com/3b1b/videos/blob/master/_2024/transformers/chm.py#L1482) |\n| 每秒十亿次计算的规模演示 | [`ManyComputationsPerUnitTimeV2`，第 1577 行](https://github.com/3b1b/videos/blob/master/_2024/transformers/chm.py#L1577) |\n\n它还导入了同目录的 `generation.py`、`helpers.py`、`embedding.py` 和 `ml_basics.py`，可从 [transformers 目录](https://github.com/3b1b/videos/tree/master/_2024/transformers)一起查看。\n\n运行时需要作者使用的 **3b1b/manim（ManimGL）**。文件中还引用了外部图片及作者本地素材路径，因此仅下载 `chm.py` 不能保证直接复现；此次已核对源码，未执行渲染。[仓库运行说明](https://github.com/3b1b/videos#workflow)",
-        "images": [],
-        "source": {
-          "file": "01a0a377-3142-77c3-9dff-5e4d808b69ea.md",
-          "message": "M003"
-        },
-        "excerpt": "我核对了代码中的卷轴对话、下一词预测、参数旋钮和训练数据等场景，与[视频官方图文版](https://www.3blue1brown.com/lessons/mini-llm/)对应。"
+        "text": "[videos 仓库](https://github.com/3b1b/videos) 保存具体视频场景，[manim](https://github.com/3b1b/manim) 是动画引擎。先定位 chm.py 中对应场景，再核对运行环境、依赖和素材；图文版可以用来对照镜头。",
+        "images": []
+      }
+    ],
+    "outputs": [
+      {
+        "title": "3b1b / videos · chm.py",
+        "label": "GitHub · 场景源码",
+        "description": "定位参考视频中的动画场景与实现代码。",
+        "url": "https://github.com/3b1b/videos/blob/master/_2024/transformers/chm.py"
+      },
+      {
+        "title": "3b1b / manim",
+        "label": "GitHub · 动画引擎",
+        "url": "https://github.com/3b1b/manim"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "01a0a377-3142-77c3-9dff-5e4d808b69ea.md / M001；01a0a377-3142-77c3-9dff-5e4d808b69ea.md / M003",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。",
+    "conversations": [
+      {
+        "title": "定位源码",
+        "messages": [
+          {
+            "role": "user",
+            "text": "找到 [参考视频](https://www.youtube.com/watch?v=LPZh9BOjkQs) 对应的源代码，梳理它的技术架构，后续用原作者的制作方式复现。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "[videos 仓库](https://github.com/3b1b/videos) 保存具体视频场景，[manim](https://github.com/3b1b/manim) 是动画引擎。先定位 chm.py 中对应场景，再核对运行环境、依赖和素材；图文版可以用来对照镜头。",
+            "images": []
+          }
+        ]
       }
     ]
   },
   "V3": {
+    "title": "在本地还原视频内容",
     "links": [
       {
         "title": "3b1b / videos · chm.py",
-        "label": "GitHub · 动画源码",
-        "description": "参考视频的场景代码，包含对话卷轴、词语预测与训练过程。",
+        "label": "GitHub · 场景源码",
+        "description": "定位参考视频中的动画场景与实现代码。",
         "url": "https://github.com/3b1b/videos/blob/master/_2024/transformers/chm.py"
+      },
+      {
+        "title": "3b1b / manim",
+        "label": "GitHub · 动画引擎",
+        "url": "https://github.com/3b1b/manim"
       }
     ],
     "messages": [
       {
         "role": "user",
-        "text": "不要自行构建页面！ 使用原始所有视频原始素材来1:1构建，而非自行构建！",
-        "images": [],
-        "source": {
-          "file": "01a0a377-3142-77c3-9dff-5e4d808b69ea.md",
-          "message": "M038"
-        }
+        "text": "不要自行重绘页面。使用原始视频的代码和素材做 1:1 还原，不要另外改编。",
+        "images": []
       },
       {
         "role": "assistant",
-        "text": "明白，我刚才偏离了你的要求：不该加入自绘画面和改编内容。我现在停止这些制作，改为只用原始代码和原始素材按原片还原；缺失素材不再自行替代。",
-        "images": [],
-        "source": {
-          "file": "01a0a377-3142-77c3-9dff-5e4d808b69ea.md",
-          "message": "M039"
-        }
-      }
-    ]
-  },
-  "V9": {
-    "links": [],
-    "messages": [
-      {
-        "role": "user",
-        "text": "提示词内是对于镜头的描述表达，即一个镜头内的大部分演化，一个图片内可能有9～12个卡片（甚至更多）分镜来展示动画是如何演进的！ 基于此来优化生图提示词！",
-        "images": [],
-        "source": {
-          "file": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md",
-          "message": "M033"
-        }
-      },
-      {
-        "role": "assistant",
-        "text": "明白，每条提示词应生成一张“镜头演化分镜板”，用九至十二格展示同一镜头从起始到结束的主要变化。我会据此重写二十条提示词，明确每格的状态、连续变化，以及始终保持不变的对象。",
-        "images": [],
-        "source": {
-          "file": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md",
-          "message": "M034"
-        }
+        "text": "停止加入自绘画面和改编内容，改用原始代码与素材对照原片还原；缺失的素材先明确缺口，不自行替代。",
+        "images": []
       }
     ],
-    "images": [
-      "story1",
-      "story2",
-      "story3"
+    "outputs": [
+      {
+        "asset": "videoLlm"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "01a0a377-3142-77c3-9dff-5e4d808b69ea.md / M038；01a0a377-3142-77c3-9dff-5e4d808b69ea.md / M039",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。",
+    "conversations": [
+      {
+        "title": "还原边界",
+        "messages": [
+          {
+            "role": "user",
+            "text": "不要自行重绘页面。使用原始视频的代码和素材做 1:1 还原，不要另外改编。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "停止加入自绘画面和改编内容，改用原始代码与素材对照原片还原；缺失的素材先明确缺口，不自行替代。",
+            "images": []
+          }
+        ]
+      }
     ]
   },
-  "P4": {
+  "V4": {
+    "title": "提炼制作要求与实现细节",
+    "links": [
+      {
+        "asset": "videoLlm"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "把这次制作中可复用的要求和实现细节整理出来。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "区分文章表达、单段动画、整片组织的要求，形成下一次制作可以复用的方法。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "V5": {
+    "title": "整理成 3 个 skills · 用于后续工作直接调用",
     "links": [],
     "messages": [
       {
         "role": "user",
-        "text": "还是用这个吧！",
-        "images": [
-          "selected"
-        ],
-        "source": {
-          "file": "01a0c158-8585-71e2-a817-a58f4996ef74.md",
-          "message": "M072"
-        }
+        "text": "先完成两个 Skill 和完整视频制作流程，这一步只做 Skill，不直接制作视频。",
+        "images": []
       },
       {
         "role": "assistant",
-        "text": "已按你选的这版重建第 37 页，保留左右布局、图标和文案，文字可编辑。刷新 PPT 即可查看。",
-        "images": [
-          "implemented"
-        ],
-        "source": {
-          "file": "01a0c158-8585-71e2-a817-a58f4996ef74.md",
-          "message": "M074"
-        }
+        "text": "[动画 Skill](asset:animationSkill) 保留动作目录、ManimGL 调试方法和场景模板；[视频 Skill](asset:videoSkill) 负责脚本、旁白、字幕和剪辑合成。两者通过镜头方案和动画片段衔接。",
+        "images": []
+      }
+    ],
+    "outputs": [
+      {
+        "asset": "articleSkill"
+      },
+      {
+        "asset": "animationSkill"
+      },
+      {
+        "asset": "videoSkill"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "01a0a37e-5446-7963-9770-cff48cc137bd.md / M016；01a0a37e-5446-7963-9770-cff48cc137bd.md / M019",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。",
+    "conversations": [
+      {
+        "title": "拆分动画与视频",
+        "messages": [
+          {
+            "role": "user",
+            "text": "先完成两个 Skill 和完整视频制作流程，这一步只做 Skill，不直接制作视频。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "[动画 Skill](asset:animationSkill) 保留动作目录、ManimGL 调试方法和场景模板；[视频 Skill](asset:videoSkill) 负责脚本、旁白、字幕和剪辑合成。两者通过镜头方案和动画片段衔接。",
+            "images": []
+          }
+        ]
+      },
+      {
+        "title": "加入文章制作",
+        "messages": [
+          {
+            "role": "user",
+            "text": "再根据网页内容形成一个文章撰写 Skill。后续先写文章，再制作动画，最终合成视频。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "三个职责衔接为：\n\n1. [explanatory-article](asset:articleSkill)：用具体例子和逐步解释写成独立可读的正文。\n2. [manim-animation](asset:animationSkill)：将文章中的关键变化制作成动画。\n3. [manim-video](asset:videoSkill)：完成旁白、字幕、剪辑与最终合成。\n\n文章改动需要同步到对应镜头，避免文字与画面各讲各的。",
+            "images": []
+          }
+        ]
+      }
+    ]
+  },
+  "S1": {
+    "title": "explanatory-article · 解释型文章",
+    "links": [],
+    "messages": [
+      {
+        "role": "user",
+        "text": "形成文章撰写 Skill，作为后续动画和视频的内容基础。",
+        "images": []
+      },
+      {
+        "role": "assistant",
+        "text": "[explanatory-article](asset:articleSkill) 负责具体例子引入、逐步解释、图文配合、事实核验和文章验收。文章先能独立读懂，再建立文章与镜头的对应关系。",
+        "images": []
+      }
+    ],
+    "outputs": [
+      {
+        "asset": "articleSkill"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "01a0a37e-5446-7963-9770-cff48cc137bd.md / M016；01a0a37e-5446-7963-9770-cff48cc137bd.md / M019",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。",
+    "conversations": [
+      {
+        "title": "文章职责",
+        "messages": [
+          {
+            "role": "user",
+            "text": "形成文章撰写 Skill，作为后续动画和视频的内容基础。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "[explanatory-article](asset:articleSkill) 负责具体例子引入、逐步解释、图文配合、事实核验和文章验收。文章先能独立读懂，再建立文章与镜头的对应关系。",
+            "images": []
+          }
+        ]
       }
     ]
   },
   "S2": {
+    "title": "manim-animation · 动画制作",
+    "links": [],
     "messages": [
       {
         "role": "user",
-        "text": "仅完成2个skills，",
-        "images": [],
-        "source": {
-          "file": "01a0a37e-5446-7963-9770-cff48cc137bd.md",
-          "message": "M011"
-        }
+        "text": "把 3Blue1Brown 的制作规范和动作整理为 Skill，后面可以直接调用。",
+        "images": []
       },
       {
         "role": "assistant",
-        "text": "两个 Skill 的职责已拆开：动画 Skill 保留动作目录、ManimGL 调试方法和场景模板；视频 Skill 负责从脚本到成片的流程。我正在补齐两者之间的镜头交接约定，让视频流程拿到动画片段后能继续完成配音、字幕和剪辑合成。",
-        "images": [],
-        "source": {
-          "file": "01a0a37e-5446-7963-9770-cff48cc137bd.md",
-          "message": "M013"
-        }
+        "text": "[manim-animation](asset:animationSkill) 负责动画对象、状态变化、连续动作和场景调试；保留动作目录与场景模板。交付的是可接入视频流程的镜头片段。",
+        "images": []
       }
     ],
     "outputs": [
@@ -179,27 +550,40 @@
         "asset": "animationSkill"
       }
     ],
-    "links": []
+    "status": "editorial-rewrite",
+    "evidence": "01a0a37e-5446-7963-9770-cff48cc137bd.md / M011；01a0a37e-5446-7963-9770-cff48cc137bd.md / M013",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。",
+    "conversations": [
+      {
+        "title": "动画职责",
+        "messages": [
+          {
+            "role": "user",
+            "text": "把 3Blue1Brown 的制作规范和动作整理为 Skill，后面可以直接调用。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "[manim-animation](asset:animationSkill) 负责动画对象、状态变化、连续动作和场景调试；保留动作目录与场景模板。交付的是可接入视频流程的镜头片段。",
+            "images": []
+          }
+        ]
+      }
+    ]
   },
   "S3": {
+    "title": "manim-video · 完整视频制作",
+    "links": [],
     "messages": [
       {
         "role": "user",
-        "text": "仅完成2个skills，",
-        "images": [],
-        "source": {
-          "file": "01a0a37e-5446-7963-9770-cff48cc137bd.md",
-          "message": "M011"
-        }
+        "text": "把完整视频制作流程整理为 Skill，与动画制作分开。",
+        "images": []
       },
       {
         "role": "assistant",
-        "text": "两个 Skill 的职责已拆开：动画 Skill 保留动作目录、ManimGL 调试方法和场景模板；视频 Skill 负责从脚本到成片的流程。我正在补齐两者之间的镜头交接约定，让视频流程拿到动画片段后能继续完成配音、字幕和剪辑合成。",
-        "images": [],
-        "source": {
-          "file": "01a0a37e-5446-7963-9770-cff48cc137bd.md",
-          "message": "M013"
-        }
+        "text": "[manim-video](asset:videoSkill) 负责从内容和镜头方案到旁白、字幕、剪辑与成片的流程。拿到动画片段后继续合成，并区分静音预览和有声成片。",
+        "images": []
       }
     ],
     "outputs": [
@@ -207,277 +591,30 @@
         "asset": "videoSkill"
       }
     ],
-    "links": []
-  },
-  "S1": {
-    "messages": [
+    "status": "editorial-rewrite",
+    "evidence": "01a0a37e-5446-7963-9770-cff48cc137bd.md / M011；01a0a37e-5446-7963-9770-cff48cc137bd.md / M013",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。",
+    "conversations": [
       {
-        "role": "user",
-        "text": "根据网页内容再形成一个skills用于文章的撰写！ 后续我们的策略为 先写文章、再制作动画，最终合成视频",
-        "images": [],
-        "source": {
-          "file": "01a0a37e-5446-7963-9770-cff48cc137bd.md",
-          "message": "M016"
-        }
-      },
-      {
-        "role": "assistant",
-        "text": "已新增并注册 [explanatory-article](/Users/w/code/For-Use-AI/.agents/skills/explanatory-article/SKILL.md)，包含具体例子引入、逐步解释、图文配合、事实核验与文章验收规则。\n\n三个 Skill 已衔接为：\n\n1. `explanatory-article`：完成独立可读的文章，作为内容依据。\n2. `manim-animation`：将文章中的关键变化制作成动画。\n3. `manim-video`：完成旁白、字幕、剪辑与最终合成。\n\n已补充文章到镜头的对应及修订规则，三个 Skill 的结构、链接与注册检查均通过。后续可直接使用 `$explanatory-article` 开始写作。",
-        "images": [],
-        "source": {
-          "file": "01a0a37e-5446-7963-9770-cff48cc137bd.md",
-          "message": "M019"
-        },
-        "excerpt": "三个 Skill 已衔接为：\n\n1. [explanatory-article](asset:articleSkill)：完成独立可读的文章，作为内容依据。\n2. [manim-animation](asset:animationSkill)：将文章中的关键变化制作成动画。\n3. [manim-video](asset:videoSkill)：完成旁白、字幕、剪辑与最终合成。"
-      }
-    ],
-    "outputs": [
-      {
-        "asset": "articleSkill"
-      },
-      {
-        "asset": "animationSkill"
-      },
-      {
-        "asset": "videoSkill"
-      }
-    ],
-    "links": []
-  },
-  "V5": {
-    "messages": [
-      {
-        "role": "user",
-        "text": "根据网页内容再形成一个skills用于文章的撰写！ 后续我们的策略为 先写文章、再制作动画，最终合成视频",
-        "images": [],
-        "source": {
-          "file": "01a0a37e-5446-7963-9770-cff48cc137bd.md",
-          "message": "M016"
-        }
-      },
-      {
-        "role": "assistant",
-        "text": "已新增并注册 [explanatory-article](/Users/w/code/For-Use-AI/.agents/skills/explanatory-article/SKILL.md)，包含具体例子引入、逐步解释、图文配合、事实核验与文章验收规则。\n\n三个 Skill 已衔接为：\n\n1. `explanatory-article`：完成独立可读的文章，作为内容依据。\n2. `manim-animation`：将文章中的关键变化制作成动画。\n3. `manim-video`：完成旁白、字幕、剪辑与最终合成。\n\n已补充文章到镜头的对应及修订规则，三个 Skill 的结构、链接与注册检查均通过。后续可直接使用 `$explanatory-article` 开始写作。",
-        "images": [],
-        "source": {
-          "file": "01a0a37e-5446-7963-9770-cff48cc137bd.md",
-          "message": "M019"
-        },
-        "excerpt": "三个 Skill 已衔接为：\n\n1. [explanatory-article](asset:articleSkill)：完成独立可读的文章，作为内容依据。\n2. [manim-animation](asset:animationSkill)：将文章中的关键变化制作成动画。\n3. [manim-video](asset:videoSkill)：完成旁白、字幕、剪辑与最终合成。"
-      }
-    ],
-    "outputs": [
-      {
-        "asset": "articleSkill"
-      },
-      {
-        "asset": "animationSkill"
-      },
-      {
-        "asset": "videoSkill"
-      }
-    ],
-    "links": []
-  },
-  "V8": {
-    "links": [
-      {
-        "asset": "ioArticle",
-        "title": "信息输入与工具执行 · 文章",
-        "description": "镜头规划的内容依据。"
-      },
-      {
-        "asset": "animationSkill",
-        "title": "manim-animation · 动画制作",
-        "description": "将对象、状态变化和动作组织为镜头。"
-      }
-    ],
-    "messages": [
-      {
-        "role": "user",
-        "text": "视频的镜头需要多个个？",
-        "images": [],
-        "source": {
-          "file": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md",
-          "message": "M027"
-        }
-      },
-      {
-        "role": "assistant",
-        "text": "按 **7—9 分钟**规划，建议 **18—24 个镜头**，先以 **20 个**安排。\n\n| 叙事段落 | 镜头数 | 展示内容 |\n|---|---:|---|\n| 一句话引出问题 | 2 | 用户提出需求；展开界面背后的输入 |\n| 输入中还有什么 | 5 | 系统指令、项目规则、历史、资料、运行信息逐步加入 |\n| 工具定义有什么用 | 4 | 可用工具、用途、参数规则、具体请求的形成 |\n| 组成本轮上下文 | 2 | 选取相关内容；组织后交给模型 |\n| 请求、执行与结果返回 | 5 | 模型输出请求、程序执行、取得正文、返回输入、形成回答 |\n| 回到最初的问题 | 2 | 原文与答案对照；完整过程收束 |\n| **合计** | **20** | |\n\n这里的一个镜头可以包含几个连续动作。例如“读取文件”可以在同一个画面里依次展示：**请求到达 → 程序执行 → 内容副本返回**，不必每个动作都切换画面。\n\n这也不意味着需要设计二十套独立画面。可以复用 **5—6 套主要构图**，通过局部放大、对象加入和状态变化，形成连续叙事。具体数量等精简正文完成后，再按讲解节奏确定。",
-        "images": [],
-        "source": {
-          "file": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md",
-          "message": "M028"
-        },
-        "excerpt": "按 **7—9 分钟**规划，建议 **18—24 个镜头**，先以 **20 个**安排。"
-      },
-      {
-        "role": "user",
-        "text": "每个镜头分别是什么？写出每个镜头的生图提示词，然后对正文的文字减少一点，保留必要的描述即可！精简、惜字",
-        "images": [],
-        "source": {
-          "file": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md",
-          "message": "M029"
-        },
-        "excerpt": "每个镜头分别是什么？写出每个镜头的生图提示词，然后对[正文](asset:ioArticle)的文字减少一点，保留必要的描述即可！精简、惜字"
-      },
-      {
-        "role": "assistant",
-        "text": "我会精简正文，保留输入组成、工具定义和结果返回这条主线；再逐一写清二十个镜头的画面与生图提示词。提示词以图形状态和空间关系为主，沿用第一期的黑底、灰色层叠模型和少量强调色。",
-        "images": [],
-        "source": {
-          "file": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md",
-          "message": "M030"
-        },
-        "excerpt": "我会精简[正文](asset:ioArticle)，保留输入组成、工具定义和结果返回这条主线；再逐一写清二十个镜头的画面与生图提示词。提示词以图形状态和空间关系为主，沿用第一期的黑底、灰色层叠模型和少量强调色。"
-      }
-    ],
-    "images": [
-      "story1",
-      "story2",
-      "story3"
-    ]
-  },
-  "V10": {
-    "links": [
-      {
-        "asset": "ioArticle",
-        "title": "信息输入与工具执行 · 文章",
-        "description": "视频内容与分镜的依据。"
-      },
-      {
-        "asset": "animationSkill"
-      },
-      {
-        "asset": "videoSkill"
-      }
-    ],
-    "messages": [
-      {
-        "role": "user",
-        "text": "/var/folders/n6/tmfttpgj5nq673pwj_2mw5r80000gn/T/ai-io-video-development-handoff.md 代码制作，480p视频验证",
-        "images": [],
-        "source": {
-          "file": "01a0a87b-54cf-7e90-8fe2-f550ac2f1076.md",
-          "message": "M001"
-        },
-        "excerpt": "代码制作，480p视频验证"
-      },
-      {
-        "role": "assistant",
-        "text": "我会使用 `manim-animation` 和 `manim-video`，按已有三镜方案制作代码。本轮先交付并验证 480p 动画预览；旁白成片与静音预览会明确区分。",
-        "images": [],
-        "source": {
-          "file": "01a0a87b-54cf-7e90-8fe2-f550ac2f1076.md",
-          "message": "M003"
-        },
-        "excerpt": "我会使用 [manim-animation](asset:animationSkill) 和 [manim-video](asset:videoSkill)，按已有三镜方案制作代码。本轮先交付并验证 480p 动画预览；旁白成片与静音预览会明确区分。"
-      },
-      {
-        "role": "user",
-        "text": "1:06后的表达有点怪？好像很多变化缺失",
-        "images": [],
-        "source": {
-          "file": "01a0a87b-54cf-7e90-8fe2-f550ac2f1076.md",
-          "message": "M022"
-        }
-      },
-      {
-        "role": "assistant",
-        "text": "我会对照正式分镜复看 1:06 之后的动作，重点检查结果回到程序、请求与结果配对、组装新输入这几步，是否只换了位置和标签，却没把过程表现出来。",
-        "images": [],
-        "source": {
-          "file": "01a0a87b-54cf-7e90-8fe2-f550ac2f1076.md",
-          "message": "M023"
-        }
-      }
-    ],
-    "images": [
-      "story1"
-    ],
-    "outputs": [
-      {
-        "asset": "videoIo"
-      }
-    ]
-  },
-  "Q2": {
-    "links": [
-      {
-        "asset": "articleSkill"
-      }
-    ],
-    "outputs": [
-      {
-        "asset": "quadArticle",
-        "title": "行动选择与投入控制",
-        "description": "从具体请求出发，用对齐依据与预期投入判断下一步行动。"
-      }
-    ],
-    "messages": [
-      {
-        "role": "user",
-        "text": "重新列举出哪些任务项，你所列举的任务或者说task 并非可被定义和理解的 [@researcher](subagent://researcher)  需要重新研究下！ 怎么写才合理！且被受众能够理解",
-        "images": [],
-        "source": {
-          "file": "01a0ade0-eab8-7110-8845-248a5932fe8b.md",
-          "message": "M041"
-        },
-        "excerpt": "重新列举出哪些任务项，你所列举的任务或者说task 并非可被定义和理解的……需要重新研究下！ 怎么写才合理！且被受众能够理解"
-      },
-      {
-        "role": "assistant",
-        "text": "我会先暂停 PPT 制作，重新研究任务项的定义和写法。现在的清单混合了工具、动作、交付物和错误做法，读者很难按同一个标准理解。\n\n我会请 researcher 结合原文和受众定位，研究怎样写出边界清楚、容易理解的任务名称；我同时核对现有清单，最后给你一版重新分类的任务项及改写依据。",
-        "images": [],
-        "source": {
-          "file": "01a0ade0-eab8-7110-8845-248a5932fe8b.md",
-          "message": "M042"
-        }
-      }
-    ]
-  },
-  "Q3": {
-    "links": [
-      {
-        "asset": "quadArticle",
-        "title": "行动选择与投入控制",
-        "description": "从具体请求出发，用对齐依据与预期投入判断下一步行动。"
-      }
-    ],
-    "outputs": [
-      {
-        "asset": "quad"
-      }
-    ],
-    "messages": [
-      {
-        "role": "user",
-        "text": "他们的位置点和描述似乎有差异，感觉你是乱序排的，将他们的 对齐依据和投入打分，打分后再优化位置点",
-        "images": [],
-        "source": {
-          "file": "01a0ade0-eab8-7110-8845-248a5932fe8b.md",
-          "message": "M073"
-        }
-      },
-      {
-        "role": "assistant",
-        "text": "目前的位置确实只是散点示意，没有按请求内容定位。我会逐项评估“对齐依据”和“下一次反馈前的投入”，用评分重新计算坐标，并把评分理由放到点的提示里，方便核对。",
-        "images": [],
-        "source": {
-          "file": "01a0ade0-eab8-7110-8845-248a5932fe8b.md",
-          "message": "M074"
-        }
+        "title": "成片职责",
+        "messages": [
+          {
+            "role": "user",
+            "text": "把完整视频制作流程整理为 Skill，与动画制作分开。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "[manim-video](asset:videoSkill) 负责从内容和镜头方案到旁白、字幕、剪辑与成片的流程。拿到动画片段后继续合成，并区分静音预览和有声成片。",
+            "images": []
+          }
+        ]
       }
     ]
   },
   "V6": {
+    "title": "收集关于输入输出的素材与文章",
     "links": [],
-    "outputs": [
-      {
-        "asset": "ioSources"
-      }
-    ],
     "messages": [
       {
         "role": "user",
@@ -497,12 +634,76 @@
           "message": "M003"
         }
       }
+    ],
+    "outputs": [
+      {
+        "asset": "ioSources"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md / M001；01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md / M003",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。",
+    "conversations": [
+      {
+        "title": "资料范围",
+        "messages": [
+          {
+            "role": "user",
+            "text": "开始规划第二个视频，我在制作视频前需要先将文章构建好，第二视频围绕于AI的输入和输出！ 请找到支持此类的详细文章和资料",
+            "images": [],
+            "source": {
+              "file": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md",
+              "message": "M001"
+            }
+          },
+          {
+            "role": "assistant",
+            "text": "最贴合这个选题的是 3Blue1Brown 的 Transformer 长文：它把“输入文字→Token→向量→输出概率”串成了完整过程。资料库里也已有一篇《输入组织与模型输出全过程》，可以作为中文备课基础；我会对照一手资料核验，并补上上下文、多模态和输出验证的部分。",
+            "images": [],
+            "source": {
+              "file": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md",
+              "message": "M003"
+            }
+          }
+        ]
+      },
+      {
+        "title": "明确选题",
+        "messages": [
+          {
+            "role": "user",
+            "text": "不是只讲文字如何变成 Token。第二个视频要讲：一次 AI 对话除了用户需求，还包含系统提示词、工具 Schema 等哪些内容？",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "主线改为：用户发出一句话后，产品如何组织一次模型调用，以及输出如何触发下一轮输入。展开系统提示词、工具定义与参数、相关历史、资料和运行环境；Token 与向量只作必要说明。",
+            "images": []
+          }
+        ]
+      }
     ]
   },
   "V7": {
+    "title": "使用 skills 整理成解释型文章",
     "links": [
       {
+        "asset": "ioSources"
+      },
+      {
         "asset": "articleSkill"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "先用 [explanatory-article](asset:articleSkill) 写文章，再制作关键帧。沿用第一期 LLM 简要说明的背景、配色、文字和图形语言。",
+        "images": []
+      },
+      {
+        "role": "assistant",
+        "text": "先把输入组成、工具定义、外部执行与结果返回写成完整正文，再按解释需要配图，让两期视频的视觉语言保持一致。",
+        "images": []
       }
     ],
     "outputs": [
@@ -510,60 +711,592 @@
         "asset": "ioArticle"
       }
     ],
-    "messages": [
+    "status": "editorial-rewrite",
+    "evidence": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md / M011；01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md / M012",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。",
+    "conversations": [
       {
-        "role": "user",
-        "text": "先写入一篇文章来介绍这个内容 [$explanatory-article](/Users/w/code/For-Use-AI/.agents/skills/explanatory-article/SKILL.md)  然后使用生图模型来生成关键帧的演示页面！ 以LLM_简要说明的图片作为核心参考图片来构建！",
-        "images": [],
-        "source": {
-          "file": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md",
-          "message": "M011"
-        },
-        "excerpt": "先写入一篇文章来介绍这个内容 [explanatory-article](asset:articleSkill)  然后使用生图模型来生成关键帧的演示页面！ 以LLM_简要说明的图片作为核心参考图片来构建！"
+        "title": "正文与视觉参考",
+        "messages": [
+          {
+            "role": "user",
+            "text": "先用 [explanatory-article](asset:articleSkill) 写文章，再制作关键帧。沿用第一期 LLM 简要说明的背景、配色、文字和图形语言。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "先把输入组成、工具定义、外部执行与结果返回写成完整正文，再按解释需要配图，让两期视频的视觉语言保持一致。",
+            "images": []
+          }
+        ]
       },
       {
-        "role": "assistant",
-        "text": "我会先按 `explanatory-article` 写成完整正文，再用生图模型制作关键帧演示图。我会先查看 `LLM_简要说明` 的参考图片，沿用它的背景、配色、文字和图形语言，让两期视频在视觉上保持一致。",
-        "images": [],
-        "source": {
-          "file": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md",
-          "message": "M012"
-        }
+        "title": "先理清叙事",
+        "messages": [
+          {
+            "role": "user",
+            "text": "只有一个画面吗？先检查整体叙事顺序，把文字写完整，图片后配。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "先暂停配图。从用户的一句话出发，展开产品补充的信息，说明它们如何组成本轮输入；再沿模型输出、工具执行、结果返回走完一次对话。图形要表现聚合、复制、字段匹配和回流，而不只是文字框。",
+            "images": []
+          }
+        ]
       }
     ]
   },
-  "W1": {
-    "links": [],
-    "outputs": [],
+  "V8": {
+    "title": "根据文章内容与表达方式 · 确定镜头安排和数量",
+    "links": [
+      {
+        "asset": "ioArticle"
+      },
+      {
+        "asset": "videoSkill"
+      }
+    ],
     "messages": [
       {
         "role": "user",
-        "text": "先保存讨论决策，后续规划写7 篇文章（除了提问与交流），其他一块一篇文章，图文并茂！ 通过 [$diagram-design](/Users/w/code/skills/skills/visualization/diagram-design/SKILL.md)  +markdown 文档来进行文章的输出，写7篇即可，其中 AI 的能力从哪里来 已有文章  然后提供一个网页类似于我提供网页的结构，其中：Blog、这些跨链不需要，只需要目录左右侧目录和正文即可！",
+        "text": "视频的镜头需要多个个？",
         "images": [],
         "source": {
-          "file": "01a0a8a9-6d2f-7e40-8ff1-30cbfe57415b.md",
+          "file": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md",
           "message": "M027"
-        },
-        "excerpt": "先保存讨论决策，后续规划写7 篇文章（除了提问与交流），其他一块一篇文章，图文并茂！"
+        }
       },
       {
         "role": "assistant",
-        "text": "我会按 `explanatory-article` 和你指定的 `diagram-design` 规划七篇图文文章，先确认已有文章与网页入口。当前处于计划模式，这一轮先明确保存决策、文章编排和阅读网页的实施方案，不写入文件。",
+        "text": "按 **7—9 分钟**规划，建议 **18—24 个镜头**，先以 **20 个**安排。\n\n| 叙事段落 | 镜头数 | 展示内容 |\n|---|---:|---|\n| 一句话引出问题 | 2 | 用户提出需求；展开界面背后的输入 |\n| 输入中还有什么 | 5 | 系统指令、项目规则、历史、资料、运行信息逐步加入 |\n| 工具定义有什么用 | 4 | 可用工具、用途、参数规则、具体请求的形成 |\n| 组成本轮上下文 | 2 | 选取相关内容；组织后交给模型 |\n| 请求、执行与结果返回 | 5 | 模型输出请求、程序执行、取得正文、返回输入、形成回答 |\n| 回到最初的问题 | 2 | 原文与答案对照；完整过程收束 |\n| **合计** | **20** | |\n\n这里的一个镜头可以包含几个连续动作。例如“读取文件”可以在同一个画面里依次展示：**请求到达 → 程序执行 → 内容副本返回**，不必每个动作都切换画面。\n\n这也不意味着需要设计二十套独立画面。可以复用 **5—6 套主要构图**，通过局部放大、对象加入和状态变化，形成连续叙事。具体数量等精简正文完成后，再按讲解节奏确定。",
         "images": [],
         "source": {
-          "file": "01a0a8a9-6d2f-7e40-8ff1-30cbfe57415b.md",
+          "file": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md",
           "message": "M028"
         }
+      },
+      {
+        "role": "user",
+        "text": "每个镜头分别是什么？写出每个镜头的生图提示词，然后对正文的文字减少一点，保留必要的描述即可！精简、惜字",
+        "images": [],
+        "source": {
+          "file": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md",
+          "message": "M029"
+        }
+      },
+      {
+        "role": "assistant",
+        "text": "我会精简正文，保留输入组成、工具定义和结果返回这条主线；再逐一写清二十个镜头的画面与生图提示词。提示词以图形状态和空间关系为主，沿用第一期的黑底、灰色层叠模型和少量强调色。",
+        "images": [],
+        "source": {
+          "file": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md",
+          "message": "M030"
+        }
+      }
+    ],
+    "outputs": [],
+    "status": "editorial-rewrite",
+    "evidence": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md / M027；01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md / M028；01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md / M029；01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md / M030",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。",
+    "conversations": [
+      {
+        "title": "初步镜头规划",
+        "messages": [
+          {
+            "role": "user",
+            "text": "视频的镜头需要多个个？",
+            "images": [],
+            "source": {
+              "file": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md",
+              "message": "M027"
+            }
+          },
+          {
+            "role": "assistant",
+            "text": "按 **7—9 分钟**规划，建议 **18—24 个镜头**，先以 **20 个**安排。\n\n| 叙事段落 | 镜头数 | 展示内容 |\n|---|---:|---|\n| 一句话引出问题 | 2 | 用户提出需求；展开界面背后的输入 |\n| 输入中还有什么 | 5 | 系统指令、项目规则、历史、资料、运行信息逐步加入 |\n| 工具定义有什么用 | 4 | 可用工具、用途、参数规则、具体请求的形成 |\n| 组成本轮上下文 | 2 | 选取相关内容；组织后交给模型 |\n| 请求、执行与结果返回 | 5 | 模型输出请求、程序执行、取得正文、返回输入、形成回答 |\n| 回到最初的问题 | 2 | 原文与答案对照；完整过程收束 |\n| **合计** | **20** | |\n\n这里的一个镜头可以包含几个连续动作。例如“读取文件”可以在同一个画面里依次展示：**请求到达 → 程序执行 → 内容副本返回**，不必每个动作都切换画面。\n\n这也不意味着需要设计二十套独立画面。可以复用 **5—6 套主要构图**，通过局部放大、对象加入和状态变化，形成连续叙事。具体数量等精简正文完成后，再按讲解节奏确定。",
+            "images": [],
+            "source": {
+              "file": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md",
+              "message": "M028"
+            }
+          },
+          {
+            "role": "user",
+            "text": "每个镜头分别是什么？写出每个镜头的生图提示词，然后对正文的文字减少一点，保留必要的描述即可！精简、惜字",
+            "images": [],
+            "source": {
+              "file": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md",
+              "message": "M029"
+            }
+          },
+          {
+            "role": "assistant",
+            "text": "我会精简正文，保留输入组成、工具定义和结果返回这条主线；再逐一写清二十个镜头的画面与生图提示词。提示词以图形状态和空间关系为主，沿用第一期的黑底、灰色层叠模型和少量强调色。",
+            "images": [],
+            "source": {
+              "file": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md",
+              "message": "M030"
+            }
+          }
+        ]
+      },
+      {
+        "title": "合并重复镜头",
+        "messages": [
+          {
+            "role": "user",
+            "text": "前两个镜头是不是可以合并？现在动作拆得很多，但缺少内容关系的解释。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "合并重复的“用户发出任务”画面。先按八个解释单元组织：一句话背后、信息分别管什么、工具定义、文件位置与正文、调用请求、外部执行、依据结果回答、完整过程回看。镜头数服从讲解，不为凑格数拆动作。",
+            "images": []
+          }
+        ]
+      },
+      {
+        "title": "收束为三个关键镜头",
+        "messages": [
+          {
+            "role": "user",
+            "text": "现在太像在教会议纪要怎么做。本次要讲的是整段对话输入输出如何运作。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "收束为三个关键镜头：\n\n1. 一句话背后的完整输入：信息从哪里来，怎样汇入。\n2. 输出不一定是给人的回答：工具名、参数和调用标识交给程序。\n3. 输出经执行成为下一次输入：结果与请求配对，补入上下文，再生成回答。\n\n录音只是贯穿流程的对象，画面重点是来源、边界、去向和循环。",
+            "images": []
+          }
+        ]
+      }
+    ]
+  },
+  "V9": {
+    "title": "逐步生成分镜图片",
+    "links": [
+      {
+        "asset": "ioArticle"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "每条生图提示词要描述一个镜头的大部分演化。一张图用 9～12 格甚至更多，呈现动画如何从开始变化到结束。",
+        "images": []
+      },
+      {
+        "role": "assistant",
+        "text": "每格写清状态、连续变化和不变的对象。格数随解释需要决定，不能只是把同一个卡片移动拆成很多格。",
+        "images": []
+      }
+    ],
+    "outputs": [],
+    "status": "editorial-rewrite",
+    "evidence": "01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md / M033；01a0a41b-40fc-7620-a4cc-d037fd5f98f4.md / M034",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。",
+    "conversations": [
+      {
+        "title": "镜头演化分镜板",
+        "messages": [
+          {
+            "role": "user",
+            "text": "每条生图提示词要描述一个镜头的大部分演化。一张图用 9～12 格甚至更多，呈现动画如何从开始变化到结束。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "每格写清状态、连续变化和不变的对象。格数随解释需要决定，不能只是把同一个卡片移动拆成很多格。",
+            "images": []
+          }
+        ]
+      },
+      {
+        "title": "展开具体输入",
+        "messages": [
+          {
+            "role": "user",
+            "text": "不要只画抽象的色块。先逐项展示系统提示词、工具 Schema 等具体内容，再总结；右侧可以先不显示大模型，留给内容展开。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "左侧逐一选中信息来源，右侧展开对应示例；介绍后收回输入组。工具展示名称、用途、参数结构与必填项，再与调用请求里的具体值对应。示例内容和真实接口结构分开说明。",
+            "images": []
+          }
+        ]
+      },
+      {
+        "title": "保持首次对话连续",
+        "messages": [
+          {
+            "role": "user",
+            "text": "首次对话没有上一轮历史。工具定义按真实 Schema 结构展示，并参考 Manim 和 3Blue1Brown 的布局、图形和连续变换。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "首次输入不加入虚构历史；工具调用和结果返回后，才出现对应的调用记录。用对象定位、局部放大与连续变化展示三镜，文字只补充关键内容。",
+            "images": [
+              "story1",
+              "story2",
+              "story3"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "V10": {
+    "title": "逐步完成视频开发",
+    "links": [
+      {
+        "asset": "animationSkill"
+      },
+      {
+        "asset": "videoSkill"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "按确认的三镜分镜制作代码，先用 480p 视频验证。",
+        "images": [
+          "story1",
+          "story2",
+          "story3"
+        ]
+      },
+      {
+        "role": "assistant",
+        "text": "使用 [manim-animation](asset:animationSkill) 实现镜头，再按 [manim-video](asset:videoSkill) 衔接制作流程。先验证动画预览，旁白成片与静音预览分别交付。",
+        "images": []
+      }
+    ],
+    "outputs": [
+      {
+        "asset": "animationCode"
+      },
+      {
+        "asset": "videoIo"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "01a0a87b-54cf-7e90-8fe2-f550ac2f1076.md / M001；01a0a87b-54cf-7e90-8fe2-f550ac2f1076.md / M003；01a0a87b-54cf-7e90-8fe2-f550ac2f1076.md / M022；01a0a87b-54cf-7e90-8fe2-f550ac2f1076.md / M023",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。",
+    "conversations": [
+      {
+        "title": "代码与预览",
+        "messages": [
+          {
+            "role": "user",
+            "text": "按确认的三镜分镜制作代码，先用 480p 视频验证。",
+            "images": [
+              "story1",
+              "story2",
+              "story3"
+            ]
+          },
+          {
+            "role": "assistant",
+            "text": "使用 [manim-animation](asset:animationSkill) 实现镜头，再按 [manim-video](asset:videoSkill) 衔接制作流程。先验证动画预览，旁白成片与静音预览分别交付。",
+            "images": []
+          }
+        ]
+      },
+      {
+        "title": "修复动作与边界",
+        "messages": [
+          {
+            "role": "user",
+            "text": "有些模块中途消失，镜头不连续；1:06 后好像缺少很多变化，外框也丢了。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "对照分镜检查对象显隐、内容外框、分组边界、配对标记和连接线。重点补查结果回到程序、请求与结果配对、组装新输入，避免只换位置和标签，没有表现过程。",
+            "images": []
+          }
+        ]
+      },
+      {
+        "title": "呈现完整输入",
+        "messages": [
+          {
+            "role": "user",
+            "text": "0:28 和 1:28 这两处，内容最终怎样组合后传入模型？第一次和第二次请求都要做成整体展示。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "在两次调用前各加一段：展开各项内容，保留来源边界，组合成整体再送入模型。第二次保留所需原内容，并接上调用记录与工具结果；这是教学示意，不把固定字符串形式当作所有 API 的规则。",
+            "images": []
+          }
+        ]
+      },
+      {
+        "title": "字体与运动节奏",
+        "messages": [
+          {
+            "role": "user",
+            "text": "优化字体、多余连线和运动帧的时序。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "检查字体层级、重复连线和动作衔接；保留有解释作用的边界与箭头，调整拥挤位置和运动节奏，再输出 480p 预览。",
+            "images": []
+          }
+        ]
+      }
+    ]
+  },
+  "V11": {
+    "title": "完成视频",
+    "links": [],
+    "messages": [
+      {
+        "role": "user",
+        "text": "完成修订并输出能接入课件的视频。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "整理可播放文件与对应内容，确认交接版本和播放入口。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [
+      {
+        "asset": "videoIo"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "W1": {
+    "title": "收集其他课程原始文章",
+    "links": [
+      {
+        "asset": "terrainOriginal"
+      },
+      {
+        "asset": "quadOriginal"
+      },
+      {
+        "asset": "ioSources"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "先列出已有内容，确认课程要覆盖哪些文章。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "区分已有正文、待改写材料和缺少的内容，形成文章范围。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [],
+    "status": "editorial-rewrite",
+    "evidence": "01a0a8a9-6d2f-7e40-8ff1-30cbfe57415b.md / M027；01a0a8a9-6d2f-7e40-8ff1-30cbfe57415b.md / M028",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。"
+  },
+  "W2": {
+    "title": "按 explanatory-article 要求 · 整理为课程文章",
+    "links": [
+      {
+        "asset": "articleSkill"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "按同一写作要求把各块内容整理成课程文章。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "保留原文依据和案例，统一解释顺序与图文关系，形成可独立阅读的正文。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [
+      {
+        "asset": "terrainArticle"
+      },
+      {
+        "asset": "ioArticle"
+      },
+      {
+        "asset": "quadArticle"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "Q1": {
+    "title": "以前关于四象限的思考 · 与现成文章",
+    "links": [
+      {
+        "asset": "quadOriginal",
+        "label": "早期框架原文",
+        "description": "关于认知状态、对齐依据与下一段投入的原始思考。"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "先沿用[以前关于四象限的思考](asset:quadOriginal)，整理成后续改写的依据。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "区分认知状态、对齐依据和投入决策，保留原文观点与边界。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [],
+    "status": "editorial-rewrite",
+    "evidence": "历史归档原文；01a0ade0 对话 M084–M086 的更早原始材料线索。",
+    "verification": "原文已定位；原网页的 M001 优化讨论不作为本步证据。"
+  },
+  "Q2": {
+    "title": "按 explanatory-article 要求 · 改写四象限文章",
+    "links": [
+      {
+        "asset": "quadOriginal"
+      },
+      {
+        "asset": "articleSkill"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "任务项需要重新研究。现在有些名称难以定义，也不容易让受众理解。",
+        "images": []
+      },
+      {
+        "role": "assistant",
+        "text": "当前清单混用了工具、动作、交付物和错误做法。回到 [原有框架](asset:quadOriginal) 和受众，从同一标准定义边界清楚的任务，再改写正文与例子。",
+        "images": []
+      }
+    ],
+    "outputs": [
+      {
+        "asset": "quadArticle"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "01a0ade0-eab8-7110-8845-248a5932fe8b.md / M041；01a0ade0-eab8-7110-8845-248a5932fe8b.md / M042",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。",
+    "conversations": [
+      {
+        "title": "重新定义任务",
+        "messages": [
+          {
+            "role": "user",
+            "text": "任务项需要重新研究。现在有些名称难以定义，也不容易让受众理解。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "当前清单混用了工具、动作、交付物和错误做法。回到 [原有框架](asset:quadOriginal) 和受众，从同一标准定义边界清楚的任务，再改写正文与例子。",
+            "images": []
+          }
+        ]
+      }
+    ]
+  },
+  "Q3": {
+    "title": "形成四象限内容与图形表达",
+    "links": [
+      {
+        "asset": "quadArticle"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "他们的位置点和描述似乎有差异，感觉你是乱序排的，将他们的 对齐依据和投入打分，打分后再优化位置点",
+        "images": [],
+        "source": {
+          "file": "01a0ade0-eab8-7110-8845-248a5932fe8b.md",
+          "message": "M073"
+        }
+      },
+      {
+        "role": "assistant",
+        "text": "目前的位置确实只是散点示意，没有按请求内容定位。我会逐项评估“对齐依据”和“下一次反馈前的投入”，用评分重新计算坐标，并把评分理由放到点的提示里，方便核对。",
+        "images": [
+          "quadImage"
+        ],
+        "source": {
+          "file": "01a0ade0-eab8-7110-8845-248a5932fe8b.md",
+          "message": "M074"
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "asset": "quad"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "01a0ade0-eab8-7110-8845-248a5932fe8b.md / M073；01a0ade0-eab8-7110-8845-248a5932fe8b.md / M074",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。",
+    "conversations": [
+      {
+        "title": "制作讨论",
+        "messages": [
+          {
+            "role": "user",
+            "text": "他们的位置点和描述似乎有差异，感觉你是乱序排的，将他们的 对齐依据和投入打分，打分后再优化位置点",
+            "images": [],
+            "source": {
+              "file": "01a0ade0-eab8-7110-8845-248a5932fe8b.md",
+              "message": "M073"
+            }
+          },
+          {
+            "role": "assistant",
+            "text": "目前的位置确实只是散点示意，没有按请求内容定位。我会逐项评估“对齐依据”和“下一次反馈前的投入”，用评分重新计算坐标，并把评分理由放到点的提示里，方便核对。",
+            "images": [
+              "quadImage"
+            ],
+            "source": {
+              "file": "01a0ade0-eab8-7110-8845-248a5932fe8b.md",
+              "message": "M074"
+            }
+          }
+        ]
       }
     ]
   },
   "G1": {
+    "title": "按 explanatory-article 要求 · 整理地形相关文章",
     "links": [
       {
-        "asset": "terrainArticle"
+        "asset": "terrainOriginal"
+      },
+      {
+        "asset": "articleSkill"
       }
     ],
-    "outputs": [],
     "messages": [
       {
         "role": "user",
@@ -583,17 +1316,46 @@
           "message": "M082"
         }
       }
-    ]
-  },
-  "G2": {
-    "links": [
+    ],
+    "outputs": [
       {
         "asset": "terrainArticle"
       }
     ],
-    "outputs": [
+    "status": "editorial-rewrite",
+    "evidence": "01a0a8a9-6d2f-7e40-8ff1-30cbfe57415b.md / M081；01a0a8a9-6d2f-7e40-8ff1-30cbfe57415b.md / M082",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。",
+    "conversations": [
       {
-        "asset": "terrain"
+        "title": "制作讨论",
+        "messages": [
+          {
+            "role": "user",
+            "text": "原文案例不要改，就选择哪几个？",
+            "images": [],
+            "source": {
+              "file": "01a0a8a9-6d2f-7e40-8ff1-30cbfe57415b.md",
+              "message": "M081"
+            }
+          },
+          {
+            "role": "assistant",
+            "text": "建议从原文中选这 **7 个**，案例保持原样：\n\n1. **先推理后结论**：鲁迅、《红楼梦》与“三打白骨精”——先核查问题前提。\n2. **语义退火**：自然认识其他部门的同事——先探索，再结合现实条件收敛。\n3. **显式配平**：炫酷番茄钟网页——补充交付条件，约束过度工程。\n4. **特征纠缠**：用户注册接口——拆开“严谨”与复杂、冗长的表达。\n5. **案例好于说明**：Linux 管道——用具体样例传达组合关系。\n6. **语义漂移**：磁盘空间与 SSL/DNS 报错——防止旁支接管主任务。\n7. **引导采样与回滚**：官网风格探索——提炼确认内容，再开启新会话。\n\n就是**保留现有五个，新增“先推理后结论”和“语义退火”**，按上面的顺序组织。",
+            "images": [],
+            "source": {
+              "file": "01a0a8a9-6d2f-7e40-8ff1-30cbfe57415b.md",
+              "message": "M082"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "G2": {
+    "title": "结合地形文章与 HTML 演示",
+    "links": [
+      {
+        "asset": "terrainArticle"
       }
     ],
     "messages": [
@@ -609,18 +1371,14 @@
       {
         "role": "assistant",
         "text": "我会把第四章八个模块改成纵向展示：一张 GIF 紧接对应的原文，再接下一张 GIF 和原文。保留原文案例与已有 GIF 风格，补齐缺少的 GIF，并按这个结构重写衔接说明。",
-        "images": [],
+        "images": [
+          "terrainGif",
+          "dialogue"
+        ],
         "source": {
           "file": "01a0a8a9-6d2f-7e40-8ff1-30cbfe57415b.md",
           "message": "M096"
         }
-      }
-    ]
-  },
-  "T6": {
-    "links": [
-      {
-        "asset": "terrainArticle"
       }
     ],
     "outputs": [
@@ -628,59 +1386,272 @@
         "asset": "terrain"
       }
     ],
-    "messages": [
+    "status": "editorial-rewrite",
+    "evidence": "01a0a8a9-6d2f-7e40-8ff1-30cbfe57415b.md / M095；01a0a8a9-6d2f-7e40-8ff1-30cbfe57415b.md / M096",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。",
+    "conversations": [
       {
-        "role": "user",
-        "text": "不是小球导致深沟的存在，而是语义影响深沟，当前本末倒置了，当前是小球移动才显示出深沟，而不是深沟引导小球的移动！",
-        "images": [],
-        "source": {
-          "file": "01a06001-ef4f-71d1-821e-9ee52c2faff3.md",
-          "message": "M033"
-        }
-      },
-      {
-        "role": "assistant",
-        "text": "你说得对，这是因果关系错误：原文是“上下文语义先塑造地形，地形再影响后续采样小球”，不是小球滚过后才留下当前这条深沟。\n\n当前根因是：\n\n1. 小球在 `6%` 就开始移动，但多数语义沟壑要到 `8%–40%` 才开始形成。\n2. 地形和小球共用同一个时间进度，没有“语义塑形 → 小球响应”的领先关系。\n3. 轨迹线随小球一起展开，进一步造成“球挖沟”的错觉。\n\n我会先修正这个全局因果顺序，再继续逐项优化：语义地形先出现并变化，小球延迟进入，之后沿已经形成或正在被语义重塑的沟壑移动。使用 `diagnosing-bugs` 定位并用 `ponytail` 做最小共享逻辑修改。",
-        "images": [],
-        "source": {
-          "file": "01a06001-ef4f-71d1-821e-9ee52c2faff3.md",
-          "message": "M034"
-        },
-        "excerpt": "你说得对，这是因果关系错误：原文是“上下文语义先塑造地形，地形再影响后续采样小球”，不是小球滚过后才留下当前这条深沟。"
+        "title": "制作讨论",
+        "messages": [
+          {
+            "role": "user",
+            "text": "按照这样进行内容的演示 ，比如 上方GIF图吗下方为  原文 ，即  giF 原文  GIF 原文这样 作为一个模块解释！然后与重写所有内容 ，没有GIF的补充GIF",
+            "images": [],
+            "source": {
+              "file": "01a0a8a9-6d2f-7e40-8ff1-30cbfe57415b.md",
+              "message": "M095"
+            }
+          },
+          {
+            "role": "assistant",
+            "text": "我会把第四章八个模块改成纵向展示：一张 GIF 紧接对应的原文，再接下一张 GIF 和原文。保留原文案例与已有 GIF 风格，补齐缺少的 GIF，并按这个结构重写衔接说明。",
+            "images": [
+              "terrainGif",
+              "dialogue"
+            ],
+            "source": {
+              "file": "01a0a8a9-6d2f-7e40-8ff1-30cbfe57415b.md",
+              "message": "M096"
+            }
+          }
+        ]
       }
     ]
   },
-  "P1": {
-    "links": [],
-    "outputs": [],
-    "messages": [
-      {
-        "role": "user",
-        "text": "1.已经在使用AI对话、workbuddy、codex这样的产品来实现他们的各个需求，比如制作网页、分析数据等，但是个人认知还停留在AI是黑盒，使用产品也需要对AI继续训练，不知道如何控制AI有效的输出，出现问题无法通过优秀的语言排查和引导\n2.现在的所有如、图片、文字、视频都是数据，这些数据结构化后，衔接到后续的通过数据来训练AI，AI通过QA对+深度学习来构建出来！ 也能从侧面反馈出，提示词的重要性\n3.把 HTML 本身做成可播放动画的网页 PPT，整理都以HTML的方式构建，如果 Remotion 构建的是视频那就以嵌入视频到html来演示即可。",
-        "images": [],
-        "source": {
-          "file": "01a09ee5-23f4-7243-a80c-434b2ca57d58.md",
-          "message": "M007"
-        }
-      },
-      {
-        "role": "assistant",
-        "text": "明确了：学员已经能用 AI 做事，这门课要帮助他们解释 AI 的行为、组织有效输入，并在出错时准确描述问题、定位原因和引导修正。交付载体确定为 HTML 网页 PPT，三个核心动画嵌入其中；我会使用 `ai-web-ppt-skill` 规划页面与动画的配合。\n\n“通过 QA 对＋深度学习构建 AI”需要拆开讲：预训练可以直接从文本中构造“前文→下一个 Token”的学习任务，问答或指令—回答材料则可以用于后训练。这个区分也能避免学员把日常对话误认为重新训练模型。",
-        "images": [],
-        "source": {
-          "file": "01a09ee5-23f4-7243-a80c-434b2ca57d58.md",
-          "message": "M008"
-        }
-      }
-    ]
-  },
-  "P3": {
+  "W3": {
+    "title": "参考样例网站 · ce101.ifuryst.com",
     "links": [
       {
-        "asset": "design"
+        "title": "ce101.ifuryst.com",
+        "label": "网站结构参考",
+        "description": "借鉴目录与正文的阅读组织方式。",
+        "url": "https://ce101.ifuryst.com"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "参考[这个网站](https://ce101.ifuryst.com)的阅读结构，保留目录和正文，去掉不需要的栏目。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "提取导航、目录和阅读区的组织方式，作为本地网站的设计参考。",
+        "images": [],
+        "imageOrigin": null
       }
     ],
     "outputs": [],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "W4": {
+    "title": "结合原始文章、skills 要求与样例网站 · 完成整体模仿和开发",
+    "links": [
+      {
+        "title": "ce101.ifuryst.com",
+        "label": "网站结构参考",
+        "description": "借鉴目录与正文的阅读组织方式。",
+        "url": "https://ce101.ifuryst.com"
+      },
+      {
+        "asset": "articleSkill"
+      },
+      {
+        "asset": "terrainArticle"
+      },
+      {
+        "asset": "ioArticle"
+      },
+      {
+        "asset": "quadArticle"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "按参考结构搭好课程网站，用同一套页面承载各篇文章。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "建立共用导航、目录和阅读布局，再接入文章数据与素材。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [
+      {
+        "asset": "website"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "W5": {
+    "title": "接入各篇文章、图形与交互演示",
+    "links": [
+      {
+        "asset": "terrainArticle"
+      },
+      {
+        "asset": "ioArticle"
+      },
+      {
+        "asset": "quadArticle"
+      },
+      {
+        "asset": "terrain"
+      },
+      {
+        "asset": "quad"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "把各篇正文、图片和交互接入网站，并对应到相关段落。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "核对资源位置、跳转和内容关系，保留各演示的打开入口。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [
+      {
+        "asset": "website"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "W6": {
+    "title": "查看实际网页 · 回顾内容、结构和呈现效果",
+    "links": [
+      {
+        "asset": "website"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "查看实际页面，检查内容、目录、图片与交互是否对应。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "按文章、四象限、图文配合和网页实现记录问题，分别返回对应节点修改。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "W7": {
+    "title": "形成整套课程网站",
+    "links": [],
+    "messages": [
+      {
+        "role": "user",
+        "text": "整理课程网站，供阅读和后续 PPT 编排使用。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "提供网站入口和内容范围，保留文章、媒体与交互之间的关系。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [
+      {
+        "asset": "website"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "P1": {
+    "title": "① 确认演讲要求与细节",
+    "links": [],
+    "messages": [
+      {
+        "role": "user",
+        "text": "学员已经用 AI 对话、WorkBuddy、Codex 做网页和分析数据，但仍把 AI 当黑盒。课程要让他们知道如何控制输出、描述问题和引导修正。\n\n整体用 HTML 网页 PPT 构建，动画或视频嵌入其中。",
+        "images": []
+      },
+      {
+        "role": "assistant",
+        "text": "课程围绕解释 AI 行为、组织输入和定位问题展开，载体采用可播放动画的 HTML PPT。\n\n训练机制要讲清区别：预训练可从文本构造“前文 → 下一个 Token”的学习任务；问答或指令材料可以用于后训练，日常对话不等于重新训练模型。",
+        "images": []
+      }
+    ],
+    "outputs": [],
+    "status": "editorial-rewrite",
+    "evidence": "01a09ee5-23f4-7243-a80c-434b2ca57d58.md / M007；01a09ee5-23f4-7243-a80c-434b2ca57d58.md / M008",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。",
+    "conversations": [
+      {
+        "title": "受众与交付形式",
+        "messages": [
+          {
+            "role": "user",
+            "text": "学员已经用 AI 对话、WorkBuddy、Codex 做网页和分析数据，但仍把 AI 当黑盒。课程要让他们知道如何控制输出、描述问题和引导修正。\n\n整体用 HTML 网页 PPT 构建，动画或视频嵌入其中。",
+            "images": []
+          },
+          {
+            "role": "assistant",
+            "text": "课程围绕解释 AI 行为、组织输入和定位问题展开，载体采用可播放动画的 HTML PPT。\n\n训练机制要讲清区别：预训练可从文本构造“前文 → 下一个 Token”的学习任务；问答或指令材料可以用于后训练，日常对话不等于重新训练模型。",
+            "images": []
+          }
+        ]
+      }
+    ]
+  },
+  "P2": {
+    "title": "根据网页内文章 · 确定整体大纲",
+    "links": [
+      {
+        "asset": "website"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "根据[这些文章](asset:website)安排整场 PPT 的顺序和每页重点。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "把课程内容组织为可讲述的大纲，明确普通页、视频页与交互页的分工。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "P3": {
+    "title": "根据大纲与相关文字 · 生成 PPT 样式图片",
+    "links": [],
     "messages": [
       {
         "role": "user",
@@ -698,9 +1669,342 @@
         "source": {
           "file": "01a0b362-6510-7212-b628-bb9e584521ae.md",
           "message": "M046"
-        },
-        "excerpt": "明白，刚才我把生图理解成辅助素材，偏离了你的意思。\n\n你要的是：**由生图模型直接生成每一页完整的 PPT 画面**，包括内容编排、文字、图形和整体布局，HTML 只负责承载和播放。"
+        }
+      }
+    ],
+    "outputs": [],
+    "status": "editorial-rewrite",
+    "evidence": "01a0b362-6510-7212-b628-bb9e584521ae.md / M045；01a0b362-6510-7212-b628-bb9e584521ae.md / M046",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。",
+    "conversations": [
+      {
+        "title": "制作讨论",
+        "messages": [
+          {
+            "role": "user",
+            "text": "我并不是希望你重新重绘 HTML，而是通过生图模型来生成每页 PPT 的内容。",
+            "images": [],
+            "source": {
+              "file": "01a0b362-6510-7212-b628-bb9e584521ae.md",
+              "message": "M045"
+            }
+          },
+          {
+            "role": "assistant",
+            "text": "明白，刚才我把生图理解成辅助素材，偏离了你的意思。\n\n你要的是：**由生图模型直接生成每一页完整的 PPT 画面**，包括内容编排、文字、图形和整体布局，HTML 只负责承载和播放。\n\n整改方向调整为：\n\n- **普通页面**：先提炼该页要讲清的内容，再用生图模型生成完整幻灯片，不再用 HTML 拼文字卡片。\n- **两页视频、八页地形演示**：按你之前确认的范围保留。\n- **散点图页面**：用生图模型设计整页视觉与布局，预留图表区域；仅在该区域融入可交互散点图，统一色彩和字体，删除原网页的数字导航及多余控件。\n- **整套统一**：浅色背景、固定 16:9、统一字体风格和视觉语言。逐页检查中文准确性、清晰度及内容质量，不合格的重新生成。\n\n最终交付仍是可以翻页、播放视频、操作地形和散点图的 HTML 幻灯片，但普通页的完整画面由生图模型制作。",
+            "images": [],
+            "source": {
+              "file": "01a0b362-6510-7212-b628-bb9e584521ae.md",
+              "message": "M046"
+            }
+          }
+        ]
       }
     ]
+  },
+  "P4": {
+    "title": "查看并确认 PPT UI 效果",
+    "links": [],
+    "messages": [
+      {
+        "role": "user",
+        "text": "采用这一版，保留它的布局和表达。",
+        "images": [
+          "selected"
+        ],
+        "imageOrigin": "historical-user-selection"
+      },
+      {
+        "role": "assistant",
+        "text": "记录所选画面及需要保留的内容，交给下一步落实页面。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [],
+    "status": "editorial-rewrite",
+    "evidence": "01a0c158-8585-71e2-a817-a58f4996ef74.md / M072；01a0c158-8585-71e2-a817-a58f4996ef74.md / M074",
+    "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。"
+  },
+  "P5": {
+    "title": "将选定图片嵌入 PPT · 作为定稿页面",
+    "links": [],
+    "messages": [
+      {
+        "role": "user",
+        "text": "按选中的画面做进 PPT，保留布局和文字的可编辑性。",
+        "images": [
+          "selected"
+        ],
+        "imageOrigin": "selected-reference"
+      },
+      {
+        "role": "assistant",
+        "text": "在 HTML 中落实页面结构，核对布局与文案，并保留可编辑部分。",
+        "images": [
+          "implemented"
+        ],
+        "imageOrigin": "historical-implementation"
+      }
+    ],
+    "outputs": [
+      {
+        "asset": "ppt"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "P6": {
+    "title": "② 确认视频与地形图 · 在 PPT 中的嵌入原型效果",
+    "links": [
+      {
+        "asset": "videoIo"
+      },
+      {
+        "asset": "videoLlm"
+      },
+      {
+        "asset": "terrain"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "先看视频和地形放入 PPT 后的播放与同步效果。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "做嵌入样例，核对播放区间、对话、画面变化和时间线是否一致。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [
+      {
+        "asset": "ppt"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "P7": {
+    "title": "嵌入视频与地形图内容",
+    "links": [
+      {
+        "asset": "videoIo"
+      },
+      {
+        "asset": "videoLlm"
+      },
+      {
+        "asset": "terrain"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "按确认的嵌入方式接入对应页面。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "接入媒体与演示，检查路径、加载、切页和同步控制。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [
+      {
+        "asset": "ppt"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "P8": {
+    "title": "③ 确认四象限 · 在 PPT 中的嵌入效果",
+    "links": [
+      {
+        "asset": "quadArticle"
+      },
+      {
+        "asset": "quad"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "先看四象限在 PPT 中怎样讲，任务要具体，切换由讲者控制。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "制作嵌入演示，核对任务图标、位置与高亮，并保留必要的图形过渡。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [
+      {
+        "asset": "ppt"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "P9": {
+    "title": "嵌入四象限内容",
+    "links": [
+      {
+        "asset": "quad"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "把确认的四象限演示合并到主 PPT。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "保持页面顺序、操作方式和图形过渡与主课件一致。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [
+      {
+        "asset": "ppt"
+      }
+    ],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "P10": {
+    "title": "④ 汇合为整套课件 · 回顾整体内容，发现不足",
+    "links": [
+      {
+        "asset": "ppt"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "通看整套课件，找出内容跳跃、过渡不足和演示问题。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "从整场讲述检查各页衔接，记录需要返修的内容和位置。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "P11": {
+    "title": "优化内容、页面与演示效果",
+    "links": [
+      {
+        "asset": "ppt"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "按问题修改内容、页面和演示效果，再回到原位置检查。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "把修改分别交回大纲、样式、视频、地形和四象限节点，修正后检查整体衔接。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [],
+    "status": "editorial-rewrite",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "P12": {
+    "title": "⑤ 生成演讲稿 · 细化讲述、页面衔接和演示安排",
+    "links": [
+      {
+        "asset": "ppt"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "按页面写讲述要点，明确什么时候播放、暂停或操作演示。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "下一步按页面整理讲述要点、衔接和演示操作；讲稿尚待制作。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [],
+    "status": "planned",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
+  },
+  "P13": {
+    "title": "完整交付 · PPT＋嵌入内容＋演讲稿与演讲细节",
+    "links": [],
+    "messages": [
+      {
+        "role": "user",
+        "text": "把课件、素材和讲述安排整理成完整交付。",
+        "images": [],
+        "imageOrigin": null
+      },
+      {
+        "role": "assistant",
+        "text": "课件、视频和交互已有入口；讲稿与演示编排补齐后，再完成整套交付检查。",
+        "images": [],
+        "imageOrigin": null
+      }
+    ],
+    "outputs": [
+      {
+        "asset": "ppt"
+      },
+      {
+        "asset": "videoIo"
+      },
+      {
+        "asset": "videoLlm"
+      },
+      {
+        "asset": "terrain"
+      },
+      {
+        "asset": "quad"
+      }
+    ],
+    "status": "planned",
+    "evidence": "见第 7 节对应组的核验入口。",
+    "verification": "未建立独立节点的对话绑定；本节为制作方法改写草案，须核对后再作为已发生过程展示。"
   }
 }

@@ -70,28 +70,45 @@ function resource(link,view){
   view.append(card);
  }else view.append(a);
 }
-function excerpt(text){
- const clean=text.replace(/:codex-annotation\{[^}]*\}/g,'').replace(/喵～/g,'').trim();
- if(clean.length<=230)return clean;
- const first=clean.split('\n\n')[0];if(first.length>45&&first.length<=230)return first;
- const end=clean.lastIndexOf('。',220);return clean.slice(0,end>65?end+1:210)+'…';
-}
 function renderRecord(n,view){
- const record=n.record,used=new Set();
- for(const link of record?.links||[]){resource(link,view);if(link.asset)used.add(link.asset);if(link.preview)used.add(link.preview);}
- for(const message of record?.messages||[]){
+ const record=n.record;if(!record)return;
+ if(record.links?.length){const inputs=el('div');inputs.className='record-inputs';for(const link of record.links)resource(link,inputs);view.append(inputs);}
+ const sections=record.conversations?.length?record.conversations:[{messages:record.messages||[]}];
+ const threads=new Map();
+ for(const section of sections){
+  const id=section.threadId||'default';
+  if(!threads.has(id))threads.set(id,{messages:[]});
+  threads.get(id).messages.push(...(section.messages||[]));
+ }
+ const conversations=[...threads.values()];
+ const messages=el('div');messages.className='record-conversation';
+ let tabs;
+ if(conversations.length>1){
+  const switcher=el('div');switcher.className='conversation-switcher';
+  tabs=el('div');tabs.className='conversation-tabs';tabs.setAttribute('role','tablist');tabs.setAttribute('aria-label','对话线程');
+  conversations.forEach((conversation,i)=>{
+   const button=el('button',String(i+1));button.type='button';button.setAttribute('role','tab');button.id='conversation-tab-'+i;
+   button.setAttribute('aria-label',`对话线程 ${i+1}`);button.setAttribute('aria-controls','conversation-panel');
+   button.onclick=()=>select(i);
+   button.onkeydown=e=>{let next;if(e.key==='ArrowRight')next=(i+1)%conversations.length;else if(e.key==='ArrowLeft')next=(i-1+conversations.length)%conversations.length;else if(e.key==='Home')next=0;else if(e.key==='End')next=conversations.length-1;else return;e.preventDefault();select(next);tabs.children[next].focus();};
+   tabs.append(button);
+  });
+  messages.id='conversation-panel';messages.setAttribute('role','tabpanel');switcher.append(tabs);view.append(switcher);
+ }
+ view.append(messages);
+ function select(index){
+  messages.replaceChildren();
+  if(tabs){[...tabs.children].forEach((b,i)=>{b.setAttribute('aria-selected',String(i===index));b.tabIndex=i===index?0:-1;});messages.setAttribute('aria-labelledby','conversation-tab-'+index);}
+  for(const message of conversations[index].messages||[]){
   const row=el('section');row.className='record-message '+message.role;
   const who=el('div');who.className='record-role';who.append(roleIcon(message.role),el('span',message.role==='user'?'用户':'AI'));row.append(who);
-  const text=message.excerpt||excerpt(message.text);const body=markdown(text,location.href);body.className='record-text';row.append(body);
-  if(message.images?.length){row.append(imageStack(message.images.map(k=>data.assets[k])));message.images.forEach(k=>used.add(k));}
-  view.append(row);
+  const body=markdown(message.text,location.href);body.className='record-text';row.append(body);
+  if(message.images?.length)row.append(imageStack(message.images.map(k=>data.assets[k])));
+  messages.append(row);
+  }
  }
- const imageKeys=(record?.images||n.materials.filter(k=>data.assets[k].kind==='image')).filter(k=>!used.has(k));
- if(imageKeys.length){view.append(imageStack(imageKeys.map(k=>data.assets[k])));imageKeys.forEach(k=>used.add(k));}
- const outputs=record?.outputs||[];
- if(outputs.length){const box=el('div');box.className='record-links';for(const link of outputs){resource(link,box);if(link.asset)used.add(link.asset);if(link.preview)used.add(link.preview);}view.append(box);}
- const links=n.materials.filter(k=>data.assets[k].kind!=='image'&&!used.has(k));
- if(links.length){const box=el('div');box.className='record-links';for(const key of links)resource({asset:key},box);view.append(box);}
+ select(0);
+ if(record.outputs?.length){const outputs=el('div');outputs.className='record-links';for(const link of record.outputs)resource(link,outputs);view.append(outputs);}
 }
 function showNode(id,trigger){
  const n=data.nodes[id];if(!n)return;

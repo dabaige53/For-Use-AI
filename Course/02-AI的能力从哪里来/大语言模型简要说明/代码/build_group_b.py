@@ -1,4 +1,4 @@
-"""Build a standalone module for the assigned upstream chm.py scenes.
+"""Build a group-specific module for the assigned upstream chm.py scenes.
 
 Top-level definitions are copied with ``ast.get_source_segment`` so scene bodies
 remain the original source.  Imports which eagerly load optional ML libraries or
@@ -9,13 +9,13 @@ from __future__ import annotations
 
 import ast
 from pathlib import Path
+from build_group_a import shared_dependencies
 
 
 ROOT = Path(__file__).parent
 TRANSFORMERS = ROOT / "upstream" / "_2024" / "transformers"
 OUTPUT = ROOT / "group_b.py"
 
-DEPENDENCY_FILES = ["helpers.py", "generation.py", "embedding.py", "ml_basics.py"]
 TARGETS = [
     "PredictTheNextWord",
     "LotsOfTextIntoTheMachine",
@@ -137,8 +137,9 @@ WORD_FILE = DATA_DIR / "OWL3_Dictionary.txt"
 
 '''
     chunks = [header]
-    for filename in DEPENDENCY_FILES:
-        chunks.extend(definitions(TRANSFORMERS / filename))
+    chunks.append(shared_dependencies())
+    # Group B retains its original streak-animation compatibility adapter.
+    chunks.extend(definitions(TRANSFORMERS / "helpers.py", {"Dial"}))
     chunks.extend(definitions(TRANSFORMERS / "chm.py", set(TARGETS)))
     chunks.append(r'''
 # Compatibility: user-authorized deterministic demonstration predictions.

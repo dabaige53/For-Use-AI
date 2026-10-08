@@ -9,6 +9,7 @@ import subprocess
 import time
 from datetime import datetime, timezone
 from pathlib import Path
+from build_group_c import probe, decode
 
 ROOT = Path(__file__).resolve().parent
 REPORT_PATH = ROOT / "reconstruction-flow-zh-480p-report.json"
@@ -56,29 +57,6 @@ def run(command: list[str], log_path: Path) -> tuple[int, float]:
     with log_path.open("w", encoding="utf-8") as log:
         result = subprocess.run(command, cwd=ROOT, stdout=log, stderr=subprocess.STDOUT)
     return result.returncode, time.monotonic() - started
-
-
-def probe(path: Path) -> dict:
-    result = subprocess.run(
-        [
-            "ffprobe",
-            "-v",
-            "error",
-            "-show_entries",
-            "stream=codec_type,width,height,avg_frame_rate,nb_frames:format=duration",
-            "-of",
-            "json",
-            str(path),
-        ],
-        check=True,
-        capture_output=True,
-        text=True,
-    )
-    data = json.loads(result.stdout)
-    subprocess.run(
-        ["ffmpeg", "-v", "error", "-i", str(path), "-f", "null", "-"], check=True
-    )
-    return data
 
 
 def main() -> None:
@@ -148,6 +126,7 @@ def main() -> None:
             if code == 0 and target.exists():
                 try:
                     media = probe(target)
+                    decode(target)
                     video = next(
                         stream
                         for stream in media["streams"]
