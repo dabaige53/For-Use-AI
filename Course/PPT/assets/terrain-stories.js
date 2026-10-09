@@ -181,7 +181,7 @@ window.terrainStories = {
         "at": 7.21,
         "seconds": 10.14,
         "turn": 1,
-        "end": 86,
+        "end": 92,
         "label": "82 GB",
         "field": [
           1,
@@ -715,7 +715,7 @@ window.terrainStories = {
         "at": 0,
         "seconds": 5.86,
         "turn": 0,
-        "end": 26,
+        "end": 45,
         "label": "三打白骨精",
         "field": [
           1,
