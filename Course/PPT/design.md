@@ -1,5 +1,40 @@
 # Design Tokens
 
+## Concept · 晨光蓝
+
+克制、留白、一点晨光。配色取自封面山景：墨蓝做骨架，钴蓝标编号、数据和图标，晨光琥珀每页最多出现一次（标题短线或唯一重点）。层级靠字重和留白，不靠色块；卡片用中性浅灰面，不加描边和阴影。数字（章节号、小结序号、统计值）用细字重。
+
+| Token | Value |
+| --- | --- |
+| color.faint | #a3acba |
+| color.border-strong | #d5d9e0 |
+| color.accent-soft | #eaf0fb |
+| color.sun | #d98b3a |
+| color.sun-soft | #fbf3e8 |
+| color.negative | #b5483b |
+| color.negative-soft | #fbefec |
+| color.positive | #2e7d5b |
+| color.positive-soft | #edf6f1 |
+| font.number | -apple-system, "SF Pro Display", "Helvetica Neue", "PingFang SC", Arial, sans-serif |
+| title.desc.font-size | 26px |
+| title.desc.color | #6b778a |
+| title.tag.font-size | 22px |
+| title.tag.radius | 999px |
+| title.tag.negative | 反例：#b5483b on #fbefec |
+| title.tag.positive | 正例：#2e7d5b on #edf6f1 |
+| title.tag.neutral | 原理 / 探索 / 回滚：#2f5bd3 on #eaf0fb |
+| chapter.num.font-size | 240px |
+| chapter.num.font-weight | 200 |
+| chapter.num.color | #2f5bd3 |
+| chapter.title.font-size | 72px |
+| chapter.title.font-weight | 600 |
+| chapter.rule | 40px × 3px #d98b3a |
+| summary.num.font-size | 72px |
+| summary.num.font-weight | 200 |
+| footer.chapter.x | right 72px |
+| footer.chapter.content | 章节号（钴蓝）+ 章名，取自前一个章节页；封面、结尾、全屏 iframe 页不显示 |
+| ending.layout | 同章节页：山景背景 + 左侧白色渐变，左对齐标题、琥珀短线、结语 |
+
 ## Canvas
 
 | Token | Value |
@@ -32,13 +67,13 @@
 | footer.y | 901px |
 | footer.width | 200px |
 | footer.height | 26px |
-| footer.font-size | 18px |
+| footer.font-size | 15px |
 | footer.font-weight | 400 |
 | footer.line-height | 1.4 |
-| footer.letter-spacing | 1px |
-| footer.color | #536d90 |
+| footer.letter-spacing | 3px |
+| footer.color | #a3acba |
 | footer.text-align | left |
-| footer.cover.color | #ffffff |
+| footer.cover.color | rgba(255,255,255,.85) |
 | footer.cover.text-shadow | 0 1px 3px rgba(0,0,0,0.5) |
 
 ## Title
@@ -50,20 +85,20 @@
 | title.width | 1528px |
 | title.max-width | 100% of text column |
 | title.height | 72px |
-| title.font-size | 55px |
-| title.font-weight | 700 |
-| title.line-height | 1.2 |
-| title.letter-spacing | 0 |
-| title.color | #08244c |
+| title.font-size | 52px |
+| title.font-weight | 600 |
+| title.line-height | 1.25 |
+| title.letter-spacing | 0.02em |
+| title.color | #0e1e36 |
 | title.text-align | left |
 | title.margin | 0 |
 | title.padding | 0 |
 | title.max-lines | 1 |
 | title.rule.x | 72px |
 | title.rule.y | 163px |
-| title.rule.width | 76px |
+| title.rule.width | 40px |
 | title.rule.height | 3px |
-| title.rule.color | #08244c |
+| title.rule.color | #d98b3a |
 | title.multiline.max-lines | 2 |
 | title.multiline.height | 138px |
 | title.multiline.rule.y | 229px |
@@ -75,7 +110,7 @@
 
 | Token | Value |
 | --- | --- |
-| font.family | Arial, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif |
+| font.family | "PingFang SC", -apple-system, "Helvetica Neue", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif |
 | font.style | normal |
 | text.letter-spacing | 0 |
 | text.word-break | normal |
@@ -84,24 +119,24 @@
 | text.margin | 0 |
 | text.padding | 0 |
 | heading.font-size | 36px |
-| heading.font-weight | 700 |
+| heading.font-weight | 600 |
 | heading.line-height | 1.3 |
-| heading.color | #08244c |
+| heading.color | #0e1e36 |
 | heading.compact.font-size | 31px |
-| heading.compact.font-weight | 700 |
+| heading.compact.font-weight | 600 |
 | heading.compact.line-height | 1.3 |
 | body.font-size | 27px |
 | body.font-weight | 400 |
 | body.line-height | 1.6 |
-| body.color | #314f75 |
+| body.color | #46556b |
 | caption.font-size | 24px |
 | caption.font-weight | 400 |
 | caption.line-height | 1.4 |
-| caption.color | #536d90 |
+| caption.color | #6b778a |
 | summary.font-size | 32px |
 | summary.font-weight | 600 |
 | summary.line-height | 1.4 |
-| summary.color | #08244c |
+| summary.color | #0e1e36 |
 | text.box.min-height | ceil(font-size × line-height × lines) |
 
 ## Color
@@ -109,21 +144,21 @@
 | Token | Value |
 | --- | --- |
 | color.background | #ffffff |
-| color.surface | #eef6fb |
-| color.surface-subtle | #f7fbff |
-| color.ink | #08244c |
-| color.body | #314f75 |
-| color.muted | #536d90 |
-| color.header | #395675 |
-| color.accent | #1976f3 |
-| color.danger | #ff4b2b |
-| color.border | #e3edf7 |
+| color.surface | #f5f6f8 |
+| color.surface-subtle | #fafbfc |
+| color.ink | #0e1e36 |
+| color.body | #46556b |
+| color.muted | #6b778a |
+| color.header | #46556b |
+| color.accent | #2f5bd3 |
+| color.danger | #b5483b |
+| color.border | #e6e8ec |
 | color.inverse | #ffffff |
-| color.media-background | #07111d |
-| color.quadrant.blue | #e8f4ff |
-| color.quadrant.green | #e7f7ed |
-| color.quadrant.yellow | #fff2da |
-| color.quadrant.red | #ffe8e8 |
+| color.media-background | #0b1220 |
+| color.quadrant.blue | #eef2fb |
+| color.quadrant.green | #edf6f1 |
+| color.quadrant.yellow | #fbf3e8 |
+| color.quadrant.red | #fbefec |
 
 ## Spacing & Grid
 
@@ -157,9 +192,9 @@
 
 | Token | Value |
 | --- | --- |
-| card.background | #eef6fb |
-| card.border | 1px solid #e3edf7 |
-| card.border-radius | 16px |
+| card.background | #f5f6f8 |
+| card.border | none |
+| card.border-radius | 12px |
 | card.box-shadow | none |
 | card.padding | 32px |
 | card.compact.padding | 24px |
@@ -167,7 +202,7 @@
 | card.item.gap | 16px |
 | card.min-height | padding-top + content-height + padding-bottom + border-top + border-bottom |
 | card.text.overflow | visible |
-| card.arch.border-radius | 160px 160px 16px 16px |
+| card.arch.border-radius | 160px 160px 12px 12px |
 | card.circle.border-radius | 50% |
 
 ## Summary
@@ -180,9 +215,9 @@
 | summary.height | 91px |
 | summary.padding-x | 32px |
 | summary.padding-y | 16px |
-| summary.background | #eef6fb |
-| summary.border | 1px solid #e3edf7 |
-| summary.border-radius | 16px |
+| summary.background | #f5f6f8 |
+| summary.border | none |
+| summary.border-radius | 12px |
 | summary.text-align | center |
 | summary.align-items | center |
 | summary.max-lines | 1 |
@@ -249,22 +284,22 @@
 | cover.title.width | 720px |
 | cover.title.height | 190px |
 | cover.title.font-size | 59px |
-| cover.title.font-weight | 700 |
+| cover.title.font-weight | 600 |
 | cover.title.line-height | 1.35 |
-| cover.title.color | #06264d |
+| cover.title.color | #0e1e36 |
 | cover.title.max-lines | 2 |
 | cover.rule.x | 90px |
 | cover.rule.y | 391px |
-| cover.rule.width | 82px |
+| cover.rule.width | 48px |
 | cover.rule.height | 3px |
-| cover.rule.color | #09294d |
+| cover.rule.color | #d98b3a |
 | cover.subtitle.x | 89px |
 | cover.subtitle.y | 454px |
 | cover.subtitle.width | 660px |
 | cover.subtitle.height | 55px |
 | cover.subtitle.font-size | 35px |
 | cover.subtitle.line-height | 1.4 |
-| cover.subtitle.color | #12385c |
+| cover.subtitle.color | #24344d |
 
 ## Interaction & Layers
 
@@ -279,7 +314,7 @@
 | slide.inactive.display | none |
 | slide.active.display | block |
 | text.contenteditable | true |
-| text.focus.outline | 2px dashed #9bbcff |
+| text.focus.outline | 2px dashed #9fb4ea |
 | text.focus.border-radius | 8px |
 | text.focus.background | rgba(255,255,255,0.4) |
 | navigation.next | ArrowRight, PageDown |
@@ -324,12 +359,12 @@
 | video.timeline.time.font-size | 18px |
 | video.timeline.label.font-size | 20px |
 | video.timeline.step | 0.1s |
-| video.timeline.accent | #1976f3 |
+| video.timeline.accent | #2f5bd3 |
 | video.annotation.diagram.node.font-size | 23px |
 | video.annotation.diagram.node.padding | 14px 16px |
 | video.annotation.diagram.node.radius | 10px |
-| video.annotation.diagram.node.background | #f7fbff |
-| video.annotation.diagram.operation.background | #eef6fb |
+| video.annotation.diagram.node.background | #f8f9fb |
+| video.annotation.diagram.operation.background | #f5f6f8 |
 | video.annotation.diagram.arrow.height | 30px |
 | video.annotation.diagram.gap | 24px |
 
@@ -366,7 +401,7 @@
 | terrain.controls.padding | 10px 14px |
 | terrain.controls.gap | 14px |
 | terrain.controls.radius | 12px |
-| terrain.controls.background | #f7f9fc |
+| terrain.controls.background | #f8f9fb |
 | terrain.controls.pair.x | 400px |
 | terrain.controls.pair.width | 872px |
 | terrain.controls.button.size | 40px 36px |
