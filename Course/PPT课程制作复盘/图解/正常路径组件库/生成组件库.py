@@ -1,9 +1,10 @@
 from pathlib import Path
+import os
 import json, math, re, base64, hashlib, html, copy, sys
 from PIL import Image, ImageDraw, ImageFont
-ROOT=Path('/Users/w/code/For-Use-AI')
+ROOT=Path(__file__).resolve().parents[4]
 OUT=Path(__file__).parent
-FONT='/System/Library/Fonts/Supplemental/Arial Unicode.ttf'
+FONT=os.environ.get('COURSE_FONT', 'NotoSansCJK-Regular.ttc')
 E=[]; FILES={}; META=[]; group='cover'; n=0
 INK='#263545'; GRAY='#637084'; BLUE='#d9eaff'; GREEN='#dbf2e5'; PURPLE='#e8dffc'; PEACH='#ffe6cc'; YELLOW='#fff1ba'; PINK='#f9deeb'
 COLORS=[BLUE,PURPLE,GREEN,PEACH]

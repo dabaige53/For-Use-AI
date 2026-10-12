@@ -23,8 +23,12 @@ def main():
     ap.add_argument(
         "--force", action="store_true", help="Render even when a validated MP4 exists"
     )
+    ap.add_argument("--inventory", type=Path, default=ROOT / "scene-inventory.json",
+                    help="Legacy upstream scene inventory (not bundled)")
     args = ap.parse_args()
-    inventory = json.loads((ROOT / "scene-inventory.json").read_text())
+    if not args.inventory.is_file():
+        ap.error("Legacy inventory missing: provide --inventory. For the Chinese queue use render_zh_final.py --check.")
+    inventory = json.loads(args.inventory.read_text())
     names = [x["scene"] for x in inventory]
     if args.list:
         print("\n".join(names))
@@ -37,9 +41,10 @@ def main():
         / "generated"
         / ("all-original" if args.quality == "full" else "all-original-preview")
     )
+    output = output.resolve()
     output.mkdir(parents=True, exist_ok=True)
-    logs = ROOT / "logs" / "render-all"
-    logs.mkdir(exist_ok=True)
+    logs = (ROOT / "logs" / "render-all").resolve()
+    logs.mkdir(parents=True, exist_ok=True)
     results = []
     for scene in selected:
         target = output / f"{scene}.mp4"
