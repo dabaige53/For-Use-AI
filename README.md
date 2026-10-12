@@ -48,3 +48,6 @@ LLM 的 `render_all.py` 是上游 38 场景的旧批量入口，需要未随当�
 `uv run --no-sync sh Course/PPT课程制作复盘/交互/课程制作路径/启动交互图.command`。
 两个动画代码目录各自保留 Python 3.11 的 pyproject.toml/uv.lock 和 init.sh，
 因为它们有独立 ManimGL 及系统渲染依赖。不要在根混装动画环境，也不以 uv 替代交互前端的 npm/esbuild。
+
+图解的 Excalidraw MCP 服务未随源码提供，原个人绝对路径配置已移除；如需编辑图解，
+在个人 Codex 配置中明确指向已安装服务。静态阅读与脚本检查不依赖该服务。

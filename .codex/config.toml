@@ -1,5 +1,3 @@
-[mcp_servers.excalidraw]
-command = "node"
-args = ["dist/index.js", "--stdio"]
-cwd = "/Users/w/code/For-Use-AI/.codex/mcp-servers/excalidraw-mcp"
-enabled = true
+# Optional Excalidraw MCP is machine-local and not bundled in this repository.
+# Configure an installed server in your personal Codex config when needed.
+# Do not enable a server using another developer's absolute path.
