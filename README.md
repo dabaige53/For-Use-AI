@@ -24,9 +24,9 @@
 
 ## 本地阅读与开发
 
-安装 Python 3，在仓库根运行 `sh start.sh`，访问终端给出的课程或 PPT 地址。
+安装 uv，在仓库根运行 `sh start.sh`，访问终端给出的课程或 PPT 地址。
 默认仅监听 `127.0.0.1:4189`；可用 `PORT=4190 sh start.sh` 更换端口，
-用 `PYTHON=python3` 选择解释器。Ctrl-C 停止。纯静态阅读无需 `.env`、密钥或 npm 安装。
+用 `PYTHON=python3` 选择解释器。Ctrl-C 停止。纯静态阅读无需 `.env`、密钥或 npm 安装。根入口会按 uv.lock 准备环境。
 页面引用的外部 CDN、字体及视频素材仍可能需要网络或另行取得的媒体；HTTP 成功不代表所有媒体完整。
 
 | 可执行单元 | 入口与依赖 | 验证边界 |
@@ -40,3 +40,11 @@ LLM 的 `render_all.py` 是上游 38 场景的旧批量入口，需要未随当�
 可通过 `--inventory` 显式提供。它不替代 `render_zh_final.py`，也不能据其缺失输入断言中文视频管线不可用。
 `compose_reconstruction.py` 的中文字体通过 `COURSE_FONT` 配置，字体集合索引用 `COURSE_FONT_INDEX`（默认 0）。
 原始第三方素材中的历史路径保留作来源证据，不作为本机运行说明。
+
+## Python 环境边界
+
+根 `pyproject.toml`/`uv.lock` 管理 Python 3.12 的预览、图解辅助工具和 Pillow；
+可先运行 `uv sync --locked`，再用 `uv run --no-sync python <脚本>` 或
+`uv run --no-sync sh Course/PPT课程制作复盘/交互/课程制作路径/启动交互图.command`。
+两个动画代码目录各自保留 Python 3.11 的 pyproject.toml/uv.lock 和 init.sh，
+因为它们有独立 ManimGL 及系统渲染依赖。不要在根混装动画环境，也不以 uv 替代交互前端的 npm/esbuild。
