@@ -34,7 +34,7 @@ $$('[data-evidence]').forEach(b=>b.onclick=()=>{const right=b.dataset.evidence==
 const media=JSON.parse($('#course-media').textContent),films={};
 $$('[data-film]').forEach(host=>{const key=host.dataset.film,v=host.querySelector('video'),input=host.querySelector('input'),status=host.querySelector('.video-status');let objectURL='',loaded=false,pending=false;
  const showError=()=>{pending=false;host.classList.remove('is-playing');status.textContent=objectURL?'此文件暂时无法播放，请选择浏览器支持的 MP4 或 WebM。':'本地视频尚未连接。选择文件即可播放，不会上传。'};
- const play=async()=>{if(pending)return;pending=true;if(!loaded){v.src=media[key];loaded=true}try{await v.play()}catch(e){if(e.name!=='AbortError')showError()}finally{pending=false}};
+ const play=async()=>{if(pending)return;if(!loaded&&!media[key]){showError();return}pending=true;if(!loaded){v.src=media[key];loaded=true}try{await v.play()}catch(e){if(e.name!=='AbortError')showError()}finally{pending=false}};
  const toggle=()=>v.paused?play():v.pause();host.querySelector('.play-film').onclick=play;host.querySelector('.file-action').onclick=()=>input.click();
  input.onchange=()=>{const file=input.files?.[0];if(!file)return;v.pause();if(objectURL)URL.revokeObjectURL(objectURL);objectURL=URL.createObjectURL(file);v.src=objectURL;loaded=true;pending=false;status.textContent=file.name;v.load();play();input.value=''};
  v.addEventListener('playing',()=>{host.classList.add('is-playing');status.textContent=''});v.addEventListener('ended',()=>{host.classList.remove('is-playing');status.textContent='播放结束 · 点击重播'});v.addEventListener('error',showError);films[key]={toggle,pause:()=>v.pause(),dispose:()=>{if(objectURL)URL.revokeObjectURL(objectURL)}};

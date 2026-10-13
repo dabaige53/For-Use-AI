@@ -1,4 +1,4 @@
-import { readFile, writeFile, mkdir, copyFile, stat, readdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, copyFile, stat, readdir, mkdtemp, rm, rename } from 'node:fs/promises';
 import { dirname, join, resolve, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
@@ -32,7 +32,6 @@ const json = value => JSON.stringify(value).replace(/</g, '\\u003c');
 let html = replaceOnce(template, '<!-- PRESENTATION_STYLE -->', `<style>\n${css}</style>`);
 html = replaceOnce(html, '<!-- PRESENTATION_SCRIPT -->', `<script>\n${js}</script>`);
 html = replaceOnce(html, '__COURSE_TASKS__', json(tasks));
-await mkdir(join(dist, 'media'), { recursive: true });
 const exists = async p => { try { return (await stat(p)).isFile(); } catch (e) { if (e.code === 'ENOENT') return false; throw e; } };
 const llmDefault = join(course, '02-AI的能力从哪里来/大语言模型简要说明/生成/mini-llm-zh-480p-0000-0659.mp4');
 const ioRoot = join(course, '03-信息输入与工具执行/AI的输入与输出/生成');
@@ -51,8 +50,9 @@ async function ioCandidates() {
   return paths;
 }
 const candidates = process.env.COURSE_IO_VIDEO ? [] : await ioCandidates();
-const media = { llm: 'media/llm.mp4', io: 'media/io.mp4' };
+const media = { llm: null, io: null };
 const mediaStatus = {};
+const selectedMedia = [];
 for (const [key, setting, defaultPath] of [
   ['llm', 'COURSE_LLM_VIDEO', llmDefault],
   ['io', 'COURSE_IO_VIDEO', candidates.length === 1 ? candidates[0] : null]
@@ -64,7 +64,7 @@ for (const [key, setting, defaultPath] of [
     const ext = extname(path).toLowerCase();
     if (!['.mp4', '.webm', '.m4v'].includes(ext)) throw new Error(`${setting}: use a browser-compatible MP4 or WebM file`);
     media[key] = `media/${key}${ext}`;
-    await copyFile(path, join(dist, media[key]));
+    selectedMedia.push({ path, name: `${key}${ext}` });
     mediaStatus[key] = override ? 'explicit-local-file' : 'documented-preview-output';
     console.log(`[slides] ${key}: copied ${path}`);
     if (!override) console.log('[slides] Automatically found a preview, not a verified narrated final.');
@@ -72,6 +72,21 @@ for (const [key, setting, defaultPath] of [
     mediaStatus[key] = key === 'io' && candidates.length > 1 ? 'multiple-previews-use-picker' : 'missing-use-picker';
     console.log(`[slides] ${key}: ${mediaStatus[key]}. Set ${setting} or choose a local file in the slide.`);
   }
+}
+// Validate and stage every selected input before replacing this build's media.
+// Only these generated names belong to the slides builder; preserve other files.
+await mkdir(join(dist, 'media'), { recursive: true });
+const stagedMedia = await mkdtemp(join(dist, '.slides-media-'));
+try {
+  for (const { path, name } of selectedMedia) await copyFile(path, join(stagedMedia, name));
+  for (const key of ['llm', 'io']) {
+    for (const ext of ['.mp4', '.webm', '.m4v']) {
+      await rm(join(dist, 'media', `${key}${ext}`), { force: true });
+    }
+  }
+  for (const { name } of selectedMedia) await rename(join(stagedMedia, name), join(dist, 'media', name));
+} finally {
+  await rm(stagedMedia, { recursive: true, force: true });
 }
 html = replaceOnce(html, '{"llm":"media/llm.mp4","io":"media/io.mp4"}', json(media));
 await writeFile(join(dist, 'slides.html'), html);
