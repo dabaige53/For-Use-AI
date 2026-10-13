@@ -33,8 +33,7 @@ def main() -> None:
     )
     parser.add_argument("--skip-compose", action="store_true")
     args = parser.parse_args()
-    logdir = ROOT / "logs/zh-final-batch"
-    logdir.mkdir(parents=True, exist_ok=True)
+    logdir = (ROOT / "logs/zh-final-batch").resolve()
     source_files = [ROOT / name for name, _, _ in JOBS]
     hashes = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in source_files}
     if args.check:
@@ -51,6 +50,7 @@ def main() -> None:
             )
         )
         return
+    logdir.mkdir(parents=True, exist_ok=True)
     (logdir / "source-freeze.json").write_text(json.dumps(hashes, indent=2) + "\n")
     records = []
     for module, group, scenes in JOBS:

@@ -87,6 +87,12 @@ const KIND_ICONS={
 const KIND_LABEL={text:'文章',video:'视频',interactive:'交互演示',image:'图片',link:'网页'};
 function resource(link,view){
  const asset=link.asset?data.assets[link.asset]:null;
+ if(link.asset&&(!asset||asset.available===false)){
+  const unavailable=el('div');unavailable.className='record-resource';
+  const copy=el('span');copy.className='resource-copy';
+  copy.append(el('strong',link.title||asset?.title||link.asset),el('small','素材未提供'));
+  unavailable.append(copy);view.append(unavailable);return;
+ }
  const href=asset?.url||link.url;if(!href)return;
  const kind=KIND_ICONS[asset?.kind]?asset.kind:'link';
  const a=el('a');a.className='record-resource';a.href=href;a.target='_blank';a.rel='noopener';
@@ -100,7 +106,8 @@ function resource(link,view){
  a.onclick=e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.button)return;e.preventDefault();openViewer({title:link.title||asset?.title,kind,href});};
  if(link.preview){
   const card=el('section');card.className='resource-feature';card.append(a);
-  if(link.preview&&data.assets[link.preview])card.append(imageStack([data.assets[link.preview]]));
+  if(link.preview&&data.assets[link.preview]?.url)card.append(imageStack([data.assets[link.preview]]));
+  else if(link.preview)card.append(el('small','预览素材未提供'));
   view.append(card);
  }else view.append(a);
 }
@@ -190,7 +197,11 @@ function renderRecord(n,view){
   const row=el('section');row.className='record-message '+message.role;
   const who=el('div');who.className='record-role';who.append(roleIcon(message.role),el('span',message.role==='user'?'用户':'AI'));row.append(who);
   const body=markdown(message.text,location.href);body.className='record-text';row.append(body);
-  if(message.images?.length)row.append(imageStack(message.images.map(k=>data.assets[k])));
+  if(message.images?.length){
+   const images=message.images.map(k=>data.assets[k]).filter(asset=>asset?.url&&asset.available!==false);
+   if(images.length)row.append(imageStack(images));
+   for(const key of message.images)if(!data.assets[key]?.url||data.assets[key].available===false)row.append(el('p',(data.assets[key]?.title||key)+'：素材未提供'));
+  }
   messages.append(row);
   }
  }

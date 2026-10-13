@@ -7,6 +7,7 @@ this reconstruction. Chinese display labels are part of the instructional image.
 
 from __future__ import annotations
 import argparse
+import os
 import hashlib
 import json
 import subprocess
@@ -19,7 +20,8 @@ ROOT = Path(__file__).resolve().parent
 COURSE = ROOT.parent
 FPS = 30
 SIZE = (854, 480)
-FONT = "/Users/w/Library/Fonts/NotoSansCJK.ttc"
+FONT = os.environ.get("COURSE_FONT", "NotoSansCJK-Regular.ttc")
+FONT_INDEX = int(os.environ.get("COURSE_FONT_INDEX", "0"))
 
 
 def run(command: list[str]) -> None:
@@ -100,7 +102,7 @@ def prepare(layer: dict, count: int, cache: Path) -> Path:
 
 
 def font(size: int) -> ImageFont.FreeTypeFont:
-    return ImageFont.truetype(FONT, size, index=27)
+    return ImageFont.truetype(FONT, size, index=FONT_INDEX)
 
 
 def render_shot(shot: dict, output: Path, cache: Path) -> None:
