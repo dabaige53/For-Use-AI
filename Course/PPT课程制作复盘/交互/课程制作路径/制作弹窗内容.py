@@ -1,5 +1,5 @@
 from pathlib import Path
-import json,re
+import json,re,os
 ROOT=Path(__file__).resolve().parents[4]
 OUT=Path(__file__).parent
 COURSE=ROOT/'Course'
@@ -7,9 +7,9 @@ raw=(ROOT/'Course/PPT课程制作复盘/图解/课程制作主路径.mmd').read_
 titles={k:re.sub('<br\\s*/?>',' · ',v) for k,v in re.findall(r'^\s*([A-Z]+\d*)\["([^\"]+)"\]',raw,re.M)}
 A={}
 def asset(k,title,path,kind):
- p=(ROOT/path).resolve();assert p.is_file(),p
+ p=(ROOT/path).resolve()
  # Paths are explicit material registrations; the server grants no directory browsing.
- A[k]={'title':title,'path':str(p),'kind':kind}
+ A[k]={'title':title,'path':Path(os.path.relpath(p, COURSE)).as_posix(),'kind':kind}
 asset('terrainArticle','需求表达与反馈闭环','Course/04-需求表达与反馈闭环/需求表达与反馈闭环.md','text')
 asset('terrain','操作地形演示','Course/04-需求表达与反馈闭环/交互/思维地形.html','interactive')
 asset('terrainGif','地形运动','Course/04-需求表达与反馈闭环/素材/04-terrain-balance-b.gif','image')

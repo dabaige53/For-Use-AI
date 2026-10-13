@@ -441,147 +441,147 @@
   "assets": {
     "terrainArticle": {
       "title": "需求表达与反馈闭环",
-      "path": "/Users/w/code/For-Use-AI/Course/04-需求表达与反馈闭环/需求表达与反馈闭环.md",
+      "path": "04-需求表达与反馈闭环/需求表达与反馈闭环.md",
       "kind": "text"
     },
     "terrain": {
       "title": "操作地形演示",
-      "path": "/Users/w/code/For-Use-AI/Course/04-需求表达与反馈闭环/交互/思维地形.html",
+      "path": "04-需求表达与反馈闭环/交互/思维地形.html",
       "kind": "interactive"
     },
     "terrainGif": {
       "title": "地形运动",
-      "path": "/Users/w/code/For-Use-AI/Course/04-需求表达与反馈闭环/素材/04-terrain-balance-b.gif",
+      "path": "04-需求表达与反馈闭环/素材/04-terrain-balance-b.gif",
       "kind": "image"
     },
     "dialogue": {
       "title": "教学对话",
-      "path": "/Users/w/code/For-Use-AI/Course/04-需求表达与反馈闭环/素材/04-dialogue-balance-b.png",
+      "path": "04-需求表达与反馈闭环/素材/04-dialogue-balance-b.png",
       "kind": "image"
     },
     "ioArticle": {
       "title": "信息输入与工具执行",
-      "path": "/Users/w/code/For-Use-AI/Course/03-信息输入与工具执行/信息输入与工具执行.md",
+      "path": "03-信息输入与工具执行/信息输入与工具执行.md",
       "kind": "text"
     },
     "videoLlm": {
       "title": "本地原理视频",
-      "path": "/Users/w/code/For-Use-AI/Course/PPT/assets/video_llm.mp4",
+      "path": "PPT/assets/video_llm.mp4",
       "kind": "video"
     },
     "videoIo": {
       "title": "输入输出视频",
-      "path": "/Users/w/code/For-Use-AI/Course/PPT/assets/video_io.mp4",
+      "path": "PPT/assets/video_io.mp4",
       "kind": "video"
     },
     "story1": {
       "title": "首次输入分镜",
-      "path": "/Users/w/code/For-Use-AI/Course/03-信息输入与工具执行/AI的输入与输出/素材/图片/视觉基准/镜头01_首次输入_十二格_清理版.png",
+      "path": "03-信息输入与工具执行/AI的输入与输出/素材/图片/视觉基准/镜头01_首次输入_十二格_清理版.png",
       "kind": "image"
     },
     "story2": {
       "title": "模型输出与工具请求分镜",
-      "path": "/Users/w/code/For-Use-AI/Course/03-信息输入与工具执行/AI的输入与输出/素材/图片/镜头02_模型输出请求_十二格.png",
+      "path": "03-信息输入与工具执行/AI的输入与输出/素材/图片/镜头02_模型输出请求_十二格.png",
       "kind": "image"
     },
     "story3": {
       "title": "结果回流分镜",
-      "path": "/Users/w/code/For-Use-AI/Course/03-信息输入与工具执行/AI的输入与输出/素材/图片/镜头03_结果回流与两次调用_十二格.png",
+      "path": "03-信息输入与工具执行/AI的输入与输出/素材/图片/镜头03_结果回流与两次调用_十二格.png",
       "kind": "image"
     },
     "quadArticle": {
       "title": "行动选择与投入控制",
-      "path": "/Users/w/code/For-Use-AI/Course/06-行动选择与投入控制/行动选择与投入控制.md",
+      "path": "06-行动选择与投入控制/行动选择与投入控制.md",
       "kind": "text"
     },
     "quad": {
       "title": "操作四象限原型",
-      "path": "/Users/w/code/For-Use-AI/Course/06-行动选择与投入控制/交互/投入决策-交互原型.html",
+      "path": "06-行动选择与投入控制/交互/投入决策-交互原型.html",
       "kind": "interactive"
     },
     "quadImage": {
       "title": "四象限图形",
-      "path": "/Users/w/code/For-Use-AI/Course/06-行动选择与投入控制/素材/06-slide-03-article.png",
+      "path": "06-行动选择与投入控制/素材/06-slide-03-article.png",
       "kind": "image"
     },
     "website": {
       "title": "课程阅读网站",
-      "path": "/Users/w/code/For-Use-AI/Course/网页/index.html",
+      "path": "网页/index.html",
       "kind": "interactive"
     },
     "ppt": {
       "title": "打开课件",
-      "path": "/Users/w/code/For-Use-AI/Course/PPT/AI协作-动态幻灯片.html",
+      "path": "PPT/AI协作-动态幻灯片.html",
       "kind": "interactive"
     },
     "selected": {
       "title": "选定的页面图片",
-      "path": "/Users/w/code/For-Use-AI/Course/PPT课程制作复盘/证据/关键画面/37页-用户选定生图.png",
+      "path": "PPT课程制作复盘/证据/关键画面/37页-用户选定生图.png",
       "kind": "image"
     },
     "implemented": {
       "title": "历史页面实现",
-      "path": "/Users/w/code/For-Use-AI/Course/PPT课程制作复盘/证据/关键画面/37页-HTML历史渲染.png",
+      "path": "PPT课程制作复盘/证据/关键画面/37页-HTML历史渲染.png",
       "kind": "image"
     },
     "design": {
       "title": "页面设计参数",
-      "path": "/Users/w/code/For-Use-AI/Course/PPT/design.md",
+      "path": "PPT/design.md",
       "kind": "text"
     },
     "articleSkill": {
       "title": "解释型文章 Skill",
-      "path": "/Users/w/code/For-Use-AI/.agents/skills/explanatory-article/SKILL.md",
+      "path": "../.agents/skills/explanatory-article/SKILL.md",
       "kind": "text"
     },
     "animationSkill": {
       "title": "动画制作 Skill",
-      "path": "/Users/w/code/For-Use-AI/.agents/skills/manim-animation/SKILL.md",
+      "path": "../.agents/skills/manim-animation/SKILL.md",
       "kind": "text"
     },
     "videoSkill": {
       "title": "完整视频 Skill",
-      "path": "/Users/w/code/For-Use-AI/.agents/skills/manim-video/SKILL.md",
+      "path": "../.agents/skills/manim-video/SKILL.md",
       "kind": "text"
     },
     "videoSources": {
       "title": "原理视频资料来源",
-      "path": "/Users/w/code/For-Use-AI/Course/02-AI的能力从哪里来/大语言模型简要说明/素材/大语言模型简要说明-资料来源.md",
+      "path": "02-AI的能力从哪里来/大语言模型简要说明/素材/大语言模型简要说明-资料来源.md",
       "kind": "text"
     },
     "ioSources": {
       "title": "输入输出视频资料来源",
-      "path": "/Users/w/code/For-Use-AI/Course/03-信息输入与工具执行/AI的输入与输出/素材/AI的输入与输出-资料来源.md",
+      "path": "03-信息输入与工具执行/AI的输入与输出/素材/AI的输入与输出-资料来源.md",
       "kind": "text"
     },
     "reflection": {
       "title": "制作方法与实际经历",
-      "path": "/Users/w/code/For-Use-AI/Course/PPT课程制作复盘/PPT与视频构建指南.md",
+      "path": "PPT课程制作复盘/PPT与视频构建指南.md",
       "kind": "text"
     },
     "speech": {
       "title": "演讲编排练习模板",
-      "path": "/Users/w/code/For-Use-AI/Course/PPT课程制作复盘/交互/课程制作路径/演讲编排练习.md",
+      "path": "PPT课程制作复盘/交互/课程制作路径/演讲编排练习.md",
       "kind": "text"
     },
     "terrainOriginal": {
       "title": "AI 时代的思维框架",
-      "path": "/Users/w/code/For-Use-AI/资料库/AI时代的思维框架.md",
+      "path": "../资料库/AI时代的思维框架.md",
       "kind": "text"
     },
     "quadOriginal": {
       "title": "先获得判断，再扩大投入",
-      "path": "/Users/w/code/For-Use-AI/.trash/20260918-结构重构/资料库-旧结构/02-知识与原文/AI协作框架/ai_collaboration_framework.md",
+      "path": "../.trash/20260918-结构重构/资料库-旧结构/02-知识与原文/AI协作框架/ai_collaboration_framework.md",
       "kind": "text"
     },
     "animationCode": {
       "title": "输入输出动画 · 场景代码",
-      "path": "/Users/w/code/For-Use-AI/Course/03-信息输入与工具执行/AI的输入与输出/代码/scenes.py",
+      "path": "03-信息输入与工具执行/AI的输入与输出/代码/scenes.py",
       "kind": "text"
     },
     "pageMap": {
       "title": "课件页面与素材对应",
-      "path": "/Users/w/code/For-Use-AI/Course/PPT课程制作复盘/页面与素材对应.md",
+      "path": "PPT课程制作复盘/页面与素材对应.md",
       "kind": "text"
     }
   },

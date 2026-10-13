@@ -263,6 +263,33 @@ try {
 </html>'''
 
 
+def load_details(details_path, material_root=None):
+    """Load the required manifest; absent registered materials remain visible."""
+    details_path = Path(details_path).expanduser().resolve()
+    details_dir = details_path.parent
+    material_root = Path(material_root).expanduser().resolve() if material_root else details_dir
+    details = json.loads(details_path.read_text(encoding="utf-8"))
+    records = details_dir / "节点对话.json"
+    if records.is_file():
+        for node_id, record in json.loads(records.read_text(encoding="utf-8")).items():
+            if node_id in details["nodes"]:
+                details["nodes"][node_id]["record"] = record
+    asset_paths = {}
+    for key, asset in details["assets"].items():
+        path = (material_root / asset.pop("path")).resolve()
+        asset.pop("url", None)
+        asset.pop("download", None)
+        asset["available"] = path.is_file()
+        if not asset["available"]:
+            continue
+        asset_paths[key] = path
+        if path.name == "SKILL.md":
+            asset_paths.setdefault(path.parent.name, path)
+        asset["url"] = "/materials/" + quote(path.relative_to(material_root).as_posix()) if path.is_relative_to(material_root) else "/artifact/" + quote(key) + "/" + quote(path.name)
+        asset["download"] = "/download/" + quote(key)
+    return details, asset_paths
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("files", nargs="*", type=Path, help="要预览的 .mmd 文件，可同时指定多个")
@@ -273,25 +300,16 @@ def main():
     args = parser.parse_args()
     page = HTML
     details = None
+    details_dir = None
     asset_paths = {}
     material_root = args.materials_root.expanduser().resolve() if args.materials_root else None
     if args.details:
         details_dir = args.details.expanduser().resolve().parent
-        details = json.loads(args.details.read_text())
-        records = details_dir / "节点对话.json"
-        if records.is_file():
-            for node_id, record in json.loads(records.read_text()).items():
-                if node_id in details["nodes"]:
-                    details["nodes"][node_id]["record"] = record
-        for key, asset in details["assets"].items():
-            path = Path(asset.pop("path")).resolve()
-            if not path.is_file():
-                parser.error(f"材料不存在：{path}")
-            asset_paths[key] = path
-            if path.name == "SKILL.md":
-                asset_paths.setdefault(path.parent.name, path)
-            asset["url"] = "/materials/" + quote(path.relative_to(material_root).as_posix()) if material_root and path.is_relative_to(material_root) else "/artifact/" + quote(key) + "/" + quote(path.name)
-            asset["download"] = "/download/" + quote(key)
+        material_root = material_root or details_dir
+        try:
+            details, asset_paths = load_details(args.details, material_root)
+        except (OSError, ValueError, KeyError, TypeError) as error:
+            parser.error(f"无法读取节点材料：{error}")
         page = page.replace("</style>", '</style><link rel="stylesheet" href="/details.css">')
         page = page.replace("</html>", '<link rel="stylesheet" href="/build/canvas.css"><script type="module" src="/details.js"></script><script type="module" src="/build/canvas.js"></script></html>')
     files = [path.expanduser().resolve() for path in args.files]
@@ -375,11 +393,11 @@ def main():
                 return self.send(b"", "image/x-icon", 204)
             if route in ("/", "/mermaid"):
                 return self.send(page, "text/html; charset=utf-8")
-            if details and route in ("/build/canvas.js", "/build/canvas.css"):
+            if details and details_dir is not None and route in ("/build/canvas.js", "/build/canvas.css"):
                 return self.send_file(details_dir / route[1:])
             if details and route == "/details":
                 return self.send(json.dumps(details, ensure_ascii=False), "application/json; charset=utf-8")
-            if details and route in ("/details.css", "/details.js", "/image-stack.js"):
+            if details and details_dir is not None and route in ("/details.css", "/details.js", "/image-stack.js"):
                 return self.send_file(details_dir / route[1:])
             if details and route.startswith(("/artifact/", "/download/")):
                 parts = route.split("/", 3)
