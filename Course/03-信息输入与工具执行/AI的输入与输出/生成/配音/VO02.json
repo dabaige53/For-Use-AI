@@ -1,0 +1,28 @@
+{
+  "signature": "82c87c1aba4106a62e43105a9df5c3eafa2e86e31118f11388bac263f6b0676b",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "用户消息说明任务，系统指令规定回答方式。环境信息提供录音路径。注意，路径已经进入输入，录音内容还没有。",
+      "pronounce_text": "用户消息说明任务，系统指令规定回答方式。环境信息提供录音路径。注意，路径已经进入输入，录音内容还没有。",
+      "time_begin": 0.0,
+      "time_end": 9489.841269841269,
+      "text_begin": 0,
+      "text_end": 51,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 51,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 9648,
+    "audio_sample_rate": 32000,
+    "audio_size": 156084,
+    "bitrate": 128000,
+    "word_count": 51,
+    "invisible_character_ratio": 0,
+    "usage_characters": 96,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

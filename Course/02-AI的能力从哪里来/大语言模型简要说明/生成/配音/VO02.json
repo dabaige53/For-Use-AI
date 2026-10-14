@@ -1,0 +1,28 @@
+{
+  "signature": "b418987c99dad549a9103658e8311e6c68d3d60faec7706d8711adf1448dd63c",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "你可以把现有内容输入机器，让它接着写完剧本，看看它会用哪个词，作为 人工智能 回答的开头，再把不断增长的剧本反复输入，直到补全整段对话。你与聊天机器人交流时，发生的正是这个过程。",
+      "pronounce_text": "你可以把现有内容输入机器，让它接着写完剧本，看看它会用哪个词，作为人工智能回答的开头，再把不断增长的剧本反复输入，直到补全整段对话。你与聊天机器人交流时，发生的正是这个过程。",
+      "time_begin": 0.0,
+      "time_end": 15550.249433106575,
+      "text_begin": 0,
+      "text_end": 89,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 87,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 15696,
+    "audio_sample_rate": 32000,
+    "audio_size": 252852,
+    "bitrate": 128000,
+    "word_count": 89,
+    "invisible_character_ratio": 0,
+    "usage_characters": 168,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

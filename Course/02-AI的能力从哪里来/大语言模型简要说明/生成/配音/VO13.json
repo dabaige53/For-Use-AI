@@ -1,0 +1,28 @@
+{
+  "signature": "c68e17670f3c6336f39a74482c501a872159d4581f0ba1b1083ca81e92f997cb",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "在数万亿个样本上反复进行这一过程后，模型不仅能更准确地预测训练数据，也能对从未见过的文本做出更合理的预测。",
+      "pronounce_text": "在数万亿个样本上反复进行这一过程后，模型不仅能更准确地预测训练数据，也能对从未见过的文本做出更合理的预测。",
+      "time_begin": 0.0,
+      "time_end": 9071.8820861678,
+      "text_begin": 0,
+      "text_end": 53,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 53,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 9216,
+    "audio_sample_rate": 32000,
+    "audio_size": 149172,
+    "bitrate": 128000,
+    "word_count": 53,
+    "invisible_character_ratio": 0,
+    "usage_characters": 103,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

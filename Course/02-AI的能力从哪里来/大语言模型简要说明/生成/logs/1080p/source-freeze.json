@@ -1,0 +1,21 @@
+{
+  "compose_reconstruction.py": "ec52a07b1e14f56b21dadc65936806e4bc1b5a3138b88d79829a27ccf993a412",
+  "render_1080p.py": "1fd55999b7f911e32fbb9d6f6a834f68449e7ba17e2a27f87bd0a08e3a54e672",
+  "group_a.py": "76cfc410a47fefa518a6689574bcbeee878494f650a79dc278df986171eb45e9",
+  "group_b.py": "6d06d33d3463067afe709ee94a4afcf0ad4c8ad9e5c0dda87e0e89482dbe633a",
+  "group_c.py": "719f62988cb846185c79c160a73cb55aabe7a560f641106d100de98750ffe61f",
+  "group_dependencies.py": "5c8796e8cfb654d0b1b24f640f93055f5b17eec8861654dc6a23f85f9318d896",
+  "tex_support.py": "95571047f1db4eeceb326aa3cd2afa73a48848148467b8bdda75d0f4d0e04d5a",
+  "custom_config.yml": "912e962d3398dae5fd5111e160cd5c6d9cca18d6af4baf6ac325ca71dcd90293",
+  "pyproject.toml": "87f81f05f422ef964559ab69e0824044001209478a42a234d83402c7191d2944",
+  "uv.lock": "7af14ba14aae930a754fab920b765a0dc40bb2a9a352cd9cdfb7fdb87c2a2d52",
+  "reconstruction_gpu_zh.py": "8b00668389ec54408b902ea853cb9e85d7be40c352e94235b0b8ad1320701ec4",
+  "reconstruction_flow.py": "2bf305a89bc823269bdd45d29c714100567ffa123342f13b084266a1e511e15c",
+  "reconstruction_overlays_zh.py": "63e9cb1a1cce921065d9cf4bd58908d91f183042af9596b88f2aca531032e5a9",
+  "reconstruction_gpu.py": "8a894d27f8d32220c0ab2e63897a123d006a33d1b318f75c8353fb4593ab9fe9",
+  "reconstruction_core_zh.py": "1903f362adebd2f38dbd701862f279fe738891f264540888b9f466f7b3efebee",
+  "reconstruction_paper_zh.py": "1bf9c64940257bcf18012a33b6c346269111f7976184e726e7ea50b1b5399145",
+  "reconstruction_chat.py": "e9eb0e6958b0a66c8675739cb35674e82302d8149d93df3b6f512b779bc5a74e",
+  "reconstruction_feedback_zh.py": "69f86b3cee341e295f8e88bb2900633be16af140f8db34e42421b454e969e448",
+  "reconstruction_overlays.py": "938e1ee861a395bd8ee88225a3d691d481d03634fb7a8e5119a02c91fd1d8bf3"
+}

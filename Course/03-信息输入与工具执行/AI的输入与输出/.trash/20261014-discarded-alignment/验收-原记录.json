@@ -1,0 +1,23 @@
+{
+  "duration_seconds": 159.0,
+  "audio_streams": 1,
+  "subtitle_cues": 51,
+  "video_sha256": "5c2f4ea2031fc64637a1635e5e8aef5adc8d673617ba0b0534be2225bae6c338",
+  "decode": "passed",
+  "video_stream_identical": true,
+  "voice_id": "Chinese (Mandarin)_Radio_Host",
+  "model": "speech-2.8-hd",
+  "audio_checks": {
+    "peak_dbfs": -0.53,
+    "clipped_samples": 0
+  },
+  "subtitle_timestamps": "passed",
+  "listening_review": "pending",
+  "subtitle_streams": 1,
+  "voice_verification": "生成/配音/验收.json",
+  "reproduce": "uv run --no-sync python Course/PPT/视频配音.py --align-existing --video io",
+  "tts_calls": 0,
+  "source_audio_unchanged": true,
+  "alignment_method": "Existing MP3; real pause cuts; visual phrase anchors; no TTS calls",
+  "alignment_visual_review": "Phrase anchors checked against current pictures; existing video stream preserved"
+}

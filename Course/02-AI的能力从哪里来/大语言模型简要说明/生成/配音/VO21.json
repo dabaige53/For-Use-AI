@@ -1,0 +1,28 @@
+{
+  "signature": "1a26c90fe0d7e7424b593654f9ebecbb8f7f9731f1b8342be4b150aa559e7e77",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "Transformer 的独特之处，在于它依靠一种称为“注意力”的特殊操作。它让这些数字序列相互交流，结合周围的上下文，细化各自编码的含义。",
+      "pronounce_text": "Transformer的独特之处，在于它依靠一种称为“注意力”的特殊操作。它让这些数字序列相互交流，结合周围的上下文，细化各自编码的含义。",
+      "time_begin": 0.0,
+      "time_end": 10650.839002267574,
+      "text_begin": 0,
+      "text_end": 70,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 69,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 10800,
+    "audio_sample_rate": 32000,
+    "audio_size": 174516,
+    "bitrate": 128000,
+    "word_count": 70,
+    "invisible_character_ratio": 0,
+    "usage_characters": 121,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "signature": "2eff6e5cf885c26d0c979d97b931526358e2f377eef5bc483492e3fb5c21d151",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "它为模型提供额外容量，用来存储训练中学到的更多语言模式。数据会反复流过这两种基本操作，经过一轮又一轮的处理。我们希望每个数字序列的表示逐渐丰富，包含准确预测下一个词所需的信息。",
+      "pronounce_text": "它为模型提供额外容量，用来存储训练中学到的更多语言模式。数据会反复流过这两种基本操作，经过一轮又一轮的处理。我们希望每个数字序列的表示逐渐丰富，包含准确预测下一个词所需的信息。",
+      "time_begin": 0.0,
+      "time_end": 15898.548752834466,
+      "text_begin": 0,
+      "text_end": 88,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 88,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 16056,
+    "audio_sample_rate": 32000,
+    "audio_size": 258612,
+    "bitrate": 128000,
+    "word_count": 88,
+    "invisible_character_ratio": 0,
+    "usage_characters": 170,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

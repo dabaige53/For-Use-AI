@@ -1,0 +1,28 @@
+{
+  "signature": "a3d68c127aa0c7b358f612141c80c18ecca99ff6fda0286acbe53e9437c7ac2a",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "Transformer 不会从头到尾逐词阅读，而是一次性并行处理整段文本。Transformer 的第一步，也是大多数语言模型的第一步，是把每个词与一长串数字关联起来。",
+      "pronounce_text": "Transformer不会从头到尾逐词阅读，而是一次性并行处理整段文本。Transformer的第一步，也是大多数语言模型的第一步，是把每个词与一长串数字关联起来。",
+      "time_begin": 0.0,
+      "time_end": 13123.764172335601,
+      "text_begin": 0,
+      "text_end": 84,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 82,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 13284,
+    "audio_sample_rate": 32000,
+    "audio_size": 214260,
+    "bitrate": 128000,
+    "word_count": 84,
+    "invisible_character_ratio": 0,
+    "usage_characters": 139,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

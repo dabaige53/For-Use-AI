@@ -1,0 +1,28 @@
+{
+  "signature": "96f1deb30e1af7aa04bde0bcf8b59f632ba4db9e59aca9fd5031e5a832e9116e",
+  "speed": 1.21,
+  "subtitles": [
+    {
+      "text": "四种来源，共同组成首次输入。",
+      "pronounce_text": "四种来源，共同组成首次输入。",
+      "time_begin": 0.0,
+      "time_end": 2221.9954648526077,
+      "text_begin": 0,
+      "text_end": 14,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 14,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 2376,
+    "audio_sample_rate": 32000,
+    "audio_size": 39732,
+    "bitrate": 128000,
+    "word_count": 14,
+    "invisible_character_ratio": 0,
+    "usage_characters": 26,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

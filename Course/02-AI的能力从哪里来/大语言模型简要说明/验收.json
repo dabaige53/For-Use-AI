@@ -1,22 +1,48 @@
 {
-  "duration_seconds": 419,
+  "duration_seconds": 419.0,
   "size": [
-    854,
-    480
+    1920,
+    1080
   ],
   "fps": 30,
   "frames": 12570,
-  "audio_streams": 0,
-  "subtitle_streams": 0,
+  "audio_streams": 1,
+  "subtitle_streams": 1,
   "decode": "passed",
-  "original_38_sha256_unchanged": true,
-  "subtitle_cues": 86,
-  "video_sha256": "996d5bcdcc35d3f4e5d808473f2cdea2e437849a11b7ee69d7ba2bce146bf7e5",
+  "subtitle_cues": 29,
+  "video_sha256": "24e7cfbda127f2a75d00d7d3b7a2ee0360c5c31c1304ca4b342f82042a3939ff",
   "is_pixel_identical_copy": false,
-  "visual_review": "已查看27个镜头中点、26组衔接前后帧，并检查中文字体、参数输入边界、预测概率和夜空目标泄漏修复。",
+  "visual_review": "已查看27个镜头中点、26组衔接前后帧，并以全尺寸检查S11预训练/RLHF布局、S17串并行对照、S20 bank两义裁切、S23语义分屏和最终帧；中文、图像、分割线无新增截断或错位。",
   "remaining_differences": [
     "中文排版与原文词数不同",
     "私有卷轴曲线与机器人SVG使用兼容曲线和替代图标",
     "部分连续转场、镜头尺度与局部速度近似原片，并非逐像素一致"
-  ]
+  ],
+  "source_render_report": "代码/logs/1080p/source-report.json",
+  "reproduce": "uv run --no-sync python Course/PPT/视频配音.py --video llm",
+  "previous_outputs": ".trash/1080p-upgrade-20261009-112427",
+  "visual_review_images": [
+    "生成/验收/镜头中点.png",
+    "生成/验收/镜头接点-1.png",
+    "生成/验收/镜头接点-2.png"
+  ],
+  "render_hardware": {
+    "device": "Apple M4",
+    "backend": "Metal",
+    "adapter_type": "IntegratedGPU",
+    "power_preference": "high-performance"
+  },
+  "source_resolution_validation": "24个时间线源视频均从现源码渲染并校验1920x1080/30fps；没有将480p视频放大作为输入。",
+  "source_snapshot_at_validation": "代码/logs/1080p/source-freeze.json",
+  "silent_video_sha256": "f429da0718916d3e93ce2661b1992fe0d7055717de5bef65aa5ef5f93445aa39",
+  "video_stream_identical": true,
+  "voice_id": "Chinese (Mandarin)_Radio_Host",
+  "model": "speech-2.8-hd",
+  "audio_checks": {
+    "peak_dbfs": -0.42,
+    "clipped_samples": 0
+  },
+  "subtitle_timestamps": "passed",
+  "listening_review": "user accepted original voice",
+  "voice_verification": "生成/配音/验收.json"
 }

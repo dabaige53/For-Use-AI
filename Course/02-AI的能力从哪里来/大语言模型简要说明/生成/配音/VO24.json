@@ -1,0 +1,28 @@
+{
+  "signature": "da326529db9f1025409fa54c1f96573c703ab67a02a52819e81ed60937b40364",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "最后，会对序列中的最后一个向量执行一个函数。此时，它已经受到输入文本中的所有其他上下文信息的影响，也融入了模型在训练中学到的信息，从而生成对下一个词的预测。",
+      "pronounce_text": "最后，会对序列中的最后一个向量执行一个函数。此时，它已经受到输入文本中的所有其他上下文信息的影响，也融入了模型在训练中学到的信息，从而生成对下一个词的预测。",
+      "time_begin": 0.0,
+      "time_end": 13681.043083900227,
+      "text_begin": 0,
+      "text_end": 78,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 78,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 13824,
+    "audio_sample_rate": 32000,
+    "audio_size": 222900,
+    "bitrate": 128000,
+    "word_count": 78,
+    "invisible_character_ratio": 0,
+    "usage_characters": 150,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

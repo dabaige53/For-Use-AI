@@ -1,0 +1,28 @@
+{
+  "signature": "933ae297623247cb4568afa76b196a05a9a64a250acabb74dd0ef0d5b2f87717",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "这意味着，尽管模型本身是确定性的，同一个提示词每次运行，通常也会得到不同的回答。模型通过处理海量文本，学习如何做出这些预测。",
+      "pronounce_text": "这意味着，尽管模型本身是确定性的，同一个提示词每次运行，通常也会得到不同的回答。模型通过处理海量文本，学习如何做出这些预测。",
+      "time_begin": 0.0,
+      "time_end": 10732.108843537415,
+      "text_begin": 0,
+      "text_end": 62,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 62,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 10872,
+    "audio_sample_rate": 32000,
+    "audio_size": 175668,
+    "bitrate": 128000,
+    "word_count": 62,
+    "invisible_character_ratio": 0,
+    "usage_characters": 118,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

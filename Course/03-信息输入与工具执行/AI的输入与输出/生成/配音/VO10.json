@@ -1,0 +1,28 @@
+{
+  "signature": "78d6ad061c7cb3419e1d3efe1ad30b5d34df41a20435859598deab74cc6b2b43",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "程序收到工具结果。请求记录和返回结果都要保留，并对应到同一次调用。",
+      "pronounce_text": "程序收到工具结果。请求记录和返回结果都要保留，并对应到同一次调用。",
+      "time_begin": 0.0,
+      "time_end": 6680.2267573696145,
+      "text_begin": 0,
+      "text_end": 33,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 33,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 6840,
+    "audio_sample_rate": 32000,
+    "audio_size": 111156,
+    "bitrate": 128000,
+    "word_count": 33,
+    "invisible_character_ratio": 0,
+    "usage_characters": 63,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

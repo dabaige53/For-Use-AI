@@ -1,0 +1,52 @@
+{
+  "duration_seconds": 419.0,
+  "size": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "frames": 12570,
+  "audio_streams": 1,
+  "subtitle_streams": 1,
+  "decode": "passed",
+  "subtitle_cues": 86,
+  "video_sha256": "dfaea1f2c5b923bb5f90e6833dc9eb2ae9f659b019f76520ddc5f12f207aee6b",
+  "is_pixel_identical_copy": false,
+  "visual_review": "已查看27个镜头中点、26组衔接前后帧，并以全尺寸检查S11预训练/RLHF布局、S17串并行对照、S20 bank两义裁切、S23语义分屏和最终帧；中文、图像、分割线无新增截断或错位。",
+  "remaining_differences": [
+    "中文排版与原文词数不同",
+    "私有卷轴曲线与机器人SVG使用兼容曲线和替代图标",
+    "部分连续转场、镜头尺度与局部速度近似原片，并非逐像素一致"
+  ],
+  "source_render_report": "代码/logs/1080p/source-report.json",
+  "reproduce": "uv run --no-sync python Course/PPT/视频配音.py --align-existing --video llm",
+  "previous_outputs": ".trash/1080p-upgrade-20261009-112427",
+  "visual_review_images": [
+    "生成/验收/镜头中点.png",
+    "生成/验收/镜头接点-1.png",
+    "生成/验收/镜头接点-2.png"
+  ],
+  "render_hardware": {
+    "device": "Apple M4",
+    "backend": "Metal",
+    "adapter_type": "IntegratedGPU",
+    "power_preference": "high-performance"
+  },
+  "source_resolution_validation": "24个时间线源视频均从现源码渲染并校验1920x1080/30fps；没有将480p视频放大作为输入。",
+  "source_snapshot_at_validation": "代码/logs/1080p/source-freeze.json",
+  "silent_video_sha256": "f429da0718916d3e93ce2661b1992fe0d7055717de5bef65aa5ef5f93445aa39",
+  "video_stream_identical": true,
+  "voice_id": "Chinese (Mandarin)_Radio_Host",
+  "model": "speech-2.8-hd",
+  "audio_checks": {
+    "peak_dbfs": -0.43,
+    "clipped_samples": 0
+  },
+  "subtitle_timestamps": "passed",
+  "listening_review": "pending",
+  "voice_verification": "生成/配音/验收.json",
+  "tts_calls": 0,
+  "source_audio_unchanged": true,
+  "alignment_method": "Existing MP3; real pause cuts; visual phrase anchors; no TTS calls",
+  "alignment_visual_review": "Phrase anchors checked against current pictures; existing video stream preserved"
+}

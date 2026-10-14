@@ -1,0 +1,28 @@
+{
+  "signature": "53e8a1d207368696611baefee8a798df6d36622cf185f6d603d8273b050126d4",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "大语言模型是一个复杂的数学函数，它能根据已有文本预测下一个词。不过，它并非确定地预测某一个词，而是为所有可能的后续词分别赋予一个概率。",
+      "pronounce_text": "大语言模型是一个复杂的数学函数，它能根据已有文本预测下一个词。不过，它并非确定地预测某一个词，而是为所有可能的后续词分别赋予一个概率。",
+      "time_begin": 0.0,
+      "time_end": 12775.464852607709,
+      "text_begin": 0,
+      "text_end": 67,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 67,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 12924,
+    "audio_sample_rate": 32000,
+    "audio_size": 208500,
+    "bitrate": 128000,
+    "word_count": 67,
+    "invisible_character_ratio": 0,
+    "usage_characters": 129,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

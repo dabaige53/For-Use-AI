@@ -1,0 +1,28 @@
+{
+  "signature": "abcd2dceb4263a6508be2633bb63d3eaddab2fe56be7925d2050cf43443a7df2",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "然而，并不是所有语言模型都容易实现并行处理。在 2017 年以前，大多数语言模型都是逐词处理文本的。后来，谷歌的一组研究人员提出了名为 Transformer 的新模型。",
+      "pronounce_text": "然而，并不是所有语言模型都容易实现并行处理。在两千零一十七年以前，大多数语言模型都是逐词处理文本的。后来，谷歌的一组研究人员提出了名为Transformer的新模型。",
+      "time_begin": 0.0,
+      "time_end": 13506.893424036281,
+      "text_begin": 0,
+      "text_end": 85,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 83,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 13644,
+    "audio_sample_rate": 32000,
+    "audio_size": 220020,
+    "bitrate": 128000,
+    "word_count": 85,
+    "invisible_character_ratio": 0,
+    "usage_characters": 145,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

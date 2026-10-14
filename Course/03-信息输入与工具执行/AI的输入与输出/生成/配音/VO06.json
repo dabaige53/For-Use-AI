@@ -1,0 +1,28 @@
+{
+  "signature": "058fc0bdb44a0eac396bd644bf77744b6dea73dc95962569875256cd1607c733",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "程序把这次输入整体提供给模型。模型依据这些信息，生成下一条消息。",
+      "pronounce_text": "程序把这次输入整体提供给模型。模型依据这些信息，生成下一条消息。",
+      "time_begin": 0.0,
+      "time_end": 5275.419501133787,
+      "text_begin": 0,
+      "text_end": 32,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 32,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 5436,
+    "audio_sample_rate": 32000,
+    "audio_size": 88692,
+    "bitrate": 128000,
+    "word_count": 32,
+    "invisible_character_ratio": 0,
+    "usage_characters": 61,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

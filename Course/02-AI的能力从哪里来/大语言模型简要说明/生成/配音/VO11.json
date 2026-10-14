@@ -1,0 +1,28 @@
+{
+  "signature": "92899f70e477839a370b680c92aa086973eff992f67941376e3d43f40ab45704",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "一个训练样本可能只有几个词，也可能有数千个词。无论哪种情况，都要把除最后一个词外的内容输入模型，再将模型的预测与样本中真实的最后一个词进行比较。",
+      "pronounce_text": "一个训练样本可能只有几个词，也可能有数千个词。无论哪种情况，都要把除最后一个词外的内容输入模型，再将模型的预测与样本中真实的最后一个词进行比较。",
+      "time_begin": 0.0,
+      "time_end": 13251.473922902494,
+      "text_begin": 0,
+      "text_end": 72,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 72,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 13392,
+    "audio_sample_rate": 32000,
+    "audio_size": 215988,
+    "bitrate": 128000,
+    "word_count": 72,
+    "invisible_character_ratio": 0,
+    "usage_characters": 139,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

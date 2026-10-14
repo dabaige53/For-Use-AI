@@ -42,7 +42,7 @@ slots={
 'W7':('','website','',''),
 'P1':('','','',''),
 'P2':('website','','',''),
-'P3':('','','',''),
+'P3':('','selected','',''),
 'P4':('','','selected',''),
 'P5':('','ppt','selected','implemented'),
 'P6':('videoIo videoLlm terrain','ppt','',''),
@@ -72,6 +72,7 @@ for m in re.finditer(r'^### ([A-Z]+\d*)｜([^\n]+)\n(.*?)(?=^### |^## 6\.|\Z)',s
  for msg in R[key]['messages']:
   msg['imageOrigin']='current-artifact' if msg['images'] else None
 # Provenance-specific overrides, without pretending every image was in the original message.
+R['P3']['outputs']=[{'asset': 'selected', 'title': 'PPT 样式图 · 现存生图样例', 'description': '“同一个任务，不同的人，下一步不同”页面的生图，后续被选作页面参考。', 'preview': 'selected'}]
 R['P4']['messages'][0]['imageOrigin']='historical-user-selection'
 R['P5']['messages'][0]['imageOrigin']='selected-reference'
 R['P5']['messages'][1]['imageOrigin']='historical-implementation'

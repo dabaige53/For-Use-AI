@@ -1,0 +1,28 @@
+{
+  "signature": "960bdfbad8e677f7f9935656876f8033b3865833bf1ac11ad3831d6351577fce",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "用户提出一个请求：把本地录音整理成会议纪要。一句话之外，程序还可以组织其他输入。",
+      "pronounce_text": "用户提出一个请求：把本地录音整理成会议纪要。一句话之外，程序还可以组织其他输入。",
+      "time_begin": 0.0,
+      "time_end": 7655.46485260771,
+      "text_begin": 0,
+      "text_end": 40,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 40,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 7812,
+    "audio_sample_rate": 32000,
+    "audio_size": 126708,
+    "bitrate": 128000,
+    "word_count": 40,
+    "invisible_character_ratio": 0,
+    "usage_characters": 76,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

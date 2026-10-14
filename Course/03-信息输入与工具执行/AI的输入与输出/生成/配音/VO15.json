@@ -1,0 +1,28 @@
+{
+  "signature": "69007985f5b4b82d2b3164df6e6de875cdc9653c8c0cd8aab7f33e22f9a9e101",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "模型依据返回内容，生成给用户阅读的回答。",
+      "pronounce_text": "模型依据返回内容，生成给用户阅读的回答。",
+      "time_begin": 0.0,
+      "time_end": 3174.013605442177,
+      "text_begin": 0,
+      "text_end": 20,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 20,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 3312,
+    "audio_sample_rate": 32000,
+    "audio_size": 54708,
+    "bitrate": 128000,
+    "word_count": 20,
+    "invisible_character_ratio": 0,
+    "usage_characters": 38,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

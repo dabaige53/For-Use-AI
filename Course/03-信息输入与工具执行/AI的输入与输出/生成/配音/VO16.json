@@ -1,0 +1,28 @@
+{
+  "signature": "13b064d101d91a6b87812b2c30dc732949297bebba2397ff71946f9710bc6933",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "程序再把这段回答交给用户。",
+      "pronounce_text": "程序再把这段回答交给用户。",
+      "time_begin": 0.0,
+      "time_end": 1862.0861678004535,
+      "text_begin": 0,
+      "text_end": 13,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 13,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 2016,
+    "audio_sample_rate": 32000,
+    "audio_size": 33972,
+    "bitrate": 128000,
+    "word_count": 13,
+    "invisible_character_ratio": 0,
+    "usage_characters": 25,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

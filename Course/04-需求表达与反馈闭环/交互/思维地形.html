@@ -547,12 +547,15 @@ function loopToggle(){state.loop=!state.loop;$('loopBtn').setAttribute('aria-pre
 window.addEventListener('keydown',e=>{if(e.key==='Escape'){$('aux').classList.remove('expanded');$('aux').setAttribute('aria-expanded','false');$('auxAction').textContent='点击放大 ↗';return}if(['INPUT','SELECT','BUTTON'].includes(document.activeElement.tagName)||document.activeElement===$('aux'))return;if(e.code==='Space'){e.preventDefault();togglePlay()}if(e.key==='ArrowRight'){e.preventDefault();setProgress(state.t+.025)}if(e.key==='ArrowLeft'){e.preventDefault();setProgress(state.t-.025)}if(e.key.toLowerCase()==='c')compare();if(e.key.toLowerCase()==='r')resetView()});
 const groups={0:'01–06 / 性质 · 宏观行为',6:'07–10 / 基础技巧',10:'11–15 / 显式与隐式',15:'16–20 / 提纯与介质'};
 $('mechanisms').innerHTML=MECH.map((m,i)=>(groups[i]?`<div class="group-title">${groups[i]}</div>`:'')+`<button data-index="${i}" title="${esc(m.note)}"><span class="num">${String(i+1).padStart(2,'0')}</span><span>${m.name}</span></button>`).join('');$('mechanisms').onclick=e=>{const b=e.target.closest('button');if(b)selectMechanism(+b.dataset.index)};$('mobileSelect').innerHTML=MECH.map((m,i)=>`<option value="${i}">${String(i+1).padStart(2,'0')} ${m.name}</option>`).join('');
-function frame(stamp){const dt=Math.min(.06,(stamp-(lastStamp||stamp))/1000);lastStamp=stamp;if(state.playing&&!document.hidden){state.t=Math.min(1,state.t+dt*state.speed/duration);if(state.t>=1){if(state.loop){state.t=0;uiKey=''}else state.playing=false}}
- if(state.dayCycle)state.dayClock+=dt;const nightTarget=state.dayCycle?(1-Math.cos(state.dayClock*TAU/50))*.5:0;state.night=mix(state.night,nightTarget,1-Math.exp(-dt*2));const pressing=Object.values(buttonPress).some(t=>stamp-t<280),renderKey=[state.index,state.after,state.t,state.playing,state.speed,state.night.toFixed(3),cam.theta,cam.phi,cam.dist,hover?.id,drag?.id,pressing?Math.floor(stamp/16):0].join('/');if(renderKey===lastRenderKey){requestAnimationFrame(frame);return}lastRenderKey=renderKey;frameState=phaseData(state.t,state.after);updateCamera();shapes=[];labels=[];hits=[];
+let frameRequest=0,presentationVisible=true;
+function requestFrame(){if(!frameRequest&&presentationVisible&&!document.hidden)frameRequest=requestAnimationFrame(frame);}
+document.addEventListener('visibilitychange',()=>{lastStamp=0;requestFrame();});
+function frame(stamp){frameRequest=0;if(!presentationVisible||document.hidden){lastStamp=0;return;}const dt=Math.min(.06,(stamp-(lastStamp||stamp))/1000);lastStamp=stamp;if(state.playing&&!document.hidden){state.t=Math.min(1,state.t+dt*state.speed/duration);if(state.t>=1){if(state.loop){state.t=0;uiKey=''}else state.playing=false}}
+ if(state.dayCycle)state.dayClock+=dt;const nightTarget=state.dayCycle?(1-Math.cos(state.dayClock*TAU/50))*.5:0;state.night=mix(state.night,nightTarget,1-Math.exp(-dt*2));const pressing=Object.values(buttonPress).some(t=>stamp-t<280),renderKey=[state.index,state.after,state.t,state.playing,state.speed,state.night.toFixed(3),cam.theta,cam.phi,cam.dist,hover?.id,drag?.id,pressing?Math.floor(stamp/16):0].join('/');if(renderKey===lastRenderKey){requestFrame();return}lastRenderKey=renderKey;frameState=phaseData(state.t,state.after);updateCamera();shapes=[];labels=[];hits=[];
  const isTerrain = document.documentElement.classList.contains('terrain-only');
  if(!isTerrain)room();else{ctx.fillStyle="#ffffff";ctx.fillRect(0,0,W,H);}
  if(cameraEye[2]<0){if(!isTerrain)controlDesk(stamp);flush();terrain();special();actors();flush()}else{terrain();special();actors();flush();if(!isTerrain)controlDesk(stamp);flush()}
- drawLabels();if(!isTerrain)updateUI();requestAnimationFrame(frame)}
+ drawLabels();if(!isTerrain)updateUI();requestFrame()}
 try{
   const _p = new URLSearchParams(window.location.search);
   const _m = _p.get('mech');
@@ -572,12 +575,13 @@ try{
   const _s = parseFloat(_p.get('speed'));
   if (!isNaN(_s) && _s > 0) state.speed = _s;
 }catch(_e){}
-new ResizeObserver(resize).observe($('scene'));updateSelection();resize();resetView();renderAuxDiagram();requestAnimationFrame(frame);
+new ResizeObserver(resize).observe($('scene'));updateSelection();resize();resetView();renderAuxDiagram();requestFrame();
 
 // Presentation controls: only the embedding parent may control this view.
 window.addEventListener('message',event=>{
  if(event.source!==window.parent||!event.data||event.data.type!=='terrain-control')return;
  const action=event.data.action;
+ if(action==='visibility'){presentationVisible=Boolean(event.data.visible);if(!presentationVisible){cancelAnimationFrame(frameRequest);frameRequest=0;lastStamp=0;}else requestFrame();return;}
  if(action==='configure'&&document.documentElement.classList.contains('terrain-only')){configurePresentation(event.data.story);window.parent.postMessage({type:'terrain-configured'},'*');return;}
  if(action==='run'){if(state.t>=1)state.t=0;state.playing=true;}
  if(action==='stop')state.playing=false;

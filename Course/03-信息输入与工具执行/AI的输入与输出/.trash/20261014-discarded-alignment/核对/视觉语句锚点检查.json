@@ -1,0 +1,52 @@
+{
+  "status": "visual_anchors_checked",
+  "scope_seconds": 159,
+  "source_video": "../../../../../PPT/assets/video_io.mp4",
+  "inspection": "50 extracted frames; all 5 contact sheets visually inspected",
+  "contact_sheets": [
+    "io-sheet-1.jpg",
+    "io-sheet-2.jpg",
+    "io-sheet-3.jpg",
+    "io-sheet-4.jpg",
+    "io-sheet-5.jpg"
+  ],
+  "authority": [
+    "../../../时间线.json shots/cues",
+    "../../1080p-20261009-final/cues/*.json",
+    "../../../代码/scenes.py"
+  ],
+  "source_audio": "Existing VO01–VO17.mp3; no TTS or API calls",
+  "subtitle_resolution": "Each VO*.json has one timestamp interval covering its entire segment. No true per-word or inner-sentence timestamps are present.",
+  "confirmed_misalignments": [
+    {
+      "segment": "VO03",
+      "existing_spoken_end": 34.092,
+      "visual_optional_parameters_cue": 35.5,
+      "finding": "The whole narration finishes before optional-parameter graphic starts."
+    },
+    {
+      "segment": "VO05",
+      "existing_spoken_end": 51.015,
+      "visual_tool_definition_cue": 51.8,
+      "finding": "The whole narration finishes before the tool-definition block starts appearing."
+    },
+    {
+      "segment": "VO06",
+      "existing_spoken_end": 61.408,
+      "visual_model_output_cue": 64.667,
+      "finding": "Narration about generating the next message finishes before the output frame begins."
+    },
+    {
+      "segment": "VO12",
+      "existing_spoken_end": 117.94,
+      "visual_tool_definition_cue": 118.633667,
+      "finding": "Narration finishes before the preserved tool-definition block starts appearing."
+    }
+  ],
+  "limits": [
+    "These are visual target windows, not observed inner-sentence speech timings. Final audio cuts must be verified against raw MP3 silence boundaries.",
+    "Some anchors cross legacy segment start/end ranges while preserving these original fields; target windows remain globally monotonic and non-overlapping.",
+    "The original audio was not independently listened to here; user has approved the timbre. Final integrated audiovisual playback is still required."
+  ],
+  "anchors": 56
+}

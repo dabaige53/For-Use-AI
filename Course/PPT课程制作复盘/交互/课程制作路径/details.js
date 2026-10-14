@@ -9,9 +9,10 @@ function placeCard(){
  if(!dialog.open||!anchor||resizing)return;
  const viewport=document.getElementById('viewport'),v=viewport.getBoundingClientRect(),r=anchor.getBoundingClientRect();
  const w=dialog.offsetWidth,h=dialog.offsetHeight;
- let x=r.right-v.left+14;if(x+w>v.width-12)x=r.left-v.left-w-14;
- dialog.style.left=Math.max(12,Math.min(x,v.width-w-12))+viewport.scrollLeft+'px';
- dialog.style.top=Math.max(12,Math.min(r.top-v.top,v.height-h-12))+viewport.scrollTop+'px';
+ const top=12;
+ dialog.style.left=Math.max(12,v.width-w-12)+viewport.scrollLeft+'px';
+ dialog.style.top=top+viewport.scrollTop+'px';
+ dialog.style.maxHeight=Math.max(160,v.height-top-12)+'px';
 }
 window.addEventListener('canvas-moved',placeCard);window.addEventListener('resize',placeCard);
 new ResizeObserver(placeCard).observe(dialog);
@@ -215,7 +216,46 @@ function showNode(id,trigger){
  q('#detail-title').textContent=n.title;
  const view=q('.record-view');view.replaceChildren();renderRecord(n,view);
  document.querySelectorAll('[data-detail]').forEach(node=>node.setAttribute('aria-expanded',node.dataset.detail===id?'true':'false'));
- if(!dialog.open)dialog.show();placeCard();q('.detail-scroll').scrollTop=0;q('.detail-close').focus({preventScroll:true});
+ if(!dialog.open)dialog.show();placeCard();q('.detail-scroll').scrollTop=0;q('.detail-close').focus({preventScroll:true});selectRoute(id,true);
+}
+// Navigate the graph's real directed edges, including feedback and cross-line inputs.
+let routeId='START';
+const routeStyles=new Map();
+function routeNode(id){return document.querySelector('#canvas [data-detail="'+id+'"]');}
+function connectedEdges(id){return data.edges.filter(e=>e.from===id||e.to===id);}
+function focusRoute(){
+ const edges=connectedEdges(routeId);
+ window.dispatchEvent(new CustomEvent('speech-focus',{detail:{ids:[...new Set([routeId,...edges.flatMap(e=>[e.from,e.to])])],edges:edges.map(e=>[e.from,e.to])}}));
+}
+function selectRoute(id,focus=false){
+ if(!data.nodes[id])return;routeId=id;
+ const svg=document.querySelector('#canvas svg');if(!svg)return;
+ const incoming=data.edges.filter(e=>e.to===id),outgoing=data.edges.filter(e=>e.from===id);
+ for(const [shape,style] of routeStyles){if(style===null)shape.removeAttribute('style');else shape.setAttribute('style',style);}routeStyles.clear();
+ svg.querySelectorAll('.speech-current,.speech-next,.speech-upstream').forEach(n=>n.classList.remove('speech-current','speech-next','speech-upstream'));
+ svg.querySelectorAll('.speech-flow').forEach(n=>n.remove());
+ const paint=(key,color,fill,cls)=>{
+  const node=routeNode(key),shape=node?.querySelector('.label-container');if(!shape)return;
+  node.classList.add(cls);if(!routeStyles.has(shape))routeStyles.set(shape,shape.getAttribute('style'));
+  shape.style.setProperty('stroke',color,'important');shape.style.setProperty('stroke-width','4px','important');shape.style.setProperty('fill',fill,'important');
+ };
+ incoming.forEach(e=>paint(e.from,'#7c3aed','#f3edff','speech-upstream'));
+ outgoing.forEach(e=>paint(e.to,'#0d9488','#e7f8f3','speech-next'));
+ paint(id,'#2563eb','#e8f0ff','speech-current');
+ const paths=[...svg.querySelectorAll('path.flowchart-link')],ns='http://www.w3.org/2000/svg';
+ for(const [direction,edges,color] of [['upstream',incoming,'#7c3aed'],['downstream',outgoing,'#0d9488']]){
+  for(const [index,e] of edges.entries()){
+   for(const edge of paths.filter(p=>p.id.startsWith(`L_${e.from}_${e.to}_`))){
+    const layer=document.createElementNS(ns,'g');layer.classList.add('speech-flow');layer.setAttribute('aria-hidden','true');layer.style.setProperty('--flow-color',color);
+    const markerId=`route-arrow-${direction}-${index}`;
+    const defs=document.createElementNS(ns,'defs'),marker=document.createElementNS(ns,'marker');
+    Object.entries({id:markerId,viewBox:'0 0 10 10',refX:9,refY:5,markerWidth:9,markerHeight:9,orient:'auto',markerUnits:'userSpaceOnUse'}).forEach(([k,v])=>marker.setAttribute(k,v));
+    const tip=document.createElementNS(ns,'path');tip.setAttribute('d','M0 0L10 5L0 10Z');tip.setAttribute('fill',color);marker.append(tip);defs.append(marker);layer.append(defs);
+    const path=edge.cloneNode(false);path.removeAttribute('id');path.removeAttribute('style');path.removeAttribute('class');path.setAttribute('marker-end',`url(#${markerId})`);path.setAttribute('fill','none');layer.append(path);edge.parentNode.append(layer);
+   }
+  }
+ }
+ if(focus)focusRoute();
 }
 function connect(){
  if(!data)return;

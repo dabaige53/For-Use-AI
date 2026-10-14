@@ -1,0 +1,28 @@
+{
+  "signature": "214d399f630ff000a39009e2c92d63247c7a8699c9c8f2fad79b3adeb764579f",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "用户没有重新提问，程序却发起了第二次模型调用。原来的用户消息、系统指令、环境信息和工具定义继续保留。",
+      "pronounce_text": "用户没有重新提问，程序却发起了第二次模型调用。原来的用户消息、系统指令、环境信息和工具定义继续保留。",
+      "time_begin": 0.0,
+      "time_end": 9106.71201814059,
+      "text_begin": 0,
+      "text_end": 50,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 50,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 9252,
+    "audio_sample_rate": 32000,
+    "audio_size": 149748,
+    "bitrate": 128000,
+    "word_count": 50,
+    "invisible_character_ratio": 0,
+    "usage_characters": 95,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "signature": "d50994db878e5e08915bd0681dfe58c29cab7406bc276f764676e457de0503b5",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "接着让模型反复预测：这个假想的 人工智能 助手会用哪个词继续回答。这些生成的内容就会呈现给用户。如果允许它在生成过程中随机选取概率较低的词，输出往往会显得更加自然。",
+      "pronounce_text": "接着让模型反复预测：这个假想的人工智能助手会用哪个词继续回答。这些生成的内容就会呈现给用户。如果允许它在生成过程中随机选取概率较低的词，输出往往会显得更加自然。",
+      "time_begin": 0.0,
+      "time_end": 14482.131519274377,
+      "text_begin": 0,
+      "text_end": 82,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 80,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 14652,
+    "audio_sample_rate": 32000,
+    "audio_size": 236148,
+    "bitrate": 128000,
+    "word_count": 82,
+    "invisible_character_ratio": 0,
+    "usage_characters": 157,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

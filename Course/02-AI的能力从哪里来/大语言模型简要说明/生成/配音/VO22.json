@@ -1,0 +1,28 @@
+{
+  "signature": "d063d80ac809cded0a965965144bc0e384bb902e5a1e10da133bd0d9d75fb3b1",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "而这一切都是并行完成的。例如，编码 bank 的数字可以随上下文改变，从而表达更具体的含义——“河岸”。Transformer 通常还包含另一类操作，叫作“前馈神经网络”。",
+      "pronounce_text": "而这一切都是并行完成的。例如，编码bank的数字可以随上下文改变，从而表达更具体的含义。“河岸”。Transformer通常还包含另一类操作，叫作“前馈神经网络”。",
+      "time_begin": 0.0,
+      "time_end": 14447.301587301588,
+      "text_begin": 0,
+      "text_end": 86,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 82,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 14616,
+    "audio_sample_rate": 32000,
+    "audio_size": 235572,
+    "bitrate": 128000,
+    "word_count": 86,
+    "invisible_character_ratio": 0,
+    "usage_characters": 142,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

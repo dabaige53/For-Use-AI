@@ -1672,7 +1672,14 @@
         }
       }
     ],
-    "outputs": [],
+    "outputs": [
+      {
+        "asset": "selected",
+        "title": "PPT 样式图 · 现存生图样例",
+        "description": "“同一个任务，不同的人，下一步不同”页面的生图，后续被选作页面参考。",
+        "preview": "selected"
+      }
+    ],
     "status": "editorial-rewrite",
     "evidence": "01a0b362-6510-7212-b628-bb9e584521ae.md / M045；01a0b362-6510-7212-b628-bb9e584521ae.md / M046",
     "verification": "已有相关记录可供改写；需按本节点职责重新剪裁，不能沿用旧绑定推断素材阶段。",

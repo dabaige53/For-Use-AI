@@ -1,0 +1,28 @@
+{
+  "signature": "d8ec4f39c95601e71f6e31f288b1c6ab12eefbed3a8a9b9203577cb690443465",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "模型先生成工具名称，再生成录音路径和其他参数。此时，工具还没有读取录音。",
+      "pronounce_text": "模型先生成工具名称，再生成录音路径和其他参数。此时，工具还没有读取录音。",
+      "time_begin": 0.0,
+      "time_end": 7829.614512471655,
+      "text_begin": 0,
+      "text_end": 36,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 36,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 7992,
+    "audio_sample_rate": 32000,
+    "audio_size": 129588,
+    "bitrate": 128000,
+    "word_count": 36,
+    "invisible_character_ratio": 0,
+    "usage_characters": 68,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

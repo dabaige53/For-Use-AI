@@ -63,10 +63,10 @@ def main():
         run(['ffmpeg','-v','error','-xerror','-i',str(final),'-f','null','-'],output/'full-decode.log')
         final_media=probe(final)
     sources=[ROOT/'objects.py',ROOT/'scenes.py',ROOT/'render.py',ROOT/'uv.lock',
-             COURSE/'素材/来源/whisper-mcp/transcribe_audio.schema.json',COURSE/'AI的输入与输出.md']
+             COURSE/'素材/来源/whisper-mcp/transcribe_audio.schema.json',COURSE.parent/'信息输入与工具执行.md']
     report={'kind':'silent-animation-preview','quality':args.quality,'fps':args.fps,'timeline':timeline,
             'duration':cursor,'final_media':final_media,'visual_check':'pending',
-            'sources':{str(p.relative_to(COURSE)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}}
+            'sources':{os.path.relpath(p,COURSE):hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}}
     (output/'verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
     print(f'Complete, full decode passed: {output}',flush=True)
 

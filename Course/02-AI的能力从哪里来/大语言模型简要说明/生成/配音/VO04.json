@@ -1,0 +1,28 @@
+{
+  "signature": "0f429b4a57280b1ee71814ea6932fb4bbc2d57da89ee1e4541f0bc875e7c5785",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "要构建聊天机器人，可以先写一段文本，描述用户与一个假想 人工智能 助手的对话。再把用户输入的内容加进去，作为这段对话的开头。",
+      "pronounce_text": "要构建聊天机器人，可以先写一段文本，描述用户与一个假想人工智能助手的对话。再把用户输入的内容加进去，作为这段对话的开头。",
+      "time_begin": 0.0,
+      "time_end": 10859.818594104308,
+      "text_begin": 0,
+      "text_end": 62,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 60,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 11016,
+    "audio_sample_rate": 32000,
+    "audio_size": 177972,
+    "bitrate": 128000,
+    "word_count": 62,
+    "invisible_character_ratio": 0,
+    "usage_characters": 117,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "signature": "889a177283a5e7ae01422ba8567bcb653efa81e5e8a3ccaee46051a51e951a22",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "想象一下，你偶然发现一份简短的电影剧本，其中描写了一个人与 人工智能 助手之间的一幕。剧本中写着这个人向 人工智能 提出的问题，但 人工智能 的回答部分被撕掉了。",
+      "pronounce_text": "想象一下，你偶然发现一份简短的电影剧本，其中描写了一个人与人工智能助手之间的一幕。剧本中写着这个人向人工智能提出的问题，但人工智能的回答部分被撕掉了。",
+      "time_begin": 0,
+      "time_end": 12775.464852607709,
+      "text_begin": 0,
+      "text_end": 81,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 75
+    },
+    {
+      "text": "假设你还有一台强大的神奇机器：输入任意文本，它就能合理预测下一个词。",
+      "pronounce_text": "假设你还有一台强大的神奇机器：输入任意文本，它就能合理预测下一个词。",
+      "time_begin": 12924,
+      "time_end": 18025.26984126984,
+      "text_begin": 81,
+      "text_end": 115,
+      "pronounce_text_begin": 75,
+      "pronounce_text_end": 109
+    }
+  ],
+  "usage": {
+    "audio_length": 18180,
+    "audio_sample_rate": 32000,
+    "audio_size": 292596,
+    "bitrate": 128000,
+    "word_count": 115,
+    "invisible_character_ratio": 0,
+    "usage_characters": 216,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

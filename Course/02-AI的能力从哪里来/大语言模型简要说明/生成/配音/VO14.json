@@ -1,0 +1,37 @@
+{
+  "signature": "69e43ce6a6ae47e1a90abf525206de60997d37320c003d71926cd4572d0c023f",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "考虑到庞大的参数量与海量训练数据，训练大语言模型所需的计算规模大得令人难以想象。",
+      "pronounce_text": "考虑到庞大的参数量与海量训练数据，训练大语言模型所需的计算规模大得令人难以想象。",
+      "time_begin": 0,
+      "time_end": 6459.637188208617,
+      "text_begin": 0,
+      "text_end": 40,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 40
+    },
+    {
+      "text": "举个例子：假设你每秒钟能完成十亿次加法和乘法运算，你觉得，要完成训练规模最大的语言模型所需的全部运算要花多久？",
+      "pronounce_text": "举个例子：假设你每秒钟能完成十亿次加法和乘法运算，你觉得，要完成训练规模最大的语言模型所需的全部运算要花多久？",
+      "time_begin": 6624,
+      "time_end": 17054.249433106575,
+      "text_begin": 40,
+      "text_end": 95,
+      "pronounce_text_begin": 40,
+      "pronounce_text_end": 95
+    }
+  ],
+  "usage": {
+    "audio_length": 17208,
+    "audio_sample_rate": 32000,
+    "audio_size": 277044,
+    "bitrate": 128000,
+    "word_count": 95,
+    "invisible_character_ratio": 0,
+    "usage_characters": 184,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

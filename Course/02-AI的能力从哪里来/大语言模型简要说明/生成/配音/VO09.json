@@ -1,0 +1,28 @@
+{
+  "signature": "8e04c03aae937ab7f169472a11db352078955df61e38dc261b8909322596414f",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "改变这些参数，就会改变模型针对给定输入给出的下一个词的概率。大语言模型之所以“大”，是因为它可以拥有数千亿个参数。",
+      "pronounce_text": "改变这些参数，就会改变模型针对给定输入给出的下一个词的概率。大语言模型之所以“大”，是因为它可以拥有数千亿个参数。",
+      "time_begin": 0.0,
+      "time_end": 10685.668934240362,
+      "text_begin": 0,
+      "text_end": 57,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 57,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 10836,
+    "audio_sample_rate": 32000,
+    "audio_size": 175092,
+    "bitrate": 128000,
+    "word_count": 57,
+    "invisible_character_ratio": 0,
+    "usage_characters": 108,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

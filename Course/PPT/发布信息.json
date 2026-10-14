@@ -1,0 +1,69 @@
+{
+  "platform": "Cloudflare Pages",
+  "project": "ai-work-course",
+  "url": "https://ai-work-course-8uu.pages.dev/",
+  "deployment_url": "https://3e50b630.ai-work-course-8uu.pages.dev/",
+  "published_at": "2026-10-14T20:49:37.058043+08:00",
+  "slides": 57,
+  "interactive_nodes": 47,
+  "build_script": "构建公开课件.py",
+  "media_bucket": "ai-work-course-media",
+  "source_commit": "e9cffbc",
+  "workspace_changes_included": true,
+  "videos": {
+    "video_llm.mp4": {
+      "size": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "duration_seconds": 419,
+      "bytes": 156743392,
+      "sha256": "24e7cfbda127f2a75d00d7d3b7a2ee0360c5c31c1304ca4b342f82042a3939ff",
+      "decode": "passed",
+      "visual_check": "key frames and transitions checked",
+      "remote_probe": "1920x1080; AAC; mov_text; duration matches local",
+      "remote_range": "206; first MiB matches current local voiced video",
+      "audio": "AAC; Mandarin narration",
+      "audio_streams": 1,
+      "subtitle_streams": 1
+    },
+    "video_io.mp4": {
+      "size": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "duration_seconds": 159,
+      "bytes": 7603750,
+      "sha256": "99710657bc942a3bfb79316392f8e762c769b4343253f25aa26e6c367107b7be",
+      "decode": "passed",
+      "visual_check": "key frames checked",
+      "remote_probe": "1920x1080; AAC; mov_text; duration matches local",
+      "remote_range": "206; first MiB matches current local voiced video",
+      "audio": "AAC; Mandarin narration",
+      "audio_streams": 1,
+      "subtitle_streams": 1
+    }
+  },
+  "production_verification": {
+    "home": "200; matches current export",
+    "presentation": "matches current voiced export; chapter buttons change position on pages 8 and 12",
+    "speech": "Updated for direct graph interaction without navigation bar.",
+    "details": "Top navigation bar removed. Local W2 check: 5 real connected paths use 4px dashed highlights with direction arrows; all 76 base edges remain visible. Online acceptance skipped at user request.",
+    "videos": "Original media files unchanged; Worker uploaded as module bundle with COURSE_MEDIA binding; online acceptance skipped at user request.",
+    "local_preview": "pages 8 and 12 chapter seek confirmed; page 56 flowchart displayed; 206 and 416 checked",
+    "style_card": "P3 has existing style image output card and expandable preview; latest online acceptance skipped at user request.",
+    "all_flow_lines": "76 original directed edges visible locally with non-scaling strokes and constant screen-size arrows. Selected incoming/outgoing paths retain color highlights. Online acceptance skipped at user request."
+  },
+  "speech": {
+    "path": "Course/PPT/AI协作-演讲稿.md",
+    "sha256": "c925f387a626a8c6dacaabfc38f7acc396484b0ffa62b4b1ef0a7d8d460d2af7"
+  },
+  "voice": {
+    "voice_id": "Chinese (Mandarin)_Radio_Host",
+    "model": "speech-2.8-hd",
+    "listening_review": "user accepted original voice; requested reverting alignment",
+    "cloudflare_sync": "passed"
+  }
+}

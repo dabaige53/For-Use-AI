@@ -1,0 +1,28 @@
+{
+  "signature": "bbc243dd104e159fdbfa21b209bfc551d786da064cc0a08b3bebe9678852d006",
+  "speed": 1.27,
+  "subtitles": [
+    {
+      "text": "程序选择音频转写工具，传递参数。执行被触发后，工具才读取录音，再把结果交回程序。这里展示的是模拟过程。",
+      "pronounce_text": "程序选择音频转写工具，传递参数。执行被触发后，工具才读取录音，再把结果交回程序。这里展示的是模拟过程。",
+      "time_begin": 0.0,
+      "time_end": 8154.693877551021,
+      "text_begin": 0,
+      "text_end": 51,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 51,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 8316,
+    "audio_sample_rate": 32000,
+    "audio_size": 134772,
+    "bitrate": 128000,
+    "word_count": 51,
+    "invisible_character_ratio": 0,
+    "usage_characters": 96,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

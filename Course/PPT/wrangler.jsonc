@@ -1,0 +1,8 @@
+{
+  "name": "ai-work-course",
+  "pages_build_output_dir": "./公开站点",
+  "compatibility_date": "2026-10-08",
+  "r2_buckets": [
+    {"binding": "COURSE_MEDIA", "bucket_name": "ai-work-course-media"}
+  ]
+}

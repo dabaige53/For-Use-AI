@@ -1,0 +1,28 @@
+{
+  "signature": "8b028213f982efd394b5e4c00fd07d599f9b9b8ccbe9298be01eb75b557f70c3",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "一种名为“反向传播”的算法会调整所有参数，让模型选中真实的最后一个词的概率略微提高，同时略微降低选择其他词的概率。",
+      "pronounce_text": "一种名为“反向传播”的算法会调整所有参数，让模型选中真实的最后一个词的概率略微提高，同时略微降低选择其他词的概率。",
+      "time_begin": 0.0,
+      "time_end": 9582.721088435374,
+      "text_begin": 0,
+      "text_end": 57,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 57,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 9720,
+    "audio_sample_rate": 32000,
+    "audio_size": 157236,
+    "bitrate": 128000,
+    "word_count": 57,
+    "invisible_character_ratio": 0,
+    "usage_characters": 109,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

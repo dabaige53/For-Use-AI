@@ -1,1 +1,9 @@
-{"fingerprint": "ff769ddcbbe9474b4fe1770440c7e92f9c0fceaa3836d0339f3903a39f6a30c9", "frames": 775}
+{
+  "fingerprint": "ea8f579bcd356e950880198c6623d0a4df481f0df2a00a69336cc956ba847dbf",
+  "frames": 775,
+  "size": [
+    1920,
+    1080
+  ],
+  "fps": 30
+}

@@ -2,11 +2,11 @@
   "scope_seconds": 419,
   "fps": 30,
   "size": [
-    854,
-    480
+    1920,
+    1080
   ],
-  "audio": false,
-  "subtitle_mode": "external_srt_only",
+  "audio": true,
+  "subtitle_mode": "external_srt_and_switchable_mp4",
   "reference_timeline": "timeline-0000-0659.json",
   "source_video_used_as_input": false,
   "english_exemptions": [
@@ -27,7 +27,7 @@
       "title": "片头标题",
       "layers": [
         {
-          "source": "generated/reconstruction-overlays-zh-480p/OriginalOpeningTitleChinese.mp4",
+          "source": "generated/reconstruction-overlays-zh-1080p/OriginalOpeningTitleChinese.mp4",
           "trim": [
             0,
             null
@@ -42,7 +42,7 @@
       "title": "卷轴与自动续写",
       "layers": [
         {
-          "source": "generated/reconstruction-chat-zh-480p/ReconstructionPartialScriptIntro.mp4",
+          "source": "generated/reconstruction-chat-zh-1080p/ReconstructionPartialScriptIntro.mp4",
           "trim": [
             0,
             24
@@ -50,7 +50,7 @@
           "until": 26.5
         },
         {
-          "source": "generated/reconstruction-chat-zh-480p/ReconstructionPartialCompletion.mp4",
+          "source": "generated/reconstruction-chat-zh-1080p/ReconstructionPartialCompletion.mp4",
           "trim": [
             0,
             0.5333333333333333
@@ -66,14 +66,14 @@
       "title": "LLM与下词概率",
       "layers": [
         {
-          "source": "generated/reconstruction-core-zh-480p/PredictTheNextWord.mp4",
+          "source": "generated/reconstruction-core-zh-1080p/PredictTheNextWord.mp4",
           "trim": [
             0,
             null
           ]
         },
         {
-          "source": "generated/reconstruction-chat-zh-480p/ReconstructionPartialCompletion.mp4",
+          "source": "generated/reconstruction-chat-zh-1080p/ReconstructionPartialCompletion.mp4",
           "trim": [
             0.5,
             0.5333333333333333
@@ -90,7 +90,7 @@
       "title": "聊天提示与随机采样",
       "layers": [
         {
-          "source": "generated/reconstruction-chat-zh-480p/ReconstructionChatBotPrompt.mp4",
+          "source": "generated/reconstruction-chat-zh-1080p/ReconstructionChatBotPrompt.mp4",
           "trim": [
             0,
             38.5
@@ -112,7 +112,7 @@
           }
         },
         {
-          "source": "generated/reconstruction-core-zh-480p/PredictTheNextWord.mp4",
+          "source": "generated/reconstruction-core-zh-1080p/PredictTheNextWord.mp4",
           "trim": [
             16,
             16.033333
@@ -152,7 +152,7 @@
       "title": "参数旋钮、权重与规模",
       "layers": [
         {
-          "source": "generated/reconstruction-core-zh-480p/ChineseMachineFront.mp4",
+          "source": "generated/reconstruction-core-zh-1080p/ChineseMachineFront.mp4",
           "trim": [
             0,
             17
@@ -179,7 +179,7 @@
           "reverse": true
         },
         {
-          "source": "generated/reconstruction-core-zh-480p/ChineseMachineFront.mp4",
+          "source": "generated/reconstruction-core-zh-1080p/ChineseMachineFront.mp4",
           "trim": [
             17,
             22
@@ -187,7 +187,7 @@
           "at": 32
         },
         {
-          "source": "generated/reconstruction-core-zh-480p/ParameterWeight.mp4",
+          "source": "generated/reconstruction-core-zh-1080p/ParameterWeight.mp4",
           "trim": [
             0,
             4.066667
@@ -197,7 +197,7 @@
           "key_black": true
         },
         {
-          "source": "generated/reconstruction-core-zh-480p/LargeInLargeLanguageModel.mp4",
+          "source": "generated/reconstruction-core-zh-1080p/LargeInLargeLanguageModel.mp4",
           "trim": [
             0,
             3.5
@@ -215,7 +215,7 @@
       "title": "训练文本样本快速更换",
       "layers": [
         {
-          "source": "generated/reconstruction-chat-zh-480p/ReconstructionTrainingExamples.mp4",
+          "source": "generated/reconstruction-chat-zh-1080p/ReconstructionTrainingExamples.mp4",
           "trim": [
             0,
             6.533333
@@ -230,7 +230,7 @@
       "title": "单个训练样本",
       "layers": [
         {
-          "source": "generated/reconstruction-core-zh-480p/ShowSingleTrainingExample.mp4",
+          "source": "generated/reconstruction-core-zh-1080p/ShowSingleTrainingExample.mp4",
           "trim": [
             0,
             18.2
@@ -284,7 +284,7 @@
       "title": "预训练与RLHF组合版面",
       "layers": [
         {
-          "source": "generated/reconstruction-chat-zh-480p/ReconstructionTrainingExamples.mp4",
+          "source": "generated/reconstruction-chat-zh-1080p/ReconstructionTrainingExamples.mp4",
           "trim": [
             0,
             6.533333
@@ -307,7 +307,7 @@
           }
         },
         {
-          "source": "generated/reconstruction-feedback-zh-480p/BadChatBotChinese.mp4",
+          "source": "generated/reconstruction-feedback-zh-1080p/BadChatBotChinese.mp4",
           "trim": [
             0,
             10.6
@@ -323,7 +323,7 @@
           "fade_in": 1.2
         },
         {
-          "source": "generated/reconstruction-feedback-zh-480p/RLHFWorkersChinese.mp4",
+          "source": "generated/reconstruction-feedback-zh-1080p/RLHFWorkersChinese.mp4",
           "trim": [
             0,
             12
@@ -393,7 +393,7 @@
       "title": "人类反馈工作人员",
       "layers": [
         {
-          "source": "generated/reconstruction-feedback-zh-480p/RLHFWorkersChinese.mp4",
+          "source": "generated/reconstruction-feedback-zh-1080p/RLHFWorkersChinese.mp4",
           "trim": [
             0,
             12
@@ -450,7 +450,7 @@
       "title": "GPU并行通路",
       "layers": [
         {
-          "source": "generated/reconstruction-gpu-zh-480p/ParallelizabilityChinese.mp4",
+          "source": "generated/reconstruction-gpu-zh-1080p/ParallelizabilityChinese.mp4",
           "trim": [
             0,
             8
@@ -465,7 +465,7 @@
       "title": "2017年前逐词处理",
       "layers": [
         {
-          "source": "generated/reconstruction-core-zh-480p/SerialProcessing.mp4",
+          "source": "generated/reconstruction-core-zh-1080p/SerialProcessing.mp4",
           "trim": [
             0,
             20
@@ -492,7 +492,7 @@
       "title": "Transformer论文介绍",
       "layers": [
         {
-          "source": "generated/reconstruction-paper-zh-480p/PaperRevealChinese.mp4",
+          "source": "generated/reconstruction-paper-zh-1080p/PaperRevealChinese.mp4",
           "trim": [
             0,
             6
@@ -507,7 +507,7 @@
       "title": "旧模型与Transformer上下对照",
       "layers": [
         {
-          "source": "generated/reconstruction-core-zh-480p/SerialProcessing.mp4",
+          "source": "generated/reconstruction-core-zh-1080p/SerialProcessing.mp4",
           "trim": [
             12,
             20
@@ -520,7 +520,7 @@
           ]
         },
         {
-          "source": "generated/reconstruction-core-zh-480p/ParallelProcessing.mp4",
+          "source": "generated/reconstruction-core-zh-1080p/ParallelProcessing.mp4",
           "trim": [
             0,
             4
@@ -567,7 +567,7 @@
       "title": "输入句与数值向量",
       "layers": [
         {
-          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "source": "generated/reconstruction-flow-zh-1080p/ReconstructionFlowForCHM-final.mp4",
           "trim": [
             0,
             7
@@ -575,7 +575,7 @@
           "until": 6.3
         },
         {
-          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "source": "generated/reconstruction-flow-zh-1080p/ReconstructionFlowForCHM-final.mp4",
           "trim": [
             12.5,
             15.84
@@ -584,7 +584,7 @@
           "until": 9.3
         },
         {
-          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "source": "generated/reconstruction-flow-zh-1080p/ReconstructionFlowForCHM-final.mp4",
           "trim": [
             15.84,
             16.84
@@ -600,7 +600,7 @@
       "title": "Attention板与词间联系",
       "layers": [
         {
-          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "source": "generated/reconstruction-flow-zh-1080p/ReconstructionFlowForCHM-final.mp4",
           "trim": [
             16.84,
             20.84
@@ -615,7 +615,7 @@
       "title": "bank两种语义对照",
       "layers": [
         {
-          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "source": "generated/reconstruction-flow-zh-1080p/ReconstructionFlowForCHM-final.mp4",
           "trim": [
             18,
             20.84
@@ -628,7 +628,7 @@
           ]
         },
         {
-          "source": "generated/reconstruction-overlays-zh-480p/BankContextOverlayChinese.mp4",
+          "source": "generated/reconstruction-overlays-zh-1080p/BankContextOverlayChinese.mp4",
           "trim": [
             0,
             10
@@ -648,7 +648,7 @@
           "until": 4.1
         },
         {
-          "source": "generated/reconstruction-overlays-zh-480p/BankContextOverlayChinese.mp4",
+          "source": "generated/reconstruction-overlays-zh-1080p/BankContextOverlayChinese.mp4",
           "trim": [
             10,
             13.5
@@ -682,7 +682,7 @@
       "title": "聚焦bank向量",
       "layers": [
         {
-          "source": "generated/reconstruction-flow-zh-480p/ReconstructionBankAttentionCloseup-final.mp4",
+          "source": "generated/reconstruction-flow-zh-1080p/ReconstructionBankAttentionCloseup-final.mp4",
           "trim": [
             0,
             5
@@ -690,7 +690,7 @@
           "until": 6.733333
         },
         {
-          "source": "generated/reconstruction-flow-zh-480p/ReconstructionBankAttentionCloseup-final.mp4",
+          "source": "generated/reconstruction-flow-zh-1080p/ReconstructionBankAttentionCloseup-final.mp4",
           "trim": [
             5,
             10
@@ -706,7 +706,7 @@
       "title": "前馈网络及交替层",
       "layers": [
         {
-          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "source": "generated/reconstruction-flow-zh-1080p/ReconstructionFlowForCHM-final.mp4",
           "trim": [
             20.84,
             34.84
@@ -721,7 +721,7 @@
       "title": "结构与语义向量分屏",
       "layers": [
         {
-          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "source": "generated/reconstruction-flow-zh-1080p/ReconstructionFlowForCHM-final.mp4",
           "trim": [
             34.84,
             43.84
@@ -734,7 +734,7 @@
           ]
         },
         {
-          "source": "generated/reconstruction-flow-zh-480p/ReconstructionBankSemanticSpace-final.mp4",
+          "source": "generated/reconstruction-flow-zh-1080p/ReconstructionBankSemanticSpace-final.mp4",
           "trim": [
             21,
             45
@@ -777,7 +777,7 @@
       "title": "重复层与末向量预测",
       "layers": [
         {
-          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "source": "generated/reconstruction-flow-zh-1080p/ReconstructionFlowForCHM-final.mp4",
           "trim": [
             43.84,
             49.84
@@ -785,7 +785,7 @@
           "until": 3
         },
         {
-          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "source": "generated/reconstruction-flow-zh-1080p/ReconstructionFlowForCHM-final.mp4",
           "trim": [
             49.84,
             55.0
@@ -794,7 +794,7 @@
           "until": 11
         },
         {
-          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "source": "generated/reconstruction-flow-zh-1080p/ReconstructionFlowForCHM-final.mp4",
           "trim": [
             55.0,
             null
@@ -810,7 +810,7 @@
       "title": "结构与语义分屏再回顾",
       "layers": [
         {
-          "source": "generated/reconstruction-flow-zh-480p/ReconstructionFlowForCHM-final.mp4",
+          "source": "generated/reconstruction-flow-zh-1080p/ReconstructionFlowForCHM-final.mp4",
           "trim": [
             25,
             44
@@ -823,7 +823,7 @@
           ]
         },
         {
-          "source": "generated/reconstruction-flow-zh-480p/ReconstructionBankSemanticSpace-final.mp4",
+          "source": "generated/reconstruction-flow-zh-1080p/ReconstructionBankSemanticSpace-final.mp4",
           "trim": [
             21,
             45
@@ -866,7 +866,7 @@
       "title": "回顾参数规模",
       "layers": [
         {
-          "source": "generated/reconstruction-core-zh-480p/ChineseMachineFront.mp4",
+          "source": "generated/reconstruction-core-zh-1080p/ChineseMachineFront.mp4",
           "trim": [
             4,
             17
@@ -881,7 +881,7 @@
       "title": "回到晶体管问答",
       "layers": [
         {
-          "source": "generated/reconstruction-chat-zh-480p/ReconstructionPartialCompletion.mp4",
+          "source": "generated/reconstruction-chat-zh-1080p/ReconstructionPartialCompletion.mp4",
           "trim": [
             0,
             null
@@ -889,5 +889,437 @@
         }
       ]
     }
-  ]
+  ],
+  "coordinate_size": [
+    854,
+    480
+  ],
+  "narration": {
+    "voice_id": "Chinese (Mandarin)_Radio_Host",
+    "model": "speech-2.8-hd",
+    "source": "字幕.srt",
+    "segments": [
+      {
+        "id": "VO01",
+        "start": 1.379,
+        "end": 21.0,
+        "text": "想象一下，你偶然发现一份简短的电影剧本，其中描写了一个人与 AI 助手之间的一幕。剧本中写着这个人向 AI 提出的问题，但 AI 的回答部分被撕掉了。假设你还有一台强大的神奇机器：输入任意文本，它就能合理预测下一个词。"
+      },
+      {
+        "id": "VO02",
+        "start": 21.0,
+        "end": 36.64,
+        "text": "你可以把现有内容输入机器，让它接着写完剧本，看看它会用哪个词，作为 AI 回答的开头，再把不断增长的剧本反复输入，直到补全整段对话。你与聊天机器人交流时，发生的正是这个过程。"
+      },
+      {
+        "id": "VO03",
+        "start": 36.64,
+        "end": 51.02,
+        "text": "大语言模型是一个复杂的数学函数，它能根据已有文本预测下一个词。不过，它并非确定地预测某一个词，而是为所有可能的后续词分别赋予一个概率。"
+      },
+      {
+        "id": "VO04",
+        "start": 51.02,
+        "end": 63.439,
+        "text": "要构建聊天机器人，可以先写一段文本，描述用户与一个假想 AI 助手的对话。再把用户输入的内容加进去，作为这段对话的开头。"
+      },
+      {
+        "id": "VO05",
+        "start": 63.439,
+        "end": 79.57900000000001,
+        "text": "接着让模型反复预测：这个假想的 AI 助手会用哪个词继续回答。这些生成的内容就会呈现给用户。如果允许它在生成过程中随机选取概率较低的词，输出往往会显得更加自然。"
+      },
+      {
+        "id": "VO06",
+        "start": 79.57900000000001,
+        "end": 92.59899999999999,
+        "text": "这意味着，尽管模型本身是确定性的，同一个提示词每次运行，通常也会得到不同的回答。模型通过处理海量文本，学习如何做出这些预测。"
+      },
+      {
+        "id": "VO07",
+        "start": 92.59899999999999,
+        "end": 107.419,
+        "text": "这些文本通常来自互联网。以训练 GPT-3 所用的文本量为例，一个普通人要把它们全部读完，即使每天二十四小时不停地阅读，也需要超过两千六百年。此后出现的更大模型，训练所用的文本还要多得多。"
+      },
+      {
+        "id": "VO08",
+        "start": 107.419,
+        "end": 120.459,
+        "text": "你可以把训练理解为：调节一台大型机器上的许多旋钮。语言模型的行为，完全由许多不同的连续数值决定。这些数值通常被称为“参数”或“权重”。"
+      },
+      {
+        "id": "VO09",
+        "start": 120.459,
+        "end": 134.059,
+        "text": "改变这些参数，就会改变模型针对给定输入给出的下一个词的概率。大语言模型之所以“大”，是因为它可以拥有数千亿个参数。"
+      },
+      {
+        "id": "VO10",
+        "start": 134.059,
+        "end": 146.619,
+        "text": "从来没有人刻意设定这些参数。相反，它们一开始是随机的，所以模型最初只会输出胡言乱语。随后，模型会根据大量文本样本，反复调整这些参数。"
+      },
+      {
+        "id": "VO11",
+        "start": 146.619,
+        "end": 162.439,
+        "text": "一个训练样本可能只有几个词，也可能有数千个词。无论哪种情况，都要把除最后一个词外的内容输入模型，再将模型的预测与样本中真实的最后一个词进行比较。"
+      },
+      {
+        "id": "VO12",
+        "start": 162.439,
+        "end": 175.159,
+        "text": "一种名为“反向传播”的算法会调整所有参数，让模型选中真实的最后一个词的概率略微提高，同时略微降低选择其他词的概率。"
+      },
+      {
+        "id": "VO13",
+        "start": 175.159,
+        "end": 188.359,
+        "text": "在数万亿个样本上反复进行这一过程后，模型不仅能更准确地预测训练数据，也能对从未见过的文本做出更合理的预测。"
+      },
+      {
+        "id": "VO14",
+        "start": 188.359,
+        "end": 212.679,
+        "text": "考虑到庞大的参数量与海量训练数据，训练大语言模型所需的计算规模大得令人难以想象。举个例子：假设你每秒钟能完成十亿次加法和乘法运算，你觉得，要完成训练规模最大的语言模型所需的全部运算要花多久？"
+      },
+      {
+        "id": "VO15",
+        "start": 212.679,
+        "end": 227.31900000000002,
+        "text": "一年够吗？或许需要一万年？实际所需时间远不止这些。远远超过一亿年。不过，这还只是整个训练过程的一部分。"
+      },
+      {
+        "id": "VO16",
+        "start": 227.31900000000002,
+        "end": 243.819,
+        "text": "刚才讲的整个过程称为“预训练”。让模型自动续写互联网上的随机文本，与让它成为好用的 AI 助手，目标截然不同。为此，聊天机器人还要经历另一种同样重要的训练，叫作“基于人类反馈的强化学习”。"
+      },
+      {
+        "id": "VO17",
+        "start": 243.819,
+        "end": 267.619,
+        "text": "工作人员会标记无益或有问题的预测，他们的修正会进一步改变模型参数，让模型更有可能给出用户偏好的回答。回顾预训练过程：如此惊人的计算量，有赖于专门优化过的计算机芯片，它们能并行执行大量运算，这类芯片称为 GPU。"
+      },
+      {
+        "id": "VO18",
+        "start": 267.619,
+        "end": 282.679,
+        "text": "然而，并不是所有语言模型都容易实现并行处理。在 2017 年以前，大多数语言模型都是逐词处理文本的。后来，谷歌的一组研究人员提出了名为 Transformer 的新模型。"
+      },
+      {
+        "id": "VO19",
+        "start": 282.679,
+        "end": 297.579,
+        "text": "Transformer 不会从头到尾逐词阅读，而是一次性并行处理整段文本。Transformer 的第一步，也是大多数语言模型的第一步，是把每个词与一长串数字关联起来。"
+      },
+      {
+        "id": "VO20",
+        "start": 297.579,
+        "end": 310.359,
+        "text": "因为训练过程只能处理连续数值，所以必须用某种方式将语言编码为数字。每一串数字，都可能以某种方式编码着对应词语的含义。"
+      },
+      {
+        "id": "VO21",
+        "start": 310.359,
+        "end": 325.219,
+        "text": "Transformer 的独特之处，在于它依靠一种称为“注意力”的特殊操作。它让这些数字序列相互交流，结合周围的上下文，细化各自编码的含义。"
+      },
+      {
+        "id": "VO22",
+        "start": 325.219,
+        "end": 343.219,
+        "text": "而这一切都是并行完成的。例如，编码 bank 的数字可以随上下文改变，从而表达更具体的含义——“河岸”。Transformer 通常还包含另一类操作，叫作“前馈神经网络”。"
+      },
+      {
+        "id": "VO23",
+        "start": 343.219,
+        "end": 366.159,
+        "text": "它为模型提供额外容量，用来存储训练中学到的更多语言模式。数据会反复流过这两种基本操作，经过一轮又一轮的处理。我们希望每个数字序列的表示逐渐丰富，包含准确预测下一个词所需的信息。"
+      },
+      {
+        "id": "VO24",
+        "start": 366.159,
+        "end": 382.179,
+        "text": "最后，会对序列中的最后一个向量执行一个函数。此时，它已经受到输入文本中的所有其他上下文信息的影响，也融入了模型在训练中学到的信息，从而生成对下一个词的预测。"
+      },
+      {
+        "id": "VO25",
+        "start": 382.179,
+        "end": 401.959,
+        "text": "同样，这个预测会为每个可能的后续词给出一个概率。虽然研究人员设计了各个步骤的框架，但具体行为是训练中的涌现现象，取决于训练过程中如何调整数千亿个参数。"
+      },
+      {
+        "id": "VO26",
+        "start": 401.959,
+        "end": 419.0,
+        "text": "因此，要弄清模型为什么会做出这样的具体预测，极其困难。但你能看到：用大语言模型的预测自动续写一段提示词时，生成的文字流畅得令人惊讶，引人入胜，甚至还很有用。"
+      }
+    ],
+    "rendered_segments": [
+      {
+        "id": "VO01",
+        "start": 1.379,
+        "end": 21.0,
+        "audio": "生成/配音/VO01.mp3",
+        "raw_seconds": 18.18,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 18.13146875
+      },
+      {
+        "id": "VO02",
+        "start": 21.0,
+        "end": 36.64,
+        "audio": "生成/配音/VO02.mp3",
+        "raw_seconds": 15.65025,
+        "speed": 1,
+        "local_tempo": 1.0032211538461537,
+        "spoken_seconds": 15.60153125
+      },
+      {
+        "id": "VO03",
+        "start": 36.64,
+        "end": 51.02,
+        "audio": "生成/配音/VO03.mp3",
+        "raw_seconds": 12.875469,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 12.87153125
+      },
+      {
+        "id": "VO04",
+        "start": 51.02,
+        "end": 63.439,
+        "audio": "生成/配音/VO04.mp3",
+        "raw_seconds": 10.959844,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 10.9475625
+      },
+      {
+        "id": "VO05",
+        "start": 63.439,
+        "end": 79.57900000000001,
+        "audio": "生成/配音/VO05.mp3",
+        "raw_seconds": 14.582156,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 14.57471875
+      },
+      {
+        "id": "VO06",
+        "start": 79.57900000000001,
+        "end": 92.59899999999999,
+        "audio": "生成/配音/VO06.mp3",
+        "raw_seconds": 10.832125,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 10.826125
+      },
+      {
+        "id": "VO07",
+        "start": 92.59899999999999,
+        "end": 107.419,
+        "audio": "生成/配音/VO07.mp3",
+        "raw_seconds": 15.824406,
+        "speed": 1,
+        "local_tempo": 1.07066346414073,
+        "spoken_seconds": 14.7763125
+      },
+      {
+        "id": "VO08",
+        "start": 107.419,
+        "end": 120.459,
+        "audio": "生成/配音/VO08.mp3",
+        "raw_seconds": 13.43275,
+        "speed": 1,
+        "local_tempo": 1.033288461538461,
+        "spoken_seconds": 12.9935625
+      },
+      {
+        "id": "VO09",
+        "start": 120.459,
+        "end": 134.059,
+        "audio": "生成/配音/VO09.mp3",
+        "raw_seconds": 10.785688,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 10.779
+      },
+      {
+        "id": "VO10",
+        "start": 134.059,
+        "end": 146.619,
+        "audio": "生成/配音/VO10.mp3",
+        "raw_seconds": 13.130906,
+        "speed": 1,
+        "local_tempo": 1.0487944089456867,
+        "spoken_seconds": 12.51921875
+      },
+      {
+        "id": "VO11",
+        "start": 146.619,
+        "end": 162.439,
+        "audio": "生成/配音/VO11.mp3",
+        "raw_seconds": 13.3515,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 13.344375
+      },
+      {
+        "id": "VO12",
+        "start": 162.439,
+        "end": 175.159,
+        "audio": "生成/配音/VO12.mp3",
+        "raw_seconds": 9.68275,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 9.6691875
+      },
+      {
+        "id": "VO13",
+        "start": 175.159,
+        "end": 188.359,
+        "audio": "生成/配音/VO13.mp3",
+        "raw_seconds": 9.171906,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 9.165625
+      },
+      {
+        "id": "VO14",
+        "start": 188.359,
+        "end": 212.679,
+        "audio": "生成/配音/VO14.mp3",
+        "raw_seconds": 17.208,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 17.1763125
+      },
+      {
+        "id": "VO15",
+        "start": 212.679,
+        "end": 227.31900000000002,
+        "audio": "生成/配音/VO15.mp3",
+        "raw_seconds": 11.679656,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 11.6700625
+      },
+      {
+        "id": "VO16",
+        "start": 227.31900000000002,
+        "end": 243.819,
+        "audio": "生成/配音/VO16.mp3",
+        "raw_seconds": 16.288813,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 16.279125
+      },
+      {
+        "id": "VO17",
+        "start": 243.819,
+        "end": 267.619,
+        "audio": "生成/配音/VO17.mp3",
+        "raw_seconds": 19.044,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 18.99546875
+      },
+      {
+        "id": "VO18",
+        "start": 267.619,
+        "end": 282.679,
+        "audio": "生成/配音/VO18.mp3",
+        "raw_seconds": 13.606906,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 13.591125
+      },
+      {
+        "id": "VO19",
+        "start": 282.679,
+        "end": 297.579,
+        "audio": "生成/配音/VO19.mp3",
+        "raw_seconds": 13.223781,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 13.21478125
+      },
+      {
+        "id": "VO20",
+        "start": 297.579,
+        "end": 310.359,
+        "audio": "生成/配音/VO20.mp3",
+        "raw_seconds": 10.623156,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 10.6126875
+      },
+      {
+        "id": "VO21",
+        "start": 310.359,
+        "end": 325.219,
+        "audio": "生成/配音/VO21.mp3",
+        "raw_seconds": 10.750844,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 10.74671875
+      },
+      {
+        "id": "VO22",
+        "start": 325.219,
+        "end": 343.219,
+        "audio": "生成/配音/VO22.mp3",
+        "raw_seconds": 14.547313,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 14.53540625
+      },
+      {
+        "id": "VO23",
+        "start": 343.219,
+        "end": 366.159,
+        "audio": "生成/配音/VO23.mp3",
+        "raw_seconds": 15.998563,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 15.99353125
+      },
+      {
+        "id": "VO24",
+        "start": 366.159,
+        "end": 382.179,
+        "audio": "生成/配音/VO24.mp3",
+        "raw_seconds": 13.781063,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 13.76571875
+      },
+      {
+        "id": "VO25",
+        "start": 382.179,
+        "end": 401.959,
+        "audio": "生成/配音/VO25.mp3",
+        "raw_seconds": 14.11775,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 14.10021875
+      },
+      {
+        "id": "VO26",
+        "start": 401.959,
+        "end": 419.0,
+        "audio": "生成/配音/VO26.mp3",
+        "raw_seconds": 15.011719,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 14.99165625
+      }
+    ],
+    "audio": "生成/配音/旁白.wav",
+    "subtitles": "生成/配音/字幕.srt",
+    "video": "生成/配音/大语言模型简要说明-配音.mp4"
+  }
 }

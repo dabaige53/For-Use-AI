@@ -1,0 +1,37 @@
+{
+  "signature": "245d4843e66fd428be6c9451b6c23608485fb94e66d131444a5b4a70c67dd6d1",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "工作人员会标记无益或有问题的预测，他们的修正会进一步改变模型参数，让模型更有可能给出用户偏好的回答。",
+      "pronounce_text": "工作人员会标记无益或有问题的预测，他们的修正会进一步改变模型参数，让模型更有可能给出用户偏好的回答。",
+      "time_begin": 0,
+      "time_end": 8131.473922902494,
+      "text_begin": 0,
+      "text_end": 50,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 50
+    },
+    {
+      "text": "回顾预训练过程：如此惊人的计算量，有赖于专门优化过的计算机芯片，它们能并行执行大量运算，这类芯片称为 GPU。",
+      "pronounce_text": "回顾预训练过程：如此惊人的计算量，有赖于专门优化过的计算机芯片，它们能并行执行大量运算，这类芯片称为GPU。",
+      "time_begin": 8280,
+      "time_end": 18884.399092970525,
+      "text_begin": 50,
+      "text_end": 105,
+      "pronounce_text_begin": 50,
+      "pronounce_text_end": 104
+    }
+  ],
+  "usage": {
+    "audio_length": 19044,
+    "audio_sample_rate": 32000,
+    "audio_size": 306420,
+    "bitrate": 128000,
+    "word_count": 105,
+    "invisible_character_ratio": 0,
+    "usage_characters": 198,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

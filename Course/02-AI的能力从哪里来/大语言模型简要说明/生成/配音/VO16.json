@@ -1,0 +1,28 @@
+{
+  "signature": "c5afc02142589e1b0740e83d23d571fcc8ba92b5a6be81439aa308e1dcbf5745",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "刚才讲的整个过程称为“预训练”。让模型自动续写互联网上的随机文本，与让它成为好用的 人工智能 助手，目标截然不同。为此，聊天机器人还要经历另一种同样重要的训练，叫作“基于人类反馈的强化学习”。",
+      "pronounce_text": "刚才讲的整个过程称为“预训练”。让模型自动续写互联网上的随机文本，与让它成为好用的人工智能助手，目标截然不同。为此，聊天机器人还要经历另一种同样重要的训练，叫作“基于人类反馈的强化学习”。",
+      "time_begin": 0.0,
+      "time_end": 16188.798185941043,
+      "text_begin": 0,
+      "text_end": 96,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 94,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 16344,
+    "audio_sample_rate": 32000,
+    "audio_size": 263220,
+    "bitrate": 128000,
+    "word_count": 96,
+    "invisible_character_ratio": 0,
+    "usage_characters": 179,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

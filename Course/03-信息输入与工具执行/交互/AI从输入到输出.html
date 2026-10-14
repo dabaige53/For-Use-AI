@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>从输入到输出 · Claude Code 的一次完整运行</title>
+<style>
+:root{
+  --ivory:#F0EEE6; --paper:#FAF9F5; --ink:#141413; --slate:#3D3D3A; --muted:#87867F; --line:#E3E0D5; --line2:#D3CFC2;
+  --clay:#D97757; --clay-d:#B9583A; --clay-l:#F6E1D7;
+  --sage:#6F8A5B; --sage-l:#E3E9D9;
+  --sky:#5A87B8; --sky-l:#DEE7F1;
+  --gold:#B08436; --gold-l:#F2E7CF;
+  --plum:#86699F; --plum-l:#EAE3F1;
+  --stone:#6B6A63; --stone-l:#E9E7DF;
+  --term:#1F1E1C; --tink:#E9E6DD; --tmuted:#8E8B82;
+  --serif:"Tiempos Headline","Iowan Old Style","Songti SC","Noto Serif SC","Source Han Serif SC",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Noto Sans SC","Segoe UI",sans-serif;
+  --mono:"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#E7E4DA;overflow:hidden;font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased}
+#stage{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden;border-radius:6px;
+  background:radial-gradient(1200px 700px at 78% 8%,#F7F3EA 0%,rgba(247,243,234,0) 60%),radial-gradient(900px 600px at 10% 100%,#ECE7DA 0%,rgba(236,231,218,0) 70%),var(--ivory);
+  box-shadow:0 30px 80px -40px rgba(40,30,10,.35)}
+.layer{position:absolute;inset:0;pointer-events:none}
+
+/* ---------- caption ---------- */
+#cap{position:absolute;left:64px;top:40px;width:1320px;height:150px}
+#cap .lab{font-size:15px;letter-spacing:.18em;color:var(--clay-d);font-weight:600}
+#cap .lab b{display:inline-block;width:26px;height:2px;background:var(--clay);vertical-align:middle;margin-right:12px;border-radius:2px}
+#cap .ttl{font-family:var(--serif);font-size:44px;line-height:1.2;margin-top:10px;font-weight:600;letter-spacing:.01em}
+#cap .bd{font-size:22px;line-height:1.55;color:var(--slate);margin-top:10px;max-width:1300px}
+#cap .bd code,.cb code{font-family:var(--mono);font-size:.88em;background:rgba(217,119,87,.12);color:var(--clay-d);padding:1px 6px;border-radius:5px}
+
+/* ---------- counters ---------- */
+#counters{position:absolute;right:64px;top:52px;display:flex;gap:12px}
+.ctr{width:132px;height:104px;border-radius:18px;background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px}
+.ctr .n{font-family:var(--serif);font-size:44px;line-height:1;font-weight:600;transition:transform .35s cubic-bezier(.3,1.6,.5,1),color .35s}
+.ctr .l{font-size:14px;color:var(--muted);letter-spacing:.06em}
+.ctr.pop .n{transform:scale(1.28);color:var(--clay)}
+
+/* ---------- panels ---------- */
+.panel{position:absolute;background:var(--paper);border:1px solid var(--line);border-radius:22px;
+  box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 22px 44px -30px rgba(60,45,20,.30);transition:opacity .7s ease,filter .7s ease}
+.dim{opacity:.34;filter:saturate(.35)}
+.ph{display:flex;align-items:center;gap:10px;padding:18px 22px 0;height:56px}
+.ph .k{font-size:14px;letter-spacing:.14em;color:var(--muted);font-weight:600}
+.ph .t{font-family:var(--serif);font-size:22px;font-weight:600}
+.ph .r{margin-left:auto;font-size:14px;color:var(--muted)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--clay)}
+
+/* terminal */
+#term{left:64px;top:210px;width:540px;height:810px;background:var(--term);border-color:#2C2A27;color:var(--tink);overflow:hidden;
+  box-shadow:0 30px 60px -30px rgba(20,15,5,.55)}
+#term.dim{opacity:.45}
+.tbar{height:44px;display:flex;align-items:center;gap:8px;padding:0 18px;border-bottom:1px solid #2E2C29;color:var(--tmuted);font-size:13px;font-family:var(--mono)}
+.tbar i{width:12px;height:12px;border-radius:50%;background:#3A3834;display:inline-block}
+.tbar span{margin-left:12px}
+.tbody{position:absolute;left:0;right:0;top:44px;bottom:118px;overflow:hidden;padding:18px 20px 6px;font-family:var(--mono);font-size:15px;line-height:1.62}
+.welcome{border:1px solid var(--clay);border-radius:10px;padding:12px 14px;margin-bottom:16px}
+.welcome .c{color:var(--clay)}
+.welcome .wm{color:var(--tmuted);font-size:13px;margin-top:2px;padding-left:22px}
+.tl{white-space:pre-wrap;word-break:break-all;margin:3px 0}
+.tl.user{color:#B9B5AA;background:#2A2926;border-radius:6px;padding:4px 8px;margin:6px 0 10px}
+.tl .bul{color:var(--clay)}
+.tl .bul.g{color:#8FB27A}
+.tl .sub{color:var(--tmuted)}
+.tl .fn{color:#fff;font-weight:600}
+.spin{color:var(--clay);margin-top:8px}
+.spin .h{color:var(--tmuted)}
+.perm{border:1px solid #5A87B8;border-radius:10px;padding:10px 14px;margin:8px 0;background:#22262B}
+.perm .pt{color:#8DB3DD;font-weight:600}
+.perm .pc{color:#fff;margin:4px 0 0 10px}
+.perm .pd{color:var(--tmuted);margin-left:10px}
+.perm .pq{margin-top:8px}
+.perm .op{color:var(--tmuted);white-space:pre}
+.perm .op.sel{color:#8DB3DD}
+.perm .op.press{background:#5A87B8;color:#fff;border-radius:4px}
+.tin{position:absolute;left:18px;right:18px;bottom:44px;height:58px;border:1px solid #4A4842;border-radius:10px;display:flex;align-items:center;padding:0 14px;font-family:var(--mono);font-size:16px}
+.tin .p{color:var(--tmuted);margin-right:10px}
+.caret{display:inline-block;width:9px;height:19px;background:var(--tink);vertical-align:-3px;margin-left:1px}
+.tfoot{position:absolute;left:22px;right:22px;bottom:14px;font-family:var(--mono);font-size:12.5px;color:var(--tmuted);display:flex;justify-content:space-between}
+
+/* context */
+#ctx{left:640px;top:210px;width:520px;height:810px}
+#ctxN{display:inline-block;transition:color .4s}
+.meter{position:absolute;left:22px;right:22px;bottom:18px;height:62px}
+.meter .row{display:flex;align-items:baseline;justify-content:space-between}
+.meter .num{font-family:var(--serif);font-size:24px;font-weight:600}
+.meter .num small{font-family:var(--sans);font-size:14px;color:var(--muted);font-weight:400;margin-left:6px}
+.meter .share{font-size:14px;color:var(--muted)}
+.meter .share b{color:var(--clay-d)}
+.bar{display:flex;height:10px;border-radius:6px;overflow:hidden;background:var(--stone-l);margin-top:10px}
+.bar i{display:block;height:100%;transition:width .3s}
+
+.cb{position:absolute;left:0;top:0;width:488px;border-radius:12px;overflow:hidden;transform-origin:0 0;border:1px solid rgba(0,0,0,.05);will-change:transform}
+.cbh{height:34px;display:flex;align-items:center;gap:8px;padding:0 12px;font-size:14.5px}
+.cbh i{width:4px;height:16px;border-radius:2px}
+.cbh b{font-weight:600}
+.cbh span{margin-left:auto;font-size:12.5px;color:var(--muted)}
+.cbb{padding:0 14px 10px 24px;font-size:14.5px;line-height:1.55;color:var(--slate)}
+.cbb.m{font-family:var(--mono);font-size:13px}
+.cbb mark{background:none;color:var(--clay-d);font-family:var(--mono);font-size:13.5px;border-bottom:2px dashed var(--clay);padding:0 2px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 8px}
+.chips span{font-family:var(--mono);font-size:12.5px;padding:2px 8px;border-radius:6px;background:rgba(255,255,255,.75);border:1px solid rgba(90,135,184,.25);color:var(--sky)}
+.chips span.on{background:var(--sky);color:#fff}
+.chips span.mo{border-style:dashed;color:var(--muted)}
+.schema{font-family:var(--mono);font-size:12.5px;background:rgba(255,255,255,.7);border-radius:8px;padding:8px 10px;line-height:1.6;color:var(--slate)}
+.schema em{font-style:normal;color:var(--sky)}
+.c-stone{background:#EFEDE6}.c-stone .cbh i{background:var(--stone)}
+.c-sky{background:#E6EDF4}.c-sky .cbh i{background:var(--sky)}
+.c-gold{background:#F4ECDA}.c-gold .cbh i{background:var(--gold)}
+.c-plum{background:#EEE8F3}.c-plum .cbh i{background:var(--plum)}
+.c-clay{background:#F8E7DF}.c-clay .cbh i{background:var(--clay)}
+.c-sage{background:#E7ECDF}.c-sage .cbh i{background:var(--sage)}
+
+#callout{position:absolute;left:0;top:0;z-index:10;background:var(--ink);color:#fff;font-size:15px;padding:9px 14px;border-radius:10px;white-space:nowrap;box-shadow:0 10px 24px -10px rgba(0,0,0,.4)}
+#callout:after{content:"";position:absolute;left:40px;bottom:-7px;width:14px;height:14px;background:var(--ink);transform:rotate(45deg);border-radius:2px}
+
+/* model */
+#model{left:1200px;top:210px;width:656px;height:430px;overflow:hidden}
+.mh{display:flex;align-items:center;gap:14px;padding:16px 22px 0;height:76px}
+.mh .nm{font-family:var(--serif);font-size:28px;font-weight:600;line-height:1}
+.mh .sb{font-size:13px;color:var(--muted);font-family:var(--mono);margin-top:5px}
+.pill{margin-left:auto;font-size:14px;padding:6px 12px;border-radius:999px;background:var(--stone-l);color:var(--slate);display:flex;align-items:center;gap:8px;transition:background .4s,color .4s}
+.pill i{width:7px;height:7px;border-radius:50%;background:currentColor}
+.pill.read{background:var(--sky-l);color:var(--sky)}
+.pill.gen{background:var(--clay-l);color:var(--clay-d)}
+.pill.wait{background:var(--gold-l);color:var(--gold)}
+.pill.end{background:var(--sage-l);color:var(--sage)}
+.ribbon{margin:6px 22px 0;height:34px;border-radius:9px;background:#F2F0E9;overflow:hidden;position:relative;display:flex;align-items:center}
+.ribbon .lb{position:absolute;left:0;top:0;bottom:0;z-index:2;background:linear-gradient(90deg,#F2F0E9 70%,rgba(242,240,233,0));padding:0 22px 0 12px;display:flex;align-items:center;font-size:13px;color:var(--muted)}
+.rtrack{display:flex;gap:5px;white-space:nowrap;padding-left:90px;will-change:transform}
+.tok{font-family:var(--mono);font-size:12.5px;padding:2px 7px;border-radius:5px;background:#fff;border:1px solid var(--line);color:var(--slate)}
+.out{position:absolute;left:22px;right:22px;top:166px;bottom:16px;border-top:1px dashed var(--line2);padding-top:10px}
+.out .ol{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);letter-spacing:.06em;height:24px}
+.stop{font-family:var(--mono);font-size:13px;padding:2px 10px;border-radius:6px;letter-spacing:0}
+.stop.tu{background:var(--gold-l);color:var(--gold)}
+.stop.et{background:var(--sage-l);color:var(--sage)}
+.oc{margin-top:6px;font-size:18px;line-height:1.5}
+.oc .txt{font-family:var(--serif);font-size:20px;color:var(--ink)}
+.oc .ph2{color:var(--muted);font-size:16px}
+.json{font-family:var(--mono);font-size:14.5px;line-height:1.55;white-space:pre-wrap;word-break:break-all;margin-top:6px;background:#FBF3EE;border:1px solid #F0D9CD;border-radius:10px;padding:8px 12px;color:var(--slate)}
+.json .k{color:var(--clay-d)} .json .s{color:#5F7A4C} .json .p{color:var(--muted)}
+.cur{display:inline-block;width:2px;height:1.05em;background:var(--clay);vertical-align:-2px;margin-left:2px}
+.bars{position:absolute;left:0;right:0;top:78px}
+.bars .bt{font-size:13px;color:var(--muted);margin-bottom:8px}
+.brow{display:flex;align-items:center;gap:12px;height:28px}
+.brow .w{width:70px;font-family:var(--mono);font-size:15px;text-align:right}
+.brow .tr{flex:1;height:14px;background:#F0EEE7;border-radius:7px;overflow:hidden}
+.brow .f{height:100%;border-radius:7px;background:var(--line2)}
+.brow.top .f{background:var(--clay)}
+.brow .v{width:50px;font-family:var(--mono);font-size:14px;color:var(--muted)}
+
+/* harness */
+#harn{left:1200px;top:660px;width:656px;height:140px}
+#harn .ph,#env .ph{height:48px;padding-top:14px}
+.steps{display:flex;gap:8px;padding:10px 22px 0}
+.step{flex:1;height:40px;border-radius:12px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;gap:8px;font-size:15px;color:var(--muted);background:#F6F4EE;transition:all .35s}
+.step i{width:18px;height:18px;border-radius:50%;border:2px solid var(--line2);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:11px;transition:all .35s}
+.step.act{border-color:var(--clay);color:var(--ink);background:#fff;box-shadow:0 0 0 4px rgba(217,119,87,.14)}
+.step.act i{border-color:var(--clay);border-top-color:transparent;animation:sp 0.9s linear infinite}
+.step.done{color:var(--slate);background:#fff}
+.step.done i{background:var(--sage);border-color:var(--sage);color:#fff}
+@keyframes sp{to{transform:rotate(360deg)}}
+.hnote{padding:8px 24px 0;font-size:15.5px;color:var(--slate);height:34px;display:flex;align-items:center;gap:10px}
+.hnote .ar{color:var(--clay)}
+
+/* env */
+#env{left:1200px;top:820px;width:656px;height:200px}
+.ebody{display:flex;gap:14px;padding:6px 18px 0}
+.tree{width:300px;font-family:var(--mono);font-size:13.5px;line-height:23px}
+.tr2{display:flex;align-items:center;gap:6px;border-radius:7px;padding:0 6px;transition:background .3s}
+.tr2.hl{background:var(--clay-l)}
+.tr2.nw{background:var(--sage-l)}
+.tr2 .ic{width:16px;text-align:center;color:var(--muted)}
+.badge{margin-left:auto;font-family:var(--sans);font-size:11.5px;padding:1px 7px;border-radius:5px;background:var(--clay);color:#fff}
+.badge.g{background:var(--sage)}
+.shell{flex:1;height:136px;border-radius:12px;background:#F2F0E9;padding:10px 14px;font-family:var(--mono);font-size:13px;line-height:1.7;overflow:hidden;color:var(--slate)}
+.shell .pr{color:var(--clay-d)}
+.shell .ok{color:var(--sage)}
+.shell .em{color:var(--muted)}
+
+/* flying chips */
+.fly{position:absolute;left:0;top:0;font-family:var(--mono);font-size:14px;padding:8px 14px;border-radius:10px;background:var(--ink);color:#fff;white-space:nowrap;box-shadow:0 14px 30px -12px rgba(0,0,0,.45);will-change:transform}
+.fly.tu{background:var(--clay)}
+.fly.tr{background:var(--sage)}
+.fly.tx{background:var(--paper);color:var(--ink);border:1px solid var(--line2);font-family:var(--serif);font-size:16px}
+.tk{position:absolute;left:0;top:0;font-family:var(--mono);font-size:12px;padding:2px 7px;border-radius:5px;background:#fff;border:1px solid var(--line2);color:var(--slate);will-change:transform}
+
+/* overlays */
+.ov{position:absolute;inset:0;background:var(--ivory);z-index:20}
+#title{z-index:30}
+.panel,.layer{isolation:isolate}
+#title{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:radial-gradient(900px 600px at 50% 40%,#F8F5EE 0%,var(--ivory) 70%)}
+#title h1{font-family:var(--serif);font-size:96px;font-weight:600;letter-spacing:.02em;margin-top:44px}
+#title p{font-size:30px;color:var(--slate);margin-top:18px}
+#title .hint{font-size:16px;color:var(--muted);margin-top:60px;letter-spacing:.08em}
+
+#sum{background:radial-gradient(1000px 700px at 30% 50%,#F7F4EC 0%,var(--ivory) 70%)}
+#sum .hd{position:absolute;left:64px;top:56px}
+#sum .hd .lab{font-size:15px;letter-spacing:.18em;color:var(--clay-d);font-weight:600}
+#sum .hd h2{font-family:var(--serif);font-size:54px;font-weight:600;margin-top:12px}
+#sum .hd p{font-size:22px;color:var(--slate);margin-top:12px}
+#loop{position:absolute;left:40px;top:330px;width:1180px;height:620px;overflow:visible}
+.nd rect,.nd polygon{fill:var(--paper);stroke:var(--line2);stroke-width:1.5}
+.nd.cc rect{fill:#FFF}
+.nd text{font-family:var(--sans);text-anchor:middle}
+.nd .a{font-size:24px;font-weight:600;fill:var(--ink);font-family:var(--serif)}
+.nd .b{font-size:15px;fill:var(--muted)}
+.ed{fill:none;stroke:var(--line2);stroke-width:3;stroke-linecap:round}
+.ed.c{stroke:var(--clay)}
+.elab{font-size:18px;fill:var(--clay-d);font-weight:600}
+.side{position:absolute;left:1270px;top:300px;width:590px}
+.stats{display:flex;gap:14px}
+.stat{flex:1;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px}
+.stat .n{font-family:var(--serif);font-size:56px;font-weight:600;line-height:1}
+.stat .n.c{color:var(--clay)}
+.stat .l{font-size:15px;color:var(--muted);margin-top:8px}
+.tw{margin-top:22px;display:flex;flex-direction:column;gap:14px}
+.ta{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--clay);border-radius:14px;padding:16px 20px}
+.ta b{font-family:var(--serif);font-size:24px;display:block}
+.ta span{font-size:16.5px;color:var(--slate);line-height:1.55;display:block;margin-top:6px}
+.ta code{font-family:var(--mono);font-size:.9em;color:var(--clay-d)}
+.src{position:absolute;left:64px;bottom:34px;font-size:13.5px;color:var(--muted)}
+
+/* ---------- controls ---------- */
+#ctl{position:fixed;left:0;right:0;bottom:0;height:64px;display:flex;align-items:center;gap:14px;padding:0 22px;
+  background:rgba(250,249,245,.92);backdrop-filter:blur(10px);border-top:1px solid var(--line);font-size:14px;color:var(--slate);user-select:none;z-index:10;transition:opacity .4s}
+#ctl button{border:1px solid var(--line2);background:var(--paper);color:var(--ink);height:36px;min-width:36px;padding:0 12px;border-radius:10px;font-size:14px;cursor:pointer;font-family:var(--sans)}
+#ctl button:hover{border-color:var(--clay)}
+#ctl button.on{background:var(--clay);border-color:var(--clay);color:#fff}
+#play{width:44px;font-size:16px!important}
+#time{font-family:var(--mono);font-size:13px;width:112px;text-align:center;color:var(--muted)}
+#track{flex:1;height:36px;position:relative;cursor:pointer}
+#track .rail{position:absolute;left:0;right:0;top:16px;height:4px;border-radius:2px;background:var(--line)}
+#track .fill{position:absolute;left:0;top:16px;height:4px;border-radius:2px;background:var(--clay)}
+#track .tick{position:absolute;top:10px;width:2px;height:16px;background:var(--line2);border-radius:1px}
+#track .tick span{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:12px;color:var(--muted);opacity:0;transition:opacity .2s;pointer-events:none;background:var(--paper);padding:2px 6px;border-radius:5px;border:1px solid var(--line)}
+#track:hover .tick span{opacity:1}
+#track .knob{position:absolute;top:10px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:#fff;border:3px solid var(--clay)}
+#chName{width:150px;color:var(--ink);font-weight:600;white-space:nowrap;overflow:hidden}
+body.fs #ctl{opacity:0}
+body.fs #ctl:hover{opacity:1}
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <!-- caption -->
+  <div id="cap"><div class="lab"><b></b><span id="capLab"></span></div><div class="ttl" id="capT"></div><div class="bd" id="capB"></div></div>
+  <div id="counters">
+    <div class="ctr" id="c0"><div class="n">0</div><div class="l">你的输入</div></div>
+    <div class="ctr" id="c1"><div class="n">0</div><div class="l">模型调用</div></div>
+    <div class="ctr" id="c2"><div class="n">0</div><div class="l">工具执行</div></div>
+  </div>
+
+  <!-- terminal -->
+  <div class="panel" id="term">
+    <div class="tbar"><i></i><i></i><i></i><span>claude — ~/work/weekly</span></div>
+    <div class="tbody" id="tbody">
+      <div class="welcome"><span class="c">✻</span> Welcome to <b>Claude Code</b>
+        <div class="wm">/help for help, /status for your current setup</div>
+        <div class="wm">cwd: ~/work/weekly · Opus 5.5</div></div>
+      <div id="tlines"></div>
+    </div>
+    <div class="tin"><span class="p">&gt;</span><span id="tinT"></span><span class="caret" id="caret"></span></div>
+    <div class="tfoot"><span>? for shortcuts</span><span id="tmode"></span></div>
+  </div>
+
+  <!-- context -->
+  <div class="panel" id="ctx">
+    <div class="ph"><span class="k">上下文窗口</span><span class="t" id="ctxN">第 1 次调用的输入</span></div>
+    <div class="meter">
+      <div class="row"><div class="num" id="tokN">0<small>词元</small></div><div class="share" id="tokS"></div></div>
+      <div class="bar" id="tokBar"></div>
+    </div>
+  </div>
+
+  <!-- model -->
+  <div class="panel" id="model">
+    <div class="mh">
+      <svg id="spark" width="56" height="56" viewBox="-50 -50 100 100"></svg>
+      <div><div class="nm">Claude</div><div class="sb">语言模型 · claude-opus-5-5</div></div>
+      <div class="pill" id="pill"><i></i><span>等待输入</span></div>
+    </div>
+    <div class="ribbon"><div class="lb">读入词元</div><div class="rtrack" id="rtrack"></div></div>
+    <div class="out">
+      <div class="ol"><span id="outL">输出</span><span class="stop" id="stop"></span></div>
+      <div class="oc" id="oc"></div>
+      <div class="bars" id="bars">
+        <div class="bt">下一个词元的候选（示意）</div>
+        <div class="brow top"><span class="w">Bash</span><span class="tr"><span class="f" style="width:0"></span></span><span class="v">0.82</span></div>
+        <div class="brow"><span class="w">Read</span><span class="tr"><span class="f" style="width:0"></span></span><span class="v">0.11</span></div>
+        <div class="brow"><span class="w">Glob</span><span class="tr"><span class="f" style="width:0"></span></span><span class="v">0.04</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- harness -->
+  <div class="panel" id="harn">
+    <div class="ph"><span class="k">程序</span><span class="t">Claude Code</span><span class="r">组装 · 检查 · 执行 · 写回</span></div>
+    <div class="steps" id="steps">
+      <div class="step"><i></i>识别请求</div><div class="step"><i></i>校验参数</div><div class="step"><i></i>权限确认</div><div class="step"><i></i>执行工具</div><div class="step"><i></i>写回结果</div>
+    </div>
+    <div class="hnote"><span class="ar">→</span><span id="hnote">等待你的输入</span></div>
+  </div>
+
+  <!-- environment -->
+  <div class="panel" id="env">
+    <div class="ph"><span class="k">执行环境</span><span class="t">你的电脑</span><span class="r">~/work/weekly</span></div>
+    <div class="ebody">
+      <div class="tree">
+        <div class="tr2"><span class="ic">▾</span>weekly/</div>
+        <div class="tr2" id="fMd" style="padding-left:24px"><span class="ic">≡</span>CLAUDE.md<span class="badge" id="bMd">读入上下文</span></div>
+        <div class="tr2" style="padding-left:24px"><span class="ic">▾</span>audio/</div>
+        <div class="tr2" id="fWav" style="padding-left:44px"><span class="ic">♪</span>meeting.wav<span class="badge" id="bWav">读取中</span></div>
+        <div class="tr2" style="padding-left:24px"><span class="ic">▾</span>notes/</div>
+        <div class="tr2" id="fNote" style="padding-left:44px"><span class="ic">≡</span>2026-10-09-周会纪要.md<span class="badge g">新建</span></div>
+      </div>
+      <div class="shell" id="shell"></div>
+    </div>
+  </div>
+
+  <div class="layer" id="ctxLayer">
+    <div id="callout">只是一串路径文字，录音内容此刻不在这里</div>
+  </div>
+  <div class="layer" id="tokLayer"></div>
+  <div class="layer" id="flyLayer"></div>
+
+  <!-- summary -->
+  <div class="ov" id="sum">
+    <div class="hd"><div class="lab">全景</div><h2>一句话，三次模型调用，两次工具执行</h2>
+      <p>Claude Code 在模型外面搭了一个循环：组装上下文 → 预测 → 执行 → 写回，直到模型给出写给你的回答。</p></div>
+    <svg id="loop" viewBox="0 0 1180 620">
+      <defs><marker id="ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9 z" fill="#D3CFC2"/></marker>
+        <filter id="gl" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="6"/></filter></defs>
+      <path class="ed" id="e1" d="M255,150 H342" marker-end="url(#ah)"/>
+      <path class="ed" id="e2" d="M555,150 H660" marker-end="url(#ah)"/>
+      <path class="ed" id="e3" d="M815,150 H922" marker-end="url(#ah)"/>
+      <path class="ed" id="e4" d="M740,225 V400" marker-end="url(#ah)"/>
+      <path class="ed" id="e5" d="M635,450 H558" marker-end="url(#ah)"/>
+      <path class="ed" id="e6" d="M345,450 H190 Q150,450 150,410 V200" marker-end="url(#ah)"/>
+      <text class="elab" x="860" y="134">否</text>
+      <text class="elab" x="756" y="320">是</text>
+      <text x="150" y="530" text-anchor="middle" font-size="15" fill="#87867F" id="loopTxt">回到第一步，进入下一次调用</text>
+      <g class="nd cc" id="nA"><rect x="45" y="104" width="210" height="92" rx="18"/><text class="a" x="150" y="146">组装上下文</text><text class="b" x="150" y="174">Claude Code</text></g>
+      <g class="nd" id="nB"><rect x="345" y="104" width="210" height="92" rx="18"/><text class="a" x="450" y="146">预测词元</text><text class="b" x="450" y="174">Claude 模型</text></g>
+      <g class="nd" id="nD"><polygon points="740,75 815,150 740,225 665,150"/><text class="a" x="740" y="146" style="font-size:19px">工具</text><text class="a" x="740" y="170" style="font-size:19px">请求？</text></g>
+      <g class="nd" id="nG"><rect x="925" y="104" width="210" height="92" rx="18" style="stroke:#D97757"/><text class="a" x="1030" y="146">回答你</text><text class="b" x="1030" y="174">显示在终端</text></g>
+      <g class="nd cc" id="nE"><rect x="635" y="404" width="210" height="92" rx="18"/><text class="a" x="740" y="446">检查并执行</text><text class="b" x="740" y="474">Claude Code · 你的电脑</text></g>
+      <g class="nd cc" id="nF"><rect x="345" y="404" width="210" height="92" rx="18"/><text class="a" x="450" y="446">结果写回</text><text class="b" x="450" y="474">追加到上下文末尾</text></g>
+      <path id="pLoop" d="M150,150 H740 V450 H150 V150" fill="none" stroke="none"/>
+      <path id="pExit" d="M150,150 H1030" fill="none" stroke="none"/>
+      <circle id="dotG" r="16" fill="#D97757" opacity=".35" filter="url(#gl)"/>
+      <circle id="dot" r="10" fill="#D97757"/>
+      <g id="dotLab"><rect x="-56" y="-50" width="112" height="30" rx="15" fill="#141413"/><text id="dotT" x="0" y="-30" text-anchor="middle" font-size="14" fill="#fff">第 1 次调用</text></g>
+    </svg>
+    <div class="side">
+      <div class="stats">
+        <div class="stat"><div class="n" id="s0">1</div><div class="l">你输入的次数</div></div>
+        <div class="stat"><div class="n c" id="s1">0</div><div class="l">模型调用</div></div>
+        <div class="stat"><div class="n" id="s2">0</div><div class="l">工具执行</div></div>
+      </div>
+      <div class="tw">
+        <div class="ta" id="ta0"><b>路径不等于内容</b><span>第一次调用里只有 <code>audio/meeting.wav</code> 这串文字。录音是后来由工具读取的。</span></div>
+        <div class="ta" id="ta1"><b>请求不等于执行</b><span>模型只写出工具请求；校验、询问权限、运行命令、写文件，都由 Claude Code 完成。</span></div>
+        <div class="ta" id="ta2"><b>结束不等于成功</b><span>end_turn 只表示模型说完了。打开 <code>notes/</code> 看文件，核对“待确认”的事项。</span></div>
+      </div>
+    </div>
+    <div class="src">依据：Claude Code 文档 How Claude Code works、Explore the context window；Claude API 文档 How tool use works。场景、词元数与概率为教学示意。</div>
+  </div>
+
+  <div class="ov" id="title">
+    <svg id="bigSpark" width="200" height="200" viewBox="-50 -50 100 100"></svg>
+    <h1 id="tH">从输入到输出</h1>
+    <p id="tP">一句话交给 Claude Code 之后，背后发生的完整过程</p>
+    <div class="hint" id="tHint">空格 播放 / 暂停　·　← → 切换章节　·　F 全屏</div>
+  </div>
+</div>
+
+<div id="ctl">
+  <button id="prev" title="上一章">⟨</button>
+  <button id="play" title="播放/暂停">❚❚</button>
+  <button id="next" title="下一章">⟩</button>
+  <span id="chName"></span>
+  <div id="track"><div class="rail"></div><div class="fill" id="fill"></div><div class="knob" id="knob"></div></div>
+  <span id="time">00:00 / 00:00</span>
+  <button id="spd" title="播放速度">1×</button>
+  <button id="stopCh" title="每章结束时暂停，便于讲解">逐章停顿</button>
+  <button id="fs" title="全屏">全屏</button>
+</div>
+
+<script>
+(()=>{
+const $=s=>document.querySelector(s);
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const seg=(t,a,b)=>clamp((t-a)/(b-a));
+const ease=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const eo=x=>1-Math.pow(1-x,3);
+const lerp=(a,b,p)=>a+(b-a)*p;
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+function setH(el,h){if(el._h!==h){el.innerHTML=h;el._h=h;}}
+function css(el,k,v){if(el['_'+k]!==v){el.style[k]=v;el['_'+k]=v;}}
+function typed(segs,n){let out='',left=n;for(const [c,s] of segs){if(left<=0)break;const a=Array.from(s);const part=a.slice(0,left).join('');left-=a.length;out+=c?`<span class="${c}">${esc(part)}</span>`:esc(part);}return out;}
+const segLen=segs=>segs.reduce((n,[,s])=>n+Array.from(s).length,0);
+const nType=(segs,t,a,b)=>Math.floor(segLen(segs)*seg(t,a,b));
+
+/* ================= timeline ================= */
+const END=134;
+const CH=[
+  {t:0,  n:'开场'},
+  {t:6,  n:'一句输入'},
+  {t:14, n:'组装上下文'},
+  {t:36, n:'变成词元'},
+  {t:44, n:'第 1 次生成'},
+  {t:57, n:'程序执行'},
+  {t:74, n:'结果回流'},
+  {t:84, n:'第 2 次调用'},
+  {t:100,n:'第 3 次调用'},
+  {t:112,n:'全景'},
+];
+const CAP=[
+  [6,  '你在终端里输入一句话','这句话只是任务的起点。按下回车后，Claude Code 要先替模型准备好一整份材料。'],
+  [14, 'Claude Code 组装第 1 次调用的输入','模型每次调用都从零开始，不记得上一次。它能用到的一切，都得放进这个上下文窗口。'],
+  [17.4,'工具定义：只给接口，不给源码','每个工具只告诉模型三件事：叫什么、做什么、参数怎么填。真正执行的代码留在 Claude Code 里。'],
+  [21, '项目规则：CLAUDE.md','你写在项目里的约定会被自动读入，所以模型知道这里“转写用 whisper，纪要放 notes/”。'],
+  [24, 'Skills 与 MCP：先放目录，用到再展开','启动时只放名称和一句简介，真正用到时才加载全文，给上下文省出空间。'],
+  [27, '环境信息','当前目录、系统、日期、Git 分支。模型看不到你的屏幕，只能读到这些文字。'],
+  [30, '最后，才是你的那句话','它只占整份输入很小的一部分。注意：这里只有路径 <code>audio/meeting.wav</code>，录音内容一个字都还没有。'],
+  [36, '模型读到的，是一长串词元','整份上下文被切成词元，一起送进 Claude。它只做一件事：根据前面所有词元，预测下一个。'],
+  [44, '第 1 次输出：先说一句，再提出请求','Claude 一个词元接一个词元地生成。到了要动手的地方，它写出的是一条结构化的工具请求。'],
+  [47.2,'选工具，也是在预测词元','“Bash” 的概率最高：工具定义和 CLAUDE.md 都在上下文里，模型据此判断该先转写。'],
+  [50.5,'工具请求是写给程序看的','它只是一段格式固定的文字：用哪个工具、填什么参数。此刻没有任何命令被执行。'],
+  [53.3,'生成在这里停下','<code>stop_reason: "tool_use"</code>：模型交出请求，等待结果。'],
+  [57, 'Claude Code 接过请求','模型停下了，接下来是程序的工作：识别请求，检查参数是否符合工具定义。'],
+  [60.2,'执行之前，先问你','运行命令会动到你的电脑，Claude Code 按权限设置弹出确认。你可以拒绝，请求就不会执行。'],
+  [63.4,'录音这时才第一次被读取','读取音频、运行转写的是你电脑上的 whisper，不是模型。路径写错或权限不足，这一步就会报错。'],
+  [74, '结果写回上下文','Claude Code 把刚才的请求和转写结果追加到对话末尾，前面的内容原样保留。'],
+  [78, '你没再说话，程序自己发起第 2 次调用','一次提问，不等于一次模型调用。这一次，转写文本已经在上下文里了。'],
+  [84, '第 2 次输出：又一个工具请求','有了转写文本，Claude 按 CLAUDE.md 的约定写好纪要，请求保存到 <code>notes/</code>。'],
+  [90.5,'同样的流程再走一遍','识别、校验、权限、执行。写文件的是 Claude Code 的 Write 工具，不是模型本身。'],
+  [95, '结果再次回流','“写入成功”被追加进上下文，Claude Code 发起第 3 次调用。'],
+  [100,'第 3 次输出：写给你看的回答','这次没有工具请求，只有文字。<code>stop_reason: "end_turn"</code>，循环结束，回答显示在终端里。'],
+  [107.2,'说完了，不等于做对了','回答说“已保存”，最好打开 <code>notes/</code> 看一眼：文件在不在，待确认的内容有没有被编造。'],
+];
+// which panels stay bright in each chapter
+const FOCUS=[null,['term'],['ctx','term','harn','env'],['ctx','model'],['model'],['term','harn','env'],['ctx','harn','model'],null,['model','term'],null];
+
+const CALLS=[ // model calls
+  {n:1,r0:36.5,r1:44.2,g0:44.5,stop:53.3,end:'tool_use'},
+  {n:2,r0:78,  r1:84.0,g0:84.3,stop:89.3,end:'tool_use'},
+  {n:3,r0:97.5,r1:100.0,g0:100.3,stop:106.4,end:'end_turn'},
+];
+const OUT1T=[['txt','先把录音转成文字，再整理纪要。']];
+const J1=[['p','{ '],['k','"type"'],['p',': '],['s','"tool_use"'],['p',',\n  '],['k','"name"'],['p',': '],['s','"Bash"'],['p',',\n  '],['k','"input"'],['p',': {\n    '],['k','"command"'],['p',': '],['s','"whisper audio/meeting.wav --language zh"'],['p',',\n    '],['k','"description"'],['p',': '],['s','"转写会议录音"'],['p','\n  }\n}']];
+const J2=[['p','{ '],['k','"type"'],['p',': '],['s','"tool_use"'],['p',',\n  '],['k','"name"'],['p',': '],['s','"Write"'],['p',',\n  '],['k','"input"'],['p',': {\n    '],['k','"file_path"'],['p',': '],['s','"notes/2026-10-09-周会纪要.md"'],['p',',\n    '],['k','"content"'],['p',': '],['s','"# 周会纪要\\n- 本周完成原型\\n- 下周评审（日期待确认）\\n- 小林：整理用户反馈"'],['p','\n  }\n}']];
+const OUT3=[['txt','纪要已保存到 notes/2026-10-09-周会纪要.md。共 3 条要点；评审日期录音里没有说明，已标为“待确认”。']];
+
+/* ================= context blocks ================= */
+const SRC={harness:{x:1222,y:670,w:300},env:{x:1222,y:830,w:260},md:{x:1226,y:878,w:220},term:{x:84,y:330,w:500},model:{x:1222,y:440,w:560}};
+const BL=[
+  {c:'stone',l:'系统提示词',g:'Claude Code 内置',h:78,tIn:14.6,f:'harness',tok:3100,tCol:74,
+   b:'你是 Claude Code，在终端里帮用户处理代码和文件。需要时调用工具；用用户的语言回答。'},
+  {c:'sky',l:'工具定义',g:'只有接口，没有源码',h:186,tIn:17.4,f:'harness',tok:11800,tCol:74,
+   b:'<div class="chips"><span>Read</span><span>Write</span><span>Edit</span><span class="on">Bash</span><span>Grep</span><span>Glob</span><span>WebFetch</span><span class="mo">+ MCP 工具</span></div><div class="schema"><div><em>name</em>: "Bash"</div><div><em>description</em>: "在 shell 中运行命令，返回输出"</div><div><em>input_schema</em>: { command: string, description?: string }</div></div>'},
+  {c:'gold',l:'CLAUDE.md · 项目规则',g:'读取自项目目录',h:82,tIn:21,f:'md',tok:420,tCol:74,
+   b:'· 录音转写用 whisper，语言 zh<br>· 纪要放 notes/，文件名带日期'},
+  {c:'plum',l:'Skills · MCP',g:'只放名称和简介',h:74,tIn:24,f:'harness',tok:640,tCol:74,
+   b:'meeting-notes — 会议纪要格式　·　calendar (MCP) — 查日程'},
+  {c:'stone',l:'环境信息',g:'自动采集',h:80,tIn:27,f:'env',tok:260,tCol:74,m:1,
+   b:'cwd: ~/work/weekly · platform: darwin<br>date: 2026-10-09 · git branch: main'},
+  {c:'clay',l:'用户消息',g:'你输入的',h:92,tIn:30,f:'term',tok:40,tCol:74,u:1,
+   b:'把 <mark>audio/meeting.wav</mark> 整理成会议纪要，保存到 notes/ 目录'},
+  {c:'clay',l:'助手 · 工具请求',g:'第 1 次输出',h:70,tIn:74.2,f:'model',tok:120,tCol:95,m:1,
+   b:'Bash → whisper audio/meeting.wav --language zh'},
+  {c:'sage',l:'工具结果',g:'whisper 返回',h:112,tIn:75.0,f:'harness',tok:1850,tCol:95,m:1,
+   b:'[00:00] 本周完成原型，下周安排评审。<br>[00:41] 小林负责整理用户反馈。<br>[01:20] 评审日期待定。'},
+  {c:'clay',l:'助手 · 工具请求',g:'第 2 次输出',h:66,tIn:95.0,f:'model',tok:380,m:1,
+   b:'Write → notes/2026-10-09-周会纪要.md'},
+  {c:'sage',l:'工具结果',g:'Write 返回',h:62,tIn:95.6,f:'harness',tok:30,m:1,
+   b:'File created successfully · 12 lines'},
+];
+const COLV={stone:'#6B6A63',sky:'#5A87B8',gold:'#B08436',plum:'#86699F',clay:'#D97757',sage:'#6F8A5B'};
+const ctxLayer=$('#ctxLayer');
+BL.forEach(b=>{const d=document.createElement('div');d.className='cb c-'+b.c;
+  d.innerHTML=`<div class="cbh"><i></i><b>${b.l}</b><span>${b.g}</span></div><div class="cbb${b.m?' m':''}">${b.b}</div>`;
+  ctxLayer.insertBefore(d,$('#callout'));b.el=d;b.body=d.querySelector('.cbb');});
+const tokBar=$('#tokBar');
+BL.forEach(b=>{const i=document.createElement('i');i.style.background=COLV[b.c];i.style.width='0';tokBar.appendChild(i);b.bar=i;});
+
+/* ================= terminal ================= */
+const PROMPT='把 audio/meeting.wav 整理成会议纪要，保存到 notes/ 目录';
+const TL=[
+  {t:12.2,h:`<div class="tl user">&gt; ${PROMPT}</div>`},
+  {t:46.6,h:`<div class="tl"><span class="bul">⏺</span> 先把录音转成文字，再整理纪要。</div>`},
+  {t:58.4,h:`<div class="tl"><span class="bul g">⏺</span> <span class="fn">Bash</span>(whisper audio/meeting.wav --language zh)</div>`},
+  {t:63.2,u:68.2,h:`<div class="tl sub">  ⎿  Running…</div>`},
+  {t:68.2,h:`<div class="tl sub">  ⎿  [00:00] 本周完成原型，下周安排评审。\n     … +2 lines (ctrl+r to expand)</div>`},
+  {t:90.6,h:`<div class="tl"><span class="bul g">⏺</span> <span class="fn">Write</span>(notes/2026-10-09-周会纪要.md)</div>`},
+  {t:94.6,h:`<div class="tl sub">  ⎿  Wrote 12 lines to notes/2026-10-09-周会纪要.md</div>`},
+  {t:107.6,h:`<div class="tl"><span class="bul">⏺</span> 纪要已保存到 notes/2026-10-09-周会纪要.md。\n  共 3 条要点；评审日期录音里没有说明，\n  已标为“待确认”。</div>`},
+];
+const SPIN=[[12.6,53.3,'Pondering'],[77.5,89.3,'Brewing'],[97.5,106.4,'Composing']];
+const SPC='·✢✳✶✻✽✻✶✳✢';
+function permHTML(t){const press=t>62.4;
+  return `<div class="perm"><div class="pt">Bash command</div><div class="pc">whisper audio/meeting.wav --language zh</div><div class="pd">转写会议录音</div><div class="pq">Do you want to proceed?</div><div class="op sel${press?' press':''}">❯ 1. Yes</div><div class="op">  2. Yes, and don't ask again for whisper</div><div class="op">  3. No, tell Claude what to do (esc)</div></div>`;}
+
+/* ================= harness & env ================= */
+const CYC=[{s:[[58.4,59.2],[59.2,60.0],[60.0,63.0],[63.0,68.2],[74.0,76.6]],from:57.2},
+           {s:[[90.6,91.1],[91.1,91.6],[91.6,92.4],[92.4,94.6],[95.0,96.6]],from:89.6}];
+const HN=[[0,'等待你的输入'],[12.2,'收到输入，开始准备上下文'],[14,'组装第 1 次调用的输入'],[36.5,'把输入发给模型，等待输出'],
+  [57.2,'收到模型输出，里面有一条工具请求'],[58.4,'name = "Bash"，在工具列表里 ✓'],[59.2,'command 是字符串，符合 input_schema ✓'],
+  [60.0,'运行命令需要确认 → 在终端里问你'],[63.0,'你已允许 → 在你的电脑上运行 whisper'],[68.2,'转写完成，拿到约 1,850 词元的文本'],
+  [74.0,'把请求和结果追加到对话末尾'],[77.5,'发起第 2 次调用'],[89.6,'又收到一条工具请求'],[90.6,'name = "Write" ✓'],
+  [91.1,'file_path、content 都已填写 ✓'],[91.6,'编辑文件：按当前权限设置放行'],[92.4,'写入 notes/2026-10-09-周会纪要.md'],
+  [95.0,'追加“写入成功”，发起第 3 次调用'],[106.6,'收到 end_turn：把回答显示给你']];
+const SH=[
+  [63.8,'<div><span class="pr">$</span> whisper audio/meeting.wav --language zh</div>'],
+  [64.4,'PROG'],
+  [65.6,'<div>[00:00] 本周完成原型，下周安排评审。</div>'],
+  [66.4,'<div>[00:41] 小林负责整理用户反馈。</div>'],
+  [67.2,'<div>[01:20] 评审日期待定。</div>'],
+  [93.3,'<div class="ok">✎ 写入 notes/…周会纪要.md · 12 行</div>'],
+];
+
+/* ================= fly chips ================= */
+const P={model:[1240,470],harn:[1250,720],shell:[1500,900],term:[100,880]};
+const FL=[
+  [57.2,58.4,P.model,P.harn,'tool_use · Bash','tu'],
+  [63.0,63.8,P.harn,P.shell,'$ whisper audio/meeting.wav','tx'],
+  [68.2,69.2,P.shell,P.harn,'tool_result · 转写文本','tr'],
+  [89.6,90.6,P.model,P.harn,'tool_use · Write','tu'],
+  [92.4,93.2,P.harn,P.shell,'Write → notes/…纪要.md','tx'],
+  [93.8,94.6,P.shell,P.harn,'tool_result · 写入成功','tr'],
+  [106.6,107.6,P.model,P.term,'回答 · 写给你看的文字','tx'],
+];
+const flyLayer=$('#flyLayer');
+FL.forEach(f=>{const d=document.createElement('div');d.className='fly '+f[5];d.textContent=f[4];d.style.opacity=0;flyLayer.appendChild(d);f.el=d;});
+
+/* token stream */
+const FRAG=['你','是','Claude','Code','，','<tools>','Bash','command','string','CLAUDE','.md','whisper','notes','/','2026','把','audio','/meeting','.wav','整理','纪要','</user>'];
+const TKN=18,TKW=[[36.5,43.6],[78,83.6],[97.5,99.8]];
+const tokLayer=$('#tokLayer');const TK=[];
+for(let i=0;i<TKN;i++){const d=document.createElement('div');d.className='tk';d.textContent=FRAG[(i*5)%FRAG.length];d.style.opacity=0;tokLayer.appendChild(d);TK.push({el:d,y:300+((i*137)%560)});}
+const rtrack=$('#rtrack');rtrack.innerHTML=[...FRAG,...FRAG,...FRAG].map(s=>`<span class="tok">${esc(s)}</span>`).join('');
+
+/* ================= spark ================= */
+function buildSpark(svg){const rays=[];const N=12;
+  for(let i=0;i<N;i++){const a=i*360/N+((i*37)%11-5);const L=34+((i*53)%13);const w=6+((i*29)%5)*.45;
+    const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+    p.setAttribute('d',`M0,${-w*.55} L${L-w},${-w*.5} Q${L+1},0 ${L-w},${w*.5} L0,${w*.55} Z`);
+    p.setAttribute('fill','#D97757');p.setAttribute('transform',`rotate(${a})`);svg.appendChild(p);rays.push({p,a});}
+  const c=document.createElementNS('http://www.w3.org/2000/svg','circle');c.setAttribute('r','7');c.setAttribute('fill','#D97757');svg.appendChild(c);
+  return rays;}
+const spark=$('#spark');const sparkRays=buildSpark(spark);
+const bigRays=buildSpark($('#bigSpark'));
+
+/* ================= refs ================= */
+const R={capLab:$('#capLab'),capT:$('#capT'),capB:$('#capB'),cap:$('#cap'),ctr:[0,1,2].map(i=>$('#c'+i)),
+  tlines:$('#tlines'),tbody:$('#tbody'),tinT:$('#tinT'),caret:$('#caret'),tmode:$('#tmode'),
+  ctxN:$('#ctxN'),tokN:$('#tokN'),tokS:$('#tokS'),callout:$('#callout'),
+  pill:$('#pill'),outL:$('#outL'),oc:$('#oc'),stop:$('#stop'),bars:$('#bars'),barF:[...document.querySelectorAll('#bars .f')],
+  steps:[...document.querySelectorAll('#steps .step')],hnote:$('#hnote'),shell:$('#shell'),
+  fMd:$('#fMd'),bMd:$('#bMd'),fWav:$('#fWav'),bWav:$('#bWav'),fNote:$('#fNote'),
+  title:$('#title'),sum:$('#sum'),panels:{term:$('#term'),ctx:$('#ctx'),model:$('#model'),harn:$('#harn'),env:$('#env')}};
+const prevCtr=[-1,-1,-1];
+const chIdx=t=>{let k=0;CH.forEach((c,i)=>{if(t>=c.t)k=i;});return k;};
+const fmt=n=>Math.round(n).toLocaleString('en-US');
+
+/* ================= render ================= */
+function render(t){
+  const ci=chIdx(t);
+  // overlays
+  const tO=1-seg(t,5,6.2);css(R.title,'opacity',tO);css(R.title,'display',tO<=0?'none':'flex');
+  bigRays.forEach((r,i)=>{const p=eo(seg(t,.2+i*.07,1.0+i*.07));r.p.setAttribute('transform',`rotate(${r.a+ (1-p)*-30 + t*3}) scale(${p} ${Math.max(p,.001)})`);});
+  [['#tH',1.0],['#tP',1.6],['#tHint',2.4]].forEach(([s,a])=>{const e=$(s),p=eo(seg(t,a,a+.9));css(e,'opacity',p);css(e,'transform',`translateY(${(1-p)*18}px)`);});
+
+  // caption
+  let k=-1;CAP.forEach((c,i)=>{if(t>=c[0])k=i;});
+  if(k>=0){const c=CAP[k];const nx=CAP[k+1];let o=eo(seg(t,c[0],c[0]+.5));if(nx)o*=1-seg(t,nx[0]-.3,nx[0]);
+    setH(R.capLab,String(ci).padStart(2,'0')+' · '+CH[ci].n);setH(R.capT,c[1]);setH(R.capB,c[2]);
+    css(R.capT,'opacity',o);css(R.capB,'opacity',o);css(R.capT,'transform',`translateY(${(1-o)*8}px)`);css(R.cap,'opacity',1);}
+  else css(R.cap,'opacity',0);
+
+  // focus
+  const F=FOCUS[ci];
+  for(const id in R.panels){R.panels[id].classList.toggle('dim',!!F&&!F.includes(id));}
+  ctxLayer.classList.toggle('dim',!!F&&!F.includes('ctx'));
+
+  // counters
+  const cv=[t>=12.2?1:0,CALLS.filter(c=>t>=c.r0).length,(t>=63.8?1:0)+(t>=92.8?1:0)];
+  cv.forEach((v,i)=>{if(v!==prevCtr[i]){const el=R.ctr[i];el.querySelector('.n').textContent=v;
+    if(prevCtr[i]>=0&&v>prevCtr[i]){el.classList.add('pop');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('pop'),450);}prevCtr[i]=v;}});
+
+  renderTerm(t);renderCtx(t);renderModel(t);renderHarn(t);renderEnv(t);renderFly(t);renderSum(t);
+}
+
+function renderTerm(t){
+  let h='';for(const l of TL){if(t>=l.t&&!(l.u&&t>=l.u))h+=l.h;}
+  if(t>=60.2&&t<63.0)h+=permHTML(t);
+  for(const [a,b,v] of SPIN){if(t>=a&&t<b){const ch=SPC[Math.floor(t*8)%SPC.length];h+=`<div class="tl spin">${ch} ${v}… <span class="h">(${Math.floor(t-a)}s · esc to interrupt)</span></div>`;}}
+  setH(R.tlines,h);R.tbody.scrollTop=R.tbody.scrollHeight;
+  const typing=t<12.2?Array.from(PROMPT).slice(0,Math.floor(Array.from(PROMPT).length*seg(t,7.4,11.4))).join(''):'';
+  setH(R.tinT,esc(typing));
+  css(R.caret,'opacity',(t>=7.4&&t<11.4)||Math.floor(t*2)%2===0?1:0);
+  setH(R.tmode,t>=90?'⏵⏵ accept edits on':'');
+}
+
+function renderCtx(t){
+  const call=t>=95?3:t>=74?2:1;
+  setH(R.ctxN,`第 ${call} 次调用的输入`);
+  css(R.ctxN,'color',(t>=74&&t<75.5)||(t>=95&&t<96.5)?'#B9583A':'');
+  let y=272,total=0,user=0;const landed=[];
+  for(const b of BL){
+    if(t<b.tIn){css(b.el,'opacity',0);continue;}
+    const cp=b.tCol?ease(seg(t,b.tCol,b.tCol+.9)):0;
+    const h=lerp(b.h,34,cp);
+    const slot={x:656,y,w:488};
+    const fp=ease(seg(t,b.tIn,b.tIn+1.05));
+    const s=SRC[b.f];const sc=lerp(s.w/488,1,fp);
+    const x=lerp(s.x,slot.x,fp),yy=lerp(s.y,slot.y,fp)-Math.sin(Math.PI*fp)*50;
+    css(b.el,'transform',`translate(${x}px,${yy}px) scale(${sc})`);
+    css(b.el,'height',h+'px');css(b.el,'opacity',seg(t,b.tIn,b.tIn+.25));
+    css(b.el,'boxShadow',fp<1?`0 ${20*Math.sin(Math.PI*fp)}px 40px -16px rgba(60,40,20,${.45*Math.sin(Math.PI*fp)})`:'none');
+    css(b.el,'zIndex',fp<1?5:1);
+    css(b.body,'opacity',1-cp);
+    if(b.u){b.slotY=yy;b.slotX=x;}
+    y+=h+7;
+    const v=b.tok*eo(seg(t,b.tIn+.6,b.tIn+1.4));total+=v;if(b.u)user+=v;landed.push([b,v]);
+  }
+  BL.forEach(b=>{const v=(landed.find(l=>l[0]===b)||[0,0])[1];css(b.bar,'width',total?(v/total*100)+'%':'0');});
+  setH(R.tokN,`约 ${fmt(total)}<small>词元（示意）</small>`);
+  setH(R.tokS,user>0?`你的那句话只占 <b>${(user/total*100).toFixed(2)}%</b>`:'');
+  // callout
+  const co=seg(t,32,32.5)*(1-seg(t,43.5,44));
+  css(R.callout,'opacity',co);
+  if(co>0){const ub=BL[5];css(R.callout,'transform',`translate(${ub.slotX+24}px,${ub.slotY-52+(1-eo(seg(t,32,32.6)))*10}px)`);}
+}
+
+function renderModel(t){
+  let c=null;for(const x of CALLS)if(t>=x.r0)c=x;
+  // pill
+  let st='',lab='等待输入';
+  if(c){if(t<c.g0){st='read';lab='读取上下文';}else if(t<c.stop){st='gen';lab='逐个生成词元';}
+    else if(c.end==='tool_use'){st='wait';lab='暂停 · 等待工具结果';}else{st='end';lab='本轮结束';}}
+  R.pill.className='pill '+st;setH(R.pill,`<i></i><span>${lab}</span>`);
+  // spark motion
+  let spin=t*6;for(const x of CALLS){spin+=90*clamp(t-x.r0,0,x.stop-x.r0);}
+  const pulse=st==='gen'?1+.06*Math.sin(t*10):st==='read'?1+.03*Math.sin(t*5):1;
+  css(spark,'transform',`rotate(${spin}deg) scale(${pulse})`);
+  // ribbon
+  const rt=c&&t<c.g0?(t-c.r0):(c?c.g0-c.r0:0);
+  css(rtrack,'transform',`translateX(${-((rt*140)%900)}px)`);
+  css(rtrack,'opacity',c?1:.35);
+  // output
+  setH(R.outL,c?`第 ${c.n} 次调用 · 输出`:'输出');
+  let h='',cur=false;
+  if(!c)h='<div class="ph2">还没有收到输入</div>';
+  else if(t<c.g0)h=`<div class="ph2">正在读取整份上下文${'.'.repeat(1+Math.floor(t*3)%3)}</div>`;
+  else if(c.n===1){h=`<div class="txt">${typed(OUT1T,nType(OUT1T,t,44.5,46.6))}</div>`;
+    if(t>=49.5)h+=`<div class="json">${typed(J1,nType(J1,t,49.5,53.0))}${t<53?'<span class="cur"></span>':''}</div>`;
+    cur=t<46.6;}
+  else if(c.n===2){h=`<div class="json">${typed(J2,nType(J2,t,84.3,89.0))}${t<89?'<span class="cur"></span>':''}</div>`;}
+  else {h=`<div class="txt">${typed(OUT3,nType(OUT3,t,100.3,106.0))}${t<106?'<span class="cur"></span>':''}</div>`;}
+  if(cur)h=h.replace(/<\/div>$/,'<span class="cur"></span></div>');
+  setH(R.oc,h);
+  // stop badge
+  if(c&&t>=c.stop){setH(R.stop,`stop_reason: "${c.end}"`);R.stop.className='stop '+(c.end==='tool_use'?'tu':'et');css(R.stop,'opacity',eo(seg(t,c.stop,c.stop+.4)));}
+  else css(R.stop,'opacity',0);
+  // candidate bars
+  const bo=seg(t,47.2,47.6)*(1-seg(t,49.1,49.5));css(R.bars,'opacity',bo);
+  [82,11,4].forEach((w,i)=>css(R.barF[i],'width',(w*eo(seg(t,47.4+i*.12,48.4+i*.12)))+'%'));
+}
+
+function renderHarn(t){
+  const cy=t>=CYC[1].from?CYC[1]:CYC[0];
+  R.steps.forEach((el,i)=>{const [a,b]=cy.s[i];let cls='step';
+    if(t>=cy.from){if(t>=b){cls+=' done';}else if(t>=a)cls+=' act';}
+    if(el.className!==cls){el.className=cls;el.querySelector('i').textContent=cls.includes('done')?'✓':'';}});
+  let n='';for(const [a,s] of HN)if(t>=a)n=s;setH(R.hnote,n);
+}
+
+function renderEnv(t){
+  let h='';for(const [a,s] of SH){if(t<a)continue;
+    if(s==='PROG'){const p=seg(t,64.4,67.5);const k=Math.round(p*16);h+=`<div class="em">转写中 ${'█'.repeat(k)}${'░'.repeat(16-k)} ${Math.round(p*100)}%</div>`;}else h+=s;}
+  setH(R.shell,h);R.shell.scrollTop=R.shell.scrollHeight;
+  const md=t>=20.6&&t<22.6;R.fMd.classList.toggle('hl',md);css(R.bMd,'display',md?'':'none');
+  const wv=t>=63.8&&t<67.6;R.fWav.classList.toggle('hl',wv);css(R.bWav,'display',wv?'':'none');
+  css(R.bWav,'opacity',wv?.6+.4*Math.sin(t*8):1);
+  const nt=seg(t,93.3,93.8);css(R.fNote,'opacity',nt);css(R.fNote,'display',nt>0?'':'none');R.fNote.classList.toggle('nw',nt>0);
+}
+
+function renderFly(t){
+  for(const f of FL){const [a,b,fr,to]=f;const el=f.el;
+    if(t<a||t>b+.35){css(el,'opacity',0);continue;}
+    const p=ease(seg(t,a,b));const x=lerp(fr[0],to[0],p),y=lerp(fr[1],to[1],p)-Math.sin(Math.PI*p)*60;
+    css(el,'transform',`translate(${x}px,${y}px) scale(${1+.08*Math.sin(Math.PI*p)})`);
+    css(el,'opacity',seg(t,a,a+.15)*(1-seg(t,b+.05,b+.35)));}
+  // token stream
+  let w=null;for(const x of TKW)if(t>=x[0]&&t<x[1])w=x;
+  TK.forEach((k,i)=>{if(!w){css(k.el,'opacity',0);return;}
+    const loc=t-w[0],cyc=1.5,off=i/TKN*cyc;
+    if(loc<off){css(k.el,'opacity',0);return;}
+    const p=((loc-off)/cyc)%1;const born=w[0]+off+Math.floor((loc-off)/cyc)*cyc;
+    if(born>w[1]-cyc){css(k.el,'opacity',0);return;}
+    const e=ease(p);const x=lerp(1090,1330,e),y=lerp(k.y,300,eo(Math.min(1,p*1.7)));
+    css(k.el,'transform',`translate(${x}px,${y}px) scale(${lerp(1,.85,e)})`);css(k.el,'opacity',Math.min(1,p*6)*(1-seg(p,.8,1)));});
+}
+
+const LP=$('#pLoop'),LE=$('#pExit');const LPL=LP.getTotalLength(),LEL=LE.getTotalLength();
+const EDG=[...document.querySelectorAll('#loop .ed')].map(e=>{const L=e.getTotalLength();e.style.strokeDasharray=L;return [e,L];});
+const NDS=['#nA','#nB','#nD','#nG','#nE','#nF'].map(s=>$(s));
+function renderSum(t){
+  const o=eo(seg(t,112,113.2));css(R.sum,'opacity',o);css(R.sum,'display',o<=0?'none':'block');
+  if(o<=0)return;
+  NDS.forEach((n,i)=>{const p=eo(seg(t,112.6+i*.25,113.3+i*.25));n.style.opacity=p;n.style.transform=`translateY(${(1-p)*14}px)`;});
+  EDG.forEach(([e,L],i)=>{e.style.strokeDashoffset=L*(1-ease(seg(t,114+i*.3,114.8+i*.3)));});
+  // dot: two loops then exit
+  const L1=[116.5,120.5],L2=[120.8,124.8],X=[125.1,127.6];
+  let pt,lab;const dot=$('#dot'),dg=$('#dotG'),dl=$('#dotLab');
+  if(t<L2[0]){const p=ease(seg(t,...L1));pt=LP.getPointAtLength(LPL*p);lab=1;}
+  else if(t<X[0]){const p=ease(seg(t,...L2));pt=LP.getPointAtLength(LPL*p);lab=2;}
+  else {const p=ease(seg(t,...X));pt=LE.getPointAtLength(LEL*p);lab=3;}
+  const dO=seg(t,116,116.5)*(1-seg(t,127.8,128.4));[dot,dg].forEach(d=>{d.setAttribute('cx',pt.x);d.setAttribute('cy',pt.y);d.style.opacity=dO*(d===dg?.4:1);});
+  dl.setAttribute('transform',`translate(${pt.x},${pt.y})`);dl.style.opacity=dO;$('#dotT').textContent=`第 ${lab} 次调用`;
+  // edges lit by dot
+  ['e1','e2'].forEach(id=>$('#'+id).classList.toggle('c',t>=116.5));
+  ['e4','e5','e6'].forEach(id=>$('#'+id).classList.toggle('c',t>=118&&t<125.1));
+  $('#e3').classList.toggle('c',t>=126.5);
+  $('#nG').style.filter=t>=127.4?'drop-shadow(0 8px 20px rgba(217,119,87,.35))':'';
+  $('#loopTxt').style.opacity=seg(t,119.5,120.2);
+  // stats
+  const calls=t>=125.1+.6?3:t>=120.8?2:t>=116.5?1:0;const tools=(t>=118.3?1:0)+(t>=122.6?1:0);
+  $('#s1').textContent=calls;$('#s2').textContent=tools;
+  ['#ta0','#ta1','#ta2'].forEach((s,i)=>{const p=eo(seg(t,128+i*.9,128.8+i*.9));const e=$(s);e.style.opacity=p;e.style.transform=`translateX(${(1-p)*24}px)`;});
+  $('.stats').style.opacity=eo(seg(t,113.5,114.5));
+}
+
+/* ================= player ================= */
+let T=0,playing=true,rate=1,last=null,stopCh=false;
+const q=new URLSearchParams(location.search);if(q.has('t')){T=+q.get('t');playing=q.has('play');}
+const RATES=[.75,1,1.25,1.5];
+const track=$('#track');
+CH.forEach(c=>{if(!c.t)return;const d=document.createElement('div');d.className='tick';d.style.left=(c.t/END*100)+'%';d.innerHTML=`<span>${c.n}</span>`;track.appendChild(d);});
+function ui(){const p=T/END*100;$('#fill').style.width=p+'%';$('#knob').style.left=p+'%';
+  const m=s=>`${String(Math.floor(s/60)).padStart(2,'0')}:${String(Math.floor(s%60)).padStart(2,'0')}`;
+  setH($('#time'),`${m(T)} / ${m(END)}`);setH($('#chName'),CH[chIdx(T)].n);setH($('#play'),playing?'❚❚':'▶');}
+function frame(now){const dt=last==null?0:Math.min(.1,(now-last)/1000);last=now;
+  if(playing){const prev=T;T=Math.min(END,T+dt*rate);
+    if(stopCh){const b=CH.find(c=>c.t>prev+1e-6&&c.t<=T);if(b&&b.t>6){T=b.t;playing=false;}}
+    if(T>=END)playing=false;}
+  render(T);ui();requestAnimationFrame(frame);}
+function seek(t){T=clamp(t,0,END);}
+function jump(d){const i=chIdx(T);const cur=CH[i].t;
+  if(d<0&&T-cur>1.5)seek(cur);else seek(CH[clamp(i+d,0,CH.length-1)].t);playing=true;}
+$('#play').onclick=()=>{if(T>=END)T=0;playing=!playing;};
+$('#prev').onclick=()=>jump(-1);$('#next').onclick=()=>jump(1);
+$('#spd').onclick=e=>{rate=RATES[(RATES.indexOf(rate)+1)%RATES.length];e.target.textContent=rate+'×';};
+$('#stopCh').onclick=e=>{stopCh=!stopCh;e.target.classList.toggle('on',stopCh);};
+$('#fs').onclick=()=>{document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();};
+document.addEventListener('fullscreenchange',()=>document.body.classList.toggle('fs',!!document.fullscreenElement));
+let drag=false;const sk=e=>{const r=track.getBoundingClientRect();seek((e.clientX-r.left)/r.width*END);};
+track.addEventListener('pointerdown',e=>{drag=true;track.setPointerCapture(e.pointerId);sk(e);});
+track.addEventListener('pointermove',e=>{if(drag)sk(e);});
+track.addEventListener('pointerup',()=>drag=false);
+document.addEventListener('keydown',e=>{
+  if(e.code==='Space'){e.preventDefault();$('#play').click();}
+  else if(e.key==='ArrowRight')jump(1);else if(e.key==='ArrowLeft')jump(-1);
+  else if(e.key==='f'||e.key==='F')$('#fs').click();});
+function fit(){const W=innerWidth,H=innerHeight-(document.body.classList.contains('fs')?0:64);
+  const s=Math.min(W/1920,H/1080);const st=$('#stage');st.style.transform=`scale(${s})`;
+  st.style.left=((W-1920*s)/2)+'px';st.style.top=((H-1080*s)/2)+'px';}
+addEventListener('resize',fit);document.addEventListener('fullscreenchange',fit);fit();
+window.seek=t=>{seek(t);playing=false;render(T);ui();};
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

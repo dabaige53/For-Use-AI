@@ -1,0 +1,809 @@
+{
+  "scope_seconds": 159,
+  "fps": 30,
+  "size": [
+    1920,
+    1080
+  ],
+  "audio": true,
+  "source_video": "../../PPT/assets/video_io.mp4",
+  "source_render_report": "生成/1080p-20261009-final/verification.json",
+  "shots": [
+    {
+      "scene": "FirstInput",
+      "file": "FirstInput.mp4",
+      "start": 0,
+      "end": 42.5,
+      "source_in": 0,
+      "source_out": 42.5,
+      "audio": null,
+      "cues": [
+        {
+          "key": "01.1",
+          "time": 0,
+          "text": "教学示例：第一次提问"
+        },
+        {
+          "key": "01.2",
+          "time": 3.8,
+          "text": "一句话之外，程序还可以组织其他输入"
+        },
+        {
+          "key": "01.4",
+          "time": 8.5,
+          "text": "用户消息 · 教学示例"
+        },
+        {
+          "key": "01.5",
+          "time": 12.7,
+          "text": "系统指令 · 教学示例"
+        },
+        {
+          "key": "01.6",
+          "time": 16.9,
+          "text": "路径已经进入输入，录音内容还没有"
+        },
+        {
+          "key": "01.7",
+          "time": 21.7,
+          "text": "工具定义：告诉模型可以请求什么操作"
+        },
+        {
+          "key": "01.8",
+          "time": 25.7,
+          "text": "inputSchema 描述参数结构（原定义局部）"
+        },
+        {
+          "key": "01.9",
+          "time": 28.5,
+          "text": "file_path 是字符串，表示文件路径"
+        },
+        {
+          "key": "01.10",
+          "time": 31.7,
+          "text": "required 与 properties 同级；只有 file_path 必填"
+        },
+        {
+          "key": "01.11",
+          "time": 35.5,
+          "text": "另外三个参数为可选字符串"
+        },
+        {
+          "key": "01.12",
+          "time": 40.1,
+          "text": "首次输入：四种来源，边界保留"
+        }
+      ],
+      "media": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "mime_codec_string": "avc1.640028",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "has_b_frames": 2,
+            "pix_fmt": "yuv420p",
+            "level": 40,
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "30/1",
+            "avg_frame_rate": "30/1",
+            "time_base": "1/15360",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 652800,
+            "duration": "42.500000",
+            "bit_rate": "245606",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "1275",
+            "extradata_size": 47,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "VideoHandler",
+              "encoder": "Lavc62.28.101 libx264"
+            }
+          }
+        ],
+        "format": {
+          "filename": "/Users/w/code/For-Use-AI/Course/03-信息输入与工具执行/AI的输入与输出/生成/1080p-20261009-final/FirstInput.mp4",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "format_long_name": "QuickTime / MOV",
+          "start_time": "0.000000",
+          "duration": "42.500000",
+          "size": "1320482",
+          "bit_rate": "248561",
+          "probe_score": 100,
+          "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf62.12.101"
+          }
+        }
+      },
+      "decode": "passed"
+    },
+    {
+      "scene": "GenerateExecute",
+      "file": "GenerateExecute.mp4",
+      "start": 42.5,
+      "end": 90.466667,
+      "source_in": 0,
+      "source_out": 47.966667,
+      "audio": null,
+      "cues": [
+        {
+          "key": "02.1",
+          "time": 0,
+          "text": "先把具体内容组合成一次完整输入"
+        },
+        {
+          "key": "02.input.1",
+          "time": 1.7,
+          "text": "用户消息先放进来"
+        },
+        {
+          "key": "02.input.2",
+          "time": 4.233,
+          "text": "接上系统指令"
+        },
+        {
+          "key": "02.input.3",
+          "time": 6.767,
+          "text": "接上环境：此时只有录音路径"
+        },
+        {
+          "key": "02.input.4",
+          "time": 9.3,
+          "text": "再接上工具定义；四部分共同构成首次输入"
+        },
+        {
+          "key": "02.input.whole",
+          "time": 13.633,
+          "text": "这些内容组成同一次输入，整体提供给模型"
+        },
+        {
+          "key": "02.3",
+          "time": 22.167,
+          "text": "模型正在生成消息；此时还没有读取录音"
+        },
+        {
+          "key": "02.4",
+          "time": 22.967,
+          "text": "先生成工具名称"
+        },
+        {
+          "key": "02.5",
+          "time": 24.367,
+          "text": "再生成 file_path；路径仍然只是参数"
+        },
+        {
+          "key": "02.6",
+          "time": 27.367,
+          "text": "假设参数：large、zh、timestamps"
+        },
+        {
+          "key": "02.7",
+          "time": 30.567,
+          "text": "完整的工具调用消息，是模型的一种输出"
+        },
+        {
+          "key": "02.8",
+          "time": 32.567,
+          "text": "程序接收模型输出"
+        },
+        {
+          "key": "02.9",
+          "time": 34.167,
+          "text": "程序识别消息类型，再选择执行分支"
+        },
+        {
+          "key": "02.10",
+          "time": 36.467,
+          "text": "程序选择 transcribe_audio，传递参数"
+        },
+        {
+          "key": "02.11",
+          "time": 39.067,
+          "text": "程序触发执行后，工具才读取录音（模拟）"
+        },
+        {
+          "key": "02.12",
+          "time": 42.767,
+          "text": "工具返回结果，先交给程序"
+        }
+      ],
+      "media": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "mime_codec_string": "avc1.640028",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "has_b_frames": 2,
+            "pix_fmt": "yuv420p",
+            "level": 40,
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "30/1",
+            "avg_frame_rate": "30/1",
+            "time_base": "1/15360",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 736768,
+            "duration": "47.966667",
+            "bit_rate": "283409",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "1439",
+            "extradata_size": 47,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "VideoHandler",
+              "encoder": "Lavc62.28.101 libx264"
+            }
+          }
+        ],
+        "format": {
+          "filename": "/Users/w/code/For-Use-AI/Course/03-信息输入与工具执行/AI的输入与输出/生成/1080p-20261009-final/GenerateExecute.mp4",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "format_long_name": "QuickTime / MOV",
+          "start_time": "0.000000",
+          "duration": "47.966667",
+          "size": "1716307",
+          "bit_rate": "286249",
+          "probe_score": 100,
+          "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf62.12.101"
+          }
+        }
+      },
+      "decode": "passed"
+    },
+    {
+      "scene": "ReturnAnswer",
+      "file": "ReturnAnswer.mp4",
+      "start": 90.466667,
+      "end": 159.0,
+      "source_in": 0,
+      "source_out": 68.533333,
+      "audio": null,
+      "cues": [
+        {
+          "key": "03.1",
+          "time": 0,
+          "text": "程序收到返回的工具结果"
+        },
+        {
+          "key": "03.2",
+          "time": 2.4,
+          "text": "请求记录与工具结果都要保留"
+        },
+        {
+          "key": "03.3",
+          "time": 4.4,
+          "text": "程序把工具结果对应到这次请求"
+        },
+        {
+          "key": "03.4",
+          "time": 6.7,
+          "text": "程序组织下一次输入，保留每项内容的边界"
+        },
+        {
+          "key": "03.5",
+          "time": 10.767,
+          "text": "加入完整的请求记录"
+        },
+        {
+          "key": "03.6",
+          "time": 13.667,
+          "text": "加入与请求对应的工具结果"
+        },
+        {
+          "key": "03.7",
+          "time": 16.567,
+          "text": "完整输入：原有信息、请求记录、工具结果"
+        },
+        {
+          "key": "03.8",
+          "time": 18.367,
+          "text": "第 2 次调用：用户没有重新提问"
+        },
+        {
+          "key": "03.input.1",
+          "time": 20.567,
+          "text": "用户消息先放进来"
+        },
+        {
+          "key": "03.input.2",
+          "time": 23.1,
+          "text": "接上系统指令"
+        },
+        {
+          "key": "03.input.3",
+          "time": 25.633,
+          "text": "接上环境：此时只有录音路径"
+        },
+        {
+          "key": "03.input.4",
+          "time": 28.167,
+          "text": "原有四部分继续保留，接下来追加两条记录"
+        },
+        {
+          "key": "03.input.5",
+          "time": 32.5,
+          "text": "二次输入再接上模型生成的调用记录"
+        },
+        {
+          "key": "03.input.6",
+          "time": 36.433,
+          "text": "接上同一 call_id 的工具结果，组成更新后的完整输入"
+        },
+        {
+          "key": "03.input.whole",
+          "time": 39.567,
+          "text": "这些内容组成同一次输入，整体提供给模型"
+        },
+        {
+          "key": "03.9",
+          "time": 46.9,
+          "text": "调用后保留本次输入的缩略图，含请求与结果"
+        },
+        {
+          "key": "03.10",
+          "time": 50.767,
+          "text": "模型依据返回内容，生成给人的回答"
+        },
+        {
+          "key": "03.11",
+          "time": 56.433,
+          "text": "程序把回答交给用户阅读"
+        },
+        {
+          "key": "03.12",
+          "time": 61.333,
+          "text": "用户问了一次，模型调用了两次。"
+        }
+      ],
+      "media": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "mime_codec_string": "avc1.640028",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "has_b_frames": 2,
+            "pix_fmt": "yuv420p",
+            "level": 40,
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "30/1",
+            "avg_frame_rate": "30/1",
+            "time_base": "1/15360",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 1052672,
+            "duration": "68.533333",
+            "bit_rate": "287033",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "2056",
+            "extradata_size": 47,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "VideoHandler",
+              "encoder": "Lavc62.28.101 libx264"
+            }
+          }
+        ],
+        "format": {
+          "filename": "/Users/w/code/For-Use-AI/Course/03-信息输入与工具执行/AI的输入与输出/生成/1080p-20261009-final/ReturnAnswer.mp4",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "format_long_name": "QuickTime / MOV",
+          "start_time": "0.000000",
+          "duration": "68.533333",
+          "size": "2482712",
+          "bit_rate": "289810",
+          "probe_score": 100,
+          "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf62.12.101"
+          }
+        }
+      },
+      "decode": "passed"
+    }
+  ],
+  "narration": {
+    "voice_id": "Chinese (Mandarin)_Radio_Host",
+    "model": "speech-2.8-hd",
+    "segments": [
+      {
+        "id": "VO01",
+        "start": 0,
+        "end": 8.5,
+        "text": "用户提出一个请求：把本地录音整理成会议纪要。一句话之外，程序还可以组织其他输入。"
+      },
+      {
+        "id": "VO02",
+        "start": 8.5,
+        "end": 21.7,
+        "text": "用户消息说明任务，系统指令规定回答方式。环境信息提供录音路径。注意，路径已经进入输入，录音内容还没有。"
+      },
+      {
+        "id": "VO03",
+        "start": 21.7,
+        "end": 40.1,
+        "text": "工具定义告诉模型，可以请求什么操作。输入结构说明参数格式：文件路径是必填字符串，另外三个参数可选。它们描述工具怎么用，并没有执行工具。"
+      },
+      {
+        "id": "VO04",
+        "start": 40.1,
+        "end": 42.5,
+        "text": "四种来源，共同组成首次输入。"
+      },
+      {
+        "id": "VO05",
+        "start": 42.5,
+        "end": 56.133,
+        "text": "先放入用户消息，再接上系统指令、环境信息和工具定义。四部分共同组成一次完整输入。"
+      },
+      {
+        "id": "VO06",
+        "start": 56.133,
+        "end": 64.667,
+        "text": "程序把这次输入整体提供给模型。模型依据这些信息，生成下一条消息。"
+      },
+      {
+        "id": "VO07",
+        "start": 64.667,
+        "end": 73.067,
+        "text": "模型先生成工具名称，再生成录音路径和其他参数。此时，工具还没有读取录音。"
+      },
+      {
+        "id": "VO08",
+        "start": 73.067,
+        "end": 81.567,
+        "text": "这是一条完整的工具调用消息，也是模型的一种输出。程序接收它，识别消息类型，再选择执行分支。"
+      },
+      {
+        "id": "VO09",
+        "start": 81.567,
+        "end": 90.467,
+        "text": "程序选择音频转写工具，传递参数。执行被触发后，工具才读取录音，再把结果交回程序。这里展示的是模拟过程。"
+      },
+      {
+        "id": "VO10",
+        "start": 90.467,
+        "end": 97.167,
+        "text": "程序收到工具结果。请求记录和返回结果都要保留，并对应到同一次调用。"
+      },
+      {
+        "id": "VO11",
+        "start": 97.167,
+        "end": 108.833,
+        "text": "程序组织下一次输入，保留原有信息的边界，再加入完整的请求记录，以及与请求对应的工具结果。"
+      },
+      {
+        "id": "VO12",
+        "start": 108.833,
+        "end": 122.967,
+        "text": "用户没有重新提问，程序却发起了第二次模型调用。原来的用户消息、系统指令、环境信息和工具定义继续保留。"
+      },
+      {
+        "id": "VO13",
+        "start": 122.967,
+        "end": 130.034,
+        "text": "接着加入模型生成的调用记录，再接上同一个调用编号对应的工具结果。"
+      },
+      {
+        "id": "VO14",
+        "start": 130.034,
+        "end": 141.234,
+        "text": "原有信息和两条新记录，组成更新后的完整输入。程序把它整体提供给模型，随后保留这次输入的缩略图。"
+      },
+      {
+        "id": "VO15",
+        "start": 141.234,
+        "end": 146.9,
+        "text": "模型依据返回内容，生成给用户阅读的回答。"
+      },
+      {
+        "id": "VO16",
+        "start": 146.9,
+        "end": 151.8,
+        "text": "程序再把这段回答交给用户。"
+      },
+      {
+        "id": "VO17",
+        "start": 151.8,
+        "end": 159,
+        "text": "用户只问了一次，模型调用了两次。工具结果进入上下文，模型才能依据它继续回答。"
+      }
+    ],
+    "rendered_segments": [
+      {
+        "id": "VO01",
+        "start": 0,
+        "end": 8.5,
+        "audio": "生成/配音/VO01.mp3",
+        "raw_seconds": 7.755469,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 7.74528125
+      },
+      {
+        "id": "VO02",
+        "start": 8.5,
+        "end": 21.7,
+        "audio": "生成/配音/VO02.mp3",
+        "raw_seconds": 9.589844,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 9.58415625
+      },
+      {
+        "id": "VO03",
+        "start": 21.7,
+        "end": 40.1,
+        "audio": "生成/配音/VO03.mp3",
+        "raw_seconds": 12.493469,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 12.4845625
+      },
+      {
+        "id": "VO04",
+        "start": 40.1,
+        "end": 42.5,
+        "audio": "生成/配音/VO04.mp3",
+        "raw_seconds": 2.322,
+        "speed": 1.21,
+        "local_tempo": 1,
+        "spoken_seconds": 2.30853125
+      },
+      {
+        "id": "VO05",
+        "start": 42.5,
+        "end": 56.133,
+        "audio": "生成/配音/VO05.mp3",
+        "raw_seconds": 8.614625,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 8.60234375
+      },
+      {
+        "id": "VO06",
+        "start": 56.133,
+        "end": 64.667,
+        "audio": "生成/配音/VO06.mp3",
+        "raw_seconds": 5.375438,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 5.36859375
+      },
+      {
+        "id": "VO07",
+        "start": 64.667,
+        "end": 73.067,
+        "audio": "生成/配音/VO07.mp3",
+        "raw_seconds": 7.929625,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 7.923875
+      },
+      {
+        "id": "VO08",
+        "start": 73.067,
+        "end": 81.567,
+        "audio": "生成/配音/VO08.mp3",
+        "raw_seconds": 8.486906,
+        "speed": 1,
+        "local_tempo": 1.0031803782505908,
+        "spoken_seconds": 8.43671875
+      },
+      {
+        "id": "VO09",
+        "start": 81.567,
+        "end": 90.467,
+        "audio": "生成/配音/VO09.mp3",
+        "raw_seconds": 8.254719,
+        "speed": 1.27,
+        "local_tempo": 1,
+        "spoken_seconds": 8.24625
+      },
+      {
+        "id": "VO10",
+        "start": 90.467,
+        "end": 97.167,
+        "audio": "生成/配音/VO10.mp3",
+        "raw_seconds": 6.78025,
+        "speed": 1,
+        "local_tempo": 1.018055555555555,
+        "spoken_seconds": 6.652875
+      },
+      {
+        "id": "VO11",
+        "start": 97.167,
+        "end": 108.833,
+        "audio": "生成/配音/VO11.mp3",
+        "raw_seconds": 8.486906,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 8.48
+      },
+      {
+        "id": "VO12",
+        "start": 108.833,
+        "end": 122.967,
+        "audio": "生成/配音/VO12.mp3",
+        "raw_seconds": 9.206719,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 9.2005
+      },
+      {
+        "id": "VO13",
+        "start": 122.967,
+        "end": 130.034,
+        "audio": "生成/配音/VO13.mp3",
+        "raw_seconds": 5.456719,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 5.45221875
+      },
+      {
+        "id": "VO14",
+        "start": 130.034,
+        "end": 141.234,
+        "audio": "生成/配音/VO14.mp3",
+        "raw_seconds": 8.951313,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 8.94659375
+      },
+      {
+        "id": "VO15",
+        "start": 141.234,
+        "end": 146.9,
+        "audio": "生成/配音/VO15.mp3",
+        "raw_seconds": 3.274031,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 3.26965625
+      },
+      {
+        "id": "VO16",
+        "start": 146.9,
+        "end": 151.8,
+        "audio": "生成/配音/VO16.mp3",
+        "raw_seconds": 1.962094,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 1.95171875
+      },
+      {
+        "id": "VO17",
+        "start": 151.8,
+        "end": 159,
+        "audio": "生成/配音/VO17.mp3",
+        "raw_seconds": 7.116938,
+        "speed": 1,
+        "local_tempo": 1,
+        "spoken_seconds": 7.1045625
+      }
+    ],
+    "audio": "生成/配音/旁白.wav",
+    "subtitles": "生成/配音/字幕.srt",
+    "video": "生成/配音/AI的输入与输出-配音.mp4"
+  },
+  "subtitle_mode": "external_srt_and_switchable_mp4"
+}

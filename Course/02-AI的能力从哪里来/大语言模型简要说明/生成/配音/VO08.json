@@ -1,0 +1,28 @@
+{
+  "signature": "09599d3b68fbe09fa0bf57cf5c8d6a002d1e8ac91c35b8500787e1ca3639bca9",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "你可以把训练理解为：调节一台大型机器上的许多旋钮。语言模型的行为，完全由许多不同的连续数值决定。这些数值通常被称为“参数”或“权重”。",
+      "pronounce_text": "你可以把训练理解为：调节一台大型机器上的许多旋钮。语言模型的行为，完全由许多不同的连续数值决定。这些数值通常被称为“参数”或“权重”。",
+      "time_begin": 0.0,
+      "time_end": 13332.743764172337,
+      "text_begin": 0,
+      "text_end": 67,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 67,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 13500,
+    "audio_sample_rate": 32000,
+    "audio_size": 217716,
+    "bitrate": 128000,
+    "word_count": 67,
+    "invisible_character_ratio": 0,
+    "usage_characters": 125,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

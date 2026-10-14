@@ -1,6 +1,6 @@
 """Compose the audited 0–419s timeline from locally rendered scene layers.
 
-New renders use 480p30. This reads source media and writes only its selected output
+Formal renders use 1080p30 with the original timeline coordinates scaled. This reads source media and writes only its selected output
 folder. No source-video pixels, audio, burned captions or subtitle streams enter
 this reconstruction. Chinese display labels are part of the instructional image.
 """
@@ -19,9 +19,15 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parent
 COURSE = ROOT.parent
 FPS = 30
-SIZE = (854, 480)
-FONT = os.environ.get("COURSE_FONT", "NotoSansCJK-Regular.ttc")
+SIZE = (1920, 1080)
+BASE_SIZE = (854, 480)
+SCALE_X, SCALE_Y = SIZE[0] / BASE_SIZE[0], SIZE[1] / BASE_SIZE[1]
+FONT = os.environ.get("COURSE_FONT", str(Path.home() / "Library/Fonts/NotoSansCJK.ttc"))
 FONT_INDEX = int(os.environ.get("COURSE_FONT_INDEX", "0"))
+
+
+def scale_rect(rect):
+    return [v * (SCALE_X if i % 2 == 0 else SCALE_Y) for i, v in enumerate(rect)]
 
 
 def run(command: list[str]) -> None:
@@ -51,6 +57,7 @@ def prepare(layer: dict, count: int, cache: Path) -> Path:
             count,
             layer.get("crop"),
             layer.get("reverse"),
+            SIZE,
         ]
     )
     target = cache / (hashlib.sha256(signature.encode()).hexdigest()[:20] + ".mp4")
@@ -66,8 +73,8 @@ def prepare(layer: dict, count: int, cache: Path) -> Path:
         filters.append("reverse")
     filters += [
         f"setpts={(count / FPS) / duration}*PTS",
-        "scale=854:480:force_original_aspect_ratio=decrease",
-        "pad=854:480:(ow-iw)/2:(oh-ih)/2",
+        f"scale={SIZE[0]}:{SIZE[1]}:force_original_aspect_ratio=decrease",
+        f"pad={SIZE[0]}:{SIZE[1]}:(ow-iw)/2:(oh-ih)/2",
         "setsar=1",
         "fps=30",
         f"tpad=stop_mode=clone:stop_duration={count / FPS + 2}",
@@ -120,7 +127,7 @@ def render_shot(shot: dict, output: Path, cache: Path) -> None:
             container = av.open(str(normalized))
             spec.update(container=container, frames=iter(container.decode(video=0)))
         elif spec.get("text"):
-            spec["font"] = font(spec.get("font_size", 28))
+            spec["font"] = font(round(spec.get("font_size", 28) * SCALE_Y))
         layers.append(spec)
     with av.open(str(output), "w") as mux:
         stream = mux.add_stream("libx264", rate=FPS)
@@ -139,7 +146,7 @@ def render_shot(shot: dict, output: Path, cache: Path) -> None:
                     p = max(0, min(1, (t - move.get("at", 0)) / move["duration"]))
                     p = p * p * (3 - 2 * p)
                     rect = [a + (b - a) * p for a, b in zip(rect, move["to"])]
-                x, y, w, h = map(round, rect)
+                x, y, w, h = map(round, scale_rect(rect))
                 alpha = 1.0
                 if spec.get("fade_in"):
                     alpha = min(1, t / spec["fade_in"])
@@ -155,7 +162,7 @@ def render_shot(shot: dict, output: Path, cache: Path) -> None:
                         fill=spec.get("color", "white"),
                         anchor=spec.get("anchor", "mm"),
                         align="center",
-                        spacing=5,
+                        spacing=round(5 * SCALE_Y),
                     )
                     canvas = Image.blend(
                         canvas,
@@ -174,7 +181,7 @@ def render_shot(shot: dict, output: Path, cache: Path) -> None:
                                 f"Short source layer in {shot['id']} at frame {n}: {spec['source']}"
                             ) from exc
                     if spec.get("display_crop"):
-                        cx, cy, cw, ch = spec["display_crop"]
+                        cx, cy, cw, ch = map(round, scale_rect(spec["display_crop"]))
                         picture = picture.crop((cx, cy, cx + cw, cy + ch))
                     if spec.get("fit", True):
                         scale = min(w / picture.width, h / picture.height)
@@ -211,7 +218,7 @@ def render_shot(shot: dict, output: Path, cache: Path) -> None:
                         canvas.paste(picture, (x, y))
             if shot.get("divider"):
                 draw = ImageDraw.Draw(canvas)
-                draw.line(shot["divider"], fill="#666666", width=1)
+                draw.line(scale_rect(shot["divider"]), fill="#666666", width=round(SCALE_Y))
             frame = av.VideoFrame.from_image(canvas)
             frame.pts = n
             frame.time_base = Fraction(1, FPS)
@@ -308,11 +315,11 @@ def main() -> None:
             "30",
             "-movflags",
             "+faststart",
-            str(args.output / "mini-llm-zh-480p-0000-0659.mp4"),
+            str(args.output / "mini-llm-zh-1080p-0000-0659.mp4"),
         ]
     )
     print(
-        "Exported 419 seconds, 480p30, silent; subtitles remain external.", flush=True
+        "Exported 419 seconds, 1080p30, silent; subtitles remain external.", flush=True
     )
 
 

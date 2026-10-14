@@ -1,0 +1,28 @@
+{
+  "signature": "11cb2c876108b048a1182b3024ef29c18b04c457cf01b5c64e310dbe70fcf5fb",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "一年够吗？或许需要一万年？实际所需时间远不止这些。远远超过一亿年。不过，这还只是整个训练过程的一部分。",
+      "pronounce_text": "一年够吗？或许需要一万年？实际所需时间远不止这些。远远超过一亿年。不过，这还只是整个训练过程的一部分。",
+      "time_begin": 0.0,
+      "time_end": 11579.637188208617,
+      "text_begin": 0,
+      "text_end": 51,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 51,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 11736,
+    "audio_sample_rate": 32000,
+    "audio_size": 189492,
+    "bitrate": 128000,
+    "word_count": 51,
+    "invisible_character_ratio": 0,
+    "usage_characters": 96,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

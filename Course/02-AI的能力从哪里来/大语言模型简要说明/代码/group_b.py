@@ -83,7 +83,7 @@ import random
 import re
 import warnings
 
-DATA_DIR = Path(__file__).parent / "logs" / "group-b" / "data"
+DATA_DIR = Path(__file__).parent / "assets" / "data"
 WORD_FILE = DATA_DIR / "OWL3_Dictionary.txt"
 
 

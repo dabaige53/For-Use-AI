@@ -1,0 +1,28 @@
+{
+  "signature": "0ddd0616fbd00bc6d5df114d1fe4d6efe5d2a611ace5252592d779ae2bb4a8f1",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "工具定义告诉模型，可以请求什么操作。输入结构说明参数格式：文件路径是必填字符串，另外三个参数可选。它们描述工具怎么用，并没有执行工具。",
+      "pronounce_text": "工具定义告诉模型，可以请求什么操作。输入结构说明参数格式：文件路径是必填字符串，另外三个参数可选。它们描述工具怎么用，并没有执行工具。",
+      "time_begin": 0.0,
+      "time_end": 12392.33560090703,
+      "text_begin": 0,
+      "text_end": 67,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 67,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 12564,
+    "audio_sample_rate": 32000,
+    "audio_size": 202740,
+    "bitrate": 128000,
+    "word_count": 67,
+    "invisible_character_ratio": 0,
+    "usage_characters": 127,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "signature": "e3bb6ee327bf3929847289be17318d8116de62c1322613eca8a0581151cedcab",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "同样，这个预测会为每个可能的后续词给出一个概率。虽然研究人员设计了各个步骤的框架，但具体行为是训练中的涌现现象，取决于训练过程中如何调整数千亿个参数。",
+      "pronounce_text": "同样，这个预测会为每个可能的后续词给出一个概率。虽然研究人员设计了各个步骤的框架，但具体行为是训练中的涌现现象，取决于训练过程中如何调整数千亿个参数。",
+      "time_begin": 0.0,
+      "time_end": 14017.732426303855,
+      "text_begin": 0,
+      "text_end": 75,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 75,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 14184,
+    "audio_sample_rate": 32000,
+    "audio_size": 228660,
+    "bitrate": 128000,
+    "word_count": 75,
+    "invisible_character_ratio": 0,
+    "usage_characters": 145,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

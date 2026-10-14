@@ -1,0 +1,28 @@
+{
+  "signature": "1d561967e9a020dbff4803207c1ca551798adbfe9f12d4e72707c3773af9b3c7",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "这些文本通常来自互联网。以训练 GPT-3 所用的文本量为例，一个普通人要把它们全部读完，即使每天二十四小时不停地阅读，也需要超过两千六百年。此后出现的更大模型，训练所用的文本还要多得多。",
+      "pronounce_text": "这些文本通常来自互联网。以训练GPT三所用的文本量为例，一个普通人要把它们全部读完，即使每天二十四小时不停地阅读，也需要超过两千六百年。此后出现的更大模型，训练所用的文本还要多得多。",
+      "time_begin": 0.0,
+      "time_end": 15724.399092970521,
+      "text_begin": 0,
+      "text_end": 94,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 91,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 15876,
+    "audio_sample_rate": 32000,
+    "audio_size": 255732,
+    "bitrate": 128000,
+    "word_count": 94,
+    "invisible_character_ratio": 0,
+    "usage_characters": 174,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

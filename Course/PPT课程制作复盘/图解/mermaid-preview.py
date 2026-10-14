@@ -13,6 +13,7 @@ import hashlib
 import io
 import json
 import mimetypes
+import re
 import os
 from pathlib import Path
 import sys
@@ -297,12 +298,16 @@ def main():
     parser.add_argument("--open", action="store_true", help="启动后打开默认浏览器")
     parser.add_argument("--details", type=Path, help="节点材料 JSON，启用点击弹窗")
     parser.add_argument("--materials-root", type=Path, help="材料根目录，保留 HTML 与图片的相对引用")
+    parser.add_argument("--deck", type=Path, help="以 PPT 为首页，同时提供课程制作路径交互图")
     args = parser.parse_args()
     page = HTML
     details = None
     details_dir = None
     asset_paths = {}
     material_root = args.materials_root.expanduser().resolve() if args.materials_root else None
+    deck = args.deck.expanduser().resolve() if args.deck else None
+    if deck and (not deck.is_file() or not material_root or not deck.is_relative_to(material_root)):
+        parser.error("PPT 必须是材料根目录中的 HTML 文件")
     if args.details:
         details_dir = args.details.expanduser().resolve().parent
         material_root = material_root or details_dir
@@ -316,8 +321,16 @@ def main():
     for path in files:
         if not path.is_file():
             parser.error(f"文件不存在：{path}")
+    prerendered = False
+    if details and details_dir is not None and len(files) == 1:
+        svg_path = details_dir / "build/课程制作路径.svg"
+        digest_path = details_dir / "build/课程制作路径.sha256"
+        if svg_path.is_file() and digest_path.is_file() and digest_path.read_text().strip() == hashlib.sha256(files[0].read_bytes()).hexdigest():
+            page = page.replace('<div id="canvas"></div>', '<div id="canvas" data-state="ready">' + svg_path.read_text() + '</div>')
+            page = re.sub(r'<script type="module">.*?</script>', '', page, count=1, flags=re.S)
+            prerendered = True
     try:
-        roots = prepare_dependencies()
+        roots = {} if prerendered else prepare_dependencies()
     except Exception as error:
         parser.exit(1, f"依赖准备失败：{error}\n首次运行需要连接 npm；下载完成后可离线使用。\n")
 
@@ -391,6 +404,16 @@ def main():
             route = unquote(urlsplit(self.path).path)
             if route == "/favicon.ico":
                 return self.send(b"", "image/x-icon", 204)
+            if deck and material_root is not None and route == "/":
+                self.send_response(302)
+                self.send_header("Location", "/Course/" + quote(deck.relative_to(material_root).as_posix()))
+                self.end_headers()
+                return
+            if deck and material_root is not None and route.startswith("/Course/"):
+                path = (material_root / route.removeprefix("/Course/")).resolve()
+                if path.is_relative_to(material_root) and path.is_file():
+                    return self.send_file(path)
+                return self.send("Not found", "text/plain", 404)
             if route in ("/", "/mermaid"):
                 return self.send(page, "text/html; charset=utf-8")
             if details and details_dir is not None and route in ("/build/canvas.js", "/build/canvas.css"):
@@ -432,6 +455,10 @@ def main():
                     if path.is_relative_to(root) and path.is_file():
                         kind = "text/javascript" if path.suffix in (".mjs", ".js") else mimetypes.guess_type(path)[0] or "application/octet-stream"
                         return self.send(path.read_bytes(), kind)
+            if deck and material_root is not None:
+                path = (material_root / route.lstrip("/")).resolve()
+                if path.is_relative_to(material_root) and path.is_file():
+                    return self.send_file(path)
             self.send("Not found", "text/plain", 404)
 
     try:

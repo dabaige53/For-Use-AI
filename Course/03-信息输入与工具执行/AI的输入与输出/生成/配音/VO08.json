@@ -1,0 +1,28 @@
+{
+  "signature": "c9313c3ecd39a00e1a406cb007b0f4a3a2acc2b3beb7d9287c31088f0731b324",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "这是一条完整的工具调用消息，也是模型的一种输出。程序接收它，识别消息类型，再选择执行分支。",
+      "pronounce_text": "这是一条完整的工具调用消息，也是模型的一种输出。程序接收它，识别消息类型，再选择执行分支。",
+      "time_begin": 0.0,
+      "time_end": 8386.893424036281,
+      "text_begin": 0,
+      "text_end": 45,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 45,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 8532,
+    "audio_sample_rate": 32000,
+    "audio_size": 138228,
+    "bitrate": 128000,
+    "word_count": 45,
+    "invisible_character_ratio": 0,
+    "usage_characters": 85,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

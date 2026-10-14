@@ -1,0 +1,28 @@
+{
+  "signature": "7032dc2be4a974c53f4e56658053b10e55eebefd16a37795e72fe7d8d154789b",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "因此，要弄清模型为什么会做出这样的具体预测，极其困难。但你能看到：用大语言模型的预测自动续写一段提示词时，生成的文字流畅得令人惊讶，引人入胜，甚至还很有用。",
+      "pronounce_text": "因此，要弄清模型为什么会做出这样的具体预测，极其困难。但你能看到：用大语言模型的预测自动续写一段提示词时，生成的文字流畅得令人惊讶，引人入胜，甚至还很有用。",
+      "time_begin": 0.0,
+      "time_end": 14911.700680272108,
+      "text_begin": 0,
+      "text_end": 78,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 78,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 15048,
+    "audio_sample_rate": 32000,
+    "audio_size": 242484,
+    "bitrate": 128000,
+    "word_count": 78,
+    "invisible_character_ratio": 0,
+    "usage_characters": 148,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

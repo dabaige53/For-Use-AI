@@ -1,0 +1,28 @@
+{
+  "signature": "9a3e99ff95ae35073d07c1172ad117b65d2add46ecfb5f12db30f57343fc4f49",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "因为训练过程只能处理连续数值，所以必须用某种方式将语言编码为数字。每一串数字，都可能以某种方式编码着对应词语的含义。",
+      "pronounce_text": "因为训练过程只能处理连续数值，所以必须用某种方式将语言编码为数字。每一串数字，都可能以某种方式编码着对应词语的含义。",
+      "time_begin": 0.0,
+      "time_end": 10523.12925170068,
+      "text_begin": 0,
+      "text_end": 58,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 58,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 10692,
+    "audio_sample_rate": 32000,
+    "audio_size": 172788,
+    "bitrate": 128000,
+    "word_count": 58,
+    "invisible_character_ratio": 0,
+    "usage_characters": 112,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

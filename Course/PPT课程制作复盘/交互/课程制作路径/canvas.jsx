@@ -39,10 +39,28 @@ function attach(){
  };
  viewport.addEventListener('wheel',wheel,{passive:false});
  svg.addEventListener('panzoomstart',stop);
- svg.addEventListener('panzoomchange',()=>{document.getElementById('zoom').textContent=Math.round(panzoom.getScale()*100)+'%';window.dispatchEvent(new Event('canvas-moved'));});
+ const sizeArrows=()=>{const size=10/panzoom.getScale();svg.querySelectorAll('marker').forEach(marker=>{marker.setAttribute('markerUnits','userSpaceOnUse');marker.setAttribute('markerWidth',size);marker.setAttribute('markerHeight',size);});};
+ svg.addEventListener('panzoomchange',()=>{sizeArrows();document.getElementById('zoom').textContent=Math.round(panzoom.getScale()*100)+'%';window.dispatchEvent(new Event('canvas-moved'));});
+ const markersObserver=new MutationObserver(sizeArrows);markersObserver.observe(svg,{childList:true,subtree:true});sizeArrows();
  readSize=()=>{svg.style.width=width+'px';svg.style.height=height+'px';const selected=svg.querySelector('[aria-expanded="true"]');const r=selected?.getBoundingClientRect();zoom(1,r?{clientX:r.left+r.width/2,clientY:r.top+r.height/2}:center());};
  const status=document.getElementById('status');requestAnimationFrame(()=>requestAnimationFrame(()=>{fit(true);status.textContent='拖动平移 · 双指滑动平移 · 双指捏合 / Ctrl＋滚轮缩放 · 点击节点查看材料';}));
- cleanup=()=>{stop();viewport.removeEventListener('wheel',wheel);};
+ const focusSpeech=e=>{
+  const nodes=e.detail.ids.map(id=>svg.querySelector('[data-detail="'+id+'"]')).filter(Boolean);
+  const edges=[...svg.querySelectorAll('path.flowchart-link')].filter(p=>(e.detail.edges||[]).some(([from,to])=>p.id.startsWith(`L_${from}_${to}_`)));
+  const rects=[...nodes,...edges].map(n=>n.getBoundingClientRect());if(!rects.length)return;
+  const inverse=svg.getScreenCTM().inverse();
+  const points=rects.flatMap(r=>[new DOMPoint(r.left,r.top).matrixTransform(inverse),new DOMPoint(r.right,r.bottom).matrixTransform(inverse)]);
+  const left=Math.min(...points.map(p=>p.x)),right=Math.max(...points.map(p=>p.x)),top=Math.min(...points.map(p=>p.y)),bottom=Math.max(...points.map(p=>p.y));
+  const cx=(left+right)/2-svg.viewBox.baseVal.x,cy=(top+bottom)/2-svg.viewBox.baseVal.y;
+  const card=document.getElementById('detail-dialog');
+  const insetTop=24,cardWidth=card?.open?card.offsetWidth+28:0;
+  const availableWidth=Math.max(160,viewport.clientWidth-cardWidth-48),availableHeight=Math.max(120,viewport.clientHeight-insetTop-24);
+  const scale=Math.max(.08,Math.min(.95,availableWidth/(right-left+80),availableHeight/(bottom-top+80)));
+  stop();target={kind:'view',scale,x:(24+availableWidth/2)/scale-cx,y:(insetTop+availableHeight/2)/scale-cy};run();
+ };
+ window.addEventListener('speech-focus',focusSpeech);
+ const observer=new ResizeObserver(()=>fit(true));observer.observe(viewport);
+ cleanup=()=>{stop();markersObserver.disconnect();window.removeEventListener('speech-focus',focusSpeech);observer.disconnect();viewport.removeEventListener('wheel',wheel);};
 }
 document.addEventListener('mermaid-rendered',attach);
 if(document.querySelector('#canvas svg'))attach();

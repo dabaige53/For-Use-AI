@@ -1,0 +1,37 @@
+{
+  "version": "0.0.1",
+  "autoVerify": false,
+  "configurations": [
+    {
+      "name": "course-deck",
+      "runtimeExecutable": "/Users/w/miniforge3/envs/work/bin/python",
+      "runtimeArgs": [
+        "Course/PPT课程制作复盘/图解/mermaid-preview.py",
+        "Course/PPT课程制作复盘/图解/课程制作主路径.mmd",
+        "--details",
+        "Course/PPT课程制作复盘/交互/课程制作路径/节点材料.json",
+        "--materials-root",
+        "Course",
+        "--deck",
+        "Course/PPT/AI协作-动态幻灯片.html",
+        "--port",
+        "54160"
+      ],
+      "port": 54160
+    },
+    {
+      "name": "course-static",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "54171",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "Course"
+      ],
+      "port": 54171
+    }
+  ]
+}

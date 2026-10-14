@@ -1,0 +1,28 @@
+{
+  "signature": "3d52883f9908d24e0a4e8a6a87662491b6cc5c11f413a6e71f6053f2b6d80156",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "接着加入模型生成的调用记录，再接上同一个调用编号对应的工具结果。",
+      "pronounce_text": "接着加入模型生成的调用记录，再接上同一个调用编号对应的工具结果。",
+      "time_begin": 0.0,
+      "time_end": 5356.689342403628,
+      "text_begin": 0,
+      "text_end": 32,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 32,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 5508,
+    "audio_sample_rate": 32000,
+    "audio_size": 89844,
+    "bitrate": 128000,
+    "word_count": 32,
+    "invisible_character_ratio": 0,
+    "usage_characters": 62,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}

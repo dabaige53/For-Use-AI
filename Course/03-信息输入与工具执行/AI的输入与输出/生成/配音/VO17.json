@@ -1,0 +1,28 @@
+{
+  "signature": "54f4416caad332f2564b7b4ea15eccf78e03b01a5670c370e7a6f7aa4ada05b7",
+  "speed": 1,
+  "subtitles": [
+    {
+      "text": "用户只问了一次，模型调用了两次。工具结果进入上下文，模型才能依据它继续回答。",
+      "pronounce_text": "用户只问了一次，模型调用了两次。工具结果进入上下文，模型才能依据它继续回答。",
+      "time_begin": 0.0,
+      "time_end": 7016.916099773242,
+      "text_begin": 0,
+      "text_end": 38,
+      "pronounce_text_begin": 0,
+      "pronounce_text_end": 38,
+      "is_final_segment": true
+    }
+  ],
+  "usage": {
+    "audio_length": 7164,
+    "audio_sample_rate": 32000,
+    "audio_size": 116340,
+    "bitrate": 128000,
+    "word_count": 38,
+    "invisible_character_ratio": 0,
+    "usage_characters": 72,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  }
+}
