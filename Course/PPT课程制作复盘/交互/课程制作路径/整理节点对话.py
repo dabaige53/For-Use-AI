@@ -117,5 +117,25 @@ for k,rec in R.items():
  for msg in [m for section in rec.get('conversations',[{'messages':rec['messages']}]) for m in section['messages']]:
   for asset in msg['images']:assert manifest['assets'][asset]['kind']=='image'
   for asset in re.findall(r'\(asset:([^)]+)\)',msg['text']):assert asset in manifest['assets']
+
+# 2026-10 精简路径图：被合并节点的材料与对话并入保留节点（多线程切换显示）。
+MERGE={'T2':['T3'],'T4':['T5'],'V3':['V2'],'V5':['V4'],'S1':['S2','S3'],'V7':['V6'],'V8':['V9'],
+ 'W2':['W1','Q1','Q2','G1'],'W5':['G2'],'P2':['P1'],'P4':['P3'],'P7':['P6'],'P9':['P8'],'P10':['P11']}
+def merge_records(R):
+ for keep,gone in MERGE.items():
+  if keep not in R:continue
+  base=R[keep];secs=base.get('conversations') or [{'title':'制作讨论','messages':base.get('messages',[])}]
+  for i,sec in enumerate(secs):sec.setdefault('threadId','t0')
+  for j,g in enumerate(gone,1):
+   r=R.pop(g,None)
+   if not r:continue
+   for sec in (r.get('conversations') or [{'title':r.get('title',''),'messages':r.get('messages',[])}]):
+    secs.append({**sec,'threadId':'t%d'%j,'title':r.get('title',sec.get('title',''))})
+   for key in ('outputs','links'):
+    seen={json.dumps(x,ensure_ascii=False,sort_keys=True) for x in base.get(key,[])}
+    base.setdefault(key,[]).extend(x for x in r.get(key,[]) if json.dumps(x,ensure_ascii=False,sort_keys=True) not in seen)
+  base['conversations']=secs
+ return R
+R=merge_records(R)
 (OUT/'节点对话.json').write_text(json.dumps(R,ensure_ascii=False,indent=2)+'\n')
 print(f'{len(R)} explicit node records with rewritten dialogue')

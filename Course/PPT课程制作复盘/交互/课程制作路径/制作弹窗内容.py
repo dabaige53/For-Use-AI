@@ -65,7 +65,7 @@ asset('animationCode','输入输出动画 · 场景代码','Course/03-信息输�
 asset('pageMap','课件页面与素材对应','Course/PPT课程制作复盘/页面与素材对应.md','text')
 N={}
 def node(k,summary,takeaway,assets):
- N[k]={'title':titles[k],'summary':summary,'takeaway':takeaway,'materials':assets.split()}
+ N[k]={'title':titles.get(k,k),'summary':summary,'takeaway':takeaway,'materials':assets.split()}
 node('START','把已有文章、图形、视频和交互组织成可以现场讲述的课件。','沿任一条制作线阅读；点开模块查看材料，再沿相邻步骤继续。','reflection ppt')
 node('T1','从已有地形文章与教学对话开始，保留内容依据。','先列出已有材料与用途，再补缺少的内容。','terrainArticle dialogue')
 node('T2','对照文章含义，确定地形、小球、轨迹分别表达什么。','为每个图形对象指出对应的原文含义，避免只有视觉效果。','terrainArticle terrainGif')
@@ -113,7 +113,17 @@ node('P10','各部分汇合后，从整场讲述检查内容和演示。','检�
 node('P11','按问题所在位置优化大纲、页面或嵌入内容，需要时返回地形和视频制作。','修改具体对象后，回到整套课件检查影响。','ppt terrain videoIo')
 node('P12','组织演讲稿、页面衔接与演示安排。这里提供学员练习模板，历史讲稿完成状态尚未核验。','将页面、讲述和操作逐项对应。','speech ppt')
 node('P13','交付包含 PPT、嵌入内容、讲稿与演示安排的课程材料。讲稿部分使用练习模板。','让接收者知道从哪里打开、用哪些内容、如何演示。','ppt videoIo terrain quad speech')
-assert set(N)==set(titles)
+
+# 2026-10 精简路径图：被合并节点的材料与对话并入保留节点（多线程切换显示）。
+MERGE={'T2':['T3'],'T4':['T5'],'V3':['V2'],'V5':['V4'],'S1':['S2','S3'],'V7':['V6'],'V8':['V9'],
+ 'W2':['W1','Q1','Q2','G1'],'W5':['G2'],'P2':['P1'],'P4':['P3'],'P7':['P6'],'P9':['P8'],'P10':['P11']}
+for keep,gone in MERGE.items():
+ for g in gone:
+  if g in N and keep in N:
+   N[keep]['summary']+=N[g]['summary'];N[keep]['materials']+=[m for m in N[g]['materials'] if m not in N[keep]['materials']]
+N={k:v for k,v in N.items() if k in titles}
+for k in N:N[k]['title']=titles[k]
+assert set(N)==set(titles),set(titles)^set(N)
 edges=[]
 for ln in raw.splitlines():
  if '-->' not in ln and '.->' not in ln:continue
