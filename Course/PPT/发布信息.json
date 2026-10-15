@@ -2,14 +2,12 @@
   "platform": "Cloudflare Pages",
   "project": "ai-work-course",
   "url": "https://ai-work-course-8uu.pages.dev/",
-  "deployment_url": "https://3e50b630.ai-work-course-8uu.pages.dev/",
-  "published_at": "2026-10-14T20:49:37.058043+08:00",
-  "slides": 57,
-  "interactive_nodes": 47,
+  "deployment_url": "https://ai-work-course-8uu.pages.dev/",
+  "published_at": "2026-10-15T09:14:23.843217+08:00",
+  "slides": 53,
+  "interactive_nodes": 29,
   "build_script": "构建公开课件.py",
   "media_bucket": "ai-work-course-media",
-  "source_commit": "e9cffbc",
-  "workspace_changes_included": true,
   "videos": {
     "video_llm.mp4": {
       "size": [
@@ -47,23 +45,21 @@
     }
   },
   "production_verification": {
-    "home": "200; matches current export",
-    "presentation": "matches current voiced export; chapter buttons change position on pages 8 and 12",
-    "speech": "Updated for direct graph interaction without navigation bar.",
-    "details": "Top navigation bar removed. Local W2 check: 5 real connected paths use 4px dashed highlights with direction arrows; all 76 base edges remain visible. Online acceptance skipped at user request.",
-    "videos": "Original media files unchanged; Worker uploaded as module bundle with COURSE_MEDIA binding; online acceptance skipped at user request.",
-    "local_preview": "pages 8 and 12 chapter seek confirmed; page 56 flowchart displayed; 206 and 416 checked",
-    "style_card": "P3 has existing style image output card and expandable preview; latest online acceptance skipped at user request.",
-    "all_flow_lines": "76 original directed edges visible locally with non-scaling strokes and constant screen-size arrows. Selected incoming/outgoing paths retain color highlights. Online acceptance skipped at user request."
+    "build": "Local export checked: 53 slides, 29 flowchart nodes, 36 directed edges; latest 90-minute speech included",
+    "online_acceptance": "Skipped at user request; deployment status only",
+    "videos": "Original media retained in COURSE_MEDIA; no video upload or audio regeneration"
   },
   "speech": {
-    "path": "Course/PPT/AI协作-演讲稿.md",
-    "sha256": "c925f387a626a8c6dacaabfc38f7acc396484b0ffa62b4b1ef0a7d8d460d2af7"
+    "path": "Course/PPT/AI协作-演讲稿-90分钟版-新课件.md",
+    "sha256": "b97a022b37eecba92cb025625337f4bce736ceb82045ae7e72d30ac493d8ab39"
   },
   "voice": {
     "voice_id": "Chinese (Mandarin)_Radio_Host",
     "model": "speech-2.8-hd",
     "listening_review": "user accepted original voice; requested reverting alignment",
     "cloudflare_sync": "passed"
-  }
+  },
+  "interactive_edges": 36,
+  "source_ref": "main",
+  "source_version": "Cloudflare deployment commit_hash identifies the exact GitHub commit"
 }

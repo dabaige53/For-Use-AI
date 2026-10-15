@@ -121,9 +121,12 @@ def main():
                 threads.setdefault(thread, str(len(threads)))
                 clean['conversations'].append({'threadId':threads[thread], 'messages':messages(section.get('messages',[]))})
         nodes[key] = {'title': node['title'], 'record':clean}
-    write('details.json', json.dumps({'title':data['title'], 'assets':assets, 'nodes':nodes}, ensure_ascii=False))
+    edges = [{k: edge[k] for k in ('from', 'to', 'label') if k in edge}
+             for edge in data['edges']]
+    write('details.json', json.dumps({'title':data['title'], 'assets':assets, 'nodes':nodes, 'edges':edges}, ensure_ascii=False))
     include(PPT)
     include(PPT.parent / 'AI协作-演讲稿.md')
+    include(PPT.parent / 'AI协作-演讲稿-90分钟版-新课件.md')
     page = urllib.request.urlopen(args.preview + '/mermaid').read().decode()
     page = page.replace("fetch('/files')", "fetch('/files.json')").replace('fetch(`/source/${id}`', 'fetch(`/source/${id}.json`')
     write('mermaid.html', page)

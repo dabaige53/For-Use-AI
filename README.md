@@ -30,7 +30,7 @@
 页面引用的外部 CDN、字体及视频素材仍可能需要网络或另行取得的媒体；HTTP 成功不代表所有媒体完整。
 
 根启动器与 `Course/PPT/启动课件.command` 共用同一预览服务，支持视频分段读取（HTTP Range）和第 56 页的制作路径图。不要用 `python -m http.server` 替代，否则视频尚未下载完时可能无法跳转。
-演讲台词位于 `Course/PPT/AI协作-演讲稿.md`。公开课件由 `Course/PPT/构建公开课件.py` 导出；启动本地服务后，传入新的 `--output` 目录，再使用 PPT 目录中的 `wrangler.jsonc` 发布到既有 Cloudflare Pages 项目。两段视频通过 `COURSE_MEDIA` 对应的 R2 存储提供，更新页面不会自动替换视频。
+当前 90 分钟版演讲台词位于 `Course/PPT/AI协作-演讲稿-90分钟版-新课件.md`。公开课件由 `Course/PPT/构建公开课件.py` 导出；启动本地服务后，传入新的 `--output` 目录，再使用 PPT 目录中的 `wrangler.jsonc` 发布到既有 Cloudflare Pages 项目。两段视频通过 `COURSE_MEDIA` 对应的 R2 存储提供，更新页面不会自动替换视频。
 发布命令须在 `Course/PPT/` 中执行：`wrangler pages deploy <导出目录> --project-name ai-work-course --branch main`，CLI 会读取该目录的配置和视频绑定。
 
 视频旁白由 `Course/PPT/视频配音.py` 生成，使用各视频目录的 `时间线.json`，输出放在各自的 `生成/配音/`。程序从环境变量 `MINIMAX_API_KEY` 读取凭据；`--video llm`、`--video io` 分别处理两段，`--limit 1` 只生成第一段旁白用于核验，不导出完整视频。音色沿用时间线中的设置。合成保留原视频画面与时长，生成独立音轨、可编辑字幕和含可切换字幕的有声成片；成片通过检查后再替换课件视频并上传到 R2。
