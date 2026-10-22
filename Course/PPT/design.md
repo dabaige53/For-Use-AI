@@ -1,438 +1,367 @@
-# Design Tokens
+# AI 协作课程幻灯片设计规范
 
-## Concept · 晨光蓝
+适用课程：把 AI 当同事：从理解原理到高效协作。
 
-克制、留白、一点晨光。配色取自封面山景：墨蓝做骨架，钴蓝标编号、数据和图标，晨光琥珀每页最多出现一次（标题短线或唯一重点）。层级靠字重和留白，不靠色块；卡片用中性浅灰面，不加描边和阴影。数字（章节号、小结序号、统计值）用细字重。
+更新日期：2026-10-22。本文件是后续 Space 幻灯片、布局效果图和导出版本的统一设计依据。每次制作或修改页面前先读本文件。内容依据见 [改版交接](AI协作-改版交接.md) 和 [逐页内容稿](AI协作-逐页内容稿.md)。
 
-| Token | Value |
+## 1. 设计依据与使用顺序
+
+1. 用户对当前页面的明确要求优先。
+2. 字体、字号、标题位置、配色、间距以本文件为准。
+3. 页面构图参考已确认的第 4 页，沿用原 PPT 的白底、深蓝文字和晨光橙点缀。
+4. 生图用于讨论布局、比例和图文关系。生成图中不准确的字号、字体、颜色和文字不覆盖本规范。
+5. 内容稿负责说明讲什么，不要求把全部演讲词搬到屏幕上。
+
+第 1–4 页已按本规范进行统一调整。第 3 页采用开放问答布局，第 4 页保留已确认构图。旧 HTML 里 55px 标题及其他覆盖样式不作为新页面标准。
+
+## 2. 整体视觉原则
+
+- 保留原课件的视觉语言：白底、深蓝文字、蓝色数字、少量橙色强调。
+- 一页有一个清楚的主要信息。用位置、字号层级、留白和图文关系组织阅读。
+- 按内容选择布局：总结可以用文字；因果、流程、对比需要画清关系；具体场景可以使用图片。不要为每页套同一个版式。
+- 不默认使用等宽卡片网格、圆角面板、胶囊标签、装饰性大圆或仪表盘式排布。
+- 不为填空白添加图形。线条表示分隔或连接，数字表示数量或顺序，图片承担情境或解释作用。
+- 内容面向学生。讲课提示、操作提醒、设计理由放入讲者备注。
+- 先确认代表页，再按已确认的结构完成同类页面；只复查变更页与连续翻页衔接。未确认的效果图不得当作固定模板。
+
+## 3. 画布与尺寸单位
+
+| 项目 | 固定值 |
 | --- | --- |
-| color.faint | #a3acba |
-| color.border-strong | #d5d9e0 |
-| color.accent-soft | #eaf0fb |
-| color.sun | #d98b3a |
-| color.sun-soft | #fbf3e8 |
-| color.negative | #b5483b |
-| color.negative-soft | #fbefec |
-| color.positive | #2e7d5b |
-| color.positive-soft | #edf6f1 |
-| font.number | -apple-system, "SF Pro Display", "Helvetica Neue", "PingFang SC", Arial, sans-serif |
-| title.desc.font-size | 26px |
-| title.desc.color | #6b778a |
-| title.tag.font-size | 22px |
-| title.tag.radius | 999px |
-| title.tag.negative | 反例：#b5483b on #fbefec |
-| title.tag.positive | 正例：#2e7d5b on #edf6f1 |
-| title.tag.neutral | 原理 / 探索 / 回滚：#2f5bd3 on #eaf0fb |
-| chapter.num.font-size | 240px |
-| chapter.num.font-weight | 200 |
-| chapter.num.color | #2f5bd3 |
-| chapter.title.font-size | 72px |
-| chapter.title.font-weight | 600 |
-| chapter.rule | 40px × 3px #d98b3a |
-| summary.num.font-size | 72px |
-| summary.num.font-weight | 200 |
-| footer.chapter.x | right 72px |
-| footer.chapter.content | 章节号（钴蓝）+ 章名，取自前一个章节页；封面、结尾、全屏 iframe 页不显示 |
-| ending.layout | 同章节页：山景背景 + 左侧白色渐变，左对齐标题、琥珀短线、结语 |
+| 画布 | 1672 × 941，约 16:9 |
+| 坐标原点 | 左上角，x 向右，y 向下 |
+| 尺寸单位 | 本文所有坐标、间距、字号均为该画布上的设计 px |
+| 左右安全边距 | 72 |
+| 内容宽度 | 1528，即 x=72 至 x=1600 |
+| 常规内容区域 | x=72，y=210，w=1528，底边 y=837 |
+| 页脚区域 | y=890 至 y=924 |
+| 背景 | #FFFFFF |
+| 缩放 | 画布、文字、图片整体等比缩放 |
 
-## Canvas
+在 Space 的当前 authoring 接口中沿用上述字号数值。转到 PowerPoint 或其他工具时，按页面物理尺寸换算，不能直接把 px 数值当 pt。例如采用 96px/in 的映射时，52px=39pt；若页面尺寸不同，按整体比例换算。禁止逐个文本框凭观感改字号。
 
-| Token | Value |
+## 4. 字体与字重
+
+| 用途 | 字体 | 字重 |
+| --- | --- | --- |
+| 中文、英文、标点、普通数字 | PingFang SC | 正文 400；标题及重点 700 |
+| 大号数量、序号 | PingFang SC | 700；特殊淡色背景数字仍使用同一字体 |
+| 代码片段，仅实际需要时 | 等宽字体 | 400 |
+
+不混用不同中文字体制造层级。缺少 PingFang SC 时，整份输出统一替换为 Microsoft YaHei 或 Noto Sans CJK SC，并重新检查换行，不允许只替换某几页。当前 Space 若只支持 bold 开关，用 false 对应正文、true 对应标题。
+
+字间距为 0，不手工插入空格撑开汉字。文字框内边距统一为 0；若工具存在默认内边距，先清除或统一补偿。同类文本使用相同的垂直对齐方式，不逐页随意移动来抵消字体偏移。
+
+## 5. 字号体系
+
+同一角色必须使用同一字号。下面的特殊字号只用于指定角色，不得拿来作为普通标题或正文。
+
+| 角色 | 字号 | 字重 | 行高 | 使用位置 |
+| --- | --- | --- | --- | --- |
+| 常规页标题 | 52 | 700 | 1.25 | 介绍、讨论、总结、案例、流程、实操等内容页 |
+| 内容区主要小标题 | 40 | 700 | 1.3 | 讨论问题、主要分组名称 |
+| 次级小标题 | 32 | 700 | 1.3 | 复杂解释中的次级节点 |
+| 正文与问题提示 | 28 | 400 | 1.5 | 常规说明，优先一到两行 |
+| 图注与辅助标签 | 24 | 400 | 1.4 | 次要说明、图中标签；不可替代主要正文 |
+| 页脚与页码 | 18 | 400 | 1.4 | 固定页脚 |
+| 讨论页序号 | 80 | 700 | 1.0 | 01、02、03 |
+| 目录页序号 | 30 | 700 | 1.0 | 原纵向目录圆形编号，蓝色，水平和垂直居中 |
+| 总结页主分组标题 | 60 | 700 | 1.2 | 第 4 页“理解三个问题” |
+| 总结页结论 | 70 | 700 | 1.2 | 第 4 页“把 AI 当同事” |
+| 总结页结论说明 | 38 | 400 | 1.4 | 第 4 页底部辅助句 |
+| 总结页数量 | 162 | 700 | 1.0 | 第 4 页 8、1 |
+| 总结页淡色主数字 | 380 | 700 | 1.0 | 第 4 页 3，不用于普通序号 |
+| 封面主标题 | 60 | 700 | 1.25 | 封面专用 |
+| 封面副标题 | 36 | 400 | 1.4 | 封面专用 |
+| 章节页标题 | 72 | 700 | 1.25 | 章节切换页专用 |
+| 章节编号 | 240 | 700 | 1.0 | 章节切换页专用 |
+| 单句金句 | 72 | 700 | 1.35 | 全页只呈现一个核心句子时 |
+
+正文不低于 28，辅助说明不低于 24。页脚及真实截图中的界面小字除外；截图小字若需要学生阅读，应放大局部。
+
+文本过长时依次处理：精简屏幕文字、调整合理换行、扩大内容区、把详细解释移到备注或拆页。不得自动缩小标题，也不得把 28px 正文压成 22px 以塞满页面。普通内容页只用标题、主要小标题、正文、辅助说明四级；特殊展示字号不要求每页都出现。
+
+## 6. 标题与页脚母版
+
+### 常规标题
+
+| 元素 | x | y | 宽 | 高 | 样式 |
+| --- | --- | --- | --- | --- | --- |
+| 标题文本框 | 72 | 72 | 1528 | 72 | 52px，深蓝，左对齐，顶对齐 |
+| 橙色短线 | 72 | 163 | 40 | 3 | #D98B3A，直角 |
+| 内容起点 | 72 | 210 | 1528 | — | 与短线之间留出 44px |
+
+标题优先一行。标题过长先改短，不逐页调字号。确需两行时使用同一个双行母版：文本框高度 138，短线 y=229，内容起点 y=276；此页正文仍用同一字号体系。
+
+后续标题采用 PPT 主题式短语：短、具体，直接点明本页内容，如“AI 回答的生成过程”“根据输入预测回答”。避免把口语化引导句直接用作标题；课堂提问放在内容区。每次制作新页都先优化标题。
+
+图片和内容不得进入标题文字区域。封面、章节页和单句金句页使用专用布局，不能把它们的大字号沿用到普通内容页。
+
+### 页脚
+
+| 元素 | x | y | 宽 | 高 | 样式 |
+| --- | --- | --- | --- | --- | --- |
+| AI × WORK | 72 | 890 | 260 | 34 | 18px，#6B778A，左对齐 |
+| 两位页码 | 1540 | 890 | 60 | 34 | 18px，#6B778A，右对齐 |
+
+普通内容页统一显示页码。封面可不显示页码；深色照片上的页脚使用白色。普通页不再同时增加章节名称、第二个页码或其他装饰页脚。
+
+## 7. 颜色与线条
+
+| 用途 | 色值 | 使用规则 |
+| --- | --- | --- |
+| 背景 | #FFFFFF | 默认纯白 |
+| 标题、关键文字 | #0E1E36 | 主文字 |
+| 正文 | #46556B | 主要说明 |
+| 辅助说明、页脚 | #6B778A | 不用浅色承载主要信息 |
+| 蓝色重点 | #2F5BD3 | 数量、关键词 |
+| 橙色重点 | #D98B3A | 标题短线及每页一个语义重点 |
+| 淡蓝数字 | #E2EAF6 | 不必单独阅读的巨大数量背景 |
+| 淡橙序号 | #F4D3AA | 与橙色问题成组使用 |
+| 分隔线 | #D7DFE9 | 1.5px，无阴影 |
+| 必要的浅灰面 | #F5F6F8 | 数据表、实际对话或资料背景 |
+| 反例 | #B5483B | 仅表示错误、风险，不作装饰 |
+| 正例 | #2E7D5B | 仅表示正确、完成，不作装饰 |
+
+橙色短线是固定母版元素，不占语义强调名额。每页最多强调一个问题或结论，可同时给该问题的序号着淡橙色。不要将所有重点都染色。
+
+普通分隔线 1.5px；需要解释关系的连接线 2px。连接线应避开文字与非目标对象。无阴影、发光、渐变色块、无意义曲线。封面原照片的自然光影不受此限制。
+
+## 8. 间距与对齐
+
+| 间距用途 | 标准值 |
 | --- | --- |
-| canvas.width | 1672px |
-| canvas.height | 941px |
-| canvas.scale | min(viewport.width / 1672, viewport.height / 941) |
-| canvas.transform-origin | 0 0 |
-| canvas.overflow | hidden |
-| viewport.background | #ffffff |
-| slide.background | #ffffff |
-| slide.box-sizing | border-box |
-| safe.left | 72px |
-| safe.right | 72px |
-| safe.bottom | 104px |
-| content.x | 72px |
-| content.y | 210px |
-| content.width | 1528px |
-| content.bottom | 837px |
-| content.height | 627px |
-| content.with-summary.bottom | 714px |
-| content.with-summary.height | 504px |
+| 基础间距单位 | 8 |
+| 小标题与说明 | 16 |
+| 同组相邻信息 | 16 或 24 |
+| 普通分栏间距 | 32 |
+| 图文主分栏间距 | 48 |
+| 独立信息组间距 | 48 或 64 |
+| 内容与底部结论之间 | 至少 32 |
+| 图中标签与其对象 | 16 |
 
-## Footer
+标题、正文主列、页脚共用 x=72 的左边界。左右分栏可以不等宽；对齐列、行和阅读顺序，比平均分配空间更重要。文本框高度至少为“字号 × 行高 × 行数”，必要时增加下方余量，不压缩行高救场。
 
-| Token | Value |
+不要求所有页面内容都填满 y=210 至 y=837，但同类页面的内容起点、组内间距保持一致。图片边缘可以与相邻文字组对齐，不必机械贴齐每个文字框。
+
+## 9. 页面布局
+
+### A. 讨论页：第 3 页
+
+- 标题和页脚用常规母版，标题固定 52px。效果图中更大的标题不沿用。
+- 左侧问题区域 x=72，宽 800；右侧图片区域 x=920，宽 680。图片主体位于 y=210 至 y=837。
+- 三个问题组的起点分别为 y=260、452、644。
+- 序号列 x=72，宽 144，字号 80；问题与提示列 x=240，宽 632。
+- 问题用 40px，说明用 28px，问题与说明间隔 16。
+- 第三问“难用在哪里？”使用橙色；前两问深蓝。全部开放排版，无卡片框。
+- 右侧复用已确认的黑白同事插画 `assets/ch1-feedback-scene-03.png`；原图1536×1024，显示680×453.3333，完整保留人物、手势和电脑。文字不可覆盖人物。
+- 正式页在原 Space 课件中维护；保留当前三组提问，插画在右侧居中等比显示。
+
+### B. 课程收获页：第 4 页
+
+采用已确认的整体构图：左侧三个理解问题，右侧 8 句说法与 1 个任务，底部收束到“把 AI 当同事”。
+
+| 区域 | 布局约束 |
 | --- | --- |
-| pagination.display | none |
-| footer.x | 72px |
-| footer.y | 901px |
-| footer.width | 200px |
-| footer.height | 26px |
-| footer.font-size | 15px |
-| footer.font-weight | 400 |
-| footer.line-height | 1.4 |
-| footer.letter-spacing | 3px |
-| footer.color | #a3acba |
-| footer.text-align | left |
-| footer.cover.color | rgba(255,255,255,.85) |
-| footer.cover.text-shadow | 0 1px 3px rgba(0,0,0,0.5) |
+| 左侧主数字 3 | x≈52，y≈196，w=320，h=460；380px 淡蓝 |
+| 左侧标题 | x=402，y≈255；60px，“理解”蓝色，其余深蓝 |
+| 三行内容 | x=402，起点 y=375、471、567；标签 40px，解释 28px |
+| 左右分隔 | x=1034，y=211，h=451 |
+| 右侧数量 | x=1104；上组 y≈213，下组 y≈453；162px 蓝色 |
+| 右侧标签 | x=1264；40px，说明 28px |
+| 底部分隔 | x=72，y=706，w=1528 |
+| 底部结论 | x=72，y≈742；70px，“同事”橙色 |
+| 底部解释 | x=656，y≈761；38px，辅助色 |
 
-## Title
+此处大数字是本页内容的一部分，不能拿它替代其他页普通序号。布局位置允许在区域内小幅调整以适配字体实际字形；常规页标题位置不能跟着调整。
 
-| Token | Value |
+### C. 目录页：第 5 页
+
+- 保留原 PPT 纵向目录与右侧配图。标题“目录”，采用 52px 常规标题位置；删除旧副标题。
+- 仅保留三章：了解它（AI 的回答是怎么来的？）、看清它（AI 是怎么帮我们干活的？）、用好它（怎么说，AI 才能做好？）。
+- 三组起点 y=274、464、654。章节名称 x=176，40px，文本框高 52；说明 y=组起点+68，28px，文本框高 48。
+- 圆形编号 01、02、03：x=72，y=组起点+12，72×72；30px 蓝色粗体，水平和垂直居中。
+- 右侧原图 x=904，y=210，w=696，h=627；保留原素材和比例。页码为 05。
+- 原独立故事页取消，故事在第 4 页末尾口述并保留在备注中。当前第 5 页对应逐页稿原第 6 页，后续页面编号减一。
+- 不恢复旧第四章“投入与判断”，不使用横向三阶段布局。
+
+### D. 其他页面
+
+| 页面类型 | 布局规则 |
 | --- | --- |
-| title.x | 72px |
-| title.y | 72px |
-| title.width | 1528px |
-| title.max-width | 100% of text column |
-| title.height | 72px |
-| title.font-size | 52px |
-| title.font-weight | 600 |
-| title.line-height | 1.25 |
-| title.letter-spacing | 0.02em |
-| title.color | #0e1e36 |
-| title.text-align | left |
-| title.margin | 0 |
-| title.padding | 0 |
-| title.max-lines | 1 |
-| title.rule.x | 72px |
-| title.rule.y | 163px |
-| title.rule.width | 40px |
-| title.rule.height | 3px |
-| title.rule.color | #d98b3a |
-| title.multiline.max-lines | 2 |
-| title.multiline.height | 138px |
-| title.multiline.rule.y | 229px |
-| title.multiline.content.y | 276px |
-| title.multiline.content.height | 561px |
-| title.multiline.content.with-summary.height | 438px |
+| 讲师介绍 | 保留已确认身份信息、统计区域和热力图；沿用常规标题，不新增获奖或课件制作经历 |
+| 封面 | 保留已选山景素材；文字在原有留白处；标题 60、副标题 36，不能换新主题 |
+| 章节页 | 保留原课件背景语言，章节编号 240、标题 72；各章使用同一母版 |
+| 对比页 | 左右共享标题基线和内容行；对齐比较对象；不用两张大卡片代替对比逻辑 |
+| 流程页 | 位置表达先后，连接表达流向；节点只保留动作与必要解释；复杂时拆页 |
+| 故事页 | 卡通场景配简短对白或结论；解释写入备注；禁止真人形象 |
+| 金句页 | 72px，最多两行，使用留白突出句子，不增加装饰图形 |
+| 视频页 | 保留视频比例，不裁剪；旁边说明 28px、标题 40px；播放器小字不作为正文标准 |
+| 实操页 | 清楚呈现步骤和当前阶段，不展示给讲师的操作提醒 |
 
-## Typography
+布局变化不等于字体体系变化。新页使用已有文字角色；确实需要新增角色时，先把用途和固定数值加入本文件，再使用。
 
-| Token | Value |
-| --- | --- |
-| font.family | "PingFang SC", -apple-system, "Helvetica Neue", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif |
-| font.style | normal |
-| text.letter-spacing | 0 |
-| text.word-break | normal |
-| text.overflow-wrap | break-word |
-| text.white-space | normal |
-| text.margin | 0 |
-| text.padding | 0 |
-| heading.font-size | 36px |
-| heading.font-weight | 600 |
-| heading.line-height | 1.3 |
-| heading.color | #0e1e36 |
-| heading.compact.font-size | 31px |
-| heading.compact.font-weight | 600 |
-| heading.compact.line-height | 1.3 |
-| body.font-size | 27px |
-| body.font-weight | 400 |
-| body.line-height | 1.6 |
-| body.color | #46556b |
-| caption.font-size | 24px |
-| caption.font-weight | 400 |
-| caption.line-height | 1.4 |
-| caption.color | #6b778a |
-| summary.font-size | 32px |
-| summary.font-weight | 600 |
-| summary.line-height | 1.4 |
-| summary.color | #0e1e36 |
-| text.box.min-height | ceil(font-size × line-height × lines) |
+## 10. 图片、图解与可编辑性
 
-## Color
+- 封面保留 `assets/cover-clean.png`；第一章办公人物统一复用 `assets/ch1-feedback-scene-01.png` 至 `03.png`，巴黎对照使用 `assets/ch1-paris-earth.png` 与 `assets/ch1-paris-moon.png`。
+- 人物采用简洁黑白编辑插画：自然比例、简化面部、少量黑色块，不用大眼日漫和复杂阴影。独立 PNG 优先；分别记录源图、实际裁切和目标尺寸，实际裁切区域与显示框宽高比误差不超过1%。不得只设置 contain 就判断比例正确。
+- 插图优先开放排布，无边框或卡片容器；可在素材本身处理边缘，使其自然融入白底。
+- 图解承担解释作用。按实际关系选流程、对比、层级等布局，不为总结列表强加关系图。
+- 正式幻灯片中的标题、问题、说明、数字、线条保持可编辑。不得把含全部文字的效果图作为整页最终稿。
+- 生图中文字不得直接当作准确稿件。还原时使用确认文案和本文件数值。
+- 不制作地形图。旧版 Terrain、卡片小结、隐藏页码等规则已不适用于当前改版。
 
-| Token | Value |
-| --- | --- |
-| color.background | #ffffff |
-| color.surface | #f5f6f8 |
-| color.surface-subtle | #fafbfc |
-| color.ink | #0e1e36 |
-| color.body | #46556b |
-| color.muted | #6b778a |
-| color.header | #46556b |
-| color.accent | #2f5bd3 |
-| color.danger | #b5483b |
-| color.border | #e6e8ec |
-| color.inverse | #ffffff |
-| color.media-background | #0b1220 |
-| color.quadrant.blue | #eef2fb |
-| color.quadrant.green | #edf6f1 |
-| color.quadrant.yellow | #fbf3e8 |
-| color.quadrant.red | #fbefec |
+## 11. 制作与检查顺序
 
-## Spacing & Grid
+1. 读取本文件和对应页内容，确定页面类型及阅读顺序。
+2. 需要效果图时，把画布、颜色、标题位置、字体层级和文字内容一并交给生图工具。明确效果图只供布局确认。
+3. 用户确认构图后，在 Space 以可编辑元素实现。生图的字形偏差不覆盖规范。
+4. 复用固定标题和页脚；按角色填写字号，不根据每页文字多少随意变化。
+5. 渲染当前页，并与上一张同类页面并排检查：标题位置、字号、字重、左右边距、正文大小、页脚位置是否一致。
+6. 检查文字遮挡、异常换行、图像拉伸、裁剪和过小文字。检查结果以实际渲染为准。
+7. 本页确认后再开始下一页。新批准的长期设计规则先更新本文件；一次性的布局变化只记录在对应页规则中。
 
-| Token | Value |
-| --- | --- |
-| spacing.unit | 8px |
-| spacing.xs | 8px |
-| spacing.sm | 16px |
-| spacing.md | 24px |
-| spacing.lg | 32px |
-| spacing.xl | 48px |
-| spacing.2xl | 64px |
-| grid.width | 1528px |
-| grid.column-gap | 32px |
-| grid.row-gap | 32px |
-| grid.align-items | start |
-| grid.equal-column.width | (1528px - (columns - 1) × 32px) / columns |
-| grid.2-column.width | 748px |
-| grid.3-column.width | 488px |
-| grid.4-column.width | 358px |
-| grid.5-column.width | 280px |
-| grid.split.text.width | 536px |
-| grid.split.media.width | 960px |
-| grid.split.media.x | 640px |
-| grid.same-row.card-height | equal |
-| grid.same-row.heading-y | equal |
-| grid.same-row.icon-y | equal |
-| grid.same-row.body-y | equal |
+## 12. 当前页面与规范的衔接
 
-## Card
+当前 Space 页面：`page_37b8f35c311c8191b5636bae8aa26362`。
 
-| Token | Value |
-| --- | --- |
-| card.background | #f5f6f8 |
-| card.border | none |
-| card.border-radius | 12px |
-| card.box-shadow | none |
-| card.padding | 32px |
-| card.compact.padding | 24px |
-| card.heading-body.gap | 16px |
-| card.item.gap | 16px |
-| card.min-height | padding-top + content-height + padding-bottom + border-top + border-bottom |
-| card.text.overflow | visible |
-| card.arch.border-radius | 160px 160px 12px 12px |
-| card.circle.border-radius | 50% |
+第 1–4 页已统一：封面两行课程名称 60px、辅助口号 36px；第 2–4 页标题 52px、位置 (72,72)，页脚 y=890；第 2 页介绍正文 28px、统计数字 40px；第 3 页问题 40px、说明 28px、序号 80px；第 4 页右侧标签 40px、左侧解释 28px。
 
-## Summary
+保留例外：第 2 页原热力图的月份、星期、图例与统计周期沿用原字号，属于密集数据图的辅助标签，不用于后续普通正文。封面原山景照片保留，人物卡通约束用于新增故事及办公插画。
 
-| Token | Value |
-| --- | --- |
-| summary.x | 72px |
-| summary.y | 746px |
-| summary.width | 1528px |
-| summary.height | 91px |
-| summary.padding-x | 32px |
-| summary.padding-y | 16px |
-| summary.background | #f5f6f8 |
-| summary.border | none |
-| summary.border-radius | 12px |
-| summary.text-align | center |
-| summary.align-items | center |
-| summary.max-lines | 1 |
-| summary.content-gap.min | 32px |
+第 3 页生成图只作为构图参考；正式标题已采用 52px。第 5 页已按最新要求改为原纵向布局与原配图，内容更新为“了解它、看清它、用好它”三章。
 
-## Media
+旧版文件历史由 Git 保留。本文件不继续维护被删除课程内容的地形动画、旧卡片组件及其控制器参数。
 
-| Token | Value |
-| --- | --- |
-| media.border-radius | 18px |
-| media.overflow | hidden |
-| media.background | #07111d |
-| media.border | 1px solid #e3edf7 |
-| media.box-shadow | none |
-| photo.embedded-text | none |
-| photo.embedded-pagination | none |
-| photo.text-mask | none |
-| photo.object-fit | cover |
-| photo.object-position | center |
-| diagram.object-fit | contain |
-| diagram.object-position | center |
-| video.object-fit | contain |
-| video.object-position | center |
-| video.aspect-ratio | source.width / source.height |
-| video.controls | true |
-| video.playsinline | true |
-| video.preload | metadata |
-| video.with-summary.max-height | 504px |
 
-## Diagram & Icon
+## 13. 第一章已确认页面
 
-| Token | Value |
-| --- | --- |
-| diagram.label.font-size | 24px |
-| diagram.label.line-height | 1.4 |
-| diagram.axis.stroke-width | 2px |
-| diagram.connector.stroke-width | 3px |
-| diagram.connector.color | #1976f3 |
-| diagram.label-gap | 16px |
-| diagram.safe.left | 72px |
-| diagram.safe.right | 72px |
-| diagram.safe.bottom | 104px |
-| icon.style | outline |
-| icon.stroke-width | 2px |
-| icon.color | #08244c |
-| icon.background | #eef6fb |
-| icon.container.sm | 72px |
-| icon.container.md | 96px |
-| icon.container.lg | 120px |
-| icon.container.border-radius | 50% |
-| icon.text-gap | 24px |
-| flow.connector-slot.width | 48px |
-| flow.card.width | (1528px - (steps - 1) × 48px) / steps |
-| flow.connector.align | center |
+### 第 6 页：了解它
 
-## Cover
+- 复用原山景和左白右图过渡。章节编号 240px、标题 72px、问题 28px。
+- 内容：01／了解它／AI 的回答是怎么来的？
+- 右下页码置于深色山景上，使用白色。
 
-| Token | Value |
-| --- | --- |
-| cover.background-size | cover |
-| cover.background-position | center |
-| cover.title.x | 88px |
-| cover.title.y | 174px |
-| cover.title.width | 720px |
-| cover.title.height | 190px |
-| cover.title.font-size | 59px |
-| cover.title.font-weight | 600 |
-| cover.title.line-height | 1.35 |
-| cover.title.color | #0e1e36 |
-| cover.title.max-lines | 2 |
-| cover.rule.x | 90px |
-| cover.rule.y | 391px |
-| cover.rule.width | 48px |
-| cover.rule.height | 3px |
-| cover.rule.color | #d98b3a |
-| cover.subtitle.x | 89px |
-| cover.subtitle.y | 454px |
-| cover.subtitle.width | 660px |
-| cover.subtitle.height | 55px |
-| cover.subtitle.font-size | 35px |
-| cover.subtitle.line-height | 1.4 |
-| cover.subtitle.color | #24344d |
+### 第 7 页：巴黎在哪里？
 
-## Interaction & Layers
+- 已确认采用方向 01：左右完整输入对照，文字为主，黑白简笔插图辅助；不加引导语。
+- 常规标题 52px，位置 (72,72)，保留橙色短线。左右小标题“第一次输入”“第二次输入”为 40px，起点分别 (72,252)、(904,252)。
+- 正文 28px，逐行间距 42px。左侧起点 (72,344)，右侧新增背景起点 (904,344)，共同请求起点 (904,452)。新增背景句用橙色粗体，其余正文为灰蓝。
+- 两侧共同请求完整呈现：“请补全这句话，只回答地点：巴黎这座城市位于____。”右侧前置背景：“在我写的小说里，巴黎是一座建在月球上的城市。”
+- 分隔线 x=836，y=252，h=560，宽 1.5px。无卡片底色、蓝色标签或预先揭晓的答案。
+- 插图已更换为两张独立黑白PNG：assets/ch1-paris-earth.png、assets/ch1-paris-moon.png。保留完整题面和左右输入对照，按原图比例显示；最新位置以云端保存对象为准。
+- 标题、正文、分隔线和页脚均为可编辑元素；当前为静态对照，讲者备注包含互动顺序。
 
-| Token | Value |
-| --- | --- |
-| layer.background | 0 |
-| layer.photo | 1 |
-| layer.diagram | 2 |
-| layer.card | 3 |
-| layer.connector | 4 |
-| layer.text | 5 |
-| slide.inactive.display | none |
-| slide.active.display | block |
-| text.contenteditable | true |
-| text.focus.outline | 2px dashed #9fb4ea |
-| text.focus.border-radius | 8px |
-| text.focus.background | rgba(255,255,255,0.4) |
-| navigation.next | ArrowRight, PageDown |
-| navigation.previous | ArrowLeft, PageUp |
-| navigation.first | Home |
-| navigation.last | End |
-| navigation.total | slide.count |
-| navigation.hash | slide.index + 1 |
+### 第 8 页：多一句话，回答为什么变了？
 
-## Constraints
+- 采用已选九宫格参考的 8C，参考文件为 `assets/pages-08-10-layout-reference.png`。
+- 上方共同句子“巴黎这座城市位于____。”，向左右分支到日常背景与小说背景，再向下连接候选回答。保留两种背景的完整要求。
+- 日常候选为法国、欧洲、其他；小说候选为月球、法国、其他。条长仅表示教学中的相对可能性，不显示精确百分比；标注“可能性示意，非实测数据”。
+- 标题 52px、背景标题及共同句子 40px、正文及候选 28px、图注 24px、页脚 18px。文字、连线和条形均为可编辑元素。
 
-| Token | Value |
-| --- | --- |
-| title.position.deviation | 0px |
-| title.font-size.deviation | 0px |
-| title.line-height.deviation | 0 |
-| same-row.alignment.deviation | 0px |
-| content.unintended-overlap | 0px |
-| text.clipped-lines | 0 |
-| content.outside-safe-area | 0px |
-| media.aspect-ratio-distortion | 0 |
-| video.content-crop | 0px |
+### 第 9 页：AI 回答的生成过程
 
-## Video Annotation
+- 最新要求：保留常规标题、橙色短线及页脚；视频靠左，下方保留旧 HTML 的时间、进度条、章节节点结构。右侧只放一句“根据已有文字，预测接下来写什么。”，不做三步流程图。
+- 当前为用户授权的模拟页面，使用 `assets/video-01-poster.png`（原视频 00:45 静帧），尚未嵌入可播放视频，进度条不能拖动。
+- 原视频 `assets/video_llm.mp4` 为 06:59；本段起止为 **00:00.000–01:27.119**，约 87.12 秒。结束在字幕第 18 条之后，下一句“模型通过处理海量文本……”留给下一段。
+- 时间轴只表示本段。节点对应旧 HTML 的 cues：00:00 逐步生成、00:36.640 预测下一步、00:51.020 加入对话、01:12.519 选择回答。当前模拟进度为 00:45，第二节点高亮。
+- 保留用户手动调整后的布局：视频区域约 (72,198.4,992,558)，保持原 16:9，不裁剪。时间文字 y≈771.7，进度条 y≈813.7、宽 992，节点文字 y≈837.7。右侧文字 x=1136、两行 y=390/454、40px。标题、页脚按常规规范。
+- 替换成可播放视频时，按本段范围设置开始与停止时间，并同步进度及节点高亮。
 
-| Token | Value |
-| --- | --- |
-| video.annotation.x | 72px |
-| video.annotation.y | 210px |
-| video.annotation.width | 344px |
-| video.annotation.heading.font-size | 32px |
-| video.annotation.body.font-size | 24px |
-| video.annotation.body.line-height | 1.6 |
-| video.annotated.x | 480px |
-| video.annotated.y | 210px |
-| video.annotated.width | 1120px |
-| video.annotated.height | 560px |
-| video.timeline.x | 480px |
-| video.timeline.y | 788px |
-| video.timeline.width | 1120px |
-| video.timeline.height | 96px |
-| video.timeline.time.font-size | 18px |
-| video.timeline.label.font-size | 20px |
-| video.timeline.step | 0.1s |
-| video.timeline.accent | #2f5bd3 |
-| video.annotation.diagram.node.font-size | 23px |
-| video.annotation.diagram.node.padding | 14px 16px |
-| video.annotation.diagram.node.radius | 10px |
-| video.annotation.diagram.node.background | #f8f9fb |
-| video.annotation.diagram.operation.background | #f5f6f8 |
-| video.annotation.diagram.arrow.height | 30px |
-| video.annotation.diagram.gap | 24px |
+### 第 10 页：根据输入预测回答
 
-## Terrain
+- 两栏标题采用“明确说明无法参会”“根据群聊代拟回复”，删除数字前缀和预先断言出错的标题。
 
-| Token | Value |
-| --- | --- |
-| terrain.background | #ffffff |
-| terrain.single.x | 72px |
-| terrain.single.y | 210px |
-| terrain.single.width | 1528px |
-| terrain.single.height | 620px |
-| terrain.dialogue.width | 624px |
-| terrain.column.gap | 32px |
-| terrain.single.canvas.width | 872px |
-| terrain.dialogue.font-size | 22px |
-| terrain.dialogue.line-height | 1.55 |
-| terrain.pair.y | 300px |
-| terrain.pair.height | 530px |
-| terrain.pair.column.width | 748px |
-| terrain.definition.y | 190px |
-| terrain.definition.font-size | 27px |
-| terrain.controls.y | 836px |
-| terrain.initial.progress | 0 |
-| terrain.initial.playing | true |
-| terrain.reset.progress | 0 |
-| terrain.dialogue.reveal | progressive |
-| terrain.pair.clock | shared |
+- 左右两道题开放排版，用细竖线分隔。每题明确标注“输入给 AI 的全部内容”；输入范围用浅灰底色（#F5F6F8）呈现，不使用左侧引文竖条。记录、本人安排和最后请求都放在底色区域内，不把“我的情况”当作 AI 看不到的额外讲解。不再预先指定回复开头。
+- 第一题输入：同事邀请本人参加明天下午三点的项目会；本人要去客户现场、无法参会；请 AI 帮忙回复，说明原因，并请同事会后发纪要。
+- 第二题改为“顺着记录回错了”：完整输入先写本人明日14:30–16:30在客户现场开会，再给项目群消息，王经理要求明日15:00在公司开会，陈晨、李敏、周航用近似措辞回复会准时参加。最后只要求“请按大家的口吻，帮我简短回复王经理”，不直接给出“无法参会”的结论。
+- 第二题按用户最新要求，恢复与左侧一致的“三个候选回答＋概率条＋百分比”样式。候选顺序同左侧：A 无法参会，请会后发我纪要；B 收到，我会准时参加；C 收到，我会取消这场会议。移除独立的大字错答与橙色冲突解释，冲突解释只保留在讲者备注。
+- 第一题教学概率为85/10/5；第二题教学概率为10/85/5，突出错误候选B。这是人为编写的教学分布，第二题85%是课堂假设，不是模型实测概率或实际错误率，不保证模型必然出错，也不是重复信息导致错误的实验证据。按用户要求，概率性质与虚构素材说明只保留在讲者备注。
+- 标题 52px、题组标题 40px、提问 32px、题干与选项 28px、概率和图注 24px、页脚 18px。全部文字与条形可编辑。
+- **用户最新确认：只保留一张完整页面，动画由用户后续自行添加。** 当前编辑页保留全部可编辑元素，不设置动画，不用多张重复页模拟揭晓。
+- 待制作的点击顺序：初始只显示两题完整输入和提问；点击 1 显示第一题候选回答；点击 2 显示第一题概率条和数字；点击 3 显示第二题候选回答；点击 4 显示第二题概率条和数字。
+- 两题候选对象按“题1/题2-候选回答-A/B/C”命名，概率对象按“题1/题2-概率-A/B/C-底条/数值条/数字”命名。讲者备注保存同样的动画要求、答案依据与讲解边界。
 
-| terrain.speed | 2 |
-| terrain.controls.icon.size | 24px |
-| terrain.controls.alignment | center below terrain |
-| terrain.controls.height | 60px |
-| terrain.controls.padding | 10px 14px |
-| terrain.controls.gap | 14px |
-| terrain.controls.radius | 12px |
-| terrain.controls.background | #f8f9fb |
-| terrain.controls.pair.x | 400px |
-| terrain.controls.pair.width | 872px |
-| terrain.controls.button.size | 40px 36px |
-| terrain.controls.time.font-size | 17px |
-| terrain.controls.seek.step | 0.1s |
-| terrain.controls.seek.playing | false |
-| terrain.controls.speed.options | 0.5, 1, 1.5, 2, 3, 4 |
-| terrain.controls.speed.default | 2 |
-| terrain.chat.roles | user, ai |
-| terrain.chat.bubble.radius | 14px |
+### 第 11 页：AI 的训练过程
 
-| terrain.chat.code.font-size | 19px |
-| terrain.chat.role.font-size | 16px |
-| terrain.timeline.source | assets/terrain-stories.js |
-| terrain.timeline.unit | seconds at 1× |
-| terrain.timeline.event.duration | clamp(text.delta.length / 14 + 4, 5, 28)s |
-| terrain.timeline.end-hold | 3s |
-| terrain.timeline.terrain.transition | event.duration × [0.08, 0.40] |
-| terrain.timeline.path.transition | event.duration × [0.44, 0.95] |
-| terrain.timeline.start | all frames configured |
-| terrain.reentry.progress | 0 |
-| terrain.reset.playing | false |
-| terrain.labels.max-visible | 3 |
+- 复用第 9 页视频模拟布局：左侧 992×558 视频画面，下方时间、进度条与三个节点；右侧只放“从大量例子中学习，逐步调整预测。”。
+- 静帧为 `assets/video-02-poster.png`，截自原片 02:35。播放范围 **01:27.119–03:44.079**，共 136.960 秒；在原片 **03:35.159**、“一年够吗？”说完后暂停互动，再继续播放。
+- 屏幕进度按片段内时间表示，当前 01:08、总长 02:17。节点为海量文本、调整预测、训练规模；它们是课堂分段，不是逐字字幕索引。
+- 当前为静帧页面，画面与时间轴不能播放或拖动；页面标明“原视频静帧”，精确区间和原片地址保存在讲者备注。
 
-| terrain.pair.initial.progress | 1 |
-| terrain.pair.initial.playing | false |
-| terrain.pair.reentry.progress | 1 |
-| terrain.pair.run-from-result.progress | 0 |
+### 第 12 页：训练：根据差别调整预测
 
-| slide.transition.duration | 0ms |
-| slide.inactive.opacity | 0 |
-| slide.inactive.inert | true |
-| terrain.navigation.wait | target frame painted |
-| terrain.preload.ahead | 1 slide |
+- 用同一份材料串起五步：看到前文 → 预测后文 → 对照原文 → 调整模型内部参数 → 再换一份材料继续练。前三步在上方从左到右，下方承接调整与重复，细线箭头表示顺序。
+- 前文为“客户反馈已收到，我们会在周五前给出”；预测“报价”用蓝色，原材料后文“处理方案”用橙色。两个短语均为52px原生文字，直接呈现差别。
+- 动作用40px，说明用28px，步骤数字和辅助标签用24px。底部以“想一想”标签和32px粗体提问“这次预测与原文有哪里不同？”形成独立互动层级。
+- 保留标题下40×3橙色短线、AI × WORK页脚和页码12。标题、句子、箭头和说明均可编辑。
+- 讲师备注说明这是训练阶段的参数更新，不是当前对话附上范例就重训；短词组是对token预测的简化，训练不保证每次回答都改善。
+- 原六组会议范例完整保留在 `演示材料/第12页-01-原题.txt`、`演示材料/第12页-02-多个范例加原题.txt`、`演示材料/第12页-讲师操作.txt`，不混入本页训练流程。
+
+### 第 13 页：从文字续写到对话助手
+
+- 复用第 9 页视频模拟布局。右侧一句：“通过反馈，逐步学会按要求回答。”。
+- 静帧为 `assets/video-03-poster.png`，截自原片 04:06。播放顺序为 **03:44.079–04:14.879**（30.800 秒），接 **06:06.159–06:59.000**（52.841 秒），共 83.641 秒。
+- 屏幕使用衔接后的时间：当前 00:22、总长 01:24，第二节点在 00:30.800；节点为人的反馈、对话助手、继续预测。精确原片区间保存在讲者备注。
+- 当前为静帧页面，页面标明“原视频静帧”，未嵌入可播放视频；原片与切点完整保留。
+
+### 第 14–15 页：人的评价与进一步训练
+
+- 两页合计保留原12个事件。每页采用三个较大场景，每个场景合并两个连续事件；从左到右读，避免六张浅卡片。页码分别为14、15。
+- 第14页标题“人的评价：先改信息，再改表达”。三个场景是“先写一版”“改对信息”“改好表达”：交代周五15点、301室的会议通知任务；新人写成明天10点；主管指出时间地点问题并给−3；新人修正信息但语气生硬；主管给＋1并指出表达问题；新人加入礼貌表达。对应原01–06。
+- 第15页标题“把多种任务的评价用于训练”。三个场景是“换多种任务”“汇集评价再训练”“再看新任务”：通知清楚礼貌获＋3；换通知、摘要、客户回复等不同任务；摘要重点清楚获＋2、客户回复漏交期获−2；把评价用于训练并调整模型内部参数；新任务为客户催交付、交期改到周三；回复说明交期并照顾语气。对应原07–12。
+- 两页共用已确认的同事角色、桌子与三张独立黑白PNG。每幅原图1536×1024，不裁切；显示框464×309.3333，起点x=72/604/1136、y=350。相邻页按动作需要复用人物图。
+- 场景小标题40px、对白28px、辅助说明24px、评分32px；标题52px。场景步骤为01–03、04–06，原12事件的对应关系在备注中说明。对白、题面、评分和标签全部为原生文字。
+- 常规标题短线和AI × WORK页脚保持一致。评分紧贴对应评价，正负评价并存，不使用一路上升的箭头暗示每轮必然进步。
+- 讲师备注保留类比边界：训练程序将评价用于训练信号、更新参数，并在大量任务上重复；单次聊天纠正不等于训练；示意分数不是实测；人类偏好不保证事实正确。新任务回复是能力目标示例，不保证所有任务都正确。
+- 来源：[OpenAI 人类反馈训练说明](https://openai.com/index/instruction-following/)及其[原论文](https://cdn.openai.com/papers/Training_language_models_to_follow_instructions_with_human_feedback.pdf)。
+
+### 第 16 页：第一章理解检查
+
+- 保留已确认的三栏题面、原生选项和空选择框；题图采用三幅专门绘制的独立PNG：`ch1-check-confidence.png`表现自信回答与待核实材料，`ch1-check-repeated-question.png`表现同一问题对应三份未判定的回答，`ch1-check-report-reference.png`表现对照原报告检查引用。每幅以378×252等比显示，完整保留人物、手势与材料；图中不烘焙答案。
+- 每栏由橙色01/02/03题号、场景插图、题干和空白选择框组成。按用户要求删除“判断题／单选题／多选题”标签，不在页面显示答案或正确标记；按统一规范保留AI × WORK页脚。
+- 第一题：“AI 回答得很肯定，就说明它已经查证。”圆形选择框：对、错。
+- 第二题：“同一句话问三次，回答会怎样？”圆形选择框：A.一定完全相同；B.一定完全不同；C.可能相同，也可能不同。
+- 第三题：“AI 给出了报告名称和链接，使用前应该做什么？”方形选择框：A.核对报告是否存在；B.查看原文是否支持结论；C.有链接就直接使用。
+- 答案“错／C／A和B”及解释仅放讲者备注。第三题可选多个答案，由讲师口头说明。静态页展示未作答状态，用户可后续按题号添加揭晓动画。
+- 标题恢复固定52px母版，题号40px、题干32px、选项28px。三栏起点x=72/612/1134；插图在上、题干y=566、选项y=704起，每行间距64；页码为16。
+
+### 第 17 页：第一章核心结论
+
+- 仅保留已确认的两行金句：“AI 的本质是预测，／输出的内容都是概率。”字号 72px，第二行蓝色；不加额外标题、卡片或图解，保留常规页脚。
+- 备注补充这句话的简写含义：模型计算下一步内容的概率分布，再选择后续内容；最终输出并非字面意义上的概率数字。
+
+### 第 18 页：从生成内容到执行任务
+
+- 用户最新确认：页面只放两个视频，先保存占位，待后续替换。
+- 保留常规标题、橙色短线和页码；移除邮件输入、草稿、执行步骤、分栏标题、底部提问及辅助页脚。
+- 左右两个16:9浅灰视频占位：左侧(72,292,740,416.25)，右侧(860,292,740,416.25)。中间为播放图标和“视频1／视频2”占位标签，所有图形可编辑。
+- 尚未关联视频源，不能播放；实际视频及播放区间待提供，原邮件任务对照用途保留在备注。
+
+### 第二章：看清它（Space 云端分册）
+
+- 完整分册：https://chatgpt.com/space/page_8cecae7f9e648191a063b3508e3460ce 。原课件第19页92x2ff为链接入口；追加至23页后两次遭遇page_limit_exceeded，已把完整章节保存为分册并移除原课件中本轮追加的四张重复正文页。章节共 13 页；先讲一次 API 往返，再比较两个房间，随后追踪同一封邮件的三次调用。理解检查保留判断、指出执行者与排序三种动作，最后用金句和问题承接第三章。
+- 共用白底、深蓝、蓝色过程信息与橙色提问。画布 1672×941，边距72，标题52、正文28–32、提问40、章节与结论72，字体 PingFang SC。题目、标签、对白、材料和备注均为可编辑文字。
+- 人物采用 article-illustrator/notion 的黑白简笔画。两个房间采用 structural-breakdown：保持同一机位、尺度和模型位置；规则与可用操作贴近墙面，真正执行程序放在房间外。三轮调用采用 ikea-manual 与 linear-progression：同一模型和同一执行者保持位置，仅材料、请求、回执发生变化。
+- 房间原图1448×1086，裁切区域1380×850，显示1000×615.942。调用原图2048×768，显示1200×450。实际渲染对照源图，房间横纵缩放差约0.28%，调用约0.04%；未裁掉头部、手势或纸张。视频静帧保持16:9。
+- 课堂边界写入备注：模型提出操作，应用按权限和规则执行；本轮上下文由应用组织，不能当作模型自动记住全部历史；发送回执不等于对方已读；“AI不是工具，而是人”是协作比喻。
+- 原视频 video_io.mp4 已保存到课件文件区；分段为00:00–01:04与01:04–02:39。视频页保留实际静帧和观看问题，静帧不代表可播放视频。分册已保存13页并回读至版本7；原课件入口保存至版本228。幻灯片未插入原生可播放视频，未设置对象动画；讲解顺序在备注。
+
+
+### 第三章：用好它（Space 云端分册）
+
+- 完整分册：https://chatgpt.com/space/page_982cadac711881918e97420d8e2fc214 。第三章25页，全课页码32–56；另含实操与收尾两页57–58。保持原章节山景、字体、颜色、边距与标题母版。
+- 章节先讲缺失条件、实际输入材料和具体反馈，再用八个不同办公案例展开。互动依次采用路径比较、制定标准、语气轮读、样例投票、方案筛选、要求澄清、数据找错和目标改写。题面与揭晓有明确分工，不复制八组同款卡片。
+- 反馈页采用新生成的同事黑白漫画，原图2048×768，按三个横向场景分别裁切。每段有效区域为原图三分之一宽、完整高度；显示400×450，横纵比例一致。完整保留头部、手势与材料。对白、题干、计算式、选项和结论均为原生文字，插画不是整页截图。
+- 过程与组成参考linear-progression、structural-breakdown；漫画参考comic-strip；人物参考article-illustrator/notion；结论采用minimal的留白原则。所有参考服从同一视觉体系，不运行baoyu导出工作流。
+- 代表页先检查反馈漫画、年会方向分支和数据找错，再完成全章。全部27页已从云端保存结构渲染，与审阅过的制作预览对照；除两页矩形边框的单像素渲染差异外，内容与版式一致。导航页另行检查。
+- 讲师备注明确：对话反馈不是参数训练；应用可能携带历史与记忆，不能说每次完全不记得；新开对话是按情况选择；先核对不能保证事实正确；示例和模拟结果不冒充真实运行。个人经历与学员发言不编造。
+- 第三章43分钟内容加2分钟机动；实操12分钟，收尾3分钟。开场及前两章约30分钟，全课约90分钟。实操允许使用自己的实际工作，另提供明确标注的课堂周报练习材料，不把旧会议录音发邮件场景当成已确认安排。
+
+### 全课导航与真实交付范围
+
+- 原课件为总入口及开场、第一章。目录173flv中的“看清它”“用好它”分别链接到第二、三章；原末页92x2ff保留第二章入口。第二章最后页brdfsu链接第三章，两个分册章首页以及全课收尾可返回原课件。
+- 第一章理解检查zvlep1三幅新画已实际保存；第二章完整13页已保存；第三章与实操收尾27页已保存。最新版本及稳定slide ID详见云端记录，不以本文件中的旧页码代替云端对象定位。
+- 第二章应用职责按用户最新要求明确为：模型输出请求 → 应用监测并识别请求 → 调用工具执行 → 把结果交回模型。保留发送前确认和真实回执说明。
+- 原课件曾返回page_limit_exceeded，因此采用同一课程的Space云端分册及互相导航；这不是已确认的平台通用页数上限。不交付本地PPTX或HTML替代品。
+- 视频原片及切点保留。当前幻灯片中的视频仍是静帧，第一章末页两段邮件实录尚缺；未宣称原生播放或演示录屏已经完成。图像渲染核验使用云端结构及对应原图缓存，尚未独立验证浏览器直接获取全部图片和点击导航。
