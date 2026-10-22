@@ -1,0 +1,170 @@
+{
+  "round1": {
+    "commit": "f3ce5cb",
+    "ch1Version": 252,
+    "ch2Version": 11,
+    "ch3Version": 10
+  },
+  "round2": [
+    {
+      "id": "zmd7ie",
+      "title": "先看 AI 还缺什么",
+      "page": 33,
+      "version": 11,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "id": "tjx1sg",
+      "title": "把材料放进这次对话",
+      "page": 34,
+      "version": 12,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "id": "ito41u",
+      "title": "下一句话，怎样说更有用",
+      "page": 36,
+      "version": 13,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "id": "3bk4cm",
+      "title": "八个场景，各解决一个问题",
+      "page": 37,
+      "version": 14,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "id": "8hq1zk",
+      "title": "② “专业”的周报，怎么验收",
+      "page": 39,
+      "version": 15,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "id": "v8jhbk",
+      "title": "② 把标准写成能核对的要求",
+      "page": 40,
+      "version": 16,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "id": "wadh6d",
+      "title": "③ 用参照说明语气",
+      "page": 41,
+      "version": 17,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "id": "17gzsc",
+      "title": "④ 样例教格式，材料给事实",
+      "page": 42,
+      "version": 18,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "id": "8uqfco",
+      "title": "④ 把结构应用到新材料",
+      "page": 43,
+      "version": 19,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "id": "ujyfb5",
+      "title": "⑤ 先比较方向",
+      "page": 45,
+      "version": 20,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "id": "f6ghtl",
+      "title": "⑤ 选定后，再展开一层",
+      "page": 46,
+      "version": 21,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "id": "mx2upd",
+      "title": "⑥ 先把“高级”说具体",
+      "page": 47,
+      "version": 22,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "id": "rip8xo",
+      "title": "⑥ 留下已确认的制作要求",
+      "page": 48,
+      "version": 23,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "id": "ud9hga",
+      "title": "⑦ 先检查分析的前提",
+      "page": 49,
+      "version": 24,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "id": "vr1id7",
+      "title": "⑦ 核对后，才决定能分析什么",
+      "page": 50,
+      "version": 25,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "id": "7nvbdq",
+      "title": "⑧ 分支有价值，交付物也要守住",
+      "page": 51,
+      "version": 26,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "id": "yhdqsd",
+      "title": "⑧ 先交总表，异常另列",
+      "page": 52,
+      "version": 27,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "id": "6ce8t5",
+      "title": "复杂任务，也先做一小步",
+      "page": 56,
+      "version": 28,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "id": "zwh67l",
+      "title": "完成声明，要用什么证明",
+      "page": 28,
+      "version": 12,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "id": "960bvl",
+      "title": "把执行过程接完整",
+      "page": 29,
+      "version": 13,
+      "saved": true,
+      "readback": true
+    }
+  ]
+}
