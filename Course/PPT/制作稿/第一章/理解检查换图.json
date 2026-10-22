@@ -1,0 +1,76 @@
+{
+  "slide_id": "zvlep1",
+  "current_page_number": 16,
+  "cloud_saved": false,
+  "last_confirmed_state_version": 215,
+  "images": [
+    {
+      "image_id": "4310560839565312",
+      "path": "../../assets/ch1-check-confidence.png",
+      "alt": "自信地回答，旁边仍有待核实的参考材料",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "frame": {
+        "left": 117,
+        "top": 294,
+        "width": 378,
+        "height": 252
+      },
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "aspect_mismatch_percent": 0.0
+    },
+    {
+      "image_id": "2401372209152000",
+      "path": "../../assets/ch1-check-repeated-question.png",
+      "alt": "同一个问题与三份尚未判定的回答",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "frame": {
+        "left": 654,
+        "top": 294,
+        "width": 378,
+        "height": 252
+      },
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "aspect_mismatch_percent": 0.0
+    },
+    {
+      "image_id": "2401372209152001",
+      "path": "../../assets/ch1-check-report-reference.png",
+      "alt": "对照原报告和引用内容进行检查",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "frame": {
+        "left": 1178,
+        "top": 294,
+        "width": 378,
+        "height": 252
+      },
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "aspect_mismatch_percent": 0.0
+    }
+  ],
+  "preserve": "只替换三张图片并更新素材备注；保留全部题干、选项、空白选择框和隐藏答案。",
+  "reason": "Native editing requires a local task with a compatible Artifact Session runtime."
+}
