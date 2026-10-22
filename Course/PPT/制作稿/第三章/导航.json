@@ -1,6 +1,8 @@
 [
   {
-    "key": "original",
+    "key": "chapter1",
+    "count": 19,
+    "stateVersion": 262,
     "records": [
       {
         "id": "173flv",
@@ -8,12 +10,20 @@
           "https://chatgpt.com/space/page_8cecae7f9e648191a063b3508e3460ce",
           "https://chatgpt.com/space/page_982cadac711881918e97420d8e2fc214"
         ]
+      },
+      {
+        "id": "92x2ff",
+        "links": [
+          "https://chatgpt.com/space/page_8cecae7f9e648191a063b3508e3460ce"
+        ]
       }
     ],
-    "count": 19
+    "browserResult": "演示模式点击实测为翻页；使用Page列表或三册正式链接切换。"
   },
   {
     "key": "chapter2",
+    "count": 13,
+    "stateVersion": 20,
     "records": [
       {
         "id": "10pvgy",
@@ -28,10 +38,12 @@
         ]
       }
     ],
-    "count": 13
+    "browserResult": "演示模式点击实测为翻页；使用Page列表或三册正式链接切换。"
   },
   {
     "key": "chapter3",
+    "count": 27,
+    "stateVersion": 33,
     "records": [
       {
         "id": "oq2cu2",
@@ -46,6 +58,6 @@
         ]
       }
     ],
-    "count": 27
+    "browserResult": "演示模式点击实测为翻页；使用Page列表或三册正式链接切换。"
   }
 ]

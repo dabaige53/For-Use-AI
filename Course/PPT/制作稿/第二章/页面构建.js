@@ -1,6 +1,11 @@
 // 最新改造页使用 ../对话改造/第二章改造页.json 与 ../对话改造/页面构建.js，按稳定ID就地更新。
 // 本文件保留未改造页面的原始构建与素材配置。
 globalThis.buildCh02Final=function(p,d,A,pageNumber,geometryRecords=[],media={}){
+ if(d.nativeElements){
+  if(typeof globalThis.reviseCourseSlide!=='function') throw new Error('先载入制作稿/对话改造/页面构建.js');
+  const slide=p.slides.add({width:1672,height:941,background:{fill:'#FFFFFF'}});
+  return globalThis.reviseCourseSlide(p,{...d,id:slide.id,page:pageNumber,elements:d.nativeElements});
+ }
  const C={navy:'#0E1E36',body:'#46556B',muted:'#6B778A',blue:'#2F5BD3',orange:'#D98B3A',line:'#D7DFE9'};
  const s=p.slides.add({width:1672,height:941,background:{fill:'#FFFFFF'}}),pre='ch02-final-'+d.key+'-';
  const box=(name,x,y,w,h,fill='none',line='none',lw=0)=>s.shapes.add({name:pre+name,geometry:'rect',position:{left:x,top:y,width:w,height:h},fill,line:{style:'solid',fill:line,width:lw}});
@@ -14,7 +19,7 @@ globalThis.buildCh02Final=function(p,d,A,pageNumber,geometryRecords=[],media={})
  if(d.key==='cover'){
   const h=1672*A.cover.source.height/A.cover.source.width;image('原课件章节山景','cover',0,(941-h)/2,1672);
   box('white',0,0,820,941,'#FFFFFF');box('fade',820,0,270,941,{type:'gradient',gradientKind:'linear',angleDeg:0,stops:[{offset:0,color:'#FFFFFF'},{offset:100000,color:'#FFFFFF/0'}]});
-  t('number','02',72,164,550,290,240,'#E2EAF6',true);t('title','看清它',80,440,760,110,72,C.navy,true);t('question','AI 是怎么帮我们干活的？',80,586,760,55,28,C.body);t('track','了解它    /    看清它    /    用好它',80,760,760,50,28,C.body);footer('#FFFFFF');
+  t('number','02',72,164,550,290,240,'#E2EAF6',true);t('title','看清它',80,440,760,110,72,C.navy,true);t('question','AI 怎样从回答走到执行？',80,586,760,55,28,C.body);t('track','了解它    /    看清它    /    用好它',80,760,760,50,28,C.body);footer('#FFFFFF');
  }else if(d.key==='roundtrip'){
   title();task();
   t('you','你',88,364,220,60,40,C.navy,true,'center');t('you-desc','发出消息\n看到结果',88,468,220,108,28,C.body,false,'center');
@@ -73,6 +78,7 @@ globalThis.buildCh02Final=function(p,d,A,pageNumber,geometryRecords=[],media={})
  }else if(d.key==='transition'){
   t('next','接下来 · 用好它',72,178,1528,55,32,C.blue,true);t('title','它具备这些条件，\n为什么还是做不好我的任务？',72,342,1528,250,72,C.navy,true);box('accent',72,671,70,3,C.orange);footer();
  }
- s.speakerNotes.text='【第二章｜'+d.title+'】\n'+d.notes+'\n本页为静态页面。需要停顿或逐步讲解的顺序已写在备注；未设置原生对象动画。';
+ if(['roomA','roomB','call1','call3'].includes(d.key)) t('example-boundary','课堂示例 · 非实际发送',1350,170,250,36,24,C.muted);
+ s.speakerNotes.text=d.notes;
  return {key:d.key,id:s.id,page:pageNumber,title:d.title};
 };

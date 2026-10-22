@@ -19,7 +19,7 @@ globalThis.buildCh03 = function (p, d, assets, page, geometry = []) {
   const k=d.key;
   if(k==='cover'){
     image('章节山景','cover',0,0,1672);box('white',0,0,820,941,'#FFFFFF');box('fade',820,0,270,941,{type:'gradient',gradientKind:'linear',angleDeg:0,stops:[{offset:0,color:'#FFFFFF'},{offset:100000,color:'#FFFFFF/0'}]});
-    t('number','03',72,164,550,290,240,'#E2EAF6',true);t('title','用好它',80,440,760,110,72,C.navy,true);t('question','怎么说，AI 才能做好？',80,586,760,55,28);t('track','了解它    /    看清它    /    用好它',80,760,760,50,28);footer('#FFFFFF');
+    t('number','03',72,164,550,290,240,'#E2EAF6',true);t('title','用好它',80,440,760,110,72,C.navy,true);t('question','怎样交代任务并逐步改进？',80,586,760,55,28);t('track','了解它    /    看清它    /    用好它',80,760,760,50,28);footer('#FFFFFF');
   }else if(k==='quote'){
     t('quote1','AI 不会读心：',150,300,1372,100,72,C.navy,true);t('quote2','先说清楚，再拉回来。',150,425,1372,110,72,C.blue,true);box('accent',150,637,70,3,C.orange);footer();
   }else{
@@ -111,7 +111,7 @@ globalThis.buildCh03 = function (p, d, assets, page, geometry = []) {
       rows.forEach((r,i)=>{let y=350+i*143;t('field'+i,r[0],72,y,350,60,32,C.blue,true);t('hint'+i,r[1],490,y,1110,60,32,C.muted);line('blank'+i,490,y+78,1600,y+78);});conclusion('同桌互看：还缺哪条关键条件？',804);
     }else if(k==='practice'){
       label('task','任务：把材料整理成一份可检查的周报',72,220,1528);
-      box('material',72,312,800,360,'#FFFFFF',C.line,1.5);label('material-title','课堂练习材料',104,344,736);t('material-text','访谈12家客户，收到5项需求。\n3项已确认，2项待补充。\n下周周三前回访。',104,424,736,175,32);
+      box('material',72,312,800,360,'#FFFFFF',C.line,1.5);label('material-title','课堂练习材料',104,344,736);t('material-text','走访12家客户，收到5项需求。\n3项已确认，2项待补充。\n下周周三前回访。',104,424,736,175,32);
       t('standard','150字以内；\n完成 / 问题 / 计划三段；\n不添加材料里没有的数据。',968,344,632,190,32,C.navy,true);t('feedback','核对后，给一次具体反馈。',968,610,632,100,32,C.blue,true);conclusion('也可以选自己的任务，按同样步骤练习。',794);
     }else if(k==='closing'){
       [['了解它','说得像，还要核对。'],['看清它','说完成，还要看执行结果。'],['用好它','交代清楚，再按标准反馈。']].forEach((r,i)=>{let y=252+i*160;t('chapter'+i,r[0],72,y,360,65,40,C.blue,true);t('meaning'+i,r[1],492,y,1108,65,40,C.navy,true);});conclusion('选一件工作，试一次，留下有效的要求。',800);
@@ -121,6 +121,6 @@ globalThis.buildCh03 = function (p, d, assets, page, geometry = []) {
     }else throw new Error('Unknown chapter 3 key: '+k);
     footer();
   }
-  s.speakerNotes.text='【第三章｜'+d.title+'｜'+d.minutes+'分钟】\n'+d.notes+'\n静态页面；全部教学文字可编辑。案例中的人物、对话、数据与结果为课堂示例，不冒充真实运行或学员发言。';
+  s.speakerNotes.text=d.notes;
   return {key:k,id:s.id,page,title:d.title};
 };

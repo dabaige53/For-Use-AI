@@ -16,6 +16,6 @@ globalThis.reviseCourseSlide = function(p,d) {
   text('footer','AI × WORK',72,890,260,34,18,'#6B778A');
   text('page',String(d.page).padStart(2,'0'),1540,890,60,34,18,'#6B778A');
   text('example','课堂示例',1390,170,210,36,24,'#6B778A');
-  s.speakerNotes.text='【'+(d.page<32?'第二章':'第三章')+'｜'+d.title+'｜'+d.minutes+'分钟】\n教学目标：'+d.goal+'\n互动：'+d.interaction+'\n'+d.notes+'\n页面上的人物、对话、数据和结果为课堂示例。未执行邮件发送、文件创建或业务操作；工具回执示意不代表实际执行。所有教学文字为原生可编辑对象。';
+  s.speakerNotes.text=d.slideId ? d.notes : '【'+(d.page<32?'第二章':'第三章')+'｜'+d.title+'｜'+d.minutes+'分钟】\n教学目标：'+d.goal+'\n互动：'+d.interaction+'\n'+d.notes+'\n页面上的人物、对话、数据和结果为课堂示例。未执行邮件发送、文件创建或业务操作；工具回执示意不代表实际执行。所有教学文字为原生可编辑对象。';
   return {id:s.id,title:d.title,page:d.page,shapes:s.shapes.items.length};
 };
