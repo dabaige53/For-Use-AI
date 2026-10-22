@@ -285,5 +285,20 @@
       "960bvl"
     ],
     "saved_and_read_back": true
-  }
+  },
+  "navigation": [
+    {
+      "slide_id": "10pvgy",
+      "name": "course-return-directory",
+      "text": "返回课程目录",
+      "uri": "https://chatgpt.com/space/page_37b8f35c311c8191b5636bae8aa26362"
+    },
+    {
+      "slide_id": "brdfsu",
+      "name": "course-next-chapter3",
+      "text": "打开第三章：用好它 →",
+      "uri": "https://chatgpt.com/space/page_982cadac711881918e97420d8e2fc214"
+    }
+  ],
+  "navigation_confirmed_state_version": 9
 }
