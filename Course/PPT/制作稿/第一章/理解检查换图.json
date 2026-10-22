@@ -1,8 +1,8 @@
 {
   "slide_id": "zvlep1",
   "current_page_number": 16,
-  "cloud_saved": false,
-  "last_confirmed_state_version": 215,
+  "cloud_saved": true,
+  "last_confirmed_state_version": 227,
   "images": [
     {
       "image_id": "4310560839565312",
@@ -24,7 +24,8 @@
         "right": 0,
         "bottom": 0
       },
-      "aspect_mismatch_percent": 0.0
+      "aspect_mismatch_percent": 0.0,
+      "saved_asset_id": "f77de79d-bc54-4853-84a7-3f538d452dd3"
     },
     {
       "image_id": "2401372209152000",
@@ -46,7 +47,8 @@
         "right": 0,
         "bottom": 0
       },
-      "aspect_mismatch_percent": 0.0
+      "aspect_mismatch_percent": 0.0,
+      "saved_asset_id": "604e52c7-3778-4813-9217-041ce7bc7670"
     },
     {
       "image_id": "2401372209152001",
@@ -68,9 +70,12 @@
         "right": 0,
         "bottom": 0
       },
-      "aspect_mismatch_percent": 0.0
+      "aspect_mismatch_percent": 0.0,
+      "saved_asset_id": "0a3c3728-57a1-47fe-956c-c830f7e22433"
     }
   ],
   "preserve": "只替换三张图片并更新素材备注；保留全部题干、选项、空白选择框和隐藏答案。",
-  "reason": "Native editing requires a local task with a compatible Artifact Session runtime."
+  "reason": "Native editing requires a local task with a compatible Artifact Session runtime.",
+  "text_and_non_image_shapes_unchanged": true,
+  "saved_structure_render_reviewed": true
 }
