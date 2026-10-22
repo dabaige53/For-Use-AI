@@ -23,6 +23,7 @@ globalThis.buildCh02Final=function(p,d,A,pageNumber,geometryRecords=[],media={})
   t('model','厂家的模型服务',1216,353,384,70,40,C.navy,true,'center');
   t('model-output','返回文字\n或操作请求',1216,487,384,108,28,C.body,false,'center');
   arrow('to-model',1075,427,1188);arrow('from-model',1188,574,1075);t('request-label','请求',1075,382,113,36,24,C.muted,false,'center');t('return-label','结果',1075,592,113,36,24,C.muted,false,'center');
+  t('monitor-output','监测模型输出，识别操作请求',458,673,742,44,28,C.blue,true);
   t('api','API',72,735,120,50,32,C.blue,true);t('api-meaning','软件向模型服务递交请求、接收结果的约定',262,735,1338,50,32,C.navy);t('scope','以使用云端模型的应用为例；先看一次往返。',262,801,1338,42,24,C.muted);footer();
  }else if(d.key==='roomA'||d.key==='roomB'){
   title();task();image(d.key==='roomA'?'房间 A：只有纸笔，能够写草稿':'房间 B：模型在内，应用执行程序在外',d.key,72,250,1000);
@@ -32,7 +33,7 @@ globalThis.buildCh02Final=function(p,d,A,pageNumber,geometryRecords=[],media={})
   }else{
    t('rule-label','规则',369,343,106,40,28,C.blue,true,'center');t('rule-content','先确认',362,386,120,37,24,C.body,false,'center');t('tools-label','可用操作',502,344,112,37,24,C.blue,true,'center');t('tools-content','查通讯录\n发邮件',501,379,116,65,24,C.body,false,'center');
    t('operator-label','应用执行程序',833,374,244,42,28,C.blue,true,'center');line('operator-leader',951,420,951,454,C.muted,1.5);
-   t('question','和房间 A 比，\n多了什么？',1144,336,456,140,40,C.orange,true);t('look','看房间里增加了什么，\n再找房间外的执行者。',1144,562,456,110,28,C.body);
+   t('question','和房间 A 比，\n多了什么？',1144,336,456,140,40,C.orange,true);t('look','应用监测模型输出，\n识别到操作请求后才执行。',1144,562,456,110,28,C.body);
   }footer();
  }else if(['call1','call2','call3'].includes(d.key)){
   title();task();const n=Number(d.key.slice(-1));
@@ -46,8 +47,8 @@ globalThis.buildCh02Final=function(p,d,A,pageNumber,geometryRecords=[],media={})
   t('request',req[0],979,466,222,48,32,C.blue,true);t('request-fields',req[1],980,522,220,90,28,C.body);
   if(n===3)arrow('result-return',1196,630,959,C.muted);else arrow('request-handoff',959,630,1196,C.muted);
   t('model-action',n===1?'先提出查邮箱的请求':n===2?'读到邮箱后，提出请求':'向用户说明：已提交发送',470,804,620,42,24,n===3?C.blue:C.muted);
-  if(n===1){t('operator-action','查询通讯录',1190,778,410,40,28,C.orange,true);t('operator-result','返回 zhang@example.com',1190,820,410,38,24,C.body);}
-  if(n===2)t('operator-action','先确认，再由邮箱发送',1190,804,410,48,28,C.orange,true);
+  if(n===1)t('operator-action','监测到查询请求\n调用通讯录查询',1190,778,410,80,28,C.orange,true);
+  if(n===2)t('operator-action','监测到发送请求\n确认后调用邮箱发送',1190,778,410,80,28,C.orange,true);
   if(n===3)t('operator-action','把回执带入本轮输入',1190,804,410,48,28,C.orange,true);
   footer();
  }else if(d.key==='video1'||d.key==='video2'){
@@ -63,7 +64,7 @@ globalThis.buildCh02Final=function(p,d,A,pageNumber,geometryRecords=[],media={})
   t('no2','02',72,524,110,65,40,C.blue,true);t('case2','只输入“桌面/报表.xlsx”，\n没有上传，也没有连接文件读取工具。',228,524,1372,120,32,C.body);t('question2','谁去读取文件，模型才能看到内容？',228,688,1372,65,40,C.navy,true);t('actions','先判断，再指出真正执行读取的一方。',228,797,1372,42,24,C.muted);footer();
  }else if(d.key==='checkOrder'){
   title();t('case','已经查到了张经理邮箱，接下来怎样完成这封邮件？',72,223,1528,60,32,C.body);
-  const list=[['B','模型提出发送请求'],['C','应用取得确认后，调用邮箱发送'],['A','应用带回原任务、规则和查询结果']];list.forEach((a,i)=>{const y=340+i*133;t('letter'+i,a[0],72,y,115,90,80,C.blue,true);t('step'+i,a[1],240,y+8,1360,70,40,C.navy,true);if(i<2)line('divider'+i,240,y+96,1600,y+96,C.line,1.5);});
+  const list=[['B','模型提出发送请求'],['C','应用监测到请求，确认后调用邮箱发送'],['A','应用带回原任务、规则和查询结果']];list.forEach((a,i)=>{const y=340+i*133;t('letter'+i,a[0],72,y,115,90,80,C.blue,true);t('step'+i,a[1],240,y+8,1360,70,40,C.navy,true);if(i<2)line('divider'+i,240,y+96,1600,y+96,C.line,1.5);});
   t('followup','如果只带回邮箱地址，丢掉原任务和规则，会怎样？',240,786,1360,60,28,C.orange,true);footer();
  }else if(d.key==='quote'){
   t('title','AI 不是工具，\n而是人。',150,300,1372,255,72,C.navy,true);box('accent',150,637,70,3,C.orange);footer();

@@ -1,7 +1,7 @@
 {
   "page_id": "page_8cecae7f9e648191a063b3508e3460ce",
   "url": "https://chatgpt.com/space/page_8cecae7f9e648191a063b3508e3460ce",
-  "state_version": 7,
+  "state_version": 9,
   "slides": [
     {
       "order": 1,
@@ -266,5 +266,24 @@
       "width": 720,
       "height": 54
     }
+  },
+  "latest_revision": {
+    "purpose": "应用监测到模型输出的工具调用请求后才执行",
+    "visible_slides": [
+      "mhfcwi",
+      "fh36g2",
+      "dzjb2x",
+      "566nn9",
+      "960bvl"
+    ],
+    "notes_slides": [
+      "mhfcwi",
+      "fh36g2",
+      "dzjb2x",
+      "566nn9",
+      "sf3kf2",
+      "960bvl"
+    ],
+    "saved_and_read_back": true
   }
 }
