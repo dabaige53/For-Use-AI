@@ -1,0 +1,76 @@
+{
+  "purpose": "按baoyu布局重设计原生UI",
+  "pages": [
+    {
+      "chapter": "ch3",
+      "id": "zbtq01",
+      "page": 35,
+      "title": "反馈怎样改变下一版",
+      "layout": "comic-strip：共同任务＋三段因果分镜",
+      "version": 34,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "66sp5h",
+      "page": 38,
+      "title": "① 说清你能用的工具",
+      "layout": "binary-comparison：共同材料＋两种可操作结果",
+      "version": 35,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch2",
+      "id": "566nn9",
+      "page": 24,
+      "title": "请求怎样变成一次实际发送",
+      "layout": "structural-breakdown＋linear-progression：三方泳道与回执返回",
+      "version": 21,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "zbtq01",
+      "page": 35,
+      "title": "反馈怎样改变下一版",
+      "layout": "comic-strip：共同任务＋三段因果分镜",
+      "version": 36,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch2",
+      "id": "566nn9",
+      "page": 24,
+      "title": "请求怎样变成一次实际发送",
+      "layout": "structural-breakdown＋linear-progression：三方泳道与回执返回",
+      "version": 22,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "zbtq01",
+      "page": 35,
+      "title": "反馈怎样改变下一版",
+      "layout": "comic-strip：共同任务＋三段因果分镜",
+      "version": 37,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch2",
+      "id": "566nn9",
+      "page": 24,
+      "title": "请求怎样变成一次实际发送",
+      "layout": "structural-breakdown＋linear-progression：三方泳道与回执返回",
+      "version": 23,
+      "saved": true,
+      "readback": true
+    }
+  ],
+  "checks": "逐页保存并重新读取；查看保存结构实际渲染。代表页另经独立视觉评审通过。"
+}

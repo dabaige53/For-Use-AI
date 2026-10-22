@@ -16,6 +16,19 @@
 
 ## 2. 整体视觉原则
 
+### 本轮UI重设计：关系必须直接可见
+
+2026-10-22，用户明确不接受只有结构化文字、缺少设计的页面。保留课程字体、颜色和边距；重做构图，不以增加装饰数量作为完成标准。
+
+- 反馈对话采用comic-strip的因果分镜：共同任务横跨上方，下方依次为初稿、具体反馈、修改稿。箭头表示轮次推进，局部底色只对应实际变化的字句。
+- 回复对照采用binary-comparison：共同材料置顶，两侧保留对应输入与回复。公式、表格、图表等实际交付物成为视觉重点，不能埋在说明文字里。
+- 执行过程采用structural-breakdown与linear-progression：模型、应用、工具有固定泳道，动作处于所属泳道，箭头落在动作节点。工具结果先回到应用，再进入模型下一轮输入。
+- 后续案例采用资料与成稿对照、原生表格、方向分支、时间轴、图表与证据边界、练习单。黑白人物只承担情境或核对动作，不把同一种聊天卡片复制到八例。
+- 浅蓝面表示用户输入，白底描边表示AI交付物，浅橙只标反馈或局部差异。箭头、分区、放大文字和留白均需解释内容。互动答案留在备注或后页。
+- 三张代表页已从云端保存结构渲染，并经过独立视觉评审。检查关系是否可见、操作内容是否突出、连线是否正确；不仅检查重叠。执行回路线与改稿高亮已按评审修正。
+
+具体参考：[comic-strip](https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-infographic/references/layouts/comic-strip.md)、[binary-comparison](https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-infographic/references/layouts/binary-comparison.md)、[structural-breakdown](https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-infographic/references/layouts/structural-breakdown.md)、[linear-progression](https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-infographic/references/layouts/linear-progression.md)及既定notion、ikea-manual、minimal定义与示例。仅作设计参考，未启用项目Skills或运行其生成流程。
+
 - 保留原课件的视觉语言：白底、深蓝文字、蓝色数字、少量橙色强调。
 - 一页有一个清楚的主要信息。用位置、字号层级、留白和图文关系组织阅读。
 - 按内容选择布局：总结可以用文字；因果、流程、对比需要画清关系；具体场景可以使用图片。不要为每页套同一个版式。

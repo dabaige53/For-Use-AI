@@ -1,7 +1,7 @@
 {
   "page_id": "page_8cecae7f9e648191a063b3508e3460ce",
   "url": "https://chatgpt.com/space/page_8cecae7f9e648191a063b3508e3460ce",
-  "state_version": 20,
+  "state_version": 23,
   "slides": [
     {
       "order": 1,
@@ -218,7 +218,7 @@
       "key": "call2",
       "title": "请求怎样变成一次实际发送",
       "images": [],
-      "shapeCount": 22,
+      "shapeCount": 42,
       "notes": "【第二章｜请求怎样变成一次实际发送｜0.8分钟】\n教学目标：分清模型请求、应用识别、工具执行和结果回传\n互动：沿箭头指出每一步是谁完成\n课堂示例，非实际发送。原任务：给项目组张经理发邮件，会议改到明天下午三点。已从上一轮得到示例邮箱。模型提出请求后，应用识别请求并按规则取得用户确认，再调用邮箱。服务返回的是已接受发送，不表示已读。下一页把回执加入模型输入。\n页面上的人物、对话、数据和结果为课堂示例。未执行邮件发送、文件创建或业务操作；工具回执示意不代表实际执行。所有教学文字为原生可编辑对象。",
       "screenText": [
         "请求怎样变成一次实际发送",
@@ -227,24 +227,24 @@
         "应用",
         "邮箱工具",
         "① 输出发送请求",
-        "收件人：zhang@example.com\n主题：项目会改期\n正文：会议改到明日15:00。",
-        "→",
+        "收件人：\nzhang@example.com\n主题：项目会改期\n正文：会议改到\n明日15:00。",
         "② 监测并识别请求",
         "按规则展示邮箱与正文，\n取得用户确认。",
         "③ 调用邮箱发送",
-        "→",
         "④ 返回执行结果",
         "已接受发送\n编号 M-021（示意）",
         "⑤ 下一轮输入",
-        "←",
-        "应用带回实际回执",
-        "←",
+        "原任务 ＋ 实际回执",
+        "接收实际回执",
+        "交回模型",
         "AI × WORK",
         "24",
         "课堂示例"
       ],
       "imageCount": 0,
-      "navigationTargets": []
+      "navigationTargets": [],
+      "uiLayout": "structural-breakdown＋linear-progression：三方泳道与回执返回",
+      "uiSavedVersion": 23
     },
     {
       "order": 7,
@@ -499,7 +499,7 @@
     }
   ],
   "navigation_confirmed_state_version": 20,
-  "stateVersion": 20,
+  "stateVersion": 23,
   "cloudSaved": true,
   "readbackConfirmed": true,
   "revisionSource": "../对话改造/第二章改造页.json",

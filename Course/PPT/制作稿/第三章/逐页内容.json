@@ -2,7 +2,7 @@
   "course": "把 AI 当同事：从理解原理到高效协作",
   "chapter": 3,
   "title": "用好它：怎样交代任务并逐步改进？",
-  "status": "27页保存并重新读取至版本33；20页对话改造、封面与实操材料及导航备注已同步。",
+  "status": "27页保留；原生UI重新设计逐页保存与读取，当前版本37，具体页面见UI保存记录。",
   "cloudPage": "https://chatgpt.com/space/page_982cadac711881918e97420d8e2fc214",
   "timing": {
     "contentMinutes": 43,
@@ -60,7 +60,7 @@
         "返回课程目录"
       ],
       "slideId": "oq2cu2",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "gap",
@@ -168,7 +168,7 @@
         "课堂示例"
       ],
       "slideId": "zmd7ie",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "context",
@@ -276,13 +276,13 @@
         "课堂示例"
       ],
       "slideId": "tjx1sg",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "feedback",
       "title": "反馈怎样改变下一版",
       "minutes": 3,
-      "layout": "native-dialogue-revision",
+      "layout": "native-ui-redesign",
       "screen": [
         "用户",
         "给项目组写群通知：会议由周四改到周五15:00，仍在301室，\n请回复能否参加。80字以内。",
@@ -298,132 +298,274 @@
       "interaction": "沿四轮对话找变化",
       "nativeElements": [
         {
-          "kind": "text",
-          "text": "用户",
+          "kind": "rect",
           "x": 72,
-          "y": 220,
-          "w": 110,
+          "y": 216,
+          "w": 1528,
+          "h": 128,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "01  用户",
+          "x": 96,
+          "y": 238,
+          "w": 150,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
           "text": "给项目组写群通知：会议由周四改到周五15:00，仍在301室，\n请回复能否参加。80字以内。",
-          "x": 200,
-          "y": 220,
-          "w": 1400,
-          "h": 88,
-          "size": 30,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
-        },
-        {
-          "kind": "rect",
-          "x": 200,
-          "y": 318,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 260,
+          "y": 236,
+          "w": 1310,
+          "h": 98,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": false
         },
         {
           "kind": "text",
-          "text": "AI",
+          "text": "02",
           "x": 72,
-          "y": 364,
-          "w": 110,
-          "h": 40,
-          "size": 24,
-          "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
-        },
-        {
-          "kind": "text",
-          "text": "项目会调整至本周五15:00，地点仍为301室。请回复能否参加。",
-          "x": 200,
-          "y": 364,
-          "w": 1400,
+          "y": 372,
+          "w": 88,
           "h": 64,
-          "size": 30,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
-        },
-        {
-          "kind": "rect",
-          "x": 200,
-          "y": 438,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
-        },
-        {
-          "kind": "text",
-          "text": "用户",
-          "x": 72,
-          "y": 480,
-          "w": 110,
-          "h": 40,
-          "size": 24,
+          "size": 48,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "保留时间、地点和回复要求。把“周四改到周五”写出来，\n让大家一眼看见改期；结尾加一句谢谢。",
-          "x": 200,
-          "y": 480,
-          "w": 1400,
-          "h": 90,
-          "size": 30,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
-        },
-        {
-          "kind": "rect",
-          "x": 200,
-          "y": 580,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "text": "AI · 初稿",
+          "x": 168,
+          "y": 382,
+          "w": 324,
+          "h": 56,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "AI",
-          "x": 72,
-          "y": 638,
-          "w": 110,
-          "h": 40,
-          "size": 24,
+          "text": "03",
+          "x": 564,
+          "y": 372,
+          "w": 88,
+          "h": 64,
+          "size": 48,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "项目会由本周四改至周五15:00，地点仍为301室。\n请大家回复能否参加，谢谢。",
-          "x": 200,
-          "y": 638,
-          "w": 1400,
-          "h": 90,
-          "size": 30,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "text": "用户 · 具体反馈",
+          "x": 660,
+          "y": 382,
+          "w": 364,
+          "h": 56,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "04",
+          "x": 1096,
+          "y": 372,
+          "w": 88,
+          "h": 64,
+          "size": 48,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "AI · 修改稿",
+          "x": 1192,
+          "y": 382,
+          "w": 408,
+          "h": 56,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
         },
         {
           "kind": "rect",
-          "x": 200,
-          "y": 738,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 72,
+          "y": 454,
+          "w": 420,
+          "h": 285,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
+        },
+        {
+          "kind": "text",
+          "text": "项目会调整至本周五\n15:00，地点仍为301室。\n请回复能否参加。",
+          "x": 100,
+          "y": 492,
+          "w": 364,
+          "h": 210,
+          "size": 30,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 564,
+          "y": 454,
+          "w": 460,
+          "h": 285,
+          "fill": "#FFF3E4",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "保留时间、地点和回复要求。\n把“周四改到周五”写出来，\n让大家一眼看见改期；\n结尾加一句谢谢。",
+          "x": 592,
+          "y": 480,
+          "w": 404,
+          "h": 230,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 1096,
+          "y": 454,
+          "w": 504,
+          "h": 285,
+          "fill": "#FFFFFF",
+          "stroke": "#2F5BD3",
+          "sw": 2
+        },
+        {
+          "kind": "rect",
+          "x": 1214,
+          "y": 479,
+          "w": 240,
+          "h": 40,
+          "fill": "#FFF3E4",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "rect",
+          "x": 1120,
+          "y": 588,
+          "w": 70,
+          "h": 40,
+          "fill": "#FFF3E4",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "项目会由本周四改至周五\n15:00，地点仍为301室。\n请大家回复能否参加，\n谢谢。",
+          "x": 1124,
+          "y": 480,
+          "w": 448,
+          "h": 248,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              496,
+              598
+            ],
+            [
+              552,
+              598
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              541.4690092573155,
+              603.7531064632504
+            ],
+            [
+              552,
+              598
+            ],
+            [
+              541.4690092573155,
+              592.2468935367496
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1028,
+              598
+            ],
+            [
+              1084,
+              598
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1073.4690092573155,
+              603.7531064632504
+            ],
+            [
+              1084,
+              598
+            ],
+            [
+              1073.4690092573155,
+              592.2468935367496
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 800,
+          "w": 6,
+          "h": 52,
+          "fill": "#D98B3A",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "沿着对话看：哪些事实保留了？哪句话发生了变化？",
+          "x": 98,
+          "y": 802,
+          "w": 1502,
+          "h": 66,
+          "size": 34,
+          "color": "#0E1E36",
+          "bold": true
         }
       ],
       "revisionSource": "../对话改造/第三章改造页.json",
@@ -442,7 +584,8 @@
         "课堂示例"
       ],
       "slideId": "zbtq01",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37,
+      "uiLayout": "comic-strip：共同任务＋三段因果分镜"
     },
     {
       "key": "feedback-transfer",
@@ -556,7 +699,7 @@
         "课堂示例"
       ],
       "slideId": "ito41u",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "map",
@@ -642,13 +785,13 @@
         "课堂示例"
       ],
       "slideId": "3bk4cm",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "case1",
       "title": "① 说清你能用的工具",
       "minutes": 3,
-      "layout": "native-dialogue-revision",
+      "layout": "native-ui-redesign",
       "screen": [
         "共同材料（已提供）：只有10月；B2:B32每天一行，状态为“正常”或“迟到”。",
         "输入 A",
@@ -666,132 +809,266 @@
       "interaction": "比较两种输入与回复",
       "nativeElements": [
         {
-          "kind": "text",
-          "text": "共同材料（已提供）：只有10月；B2:B32每天一行，状态为“正常”或“迟到”。",
+          "kind": "rect",
           "x": 72,
           "y": 212,
           "w": 1528,
-          "h": 70,
-          "size": 28,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "h": 102,
+          "fill": "#F5F6F8",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
-          "text": "输入 A",
-          "x": 72,
-          "y": 320,
-          "w": 700,
-          "h": 45,
+          "text": "共同材料",
+          "x": 96,
+          "y": 234,
+          "w": 160,
+          "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "只有10月；B2:B32每天一行，状态为“正常”或“迟到”。",
+          "x": 280,
+          "y": 238,
+          "w": 1270,
+          "h": 65,
+          "size": 30,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "text",
+          "text": "A",
+          "x": 72,
+          "y": 342,
+          "w": 88,
+          "h": 64,
+          "size": 48,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "只说统计目标",
+          "x": 168,
+          "y": 352,
+          "w": 564,
+          "h": 56,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "B",
+          "x": 900,
+          "y": 342,
+          "w": 88,
+          "h": 64,
+          "size": 48,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "补充工具与交付形式",
+          "x": 996,
+          "y": 352,
+          "w": 604,
+          "h": 56,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 424,
+          "w": 660,
+          "h": 100,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "用户",
+          "x": 96,
+          "y": 442,
+          "w": 90,
+          "h": 40,
+          "size": 24,
+          "color": "#2F5BD3",
+          "bold": true
         },
         {
           "kind": "text",
           "text": "帮我统计10月迟到天数。",
-          "x": 72,
-          "y": 377,
-          "w": 704,
-          "h": 95,
-          "size": 32,
+          "x": 194,
+          "y": 442,
+          "w": 514,
+          "h": 74,
+          "size": 30,
           "color": "#0E1E36",
-          "bold": true,
-          "name": "text"
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 900,
+          "y": 424,
+          "w": 700,
+          "h": 132,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
-          "text": "AI",
-          "x": 72,
-          "y": 490,
-          "w": 704,
+          "text": "用户",
+          "x": 924,
+          "y": 442,
+          "w": 90,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "我用Excel，不会编程。请按上面的\n范围和状态给出公式，告诉我放哪格。",
+          "x": 1022,
+          "y": 442,
+          "w": 554,
+          "h": 106,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": false
+        },
+        {
+          "kind": "text",
+          "text": "AI · 筛选办法",
+          "x": 72,
+          "y": 558,
+          "w": 600,
+          "h": 40,
+          "size": 24,
+          "color": "#2F5BD3",
+          "bold": true
         },
         {
           "kind": "text",
           "text": "筛选10月记录，再筛选状态“迟到”，\n数出符合条件的记录。\n如果每天只有一条，条数就是天数。",
           "x": 72,
-          "y": 549,
-          "w": 704,
-          "h": 185,
+          "y": 612,
+          "w": 660,
+          "h": 160,
           "size": 30,
           "color": "#46556B",
-          "bold": false,
-          "name": "text"
-        },
-        {
-          "kind": "rect",
-          "x": 836,
-          "y": 325,
-          "w": 1.5,
-          "h": 430,
-          "fill": "#D7DFE9"
+          "bold": false
         },
         {
           "kind": "text",
-          "text": "输入 B",
-          "x": 912,
-          "y": 320,
-          "w": 688,
-          "h": 45,
-          "size": 24,
-          "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
-        },
-        {
-          "kind": "text",
-          "text": "我用Excel，不会编程。请按上面的\n范围和状态给出公式，告诉我放哪格。",
-          "x": 912,
-          "y": 377,
-          "w": 688,
-          "h": 100,
-          "size": 30,
-          "color": "#0E1E36",
-          "bold": true,
-          "name": "text"
-        },
-        {
-          "kind": "text",
-          "text": "AI",
-          "x": 912,
-          "y": 505,
-          "w": 688,
+          "text": "AI · 可直接输入的公式",
+          "x": 900,
+          "y": 582,
+          "w": 600,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 900,
+          "y": 638,
+          "w": 700,
+          "h": 68,
+          "fill": "#EDF2FB",
+          "stroke": "#2F5BD3",
+          "sw": 2
+        },
+        {
+          "kind": "rect",
+          "x": 900,
+          "y": 638,
+          "w": 84,
+          "h": 68,
+          "fill": "#2F5BD3",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
-          "text": "在D2输入：\n=COUNTIF(B2:B32,\"迟到\")\n它统计该范围里“迟到”的单元格数。",
-          "x": 912,
-          "y": 564,
-          "w": 688,
-          "h": 170,
+          "text": "D2",
+          "x": 918,
+          "y": 652,
+          "w": 66,
+          "h": 42,
+          "size": 28,
+          "color": "#FFFFFF",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "=COUNTIF(B2:B32,\"迟到\")",
+          "x": 1002,
+          "y": 650,
+          "w": 580,
+          "h": 54,
+          "size": 34,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "统计该范围里“迟到”的单元格数。",
+          "x": 900,
+          "y": 727,
+          "w": 700,
+          "h": 56,
           "size": 28,
           "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              816,
+              350
+            ],
+            [
+              816,
+              773
+            ]
+          ],
+          "color": "#D7DFE9",
+          "width": 2
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 812,
+          "w": 6,
+          "h": 52,
+          "fill": "#D98B3A",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
           "text": "哪条回复能让你直接开始？输入多了哪些条件？",
-          "x": 72,
-          "y": 790,
-          "w": 1528,
-          "h": 60,
-          "size": 32,
-          "color": "#D98B3A",
-          "bold": true,
-          "name": "text"
+          "x": 98,
+          "y": 814,
+          "w": 1502,
+          "h": 66,
+          "size": 34,
+          "color": "#0E1E36",
+          "bold": true
         }
       ],
       "revisionSource": "../对话改造/第三章改造页.json",
@@ -812,7 +1089,8 @@
         "课堂示例"
       ],
       "slideId": "66sp5h",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37,
+      "uiLayout": "binary-comparison：共同材料＋两种可操作结果"
     },
     {
       "key": "case2-question",
@@ -920,7 +1198,7 @@
         "课堂示例"
       ],
       "slideId": "8hq1zk",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "case2-answer",
@@ -1042,7 +1320,7 @@
         "课堂示例"
       ],
       "slideId": "v8jhbk",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "case3",
@@ -1244,7 +1522,7 @@
         "课堂示例"
       ],
       "slideId": "wadh6d",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "case4-question",
@@ -1388,7 +1666,7 @@
         "课堂示例"
       ],
       "slideId": "17gzsc",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "case4-answer",
@@ -1616,7 +1894,7 @@
         "课堂示例"
       ],
       "slideId": "8uqfco",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "opening-summary",
@@ -1644,7 +1922,7 @@
         "44"
       ],
       "slideId": "9uecrh",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "case5-options",
@@ -1744,7 +2022,7 @@
         "课堂示例"
       ],
       "slideId": "ujyfb5",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "case5-select",
@@ -1866,7 +2144,7 @@
         "课堂示例"
       ],
       "slideId": "f6ghtl",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "case6-explore",
@@ -2046,7 +2324,7 @@
         "课堂示例"
       ],
       "slideId": "mx2upd",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "case6-brief",
@@ -2198,7 +2476,7 @@
         "课堂示例"
       ],
       "slideId": "rip8xo",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "case7-question",
@@ -2348,7 +2626,7 @@
         "课堂示例"
       ],
       "slideId": "ud9hga",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "case7-answer",
@@ -2456,7 +2734,7 @@
         "课堂示例"
       ],
       "slideId": "vr1id7",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "case8-question",
@@ -2592,7 +2870,7 @@
         "课堂示例"
       ],
       "slideId": "7nvbdq",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "case8-answer",
@@ -2764,7 +3042,7 @@
         "课堂示例"
       ],
       "slideId": "yhdqsd",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "method-summary",
@@ -2789,7 +3067,7 @@
         "53"
       ],
       "slideId": "xarqut",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "quote",
@@ -2808,7 +3086,7 @@
         "54"
       ],
       "slideId": "f23g56",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "exercise",
@@ -2836,7 +3114,7 @@
         "55"
       ],
       "slideId": "pjp3e9",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "complex",
@@ -3000,7 +3278,7 @@
         "课堂示例"
       ],
       "slideId": "6ce8t5",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     }
   ],
   "closingSlides": [
@@ -3027,7 +3305,7 @@
         "57"
       ],
       "slideId": "lb4d4e",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     },
     {
       "key": "closing",
@@ -3055,7 +3333,7 @@
         "返回课程目录"
       ],
       "slideId": "1y39hs",
-      "cloudStateVersion": 33
+      "cloudStateVersion": 37
     }
   ]
 }
