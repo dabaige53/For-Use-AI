@@ -2,7 +2,7 @@
   "course": "把 AI 当同事：从理解原理到高效协作",
   "chapter": 3,
   "title": "用好它：怎样交代任务并逐步改进？",
-  "status": "27页保留；原生UI重新设计逐页保存与读取，当前版本37，具体页面见UI保存记录。",
+  "status": "27页保留；原生UI重新设计逐页保存与读取，当前版本63，具体页面见UI保存记录。",
   "cloudPage": "https://chatgpt.com/space/page_982cadac711881918e97420d8e2fc214",
   "timing": {
     "contentMinutes": 43,
@@ -60,13 +60,13 @@
         "返回课程目录"
       ],
       "slideId": "oq2cu2",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63
     },
     {
       "key": "gap",
       "title": "先看 AI 还缺什么",
       "minutes": 2,
-      "layout": "native-dialogue-revision",
+      "layout": "native-ui-redesign",
       "screen": [
         "用户",
         "帮我写一条项目会改期通知。",
@@ -79,80 +79,143 @@
       "interaction": "找缺失信息",
       "nativeElements": [
         {
+          "kind": "image",
+          "asset": "ch1-feedback-scene-03.png",
+          "x": 72,
+          "y": 350,
+          "w": 560,
+          "h": 373.3333333333333,
+          "alt": "同事交代工作并对照材料"
+        },
+        {
+          "kind": "text",
+          "text": "一句话交代任务",
+          "x": 72,
+          "y": 252,
+          "w": 560,
+          "h": 68,
+          "size": 40,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 720,
+          "y": 254,
+          "w": 880,
+          "h": 114,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
           "kind": "text",
           "text": "用户",
-          "x": 72,
-          "y": 235,
-          "w": 110,
+          "x": 744,
+          "y": 272,
+          "w": 90,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
           "text": "帮我写一条项目会改期通知。",
-          "x": 200,
-          "y": 235,
-          "w": 1400,
-          "h": 72,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "x": 842,
+          "y": 272,
+          "w": 734,
+          "h": 88,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1160,
+              368
+            ],
+            [
+              1160,
+              414
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1154.2468935367497,
+              403.4690092573155
+            ],
+            [
+              1160,
+              414
+            ],
+            [
+              1165.7531064632503,
+              403.4690092573155
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
         },
         {
           "kind": "rect",
-          "x": 200,
-          "y": 317,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 720,
+          "y": 414,
+          "w": 880,
+          "h": 220,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
         },
         {
           "kind": "text",
           "text": "AI",
-          "x": 72,
-          "y": 375,
-          "w": 110,
+          "x": 744,
+          "y": 432,
+          "w": 60,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "可以。会议原定什么时候，改到什么时候？\n发给哪些人？地点和回复要求是什么？",
-          "x": 200,
-          "y": 375,
-          "w": 1400,
-          "h": 124,
-          "size": 32,
+          "text": "可以。会议原定什么时候，\n改到什么时候？发给哪些人？\n地点和回复要求是什么？",
+          "x": 824,
+          "y": 432,
+          "w": 752,
+          "h": 194,
+          "size": 30,
           "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": false
         },
         {
           "kind": "rect",
-          "x": 200,
-          "y": 509,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 72,
+          "y": 800,
+          "w": 6,
+          "h": 52,
+          "fill": "#D98B3A",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
           "text": "你准备补充哪两项信息？",
-          "x": 200,
-          "y": 680,
-          "w": 1330,
-          "h": 80,
-          "size": 40,
-          "color": "#D98B3A",
-          "bold": true,
-          "name": "text"
+          "x": 98,
+          "y": 802,
+          "w": 1502,
+          "h": 66,
+          "size": 34,
+          "color": "#0E1E36",
+          "bold": true
         }
       ],
       "revisionSource": "../对话改造/第三章改造页.json",
@@ -168,13 +231,16 @@
         "课堂示例"
       ],
       "slideId": "zmd7ie",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "uiLayout": "split-screen：办公情境＋双角色对话",
+      "exampleLabel": "课堂示例",
+      "navigation": []
     },
     {
       "key": "context",
       "title": "把材料放进这次对话",
       "minutes": 1.5,
-      "layout": "native-dialogue-revision",
+      "layout": "native-ui-redesign",
       "screen": [
         "用户",
         "发给项目组，发在工作群。会议从本周四改到周五15:00，\n地点仍是301室。80字以内，礼貌一点，请大家回复能否参加。",
@@ -188,79 +254,132 @@
       "nativeElements": [
         {
           "kind": "text",
-          "text": "用户",
+          "text": "用户 · 本次提供的材料",
           "x": 72,
-          "y": 230,
-          "w": 110,
+          "y": 222,
+          "w": 600,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
-        },
-        {
-          "kind": "text",
-          "text": "发给项目组，发在工作群。会议从本周四改到周五15:00，\n地点仍是301室。80字以内，礼貌一点，请大家回复能否参加。",
-          "x": 200,
-          "y": 230,
-          "w": 1400,
-          "h": 120,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "rect",
-          "x": 200,
-          "y": 360,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
-        },
-        {
-          "kind": "text",
-          "text": "AI",
           "x": 72,
-          "y": 430,
-          "w": 110,
-          "h": 40,
-          "size": 24,
-          "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "y": 282,
+          "w": 660,
+          "h": 428,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
-          "text": "各位同事，项目会由本周四改至周五15:00，地点仍为301室。\n请大家回复能否参加，谢谢。",
-          "x": 200,
-          "y": 430,
-          "w": 1400,
-          "h": 120,
+          "text": "发给项目组，发在工作群。\n会议从本周四改到周五15:00，\n地点仍是301室。\n80字以内，礼貌一点，\n请大家回复能否参加。",
+          "x": 104,
+          "y": 322,
+          "w": 596,
+          "h": 330,
           "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
-        },
-        {
-          "kind": "rect",
-          "x": 200,
-          "y": 560,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
-        },
-        {
-          "kind": "text",
-          "text": "时间、地点、对象、回复要求，都来自这次材料。",
-          "x": 200,
-          "y": 703,
-          "w": 1370,
-          "h": 90,
-          "size": 36,
           "color": "#0E1E36",
-          "bold": true,
-          "name": "text"
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              748,
+              496
+            ],
+            [
+              884,
+              496
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              873.4690092573155,
+              501.75310646325045
+            ],
+            [
+              884,
+              496
+            ],
+            [
+              873.4690092573155,
+              490.24689353674955
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "text",
+          "text": "AI · 通知成稿",
+          "x": 908,
+          "y": 222,
+          "w": 600,
+          "h": 40,
+          "size": 24,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 908,
+          "y": 282,
+          "w": 692,
+          "h": 428,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
+        },
+        {
+          "kind": "rect",
+          "x": 908,
+          "y": 282,
+          "w": 692,
+          "h": 8,
+          "fill": "#2F5BD3",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "各位同事，\n项目会由本周四改至周五15:00，\n地点仍为301室。\n请大家回复能否参加，谢谢。",
+          "x": 944,
+          "y": 340,
+          "w": 620,
+          "h": 300,
+          "size": 32,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 800,
+          "w": 6,
+          "h": 52,
+          "fill": "#D98B3A",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "对照原材料：时间、地点、对象、回复要求都在吗？",
+          "x": 98,
+          "y": 802,
+          "w": 1502,
+          "h": 66,
+          "size": 34,
+          "color": "#0E1E36",
+          "bold": true
         }
       ],
       "revisionSource": "../对话改造/第三章改造页.json",
@@ -276,7 +395,10 @@
         "课堂示例"
       ],
       "slideId": "tjx1sg",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "uiLayout": "structural-breakdown：任务材料传递到通知成稿",
+      "exampleLabel": "课堂示例",
+      "navigation": []
     },
     {
       "key": "feedback",
@@ -584,14 +706,16 @@
         "课堂示例"
       ],
       "slideId": "zbtq01",
-      "cloudStateVersion": 37,
-      "uiLayout": "comic-strip：共同任务＋三段因果分镜"
+      "cloudStateVersion": 63,
+      "uiLayout": "comic-strip：共同任务＋三段因果分镜",
+      "exampleLabel": "课堂示例",
+      "navigation": []
     },
     {
       "key": "feedback-transfer",
       "title": "下一句话，怎样说更有用",
       "minutes": 1.5,
-      "layout": "native-dialogue-revision",
+      "layout": "native-ui-redesign",
       "screen": [
         "AI",
         "项目会调整至本周五15:00，地点仍为301室。请回复能否参加。",
@@ -606,83 +730,164 @@
       "nativeElements": [
         {
           "kind": "text",
-          "text": "AI",
+          "text": "正在修改的AI回复",
           "x": 72,
-          "y": 222,
-          "w": 110,
+          "y": 224,
+          "w": 600,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
-        },
-        {
-          "kind": "text",
-          "text": "项目会调整至本周五15:00，地点仍为301室。请回复能否参加。",
-          "x": 200,
-          "y": 222,
-          "w": 1400,
-          "h": 85,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "rect",
-          "x": 200,
-          "y": 317,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 72,
+          "y": 286,
+          "w": 600,
+          "h": 362,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
         },
         {
           "kind": "text",
-          "text": "你的目标：让同事一眼看见“周四改到周五”。",
+          "text": "项目会调整至本周五15:00，\n地点仍为301室。\n请回复能否参加。",
+          "x": 108,
+          "y": 344,
+          "w": 528,
+          "h": 220,
+          "size": 32,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "text",
+          "text": "你的目标",
           "x": 72,
-          "y": 385,
-          "w": 1528,
-          "h": 65,
+          "y": 690,
+          "w": 600,
+          "h": 42,
+          "size": 24,
+          "color": "#D98B3A",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "让同事一眼看见\n“周四改到周五”。",
+          "x": 72,
+          "y": 738,
+          "w": 600,
+          "h": 110,
           "size": 36,
           "color": "#0E1E36",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "A   还不够清楚，再好一点。",
-          "x": 120,
-          "y": 505,
-          "w": 1430,
-          "h": 65,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "text": "你会怎样接下一句话？",
+          "x": 808,
+          "y": 224,
+          "w": 792,
+          "h": 40,
+          "size": 24,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 808,
+          "y": 286,
+          "w": 792,
+          "h": 138,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
-          "text": "B   第一句写出周四改到周五，保留时间、地点和回复要求。",
-          "x": 120,
-          "y": 595,
-          "w": 1430,
-          "h": 85,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "text": "A",
+          "x": 836,
+          "y": 314,
+          "w": 64,
+          "h": 64,
+          "size": 48,
+          "color": "#2F5BD3",
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "C   更正式一点，最好有高级感。",
-          "x": 120,
-          "y": 705,
-          "w": 1430,
-          "h": 65,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "text": "还不够清楚，再好一点。",
+          "x": 928,
+          "y": 316,
+          "w": 640,
+          "h": 120,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 808,
+          "y": 456,
+          "w": 792,
+          "h": 166,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "B",
+          "x": 836,
+          "y": 484,
+          "w": 64,
+          "h": 64,
+          "size": 48,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "第一句写出周四改到周五，\n保留时间、地点和回复要求。",
+          "x": 928,
+          "y": 486,
+          "w": 640,
+          "h": 120,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 808,
+          "y": 654,
+          "w": 792,
+          "h": 138,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "C",
+          "x": 836,
+          "y": 682,
+          "w": 64,
+          "h": 64,
+          "size": 48,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "更正式一点，最好有高级感。",
+          "x": 928,
+          "y": 684,
+          "w": 640,
+          "h": 120,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": false
         }
       ],
       "revisionSource": "../对话改造/第三章改造页.json",
@@ -699,13 +904,16 @@
         "课堂示例"
       ],
       "slideId": "ito41u",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "uiLayout": "binary-comparison：当前回复与三个候选反馈",
+      "exampleLabel": "课堂示例",
+      "navigation": []
     },
     {
       "key": "map",
       "title": "八个场景，各解决一个问题",
       "minutes": 1,
-      "layout": "native-dialogue-revision",
+      "layout": "native-ui-redesign",
       "screen": [
         "交代任务",
         "① 考勤：工具能不能用\n② 周报：怎样才算达标\n③ 欢迎消息：语气如何表达\n④ 纪要：格式长什么样",
@@ -718,59 +926,452 @@
       "nativeElements": [
         {
           "kind": "text",
-          "text": "交代任务",
+          "text": "8",
           "x": 72,
-          "y": 228,
-          "w": 300,
-          "h": 60,
-          "size": 40,
-          "color": "#0E1E36",
-          "bold": true,
-          "name": "text"
+          "y": 266,
+          "w": 340,
+          "h": 350,
+          "size": 240,
+          "color": "#2F5BD3",
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "① 考勤：工具能不能用\n② 周报：怎样才算达标\n③ 欢迎消息：语气如何表达\n④ 纪要：格式长什么样",
-          "x": 72,
-          "y": 320,
-          "w": 680,
-          "h": 350,
-          "size": 36,
+          "text": "个办公场景",
+          "x": 88,
+          "y": 584,
+          "w": 360,
+          "h": 70,
+          "size": 40,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "按任务选择用法",
+          "x": 88,
+          "y": 672,
+          "w": 360,
+          "h": 60,
+          "size": 28,
           "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 520,
+          "y": 238,
+          "w": 510,
+          "h": 60,
+          "fill": "#0E1E36",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "交代清楚",
+          "x": 544,
+          "y": 248,
+          "w": 462,
+          "h": 48,
+          "size": 32,
+          "color": "#FFFFFF",
+          "bold": true
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              550,
+              330
+            ],
+            [
+              550,
+              786
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "rect",
+          "x": 520,
+          "y": 334,
+          "w": 62,
+          "h": 54,
+          "fill": "#FFFFFF",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "01",
+          "x": 520,
+          "y": 334,
+          "w": 62,
+          "h": 54,
+          "size": 36,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "考勤",
+          "x": 608,
+          "y": 334,
+          "w": 420,
+          "h": 48,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "工具能不能用",
+          "x": 608,
+          "y": 382,
+          "w": 420,
+          "h": 44,
+          "size": 28,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 520,
+          "y": 454,
+          "w": 62,
+          "h": 54,
+          "fill": "#FFFFFF",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "02",
+          "x": 520,
+          "y": 454,
+          "w": 62,
+          "h": 54,
+          "size": 36,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "周报",
+          "x": 608,
+          "y": 454,
+          "w": 420,
+          "h": 48,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "怎样才算达标",
+          "x": 608,
+          "y": 502,
+          "w": 420,
+          "h": 44,
+          "size": 28,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 520,
+          "y": 574,
+          "w": 62,
+          "h": 54,
+          "fill": "#FFFFFF",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "03",
+          "x": 520,
+          "y": 574,
+          "w": 62,
+          "h": 54,
+          "size": 36,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "欢迎消息",
+          "x": 608,
+          "y": 574,
+          "w": 420,
+          "h": 48,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "语气如何表达",
+          "x": 608,
+          "y": 622,
+          "w": 420,
+          "h": 44,
+          "size": 28,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 520,
+          "y": 694,
+          "w": 62,
+          "h": 54,
+          "fill": "#FFFFFF",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "04",
+          "x": 520,
+          "y": 694,
+          "w": 62,
+          "h": 54,
+          "size": 36,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "纪要",
+          "x": 608,
+          "y": 694,
+          "w": 420,
+          "h": 48,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "格式长什么样",
+          "x": 608,
+          "y": 742,
+          "w": 420,
+          "h": 44,
+          "size": 28,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 1090,
+          "y": 238,
+          "w": 510,
+          "h": 60,
+          "fill": "#0E1E36",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
           "text": "推进与修正",
-          "x": 910,
-          "y": 228,
-          "w": 650,
-          "h": 60,
-          "size": 40,
-          "color": "#0E1E36",
-          "bold": true,
-          "name": "text"
+          "x": 1114,
+          "y": 248,
+          "w": 462,
+          "h": 48,
+          "size": 32,
+          "color": "#FFFFFF",
+          "bold": true
         },
         {
-          "kind": "text",
-          "text": "⑤ 年会：先比较再选择\n⑥ 汇报：把偏好说具体\n⑦ 分析：先核对前提\n⑧ 汇总：回到当前交付物",
-          "x": 910,
-          "y": 320,
-          "w": 690,
-          "h": 350,
-          "size": 36,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "kind": "line",
+          "points": [
+            [
+              1120,
+              330
+            ],
+            [
+              1120,
+              786
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
         },
         {
           "kind": "rect",
-          "x": 836,
-          "y": 236,
-          "w": 1.5,
-          "h": 500,
-          "fill": "#D7DFE9"
+          "x": 1090,
+          "y": 334,
+          "w": 62,
+          "h": 54,
+          "fill": "#FFFFFF",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "05",
+          "x": 1090,
+          "y": 334,
+          "w": 62,
+          "h": 54,
+          "size": 36,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "年会",
+          "x": 1178,
+          "y": 334,
+          "w": 420,
+          "h": 48,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "先比较再选择",
+          "x": 1178,
+          "y": 382,
+          "w": 420,
+          "h": 44,
+          "size": 28,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 1090,
+          "y": 454,
+          "w": 62,
+          "h": 54,
+          "fill": "#FFFFFF",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "06",
+          "x": 1090,
+          "y": 454,
+          "w": 62,
+          "h": 54,
+          "size": 36,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "汇报",
+          "x": 1178,
+          "y": 454,
+          "w": 420,
+          "h": 48,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "把偏好说具体",
+          "x": 1178,
+          "y": 502,
+          "w": 420,
+          "h": 44,
+          "size": 28,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 1090,
+          "y": 574,
+          "w": 62,
+          "h": 54,
+          "fill": "#FFFFFF",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "07",
+          "x": 1090,
+          "y": 574,
+          "w": 62,
+          "h": 54,
+          "size": 36,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "分析",
+          "x": 1178,
+          "y": 574,
+          "w": 420,
+          "h": 48,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "先核对前提",
+          "x": 1178,
+          "y": 622,
+          "w": 420,
+          "h": 44,
+          "size": 28,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 1090,
+          "y": 694,
+          "w": 62,
+          "h": 54,
+          "fill": "#FFFFFF",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "08",
+          "x": 1090,
+          "y": 694,
+          "w": 62,
+          "h": 54,
+          "size": 36,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "汇总",
+          "x": 1178,
+          "y": 694,
+          "w": 420,
+          "h": 48,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "回到当前交付物",
+          "x": 1178,
+          "y": 742,
+          "w": 420,
+          "h": 44,
+          "size": 28,
+          "color": "#46556B",
+          "bold": false
         }
       ],
       "revisionSource": "../对话改造/第三章改造页.json",
@@ -785,7 +1386,10 @@
         "课堂示例"
       ],
       "slideId": "3bk4cm",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "uiLayout": "agenda：八个任务分成两段学习路径",
+      "exampleLabel": false,
+      "navigation": []
     },
     {
       "key": "case1",
@@ -1089,14 +1693,16 @@
         "课堂示例"
       ],
       "slideId": "66sp5h",
-      "cloudStateVersion": 37,
-      "uiLayout": "binary-comparison：共同材料＋两种可操作结果"
+      "cloudStateVersion": 63,
+      "uiLayout": "binary-comparison：共同材料＋两种可操作结果",
+      "exampleLabel": "课堂示例",
+      "navigation": []
     },
     {
       "key": "case2-question",
       "title": "② “专业”的周报，怎么验收",
       "minutes": 1,
-      "layout": "native-dialogue-revision",
+      "layout": "native-ui-redesign",
       "screen": [
         "用户",
         "材料：走访12家客户，收到5项需求，3项已确认，2项待客户补充。\n下周周三前回访。请写一份专业的周报。",
@@ -1109,80 +1715,159 @@
       "interaction": "自己写两条验收标准",
       "nativeElements": [
         {
-          "kind": "text",
-          "text": "用户",
+          "kind": "rect",
           "x": 72,
-          "y": 223,
-          "w": 110,
+          "y": 240,
+          "w": 540,
+          "h": 490,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "用户 · 原始材料与任务",
+          "x": 100,
+          "y": 266,
+          "w": 480,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "材料：走访12家客户，收到5项需求，3项已确认，2项待客户补充。\n下周周三前回访。请写一份专业的周报。",
-          "x": 200,
-          "y": 223,
-          "w": 1400,
-          "h": 116,
+          "text": "走访12家客户，收到5项需求，\n3项已确认，2项待客户补充。\n下周周三前回访。",
+          "x": 100,
+          "y": 336,
+          "w": 484,
+          "h": 202,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              100,
+              560
+            ],
+            [
+              584,
+              560
+            ]
+          ],
+          "color": "#D7DFE9",
+          "width": 2
+        },
+        {
+          "kind": "text",
+          "text": "请写一份专业的周报。",
+          "x": 100,
+          "y": 604,
+          "w": 484,
+          "h": 88,
           "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "color": "#0E1E36",
+          "bold": true
         },
         {
-          "kind": "rect",
-          "x": 200,
-          "y": 349,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "kind": "line",
+          "points": [
+            [
+              628,
+              478
+            ],
+            [
+              724,
+              478
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              713.4690092573155,
+              483.75310646325045
+            ],
+            [
+              724,
+              478
+            ],
+            [
+              713.4690092573155,
+              472.24689353674955
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
         },
         {
           "kind": "text",
-          "text": "AI",
-          "x": 72,
-          "y": 425,
-          "w": 110,
+          "text": "AI · 第一版",
+          "x": 748,
+          "y": 240,
+          "w": 840,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
-        },
-        {
-          "kind": "text",
-          "text": "本周走访12家客户，收集5项需求，其中3项已确认，\n2项待客户补充。下周将于周三前回访，推进剩余需求的确认。",
-          "x": 200,
-          "y": 425,
-          "w": 1400,
-          "h": 116,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "rect",
-          "x": 200,
-          "y": 551,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 748,
+          "y": 304,
+          "w": 852,
+          "h": 426,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
+        },
+        {
+          "kind": "rect",
+          "x": 748,
+          "y": 304,
+          "w": 852,
+          "h": 8,
+          "fill": "#2F5BD3",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "本周走访12家客户，收集5项需求，\n其中3项已确认，2项待客户补充。\n下周将于周三前回访，\n推进剩余需求的确认。",
+          "x": 790,
+          "y": 366,
+          "w": 768,
+          "h": 282,
+          "size": 32,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 800,
+          "w": 6,
+          "h": 52,
+          "fill": "#D98B3A",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
           "text": "这版事实是否一致？你还想用哪两条标准验收？",
-          "x": 200,
-          "y": 700,
-          "w": 1380,
-          "h": 90,
-          "size": 36,
-          "color": "#D98B3A",
-          "bold": true,
-          "name": "text"
+          "x": 98,
+          "y": 802,
+          "w": 1502,
+          "h": 66,
+          "size": 34,
+          "color": "#0E1E36",
+          "bold": true
         }
       ],
       "revisionSource": "../对话改造/第三章改造页.json",
@@ -1198,13 +1883,16 @@
         "课堂示例"
       ],
       "slideId": "8hq1zk",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "uiLayout": "split-screen：事实材料与周报草稿，留出验收动作",
+      "exampleLabel": "课堂示例",
+      "navigation": []
     },
     {
       "key": "case2-answer",
       "title": "② 把标准写成能核对的要求",
       "minutes": 2,
-      "layout": "native-dialogue-revision",
+      "layout": "native-ui-redesign",
       "screen": [
         "用户",
         "分“完成、问题、下周计划”三段，150字以内。\n保留数字与回访时间，不补充业绩，也不把计划写成已完成。",
@@ -1218,92 +1906,257 @@
       "interaction": "按三条标准检查AI改稿",
       "nativeElements": [
         {
+          "kind": "rect",
+          "x": 72,
+          "y": 214,
+          "w": 1528,
+          "h": 132,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
           "kind": "text",
           "text": "用户",
-          "x": 72,
-          "y": 222,
-          "w": 110,
+          "x": 96,
+          "y": 232,
+          "w": 90,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "分“完成、问题、下周计划”三段，150字以内。\n保留数字与回访时间，不补充业绩，也不把计划写成已完成。",
-          "x": 200,
-          "y": 222,
-          "w": 1400,
-          "h": 105,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
-        },
-        {
-          "kind": "rect",
-          "x": 200,
-          "y": 337,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "text": "分“完成、问题、下周计划”三段，150字以内。保留数字与回访时间，\n不补充业绩，也不把计划写成已完成。",
+          "x": 194,
+          "y": 232,
+          "w": 1382,
+          "h": 106,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": false
         },
         {
           "kind": "text",
           "text": "AI · 修改稿",
           "x": 72,
-          "y": 414,
-          "w": 900,
-          "h": 45,
+          "y": 378,
+          "w": 600,
+          "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
-        },
-        {
-          "kind": "text",
-          "text": "完成：走访12家客户，收到5项需求，已确认3项。\n\n问题：2项需求仍待客户补充信息。\n\n下周计划：周三前回访，请客户补充剩余2项需求信息。",
-          "x": 72,
-          "y": 481,
-          "w": 1040,
-          "h": 310,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "rect",
-          "x": 1170,
-          "y": 418,
-          "w": 1.5,
-          "h": 330,
-          "fill": "#D7DFE9"
+          "x": 72,
+          "y": 434,
+          "w": 1028,
+          "h": 354,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 434,
+          "w": 220,
+          "h": 118,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "完成",
+          "x": 96,
+          "y": 464,
+          "w": 172,
+          "h": 74,
+          "size": 30,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "走访12家客户，收到5项需求，已确认3项。",
+          "x": 324,
+          "y": 462,
+          "w": 742,
+          "h": 92,
+          "size": 30,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              72,
+              552
+            ],
+            [
+              1100,
+              552
+            ]
+          ],
+          "color": "#D7DFE9",
+          "width": 2
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 552,
+          "w": 220,
+          "h": 118,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "问题",
+          "x": 96,
+          "y": 582,
+          "w": 172,
+          "h": 74,
+          "size": 30,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "2项需求仍待客户补充信息。",
+          "x": 324,
+          "y": 580,
+          "w": 742,
+          "h": 92,
+          "size": 30,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              72,
+              670
+            ],
+            [
+              1100,
+              670
+            ]
+          ],
+          "color": "#D7DFE9",
+          "width": 2
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 670,
+          "w": 220,
+          "h": 118,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "下周计划",
+          "x": 96,
+          "y": 700,
+          "w": 172,
+          "h": 74,
+          "size": 30,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "周三前回访，请客户补充剩余2项需求信息。",
+          "x": 324,
+          "y": 698,
+          "w": 742,
+          "h": 92,
+          "size": 30,
+          "color": "#46556B",
+          "bold": false
         },
         {
           "kind": "text",
           "text": "对照检查",
-          "x": 1235,
-          "y": 418,
-          "w": 365,
-          "h": 50,
-          "size": 28,
-          "color": "#0E1E36",
-          "bold": true,
-          "name": "text"
+          "x": 1190,
+          "y": 378,
+          "w": 410,
+          "h": 40,
+          "size": 24,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 1190,
+          "y": 458,
+          "w": 30,
+          "h": 30,
+          "fill": "#FFFFFF",
+          "stroke": "#2F5BD3",
+          "sw": 2
         },
         {
           "kind": "text",
-          "text": "三段结构\n\n数字与时间\n\n事实与计划",
-          "x": 1235,
-          "y": 493,
-          "w": 365,
-          "h": 260,
-          "size": 28,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "text": "三段结构",
+          "x": 1244,
+          "y": 455,
+          "w": 356,
+          "h": 60,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 1190,
+          "y": 578,
+          "w": 30,
+          "h": 30,
+          "fill": "#FFFFFF",
+          "stroke": "#2F5BD3",
+          "sw": 2
+        },
+        {
+          "kind": "text",
+          "text": "数字与时间",
+          "x": 1244,
+          "y": 575,
+          "w": 356,
+          "h": 60,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 1190,
+          "y": 698,
+          "w": 30,
+          "h": 30,
+          "fill": "#FFFFFF",
+          "stroke": "#2F5BD3",
+          "sw": 2
+        },
+        {
+          "kind": "text",
+          "text": "事实与计划",
+          "x": 1244,
+          "y": 695,
+          "w": 356,
+          "h": 60,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": true
         }
       ],
       "revisionSource": "../对话改造/第三章改造页.json",
@@ -1320,13 +2173,16 @@
         "课堂示例"
       ],
       "slideId": "v8jhbk",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "uiLayout": "comparison-matrix：三段成稿与验收清单",
+      "exampleLabel": "课堂示例",
+      "navigation": []
     },
     {
       "key": "case3",
       "title": "③ 用参照说明语气",
       "minutes": 2,
-      "layout": "native-dialogue-revision",
+      "layout": "native-ui-redesign",
       "screen": [
         "共同任务：给新同事发欢迎消息。周一9:00，到前台领取工牌。",
         "用户",
@@ -1344,164 +2200,218 @@
       "interaction": "轮读两种回复并选择适用对象",
       "nativeElements": [
         {
+          "kind": "rect",
+          "x": 72,
+          "y": 214,
+          "w": 1528,
+          "h": 88,
+          "fill": "#F5F6F8",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
           "kind": "text",
           "text": "共同任务：给新同事发欢迎消息。周一9:00，到前台领取工牌。",
-          "x": 72,
-          "y": 215,
-          "w": 1528,
-          "h": 70,
+          "x": 100,
+          "y": 238,
+          "w": 1472,
+          "h": 52,
           "size": 30,
           "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": false
+        },
+        {
+          "kind": "text",
+          "text": "A",
+          "x": 72,
+          "y": 336,
+          "w": 88,
+          "h": 64,
+          "size": 48,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "办事指南",
+          "x": 168,
+          "y": 346,
+          "w": 604,
+          "h": 56,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
         },
         {
           "kind": "rect",
-          "x": 836,
-          "y": 320,
-          "w": 1.5,
-          "h": 430,
-          "fill": "#D7DFE9"
+          "x": 72,
+          "y": 420,
+          "w": 700,
+          "h": 126,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
           "text": "用户",
-          "x": 72,
-          "y": 328,
-          "w": 110,
+          "x": 96,
+          "y": 438,
+          "w": 90,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
           "text": "像办事指南，简短、直接。",
-          "x": 200,
-          "y": 328,
-          "w": 576,
-          "h": 96,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
-        },
-        {
-          "kind": "rect",
-          "x": 200,
-          "y": 434,
-          "w": 576,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 194,
+          "y": 438,
+          "w": 554,
+          "h": 100,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": false
         },
         {
           "kind": "text",
-          "text": "AI",
+          "text": "AI · 欢迎消息",
           "x": 72,
-          "y": 512,
-          "w": 110,
+          "y": 580,
+          "w": 700,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 630,
+          "w": 700,
+          "h": 142,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
         },
         {
           "kind": "text",
           "text": "周一9:00，请到前台领取工牌。\n欢迎加入。",
-          "x": 200,
-          "y": 512,
-          "w": 576,
-          "h": 140,
+          "x": 100,
+          "y": 660,
+          "w": 644,
+          "h": 100,
           "size": 32,
           "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": false
+        },
+        {
+          "kind": "text",
+          "text": "B",
+          "x": 900,
+          "y": 336,
+          "w": 88,
+          "h": 64,
+          "size": 48,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "带教同事",
+          "x": 996,
+          "y": 346,
+          "w": 604,
+          "h": 56,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
         },
         {
           "kind": "rect",
-          "x": 200,
-          "y": 662,
-          "w": 576,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 900,
+          "y": 420,
+          "w": 700,
+          "h": 126,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
           "text": "用户",
-          "x": 912,
-          "y": 328,
-          "w": 110,
+          "x": 924,
+          "y": 438,
+          "w": 90,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
           "text": "像耐心的带教同事，热情但\n不过分亲昵，不加福利承诺。",
-          "x": 1040,
-          "y": 328,
-          "w": 560,
-          "h": 96,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
-        },
-        {
-          "kind": "rect",
-          "x": 1040,
-          "y": 434,
-          "w": 560,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 1022,
+          "y": 438,
+          "w": 554,
+          "h": 100,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": false
         },
         {
           "kind": "text",
-          "text": "AI",
-          "x": 912,
-          "y": 512,
-          "w": 110,
+          "text": "AI · 欢迎消息",
+          "x": 900,
+          "y": 580,
+          "w": 700,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 900,
+          "y": 630,
+          "w": 700,
+          "h": 142,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
         },
         {
           "kind": "text",
           "text": "欢迎加入！周一9:00到前台\n领取工牌，期待和你一起工作。",
-          "x": 1040,
-          "y": 512,
-          "w": 560,
-          "h": 140,
+          "x": 928,
+          "y": 660,
+          "w": 644,
+          "h": 100,
           "size": 32,
           "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": false
         },
         {
           "kind": "rect",
-          "x": 1040,
-          "y": 662,
-          "w": 560,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 72,
+          "y": 812,
+          "w": 6,
+          "h": 52,
+          "fill": "#D98B3A",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
           "text": "读一遍：哪种适合你的收件人？时间和地点还在吗？",
-          "x": 72,
-          "y": 790,
-          "w": 1528,
-          "h": 65,
-          "size": 32,
-          "color": "#D98B3A",
-          "bold": true,
-          "name": "text"
+          "x": 98,
+          "y": 814,
+          "w": 1502,
+          "h": 66,
+          "size": 34,
+          "color": "#0E1E36",
+          "bold": true
         }
       ],
       "revisionSource": "../对话改造/第三章改造页.json",
@@ -1522,13 +2432,16 @@
         "课堂示例"
       ],
       "slideId": "wadh6d",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "uiLayout": "binary-comparison：同一事实，两种欢迎消息",
+      "exampleLabel": "课堂示例",
+      "navigation": []
     },
     {
       "key": "case4-question",
       "title": "④ 样例教格式，材料给事实",
       "minutes": 1,
-      "layout": "native-dialogue-revision",
+      "layout": "native-ui-redesign",
       "screen": [
         "用户",
         "本次会议记录：李明周三18:00前补齐预算；周晴周五12:00前确认场地。\n请整理纪要。",
@@ -1543,112 +2456,177 @@
       "interaction": "圈出旧样例中不能照搬的信息",
       "nativeElements": [
         {
-          "kind": "text",
-          "text": "用户",
+          "kind": "rect",
           "x": 72,
-          "y": 214,
-          "w": 110,
+          "y": 244,
+          "w": 430,
+          "h": 478,
+          "fill": "#F5F6F8",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "准备补充的旧样例",
+          "x": 100,
+          "y": 270,
+          "w": 374,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "本次会议记录：李明周三18:00前补齐预算；周晴周五12:00前确认场地。\n请整理纪要。",
-          "x": 200,
-          "y": 214,
-          "w": 1400,
-          "h": 95,
+          "text": "行动项",
+          "x": 100,
+          "y": 356,
+          "w": 360,
+          "h": 44,
+          "size": 28,
+          "color": "#6B778A",
+          "bold": false
+        },
+        {
+          "kind": "text",
+          "text": "整理名单",
+          "x": 100,
+          "y": 400,
+          "w": 360,
+          "h": 62,
+          "size": 36,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "负责人：陈晨\n截止时间：周二",
+          "x": 100,
+          "y": 500,
+          "w": 360,
+          "h": 132,
           "size": 30,
           "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": false
         },
         {
           "kind": "rect",
-          "x": 200,
-          "y": 319,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 600,
+          "y": 244,
+          "w": 1000,
+          "h": 154,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "用户",
+          "x": 624,
+          "y": 262,
+          "w": 90,
+          "h": 40,
+          "size": 24,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "本次会议记录：李明周三18:00前补齐预算；\n周晴周五12:00前确认场地。请整理纪要。",
+          "x": 722,
+          "y": 262,
+          "w": 854,
+          "h": 128,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1100,
+              398
+            ],
+            [
+              1100,
+              448
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1094.2468935367497,
+              437.4690092573155
+            ],
+            [
+              1100,
+              448
+            ],
+            [
+              1105.7531064632503,
+              437.4690092573155
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "rect",
+          "x": 600,
+          "y": 448,
+          "w": 1000,
+          "h": 274,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
         },
         {
           "kind": "text",
           "text": "AI",
-          "x": 72,
-          "y": 365,
-          "w": 110,
+          "x": 624,
+          "y": 466,
+          "w": 60,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "本次会议安排：李明负责补齐预算，截止周三18:00；\n周晴负责确认场地，截止周五12:00。",
-          "x": 200,
-          "y": 365,
-          "w": 1400,
-          "h": 100,
+          "text": "本次会议安排：\n李明负责补齐预算，截止周三18:00；\n周晴负责确认场地，截止周五12:00。",
+          "x": 704,
+          "y": 466,
+          "w": 872,
+          "h": 248,
           "size": 30,
           "color": "#46556B",
-          "bold": false,
-          "name": "text"
-        },
-        {
-          "kind": "rect",
-          "x": 200,
-          "y": 475,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
-        },
-        {
-          "kind": "text",
-          "text": "你准备补充的旧样例",
-          "x": 72,
-          "y": 554,
-          "w": 1528,
-          "h": 45,
-          "size": 24,
-          "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": false
         },
         {
           "kind": "rect",
           "x": 72,
-          "y": 611,
-          "w": 1528,
-          "h": 95,
-          "fill": "#F5F6F8"
+          "y": 800,
+          "w": 6,
+          "h": 52,
+          "fill": "#D98B3A",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
-          "text": "行动项：整理名单　｜　负责人：陈晨　｜　截止时间：周二",
-          "x": 100,
-          "y": 635,
-          "w": 1472,
-          "h": 65,
-          "size": 30,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
-        },
-        {
-          "kind": "text",
-          "text": "你会要求学什么？哪些信息不能复制？",
-          "x": 72,
-          "y": 785,
-          "w": 1528,
-          "h": 65,
-          "size": 36,
-          "color": "#D98B3A",
-          "bold": true,
-          "name": "text"
+          "text": "你会要求学什么？旧样例中哪些信息不能复制？",
+          "x": 98,
+          "y": 802,
+          "w": 1502,
+          "h": 66,
+          "size": 34,
+          "color": "#0E1E36",
+          "bold": true
         }
       ],
       "revisionSource": "../对话改造/第三章改造页.json",
@@ -1666,13 +2644,16 @@
         "课堂示例"
       ],
       "slideId": "17gzsc",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "uiLayout": "structural-breakdown：旧样例与本次材料分区",
+      "exampleLabel": "课堂示例",
+      "navigation": []
     },
     {
       "key": "case4-answer",
       "title": "④ 把结构应用到新材料",
       "minutes": 2,
-      "layout": "native-dialogue-revision",
+      "layout": "native-ui-redesign",
       "screen": [
         "用户",
         "按旧样例的“行动项｜负责人｜截止时间”整理。\n只学格式，姓名和时间使用本次记录；缺失的信息写“待确认”。",
@@ -1693,184 +2674,197 @@
       "interaction": "逐项把输出指回本次记录",
       "nativeElements": [
         {
+          "kind": "rect",
+          "x": 72,
+          "y": 214,
+          "w": 1528,
+          "h": 132,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
           "kind": "text",
           "text": "用户",
-          "x": 72,
-          "y": 224,
-          "w": 110,
+          "x": 96,
+          "y": 232,
+          "w": 90,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
           "text": "按旧样例的“行动项｜负责人｜截止时间”整理。\n只学格式，姓名和时间使用本次记录；缺失的信息写“待确认”。",
-          "x": 200,
-          "y": 224,
-          "w": 1400,
-          "h": 116,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
-        },
-        {
-          "kind": "rect",
-          "x": 200,
-          "y": 350,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 194,
+          "y": 232,
+          "w": 1382,
+          "h": 106,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": false
         },
         {
           "kind": "text",
-          "text": "AI",
+          "text": "AI · 新纪要",
           "x": 72,
-          "y": 424,
-          "w": 110,
+          "y": 382,
+          "w": 600,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 438,
+          "w": 1528,
+          "h": 72,
+          "fill": "#0E1E36",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
           "text": "行动项",
-          "x": 200,
-          "y": 424,
-          "w": 560,
-          "h": 50,
+          "x": 96,
+          "y": 452,
+          "w": 556,
+          "h": 48,
           "size": 32,
-          "color": "#0E1E36",
-          "bold": true,
-          "name": "text"
+          "color": "#FFFFFF",
+          "bold": true
         },
         {
           "kind": "text",
           "text": "负责人",
-          "x": 840,
-          "y": 424,
-          "w": 300,
-          "h": 50,
+          "x": 706,
+          "y": 452,
+          "w": 312,
+          "h": 48,
           "size": 32,
-          "color": "#0E1E36",
-          "bold": true,
-          "name": "text"
+          "color": "#FFFFFF",
+          "bold": true
         },
         {
           "kind": "text",
           "text": "截止时间",
-          "x": 1190,
-          "y": 424,
-          "w": 410,
-          "h": 50,
+          "x": 1066,
+          "y": 452,
+          "w": 510,
+          "h": 48,
           "size": 32,
-          "color": "#0E1E36",
-          "bold": true,
-          "name": "text"
+          "color": "#FFFFFF",
+          "bold": true
         },
         {
           "kind": "rect",
-          "x": 200,
-          "y": 492,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 72,
+          "y": 510,
+          "w": 1528,
+          "h": 126,
+          "fill": "#F5F6F8",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
         },
         {
           "kind": "text",
           "text": "补齐预算",
-          "x": 200,
-          "y": 535,
-          "w": 560,
-          "h": 70,
+          "x": 96,
+          "y": 546,
+          "w": 562,
+          "h": 66,
           "size": 36,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "color": "#0E1E36",
+          "bold": true
         },
         {
           "kind": "text",
           "text": "李明",
-          "x": 840,
-          "y": 535,
-          "w": 300,
-          "h": 70,
+          "x": 706,
+          "y": 546,
+          "w": 312,
+          "h": 66,
           "size": 36,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "color": "#0E1E36",
+          "bold": false
         },
         {
           "kind": "text",
           "text": "周三18:00",
-          "x": 1190,
-          "y": 535,
-          "w": 410,
-          "h": 70,
+          "x": 1066,
+          "y": 546,
+          "w": 510,
+          "h": 66,
           "size": 36,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "color": "#0E1E36",
+          "bold": false
         },
         {
           "kind": "rect",
-          "x": 200,
-          "y": 625,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 72,
+          "y": 636,
+          "w": 1528,
+          "h": 126,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
         },
         {
           "kind": "text",
           "text": "确认场地",
-          "x": 200,
-          "y": 668,
-          "w": 560,
-          "h": 70,
+          "x": 96,
+          "y": 672,
+          "w": 562,
+          "h": 66,
           "size": 36,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "color": "#0E1E36",
+          "bold": true
         },
         {
           "kind": "text",
           "text": "周晴",
-          "x": 840,
-          "y": 668,
-          "w": 300,
-          "h": 70,
+          "x": 706,
+          "y": 672,
+          "w": 312,
+          "h": 66,
           "size": 36,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "color": "#0E1E36",
+          "bold": false
         },
         {
           "kind": "text",
           "text": "周五12:00",
-          "x": 1190,
-          "y": 668,
-          "w": 410,
-          "h": 70,
+          "x": 1066,
+          "y": 672,
+          "w": 510,
+          "h": 66,
           "size": 36,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "color": "#0E1E36",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 810,
+          "w": 6,
+          "h": 52,
+          "fill": "#D98B3A",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
-          "text": "结构沿用，事实逐项核对。",
-          "x": 200,
-          "y": 797,
-          "w": 1400,
-          "h": 60,
-          "size": 32,
-          "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "text": "结构沿用，姓名和时间逐项指回本次记录。",
+          "x": 98,
+          "y": 812,
+          "w": 1502,
+          "h": 66,
+          "size": 34,
+          "color": "#0E1E36",
+          "bold": true
         }
       ],
       "revisionSource": "../对话改造/第三章改造页.json",
@@ -1894,13 +2888,16 @@
         "课堂示例"
       ],
       "slideId": "8uqfco",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "uiLayout": "comparison-matrix：用户格式要求落到可核对纪要",
+      "exampleLabel": "课堂示例",
+      "navigation": []
     },
     {
       "key": "opening-summary",
       "title": "交代任务，先补齐这些信息",
       "minutes": 0.5,
-      "layout": "minimal-checklist",
+      "layout": "native-ui-redesign",
       "screen": [
         "我要交付什么？",
         "我能用什么工具？",
@@ -1922,13 +2919,248 @@
         "44"
       ],
       "slideId": "9uecrh",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "nativeElements": [
+        {
+          "kind": "text",
+          "text": "交代\n任务",
+          "x": 72,
+          "y": 282,
+          "w": 460,
+          "h": 220,
+          "size": 72,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "先补齐会影响结果的信息",
+          "x": 72,
+          "y": 564,
+          "w": 460,
+          "h": 120,
+          "size": 32,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 620,
+          "y": 234,
+          "w": 980,
+          "h": 562,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
+        },
+        {
+          "kind": "rect",
+          "x": 620,
+          "y": 234,
+          "w": 980,
+          "h": 64,
+          "fill": "#0E1E36",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "任务单",
+          "x": 652,
+          "y": 245,
+          "w": 916,
+          "h": 48,
+          "size": 32,
+          "color": "#FFFFFF",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "01",
+          "x": 652,
+          "y": 330,
+          "w": 80,
+          "h": 64,
+          "size": 40,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "交付物",
+          "x": 756,
+          "y": 336,
+          "w": 220,
+          "h": 60,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "我要交付什么？",
+          "x": 1010,
+          "y": 336,
+          "w": 550,
+          "h": 62,
+          "size": 30,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              756,
+              408
+            ],
+            [
+              1568,
+              408
+            ]
+          ],
+          "color": "#D7DFE9",
+          "width": 2
+        },
+        {
+          "kind": "text",
+          "text": "02",
+          "x": 652,
+          "y": 442,
+          "w": 80,
+          "h": 64,
+          "size": 40,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "工具",
+          "x": 756,
+          "y": 448,
+          "w": 220,
+          "h": 60,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "我能用什么工具？",
+          "x": 1010,
+          "y": 448,
+          "w": 550,
+          "h": 62,
+          "size": 30,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              756,
+              520
+            ],
+            [
+              1568,
+              520
+            ]
+          ],
+          "color": "#D7DFE9",
+          "width": 2
+        },
+        {
+          "kind": "text",
+          "text": "03",
+          "x": 652,
+          "y": 554,
+          "w": 80,
+          "h": 64,
+          "size": 40,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "标准",
+          "x": 756,
+          "y": 560,
+          "w": 220,
+          "h": 60,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "好的结果怎样检查？",
+          "x": 1010,
+          "y": 560,
+          "w": 550,
+          "h": 62,
+          "size": 30,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              756,
+              632
+            ],
+            [
+              1568,
+              632
+            ]
+          ],
+          "color": "#D7DFE9",
+          "width": 2
+        },
+        {
+          "kind": "text",
+          "text": "04",
+          "x": 652,
+          "y": 666,
+          "w": 80,
+          "h": 64,
+          "size": 40,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "材料",
+          "x": 756,
+          "y": 672,
+          "w": 220,
+          "h": 60,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "有什么材料或样例？",
+          "x": 1010,
+          "y": 672,
+          "w": 550,
+          "h": 62,
+          "size": 30,
+          "color": "#46556B",
+          "bold": false
+        }
+      ],
+      "uiLayout": "structural-breakdown：可填写任务单的四个组成",
+      "exampleLabel": false,
+      "navigation": []
     },
     {
       "key": "case5-options",
       "title": "⑤ 先比较方向",
       "minutes": 3,
-      "layout": "native-dialogue-revision",
+      "layout": "native-ui-redesign",
       "screen": [
         "用户",
         "80人年会，预算上限3万元，2小时，15人远程。\n先给3个不同方向，每个一句话，说明远程同事怎样参与。",
@@ -1941,72 +3173,329 @@
       "interaction": "选择一个方向并说明舍弃另一个的理由",
       "nativeElements": [
         {
-          "kind": "text",
-          "text": "用户",
+          "kind": "rect",
           "x": 72,
-          "y": 220,
-          "w": 110,
-          "h": 40,
-          "size": 24,
-          "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "y": 250,
+          "w": 470,
+          "h": 468,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
-          "text": "80人年会，预算上限3万元，2小时，15人远程。\n先给3个不同方向，每个一句话，说明远程同事怎样参与。",
-          "x": 200,
-          "y": 220,
-          "w": 1400,
-          "h": 116,
+          "text": "用户 · 先给方向",
+          "x": 100,
+          "y": 276,
+          "w": 414,
+          "h": 40,
+          "size": 24,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "80人年会，\n预算上限3万元，2小时，\n15人远程。\n先给3个不同方向，\n每个一句话，说明远程\n同事怎样参与。",
+          "x": 100,
+          "y": 346,
+          "w": 414,
+          "h": 332,
           "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "color": "#0E1E36",
+          "bold": false
+        },
+        {
+          "kind": "text",
+          "text": "AI · 三个方向",
+          "x": 720,
+          "y": 214,
+          "w": 880,
+          "h": 40,
+          "size": 24,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              580,
+              342
+            ],
+            [
+              580,
+              678
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              542,
+              484
+            ],
+            [
+              580,
+              484
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              580,
+              342
+            ],
+            [
+              696,
+              342
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              685.4690092573155,
+              347.75310646325045
+            ],
+            [
+              696,
+              342
+            ],
+            [
+              685.4690092573155,
+              336.24689353674955
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
         },
         {
           "kind": "rect",
-          "x": 200,
-          "y": 346,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 720,
+          "y": 270,
+          "w": 880,
+          "h": 144,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
         },
         {
           "kind": "text",
-          "text": "AI",
-          "x": 72,
-          "y": 421,
-          "w": 110,
-          "h": 40,
-          "size": 24,
+          "text": "A",
+          "x": 746,
+          "y": 298,
+          "w": 76,
+          "h": 76,
+          "size": 48,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "A   年度颁奖：现场与远程同事轮流领奖、连线发言。\n\nB   团队挑战：混合组队，所有人用同一线上答题工具。\n\nC   年度故事：各地同事分享一个项目片段，再线上投票。",
-          "x": 200,
-          "y": 421,
-          "w": 1400,
-          "h": 295,
-          "size": 34,
+          "text": "年度颁奖",
+          "x": 850,
+          "y": 292,
+          "w": 710,
+          "h": 50,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "现场与远程同事轮流领奖、连线发言。",
+          "x": 850,
+          "y": 348,
+          "w": 710,
+          "h": 62,
+          "size": 28,
           "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              580,
+              512
+            ],
+            [
+              696,
+              512
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              685.4690092573155,
+              517.7531064632504
+            ],
+            [
+              696,
+              512
+            ],
+            [
+              685.4690092573155,
+              506.24689353674955
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "rect",
+          "x": 720,
+          "y": 440,
+          "w": 880,
+          "h": 144,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
+        },
+        {
+          "kind": "text",
+          "text": "B",
+          "x": 746,
+          "y": 468,
+          "w": 76,
+          "h": 76,
+          "size": 48,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "团队挑战",
+          "x": 850,
+          "y": 462,
+          "w": 710,
+          "h": 50,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "混合组队，所有人用同一线上答题工具。",
+          "x": 850,
+          "y": 518,
+          "w": 710,
+          "h": 62,
+          "size": 28,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              580,
+              682
+            ],
+            [
+              696,
+              682
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              685.4690092573155,
+              687.7531064632504
+            ],
+            [
+              696,
+              682
+            ],
+            [
+              685.4690092573155,
+              676.2468935367496
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "rect",
+          "x": 720,
+          "y": 610,
+          "w": 880,
+          "h": 144,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
+        },
+        {
+          "kind": "text",
+          "text": "C",
+          "x": 746,
+          "y": 638,
+          "w": 76,
+          "h": 76,
+          "size": 48,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "年度故事",
+          "x": 850,
+          "y": 632,
+          "w": 710,
+          "h": 50,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "各地同事分享一个项目片段，再线上投票。",
+          "x": 850,
+          "y": 688,
+          "w": 710,
+          "h": 62,
+          "size": 28,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 800,
+          "w": 6,
+          "h": 52,
+          "fill": "#D98B3A",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
           "text": "选一个方向，并说明为什么暂不选另一个。",
-          "x": 200,
-          "y": 787,
-          "w": 1400,
-          "h": 65,
-          "size": 36,
-          "color": "#D98B3A",
-          "bold": true,
-          "name": "text"
+          "x": 98,
+          "y": 802,
+          "w": 1502,
+          "h": 66,
+          "size": 34,
+          "color": "#0E1E36",
+          "bold": true
         }
       ],
       "revisionSource": "../对话改造/第三章改造页.json",
@@ -2022,13 +3511,16 @@
         "课堂示例"
       ],
       "slideId": "ujyfb5",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "uiLayout": "tree-branching：同一组条件生成三个可选方向",
+      "exampleLabel": "课堂示例",
+      "navigation": []
     },
     {
       "key": "case5-select",
       "title": "⑤ 选定后，再展开一层",
       "minutes": 2,
-      "layout": "native-dialogue-revision",
+      "layout": "native-ui-redesign",
       "screen": [
         "用户",
         "选A。先排120分钟流程；15名远程同事要能发言。\n列出还需核实的费用和设备，先不写完整执行方案。",
@@ -2042,92 +3534,273 @@
       "interaction": "合计时长，找还没核实的条件",
       "nativeElements": [
         {
+          "kind": "rect",
+          "x": 72,
+          "y": 214,
+          "w": 1528,
+          "h": 132,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
           "kind": "text",
           "text": "用户",
-          "x": 72,
-          "y": 218,
-          "w": 110,
+          "x": 96,
+          "y": 232,
+          "w": 90,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
           "text": "选A。先排120分钟流程；15名远程同事要能发言。\n列出还需核实的费用和设备，先不写完整执行方案。",
-          "x": 200,
-          "y": 218,
-          "w": 1400,
-          "h": 112,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
-        },
-        {
-          "kind": "rect",
-          "x": 200,
-          "y": 340,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 194,
+          "y": 232,
+          "w": 1382,
+          "h": 106,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": false
         },
         {
           "kind": "text",
           "text": "AI · 流程草案",
           "x": 72,
-          "y": 407,
-          "w": 850,
-          "h": 45,
+          "y": 378,
+          "w": 600,
+          "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
-        },
-        {
-          "kind": "text",
-          "text": "开场                         10分钟\n成果回顾                  20分钟\n颁奖与远程连线        50分钟\n交流                         30分钟\n收尾                         10分钟",
-          "x": 72,
-          "y": 470,
-          "w": 780,
-          "h": 315,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "rect",
-          "x": 910,
-          "y": 407,
-          "w": 1.5,
-          "h": 390,
-          "fill": "#D7DFE9"
+          "x": 72,
+          "y": 440,
+          "w": 127.33333333333333,
+          "h": 160,
+          "fill": "#EDF2FB",
+          "stroke": "#FFFFFF",
+          "sw": 3
+        },
+        {
+          "kind": "text",
+          "text": "10",
+          "x": 88,
+          "y": 454,
+          "w": 95.33333333333333,
+          "h": 58,
+          "size": 40,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "开场",
+          "x": 88,
+          "y": 508,
+          "w": 95.33333333333333,
+          "h": 80,
+          "size": 28,
+          "color": "#0E1E36",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 199.33333333333331,
+          "y": 440,
+          "w": 254.66666666666666,
+          "h": 160,
+          "fill": "#EDF2FB",
+          "stroke": "#FFFFFF",
+          "sw": 3
+        },
+        {
+          "kind": "text",
+          "text": "20",
+          "x": 215.33333333333331,
+          "y": 454,
+          "w": 222.66666666666666,
+          "h": 58,
+          "size": 40,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "成果回顾",
+          "x": 215.33333333333331,
+          "y": 508,
+          "w": 222.66666666666666,
+          "h": 80,
+          "size": 28,
+          "color": "#0E1E36",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 454.0,
+          "y": 440,
+          "w": 636.6666666666666,
+          "h": 160,
+          "fill": "#2F5BD3",
+          "stroke": "#FFFFFF",
+          "sw": 3
+        },
+        {
+          "kind": "text",
+          "text": "50",
+          "x": 470.0,
+          "y": 454,
+          "w": 604.6666666666666,
+          "h": 58,
+          "size": 40,
+          "color": "#FFFFFF",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "颁奖与\n远程连线",
+          "x": 470.0,
+          "y": 508,
+          "w": 604.6666666666666,
+          "h": 80,
+          "size": 28,
+          "color": "#FFFFFF",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 1090.6666666666665,
+          "y": 440,
+          "w": 382.0,
+          "h": 160,
+          "fill": "#EDF2FB",
+          "stroke": "#FFFFFF",
+          "sw": 3
+        },
+        {
+          "kind": "text",
+          "text": "30",
+          "x": 1106.6666666666665,
+          "y": 454,
+          "w": 350.0,
+          "h": 58,
+          "size": 40,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "交流",
+          "x": 1106.6666666666665,
+          "y": 508,
+          "w": 350.0,
+          "h": 80,
+          "size": 28,
+          "color": "#0E1E36",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 1472.6666666666665,
+          "y": 440,
+          "w": 127.33333333333333,
+          "h": 160,
+          "fill": "#EDF2FB",
+          "stroke": "#FFFFFF",
+          "sw": 3
+        },
+        {
+          "kind": "text",
+          "text": "10",
+          "x": 1488.6666666666665,
+          "y": 454,
+          "w": 95.33333333333333,
+          "h": 58,
+          "size": 40,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "收尾",
+          "x": 1488.6666666666665,
+          "y": 508,
+          "w": 95.33333333333333,
+          "h": 80,
+          "size": 28,
+          "color": "#0E1E36",
+          "bold": false
+        },
+        {
+          "kind": "text",
+          "text": "120",
+          "x": 72,
+          "y": 634,
+          "w": 300,
+          "h": 140,
+          "size": 100,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "分钟",
+          "x": 344,
+          "y": 690,
+          "w": 180,
+          "h": 70,
+          "size": 36,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "合计是否准确？",
+          "x": 72,
+          "y": 790,
+          "w": 500,
+          "h": 46,
+          "size": 28,
+          "color": "#46556B",
+          "bold": false
         },
         {
           "kind": "text",
           "text": "AI · 尚待核实",
-          "x": 990,
-          "y": 407,
-          "w": 610,
-          "h": 45,
+          "x": 652,
+          "y": 626,
+          "w": 948,
+          "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "场地、奖品、设备分别询价；\n确认总费用是否在3万元内。\n\n提前测试远程音视频；\n安排连线主持人。",
-          "x": 990,
-          "y": 470,
-          "w": 610,
-          "h": 310,
-          "size": 30,
+          "text": "场地、奖品、设备分别询价；\n确认总费用是否在3万元内。",
+          "x": 652,
+          "y": 680,
+          "w": 450,
+          "h": 142,
+          "size": 28,
           "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": false
+        },
+        {
+          "kind": "text",
+          "text": "提前测试远程音视频；\n安排连线主持人。",
+          "x": 1162,
+          "y": 680,
+          "w": 438,
+          "h": 142,
+          "size": 28,
+          "color": "#46556B",
+          "bold": false
         }
       ],
       "revisionSource": "../对话改造/第三章改造页.json",
@@ -2144,13 +3817,16 @@
         "课堂示例"
       ],
       "slideId": "f6ghtl",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "uiLayout": "linear-progression：按真实时长比例排流程",
+      "exampleLabel": "课堂示例",
+      "navigation": []
     },
     {
       "key": "case6-explore",
       "title": "⑥ 先把“高级”说具体",
       "minutes": 1.5,
-      "layout": "native-dialogue-revision",
+      "layout": "native-ui-redesign",
       "screen": [
         "用户",
         "帮我把季度汇报做得高级一点。",
@@ -2167,144 +3843,209 @@
       "interaction": "把含糊任务改成一句明确要求",
       "nativeElements": [
         {
+          "kind": "rect",
+          "x": 72,
+          "y": 238,
+          "w": 1528,
+          "h": 104,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
           "kind": "text",
           "text": "用户",
-          "x": 72,
-          "y": 220,
-          "w": 110,
+          "x": 96,
+          "y": 256,
+          "w": 90,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
           "text": "帮我把季度汇报做得高级一点。",
-          "x": 200,
-          "y": 220,
-          "w": 1400,
-          "h": 70,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "x": 194,
+          "y": 256,
+          "w": 1382,
+          "h": 78,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": false
         },
         {
           "kind": "rect",
-          "x": 200,
-          "y": 300,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 72,
+          "y": 408,
+          "w": 640,
+          "h": 298,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
         },
         {
           "kind": "text",
           "text": "AI",
-          "x": 72,
-          "y": 360,
-          "w": 110,
+          "x": 96,
+          "y": 426,
+          "w": 60,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "主要给谁看，用来汇报还是讨论？\n你更需要 A“一页一个结论”，还是 B“图表配证据”？",
-          "x": 200,
-          "y": 360,
-          "w": 1400,
-          "h": 110,
-          "size": 32,
+          "text": "主要给谁看，用来汇报还是讨论？\n你更需要A“一页一个结论”，\n还是B“图表配证据”？",
+          "x": 176,
+          "y": 426,
+          "w": 512,
+          "h": 272,
+          "size": 30,
           "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": false
+        },
+        {
+          "kind": "text",
+          "text": "A · 一页一个结论",
+          "x": 830,
+          "y": 378,
+          "w": 360,
+          "h": 40,
+          "size": 24,
+          "color": "#2F5BD3",
+          "bold": true
         },
         {
           "kind": "rect",
-          "x": 200,
-          "y": 480,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 830,
+          "y": 438,
+          "w": 360,
+          "h": 268,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
         },
         {
           "kind": "text",
-          "text": "A",
-          "x": 200,
-          "y": 550,
-          "w": 90,
-          "h": 60,
-          "size": 32,
+          "text": "B · 图表配证据",
+          "x": 1240,
+          "y": 378,
+          "w": 360,
+          "h": 40,
+          "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 1240,
+          "y": 438,
+          "w": 360,
+          "h": 268,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
         },
         {
           "kind": "text",
-          "text": "一个结论\n两条说明",
-          "x": 300,
-          "y": 550,
-          "w": 430,
-          "h": 150,
-          "size": 40,
+          "text": "一个结论",
+          "x": 858,
+          "y": 476,
+          "w": 304,
+          "h": 60,
+          "size": 36,
           "color": "#0E1E36",
-          "bold": true,
-          "name": "text"
+          "bold": true
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              858,
+              566
+            ],
+            [
+              1162,
+              566
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 4
         },
         {
           "kind": "text",
-          "text": "B",
-          "x": 900,
-          "y": 550,
-          "w": 80,
-          "h": 60,
-          "size": 32,
-          "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "text": "两条说明",
+          "x": 858,
+          "y": 602,
+          "w": 304,
+          "h": 52,
+          "size": 28,
+          "color": "#46556B",
+          "bold": false
         },
         {
           "kind": "rect",
-          "x": 1010,
-          "y": 657,
-          "w": 90,
-          "h": 64,
-          "fill": "#D7DFE9"
+          "x": 1272,
+          "y": 498,
+          "w": 54,
+          "h": 148,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "rect",
-          "x": 1125,
-          "y": 610,
-          "w": 90,
-          "h": 111,
-          "fill": "#2F5BD3"
+          "x": 1350,
+          "y": 466,
+          "w": 54,
+          "h": 180,
+          "fill": "#2F5BD3",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "rect",
+          "x": 1428,
+          "y": 526,
+          "w": 54,
+          "h": 120,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
           "text": "图表旁标来源",
-          "x": 1245,
-          "y": 631,
-          "w": 355,
-          "h": 90,
-          "size": 28,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "x": 1272,
+          "y": 660,
+          "w": 300,
+          "h": 38,
+          "size": 24,
+          "color": "#6B778A",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 800,
+          "w": 6,
+          "h": 52,
+          "fill": "#D98B3A",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
           "text": "把“高级一点”改成一句可执行要求。",
-          "x": 200,
-          "y": 788,
-          "w": 1400,
-          "h": 65,
-          "size": 36,
-          "color": "#D98B3A",
-          "bold": true,
-          "name": "text"
+          "x": 98,
+          "y": 802,
+          "w": 1502,
+          "h": 66,
+          "size": 34,
+          "color": "#0E1E36",
+          "bold": true
         }
       ],
       "revisionSource": "../对话改造/第三章改造页.json",
@@ -2324,13 +4065,16 @@
         "课堂示例"
       ],
       "slideId": "mx2upd",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "uiLayout": "split-screen：澄清对话与两种版式小样",
+      "exampleLabel": "课堂示例",
+      "navigation": []
     },
     {
       "key": "case6-brief",
       "title": "⑥ 留下已确认的制作要求",
       "minutes": 1.5,
-      "layout": "native-dialogue-revision",
+      "layout": "native-ui-redesign",
       "screen": [
         "用户",
         "给部门经理汇报，共10页。每页一个结论，关键数字配图表，\n深蓝文字、少量橙色。先复述要求，再做一页样稿。\n样稿材料：二季度1200万元，三季度1440万元。",
@@ -2345,120 +4089,154 @@
       "interaction": "核对样稿是否符合刚确认的要求",
       "nativeElements": [
         {
-          "kind": "text",
-          "text": "用户",
+          "kind": "rect",
           "x": 72,
-          "y": 215,
-          "w": 110,
+          "y": 238,
+          "w": 650,
+          "h": 330,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "用户 · 已确认要求",
+          "x": 100,
+          "y": 262,
+          "w": 594,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "给部门经理汇报，共10页。每页一个结论，关键数字配图表，\n深蓝文字、少量橙色。先复述要求，再做一页样稿。\n样稿材料：二季度1200万元，三季度1440万元。",
-          "x": 200,
-          "y": 215,
-          "w": 1400,
-          "h": 150,
+          "text": "给部门经理汇报，共10页。\n每页一个结论，关键数字配图表，\n深蓝文字、少量橙色。\n先复述要求，再做一页样稿。\n材料：二季度1200万元，\n三季度1440万元。",
+          "x": 100,
+          "y": 320,
+          "w": 594,
+          "h": 246,
           "size": 30,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
-        },
-        {
-          "kind": "rect",
-          "x": 200,
-          "y": 375,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "color": "#0E1E36",
+          "bold": false
         },
         {
           "kind": "text",
-          "text": "AI",
+          "text": "AI · 复述要求",
           "x": 72,
-          "y": 433,
-          "w": 110,
+          "y": 610,
+          "w": 650,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "收到：10页、每页一个结论、数字有图表。先做一页供你确认。\n样稿标题：三季度销售额较二季度增长20%。",
-          "x": 200,
-          "y": 433,
-          "w": 1400,
-          "h": 105,
+          "text": "收到：10页、每页一个结论、\n数字有图表。先做一页供你确认。",
+          "x": 72,
+          "y": 666,
+          "w": 650,
+          "h": 132,
           "size": 30,
           "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": false
         },
         {
           "kind": "rect",
-          "x": 200,
-          "y": 548,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 814,
+          "y": 238,
+          "w": 786,
+          "h": 562,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
         },
         {
           "kind": "text",
-          "text": "AI · 样稿局部",
-          "x": 72,
-          "y": 635,
-          "w": 330,
-          "h": 45,
+          "text": "AI · 一页样稿",
+          "x": 846,
+          "y": 264,
+          "w": 722,
+          "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
-        },
-        {
-          "kind": "rect",
-          "x": 520,
-          "y": 716,
-          "w": 360,
-          "h": 34,
-          "fill": "#D7DFE9"
-        },
-        {
-          "kind": "rect",
-          "x": 520,
-          "y": 775,
-          "w": 432,
-          "h": 34,
-          "fill": "#2F5BD3"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "二季度 1200",
-          "x": 1060,
-          "y": 703,
-          "w": 540,
-          "h": 55,
-          "size": 30,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "text": "三季度销售额\n较二季度增长20%",
+          "x": 846,
+          "y": 328,
+          "w": 722,
+          "h": 134,
+          "size": 44,
+          "color": "#0E1E36",
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "三季度 1440",
-          "x": 1060,
-          "y": 762,
-          "w": 540,
-          "h": 55,
-          "size": 30,
+          "text": "二季度",
+          "x": 846,
+          "y": 492,
+          "w": 220,
+          "h": 42,
+          "size": 28,
           "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 846,
+          "y": 534,
+          "w": 470,
+          "h": 38,
+          "fill": "#F5F6F8",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "1200 万元",
+          "x": 846,
+          "y": 582,
+          "w": 600,
+          "h": 48,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "三季度",
+          "x": 846,
+          "y": 644,
+          "w": 220,
+          "h": 42,
+          "size": 28,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 846,
+          "y": 686,
+          "w": 564,
+          "h": 38,
+          "fill": "#D98B3A",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "1440 万元",
+          "x": 846,
+          "y": 734,
+          "w": 600,
+          "h": 48,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": true
         }
       ],
       "revisionSource": "../对话改造/第三章改造页.json",
@@ -2476,13 +4254,16 @@
         "课堂示例"
       ],
       "slideId": "rip8xo",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "uiLayout": "split-screen：任务要求＋原生图表样稿",
+      "exampleLabel": "课堂示例",
+      "navigation": []
     },
     {
       "key": "case7-question",
       "title": "⑦ 先检查分析的前提",
       "minutes": 1.5,
-      "layout": "native-dialogue-revision",
+      "layout": "native-ui-redesign",
       "screen": [
         "提供的数据 · 同一统计范围，单位：万元",
         "二季度  1,200",
@@ -2499,115 +4280,189 @@
       "nativeElements": [
         {
           "kind": "text",
-          "text": "提供的数据 · 同一统计范围，单位：万元",
+          "text": "提供的数据",
           "x": 72,
-          "y": 215,
-          "w": 1528,
-          "h": 50,
+          "y": 230,
+          "w": 440,
+          "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "二季度  1,200",
+          "text": "同一统计范围 · 万元",
           "x": 72,
-          "y": 300,
-          "w": 700,
-          "h": 85,
-          "size": 52,
-          "color": "#0E1E36",
-          "bold": true,
-          "name": "text"
+          "y": 274,
+          "w": 440,
+          "h": 44,
+          "size": 24,
+          "color": "#6B778A",
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              72,
+              710
+            ],
+            [
+              510,
+              710
+            ]
+          ],
+          "color": "#D7DFE9",
+          "width": 2
+        },
+        {
+          "kind": "rect",
+          "x": 116,
+          "y": 410,
+          "w": 136,
+          "h": 300,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
-          "text": "三季度  1,440",
-          "x": 910,
-          "y": 300,
-          "w": 690,
-          "h": 85,
-          "size": 52,
+          "text": "1,200",
+          "x": 104,
+          "y": 350,
+          "w": 164,
+          "h": 54,
+          "size": 36,
           "color": "#0E1E36",
-          "bold": true,
-          "name": "text"
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "二季度",
+          "x": 104,
+          "y": 738,
+          "w": 180,
+          "h": 48,
+          "size": 28,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 330,
+          "y": 350,
+          "w": 136,
+          "h": 360,
+          "fill": "#2F5BD3",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "1,440",
+          "x": 318,
+          "y": 290,
+          "w": 164,
+          "h": 54,
+          "size": 36,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "三季度",
+          "x": 318,
+          "y": 738,
+          "w": 180,
+          "h": 48,
+          "size": 28,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 650,
+          "y": 230,
+          "w": 950,
+          "h": 110,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
           "text": "用户",
-          "x": 72,
-          "y": 447,
-          "w": 110,
+          "x": 674,
+          "y": 248,
+          "w": 90,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
           "text": "销售额下降20%，请分析原因。",
-          "x": 200,
-          "y": 447,
-          "w": 1400,
-          "h": 70,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "x": 772,
+          "y": 248,
+          "w": 804,
+          "h": 84,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": false
         },
         {
           "kind": "rect",
-          "x": 200,
-          "y": 527,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 650,
+          "y": 414,
+          "w": 950,
+          "h": 298,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
         },
         {
           "kind": "text",
           "text": "AI",
-          "x": 72,
-          "y": 578,
-          "w": 110,
+          "x": 674,
+          "y": 432,
+          "w": 60,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "若下降20%的判断成立，可以先核查客户流失、订单减少与季节变化。\n建议按客户和产品拆分，比较各部分的变化。",
-          "x": 200,
-          "y": 578,
-          "w": 1400,
-          "h": 110,
+          "text": "若下降20%的判断成立，\n可以先核查客户流失、订单减少与季节变化。\n建议按客户和产品拆分，比较各部分的变化。",
+          "x": 754,
+          "y": 432,
+          "w": 822,
+          "h": 272,
           "size": 30,
           "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": false
         },
         {
           "kind": "rect",
-          "x": 200,
-          "y": 698,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 72,
+          "y": 816,
+          "w": 6,
+          "h": 52,
+          "fill": "#D98B3A",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
           "text": "这段话可以直接拿去用吗？先找一处要核对的前提。",
-          "x": 200,
-          "y": 791,
-          "w": 1400,
-          "h": 65,
-          "size": 32,
-          "color": "#D98B3A",
-          "bold": true,
-          "name": "text"
+          "x": 98,
+          "y": 818,
+          "w": 1502,
+          "h": 66,
+          "size": 34,
+          "color": "#0E1E36",
+          "bold": true
         }
       ],
       "revisionSource": "../对话改造/第三章改造页.json",
@@ -2626,13 +4481,16 @@
         "课堂示例"
       ],
       "slideId": "ud9hga",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "uiLayout": "binary-comparison：原始数据图与带前提的分析回复",
+      "exampleLabel": "课堂示例",
+      "navigation": []
     },
     {
       "key": "case7-answer",
       "title": "⑦ 核对后，才决定能分析什么",
       "minutes": 1.5,
-      "layout": "native-dialogue-revision",
+      "layout": "native-ui-redesign",
       "screen": [
         "用户",
         "先按我提供的两个总额核对增减方向和比例。\n发现前提不对先指出；只有这两项数据时，能确定原因吗？",
@@ -2645,80 +4503,127 @@
       "interaction": "判断还缺哪份材料",
       "nativeElements": [
         {
+          "kind": "rect",
+          "x": 72,
+          "y": 214,
+          "w": 1528,
+          "h": 132,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
           "kind": "text",
           "text": "用户",
-          "x": 72,
-          "y": 218,
-          "w": 110,
+          "x": 96,
+          "y": 232,
+          "w": 90,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "先按我提供的两个总额核对增减方向和比例。\n发现前提不对先指出；只有这两项数据时，能确定原因吗？",
-          "x": 200,
-          "y": 218,
-          "w": 1400,
-          "h": 112,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
-        },
-        {
-          "kind": "rect",
-          "x": 200,
-          "y": 340,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
-        },
-        {
-          "kind": "text",
-          "text": "AI",
-          "x": 72,
-          "y": 425,
-          "w": 110,
-          "h": 40,
-          "size": 24,
-          "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
-        },
-        {
-          "kind": "text",
-          "text": "(1440 − 1200) ÷ 1200 = 20%。这是增长20%，不是下降。\n仅凭这两个总额，不能确定增长原因。\n还需要客户或产品明细，以及数量、价格等变化资料。",
-          "x": 200,
-          "y": 425,
-          "w": 1400,
-          "h": 180,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
-        },
-        {
-          "kind": "rect",
-          "x": 200,
-          "y": 615,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
-        },
-        {
-          "kind": "text",
-          "text": "下一步应补材料，而不是继续替“下降”找理由。",
-          "x": 200,
-          "y": 767,
-          "w": 1400,
-          "h": 80,
-          "size": 36,
+          "text": "先按我提供的两个总额核对增减方向和比例。发现前提不对先指出；\n只有这两项数据时，能确定原因吗？",
+          "x": 194,
+          "y": 232,
+          "w": 1382,
+          "h": 106,
+          "size": 30,
           "color": "#0E1E36",
-          "bold": true,
-          "name": "text"
+          "bold": false
+        },
+        {
+          "kind": "text",
+          "text": "AI · 先核对数字",
+          "x": 72,
+          "y": 390,
+          "w": 710,
+          "h": 40,
+          "size": 24,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "1440 − 1200",
+          "x": 72,
+          "y": 462,
+          "w": 710,
+          "h": 90,
+          "size": 56,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              72,
+              566
+            ],
+            [
+              650,
+              566
+            ]
+          ],
+          "color": "#0E1E36",
+          "width": 3
+        },
+        {
+          "kind": "text",
+          "text": "1200",
+          "x": 264,
+          "y": 584,
+          "w": 440,
+          "h": 80,
+          "size": 48,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "= 20%",
+          "x": 72,
+          "y": 708,
+          "w": 700,
+          "h": 118,
+          "size": 72,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 850,
+          "y": 390,
+          "w": 750,
+          "h": 418,
+          "fill": "#F5F6F8",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "这是增长20%，不是下降。",
+          "x": 884,
+          "y": 424,
+          "w": 682,
+          "h": 82,
+          "size": 40,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "仅凭这两个总额，不能确定增长原因。\n还需要客户或产品明细，\n以及数量、价格等变化资料。",
+          "x": 884,
+          "y": 550,
+          "w": 682,
+          "h": 204,
+          "size": 32,
+          "color": "#46556B",
+          "bold": false
         }
       ],
       "revisionSource": "../对话改造/第三章改造页.json",
@@ -2734,13 +4639,16 @@
         "课堂示例"
       ],
       "slideId": "vr1id7",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "uiLayout": "key-stat＋证据边界：计算结果与尚缺材料",
+      "exampleLabel": "课堂示例",
+      "navigation": []
     },
     {
       "key": "case8-question",
       "title": "⑧ 分支有价值，交付物也要守住",
       "minutes": 2.5,
-      "layout": "native-dialogue-revision",
+      "layout": "native-ui-redesign",
       "screen": [
         "收到的10月销售表 · 单位：万元",
         "北京 100          上海 120          广州 −5",
@@ -2756,103 +4664,229 @@
       "nativeElements": [
         {
           "kind": "text",
-          "text": "收到的10月销售表 · 单位：万元",
+          "text": "收到的10月销售表 · 万元",
           "x": 72,
           "y": 216,
           "w": 1528,
-          "h": 45,
+          "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 270,
+          "w": 492,
+          "h": 142,
+          "fill": "#F5F6F8",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
-          "text": "北京 100          上海 120          广州 −5",
-          "x": 72,
-          "y": 292,
-          "w": 1528,
-          "h": 80,
-          "size": 44,
+          "text": "北京",
+          "x": 96,
+          "y": 296,
+          "w": 220,
+          "h": 52,
+          "size": 32,
           "color": "#0E1E36",
-          "bold": true,
-          "name": "text"
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "100",
+          "x": 332,
+          "y": 286,
+          "w": 200,
+          "h": 82,
+          "size": 56,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 590,
+          "y": 270,
+          "w": 492,
+          "h": 142,
+          "fill": "#F5F6F8",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "上海",
+          "x": 614,
+          "y": 296,
+          "w": 220,
+          "h": 52,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "120",
+          "x": 850,
+          "y": 286,
+          "w": 200,
+          "h": 82,
+          "size": 56,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 1108,
+          "y": 270,
+          "w": 492,
+          "h": 142,
+          "fill": "#F5F6F8",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "广州",
+          "x": 1132,
+          "y": 296,
+          "w": 220,
+          "h": 52,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "−5",
+          "x": 1368,
+          "y": 286,
+          "w": 200,
+          "h": 82,
+          "size": 56,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 480,
+          "w": 674,
+          "h": 202,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
           "text": "用户",
-          "x": 72,
-          "y": 440,
-          "w": 110,
+          "x": 96,
+          "y": 498,
+          "w": 90,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "把这3个城市的月度销售额合并成一张总表，并给出合计。",
-          "x": 200,
-          "y": 440,
-          "w": 1400,
-          "h": 80,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "text": "把这3个城市的月度销售额\n合并成一张总表，并给出合计。",
+          "x": 194,
+          "y": 498,
+          "w": 528,
+          "h": 176,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": false
         },
         {
-          "kind": "rect",
-          "x": 200,
-          "y": 530,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "kind": "line",
+          "points": [
+            [
+              746,
+              580
+            ],
+            [
+              876,
+              580
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              865.4690092573155,
+              585.7531064632504
+            ],
+            [
+              876,
+              580
+            ],
+            [
+              865.4690092573155,
+              574.2468935367496
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
         },
         {
           "kind": "text",
-          "text": "AI",
-          "x": 72,
-          "y": 588,
-          "w": 110,
+          "text": "AI · 转向核查",
+          "x": 900,
+          "y": 456,
+          "w": 700,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
-        },
-        {
-          "kind": "text",
-          "text": "广州为−5万元，建议先核查退货与录入记录，再整理汇总表。\n可以先请广州提供相关说明。",
-          "x": 200,
-          "y": 588,
-          "w": 1400,
-          "h": 105,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "rect",
-          "x": 200,
-          "y": 703,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 900,
+          "y": 510,
+          "w": 700,
+          "h": 226,
+          "fill": "#FFF3E4",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "广州为−5万元，建议先核查退货\n与录入记录，再整理汇总表。\n可以先请广州提供相关说明。",
+          "x": 930,
+          "y": 546,
+          "w": 640,
+          "h": 174,
+          "size": 30,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 800,
+          "w": 6,
+          "h": 52,
+          "fill": "#D98B3A",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
           "text": "你需要先拿到总表。下一句话怎么说？",
-          "x": 200,
-          "y": 790,
-          "w": 1400,
-          "h": 65,
-          "size": 36,
-          "color": "#D98B3A",
-          "bold": true,
-          "name": "text"
+          "x": 98,
+          "y": 802,
+          "w": 1502,
+          "h": 66,
+          "size": 34,
+          "color": "#0E1E36",
+          "bold": true
         }
       ],
       "revisionSource": "../对话改造/第三章改造页.json",
@@ -2870,13 +4904,16 @@
         "课堂示例"
       ],
       "slideId": "7nvbdq",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "uiLayout": "tree-branching：合并任务转向异常核查",
+      "exampleLabel": "课堂示例",
+      "navigation": []
     },
     {
       "key": "case8-answer",
       "title": "⑧ 先交总表，异常另列",
       "minutes": 1.5,
-      "layout": "native-dialogue-revision",
+      "layout": "native-ui-redesign",
       "screen": [
         "用户",
         "先交3个城市的总表和合计，保留原值。\n广州负数另列“待核对”，本轮暂不分析原因，也不修改数字。",
@@ -2893,136 +4930,261 @@
       "interaction": "核对城市、原值、合计以及异常说明",
       "nativeElements": [
         {
+          "kind": "rect",
+          "x": 72,
+          "y": 214,
+          "w": 1528,
+          "h": 132,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
           "kind": "text",
           "text": "用户",
-          "x": 72,
-          "y": 215,
-          "w": 110,
+          "x": 96,
+          "y": 232,
+          "w": 90,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "先交3个城市的总表和合计，保留原值。\n广州负数另列“待核对”，本轮暂不分析原因，也不修改数字。",
-          "x": 200,
-          "y": 215,
-          "w": 1400,
-          "h": 105,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
-        },
-        {
-          "kind": "rect",
-          "x": 200,
-          "y": 330,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "text": "先交3个城市的总表和合计，保留原值。广州负数另列“待核对”，\n本轮暂不分析原因，也不修改数字。",
+          "x": 194,
+          "y": 232,
+          "w": 1382,
+          "h": 106,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": false
         },
         {
           "kind": "text",
           "text": "AI · 整理结果",
           "x": 72,
-          "y": 407,
-          "w": 850,
-          "h": 45,
+          "y": 376,
+          "w": 880,
+          "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 430,
+          "w": 912,
+          "h": 64,
+          "fill": "#0E1E36",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
           "text": "城市",
-          "x": 72,
-          "y": 478,
-          "w": 400,
-          "h": 50,
+          "x": 100,
+          "y": 444,
+          "w": 330,
+          "h": 46,
           "size": 30,
-          "color": "#0E1E36",
-          "bold": true,
-          "name": "text"
+          "color": "#FFFFFF",
+          "bold": true
         },
         {
           "kind": "text",
           "text": "10月销售额／万元",
-          "x": 510,
-          "y": 478,
-          "w": 460,
-          "h": 50,
+          "x": 500,
+          "y": 444,
+          "w": 456,
+          "h": 46,
           "size": 30,
+          "color": "#FFFFFF",
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 494,
+          "w": 912,
+          "h": 76,
+          "fill": "#F5F6F8",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
+        },
+        {
+          "kind": "text",
+          "text": "北京",
+          "x": 100,
+          "y": 512,
+          "w": 330,
+          "h": 50,
+          "size": 32,
           "color": "#0E1E36",
-          "bold": true,
-          "name": "text"
+          "bold": false
+        },
+        {
+          "kind": "text",
+          "text": "100",
+          "x": 500,
+          "y": 508,
+          "w": 456,
+          "h": 58,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
         },
         {
           "kind": "rect",
           "x": 72,
-          "y": 536,
-          "w": 900,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "y": 570,
+          "w": 912,
+          "h": 76,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
         },
         {
           "kind": "text",
-          "text": "北京\n上海\n广州\n合计",
-          "x": 72,
-          "y": 563,
-          "w": 400,
-          "h": 240,
+          "text": "上海",
+          "x": 100,
+          "y": 588,
+          "w": 330,
+          "h": 50,
           "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "color": "#0E1E36",
+          "bold": false
         },
         {
           "kind": "text",
-          "text": "100\n120\n−5\n215",
-          "x": 510,
-          "y": 563,
-          "w": 460,
-          "h": 240,
+          "text": "120",
+          "x": 500,
+          "y": 584,
+          "w": 456,
+          "h": 58,
           "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "color": "#0E1E36",
+          "bold": true
         },
         {
           "kind": "rect",
-          "x": 1040,
-          "y": 407,
-          "w": 1.5,
-          "h": 390,
-          "fill": "#D7DFE9"
+          "x": 72,
+          "y": 646,
+          "w": 912,
+          "h": 76,
+          "fill": "#F5F6F8",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
+        },
+        {
+          "kind": "text",
+          "text": "广州",
+          "x": 100,
+          "y": 664,
+          "w": 330,
+          "h": 50,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": false
+        },
+        {
+          "kind": "text",
+          "text": "−5",
+          "x": 500,
+          "y": 660,
+          "w": 456,
+          "h": 58,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 722,
+          "w": 912,
+          "h": 76,
+          "fill": "#EDF2FB",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
+        },
+        {
+          "kind": "text",
+          "text": "合计",
+          "x": 100,
+          "y": 740,
+          "w": 330,
+          "h": 50,
+          "size": 32,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "215",
+          "x": 500,
+          "y": 736,
+          "w": 456,
+          "h": 58,
+          "size": 40,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 1080,
+          "y": 430,
+          "w": 520,
+          "h": 368,
+          "fill": "#FFF3E4",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
           "text": "AI · 异常清单",
-          "x": 1120,
-          "y": 407,
-          "w": 480,
-          "h": 45,
+          "x": 1112,
+          "y": 456,
+          "w": 456,
+          "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "广州：−5万元，待核对。\n已保留输入原值。\n\n以上为聊天表格，\n未创建或修改文件。",
-          "x": 1120,
-          "y": 478,
-          "w": 480,
-          "h": 290,
-          "size": 30,
+          "text": "广州：−5万元",
+          "x": 1112,
+          "y": 518,
+          "w": 456,
+          "h": 74,
+          "size": 40,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "待核对，已保留输入原值。",
+          "x": 1112,
+          "y": 610,
+          "w": 456,
+          "h": 82,
+          "size": 28,
           "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": false
+        },
+        {
+          "kind": "text",
+          "text": "以上为聊天表格，\n未创建或修改文件。",
+          "x": 1112,
+          "y": 710,
+          "w": 456,
+          "h": 78,
+          "size": 24,
+          "color": "#6B778A",
+          "bold": false
         }
       ],
       "revisionSource": "../对话改造/第三章改造页.json",
@@ -3042,13 +5204,16 @@
         "课堂示例"
       ],
       "slideId": "yhdqsd",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "uiLayout": "split-screen：总表与异常清单，合计成为结果重点",
+      "exampleLabel": "课堂示例",
+      "navigation": []
     },
     {
       "key": "method-summary",
       "title": "选一句，现在就用",
       "minutes": 1,
-      "layout": "editorial-method-index",
+      "layout": "native-ui-redesign",
       "screen": [
         "交代清楚：我能用……；标准是……；语气像……；参照这份……",
         "先弄明白：先给不同方向；先确认含义；先核对前提。",
@@ -3067,7 +5232,108 @@
         "53"
       ],
       "slideId": "xarqut",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "nativeElements": [
+        {
+          "kind": "text",
+          "text": "交代清楚",
+          "x": 72,
+          "y": 270,
+          "w": 400,
+          "h": 80,
+          "size": 40,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 520,
+          "y": 246,
+          "w": 1080,
+          "h": 154,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "我能用……；标准是……\n语气像……；参照这份……",
+          "x": 560,
+          "y": 276,
+          "w": 1000,
+          "h": 112,
+          "size": 36,
+          "color": "#0E1E36",
+          "bold": false
+        },
+        {
+          "kind": "text",
+          "text": "先弄明白",
+          "x": 72,
+          "y": 464,
+          "w": 400,
+          "h": 80,
+          "size": 40,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 520,
+          "y": 440,
+          "w": 1080,
+          "h": 154,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "先给不同方向；先确认含义；先核对前提。",
+          "x": 560,
+          "y": 470,
+          "w": 1000,
+          "h": 112,
+          "size": 36,
+          "color": "#0E1E36",
+          "bold": false
+        },
+        {
+          "kind": "text",
+          "text": "偏离目标",
+          "x": 72,
+          "y": 658,
+          "w": 400,
+          "h": 80,
+          "size": 40,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 520,
+          "y": 634,
+          "w": 1080,
+          "h": 154,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "本轮先交……，其他事项暂缓。",
+          "x": 560,
+          "y": 664,
+          "w": 1000,
+          "h": 112,
+          "size": 36,
+          "color": "#0E1E36",
+          "bold": false
+        }
+      ],
+      "uiLayout": "quote-callout：三种情境对应可直接采用的句式",
+      "exampleLabel": false,
+      "navigation": []
     },
     {
       "key": "quote",
@@ -3086,13 +5352,13 @@
         "54"
       ],
       "slideId": "f23g56",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63
     },
     {
       "key": "exercise",
       "title": "改写你自己的一个任务",
       "minutes": 4,
-      "layout": "practice-sheet",
+      "layout": "native-ui-redesign",
       "screen": [
         "选课前记录的一件工作。",
         "写清：要交什么、提供什么材料、怎样算完成。",
@@ -3114,13 +5380,181 @@
         "55"
       ],
       "slideId": "pjp3e9",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "nativeElements": [
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 240,
+          "w": 1000,
+          "h": 566,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
+        },
+        {
+          "kind": "text",
+          "text": "选课前记录的一件工作",
+          "x": 104,
+          "y": 264,
+          "w": 936,
+          "h": 40,
+          "size": 24,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "交付物",
+          "x": 104,
+          "y": 354,
+          "w": 220,
+          "h": 62,
+          "size": 32,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "我要完成……",
+          "x": 366,
+          "y": 356,
+          "w": 674,
+          "h": 66,
+          "size": 30,
+          "color": "#6B778A",
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              366,
+              438
+            ],
+            [
+              1040,
+              438
+            ]
+          ],
+          "color": "#D7DFE9",
+          "width": 2
+        },
+        {
+          "kind": "text",
+          "text": "材料与标准",
+          "x": 104,
+          "y": 500,
+          "w": 220,
+          "h": 62,
+          "size": 32,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "我提供……；完成时应该……",
+          "x": 366,
+          "y": 502,
+          "w": 674,
+          "h": 66,
+          "size": 30,
+          "color": "#6B778A",
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              366,
+              584
+            ],
+            [
+              1040,
+              584
+            ]
+          ],
+          "color": "#D7DFE9",
+          "width": 2
+        },
+        {
+          "kind": "text",
+          "text": "具体反馈",
+          "x": 104,
+          "y": 646,
+          "w": 220,
+          "h": 62,
+          "size": 32,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "第一版的……需要改成……",
+          "x": 366,
+          "y": 648,
+          "w": 674,
+          "h": 66,
+          "size": 30,
+          "color": "#6B778A",
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              366,
+              730
+            ],
+            [
+              1040,
+              730
+            ]
+          ],
+          "color": "#D7DFE9",
+          "width": 2
+        },
+        {
+          "kind": "text",
+          "text": "同桌互看",
+          "x": 1160,
+          "y": 272,
+          "w": 440,
+          "h": 80,
+          "size": 40,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "还缺哪条\n关键条件？",
+          "x": 1160,
+          "y": 372,
+          "w": 440,
+          "h": 150,
+          "size": 44,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "image",
+          "asset": "ch1-check-report-reference.png",
+          "x": 1112,
+          "y": 554,
+          "w": 488,
+          "h": 325.3333333333333,
+          "alt": "对照资料检查任务要求"
+        }
+      ],
+      "uiLayout": "worksheet：任务填写区与同桌核对",
+      "exampleLabel": "课堂练习",
+      "navigation": []
     },
     {
       "key": "complex",
       "title": "复杂任务，也先做一小步",
       "minutes": 1.5,
-      "layout": "native-dialogue-revision",
+      "layout": "native-ui-redesign",
       "screen": [
         "用户",
         "我有12个城市的月报，要合并成总表。先列出步骤，\n我确认后只用前3个城市做样表，暂时不处理其余文件。",
@@ -3137,128 +5571,232 @@
       "interaction": "为自己的任务选第一步",
       "nativeElements": [
         {
+          "kind": "rect",
+          "x": 72,
+          "y": 214,
+          "w": 1528,
+          "h": 132,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
           "kind": "text",
           "text": "用户",
-          "x": 72,
-          "y": 218,
-          "w": 110,
+          "x": 96,
+          "y": 232,
+          "w": 90,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
           "text": "我有12个城市的月报，要合并成总表。先列出步骤，\n我确认后只用前3个城市做样表，暂时不处理其余文件。",
-          "x": 200,
-          "y": 218,
-          "w": 1400,
-          "h": 115,
-          "size": 32,
-          "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "x": 194,
+          "y": 232,
+          "w": 1382,
+          "h": 106,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": false
         },
         {
           "kind": "rect",
-          "x": 200,
-          "y": 343,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
+          "x": 72,
+          "y": 396,
+          "w": 1528,
+          "h": 202,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
         },
         {
           "kind": "text",
           "text": "AI",
-          "x": 72,
-          "y": 425,
-          "w": 110,
+          "x": 96,
+          "y": 414,
+          "w": 60,
           "h": 40,
           "size": 24,
           "color": "#2F5BD3",
-          "bold": true,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
           "text": "建议先核对列名和单位，再合并前3城，核对行数与合计；\n样表通过后，再按同一规则处理其余城市。\n请先提供3份样表，并说明缺失项和负数怎样处理。",
-          "x": 200,
-          "y": 425,
+          "x": 176,
+          "y": 414,
           "w": 1400,
-          "h": 170,
-          "size": 32,
+          "h": 176,
+          "size": 30,
           "color": "#46556B",
-          "bold": false,
-          "name": "text"
+          "bold": false
         },
         {
           "kind": "rect",
-          "x": 200,
-          "y": 605,
-          "w": 1400,
-          "h": 1.5,
-          "fill": "#D7DFE9"
-        },
-        {
-          "kind": "text",
-          "text": "先看样表",
           "x": 72,
-          "y": 735,
-          "w": 400,
-          "h": 70,
-          "size": 40,
-          "color": "#0E1E36",
-          "bold": true,
-          "name": "text"
+          "y": 668,
+          "w": 392,
+          "h": 152,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
-          "text": "→",
-          "x": 520,
-          "y": 735,
-          "w": 90,
-          "h": 70,
-          "size": 40,
+          "text": "3",
+          "x": 96,
+          "y": 682,
+          "w": 344,
+          "h": 72,
+          "size": 48,
           "color": "#2F5BD3",
-          "bold": false,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "按标准检查",
-          "x": 690,
-          "y": 735,
-          "w": 430,
-          "h": 70,
-          "size": 40,
+          "text": "个城市先做样稿",
+          "x": 96,
+          "y": 760,
+          "w": 344,
+          "h": 48,
+          "size": 28,
           "color": "#0E1E36",
-          "bold": true,
-          "name": "text"
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 640,
+          "y": 668,
+          "w": 392,
+          "h": 152,
+          "fill": "#FFF3E4",
+          "stroke": "none",
+          "sw": 0
         },
         {
           "kind": "text",
-          "text": "→",
-          "x": 1150,
-          "y": 735,
-          "w": 90,
-          "h": 70,
-          "size": 40,
+          "text": "核对",
+          "x": 664,
+          "y": 682,
+          "w": 344,
+          "h": 72,
+          "size": 48,
           "color": "#2F5BD3",
-          "bold": false,
-          "name": "text"
+          "bold": true
         },
         {
           "kind": "text",
-          "text": "再扩展",
-          "x": 1330,
-          "y": 735,
-          "w": 270,
-          "h": 70,
-          "size": 40,
+          "text": "行数与合计",
+          "x": 664,
+          "y": 760,
+          "w": 344,
+          "h": 48,
+          "size": 28,
           "color": "#0E1E36",
-          "bold": true,
-          "name": "text"
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 1208,
+          "y": 668,
+          "w": 392,
+          "h": 152,
+          "fill": "#F5F6F8",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "12",
+          "x": 1232,
+          "y": 682,
+          "w": 344,
+          "h": 72,
+          "size": 48,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "个城市按规则扩展",
+          "x": 1232,
+          "y": 760,
+          "w": 344,
+          "h": 48,
+          "size": 28,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              472,
+              744
+            ],
+            [
+              628,
+              744
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              617.4690092573155,
+              749.7531064632504
+            ],
+            [
+              628,
+              744
+            ],
+            [
+              617.4690092573155,
+              738.2468935367496
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1040,
+              744
+            ],
+            [
+              1196,
+              744
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1185.4690092573155,
+              749.7531064632504
+            ],
+            [
+              1196,
+              744
+            ],
+            [
+              1185.4690092573155,
+              738.2468935367496
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
         }
       ],
       "revisionSource": "../对话改造/第三章改造页.json",
@@ -3278,7 +5816,10 @@
         "课堂示例"
       ],
       "slideId": "6ce8t5",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "uiLayout": "linear-progression：先做样稿再扩展，保留完整对话",
+      "exampleLabel": "课堂示例",
+      "navigation": []
     }
   ],
   "closingSlides": [
@@ -3286,7 +5827,7 @@
       "key": "practice",
       "title": "走通一件工作任务",
       "minutes": 12,
-      "layout": "practice-workflow",
+      "layout": "native-ui-redesign",
       "screen": [
         "选自己的工作，或使用课堂练习材料。",
         "先交代任务与材料，再约定验收标准。",
@@ -3305,13 +5846,441 @@
         "57"
       ],
       "slideId": "lb4d4e",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "nativeElements": [
+        {
+          "kind": "text",
+          "text": "任务：把材料整理成一份可检查的周报",
+          "x": 72,
+          "y": 212,
+          "w": 1528,
+          "h": 40,
+          "size": 24,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 282,
+          "w": 710,
+          "h": 388,
+          "fill": "#FFFFFF",
+          "stroke": "#D7DFE9",
+          "sw": 1.5
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 282,
+          "w": 710,
+          "h": 62,
+          "fill": "#0E1E36",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "课堂练习材料",
+          "x": 100,
+          "y": 294,
+          "w": 654,
+          "h": 48,
+          "size": 32,
+          "color": "#FFFFFF",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "走访12家客户，收到5项需求。\n3项已确认，2项待补充。\n下周周三前回访。",
+          "x": 108,
+          "y": 398,
+          "w": 638,
+          "h": 214,
+          "size": 36,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "text",
+          "text": "完成后逐项核对",
+          "x": 900,
+          "y": 282,
+          "w": 700,
+          "h": 40,
+          "size": 24,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "rect",
+          "x": 900,
+          "y": 360,
+          "w": 30,
+          "h": 30,
+          "fill": "#FFFFFF",
+          "stroke": "#2F5BD3",
+          "sw": 2
+        },
+        {
+          "kind": "text",
+          "text": "150字以内",
+          "x": 954,
+          "y": 356,
+          "w": 646,
+          "h": 72,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 900,
+          "y": 454,
+          "w": 30,
+          "h": 30,
+          "fill": "#FFFFFF",
+          "stroke": "#2F5BD3",
+          "sw": 2
+        },
+        {
+          "kind": "text",
+          "text": "完成／问题／计划三段",
+          "x": 954,
+          "y": 450,
+          "w": 646,
+          "h": 72,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 900,
+          "y": 548,
+          "w": 30,
+          "h": 30,
+          "fill": "#FFFFFF",
+          "stroke": "#2F5BD3",
+          "sw": 2
+        },
+        {
+          "kind": "text",
+          "text": "不添加材料里没有的数据",
+          "x": 954,
+          "y": 544,
+          "w": 646,
+          "h": 72,
+          "size": 32,
+          "color": "#0E1E36",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 730,
+          "w": 282,
+          "h": 102,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "交代任务",
+          "x": 92,
+          "y": 744,
+          "w": 242,
+          "h": 50,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "2分钟",
+          "x": 92,
+          "y": 794,
+          "w": 242,
+          "h": 36,
+          "size": 24,
+          "color": "#2F5BD3",
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              356,
+              780
+            ],
+            [
+              374,
+              780
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 2
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              363.4690092573155,
+              785.7531064632504
+            ],
+            [
+              374,
+              780
+            ],
+            [
+              363.4690092573155,
+              774.2468935367496
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 2
+        },
+        {
+          "kind": "rect",
+          "x": 378,
+          "y": 730,
+          "w": 282,
+          "h": 102,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "生成初稿",
+          "x": 398,
+          "y": 744,
+          "w": 242,
+          "h": 50,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "3分钟",
+          "x": 398,
+          "y": 794,
+          "w": 242,
+          "h": 36,
+          "size": 24,
+          "color": "#2F5BD3",
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              662,
+              780
+            ],
+            [
+              680,
+              780
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 2
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              669.4690092573155,
+              785.7531064632504
+            ],
+            [
+              680,
+              780
+            ],
+            [
+              669.4690092573155,
+              774.2468935367496
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 2
+        },
+        {
+          "kind": "rect",
+          "x": 684,
+          "y": 730,
+          "w": 282,
+          "h": 102,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "逐项核对",
+          "x": 704,
+          "y": 744,
+          "w": 242,
+          "h": 50,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "3分钟",
+          "x": 704,
+          "y": 794,
+          "w": 242,
+          "h": 36,
+          "size": 24,
+          "color": "#2F5BD3",
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              968,
+              780
+            ],
+            [
+              986,
+              780
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 2
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              975.4690092573155,
+              785.7531064632504
+            ],
+            [
+              986,
+              780
+            ],
+            [
+              975.4690092573155,
+              774.2468935367496
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 2
+        },
+        {
+          "kind": "rect",
+          "x": 990,
+          "y": 730,
+          "w": 282,
+          "h": 102,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "具体反馈",
+          "x": 1010,
+          "y": 744,
+          "w": 242,
+          "h": 50,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "2分钟",
+          "x": 1010,
+          "y": 794,
+          "w": 242,
+          "h": 36,
+          "size": 24,
+          "color": "#2F5BD3",
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1274,
+              780
+            ],
+            [
+              1292,
+              780
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 2
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1281.4690092573155,
+              785.7531064632504
+            ],
+            [
+              1292,
+              780
+            ],
+            [
+              1281.4690092573155,
+              774.2468935367496
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 2
+        },
+        {
+          "kind": "rect",
+          "x": 1296,
+          "y": 730,
+          "w": 282,
+          "h": 102,
+          "fill": "#EDF2FB",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "保留要求",
+          "x": 1316,
+          "y": 744,
+          "w": 242,
+          "h": 50,
+          "size": 30,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "2分钟",
+          "x": 1316,
+          "y": 794,
+          "w": 242,
+          "h": 36,
+          "size": 24,
+          "color": "#2F5BD3",
+          "bold": false
+        }
+      ],
+      "uiLayout": "worksheet＋linear-progression：材料、验收标准与12分钟步骤",
+      "exampleLabel": "课堂实操",
+      "navigation": []
     },
     {
       "key": "closing",
       "title": "把方法带回一件工作",
       "minutes": 3,
-      "layout": "three-chapter-recap",
+      "layout": "native-ui-redesign",
       "screen": [
         "了解它：说得像，还要核对。",
         "看清它：说完成，还要看执行结果。",
@@ -3333,7 +6302,209 @@
         "返回课程目录"
       ],
       "slideId": "1y39hs",
-      "cloudStateVersion": 37
+      "cloudStateVersion": 63,
+      "nativeElements": [
+        {
+          "kind": "text",
+          "text": "01",
+          "x": 72,
+          "y": 246,
+          "w": 150,
+          "h": 100,
+          "size": 72,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "了解它",
+          "x": 72,
+          "y": 380,
+          "w": 448,
+          "h": 76,
+          "size": 44,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "说得像，\n还要核对。",
+          "x": 72,
+          "y": 486,
+          "w": 448,
+          "h": 142,
+          "size": 36,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              504,
+              410
+            ],
+            [
+              582,
+              410
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              571.4690092573155,
+              415.75310646325045
+            ],
+            [
+              582,
+              410
+            ],
+            [
+              571.4690092573155,
+              404.24689353674955
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "text",
+          "text": "02",
+          "x": 612,
+          "y": 246,
+          "w": 150,
+          "h": 100,
+          "size": 72,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "看清它",
+          "x": 612,
+          "y": 380,
+          "w": 448,
+          "h": 76,
+          "size": 44,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "说完成，\n还要看执行结果。",
+          "x": 612,
+          "y": 486,
+          "w": 448,
+          "h": 142,
+          "size": 36,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1044,
+              410
+            ],
+            [
+              1122,
+              410
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "line",
+          "points": [
+            [
+              1111.4690092573155,
+              415.75310646325045
+            ],
+            [
+              1122,
+              410
+            ],
+            [
+              1111.4690092573155,
+              404.24689353674955
+            ]
+          ],
+          "color": "#2F5BD3",
+          "width": 3
+        },
+        {
+          "kind": "text",
+          "text": "03",
+          "x": 1152,
+          "y": 246,
+          "w": 150,
+          "h": 100,
+          "size": 72,
+          "color": "#2F5BD3",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "用好它",
+          "x": 1152,
+          "y": 380,
+          "w": 448,
+          "h": 76,
+          "size": 44,
+          "color": "#0E1E36",
+          "bold": true
+        },
+        {
+          "kind": "text",
+          "text": "交代清楚，\n再按标准反馈。",
+          "x": 1152,
+          "y": 486,
+          "w": 448,
+          "h": 142,
+          "size": 36,
+          "color": "#46556B",
+          "bold": false
+        },
+        {
+          "kind": "rect",
+          "x": 72,
+          "y": 702,
+          "w": 1528,
+          "h": 118,
+          "fill": "#0E1E36",
+          "stroke": "none",
+          "sw": 0
+        },
+        {
+          "kind": "text",
+          "text": "选一件工作，试一次，留下有效的要求。",
+          "x": 108,
+          "y": 730,
+          "w": 1456,
+          "h": 82,
+          "size": 48,
+          "color": "#FFFFFF",
+          "bold": true
+        }
+      ],
+      "uiLayout": "minimal＋linear-progression：三章收束到一件工作",
+      "exampleLabel": false,
+      "navigation": [
+        {
+          "text": "返回课程目录",
+          "uri": "https://chatgpt.com/space/page_37b8f35c311c8191b5636bae8aa26362",
+          "x": 1370,
+          "y": 176,
+          "w": 230,
+          "h": 42
+        }
+      ]
     }
   ]
 }

@@ -3,7 +3,7 @@ globalThis.buildCh03 = function (p, d, assets, page, geometry = []) {
   if (d.nativeElements) {
     if (typeof globalThis.reviseCourseSlide !== 'function') throw new Error('先载入制作稿/对话改造/页面构建.js');
     const slide=p.slides.add({width:1672,height:941,background:{fill:'#FFFFFF'}});
-    return globalThis.reviseCourseSlide(p,{...d,id:slide.id,page,elements:d.nativeElements});
+    return globalThis.reviseCourseSlide(p,{...d,id:slide.id,page,elements:d.nativeElements},assets);
   }
   const C={navy:'#0E1E36',body:'#46556B',muted:'#6B778A',blue:'#2F5BD3',orange:'#D98B3A',line:'#D7DFE9',pale:'#F5F6F8'};
   const s=p.slides.add({width:1672,height:941,background:{fill:'#FFFFFF'}}), prefix='ch03-'+d.key+'-';

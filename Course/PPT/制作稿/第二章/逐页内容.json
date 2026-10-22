@@ -14,7 +14,7 @@
       "返回课程目录"
     ],
     "slideId": "10pvgy",
-    "cloudStateVersion": 23,
+    "cloudStateVersion": 25,
     "screen": [
       "02",
       "AI 怎样从回答走到执行？"
@@ -46,7 +46,7 @@
       "监测模型输出，识别操作请求"
     ],
     "slideId": "mhfcwi",
-    "cloudStateVersion": 23
+    "cloudStateVersion": 25
   },
   {
     "key": "roomA",
@@ -65,7 +65,7 @@
       "课堂示例 · 非实际发送"
     ],
     "slideId": "unnni2",
-    "cloudStateVersion": 23
+    "cloudStateVersion": 25
   },
   {
     "key": "roomB",
@@ -89,7 +89,7 @@
       "课堂示例 · 非实际发送"
     ],
     "slideId": "fh36g2",
-    "cloudStateVersion": 23
+    "cloudStateVersion": 25
   },
   {
     "key": "call1",
@@ -115,7 +115,7 @@
       "课堂示例 · 非实际发送"
     ],
     "slideId": "dzjb2x",
-    "cloudStateVersion": 23
+    "cloudStateVersion": 25
   },
   {
     "key": "call2",
@@ -635,8 +635,10 @@
       "课堂示例"
     ],
     "slideId": "566nn9",
-    "cloudStateVersion": 23,
-    "uiLayout": "structural-breakdown＋linear-progression：三方泳道与回执返回"
+    "cloudStateVersion": 25,
+    "uiLayout": "structural-breakdown＋linear-progression：三方泳道与回执返回",
+    "exampleLabel": "课堂示例",
+    "navigation": []
   },
   {
     "key": "call3",
@@ -662,7 +664,7 @@
       "课堂示例 · 非实际发送"
     ],
     "slideId": "eedkfb",
-    "cloudStateVersion": 23
+    "cloudStateVersion": 25
   },
   {
     "key": "video1",
@@ -680,7 +682,7 @@
       "26"
     ],
     "slideId": "5webq4",
-    "cloudStateVersion": 23
+    "cloudStateVersion": 25
   },
   {
     "key": "video2",
@@ -698,7 +700,7 @@
       "27"
     ],
     "slideId": "sf3kf2",
-    "cloudStateVersion": 23
+    "cloudStateVersion": 25
   },
   {
     "key": "checkEvidence",
@@ -707,7 +709,7 @@
     "minutes": 1.2,
     "goal": "比较聊天中的声明与可核对的执行结果",
     "interaction": "对照两份材料判断还需检查什么",
-    "layout": "native-dialogue-revision",
+    "layout": "native-ui-redesign",
     "screen": [
       "同一任务的两份材料 · 课堂示例，非实际发送",
       "聊天窗口",
@@ -721,89 +723,205 @@
         "kind": "text",
         "text": "同一任务的两份材料 · 课堂示例，非实际发送",
         "x": 72,
-        "y": 216,
+        "y": 214,
         "w": 1528,
-        "h": 60,
-        "size": 28,
-        "color": "#46556B",
-        "bold": false,
-        "name": "text"
+        "h": 46,
+        "size": 24,
+        "color": "#6B778A",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 72,
+        "y": 302,
+        "w": 700,
+        "h": 70,
+        "fill": "#0E1E36",
+        "stroke": "none",
+        "sw": 0
       },
       {
         "kind": "text",
         "text": "聊天窗口",
-        "x": 72,
-        "y": 334,
-        "w": 700,
-        "h": 55,
-        "size": 32,
-        "color": "#2F5BD3",
-        "bold": true,
-        "name": "text"
-      },
-      {
-        "kind": "text",
-        "text": "用户：把改期通知发给张经理。\n\nAI：已为你发送改期通知。",
-        "x": 72,
-        "y": 420,
-        "w": 700,
-        "h": 220,
+        "x": 100,
+        "y": 314,
+        "w": 644,
+        "h": 52,
         "size": 36,
-        "color": "#46556B",
-        "bold": false,
-        "name": "text"
+        "color": "#FFFFFF",
+        "bold": true
       },
       {
         "kind": "rect",
-        "x": 836,
-        "y": 334,
-        "w": 1.5,
-        "h": 380,
-        "fill": "#D7DFE9"
+        "x": 900,
+        "y": 302,
+        "w": 700,
+        "h": 70,
+        "fill": "#0E1E36",
+        "stroke": "none",
+        "sw": 0
       },
       {
         "kind": "text",
         "text": "工具返回",
-        "x": 912,
-        "y": 334,
-        "w": 688,
-        "h": 55,
-        "size": 32,
-        "color": "#2F5BD3",
-        "bold": true,
-        "name": "text"
+        "x": 928,
+        "y": 314,
+        "w": 644,
+        "h": 52,
+        "size": 36,
+        "color": "#FFFFFF",
+        "bold": true
       },
       {
         "kind": "rect",
-        "x": 912,
-        "y": 409,
-        "w": 688,
-        "h": 240,
-        "fill": "#F5F6F8"
+        "x": 72,
+        "y": 372,
+        "w": 700,
+        "h": 360,
+        "fill": "#FFFFFF",
+        "stroke": "#D7DFE9",
+        "sw": 1.5
       },
       {
         "kind": "text",
-        "text": "操作：发送邮件\n状态：未发送\n原因：收件人地址无效",
-        "x": 944,
-        "y": 442,
-        "w": 624,
-        "h": 180,
+        "text": "用户",
+        "x": 104,
+        "y": 404,
+        "w": 620,
+        "h": 40,
+        "size": 24,
+        "color": "#2F5BD3",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "把改期通知发给张经理。",
+        "x": 104,
+        "y": 454,
+        "w": 636,
+        "h": 78,
         "size": 32,
         "color": "#46556B",
-        "bold": false,
-        "name": "text"
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "AI",
+        "x": 104,
+        "y": 560,
+        "w": 620,
+        "h": 40,
+        "size": 24,
+        "color": "#2F5BD3",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "已为你发送改期通知。",
+        "x": 104,
+        "y": 610,
+        "w": 636,
+        "h": 82,
+        "size": 36,
+        "color": "#0E1E36",
+        "bold": true
+      },
+      {
+        "kind": "rect",
+        "x": 900,
+        "y": 372,
+        "w": 700,
+        "h": 360,
+        "fill": "#F5F6F8",
+        "stroke": "none",
+        "sw": 0
+      },
+      {
+        "kind": "text",
+        "text": "操作",
+        "x": 932,
+        "y": 410,
+        "w": 140,
+        "h": 46,
+        "size": 28,
+        "color": "#6B778A",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "发送邮件",
+        "x": 1100,
+        "y": 406,
+        "w": 460,
+        "h": 56,
+        "size": 32,
+        "color": "#0E1E36",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "状态",
+        "x": 932,
+        "y": 506,
+        "w": 140,
+        "h": 46,
+        "size": 28,
+        "color": "#6B778A",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "未发送",
+        "x": 1100,
+        "y": 498,
+        "w": 460,
+        "h": 70,
+        "size": 44,
+        "color": "#0E1E36",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "原因",
+        "x": 932,
+        "y": 616,
+        "w": 140,
+        "h": 46,
+        "size": 28,
+        "color": "#6B778A",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "收件人地址无效",
+        "x": 1100,
+        "y": 610,
+        "w": 460,
+        "h": 70,
+        "size": 32,
+        "color": "#46556B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 72,
+        "y": 800,
+        "w": 6,
+        "h": 52,
+        "fill": "#D98B3A",
+        "stroke": "none",
+        "sw": 0
       },
       {
         "kind": "text",
         "text": "邮件发出了吗？你依据哪份材料？还要检查什么？",
-        "x": 72,
-        "y": 785,
-        "w": 1528,
-        "h": 65,
-        "size": 36,
-        "color": "#D98B3A",
-        "bold": true,
-        "name": "text"
+        "x": 98,
+        "y": 802,
+        "w": 1502,
+        "h": 66,
+        "size": 34,
+        "color": "#0E1E36",
+        "bold": true
       }
     ],
     "revisionSource": "../对话改造/第二章改造页.json",
@@ -820,7 +938,10 @@
       "课堂示例"
     ],
     "slideId": "zwh67l",
-    "cloudStateVersion": 23
+    "cloudStateVersion": 25,
+    "uiLayout": "binary-comparison：聊天声明与工具执行记录",
+    "exampleLabel": "课堂示例",
+    "navigation": []
   },
   {
     "key": "checkOrder",
@@ -830,7 +951,7 @@
     "minutes": 0.8,
     "goal": "按先后次序理解执行和新一轮输入",
     "interaction": "用字母排序并补充下一轮输入",
-    "layout": "native-dialogue-revision",
+    "layout": "native-ui-redesign",
     "screen": [
       "已查到张经理邮箱。请按发生顺序排列这四个动作。",
       "A",
@@ -847,109 +968,333 @@
         "kind": "text",
         "text": "已查到张经理邮箱。请按发生顺序排列这四个动作。",
         "x": 72,
-        "y": 218,
+        "y": 214,
         "w": 1528,
-        "h": 70,
+        "h": 54,
         "size": 32,
         "color": "#46556B",
-        "bold": false,
-        "name": "text"
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 72,
+        "y": 310,
+        "w": 700,
+        "h": 166,
+        "fill": "#FFFFFF",
+        "stroke": "#D7DFE9",
+        "sw": 1.5
+      },
+      {
+        "kind": "rect",
+        "x": 72,
+        "y": 310,
+        "w": 100,
+        "h": 166,
+        "fill": "#EDF2FB",
+        "stroke": "none",
+        "sw": 0
       },
       {
         "kind": "text",
         "text": "A",
-        "x": 72,
-        "y": 355,
-        "w": 100,
-        "h": 70,
-        "size": 40,
+        "x": 96,
+        "y": 352,
+        "w": 62,
+        "h": 80,
+        "size": 52,
         "color": "#2F5BD3",
-        "bold": true,
-        "name": "text"
+        "bold": true
       },
       {
         "kind": "text",
-        "text": "邮箱工具执行发送，返回成功或失败结果。",
-        "x": 230,
-        "y": 355,
-        "w": 1370,
-        "h": 85,
-        "size": 36,
+        "text": "邮箱工具执行发送，\n返回成功或失败结果。",
+        "x": 202,
+        "y": 350,
+        "w": 540,
+        "h": 120,
+        "size": 30,
         "color": "#46556B",
-        "bold": false,
-        "name": "text"
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 900,
+        "y": 310,
+        "w": 700,
+        "h": 166,
+        "fill": "#FFFFFF",
+        "stroke": "#D7DFE9",
+        "sw": 1.5
+      },
+      {
+        "kind": "rect",
+        "x": 900,
+        "y": 310,
+        "w": 100,
+        "h": 166,
+        "fill": "#EDF2FB",
+        "stroke": "none",
+        "sw": 0
       },
       {
         "kind": "text",
         "text": "B",
-        "x": 72,
-        "y": 475,
-        "w": 100,
-        "h": 70,
-        "size": 40,
+        "x": 924,
+        "y": 352,
+        "w": 62,
+        "h": 80,
+        "size": 52,
         "color": "#2F5BD3",
-        "bold": true,
-        "name": "text"
+        "bold": true
       },
       {
         "kind": "text",
-        "text": "应用监测并识别发送请求，按规则取得确认。",
-        "x": 230,
-        "y": 475,
-        "w": 1370,
-        "h": 85,
-        "size": 36,
+        "text": "应用监测并识别发送请求，\n按规则取得确认。",
+        "x": 1030,
+        "y": 350,
+        "w": 540,
+        "h": 120,
+        "size": 30,
         "color": "#46556B",
-        "bold": false,
-        "name": "text"
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 72,
+        "y": 520,
+        "w": 700,
+        "h": 166,
+        "fill": "#FFFFFF",
+        "stroke": "#D7DFE9",
+        "sw": 1.5
+      },
+      {
+        "kind": "rect",
+        "x": 72,
+        "y": 520,
+        "w": 100,
+        "h": 166,
+        "fill": "#EDF2FB",
+        "stroke": "none",
+        "sw": 0
       },
       {
         "kind": "text",
         "text": "C",
-        "x": 72,
-        "y": 595,
-        "w": 100,
-        "h": 70,
-        "size": 40,
+        "x": 96,
+        "y": 562,
+        "w": 62,
+        "h": 80,
+        "size": 52,
         "color": "#2F5BD3",
-        "bold": true,
-        "name": "text"
+        "bold": true
       },
       {
         "kind": "text",
-        "text": "应用把执行结果交回模型，继续处理任务。",
-        "x": 230,
-        "y": 595,
-        "w": 1370,
-        "h": 85,
-        "size": 36,
+        "text": "应用把执行结果交回模型，\n继续处理任务。",
+        "x": 202,
+        "y": 560,
+        "w": 540,
+        "h": 120,
+        "size": 30,
         "color": "#46556B",
-        "bold": false,
-        "name": "text"
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 900,
+        "y": 520,
+        "w": 700,
+        "h": 166,
+        "fill": "#FFFFFF",
+        "stroke": "#D7DFE9",
+        "sw": 1.5
+      },
+      {
+        "kind": "rect",
+        "x": 900,
+        "y": 520,
+        "w": 100,
+        "h": 166,
+        "fill": "#EDF2FB",
+        "stroke": "none",
+        "sw": 0
       },
       {
         "kind": "text",
         "text": "D",
-        "x": 72,
-        "y": 715,
-        "w": 100,
-        "h": 70,
-        "size": 40,
+        "x": 924,
+        "y": 562,
+        "w": 62,
+        "h": 80,
+        "size": 52,
         "color": "#2F5BD3",
-        "bold": true,
-        "name": "text"
+        "bold": true
       },
       {
         "kind": "text",
-        "text": "模型输出收件人、主题和正文，提出发送请求。",
-        "x": 230,
-        "y": 715,
-        "w": 1370,
-        "h": 85,
-        "size": 36,
+        "text": "模型输出收件人、主题和正文，\n提出发送请求。",
+        "x": 1030,
+        "y": 560,
+        "w": 540,
+        "h": 120,
+        "size": 30,
         "color": "#46556B",
-        "bold": false,
-        "name": "text"
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "你的顺序",
+        "x": 72,
+        "y": 762,
+        "w": 260,
+        "h": 40,
+        "size": 24,
+        "color": "#2F5BD3",
+        "bold": true
+      },
+      {
+        "kind": "rect",
+        "x": 380,
+        "y": 746,
+        "w": 130,
+        "h": 88,
+        "fill": "#FFFFFF",
+        "stroke": "#2F5BD3",
+        "sw": 2
+      },
+      {
+        "kind": "line",
+        "points": [
+          [
+            528,
+            790
+          ],
+          [
+            662,
+            790
+          ]
+        ],
+        "color": "#2F5BD3",
+        "width": 3
+      },
+      {
+        "kind": "line",
+        "points": [
+          [
+            651.4690092573155,
+            795.7531064632504
+          ],
+          [
+            662,
+            790
+          ],
+          [
+            651.4690092573155,
+            784.2468935367496
+          ]
+        ],
+        "color": "#2F5BD3",
+        "width": 3
+      },
+      {
+        "kind": "rect",
+        "x": 686,
+        "y": 746,
+        "w": 130,
+        "h": 88,
+        "fill": "#FFFFFF",
+        "stroke": "#2F5BD3",
+        "sw": 2
+      },
+      {
+        "kind": "line",
+        "points": [
+          [
+            834,
+            790
+          ],
+          [
+            968,
+            790
+          ]
+        ],
+        "color": "#2F5BD3",
+        "width": 3
+      },
+      {
+        "kind": "line",
+        "points": [
+          [
+            957.4690092573155,
+            795.7531064632504
+          ],
+          [
+            968,
+            790
+          ],
+          [
+            957.4690092573155,
+            784.2468935367496
+          ]
+        ],
+        "color": "#2F5BD3",
+        "width": 3
+      },
+      {
+        "kind": "rect",
+        "x": 992,
+        "y": 746,
+        "w": 130,
+        "h": 88,
+        "fill": "#FFFFFF",
+        "stroke": "#2F5BD3",
+        "sw": 2
+      },
+      {
+        "kind": "line",
+        "points": [
+          [
+            1140,
+            790
+          ],
+          [
+            1274,
+            790
+          ]
+        ],
+        "color": "#2F5BD3",
+        "width": 3
+      },
+      {
+        "kind": "line",
+        "points": [
+          [
+            1263.4690092573155,
+            795.7531064632504
+          ],
+          [
+            1274,
+            790
+          ],
+          [
+            1263.4690092573155,
+            784.2468935367496
+          ]
+        ],
+        "color": "#2F5BD3",
+        "width": 3
+      },
+      {
+        "kind": "rect",
+        "x": 1298,
+        "y": 746,
+        "w": 130,
+        "h": 88,
+        "fill": "#FFFFFF",
+        "stroke": "#2F5BD3",
+        "sw": 2
       }
     ],
     "revisionSource": "../对话改造/第二章改造页.json",
@@ -969,7 +1314,10 @@
       "课堂示例"
     ],
     "slideId": "960bvl",
-    "cloudStateVersion": 23
+    "cloudStateVersion": 25,
+    "uiLayout": "worksheet：四张待排序动作签与空排序轨道",
+    "exampleLabel": "课堂示例",
+    "navigation": []
   },
   {
     "key": "quote",
@@ -982,7 +1330,7 @@
       "30"
     ],
     "slideId": "t365cc",
-    "cloudStateVersion": 23
+    "cloudStateVersion": 25
   },
   {
     "key": "transition",
@@ -997,6 +1345,6 @@
       "打开第三章：用好它 →"
     ],
     "slideId": "brdfsu",
-    "cloudStateVersion": 23
+    "cloudStateVersion": 25
   }
 ]

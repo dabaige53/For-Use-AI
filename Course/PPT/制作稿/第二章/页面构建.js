@@ -4,7 +4,7 @@ globalThis.buildCh02Final=function(p,d,A,pageNumber,geometryRecords=[],media={})
  if(d.nativeElements){
   if(typeof globalThis.reviseCourseSlide!=='function') throw new Error('先载入制作稿/对话改造/页面构建.js');
   const slide=p.slides.add({width:1672,height:941,background:{fill:'#FFFFFF'}});
-  return globalThis.reviseCourseSlide(p,{...d,id:slide.id,page:pageNumber,elements:d.nativeElements});
+  return globalThis.reviseCourseSlide(p,{...d,id:slide.id,page:pageNumber,elements:d.nativeElements},A);
  }
  const C={navy:'#0E1E36',body:'#46556B',muted:'#6B778A',blue:'#2F5BD3',orange:'#D98B3A',line:'#D7DFE9'};
  const s=p.slides.add({width:1672,height:941,background:{fill:'#FFFFFF'}}),pre='ch02-final-'+d.key+'-';

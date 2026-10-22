@@ -70,7 +70,277 @@
       "version": 23,
       "saved": true,
       "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "tjx1sg",
+      "page": 34,
+      "title": "把材料放进这次对话",
+      "layout": "structural-breakdown：任务材料传递到通知成稿",
+      "version": 39,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "ito41u",
+      "page": 36,
+      "title": "下一句话，怎样说更有用",
+      "layout": "binary-comparison：当前回复与三个候选反馈",
+      "version": 40,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "3bk4cm",
+      "page": 37,
+      "title": "八个场景，各解决一个问题",
+      "layout": "agenda：八个任务分成两段学习路径",
+      "version": 41,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "8hq1zk",
+      "page": 39,
+      "title": "② “专业”的周报，怎么验收",
+      "layout": "split-screen：事实材料与周报草稿，留出验收动作",
+      "version": 42,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "zmd7ie",
+      "page": 33,
+      "title": "先看 AI 还缺什么",
+      "layout": "split-screen：办公情境＋双角色对话",
+      "version": 43,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "v8jhbk",
+      "page": 40,
+      "title": "② 把标准写成能核对的要求",
+      "layout": "comparison-matrix：三段成稿与验收清单",
+      "version": 44,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "wadh6d",
+      "page": 41,
+      "title": "③ 用参照说明语气",
+      "layout": "binary-comparison：同一事实，两种欢迎消息",
+      "version": 45,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "17gzsc",
+      "page": 42,
+      "title": "④ 样例教格式，材料给事实",
+      "layout": "structural-breakdown：旧样例与本次材料分区",
+      "version": 46,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "8uqfco",
+      "page": 43,
+      "title": "④ 把结构应用到新材料",
+      "layout": "comparison-matrix：用户格式要求落到可核对纪要",
+      "version": 47,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "9uecrh",
+      "page": 44,
+      "title": "交代任务，先补齐这些信息",
+      "layout": "structural-breakdown：可填写任务单的四个组成",
+      "version": 48,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "ujyfb5",
+      "page": 45,
+      "title": "⑤ 先比较方向",
+      "layout": "tree-branching：同一组条件生成三个可选方向",
+      "version": 49,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "f6ghtl",
+      "page": 46,
+      "title": "⑤ 选定后，再展开一层",
+      "layout": "linear-progression：按真实时长比例排流程",
+      "version": 50,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "mx2upd",
+      "page": 47,
+      "title": "⑥ 先把“高级”说具体",
+      "layout": "split-screen：澄清对话与两种版式小样",
+      "version": 51,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "rip8xo",
+      "page": 48,
+      "title": "⑥ 留下已确认的制作要求",
+      "layout": "split-screen：任务要求＋原生图表样稿",
+      "version": 52,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "f6ghtl",
+      "page": 46,
+      "title": "⑤ 选定后，再展开一层",
+      "layout": "linear-progression：按真实时长比例排流程",
+      "version": 53,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "rip8xo",
+      "page": 48,
+      "title": "⑥ 留下已确认的制作要求",
+      "layout": "split-screen：任务要求＋原生图表样稿",
+      "version": 54,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "ud9hga",
+      "page": 49,
+      "title": "⑦ 先检查分析的前提",
+      "layout": "binary-comparison：原始数据图与带前提的分析回复",
+      "version": 55,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "vr1id7",
+      "page": 50,
+      "title": "⑦ 核对后，才决定能分析什么",
+      "layout": "key-stat＋证据边界：计算结果与尚缺材料",
+      "version": 56,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "7nvbdq",
+      "page": 51,
+      "title": "⑧ 分支有价值，交付物也要守住",
+      "layout": "tree-branching：合并任务转向异常核查",
+      "version": 57,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "yhdqsd",
+      "page": 52,
+      "title": "⑧ 先交总表，异常另列",
+      "layout": "split-screen：总表与异常清单，合计成为结果重点",
+      "version": 58,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "xarqut",
+      "page": 53,
+      "title": "选一句，现在就用",
+      "layout": "quote-callout：三种情境对应可直接采用的句式",
+      "version": 59,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "pjp3e9",
+      "page": 55,
+      "title": "改写你自己的一个任务",
+      "layout": "worksheet：任务填写区与同桌核对",
+      "version": 60,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "6ce8t5",
+      "page": 56,
+      "title": "复杂任务，也先做一小步",
+      "layout": "linear-progression：先做样稿再扩展，保留完整对话",
+      "version": 61,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "lb4d4e",
+      "page": 57,
+      "title": "走通一件工作任务",
+      "layout": "worksheet＋linear-progression：材料、验收标准与12分钟步骤",
+      "version": 62,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch3",
+      "id": "1y39hs",
+      "page": 58,
+      "title": "把方法带回一件工作",
+      "layout": "minimal＋linear-progression：三章收束到一件工作",
+      "version": 63,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch2",
+      "id": "zwh67l",
+      "page": 28,
+      "title": "完成声明，要用什么证明",
+      "layout": "binary-comparison：聊天声明与工具执行记录",
+      "version": 24,
+      "saved": true,
+      "readback": true
+    },
+    {
+      "chapter": "ch2",
+      "id": "960bvl",
+      "page": 29,
+      "title": "把执行过程接完整",
+      "layout": "worksheet：四张待排序动作签与空排序轨道",
+      "version": 25,
+      "saved": true,
+      "readback": true
     }
   ],
-  "checks": "逐页保存并重新读取；查看保存结构实际渲染。代表页另经独立视觉评审通过。"
+  "checks": "逐页保存并重新读取；查看保存结构实际渲染。三张代表页与八张不同构图的扩展页经独立视觉评审通过。浏览器重新打开后确认页脚及示例标签，插画页和样稿页显示正常。"
 }
