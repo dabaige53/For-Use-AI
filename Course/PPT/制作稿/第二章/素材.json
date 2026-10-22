@@ -1,0 +1,86 @@
+{
+  "cover": {
+    "path": "../../assets/cover-clean.png",
+    "source": {
+      "width": 1672,
+      "height": 941
+    },
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1672,
+      "height": 941
+    },
+    "cloud_reference": "library-file:fde1_bGliZmlsZV9ONkF0bmVoMzlWZjJKejh2NW5HeTRn_FileDrive_34b8e0c0eb248191ba3a147d8e82e20a"
+  },
+  "roomA": {
+    "path": "../../assets/ch02-room-a-notion-v1.png",
+    "source": {
+      "width": 1448,
+      "height": 1086
+    },
+    "crop": {
+      "x": 20,
+      "y": 105,
+      "width": 1380,
+      "height": 850
+    },
+    "cloud_reference": "library-file:fde1_bGliZmlsZV9ucW1tcmg0QldvYkFpZF93X3d1cVln_FileDrive_34b8e0c0eb248191ba3a147d8e82e20a"
+  },
+  "roomB": {
+    "path": "../../assets/ch02-room-b-notion-v1.png",
+    "source": {
+      "width": 1448,
+      "height": 1086
+    },
+    "crop": {
+      "x": 20,
+      "y": 105,
+      "width": 1380,
+      "height": 850
+    },
+    "cloud_reference": "library-file:fde1_bGliZmlsZV9zS09NSVBQaEVBMWZnbndiR01QWjdn_FileDrive_34b8e0c0eb248191ba3a147d8e82e20a"
+  },
+  "handoff": {
+    "path": "../../assets/ch02-call-handoff-notion-v1.png",
+    "source": {
+      "width": 2048,
+      "height": 768
+    },
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 2048,
+      "height": 768
+    },
+    "cloud_reference": "library-file:fde1_bGliZmlsZV9HQWlZUHR1YjRzLUxJdjBfQmFhUTVn_FileDrive_34b8e0c0eb248191ba3a147d8e82e20a"
+  },
+  "video1": {
+    "path": "../../assets/ch02-video-input.png",
+    "source": {
+      "width": 1920,
+      "height": 1080
+    },
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080
+    },
+    "cloud_reference": "library-file:fde1_bGliZmlsZV9zTm1qWlRqWU1aOG9nRXpKNThxZllB_FileDrive_34b8e0c0eb248191ba3a147d8e82e20a"
+  },
+  "video2": {
+    "path": "../../assets/ch02-video-loop.png",
+    "source": {
+      "width": 1920,
+      "height": 1080
+    },
+    "crop": {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080
+    },
+    "cloud_reference": "library-file:fde1_bGliZmlsZV8tUldLc2xlVjRCN2hIVDRWSUV6eGN3_FileDrive_34b8e0c0eb248191ba3a147d8e82e20a"
+  }
+}

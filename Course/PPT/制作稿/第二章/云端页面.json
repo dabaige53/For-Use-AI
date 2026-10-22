@@ -1,0 +1,270 @@
+{
+  "page_id": "page_8cecae7f9e648191a063b3508e3460ce",
+  "url": "https://chatgpt.com/space/page_8cecae7f9e648191a063b3508e3460ce",
+  "state_version": 7,
+  "slides": [
+    {
+      "order": 1,
+      "page": 19,
+      "id": "10pvgy",
+      "key": "cover",
+      "title": "看清它",
+      "images": [
+        {
+          "id": "1078152475443200",
+          "asset_id": "62e74dd9-6540-41cc-bd44-390410a195d2",
+          "uri": "library-file:fde1_bGliZmlsZV9ONkF0bmVoMzlWZjJKejh2NW5HeTRn_FileDrive_34b8e0c0eb248191ba3a147d8e82e20a",
+          "frame": {
+            "left": 0,
+            "top": 0,
+            "width": 1672,
+            "height": 941
+          },
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "page": 20,
+      "id": "mhfcwi",
+      "key": "roundtrip",
+      "title": "你发出的消息，怎样到达模型？",
+      "images": []
+    },
+    {
+      "order": 3,
+      "page": 21,
+      "id": "unnni2",
+      "key": "roomA",
+      "title": "房间 A：只有纸和笔",
+      "images": [
+        {
+          "id": "2279224773705732",
+          "asset_id": "8f32b4a0-2a7e-438f-9159-08e035981b0f",
+          "uri": "library-file:fde1_bGliZmlsZV9ucW1tcmg0QldvYkFpZF93X3d1cVln_FileDrive_34b8e0c0eb248191ba3a147d8e82e20a",
+          "frame": {
+            "left": 72,
+            "top": 250,
+            "width": 1000,
+            "height": 615.9420472440945
+          },
+          "crop": {
+            "left": 0.01381,
+            "top": 0.09669,
+            "right": 0.03315,
+            "bottom": 0.12063
+          }
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "page": 22,
+      "id": "fh36g2",
+      "key": "roomB",
+      "title": "房间 B：模型提要求，应用来执行",
+      "images": [
+        {
+          "id": "2279224773705743",
+          "asset_id": "901da419-e60b-4107-8b94-53807abb0fa5",
+          "uri": "library-file:fde1_bGliZmlsZV9zS09NSVBQaEVBMWZnbndiR01QWjdn_FileDrive_34b8e0c0eb248191ba3a147d8e82e20a",
+          "frame": {
+            "left": 72,
+            "top": 250,
+            "width": 1000,
+            "height": 615.9420472440945
+          },
+          "crop": {
+            "left": 0.01381,
+            "top": 0.09669,
+            "right": 0.03315,
+            "bottom": 0.12063
+          }
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "page": 23,
+      "id": "dzjb2x",
+      "key": "call1",
+      "title": "第 1 次调用：先查收件人",
+      "images": [
+        {
+          "id": "2275043812835337",
+          "asset_id": "ff06dd91-c6ca-411b-a81f-1bd81a0658ee",
+          "uri": "library-file:fde1_bGliZmlsZV9HQWlZUHR1YjRzLUxJdjBfQmFhUTVn_FileDrive_34b8e0c0eb248191ba3a147d8e82e20a",
+          "frame": {
+            "left": 400,
+            "top": 335,
+            "width": 1200,
+            "height": 450
+          },
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "page": 24,
+      "id": "566nn9",
+      "key": "call2",
+      "title": "第 2 次调用：有了邮箱，接着请求发送",
+      "images": [
+        {
+          "id": "2275043812835359",
+          "asset_id": "cc1cff22-5452-488f-9f3f-8b96cec80e04",
+          "uri": "library-file:fde1_bGliZmlsZV8zTm9hTGswZEQ0RDdaeUY3a3BzZGhR_FileDrive_34b8e0c0eb248191ba3a147d8e82e20a",
+          "frame": {
+            "left": 400,
+            "top": 335,
+            "width": 1200,
+            "height": 450
+          },
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "page": 25,
+      "id": "eedkfb",
+      "key": "call3",
+      "title": "第 3 次调用：看过回执，再说明完成",
+      "images": [
+        {
+          "id": "770264641044489",
+          "asset_id": "5cf596e6-208c-4b9b-8af2-9db497195466",
+          "uri": "library-file:fde1_bGliZmlsZV9haFhycnZiYkZUd3p4QnFTUmpQZF9R_FileDrive_34b8e0c0eb248191ba3a147d8e82e20a",
+          "frame": {
+            "left": 400,
+            "top": 335,
+            "width": 1200,
+            "height": 450
+          },
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "page": 26,
+      "id": "5webq4",
+      "key": "video1",
+      "title": "视频①：模型这次看到了什么",
+      "images": [
+        {
+          "id": "770264641044503",
+          "asset_id": "a257bf87-9c86-425e-96f5-ac07314a87f4",
+          "uri": "library-file:fde1_bGliZmlsZV9zTm1qWlRqWU1aOG9nRXpKNThxZllB_FileDrive_34b8e0c0eb248191ba3a147d8e82e20a",
+          "frame": {
+            "left": 72,
+            "top": 224,
+            "width": 992,
+            "height": 558
+          },
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "page": 27,
+      "id": "sf3kf2",
+      "key": "video2",
+      "title": "视频②：一次提问，多次调用",
+      "images": [
+        {
+          "id": "1400930296659970",
+          "asset_id": "9d314cd1-fa3e-40d0-a496-96d95b1817d4",
+          "uri": "library-file:fde1_bGliZmlsZV8tUldLc2xlVjRCN2hIVDRWSUV6eGN3_FileDrive_34b8e0c0eb248191ba3a147d8e82e20a",
+          "frame": {
+            "left": 72,
+            "top": 224,
+            "width": 992,
+            "height": 558
+          },
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "page": 28,
+      "id": "zwh67l",
+      "key": "checkEvidence",
+      "title": "理解检查：说做了，还是做到了？",
+      "images": []
+    },
+    {
+      "order": 11,
+      "page": 29,
+      "id": "960bvl",
+      "key": "checkOrder",
+      "title": "理解检查：把邮件接力排好",
+      "images": []
+    },
+    {
+      "order": 12,
+      "page": 30,
+      "id": "t365cc",
+      "key": "quote",
+      "title": "AI 不是工具，而是人。",
+      "images": []
+    },
+    {
+      "order": 13,
+      "page": 31,
+      "id": "brdfsu",
+      "key": "transition",
+      "title": "它具备这些条件，为什么还是做不好我的任务？",
+      "images": []
+    }
+  ],
+  "original_entry": {
+    "page_id": "page_37b8f35c311c8191b5636bae8aa26362",
+    "slide_id": "92x2ff",
+    "slide_number": 19,
+    "state_version": 228,
+    "link": "https://chatgpt.com/space/page_8cecae7f9e648191a063b3508e3460ce",
+    "name": "ch02-volume-navigation",
+    "text": "打开第二章完整课件 →",
+    "position": {
+      "left": 80,
+      "top": 676,
+      "width": 720,
+      "height": 54
+    }
+  }
+}

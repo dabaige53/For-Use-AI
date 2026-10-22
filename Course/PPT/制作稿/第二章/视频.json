@@ -1,0 +1,19 @@
+{
+  "source": "../../assets/video_io.mp4",
+  "reference": "library-file:fde1_bGliZmlsZV9zVnMyc1I3QkhKWm56YXRsQWFaeENn_FileDrive_34b8e0c0eb248191ba3a147d8e82e20a",
+  "page_id": "page_8cecae7f9e648191a063b3508e3460ce",
+  "file_access_confirmed": true,
+  "byte_size": 7603750,
+  "native_video_inserted": false,
+  "playback_verified": false,
+  "segments_seconds": [
+    [
+      0,
+      64
+    ],
+    [
+      64,
+      159
+    ]
+  ]
+}
