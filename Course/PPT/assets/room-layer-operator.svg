@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="room" viewBox="70 50 1050 650" role="img" aria-labelledby="room-title room-desc" width="2100" height="1300">
+<style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#0e1e36}.small{font-size:28px}.label{font-size:30px;font-weight:700}.ink{fill:#0e1e36}.muted{fill:#6b778a}.blue{fill:#2f5bd3}.worker{opacity:1}.halo{fill:#e6edff;opacity:0}.operator{opacity:1}.op-halo{fill:#fae9d4}.equipment{opacity:1}</style><defs>
+<g id="person"><ellipse cx="0" cy="92" rx="39" ry="12" fill="#c6d0df" opacity=".35" /><path d="M-19 48L-23 82M17 48L24 82" stroke="#263b57" stroke-width="13" stroke-linecap="round" /><path d="M-30 18Q0 1 30 18L24 57Q0 65-24 57Z" fill="#2f5bd3" /><path d="M-26 24L-41 52L-8 61M26 24L40 45L18 60" stroke="#f1c7a7" stroke-width="12" fill="none" stroke-linecap="round" /><rect x="-6" y="-1" width="12" height="17" rx="5" fill="#ecc09c" /><ellipse cy="-19" rx="24" ry="29" fill="#f2ccb0" /><path d="M-24-18Q-29-52 1-51Q30-48 24-16L15-29Q-9-21-15-34L-24-18" fill="#263b57" /><circle cx="-8" cy="-17" r="2" fill="#263b57" /><circle cx="9" cy="-17" r="2" fill="#263b57" /><path d="M-5-5Q1-1 7-6" fill="none" stroke="#b88167" stroke-width="2" /></g>
+<g id="desk"><path d="M-75 22L-75 83M43 53L43 105M99 27L99 75" stroke="#8d9cb0" stroke-width="7" /><path d="M-95 0L-15-36L110 1L30 39Z" fill="#dce5f2" stroke="#b4c3d7" stroke-width="2" /><path d="M-95 0L-95 10L30 49L30 39ZM30 39L110 1L110 11L30 49Z" fill="#c1cee0" /><path d="M-38-7L-1-23L48-8L11 10Z" fill="white" stroke="#becbde" /><path d="M-23-8L10 2M-15-12L19-2" stroke="#8da3c2" stroke-width="2" /></g>
+<marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#2f5bd3" /></marker>
+</defs>
+
+<g id="operator-group" class="equipment absent">
+<ellipse cx="1003" cy="611" rx="106" ry="35" fill="#e7ebf2" />
+<g id="operator" class="operator" transform="translate(992 493)"><ellipse class="op-halo" cy="42" rx="70" ry="75" fill="transparent" /><use href="#person" /><path d="M-30 18Q0 1 30 18L24 57Q0 65-24 57Z" fill="#d98b3a" /></g>
+<path d="M894 563L997 595L1102 544L998 513Z" fill="#d4deed" stroke="#b4c3d7" stroke-width="2" /><path d="M906 567V621M1090 553V605" stroke="#8d9cb0" stroke-width="6" />
+<g id="monitor"><path d="M1046 472V533M1029 538L1062 523" stroke="#425570" stroke-width="7" /><path d="M1003 446L1084 471L1084 525L1003 500Z" fill="#344966" stroke="#243750" stroke-width="3" /><path d="M1010 455L1077 476L1077 515L1010 494Z" fill="#eff5ff" /><path d="M1024 471L1055 481L1055 501L1024 491Z M1024 471L1039 487L1055 481" stroke="#2f5bd3" fill="none" stroke-width="2" /></g>
+</g>
+</svg>

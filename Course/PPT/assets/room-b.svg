@@ -1,0 +1,30 @@
+<svg class="room" viewBox="70 50 1050 650" role="img" aria-labelledby="room-title room-desc" xmlns="http://www.w3.org/2000/svg" width="2100" height="1300">
+<style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#0e1e36}.small{font-size:28px}.label{font-size:30px;font-weight:700}.ink{fill:#0e1e36}.muted{fill:#6b778a}.blue{fill:#2f5bd3}.worker{opacity:1}.halo{fill:#e6edff;opacity:0}.operator{opacity:1}.op-halo{fill:#fae9d4}.equipment{opacity:1}</style><title id="room-title">一个打开前墙的工作房间</title><desc id="room-desc">房间中有三位接力写纸条的人。配齐工作条件后，墙上出现规则和工具清单，房间外出现使用电脑的操作员。纸条在人与操作员之间往返。</desc>
+<defs>
+<g id="person"><ellipse cx="0" cy="92" rx="39" ry="12" fill="#c6d0df" opacity=".35" /><path d="M-19 48L-23 82M17 48L24 82" stroke="#263b57" stroke-width="13" stroke-linecap="round" /><path d="M-30 18Q0 1 30 18L24 57Q0 65-24 57Z" fill="#2f5bd3" /><path d="M-26 24L-41 52L-8 61M26 24L40 45L18 60" stroke="#f1c7a7" stroke-width="12" fill="none" stroke-linecap="round" /><rect x="-6" y="-1" width="12" height="17" rx="5" fill="#ecc09c" /><ellipse cy="-19" rx="24" ry="29" fill="#f2ccb0" /><path d="M-24-18Q-29-52 1-51Q30-48 24-16L15-29Q-9-21-15-34L-24-18" fill="#263b57" /><circle cx="-8" cy="-17" r="2" fill="#263b57" /><circle cx="9" cy="-17" r="2" fill="#263b57" /><path d="M-5-5Q1-1 7-6" fill="none" stroke="#b88167" stroke-width="2" /></g>
+<g id="desk"><path d="M-75 22L-75 83M43 53L43 105M99 27L99 75" stroke="#8d9cb0" stroke-width="7" /><path d="M-95 0L-15-36L110 1L30 39Z" fill="#dce5f2" stroke="#b4c3d7" stroke-width="2" /><path d="M-95 0L-95 10L30 49L30 39ZM30 39L110 1L110 11L30 49Z" fill="#c1cee0" /><path d="M-38-7L-1-23L48-8L11 10Z" fill="white" stroke="#becbde" /><path d="M-23-8L10 2M-15-12L19-2" stroke="#8da3c2" stroke-width="2" /></g>
+<marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#2f5bd3" /></marker>
+</defs>
+
+<path d="M94 460L465 285L1010 455L635 660Z" fill="#f0f3f8" stroke="#cbd5e3" stroke-width="2" />
+<path d="M94 460L94 235L465 60L465 285Z" fill="#e4eaf3" stroke="#cbd5e3" stroke-width="2" />
+<path d="M465 60L1010 230L1010 455L465 285Z" fill="#f6f8fc" stroke="#cbd5e3" stroke-width="2" />
+<path d="M94 235L465 60L1010 230" stroke="#b7c5da" stroke-width="7" fill="none" stroke-linejoin="round" />
+<path d="M94 460L635 660L1010 455" stroke="#d5ddea" stroke-width="6" fill="none" />
+<path d="M220 464L675 602M340 407L796 544M450 353L904 491" stroke="#e1e7f0" stroke-width="1" />
+<g class="equipment absent" id="rules" transform="matrix(1 .312 0 1 620 145)"><rect x="4" y="5" width="245" height="126" fill="#dfe6f1" /><rect width="245" height="126" rx="3" fill="white" stroke="#aebfd8" stroke-width="2" /><rect x="95" y="-6" width="55" height="13" rx="2" fill="#e8cba4" /><text x="18" y="35" class="label ink">工作规则</text><path d="M18 49H223" stroke="#d7dfe9" /><text x="18" y="94" class="small ink">先确认，再发送</text></g>
+<g class="equipment absent" id="tools-list" transform="matrix(1 -.47 0 1 170 235)"><rect x="4" y="5" width="224" height="130" fill="#cfd9e9" /><rect width="224" height="130" rx="3" fill="white" stroke="#aebfd8" stroke-width="2" /><text x="17" y="35" class="label ink">工具清单</text><path d="M17 49H205" stroke="#d7dfe9" /><text x="17" y="82" class="small blue">查通讯录</text><text x="17" y="111" class="small blue">发邮件</text></g>
+<g class="worker active" id="worker-1" transform="translate(300 395)"><ellipse class="halo" cy="45" rx="78" ry="74" /><use href="#person" /></g>
+<use href="#desk" transform="translate(308 449)" />
+<g class="worker" id="worker-2" transform="translate(505 447)"><ellipse class="halo" cy="45" rx="78" ry="74" /><use href="#person" /></g>
+<use href="#desk" transform="translate(513 501)" />
+<g class="worker" id="worker-3" transform="translate(714 400)"><ellipse class="halo" cy="45" rx="78" ry="74" /><use href="#person" /></g>
+<use href="#desk" transform="translate(722 454)" />
+<g id="operator-group" class="equipment absent">
+<ellipse cx="1003" cy="611" rx="106" ry="35" fill="#e7ebf2" />
+<g id="operator" class="operator" transform="translate(992 493)"><ellipse class="op-halo" cy="42" rx="70" ry="75" fill="transparent" /><use href="#person" /><path d="M-30 18Q0 1 30 18L24 57Q0 65-24 57Z" fill="#d98b3a" /></g>
+<path d="M894 563L997 595L1102 544L998 513Z" fill="#d4deed" stroke="#b4c3d7" stroke-width="2" /><path d="M906 567V621M1090 553V605" stroke="#8d9cb0" stroke-width="6" />
+<g id="monitor"><path d="M1046 472V533M1029 538L1062 523" stroke="#425570" stroke-width="7" /><path d="M1003 446L1084 471L1084 525L1003 500Z" fill="#344966" stroke="#243750" stroke-width="3" /><path d="M1010 455L1077 476L1077 515L1010 494Z" fill="#eff5ff" /><path d="M1024 471L1055 481L1055 501L1024 491Z M1024 471L1039 487L1055 481" stroke="#2f5bd3" fill="none" stroke-width="2" /></g>
+</g>
+<g id="user" transform="translate(125 600)"><circle cx="0" cy="0" r="24" fill="#fff" stroke="#8396b0" stroke-width="2" /><path d="M-33 65Q-36 25 0 25Q36 25 33 65" fill="#d7e0ed" stroke="#8396b0" stroke-width="2" /></g>
+</svg>
