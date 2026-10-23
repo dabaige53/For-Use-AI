@@ -1,0 +1,58 @@
+<section id="train-steps" data-transition="fade" style="background:#f6f7f9">
+  <h2 style="position:absolute; top:84px; left:84px; width:1700px; font-family:'Noto Sans SC', sans-serif; font-size:60px; font-weight:700; line-height:1.38; color:#1f2737">预训练：从海量文本中学会续写</h2>
+  <div style="position:absolute; top:187px; left:84px; width:46px; height:4px; display:flex; flex-direction:column; background:#c9864a; border-radius:2px">
+  </div>
+  <x-connector x1="600" y1="360" x2="676" y2="360" style="color:#a7b0bf"></x-connector>
+  <x-connector x1="1244" y1="360" x2="1320" y2="360" style="color:#a7b0bf"></x-connector>
+  <div style="position:absolute; top:240px; left:84px; width:500px; display:flex; flex-direction:column; gap:14px; align-items:center">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 220" aria-label="一大叠文档" style="width:300px; height:220px"><rect x="96" y="6" width="160" height="190" rx="12" fill="#ffffff" stroke="#d9dee6" stroke-width="2"/><rect x="72" y="16" width="160" height="190" rx="12" fill="#ffffff" stroke="#d9dee6" stroke-width="2"/><rect x="48" y="26" width="160" height="190" rx="12" fill="#ffffff" stroke="#3b5ba9" stroke-width="2.5"/><rect x="70" y="58" width="110" height="10" rx="5" fill="#d9e2f2"/><rect x="70" y="84" width="96" height="10" rx="5" fill="#e3e7ed"/><rect x="70" y="110" width="116" height="10" rx="5" fill="#e3e7ed"/><rect x="70" y="136" width="84" height="10" rx="5" fill="#e3e7ed"/><rect x="70" y="162" width="104" height="10" rx="5" fill="#e3e7ed"/></svg>
+    <p style="font-family:'Noto Sans SC', sans-serif; font-size:37px; font-weight:700; line-height:1.4; text-align:center; color:#1f2737">海量文本</p>
+    <p style="font-family:'Noto Sans SC', sans-serif; font-size:26px; line-height:1.4; text-align:center; color:#677184">网页 · 书 · 百科 · 代码</p>
+  </div>
+  <div style="position:absolute; top:240px; left:692px; width:536px; display:flex; flex-direction:column; gap:14px; align-items:center">
+    <div style="width:500px; height:220px; display:flex; flex-direction:row; gap:12px; align-items:center; justify-content:center; background:#ffffff; border:1px solid #d9dee6; border-radius:12px">
+      <p style="font-family:'Noto Sans SC', sans-serif; font-size:34px; line-height:1.4; color:#1f2737">……周五前给出</p>
+      <p style="width:110px; height:64px; font-family:'Noto Sans SC', sans-serif; font-size:40px; font-weight:700; line-height:1.6; text-align:center; color:#a9672e; background:#fbebd6; border:2px dashed #c9864a; border-radius:9px">?</p>
+    </div>
+    <p style="font-family:'Noto Sans SC', sans-serif; font-size:37px; font-weight:700; line-height:1.4; text-align:center; color:#1f2737">遮住下一个词，让模型预测</p>
+    <p style="font-family:'Noto Sans SC', sans-serif; font-size:26px; line-height:1.4; text-align:center; color:#677184">原文即标准答案</p>
+  </div>
+  <div style="position:absolute; top:240px; left:1336px; width:500px; display:flex; flex-direction:column; gap:14px; align-items:center">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" aria-label="一排排旋钮，其中几个被拧动" style="width:420px; height:220px"><g fill="#ffffff" stroke="#a7b0bf" stroke-width="2"><circle cx="50" cy="40" r="26"/><circle cx="130" cy="40" r="26"/><circle cx="290" cy="40" r="26"/><circle cx="370" cy="40" r="26"/><circle cx="50" cy="110" r="26"/><circle cx="130" cy="110" r="26"/><circle cx="210" cy="110" r="26"/><circle cx="370" cy="110" r="26"/><circle cx="130" cy="180" r="26"/><circle cx="210" cy="180" r="26"/><circle cx="290" cy="180" r="26"/></g><g stroke="#a7b0bf" stroke-width="3" stroke-linecap="round"><path d="M50 40 L50 20"/><path d="M130 40 L141 23"/><path d="M290 40 L276 26"/><path d="M370 40 L387 30"/><path d="M50 110 L43 91"/><path d="M130 110 L150 110"/><path d="M210 110 L210 90"/><path d="M370 110 L356 96"/><path d="M130 180 L147 170"/><path d="M210 180 L203 161"/><path d="M290 180 L290 160"/></g><g fill="#eaf0f9" stroke="#3b5ba9" stroke-width="2.5"><circle cx="210" cy="40" r="26"/><circle cx="290" cy="110" r="26"/><circle cx="50" cy="180" r="26"/><circle cx="370" cy="180" r="26"/></g><g stroke="#3b5ba9" stroke-width="3" stroke-linecap="round" fill="none"><path d="M210 40 L224 26"/><path d="M290 110 L273 100"/><path d="M50 180 L67 170"/><path d="M370 180 L356 166"/><path d="M180 22 A36 36 0 0 1 228 8"/><path d="M262 94 A36 36 0 0 1 280 76"/><path d="M42 145 A36 36 0 0 1 82 160"/><path d="M342 160 A36 36 0 0 1 362 145"/></g></svg>
+    <p style="font-family:'Noto Sans SC', sans-serif; font-size:37px; font-weight:700; line-height:1.4; text-align:center; color:#1f2737">预测有误，调整参数</p>
+    <p style="font-family:'Noto Sans SC', sans-serif; font-size:26px; line-height:1.4; text-align:center; color:#677184">几千亿个参数</p>
+  </div>
+  <div style="position:absolute; top:640px; left:84px; width:1252px; height:312px; display:flex; flex-direction:column; background:#ffffff; border:1px solid #d9dee6; border-radius:18px; box-shadow:0 2px 3px #1f27370f, 0 12px 37px #1f273714; overflow:hidden">
+    <div style="height:56px; display:flex; flex-direction:row; gap:12px; align-items:center; padding:0 28px; border-bottom:1px solid #e3e7ed">
+      <x-shape kind="ellipse" style="width:12px; height:12px; background:#3b5ba9"></x-shape>
+      <p style="font-family:'Noto Sans SC', sans-serif; font-size:24px; color:#677184">AI 助手</p>
+      <div style="flex:1"></div>
+      <p style="font-family:'Noto Sans SC', sans-serif; font-size:24px; font-weight:700; color:#3b5ba9">只做过预训练（示意）</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:18px; padding:22px 28px">
+      <div style="display:flex; flex-direction:row; gap:15px; align-items:start; justify-content:end">
+        <div style="display:flex; flex-direction:column; padding:10px 24px; background:#eaf0f9; border-radius:12px">
+          <p style="font-family:'Noto Sans SC', sans-serif; font-size:32px; line-height:1.43; color:#1f2737">我们部门今年的年会定在哪？</p>
+        </div>
+        <p style="width:48px; height:48px; flex:0 0 auto; font-family:'Noto Sans SC', sans-serif; font-size:24px; font-weight:700; line-height:2; text-align:center; color:#1f2737; background:#eaf0f9; border-radius:256px">你</p>
+      </div>
+      <div style="display:flex; flex-direction:row; gap:15px; align-items:start">
+        <p style="width:48px; height:48px; flex:0 0 auto; font-family:'Noto Sans SC', sans-serif; font-size:24px; font-weight:700; line-height:2; text-align:center; color:#ffffff; background:#3b5ba9; border-radius:256px">AI</p>
+        <div style="display:flex; flex-direction:row; flex-wrap:wrap; align-items:center; padding:10px 24px; background:#ffffff; border:1px solid #d9dee6; border-radius:12px">
+          <p style="font-family:'Noto Sans SC', sans-serif; font-size:32px; line-height:1.5; color:#1f2737">定在</p>
+          <p style="padding:0 6px; font-family:'Noto Sans SC', sans-serif; font-size:32px; line-height:1.5; color:#1f2737; background:#fbebd6; border-radius:9px">12 月 20 日</p>
+          <p style="font-family:'Noto Sans SC', sans-serif; font-size:32px; line-height:1.5; color:#1f2737">，地点是</p>
+          <p style="padding:0 6px; font-family:'Noto Sans SC', sans-serif; font-size:32px; line-height:1.5; color:#1f2737; background:#fbebd6; border-radius:9px">滨江万豪酒店</p>
+          <p style="font-family:'Noto Sans SC', sans-serif; font-size:32px; line-height:1.5; color:#1f2737">。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute; top:700px; left:1360px; width:476px; display:flex; flex-direction:column; gap:16px">
+    <div style="width:46px; height:4px; display:flex; flex-direction:column; background:#c9864a; border-radius:2px">
+    </div>
+    <p style="font-family:'Noto Sans SC', sans-serif; font-size:46px; font-weight:700; line-height:1.4; color:#1f2737">没见过的信息，<br>也会编造</p>
+    <p style="font-family:'Noto Sans SC', sans-serif; font-size:28px; line-height:1.5; color:#4a5466">日期、地点均为编造</p>
+  </div>
+  <aside>沿着上面三个图讲视频①：喂进去的是海量普通文字；每段遮住一个词让它猜，原文就是答案；猜偏了，就把几千亿个参数各拧一点，重复无数次。下面是落脚点：问它根本不可能读过的事——你们部门的年会——它照样流畅地接出日期和地点。右上角标的是“只做过预训练（示意）”，现在的聊天助手多半会说不知道，原因在下一段视频。</aside>
+</section>
