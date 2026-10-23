@@ -1,43 +1,50 @@
-<section id="send-flow" data-transition="fade" style="background:#f6f7f9;color:#1f2737;font-family:'Noto Sans SC', sans-serif;padding:84px">
-<div style="position:absolute;left:84px;top:224px;width:1752px;height:190px;background:#f1f3f6;border-radius:12px"></div>
-<div style="position:absolute;left:84px;top:430px;width:1752px;height:290px;background:#f1f3f6;border-radius:12px"></div>
-<div style="position:absolute;left:84px;top:736px;width:1752px;height:190px;background:#f1f3f6;border-radius:12px"></div>
-<h2 style="position:absolute;left:84px;top:84px;width:1400px;font-size:60px;font-weight:700;line-height:1.38;color:#1f2737">发送请求：确认后由应用执行</h2>
-<div style="position:absolute;left:84px;top:187px;width:46px;height:4px;background:#c9864a;border-radius:2px"></div>
-<p style="position:absolute;left:112px;top:296px;width:140px;font-size:30px;font-weight:700;line-height:1.5;text-align:center;color:#3b5ba9;background:#f3f6fb;border:1px solid #d9dee6;border-radius:999px;padding:2px 0">你</p>
-<p style="position:absolute;left:112px;top:552px;width:140px;font-size:30px;font-weight:700;line-height:1.5;text-align:center;color:#3b5ba9;background:#f3f6fb;border:1px solid #d9dee6;border-radius:999px;padding:2px 0">应用</p>
-<p style="position:absolute;left:112px;top:808px;width:140px;font-size:30px;font-weight:700;line-height:1.5;text-align:center;color:#3b5ba9;background:#f3f6fb;border:1px solid #d9dee6;border-radius:999px;padding:2px 0">模型</p>
-<x-connector x1="600" y1="756" x2="700" y2="520" route="vh" head="end" style="color:#a7b0bf;border-width:2px"></x-connector>
-<x-connector x1="900" y1="466" x2="900" y2="392" head="end" style="color:#a7b0bf;border-width:2px"></x-connector>
-<x-connector x1="1100" y1="318" x2="1300" y2="466" route="hv" head="end" style="color:#a7b0bf;border-width:2px"></x-connector>
-<x-connector x1="1450" y1="540" x2="1500" y2="540" head="end" style="color:#a7b0bf;border-width:2px"></x-connector>
-<x-connector x1="1668" y1="650" x2="1668" y2="764" head="end" style="color:#a7b0bf;border-width:2px"></x-connector>
-<div style="position:absolute;left:290px;top:756px;width:640px;display:flex;flex-direction:column;gap:6px;background:#ffffff;border:1px solid #d9dee6;border-radius:12px;padding:14px 22px">
-<p style="font-size:24px;font-weight:700;color:#3b5ba9">01 模型输出发送请求</p>
-<p style="font-size:26px;line-height:1.5;color:#1f2737">收件人：zhang@example.com</p>
-<p style="font-size:26px;line-height:1.5;color:#1f2737">主题：项目会改期 · 正文：会议改到明日 15:00</p>
-</div>
-<div style="position:absolute;left:700px;top:466px;width:400px;display:flex;flex-direction:column;gap:6px;background:#ffffff;border:1px solid #d9dee6;border-radius:12px;padding:16px 22px">
-<p style="font-size:24px;font-weight:700;color:#3b5ba9">02 识别请求</p>
-<p style="font-size:28px;line-height:1.5;color:#1f2737">展示邮件，请你确认</p>
-</div>
-<div style="position:absolute;left:700px;top:244px;width:400px;display:flex;flex-direction:column;gap:10px;background:#ffffff;border:1px solid #d9dee6;border-radius:12px;padding:16px 22px">
-<p style="font-size:28px;line-height:1.5;color:#1f2737">收件人、正文无误</p>
-<div style="display:flex;flex-direction:row"><p style="font-size:24px;font-weight:700;line-height:1.6;color:#ffffff;background:#3b5ba9;border-radius:999px;padding:2px 26px">确认发送</p></div>
-</div>
-<div style="position:absolute;left:1150px;top:466px;width:300px;display:flex;flex-direction:column;gap:10px;background:#ffffff;border:1px solid #d9dee6;border-radius:12px;padding:16px 22px">
-<p style="font-size:24px;font-weight:700;color:#3b5ba9">03 调用工具</p>
-<div style="display:flex;flex-direction:row"><p style="font-size:24px;font-weight:700;line-height:1.5;color:#3b5ba9;background:#f3f6fb;border:1px solid #d9dee6;border-radius:999px;padding:2px 16px">邮箱工具</p></div>
-</div>
-<div style="position:absolute;left:1500px;top:466px;width:336px;display:flex;flex-direction:column;gap:6px;background:#ffffff;border:1px solid #d9dee6;border-radius:12px;padding:16px 22px">
-<p style="font-size:24px;font-weight:700;color:#3b5ba9">04 工具回执</p>
-<p style="font-size:28px;line-height:1.5;color:#1f2737;background:#fbebd6;border-radius:9px;padding:0 8px">已接受发送</p>
-<p style="font-size:24px;line-height:1.5;color:#4a5466">编号 M-021（示意）</p>
-</div>
-<div style="position:absolute;left:1440px;top:764px;width:396px;display:flex;flex-direction:column;gap:6px;background:#ffffff;border:1px solid #d9dee6;border-radius:12px;padding:14px 22px">
-<p style="font-size:24px;font-weight:700;color:#3b5ba9">05 下一轮输入</p>
-<p style="font-size:28px;line-height:1.5;color:#1f2737">原任务 + 实际回执</p>
-</div>
-<p style="position:absolute;left:84px;top:956px;width:1752px;font-size:28px;line-height:1.5;color:#4a5466">真正发送的是邮箱工具；回执由应用交回模型。</p>
-<aside>沿 01 到 05 讲：模型给出收件人、主题和正文；应用识别发送请求，按规则把邮件展示给你确认；确认后应用调用邮箱工具；工具返回回执；应用把回执带入模型的下一次输入。回执 M-021 是课堂示例，不是实际发送凭证。05 之后，下一位新人读到回执，才向你报告“已提交发送”；“已提交发送”不等于对方已经读到。</aside>
+<section id="send-flow" data-transition="fade" style="background:#f6f7f9">
+  <div style="position:absolute; top:224px; left:84px; width:1752px; height:190px; display:flex; flex-direction:column; background:#f1f3f6; border-radius:12px">
+  </div>
+  <div style="position:absolute; top:430px; left:84px; width:1752px; height:290px; display:flex; flex-direction:column; background:#f1f3f6; border-radius:12px">
+  </div>
+  <div style="position:absolute; top:736px; left:84px; width:1752px; height:190px; display:flex; flex-direction:column; background:#f1f3f6; border-radius:12px">
+  </div>
+  <h2 style="position:absolute; top:84px; left:84px; width:1400px; font-family:'Noto Sans SC', sans-serif; font-size:60px; font-weight:700; line-height:1.38; color:#1f2737">发送请求：确认后由应用执行</h2>
+  <div style="position:absolute; top:187px; left:84px; width:46px; height:4px; display:flex; flex-direction:column; background:#c9864a; border-radius:2px">
+  </div>
+  <p style="position:absolute; top:296px; left:112px; width:140px; padding:2px 0; font-family:'Noto Sans SC', sans-serif; font-size:30px; font-weight:700; line-height:1.5; text-align:center; color:#3b5ba9; background:#f3f6fb; border:1px solid #d9dee6; border-radius:256px">你</p>
+  <p style="position:absolute; top:552px; left:112px; width:140px; padding:2px 0; font-family:'Noto Sans SC', sans-serif; font-size:30px; font-weight:700; line-height:1.5; text-align:center; color:#3b5ba9; background:#f3f6fb; border:1px solid #d9dee6; border-radius:256px">应用</p>
+  <p style="position:absolute; top:808px; left:112px; width:140px; padding:2px 0; font-family:'Noto Sans SC', sans-serif; font-size:30px; font-weight:700; line-height:1.5; text-align:center; color:#3b5ba9; background:#f3f6fb; border:1px solid #d9dee6; border-radius:256px">模型</p>
+  <x-connector x1="600" y1="756" x2="700" y2="520" route="vh" style="color:#a7b0bf"></x-connector>
+  <x-connector x1="900" y1="466" x2="900" y2="392" style="color:#a7b0bf"></x-connector>
+  <x-connector x1="1100" y1="318" x2="1300" y2="466" route="hv" style="color:#a7b0bf"></x-connector>
+  <x-connector x1="1450" y1="540" x2="1500" y2="540" style="color:#a7b0bf"></x-connector>
+  <x-connector x1="1668" y1="650" x2="1668" y2="764" style="color:#a7b0bf"></x-connector>
+  <div style="position:absolute; top:756px; left:290px; width:640px; display:flex; flex-direction:column; gap:6px; padding:14px 22px; background:#ffffff; border:1px solid #d9dee6; border-radius:12px">
+    <p style="font-family:'Noto Sans SC', sans-serif; font-size:24px; font-weight:700; color:#3b5ba9">01 模型输出发送请求</p>
+    <p style="font-family:'Noto Sans SC', sans-serif; font-size:26px; line-height:1.5; color:#1f2737">收件人：zhang@example.com</p>
+    <p style="font-family:'Noto Sans SC', sans-serif; font-size:26px; line-height:1.5; color:#1f2737">主题：项目会改期 · 正文：会议改到明日 15:00</p>
+  </div>
+  <div style="position:absolute; top:466px; left:700px; width:400px; display:flex; flex-direction:column; gap:6px; padding:16px 22px; background:#ffffff; border:1px solid #d9dee6; border-radius:12px">
+    <p style="font-family:'Noto Sans SC', sans-serif; font-size:24px; font-weight:700; color:#3b5ba9">02 识别请求</p>
+    <p style="font-family:'Noto Sans SC', sans-serif; font-size:28px; line-height:1.5; color:#1f2737">展示邮件，请你确认</p>
+  </div>
+  <div style="position:absolute; top:244px; left:700px; width:400px; display:flex; flex-direction:column; gap:10px; padding:16px 22px; background:#ffffff; border:1px solid #d9dee6; border-radius:12px">
+    <p style="font-family:'Noto Sans SC', sans-serif; font-size:28px; line-height:1.5; color:#1f2737">收件人、正文无误</p>
+    <div style="display:flex; flex-direction:row">
+      <p style="padding:2px 26px; font-family:'Noto Sans SC', sans-serif; font-size:24px; font-weight:700; line-height:1.6; color:#ffffff; background:#3b5ba9; border-radius:256px">确认发送</p>
+    </div>
+  </div>
+  <div style="position:absolute; top:466px; left:1150px; width:300px; display:flex; flex-direction:column; gap:10px; padding:16px 22px; background:#ffffff; border:1px solid #d9dee6; border-radius:12px">
+    <p style="font-family:'Noto Sans SC', sans-serif; font-size:24px; font-weight:700; color:#3b5ba9">03 调用工具</p>
+    <div style="display:flex; flex-direction:row">
+      <p style="padding:2px 16px; font-family:'Noto Sans SC', sans-serif; font-size:24px; font-weight:700; line-height:1.5; color:#3b5ba9; background:#f3f6fb; border:1px solid #d9dee6; border-radius:256px">邮箱工具</p>
+    </div>
+  </div>
+  <div style="position:absolute; top:466px; left:1500px; width:336px; display:flex; flex-direction:column; gap:6px; padding:16px 22px; background:#ffffff; border:1px solid #d9dee6; border-radius:12px">
+    <p style="font-family:'Noto Sans SC', sans-serif; font-size:24px; font-weight:700; color:#3b5ba9">04 工具回执</p>
+    <p style="padding:0 8px; font-family:'Noto Sans SC', sans-serif; font-size:28px; line-height:1.5; color:#1f2737; background:#fbebd6; border-radius:9px">已接受发送</p>
+    <p style="font-family:'Noto Sans SC', sans-serif; font-size:24px; line-height:1.5; color:#4a5466">编号 M-021（示意）</p>
+  </div>
+  <div style="position:absolute; top:764px; left:1440px; width:396px; display:flex; flex-direction:column; gap:6px; padding:14px 22px; background:#ffffff; border:1px solid #d9dee6; border-radius:12px">
+    <p style="font-family:'Noto Sans SC', sans-serif; font-size:24px; font-weight:700; color:#3b5ba9">05 下一轮输入</p>
+    <p style="font-family:'Noto Sans SC', sans-serif; font-size:28px; line-height:1.5; color:#1f2737">原任务 + 实际回执</p>
+  </div>
+  <aside>沿 01 到 05 讲：模型给出收件人、主题和正文；应用识别发送请求，按规则把邮件展示给你确认；确认后应用调用邮箱工具；工具返回回执；应用把回执带入模型的下一次输入。回执 M-021 是课堂示例，不是实际发送凭证。05 之后，下一位新人读到回执，才向你报告“已提交发送”；“已提交发送”不等于对方已经读到。</aside>
 </section>
