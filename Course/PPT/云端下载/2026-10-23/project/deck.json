@@ -1,108 +1,109 @@
 {
- "v": 4,
- "createdOnFiles": {
-  "v": 1,
-  "at": "2026-10-23T09:00:00Z"
- },
- "lists": "css",
- "title": "把 AI 当同事",
- "cover": "cover",
- "order": [
-  "cover",
-  "instructor",
-  "discuss",
-  "takeaway",
-  "agenda",
-  "ch1-divider",
-  "paris-question",
-  "paris-probability",
-  "video-generate",
-  "predict-reply",
-  "video-train",
-  "train-steps",
-  "video-feedback",
-  "review-story",
-  "rl-teacher",
-  "ch1-quiz",
-  "ch1-statement",
-  "to-execution",
-  "ch2-nav",
-  "principle-call",
-  "room-a",
-  "room-b",
-  "room-steps",
-  "send-flow",
-  "video-io-1",
-  "video-io-2",
-  "order-quiz",
-  "ch2-map",
-  "ch2-statement",
-  "ch3-nav",
-  "gap-grow",
-  "feedback-loop",
-  "loop-everyday",
-  "ch3-methods",
-  "boundary-1",
-  "boundary-2",
-  "standard-1",
-  "standard-2",
-  "typical-1",
-  "typical-2",
-  "example-1",
-  "example-2",
-  "trial-1",
-  "trial-2",
-  "brainstorm-1",
-  "brainstorm-2",
-  "think",
-  "think-2",
-  "goal",
-  "goal-2",
-  "ch3-phrases",
-  "ch3-statement",
-  "ch3-practice",
-  "course-review",
-  "thanks"
- ],
- "sections": {
-  "s1": {
-   "description": "开场：封面、讲师、讨论、收获与目录",
-   "start": "cover"
+  "v": 4,
+  "attachments": {},
+  "cover": "cover",
+  "createdOnFiles": {
+    "at": "2026-10-23T09:00:00Z",
+    "v": 1
   },
-  "s2": {
-   "description": "第一章 了解它：AI 的回答怎么产生",
-   "start": "ch1-divider"
+  "designSystems": [
+    {
+      "artifact": "https://claude.ai/code/artifact/36403379-f2e6-49be-a90e-99f812deb0cc",
+      "copiedAt": "2026-10-23T09:00:00Z",
+      "namespace": "aiwork",
+      "title": "AI × WORK 课程 PPT",
+      "version": "1792717629-26ff"
+    }
+  ],
+  "faces": {
+    "jetbrains-mono": {
+      "family": "JetBrains Mono",
+      "href": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap"
+    },
+    "noto-sans-sc": {
+      "family": "Noto Sans SC",
+      "href": "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap"
+    }
   },
-  "s3": {
-   "description": "第二章 看清它：AI 怎样从回答走到执行",
-   "start": "ch2-nav"
+  "lists": "css",
+  "order": [
+    "cover",
+    "instructor",
+    "discuss",
+    "takeaway",
+    "agenda",
+    "ch1-divider",
+    "paris-question",
+    "paris-probability",
+    "video-generate",
+    "predict-reply",
+    "video-train",
+    "train-steps",
+    "video-feedback",
+    "review-story",
+    "rl-teacher",
+    "ch1-quiz",
+    "ch1-statement",
+    "to-execution",
+    "ch2-nav",
+    "principle-call",
+    "room-a",
+    "room-b",
+    "room-steps",
+    "send-flow",
+    "video-io-1",
+    "video-io-2",
+    "order-quiz",
+    "ch2-map",
+    "ch2-statement",
+    "ch3-nav",
+    "gap-grow",
+    "feedback-loop",
+    "loop-everyday",
+    "ch3-methods",
+    "boundary-1",
+    "boundary-2",
+    "standard-1",
+    "standard-2",
+    "typical-1",
+    "typical-2",
+    "example-1",
+    "example-2",
+    "trial-1",
+    "trial-2",
+    "brainstorm-1",
+    "brainstorm-2",
+    "think",
+    "think-2",
+    "goal",
+    "goal-2",
+    "ch3-phrases",
+    "ch3-statement",
+    "ppt-build",
+    "course-review",
+    "thanks"
+  ],
+  "sections": {
+    "s1": {
+      "description": "开场：封面、讲师、讨论、收获与目录",
+      "start": "cover"
+    },
+    "s2": {
+      "description": "第一章 了解它：AI 的回答怎么产生",
+      "start": "ch1-divider"
+    },
+    "s3": {
+      "description": "第二章 看清它：AI 怎样从回答走到执行",
+      "start": "ch2-nav"
+    },
+    "s4": {
+      "description": "第三章 用好它：怎样交代任务并逐步改进",
+      "start": "ch3-nav"
+    },
+    "s5": {
+      "description": "结尾：三章回顾与致谢",
+      "start": "course-review"
+    }
   },
-  "s4": {
-   "description": "第三章 用好它：怎样交代任务并逐步改进",
-   "start": "ch3-nav"
-  },
-  "s5": {
-   "description": "结尾：三章回顾与致谢",
-   "start": "course-review"
-  }
- },
- "faces": {
-  "noto-sans-sc": {
-   "family": "Noto Sans SC",
-   "href": "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap"
-  },
-  "jetbrains-mono": {
-   "family": "JetBrains Mono",
-   "href": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap"
-  }
- },
- "designSystems": [
-  {
-   "title": "AI × WORK 课程 PPT",
-   "namespace": "aiwork",
-   "artifact": "https://claude.ai/code/artifact/36403379-f2e6-49be-a90e-99f812deb0cc",
-   "version": "1792717629-26ff",
-   "copiedAt": "2026-10-23T09:00:00Z"
-  }
- ]
+  "title": "把 AI 当同事"
 }
