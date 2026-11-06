@@ -1,0 +1,42 @@
+<!-- @dsCard group="界面组件" height=330 width=1254 -->
+<div class="ds-ui" data-leaders style="position:relative;width:1254px;height:316px;background:var(--canvas,#f6f7f9)">
+<div class="ds-win" style="left:24px;top:24px;width:620px;height:268px"><div class="ds-win-head"><i class="ds-win-dot"></i>AI 助手</div><div class="ds-win-body"><div class="ds-msg is-user"><div class="ds-avatar">你</div><div class="ds-bubble">我用Excel，不会编程。<br>请给出公式，<span class="ds-hl" data-a="1">告诉我放哪格</span>。</div></div><div class="ds-msg is-ai"><div class="ds-avatar">AI</div><div class="ds-bubble">在<span class="ds-hl" data-a="2">D2</span>输入：<span class="ds-code">=COUNTIF(B2:B32,"迟到")</span></div></div></div></div><svg class="ds-leaders"></svg>
+<div class="ds-abs ds-note-item" data-n="1" style="left:720px;top:84px;width:480px"><span class="ds-badge">①</span><span><b>说清交付</b>：要公式，还要知道写在哪一格。</span></div>
+<div class="ds-abs ds-note-item" data-n="2" style="left:720px;top:172px;width:480px"><span class="ds-badge">②</span><span><b>回复对上了</b>：直接给出单元格和公式。</span></div>
+</div><script>
+(function () {
+  var root = document.querySelector('[data-leaders]');
+  if (!root) return;
+  function draw() {
+    var svg = root.querySelector('.ds-leaders');
+    var r = root.getBoundingClientRect(), k = r.width / root.offsetWidth;
+    svg.setAttribute('width', root.offsetWidth); svg.setAttribute('height', root.offsetHeight);
+    var out = '';
+    var items = [].slice.call(root.querySelectorAll('[data-n]')).map(function (n) {
+      return { n: n, a: root.querySelector('[data-a="' + n.dataset.n + '"]') };
+    }).filter(function (o) { return o.a; });
+    // 按锚点从上到下排序：越靠上的线，拐点越靠左，避免引线交叉
+    items.sort(function (p, q) { return p.a.getBoundingClientRect().top - q.a.getBoundingClientRect().top; });
+    items.forEach(function (o, rank) {
+      var n = o.n, a = o.a;
+      var ar = a.getBoundingClientRect(), nr = n.getBoundingClientRect();
+      var side = n.dataset.side || 'right';
+      var x1, y1, x2, y2;
+      if (side === 'down') {
+        x1 = (ar.left + ar.width / 2 - r.left) / k; y1 = (ar.bottom - r.top) / k;
+        x2 = (nr.left + 11 - r.left) / k; y2 = (nr.top - r.top) / k;
+        out += '<path d="M' + x1 + ' ' + y1 + ' V' + (y2 - 6) + ' H' + x2 + ' V' + y2 + '"/>';
+      } else {
+        var b = a.closest('.ds-bubble') || a; x1 = (b.getBoundingClientRect().right - r.left) / k; y1 = (ar.top + ar.height / 2 - r.top) / k;
+        x2 = (nr.left - r.left) / k - 4; y2 = (nr.top + 13.5 - r.top) / k;
+        var mx = x2 - 12 - 14 * (items.length - 1 - rank);
+        out += '<path d="M' + x1 + ' ' + y1 + ' H' + mx + ' V' + y2 + ' H' + x2 + '"/>';
+      }
+      out += '<circle cx="' + x1 + '" cy="' + y1 + '" r="3"/>';
+    });
+    svg.innerHTML = out;
+  }
+  (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(draw);
+  window.addEventListener('resize', draw);
+})();
+</script>

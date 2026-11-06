@@ -1,0 +1,160 @@
+/* AI × WORK 课程 PPT：页面骨架、界面模拟组件。1px = 1pt，画布 1254 × 705.75。 */
+
+html, body { margin: 0; background: var(--canvas, #f6f7f9); }
+
+.ds-slide {
+  position: relative;
+  width: var(--slide-width, 1254px);
+  height: var(--slide-height, 705.75px);
+  overflow: hidden;
+  background: var(--canvas, #f6f7f9);
+  color: var(--ink, #1f2737);
+  font-family: var(--font-sans, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif);
+}
+.ds-slide *, .ds-ui * { box-sizing: border-box; }
+.ds-slide p, .ds-ui p { margin: 0; }
+.ds-abs { position: absolute; }
+.ds-ui { font-family: var(--font-sans, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif); color: var(--ink, #1f2737); }
+
+/* ---------- 页面骨架 ---------- */
+.ds-title { position: absolute; left: var(--space-page-x, 54px); top: var(--space-page-top, 54px); width: 1146px; font-size: 39px; line-height: 54px; font-weight: 700; color: var(--ink, #1f2737); }
+.ds-rule { position: absolute; left: var(--space-page-x, 54px); top: var(--space-rule-top, 122.25px); width: var(--rule-width, 30px); height: var(--rule-height, 2.25px); border-radius: var(--radius-pill, 9999px); background: var(--apricot, #c9864a); }
+/* 品牌字样只用于封面、扉页、导航页 */
+.ds-foot { position: absolute; left: var(--space-page-x, 54px); top: 667.5px; font-size: 13.5px; line-height: 25.5px; color: var(--text-muted, #677184); }
+/* 案例进度标签，右上角 */
+.ds-progress { position: absolute; right: var(--space-page-x, 54px); top: 66px; padding: 4px 14px; border-radius: var(--radius-pill, 9999px); border: 1px solid var(--border, #d9dee6); background: var(--surface, #ffffff); font-size: 14px; line-height: 20px; font-weight: 700; color: var(--text-muted, #677184); }
+
+.ds-vline { position: absolute; width: 1.125px; background: var(--hairline, #e3e7ed); }
+.ds-hline { position: absolute; height: 1.125px; background: var(--hairline, #e3e7ed); }
+
+/* ---------- 文字层级 ---------- */
+.ds-numeral-ghost   { font-size: 285px;   line-height: 345px;   font-weight: 700; color: var(--tint-blue, #e3e9f5); }
+.ds-numeral-section { font-size: 180px;   line-height: 217.5px; font-weight: 700; color: var(--brand-blue, #3b5ba9); }
+.ds-numeral-hero    { font-size: 121.5px; line-height: 142.5px; font-weight: 700; color: var(--brand-blue, #3b5ba9); }
+.ds-numeral-index   { font-size: 60px;    line-height: 79.5px;  font-weight: 700; color: var(--tint-blue, #e3e9f5); }
+.ds-statement   { font-size: 54px;   line-height: 82.5px; font-weight: 700; }
+.ds-slogan      { font-size: 52.5px; line-height: 72px;   font-weight: 700; }
+.ds-cover-title { font-size: 45px;   line-height: 71.25px; font-weight: 700; }
+.ds-block-title { font-size: 30px;   line-height: 42px;   font-weight: 700; color: var(--ink, #1f2737); }
+.ds-question    { font-size: 24px;   line-height: 33px;   font-weight: 700; color: var(--ink, #1f2737); }
+.ds-lead        { font-size: 28.5px; line-height: 52.5px; color: var(--text-muted, #677184); }
+.ds-cover-sub   { font-size: 27px;   line-height: 41.25px; color: var(--text-body, #4a5466); }
+.ds-body        { font-size: 21px;   line-height: 30px;   color: var(--text-body, #4a5466); }
+.ds-body-strong { font-size: 21px;   line-height: 30px;   font-weight: 700; color: var(--ink, #1f2737); }
+.ds-label       { font-size: 18px;   line-height: 27px;   font-weight: 700; color: var(--brand-blue, #3b5ba9); }
+.ds-note        { font-size: 18px;   line-height: 27px;   color: var(--ink, #1f2737); }
+.ds-caption     { font-size: 18px;   line-height: 27px;   color: var(--text-muted, #677184); }
+.ds-meta        { font-size: 15px;   line-height: 21px;   color: var(--text-muted, #677184); }
+.ds-axis        { font-size: 12.75px; line-height: 18px;  color: var(--text-muted, #677184); }
+
+.ds-c-ink    { color: var(--ink, #1f2737); }
+.ds-c-body   { color: var(--text-body, #4a5466); }
+.ds-c-muted  { color: var(--text-muted, #677184); }
+.ds-c-blue   { color: var(--brand-blue, #3b5ba9); }
+.ds-c-orange { color: var(--apricot-strong, #a9672e); }
+.ds-c-tint   { color: var(--tint-blue, #e3e9f5); }
+.ds-c-tint-orange { color: var(--tint-apricot, #f3dcc3); }
+
+/* ---------- 图标（Lucide，线宽 1.5） ---------- */
+.ds-ico { width: var(--icon, 20px); height: var(--icon, 20px); flex: none; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ---------- 对话窗口 ---------- */
+.ds-win { position: absolute; display: flex; flex-direction: column; background: var(--surface, #ffffff); border: 1px solid var(--border, #d9dee6); border-radius: var(--radius-window, 12px); box-shadow: var(--shadow-object, 0 1px 2px rgba(31,39,55,.06), 0 8px 24px rgba(31,39,55,.08)); overflow: hidden; }
+.ds-win.is-static { position: relative; }
+.ds-win-head { flex: none; display: flex; align-items: center; gap: 8px; height: var(--window-head, 40px); padding: 0 16px; border-bottom: 1px solid var(--hairline, #e3e7ed); font-size: 15px; line-height: 20px; font-weight: 500; color: var(--text-muted, #677184); }
+.ds-win-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--brand-blue, #3b5ba9); }
+.ds-win-head .ds-win-side { margin-left: auto; }
+.ds-win-body { flex: 1; display: flex; flex-direction: column; gap: var(--space-bubble-gap, 14px); padding: var(--space-window-pad, 18px); }
+
+.ds-msg { display: flex; align-items: flex-start; gap: 10px; }
+.ds-msg.is-user { flex-direction: row-reverse; }
+.ds-avatar { flex: none; width: var(--avatar, 32px); height: var(--avatar, 32px); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; }
+.is-user > .ds-avatar { background: var(--blue-tint, #eaf0f9); color: var(--brand-blue, #3b5ba9); }
+.is-ai > .ds-avatar { background: var(--brand-blue, #3b5ba9); color: var(--surface, #ffffff); font-size: 13px; }
+.ds-bubble { max-width: var(--bubble-max, 75%); padding: 10px var(--space-bubble-x, 16px); border-radius: var(--radius-card, 8px); font-size: 21px; line-height: 30px; color: var(--ink, #1f2737); }
+.is-user > .ds-bubble { background: var(--blue-tint, #eaf0f9); }
+.is-ai > .ds-bubble { background: var(--surface, #ffffff); border: 1px solid var(--border, #d9dee6); }
+.ds-bubble.is-wide { max-width: calc(100% - 42px); }
+.ds-bubble-tag { display: inline-block; margin: 0 0 6px; padding: 0 10px; border-radius: var(--radius-pill, 9999px); background: var(--blue-soft, #f3f6fb); font-size: 14px; line-height: 22px; font-weight: 700; color: var(--brand-blue, #3b5ba9); }
+
+/* 输入框：只在讲“怎么写提示词”的页面出现 */
+.ds-input { flex: none; display: flex; align-items: center; gap: 12px; margin: 0 var(--space-window-pad, 18px) var(--space-window-pad, 18px); padding: 10px 12px 10px 16px; border: 1px solid var(--border, #d9dee6); border-radius: var(--radius-card, 8px); font-size: 21px; line-height: 30px; color: var(--ink, #1f2737); }
+.ds-input .ds-caret { display: inline-block; width: 2px; height: 24px; margin-left: 2px; vertical-align: -4px; background: var(--brand-blue, #3b5ba9); }
+.ds-input .ds-send { margin-left: auto; flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--brand-blue, #3b5ba9); color: var(--surface, #ffffff); display: flex; align-items: center; justify-content: center; }
+
+/* 公式、代码 */
+.ds-code { display: block; margin: 6px 0; padding: 4px 12px; border-radius: var(--radius-sm, 6px); background: var(--panel, #f1f3f6); font-family: var(--font-mono, "SF Mono", Menlo, Consolas, monospace); font-size: 19px; line-height: 28px; font-weight: 500; color: var(--ink, #1f2737); white-space: pre; }
+.ds-code-inline { padding: 0 6px; border-radius: 4px; background: var(--panel, #f1f3f6); font-family: var(--font-mono, "SF Mono", Menlo, Consolas, monospace); font-size: .9em; }
+
+/* ---------- 高亮与标注 ---------- */
+.ds-hl { background: var(--highlight, #fbebd6); border-radius: 3px; padding: 1px 2px; -webkit-box-decoration-break: clone; box-decoration-break: clone; color: var(--ink, #1f2737); }
+.ds-badge { display: inline-flex; flex: none; align-items: center; justify-content: center; width: var(--badge, 22px); height: var(--badge, 22px); border-radius: 50%; background: var(--apricot-strong, #a9672e); color: var(--surface, #ffffff); font-size: 13px; line-height: 1; font-weight: 700; vertical-align: 2px; }
+.ds-note-item { display: flex; gap: 10px; align-items: flex-start; font-size: 18px; line-height: 27px; color: var(--ink, #1f2737); }
+.ds-note-item > .ds-badge { margin-top: 2.5px; }
+.ds-note-item b { font-weight: 700; }
+.ds-leaders { position: absolute; left: 0; top: 0; z-index: 3; pointer-events: none; overflow: visible; }
+.ds-leaders path { fill: none; stroke: var(--connector, #a7b0bf); stroke-width: 1.5; }
+.ds-leaders circle { fill: var(--connector, #a7b0bf); }
+
+/* ---------- 横栏：共同材料、任务、上一轮 ---------- */
+.ds-bar { position: absolute; display: flex; align-items: center; gap: 14px; padding: 12px 18px; border-radius: var(--radius-card, 8px); background: var(--blue-soft, #f3f6fb); }
+.ds-bar > .ds-ico { color: var(--brand-blue, #3b5ba9); }
+.ds-bar-label { flex: none; font-size: 18px; line-height: 27px; font-weight: 700; color: var(--brand-blue, #3b5ba9); }
+.ds-recap { position: absolute; display: flex; align-items: center; gap: 12px; padding: 6px 14px; border-radius: var(--radius-card, 8px); background: var(--panel, #f1f3f6); font-size: 18px; line-height: 27px; color: var(--text-body, #4a5466); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ds-recap b { color: var(--text-muted, #677184); font-weight: 700; }
+
+/* ---------- 学员动作条：一页一处 ---------- */
+.ds-action { position: absolute; display: flex; align-items: center; gap: 12px; padding: 10px 18px; border-radius: var(--radius-card, 8px); background: var(--apricot-tint, #fcf4ea); font-size: 21px; line-height: 30px; font-weight: 700; color: var(--ink, #1f2737); }
+.ds-action > .ds-ico { color: var(--apricot-strong, #a9672e); width: 24px; height: 24px; }
+.ds-action-verb { color: var(--apricot-strong, #a9672e); }
+
+/* ---------- 附件卡与迷你表格 ---------- */
+.ds-attach { display: inline-flex; align-items: center; gap: 12px; padding: 8px 14px 8px 10px; border: 1px solid var(--border, #d9dee6); border-radius: var(--radius-card, 8px); background: var(--surface, #ffffff); }
+.ds-attach-icon { flex: none; width: 36px; height: 36px; border-radius: 6px; background: var(--blue-soft, #f3f6fb); color: var(--brand-blue, #3b5ba9); display: flex; align-items: center; justify-content: center; }
+.ds-attach-name { font-size: 18px; line-height: 24px; font-weight: 700; color: var(--ink, #1f2737); }
+.ds-attach-sub { font-size: 15px; line-height: 20px; color: var(--text-muted, #677184); }
+
+.ds-sheet { border-collapse: collapse; background: var(--surface, #ffffff); font-size: 15px; line-height: 24px; color: var(--ink, #1f2737); border-radius: var(--radius-sm, 6px); overflow: hidden; }
+.ds-sheet th, .ds-sheet td { border: 1px solid var(--hairline, #e3e7ed); padding: 0 10px; text-align: left; font-weight: 400; }
+.ds-sheet thead th, .ds-sheet th.rn { background: var(--panel, #f1f3f6); color: var(--text-muted, #677184); text-align: center; font-size: 13px; }
+.ds-sheet th.rn { width: 30px; }
+.ds-sheet.is-compact { font-size: 14px; line-height: 20px; }
+.ds-sheet tr.more td, .ds-sheet tr.more th { color: var(--text-muted, #677184); text-align: center; }
+
+/* AI 产出的表格：浅表头 + 细横线，不画竖线 */
+.ds-table { border-collapse: collapse; font-size: 18px; line-height: 27px; color: var(--ink, #1f2737); }
+.ds-table th { background: var(--panel, #f1f3f6); font-weight: 700; text-align: left; padding: 6px 14px; }
+.ds-table td { padding: 6px 14px; border-bottom: 1px solid var(--hairline, #e3e7ed); }
+
+/* ---------- 文档卡片：邮件、通知、周报 ---------- */
+.ds-doc { position: absolute; display: flex; flex-direction: column; background: var(--surface, #ffffff); border: 1px solid var(--border, #d9dee6); border-radius: var(--radius-window, 12px); box-shadow: var(--shadow-object, 0 1px 2px rgba(31,39,55,.06), 0 8px 24px rgba(31,39,55,.08)); overflow: hidden; }
+.ds-doc.is-static { position: relative; }
+.ds-doc-head { flex: none; display: flex; align-items: center; gap: 10px; height: var(--window-head, 40px); padding: 0 16px; border-bottom: 1px solid var(--hairline, #e3e7ed); font-size: 15px; line-height: 20px; font-weight: 500; color: var(--text-muted, #677184); }
+.ds-doc-head > .ds-ico { color: var(--brand-blue, #3b5ba9); }
+.ds-doc-body { padding: 18px 24px 22px; }
+.ds-doc-meta { display: grid; grid-template-columns: 56px 1fr; row-gap: 2px; font-size: 15px; line-height: 22px; color: var(--text-muted, #677184); padding-bottom: 12px; margin-bottom: 14px; border-bottom: 1px solid var(--hairline, #e3e7ed); }
+.ds-doc-meta b { color: var(--ink, #1f2737); font-weight: 400; }
+.ds-doc-title { font-size: 24px; line-height: 33px; font-weight: 700; margin-bottom: 8px; }
+.ds-doc-text { font-size: 21px; line-height: 32px; color: var(--ink, #1f2737); }
+.ds-doc-sec { display: grid; grid-template-columns: 96px 1fr; column-gap: 8px; }
+.ds-doc-sec + .ds-doc-sec { margin-top: 10px; }
+.ds-doc-sec > b { font-weight: 700; color: var(--brand-blue, #3b5ba9); }
+
+/* ---------- 解读栏 ---------- */
+.ds-read { position: absolute; display: flex; flex-direction: column; gap: 14px; }
+.ds-read-head { display: flex; align-items: center; gap: 10px; font-size: 18px; line-height: 27px; font-weight: 700; color: var(--brand-blue, #3b5ba9); }
+.ds-read-card { padding: 14px 16px; border: 1px solid var(--hairline, #e3e7ed); border-radius: var(--radius-card, 8px); background: var(--surface, #ffffff); }
+.ds-read-card h4 { margin: 0 0 4px; display: flex; align-items: center; gap: 10px; font-size: 21px; line-height: 30px; font-weight: 700; }
+.ds-read-card p { padding-left: 32px; font-size: 18px; line-height: 27px; color: var(--text-body, #4a5466); }
+
+/* ---------- 原稿版式沿用的元素 ---------- */
+.ds-panel { position: absolute; background: var(--panel, #f1f3f6); padding: 8.25px 18px; border-radius: var(--radius-card, 8px); }
+.ds-card { position: absolute; background: var(--surface, #ffffff); border: 1px solid var(--border, #d9dee6); border-radius: var(--radius-card, 8px); }
+.ds-pbar { position: absolute; height: 6px; background: var(--blue-tint, #eaf0f9); border-radius: 3px; overflow: hidden; }
+.ds-pbar > i { display: block; height: 100%; background: var(--brand-blue, #3b5ba9); }
+.ds-pbar.is-orange > i { background: var(--apricot, #c9864a); }
+.ds-pbar.is-lg { height: 21px; border-radius: 4px; }
+.ds-mark { position: absolute; width: 24px; height: 24px; border: 1.5px solid var(--text-muted, #677184); background: var(--surface, #ffffff); border-radius: 50%; }
+.ds-mark.is-box { border-radius: 4px; }
+.ds-illo { position: absolute; object-fit: contain; background: var(--surface, #ffffff); border-radius: var(--radius-card, 8px); }
+.ds-photo { position: absolute; object-fit: cover; }

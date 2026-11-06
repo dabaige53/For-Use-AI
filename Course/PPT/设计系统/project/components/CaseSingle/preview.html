@@ -1,0 +1,50 @@
+<!-- @dsCard group="案例版式" height=540 width=1254 -->
+<div class="ds-slide" data-leaders>
+<div class="ds-title">把标准写成能核对的要求</div><div class="ds-rule"></div>
+<div class="ds-progress">案例 2 / 8</div>
+<div class="ds-recap" style="left:54px;top:146px;width:1146px"><b>上一轮</b>你：材料……请写一份专业的周报。　AI：本周走访12家客户，收集5项需求，其中3项已确认……</div>
+<div class="ds-win" style="left:54px;top:196px;width:700px;height:372px"><div class="ds-win-head"><i class="ds-win-dot"></i>AI 助手</div><div class="ds-win-body"><div class="ds-msg is-user"><div class="ds-avatar">你</div><div class="ds-bubble">分“完成、问题、下周计划”三段，150字以内。<br>保留数字与回访时间，不补充业绩，<br>也不把计划写成已完成。</div></div><div class="ds-msg is-ai"><div class="ds-avatar">AI</div><div class="ds-bubble is-wide"><span class="ds-bubble-tag" data-a="tag">修改稿</span><br><span class="ds-doc-sec" style="display:grid"><b>完成</b><span>走访<span class="ds-hl" data-a="2">12家</span>客户，收到5项需求，已确认3项。</span></span><span class="ds-doc-sec" style="display:grid;margin-top:8px"><b>问题</b><span>2项需求仍待客户补充信息。</span></span><span class="ds-doc-sec" style="display:grid;margin-top:8px"><b>下周计划</b><span><span class="ds-hl" data-a="3">周三前回访</span>，请客户补充剩余2项需求信息。</span></span></div></div></div></div>
+<div class="ds-read" style="left:790px;top:196px;width:410px">
+  <div class="ds-read-head"><svg class="ds-ico" viewBox="0 0 24 24" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1" /> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /> <path d="M12 11h4" /> <path d="M12 16h4" /> <path d="M8 11h.01" /> <path d="M8 16h.01" /></svg>对照检查</div>
+  <div class="ds-read-card" data-n="tag"><h4><span class="ds-badge">①</span>三段结构</h4><p>完成 / 问题 / 下周计划，各占一段。</p></div>
+  <div class="ds-read-card" data-n="2"><h4><span class="ds-badge">②</span>数字与时间</h4><p>12、5、3、2 和“周三前”都保留，没有新增数字。</p></div>
+  <div class="ds-read-card" data-n="3"><h4><span class="ds-badge">③</span>事实与计划</h4><p>回访写在“下周计划”里，没有写成已完成。</p></div>
+</div>
+<svg class="ds-leaders"></svg>
+</div><script>
+(function () {
+  var root = document.querySelector('[data-leaders]');
+  if (!root) return;
+  function draw() {
+    var svg = root.querySelector('.ds-leaders');
+    var r = root.getBoundingClientRect(), k = r.width / root.offsetWidth;
+    svg.setAttribute('width', root.offsetWidth); svg.setAttribute('height', root.offsetHeight);
+    var out = '';
+    var items = [].slice.call(root.querySelectorAll('[data-n]')).map(function (n) {
+      return { n: n, a: root.querySelector('[data-a="' + n.dataset.n + '"]') };
+    }).filter(function (o) { return o.a; });
+    // 按锚点从上到下排序：越靠上的线，拐点越靠左，避免引线交叉
+    items.sort(function (p, q) { return p.a.getBoundingClientRect().top - q.a.getBoundingClientRect().top; });
+    items.forEach(function (o, rank) {
+      var n = o.n, a = o.a;
+      var ar = a.getBoundingClientRect(), nr = n.getBoundingClientRect();
+      var side = n.dataset.side || 'right';
+      var x1, y1, x2, y2;
+      if (side === 'down') {
+        x1 = (ar.left + ar.width / 2 - r.left) / k; y1 = (ar.bottom - r.top) / k;
+        x2 = (nr.left + 11 - r.left) / k; y2 = (nr.top - r.top) / k;
+        out += '<path d="M' + x1 + ' ' + y1 + ' V' + (y2 - 6) + ' H' + x2 + ' V' + y2 + '"/>';
+      } else {
+        var b = a.closest('.ds-bubble') || a; x1 = (b.getBoundingClientRect().right - r.left) / k; y1 = (ar.top + ar.height / 2 - r.top) / k;
+        x2 = (nr.left - r.left) / k - 4; y2 = (nr.top + 13.5 - r.top) / k;
+        var mx = x2 - 12 - 14 * (items.length - 1 - rank);
+        out += '<path d="M' + x1 + ' ' + y1 + ' H' + mx + ' V' + y2 + ' H' + x2 + '"/>';
+      }
+      out += '<circle cx="' + x1 + '" cy="' + y1 + '" r="3"/>';
+    });
+    svg.innerHTML = out;
+  }
+  (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(draw);
+  window.addEventListener('resize', draw);
+})();
+</script>

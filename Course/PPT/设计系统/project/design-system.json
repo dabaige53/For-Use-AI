@@ -1,0 +1,208 @@
+{
+  "v": 3,
+  "assetGroups": {
+    "Illustrations": {
+      "files": {
+        "paris-everyday.png": {
+          "blob": "8019c59d7a544c8e4e0b1c0bd175a9ce",
+          "name": "paris-everyday.png",
+          "size": 1072004,
+          "type": "image/png"
+        },
+        "paris-on-moon.png": {
+          "blob": "0528b9c9be02c26dfa5d3ac642fd1f13",
+          "name": "paris-on-moon.png",
+          "size": 1574038,
+          "type": "image/png"
+        },
+        "quiz-01-confident.png": {
+          "blob": "4b692d4c80b9b3dde11e2c119910117b",
+          "name": "quiz-01-confident.png",
+          "size": 1073572,
+          "type": "image/png"
+        },
+        "quiz-02-wondering.png": {
+          "blob": "48ea45a3787a7458599028b31a9ef16b",
+          "name": "quiz-02-wondering.png",
+          "size": 1443528,
+          "type": "image/png"
+        },
+        "quiz-03-verifying.png": {
+          "blob": "687a81ebe16810a04b90c5b7f1b41829",
+          "name": "quiz-03-verifying.png",
+          "size": 1161084,
+          "type": "image/png"
+        },
+        "review-01-first-draft.png": {
+          "blob": "a2f38e6f6b7e5a14fdfe46e53b43f47b",
+          "name": "review-01-first-draft.png",
+          "size": 1141225,
+          "type": "image/png"
+        },
+        "review-02-fix-facts.png": {
+          "blob": "6c2f2fae4c43f3833837880918bdf48e",
+          "name": "review-02-fix-facts.png",
+          "size": 1564472,
+          "type": "image/png"
+        },
+        "review-03-fix-tone.png": {
+          "blob": "d20c203aed1ecd2c34eac98460e21b27",
+          "name": "review-03-fix-tone.png",
+          "size": 1447146,
+          "type": "image/png"
+        }
+      },
+      "name": "Illustrations",
+      "order": [
+        "review-01-first-draft.png",
+        "review-02-fix-facts.png",
+        "review-03-fix-tone.png",
+        "paris-everyday.png",
+        "paris-on-moon.png",
+        "quiz-01-confident.png",
+        "quiz-02-wondering.png",
+        "quiz-03-verifying.png"
+      ],
+      "tile": "m"
+    },
+    "Photography": {
+      "files": {
+        "notebook-desk.jpg": {
+          "blob": "98621b3544528e8ef8349b39e2672809",
+          "name": "notebook-desk.jpg",
+          "size": 71604,
+          "type": "image/jpeg"
+        },
+        "summit-cover.png": {
+          "blob": "a41d199e0456bc0ef8b91a8212c800a9",
+          "name": "summit-cover.png",
+          "size": 1763250,
+          "type": "image/png"
+        }
+      },
+      "name": "Photography",
+      "order": [
+        "summit-cover.png",
+        "notebook-desk.jpg"
+      ],
+      "tile": "l"
+    },
+    "Icons": {
+      "name": "Icons",
+      "tile": "xs",
+      "order": [
+        "file-spreadsheet.svg",
+        "file-text.svg",
+        "mail.svg",
+        "clipboard-list.svg",
+        "eye.svg",
+        "lightbulb.svg",
+        "pencil-line.svg",
+        "message-square.svg",
+        "paperclip.svg",
+        "table-2.svg",
+        "user-round.svg",
+        "bot.svg"
+      ],
+      "files": {
+        "file-spreadsheet.svg": {
+          "name": "file-spreadsheet.svg",
+          "blob": "217ce69f9e8e1e2dc8ed620eeb3bf0ca",
+          "size": 500,
+          "type": "image/svg+xml"
+        },
+        "file-text.svg": {
+          "name": "file-text.svg",
+          "blob": "fdabc6c4f271d97cec88245b62e8ef0f",
+          "size": 470,
+          "type": "image/svg+xml"
+        },
+        "mail.svg": {
+          "name": "mail.svg",
+          "blob": "d0179352dac528c76741dfefd3b531e3",
+          "size": 391,
+          "type": "image/svg+xml"
+        },
+        "clipboard-list.svg": {
+          "name": "clipboard-list.svg",
+          "blob": "1216360f2e25c79e32f3a2756d22084a",
+          "size": 535,
+          "type": "image/svg+xml"
+        },
+        "eye.svg": {
+          "name": "eye.svg",
+          "blob": "461731e34bbb5b94de822d5a4142abb9",
+          "size": 432,
+          "type": "image/svg+xml"
+        },
+        "lightbulb.svg": {
+          "name": "lightbulb.svg",
+          "blob": "a64a37a4e013d19dc76c9e5a523e291b",
+          "size": 449,
+          "type": "image/svg+xml"
+        },
+        "pencil-line.svg": {
+          "name": "pencil-line.svg",
+          "blob": "bff39b1f0d25a3377ef3e7d67f134e7d",
+          "size": 482,
+          "type": "image/svg+xml"
+        },
+        "message-square.svg": {
+          "name": "message-square.svg",
+          "blob": "20107f67f579bdabe3f7d54d7a1631d3",
+          "size": 368,
+          "type": "image/svg+xml"
+        },
+        "paperclip.svg": {
+          "name": "paperclip.svg",
+          "blob": "3acdc6d8122a679abc87cb01cfe4b176",
+          "size": 413,
+          "type": "image/svg+xml"
+        },
+        "table-2.svg": {
+          "name": "table-2.svg",
+          "blob": "cfcf5230f8dc44b94b11b0a95c7b18cf",
+          "size": 405,
+          "type": "image/svg+xml"
+        },
+        "user-round.svg": {
+          "name": "user-round.svg",
+          "blob": "1fa81f31c5d14fba270f7e1b621140ce",
+          "size": 358,
+          "type": "image/svg+xml"
+        },
+        "bot.svg": {
+          "name": "bot.svg",
+          "blob": "724a108f61218a4db27ad325af30c0d2",
+          "size": 452,
+          "type": "image/svg+xml"
+        }
+      }
+    }
+  },
+  "blobs": {},
+  "createdOnFiles": {
+    "at": "2026-10-23T00:40:55Z",
+    "v": 1
+  },
+  "docs": {
+    "readme": "project/README.md",
+    "sections": []
+  },
+  "groups": [
+    "Photography",
+    "Illustrations",
+    "Icons"
+  ],
+  "lastChange": {
+    "by": "dabaige53",
+    "at": "2026-10-23T09:40:00Z",
+    "via": "Claude Code",
+    "note": "README 新增“文字书写”一节：标题写结论、页面只放关键词、用规范术语。"
+  },
+  "layout": "files",
+  "libraries": [],
+  "namespace": "AIWorkDeck",
+  "sections": {},
+  "title": "AI × WORK 课程 PPT"
+}

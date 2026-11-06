@@ -1,0 +1,28 @@
+<!-- @dsCard height=288 -->
+<div class="cv">
+  <style>
+    .cv { position: relative; width: 960px; height: 288px; background: var(--canvas, #f6f7f9); overflow: hidden; font-family: var(--font-sans, "PingFang SC", sans-serif); }
+    .cv svg { position: absolute; left: 0; top: 0; }
+    .cv .blue { fill: var(--brand-blue, #3b5ba9); }
+    .cv .ink { fill: var(--ink, #1f2737); }
+    .cv .tint { fill: var(--tint-blue, #e3e9f5); }
+    .cv .orange { fill: var(--apricot, #c9864a); }
+    .cv .ghost { fill: var(--tint-blue, #e3e9f5); font-family: var(--font-sans, "PingFang SC", sans-serif); font-weight: 700; font-size: 380px; }
+    .cv .name { position: absolute; left: 48px; bottom: 64px; max-width: 440px; margin: 0; font-size: 68px; line-height: .95; font-weight: 700; color: var(--ink, #1f2737); letter-spacing: 0; }
+    .cv .tag { position: absolute; left: 48px; bottom: 36px; max-width: 440px; margin: 0; font-size: 14px; line-height: 20px; color: var(--text-muted, #677184); }
+  </style>
+  <svg width="960" height="288" viewBox="0 0 960 288" aria-hidden="true">
+    <!-- blocks: brand-blue 240x288 slab, ink 216x150, tint-blue 216x138; apricot only as the title rule (rule-width x rule-height, scaled x2.4) -->
+    <!-- arrangement: one tall slab bleeding top and bottom with two stacked satellites to its right, flush, square corners (radius-none) -->
+    <!-- pattern: "a distinctive numerals face -> one oversized numeral used as a shape": the deck's ghost numeral 3 (numeral-ghost, tint-blue) clipped by the blue slab -->
+    <!-- scales: radius-none on blocks, radius-pill on the rule, space-page-x 54 echoed as the 48px text inset -->
+    <defs><clipPath id="cv-slab"><rect x="504" y="0" width="240" height="288"/></clipPath></defs>
+    <rect class="blue" x="504" y="0" width="240" height="288"/>
+    <text class="ghost" x="520" y="330" clip-path="url(#cv-slab)">3</text>
+    <rect class="ink" x="744" y="0" width="216" height="150"/>
+    <rect class="tint" x="744" y="150" width="216" height="138"/>
+    <rect class="orange" x="776" y="230" width="72" height="5.4" rx="2.7"/>
+  </svg>
+  <p class="name">AI × WORK<br>课程 PPT</p>
+  <p class="tag">冷灰白底、柔和的蓝色，暖杏色只用来提醒学员做事。</p>
+</div>
