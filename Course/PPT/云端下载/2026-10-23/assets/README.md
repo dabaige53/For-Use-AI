@@ -28,3 +28,15 @@
 | `ead27023a4e29fa177ca0f008fa321ae.png` | P11 video-train | 视频静帧：模型在大量文本上训练 |
 | `ed02e3b28e8fbc8cac0ce71b344c1a0e.png` | P23 room-steps | 门外的同事蹲下，从门缝下取走纸条 |
 | `f083ac09cecae1ee689bed94a40d01bd.png` | P22 room-b、P28 ch2-map | 房间里的人在写字，墙上贴着两张纸；房间外另一个人在电脑前工作 |
+
+## 视频片段
+
+5 段视频片段从原片剪出，本地放在 `Course/PPT/assets/clips/`；`*.mp4` 在 Git 忽略规则里，不进仓库，重新剪就能恢复。
+
+| 云端编号 | 本地文件 | 页面 | 原片区间 |
+| --- | --- | --- | --- |
+| `c3cb91ef77313656ce27caff31395f4f` | `video-generate.mp4` | P9 video-generate | video_llm 00:00–01:27 |
+| `bb2647bc68738e14c119dcac6b31ef8b` | `video-train.mp4` | P11 video-train | video_llm 01:27–03:44 |
+| `a39509f6fcc5cab4b94d58cfc9344ad4` | `video-feedback.mp4` | P13 video-feedback | video_llm 03:44–04:14 |
+| `56928fc213e691daf97c6b3b384fbbc1` | `video-io-1.mp4` | P25 video-io-1 | video_io 00:00–01:04 |
+| `25eb665ca63d90e8c095242a4d7c7f30` | `video-io-2.mp4` | P26 video-io-2 | video_io 01:04–02:39 |
