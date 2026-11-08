@@ -41,6 +41,7 @@
 | 制作路径交互 | `sh Course/PPT课程制作复盘/交互/课程制作路径/启动交互图.command`；Python 3，首次启动下载 npm 前端资源 | 支持 `PYTHON`/`PORT`；复盘私有对话未随仓库发布，相关链接不保证可用 |
 | LLM 动画 | 进入 `Course/02-AI的能力从哪里来/大语言模型简要说明/代码/`，`sh init.sh`，`uv run --no-sync python render_zh_final.py --check` | init 检查 uv、ffmpeg、ffprobe、tectonic；--check 只列队列，正式合成另需既有视频与中文字体 |
 | AI 输入输出动画 | 进入 `Course/03-信息输入与工具执行/AI的输入与输出/代码/`，`sh init.sh`，`uv run --no-sync python render.py --help` | Python 3.11、ManimGL、ffmpeg/ffprobe；实际渲染需要图形环境 |
+| AI 输入输出网页动画 | 浏览器直接打开 `Course/03-信息输入与工具执行/AI的输入与输出/代码/网页动画/index.html`（file:// 可用，旁白读取 `生成/配音/旁白.wav`）；出片在该目录运行 `node render.mjs` | Node 18+、Playwright Chromium、ffmpeg/ffprobe；`node render.mjs --check` 逐帧绘制全部 4770 帧并检查缺字；成片、PPT 两段片段和 `verification.json` 写入 `生成/网页动画/`（mp4 不入库）；改动画文字后用 `build_assets.py --serif <Noto Serif SC> --mono <JetBrains Mono>` 重建字体子集 |
 
 LLM 的 `render_all.py` 是上游 38 场景的旧批量入口，需要未随当前仓库提供的场景清单；
 可通过 `--inventory` 显式提供。它不替代 `render_zh_final.py`，也不能据其缺失输入断言中文视频管线不可用。
