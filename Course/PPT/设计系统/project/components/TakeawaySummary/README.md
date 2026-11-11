@@ -15,5 +15,3 @@
 - 三行“名称 | 说明”中间用 `hairline` 短竖线分隔。
 - 右侧大数字 `numeral-hero`（121.5pt，`brand-blue`），旁边是 `block-title` 和一句说明。
 - 底部用横线隔开，`slogan`“把 AI 当同事”中的“同事”用 `apricot-strong`，后面接一句 `lead`。
-
-页面不放页码，也不放“AI × WORK”页脚（封面、扉页、导航页除外）；坐标单位是 pt（画布 1254 × 705.75）。

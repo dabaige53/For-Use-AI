@@ -27,7 +27,6 @@
 安装 uv，在仓库根运行 `sh start.sh`，访问终端给出的课程或 PPT 地址。
 默认仅监听 `127.0.0.1:4189`；可用 `PORT=4190 sh start.sh` 更换端口，
 用 `PYTHON=python3` 选择解释器。Ctrl-C 停止。纯静态阅读无需 `.env`、密钥或 npm 安装。根入口会按 uv.lock 准备环境。
-页面引用的外部 CDN、字体及视频素材仍可能需要网络或另行取得的媒体；HTTP 成功不代表所有媒体完整。
 
 根启动器与 `Course/PPT/启动课件.command` 共用同一预览服务，支持视频分段读取（HTTP Range）和第 56 页的制作路径图。不要用 `python -m http.server` 替代，否则视频尚未下载完时可能无法跳转。
 当前 90 分钟版教学大纲位于 `Course/PPT/AI协作-教学大纲.md`，逐页演讲台词位于 `Course/PPT/AI协作-演讲稿-90分钟版-新课件.md`，两者都按 55 页新课件编写。公开课件由 `Course/PPT/构建公开课件.py` 导出；启动本地服务后，传入新的 `--output` 目录，再使用 PPT 目录中的 `wrangler.jsonc` 发布到既有 Cloudflare Pages 项目。两段视频通过 `COURSE_MEDIA` 对应的 R2 存储提供，更新页面不会自动替换视频。
@@ -38,13 +37,11 @@
 | 可执行单元 | 入口与依赖 | 验证边界 |
 | --- | --- | --- |
 | 课程/PPT 页面 | 根 `sh start.sh`；内容位于 `Course/网页/`、`Course/PPT/` | 本地 HTTP；不生成页面 |
-| 制作路径交互 | `sh Course/PPT课程制作复盘/交互/课程制作路径/启动交互图.command`；Python 3，首次启动下载 npm 前端资源 | 支持 `PYTHON`/`PORT`；复盘私有对话未随仓库发布，相关链接不保证可用 |
 | LLM 动画 | 进入 `Course/02-AI的能力从哪里来/大语言模型简要说明/代码/`，`sh init.sh`，`uv run --no-sync python render_zh_final.py --check` | init 检查 uv、ffmpeg、ffprobe、tectonic；--check 只列队列，正式合成另需既有视频与中文字体 |
 | AI 输入输出动画 | 进入 `Course/03-信息输入与工具执行/AI的输入与输出/代码/`，`sh init.sh`，`uv run --no-sync python render.py --help` | Python 3.11、ManimGL、ffmpeg/ffprobe；实际渲染需要图形环境 |
 | AI 输入输出网页动画 | 浏览器直接打开 `Course/03-信息输入与工具执行/AI的输入与输出/代码/网页动画/index.html`（file:// 可用，旁白读取 `生成/配音/旁白.wav`）；出片在该目录运行 `node render.mjs` | Node 18+、Playwright Chromium、ffmpeg/ffprobe；`node render.mjs --check` 逐帧绘制全部 4770 帧并检查缺字；成片、PPT 两段片段和 `verification.json` 写入 `生成/网页动画/`（mp4 不入库）；改动画文字后用 `build_assets.py --serif <Noto Serif SC> --mono <JetBrains Mono>` 重建字体子集 |
 
 LLM 的 `render_all.py` 是上游 38 场景的旧批量入口，需要未随当前仓库提供的场景清单；
-可通过 `--inventory` 显式提供。它不替代 `render_zh_final.py`，也不能据其缺失输入断言中文视频管线不可用。
 `compose_reconstruction.py` 的中文字体通过 `COURSE_FONT` 配置，字体集合索引用 `COURSE_FONT_INDEX`（默认 0）。
 原始第三方素材中的历史路径保留作来源证据，不作为本机运行说明。
 
@@ -54,7 +51,6 @@ LLM 的 `render_all.py` 是上游 38 场景的旧批量入口，需要未随当�
 可先运行 `uv sync --locked`，再用 `uv run --no-sync python <脚本>` 或
 `uv run --no-sync sh Course/PPT课程制作复盘/交互/课程制作路径/启动交互图.command`。
 两个动画代码目录各自保留 Python 3.11 的 pyproject.toml/uv.lock 和 init.sh，
-因为它们有独立 ManimGL 及系统渲染依赖。不要在根混装动画环境，也不以 uv 替代交互前端的 npm/esbuild。
 
 图解的 Excalidraw MCP 服务未随源码提供，原个人绝对路径配置已移除；如需编辑图解，
 在个人 Codex 配置中明确指向已安装服务。静态阅读与脚本检查不依赖该服务。
