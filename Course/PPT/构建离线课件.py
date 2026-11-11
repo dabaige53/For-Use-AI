@@ -117,9 +117,14 @@ def convert(html, imgs, used_img, used_clip):
     # 视频：带 data-video 的静帧图换成 <video>
     def video(match):
         tag = match.group(0)
-        clip = re.search(r'data-video="/_blob/([0-9a-f]{32})"', tag).group(1)
-        poster = re.search(r'src="/_blob/([0-9a-f]{32})"', tag).group(1)
-        style = re.search(r'style="([^"]*)"', tag).group(1)
+        clip_match = re.search(r'data-video="/_blob/([0-9a-f]{32})"', tag)
+        poster_match = re.search(r'src="/_blob/([0-9a-f]{32})"', tag)
+        style_match = re.search(r'style="([^"]*)"', tag)
+        if not (clip_match and poster_match and style_match):
+            raise SystemExit(f'视频标签缺少有效的视频、图片或样式：{tag}')
+        clip = clip_match.group(1)
+        poster = poster_match.group(1)
+        style = style_match.group(1)
         alt = (re.search(r'alt="([^"]*)"', tag) or [None, ''])[1]
         used_clip.add(CLIPS[clip])
         poster_attr = ''
@@ -146,8 +151,10 @@ def convert(html, imgs, used_img, used_clip):
         a = dict(re.findall(r'([\w-]+)="([^"]*)"', match.group(0)))
         x1, y1, x2, y2 = (float(a[k]) for k in ('x1', 'y1', 'x2', 'y2'))
         st = a.get('style', '')
-        color = (re.search(r'color:\s*([^;]+)', st) or [None, '#a7b0bf'])[1].strip()
-        w = float((re.search(r'border-width:\s*([\d.]+)', st) or [None, '2'])[1])
+        color_match = re.search(r'color:\s*([^;]+)', st)
+        width_match = re.search(r'border-width:\s*([\d.]+)', st)
+        color = color_match.group(1).strip() if color_match else '#a7b0bf'
+        w = float(width_match.group(1)) if width_match else 2.0
         dash = ' stroke-dasharray="8 6"' if 'dashed' in st else ''
         head = a.get('head', 'end')
         build = f' data-build-in="{a["data-build-in"]}"' if 'data-build-in' in a else ''
