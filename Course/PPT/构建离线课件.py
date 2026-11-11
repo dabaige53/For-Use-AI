@@ -115,17 +115,25 @@ def blob_files():
 
 
 def convert(html, imgs, used_img, used_clip):
-    if 'id="video-train"' in html:
-        html = html.replace(
-            '<p style="position:absolute;left:84px;top:884px;width:120px;font-size:24px;color:#677184">01:08</p>',
+    seek = '<input class="video-seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="调整视频播放进度">'
+    if any(f'id="{sid}"' in html for sid in ('video-generate', 'video-train', 'video-feedback')):
+        html = re.sub(
+            r'<p style="position:absolute;left:84px;top:884px;width:120px;font-size:24px;color:#677184">\d\d:\d\d</p>',
             '<p class="video-elapsed" style="position:absolute;left:84px;top:884px;width:120px;font-size:24px;color:#677184">00:00</p>',
+            html,
         )
         html = re.sub(
             r'<div style="position:absolute;left:84px;top:932px;width:1139px;height:7px;[^"]+"></div>\s*'
-            r'<div style="position:absolute;left:84px;top:932px;width:565px;height:7px;[^"]+"></div>\s*'
-            r'<div style="position:absolute;left:641px;top:927px;width:17px;height:17px;[^"]+"></div>',
-            '<input class="video-seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="调整视频播放进度">',
+            r'<div style="position:absolute;left:84px;top:932px;width:\d+px;height:7px;[^"]+"></div>\s*'
+            r'<div style="position:absolute;left:\d+px;top:927px;width:17px;height:17px;[^"]+"></div>',
+            seek,
             html,
+        )
+    elif any(f'id="{sid}"' in html for sid in ('video-io-1', 'video-io-2')):
+        html = html.replace(
+            '<p style="position:absolute;left:1304px;top:400px;',
+            seek + '<p class="video-elapsed" style="position:absolute;left:84px;top:960px;font-size:24px;color:#677184">00:00</p>'
+            '<p style="position:absolute;left:1304px;top:400px;',
         )
 
     def img_src(match):
