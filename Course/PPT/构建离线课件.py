@@ -58,6 +58,7 @@ x-icon{display:inline-block;flex:none}x-icon svg{width:100%;height:100%}
 table{border-collapse:collapse}th,td{padding:.35em .6em;border-bottom:1px solid #e3e7ed;text-align:left}th{font-weight:700}
 aside{display:none}
 video{cursor:pointer;background:#000}
+.video-seek{position:absolute;left:84px;top:919px;width:1139px;height:32px;accent-color:#3b5ba9;cursor:pointer}
 [data-build-in]{transition:opacity .45s ease,transform .45s ease}
 .hide[data-build-in]{opacity:0;pointer-events:none}
 .hide[data-fx=rise]{transform:translateY(48px)}
@@ -86,13 +87,20 @@ function go(i,full){if(i<0||i>=slides.length)return;stopVideos(slides[cur]);slid
 function next(){const g=groups(slides[cur]);if(step<g.length){step++;paint()}else go(cur+1)}
 function prev(){if(step>0){step--;paint()}else go(cur-1,true)}
 addEventListener('keydown',e=>{const k=e.key;
+  if(e.target.matches('input[type="range"]'))return;
   if(['ArrowRight','ArrowDown','PageDown',' ','Enter'].includes(k)){e.preventDefault();next()}
   else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].includes(k)){e.preventDefault();prev()}
   else if(k==='Home')go(0);else if(k==='End')go(slides.length-1,true);
   else if(k==='n'||k==='N')notes.classList.toggle('on');
   else if(k==='f'||k==='F'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}});
-stage.addEventListener('click',e=>{if(e.target.closest('video'))return;next()});
-stage.querySelectorAll('video').forEach(v=>v.addEventListener('click',e=>{e.stopPropagation();v.paused?v.play():v.pause()}));
+stage.addEventListener('click',e=>{if(e.target.closest('video,.video-seek'))return;next()});
+stage.querySelectorAll('.video-seek').forEach(seek=>{
+  const slide=seek.closest('section'),video=slide.querySelector('video'),elapsed=slide.querySelector('.video-elapsed');
+  const update=()=>{if(!Number.isFinite(video.duration))return;seek.value=video.currentTime/video.duration*100;
+    const s=Math.floor(video.currentTime);elapsed.textContent=String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')};
+  video.addEventListener('timeupdate',update);video.addEventListener('loadedmetadata',update);
+  seek.addEventListener('input',()=>{video.currentTime=video.duration*seek.value/100});
+});
 addEventListener('resize',fit);fit();
 const h=parseInt(location.hash.slice(1));go(h>0&&h<=slides.length?h-1:0,STATIC);
 """
@@ -107,6 +115,19 @@ def blob_files():
 
 
 def convert(html, imgs, used_img, used_clip):
+    if 'id="video-train"' in html:
+        html = html.replace(
+            '<p style="position:absolute;left:84px;top:884px;width:120px;font-size:24px;color:#677184">01:08</p>',
+            '<p class="video-elapsed" style="position:absolute;left:84px;top:884px;width:120px;font-size:24px;color:#677184">00:00</p>',
+        )
+        html = re.sub(
+            r'<div style="position:absolute;left:84px;top:932px;width:1139px;height:7px;[^"]+"></div>\s*'
+            r'<div style="position:absolute;left:84px;top:932px;width:565px;height:7px;[^"]+"></div>\s*'
+            r'<div style="position:absolute;left:641px;top:927px;width:17px;height:17px;[^"]+"></div>',
+            '<input class="video-seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="调整视频播放进度">',
+            html,
+        )
+
     def img_src(match):
         bid = match.group(1)
         if bid not in imgs:
@@ -131,7 +152,7 @@ def convert(html, imgs, used_img, used_clip):
         if CLIPS[clip] not in ('video-io-1.mp4', 'video-io-2.mp4'):
             used_img.add(imgs[poster])
             poster_attr = f' poster="img/{imgs[poster]}"'
-        return (f'<video src="video/{CLIPS[clip]}"{poster_attr} preload="metadata" playsinline '
+        return (f'<video src="video/{CLIPS[clip]}"{poster_attr} controls preload="metadata" playsinline '
                 f'aria-label="{alt}" style="{style}"></video>')
 
     html = re.sub(r'<img[^>]*data-video="[^"]*"[^>]*>', video, html)
@@ -201,7 +222,7 @@ def main():
     page = (f'<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>{title}</title>'
             f'<meta name="viewport" content="width=device-width,initial-scale=1"><style>{STYLE}</style></head><body>'
             f'<div id="stage">{"".join(parts)}</div><div id="notes"></div><div id="hud"></div>'
-            f'<div id="help">→ / 空格 / 点击：下一步　← 上一步　F 全屏　N 讲师备注　点视频：播放 / 暂停</div>'
+            f'<div id="help">→ / 空格 / 点击：下一步　← 上一步　F 全屏　N 讲师备注　使用视频控件播放 / 暂停</div>'
             f'<script>{SCRIPT}</script></body></html>')
     (OUT / 'index.html').write_text(page)
     (OUT / '.gitignore').write_text('img/\nvideo/\n')

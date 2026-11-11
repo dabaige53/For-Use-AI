@@ -16,6 +16,7 @@ x-icon{display:inline-block;flex:none}x-icon svg{width:100%;height:100%}
 table{border-collapse:collapse}th,td{padding:.35em .6em;border-bottom:1px solid #e3e7ed;text-align:left}th{font-weight:700}
 aside{display:none}
 video{cursor:pointer;background:#000}
+.video-seek{position:absolute;left:84px;top:919px;width:1139px;height:32px;accent-color:#3b5ba9;cursor:pointer}
 [data-build-in]{transition:opacity .45s ease,transform .45s ease}
 .hide[data-build-in]{opacity:0;pointer-events:none}
 .hide[data-fx=rise]{transform:translateY(48px)}
@@ -242,7 +243,7 @@ body:hover #help{opacity:1}
 <h2 style="position:absolute;left:84px;top:84px;width:1500px;font-size:60px;font-weight:700;line-height:1.38;color:#1f2737">AI 回答的生成过程</h2>
 <div style="position:absolute;left:84px;top:187px;width:46px;height:4px;background:#c9864a;border-radius:2px"></div>
 <div style="position:absolute;left:84px;top:228px;width:1139px;height:641px;background:#111722;border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden">
-<video src="video/video-generate.mp4" poster="img/b187369dcbea1a65e3473a042df5fd98.png" preload="metadata" playsinline aria-label="视频静帧：“巴黎这座城市位于”这句话输入大型语言模型" style="width:1139px;height:641px;object-fit:contain"></video>
+<video controls src="video/video-generate.mp4" poster="img/b187369dcbea1a65e3473a042df5fd98.png" preload="metadata" playsinline aria-label="视频静帧：“巴黎这座城市位于”这句话输入大型语言模型" style="width:1139px;height:641px;object-fit:contain"></video>
 </div>
 <p style="position:absolute;left:84px;top:884px;width:120px;font-size:24px;color:#677184">00:45</p>
 <p style="position:absolute;left:503px;top:884px;width:300px;font-size:24px;text-align:center;color:#677184">本段 00:00–01:27</p>
@@ -295,14 +296,12 @@ body:hover #help{opacity:1}
 <h2 style="position:absolute;left:84px;top:84px;width:1500px;font-size:60px;font-weight:700;line-height:1.38;color:#1f2737">AI 的训练过程</h2>
 <div style="position:absolute;left:84px;top:187px;width:46px;height:4px;background:#c9864a;border-radius:2px"></div>
 <div style="position:absolute;left:84px;top:228px;width:1139px;height:641px;background:#111722;border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden">
-<video src="video/video-train.mp4" poster="img/ead27023a4e29fa177ca0f008fa321ae.png" preload="metadata" playsinline aria-label="视频静帧：模型在大量文本上训练" style="width:1139px;height:641px;object-fit:contain"></video>
+<video src="video/video-train.mp4" poster="img/ead27023a4e29fa177ca0f008fa321ae.png" controls preload="metadata" playsinline aria-label="视频静帧：模型在大量文本上训练" style="width:1139px;height:641px;object-fit:contain"></video>
 </div>
-<p style="position:absolute;left:84px;top:884px;width:120px;font-size:24px;color:#677184">01:08</p>
+<p class="video-elapsed" style="position:absolute;left:84px;top:884px;width:120px;font-size:24px;color:#677184">00:00</p>
 <p style="position:absolute;left:503px;top:884px;width:300px;font-size:24px;text-align:center;color:#677184">原片 01:27–03:44</p>
 <p style="position:absolute;left:1103px;top:884px;width:120px;font-size:24px;text-align:right;color:#677184">02:17</p>
-<div style="position:absolute;left:84px;top:932px;width:1139px;height:7px;background:#e3e7ed;border-radius:4px"></div>
-<div style="position:absolute;left:84px;top:932px;width:565px;height:7px;background:#3b5ba9;border-radius:4px"></div>
-<div style="position:absolute;left:641px;top:927px;width:17px;height:17px;background:#3b5ba9;border-radius:50%"></div>
+<input class="video-seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="调整视频播放进度">
 <p style="position:absolute;left:84px;top:960px;width:170px;font-size:24px;color:#677184">海量文本</p>
 <p style="position:absolute;left:564px;top:960px;width:170px;font-size:24px;font-weight:700;text-align:center;color:#3b5ba9">调整预测</p>
 <p style="position:absolute;left:1053px;top:960px;width:170px;font-size:24px;text-align:right;color:#677184">训练规模</p>
@@ -372,7 +371,7 @@ body:hover #help{opacity:1}
 <h2 style="position:absolute;left:84px;top:84px;width:1500px;font-size:60px;font-weight:700;line-height:1.38;color:#1f2737">从文字续写到对话助手</h2>
 <div style="position:absolute;left:84px;top:187px;width:46px;height:4px;background:#c9864a;border-radius:2px"></div>
 <div style="position:absolute;left:84px;top:228px;width:1139px;height:641px;background:#111722;border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden">
-<video src="video/video-feedback.mp4" poster="img/caf5d4c00b5b9541e2ea82a00b853960.png" preload="metadata" playsinline aria-label="视频静帧：人的反馈让续写模型变成对话助手" style="width:1139px;height:641px;object-fit:contain"></video>
+<video controls src="video/video-feedback.mp4" poster="img/caf5d4c00b5b9541e2ea82a00b853960.png" preload="metadata" playsinline aria-label="视频静帧：人的反馈让续写模型变成对话助手" style="width:1139px;height:641px;object-fit:contain"></video>
 </div>
 <p style="position:absolute;left:84px;top:884px;width:120px;font-size:24px;color:#677184">00:08</p>
 <p style="position:absolute;left:1103px;top:884px;width:120px;font-size:24px;text-align:right;color:#677184">00:30</p>
@@ -646,7 +645,7 @@ body:hover #help{opacity:1}
 <h2 style="position:absolute;left:84px;top:84px;width:1500px;font-size:60px;font-weight:700;line-height:1.38;color:#1f2737">视频①：模型每次看到什么</h2>
 <div style="position:absolute;left:84px;top:187px;width:46px;height:4px;background:#c9864a;border-radius:2px"></div>
 <div style="position:absolute;left:84px;top:228px;width:1139px;height:641px;background:#111722;border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden">
-<video src="video/video-io-1.mp4" preload="metadata" playsinline aria-label="视频静帧：第 1 次完整输入，包含用户消息和系统指令" style="width:1139px;height:641px;object-fit:contain"></video>
+<video controls src="video/video-io-1.mp4" preload="metadata" playsinline aria-label="视频静帧：第 1 次完整输入，包含用户消息和系统指令" style="width:1139px;height:641px;object-fit:contain"></video>
 </div>
 <p style="position:absolute;left:84px;top:890px;width:1139px;font-size:24px;color:#677184">原片 00:00–01:04 · 64 秒</p>
 <p style="position:absolute;left:1304px;top:400px;width:532px;font-size:28px;font-weight:700;color:#3b5ba9">带着问题看</p>
@@ -657,7 +656,7 @@ body:hover #help{opacity:1}
 <h2 style="position:absolute;left:84px;top:84px;width:1500px;font-size:60px;font-weight:700;line-height:1.38;color:#1f2737">视频②：一次提问，多次调用</h2>
 <div style="position:absolute;left:84px;top:187px;width:46px;height:4px;background:#c9864a;border-radius:2px"></div>
 <div style="position:absolute;left:84px;top:228px;width:1139px;height:641px;background:#111722;border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden">
-<video src="video/video-io-2.mp4" preload="metadata" playsinline aria-label="视频静帧：工具执行结果被带入模型的下一次输入" style="width:1139px;height:641px;object-fit:contain"></video>
+<video controls src="video/video-io-2.mp4" preload="metadata" playsinline aria-label="视频静帧：工具执行结果被带入模型的下一次输入" style="width:1139px;height:641px;object-fit:contain"></video>
 </div>
 <p style="position:absolute;left:84px;top:890px;width:1139px;font-size:24px;color:#677184">原片 01:04–02:39 · 95 秒</p>
 <p style="position:absolute;left:1304px;top:400px;width:532px;font-size:28px;font-weight:700;color:#3b5ba9">带着问题看</p>
@@ -1477,7 +1476,7 @@ body:hover #help{opacity:1}
   <p id="e8-1gz44a8" style="position:absolute; right:84px; bottom:56px; width:400px; font-family:'Noto Sans SC', sans-serif; font-size:24px; font-weight:700; letter-spacing:4px; text-align:right; color:#ffffff">AI × WORK</p>
   <aside>结束页。留出提问时间。请学员把便利贴留在桌上，助教收走，上面的问题课后统一回复。</aside>
 </section>
-</div><div id="notes"></div><div id="hud"></div><div id="help">→ / 空格 / 点击：下一步　← 上一步　F 全屏　N 讲师备注　点视频：播放 / 暂停</div><script>
+</div><div id="notes"></div><div id="hud"></div><div id="help">→ / 空格 / 点击：下一步　← 上一步　F 全屏　N 讲师备注　使用视频控件播放 / 暂停</div><script>
 const stage=document.getElementById('stage'),slides=[...stage.querySelectorAll('section')];
 const notes=document.getElementById('notes'),hud=document.getElementById('hud');
 const STATIC=new URLSearchParams(location.search).has('static');
@@ -1492,13 +1491,20 @@ function go(i,full){if(i<0||i>=slides.length)return;stopVideos(slides[cur]);slid
 function next(){const g=groups(slides[cur]);if(step<g.length){step++;paint()}else go(cur+1)}
 function prev(){if(step>0){step--;paint()}else go(cur-1,true)}
 addEventListener('keydown',e=>{const k=e.key;
+  if(e.target.matches('input[type="range"]'))return;
   if(['ArrowRight','ArrowDown','PageDown',' ','Enter'].includes(k)){e.preventDefault();next()}
   else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].includes(k)){e.preventDefault();prev()}
   else if(k==='Home')go(0);else if(k==='End')go(slides.length-1,true);
   else if(k==='n'||k==='N')notes.classList.toggle('on');
   else if(k==='f'||k==='F'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}});
-stage.addEventListener('click',e=>{if(e.target.closest('video'))return;next()});
-stage.querySelectorAll('video').forEach(v=>v.addEventListener('click',e=>{e.stopPropagation();v.paused?v.play():v.pause()}));
+stage.addEventListener('click',e=>{if(e.target.closest('video,.video-seek'))return;next()});
+stage.querySelectorAll('.video-seek').forEach(seek=>{
+  const slide=seek.closest('section'),video=slide.querySelector('video'),elapsed=slide.querySelector('.video-elapsed');
+  const update=()=>{if(!Number.isFinite(video.duration))return;seek.value=video.currentTime/video.duration*100;
+    const s=Math.floor(video.currentTime);elapsed.textContent=String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')};
+  video.addEventListener('timeupdate',update);video.addEventListener('loadedmetadata',update);
+  seek.addEventListener('input',()=>{video.currentTime=video.duration*seek.value/100});
+});
 addEventListener('resize',fit);fit();
 const h=parseInt(location.hash.slice(1));go(h>0&&h<=slides.length?h-1:0,STATIC);
 </script></body></html>
