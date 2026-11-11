@@ -15,7 +15,7 @@
     "subtitle:mov_text"
   ],
   "decode": "passed",
-  "sha256": "238dc65af7faea7067c929888808778dba276bbd3cc96b028f7ec93685362417",
+  "sha256": "d4219d76eb86592b2a981ae7c75b4049d423319a3c48621ca5b4a3359c15b726",
   "ppt_clips": [
     {
       "file": "video-io-1.mp4",
@@ -28,5 +28,5 @@
       "end": 159
     }
   ],
-  "render_seconds": 94
+  "render_seconds": 42
 }

@@ -122,8 +122,11 @@ def convert(html, imgs, used_img, used_clip):
         style = re.search(r'style="([^"]*)"', tag).group(1)
         alt = (re.search(r'alt="([^"]*)"', tag) or [None, ''])[1]
         used_clip.add(CLIPS[clip])
-        used_img.add(imgs[poster])
-        return (f'<video src="video/{CLIPS[clip]}" poster="img/{imgs[poster]}" preload="metadata" playsinline '
+        poster_attr = ''
+        if CLIPS[clip] not in ('video-io-1.mp4', 'video-io-2.mp4'):
+            used_img.add(imgs[poster])
+            poster_attr = f' poster="img/{imgs[poster]}"'
+        return (f'<video src="video/{CLIPS[clip]}"{poster_attr} preload="metadata" playsinline '
                 f'aria-label="{alt}" style="{style}"></video>')
 
     html = re.sub(r'<img[^>]*data-video="[^"]*"[^>]*>', video, html)
